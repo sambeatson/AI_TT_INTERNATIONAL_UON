@@ -1,0 +1,160 @@
+card_id,report_date,strategy,flags,dud
+2026-05-11_Trade_1,2026-05-11,Trade 1 - Daily Directional,CLEAN,False
+2026-05-11_Trade_2,2026-05-11,Trade 2 - Pivot pullback (buy daily-S1),CLEAN,False
+2026-05-11_Trade_3A,2026-05-11,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False
+2026-05-12_Trade_1,2026-05-12,Trade 1 - Daily Directional,CLEAN,False
+2026-05-12_Trade_2,2026-05-12,"Trade 2 - Pivot (TREND_UP pullback, buy daily P)",CLEAN,False
+2026-05-12_Trade_3A,2026-05-12,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False
+2026-05-13_Trade_1,2026-05-13,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-13_Trade_2,2026-05-13,"Trade 2 - Pivot (TREND breakout, buy stop)",CLEAN,False
+2026-05-13_Trade_3C,2026-05-13,Trade 3C - Momentum-Breakout (buy stop),WARN_TP3_ORDER,False
+2026-05-14_Trade_1,2026-05-14,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-14_Trade_2,2026-05-14,Trade 2 - Pivot (buy limit weekly P),CLEAN,False
+2026-05-14_Trade_3A,2026-05-14,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False
+2026-05-15_Trade_1,2026-05-15,Trade 1 - Daily Directional,CLEAN,False
+2026-05-15_Trade_2,2026-05-15,"Trade 2 - Pivot (TREND breakout, buy stop)",CLEAN,False
+2026-05-15_Trade_3C,2026-05-15,Trade 3C - Momentum-Breakout (buy stop),CLEAN,False
+2026-05-18_Trade_1,2026-05-18,Trade 1 - Daily Directional,CLEAN,False
+2026-05-18_Trade_2,2026-05-18,Trade 2 - Pivot fade (sell limit daily R1),DUD_TP2_ORDER,True
+2026-05-18_Trade_3C,2026-05-18,"Trade 3C - Transition Breakout (sell stop, conditional)",CLEAN,False
+2026-05-19_Trade_1,2026-05-19,Trade 1 - Daily Directional (mean-reversion),CLEAN,False
+2026-05-19_Trade_2,2026-05-19,Trade 2 - Pivot (buy limit daily S1),CLEAN,False
+2026-05-19_Trade_3A,2026-05-19,Trade 3A - Momentum-Pullback (layered fib limits),CLEAN,False
+2026-05-20_Trade_1,2026-05-20,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-20_Trade_2,2026-05-20,Trade 2 - Pivot (weekly TREND breakout),CLEAN,False
+2026-05-20_Trade_3A,2026-05-20,Trade 3A - Momentum-Pullback (demand-zone retest),CLEAN,False
+2026-05-21_Trade_1,2026-05-21,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-05-21_Trade_2,2026-05-21,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-05-21_Trade_3C,2026-05-21,Trade 3C - Range Breakout (conditional),CLEAN,False
+2026-05-22_Trade_1,2026-05-22,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-22_Trade_2,2026-05-22,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-05-22_Trade_3C,2026-05-22,Trade 3C - Momentum-Breakout (conditional),CLEAN,False
+2026-05-25_Trade_1,2026-05-25,Trade 1 - Daily Directional,CLEAN,False
+2026-05-25_Trade_2,2026-05-25,"Trade 2 - Pivot (TREND breakout, buy stop)",CLEAN,False
+2026-05-25_Trade_3A,2026-05-25,Trade 3A - Momentum-Pullback (57.5% fib),CLEAN,False
+2026-05-26_Trade_1,2026-05-26,Trade 1 - Daily Directional,CLEAN,False
+2026-05-26_Trade_2,2026-05-26,"Trade 2 - Pivot (TRANSITION breakout, buy stop)",CLEAN,False
+2026-05-26_Trade_3C,2026-05-26,Trade 3C - Range Breakout (conditional),CLEAN,False
+2026-05-27_Trade_1,2026-05-27,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-05-27_Trade_2,2026-05-27,Trade 2 - Pivot (TREND_UP),CLEAN,False
+2026-05-27_Trade_3A,2026-05-27,Trade 3A - Momentum-Pullback (57.5% fib),CLEAN,False
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,CLEAN,False
+2026-05-28_Trade_2,2026-05-28,Trade 2 - Pivot (daily P / weekly R1 retest),CLEAN,False
+2026-05-28_Trade_3A,2026-05-28,Trade 3A - Momentum-Pullback,CLEAN,False
+2026-05-29_Trade_1,2026-05-29,Trade 1 - Daily Directional,CLEAN,False
+2026-05-29_Trade_2,2026-05-29,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-05-29_Trade_3A,2026-05-29,Trade 3A - Momentum-Pullback (breakout stop),CLEAN,False
+2026-06-01_Trade_1,2026-06-01,Trade 1 - Daily Directional (breakout stop),CLEAN,False
+2026-06-01_Trade_2,2026-06-01,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-06-01_Trade_3A,2026-06-01,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False
+2026-06-02_Trade_1,2026-06-02,Trade 1 - Daily Directional,CLEAN,False
+2026-06-02_Trade_2,2026-06-02,Trade 2 - Pivot (buy limit daily P),WARN_TP3_ORDER,False
+2026-06-02_Trade_3A,2026-06-02,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False
+2026-06-03_Trade_1,2026-06-03,Trade 1 - Daily Directional,CLEAN,False
+2026-06-03_Trade_2,2026-06-03,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-06-03_Trade_3A,2026-06-03,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False
+2026-06-04_Trade_1,2026-06-04,Trade 1 - Daily Directional,CLEAN,False
+2026-06-04_Trade_2,2026-06-04,Trade 2 - Pivot (TREND_UP breakout),CLEAN,False
+2026-06-04_Trade_3A,2026-06-04,Trade 3A - Momentum-Pullback (57.5% fib),CLEAN,False
+2026-06-05_Trade_1,2026-06-05,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-05_Trade_2,2026-06-05,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-06-05_Trade_3A,2026-06-05,Trade 3A - Momentum-Pullback (breakout stop),CLEAN,False
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,CLEAN,False
+2026-06-08_Trade_3A,2026-06-08,Trade 3A - Momentum-Pullback (sell limit weekly S2),CLEAN,False
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional,CLEAN,False
+2026-06-09_Trade_3A,2026-06-09,Trade 3A - Momentum-Pullback (sell limit daily P),CLEAN,False
+2026-06-10_Trade_1,2026-06-10,Trade 1 - Daily Directional (sell stop),CLEAN,False
+2026-06-10_Trade_2,2026-06-10,Trade 2 - Pivot (sell limit weekly P),CLEAN,False
+2026-06-10_Trade_3C,2026-06-10,Trade 3C - Momentum-Breakout (sell stop),CLEAN,False
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-06-11_Trade_3A,2026-06-11,Trade 3A - Momentum-Pullback (57.5% rally-sell),CLEAN,False
+2026-06-15_Trade_1,2026-06-15,Trade 1 - Daily Directional,CLEAN,False
+2026-06-15_Trade_2,2026-06-15,Trade 2 - Pivot (buy stop daily R1),CLEAN,False
+2026-06-15_Trade_3C,2026-06-15,Trade 3C - Breakout (buy stop 5-day swing high),CLEAN,False
+2026-06-16_Trade_1,2026-06-16,Trade 1 - Daily Directional,CLEAN,False
+2026-06-16_Trade_2,2026-06-16,Trade 2 - Pivot (buy limit daily S1),CLEAN,False
+2026-06-16_Trade_3A,2026-06-16,Trade 3A - Momentum-Pullback (pivot confluence),CLEAN,False
+2026-06-17_Trade_1,2026-06-17,Trade 1 - Daily Directional,CLEAN,False
+2026-06-17_Trade_2,2026-06-17,Trade 2 - Pivot (buy limit daily S1),CLEAN,False
+2026-06-17_Trade_3A,2026-06-17,Trade 3A - Momentum-Pullback (breakout stop),CLEAN,False
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional,CLEAN,False
+2026-06-18_Trade_2,2026-06-18,Trade 2 - Pivot (sell limit monthly S1 / daily P),CLEAN,False
+2026-06-18_Trade_3C,2026-06-18,Trade 3C - Momentum-Breakout (sell stop),CLEAN,False
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional,CLEAN,False
+2026-06-19_Trade_2,2026-06-19,Trade 2 - Pivot (buy limit daily S1),CLEAN,False
+2026-06-19_Trade_3A,2026-06-19,Trade 3A - Momentum-Pullback (breakout stop),CLEAN,False
+2026-06-24_Trade_1,2026-06-24,Trade 1 - Daily Directional,CLEAN,False
+2026-06-24_Trade_2,2026-06-24,Trade 2 - Pivot (sell limit daily P shelf),CLEAN,False
+2026-06-24_Trade_3A,2026-06-24,Trade 3A - Momentum-Pullback (38.2% rally-sell),CLEAN,False
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot (range fade, sell limit daily R1)",CLEAN,False
+2026-06-25_Trade_3A,2026-06-25,"Trade 3A - Momentum-Pullback (sell stop, break of 23 Jun low)",CLEAN,False
+2026-06-26_Trade_1,2026-06-26,Trade 1 - Daily Directional (sell stop),CLEAN,False
+2026-06-26_Trade_2,2026-06-26,Trade 2 - Pivot (sell limit daily P),CLEAN,False
+2026-06-26_Trade_3A,2026-06-26,Trade 3A - Momentum-Pullback (sell limit daily R1 / 38.2%),CLEAN,False
+2026-06-29_Trade_1,2026-06-29,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-06-29_Trade_2,2026-06-29,Trade 2 - Pivot (sell stop below daily S1),DUD_TP1_SIDE,True
+2026-06-29_Trade_3C,2026-06-29,"Trade 3C - Momentum-Breakout (sell stop, conditional)",CLEAN,False
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-06-30_Trade_2,2026-06-30,Trade 2 - Pivot (sell stop below P),CLEAN,False
+2026-06-30_Trade_3A,2026-06-30,Trade 3A - Momentum-Pullback (57.5% rally-sell),CLEAN,False
+2026-07-01_Trade_1,2026-07-01,Trade 1 - Daily Directional (buy limit daily P),CLEAN,False
+2026-07-01_Trade_2,2026-07-01,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-07-01_Trade_3A,2026-07-01,Trade 3A - Momentum-Pullback (breakout stop),CLEAN,False
+2026-07-02_Trade_1,2026-07-02,Trade 1 - Daily Directional,CLEAN,False
+2026-07-02_Trade_2,2026-07-02,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-02_Trade_3A,2026-07-02,Trade 3A - Momentum-Pullback (57.5% fib),CLEAN,False
+2026-07-03_Trade_1,2026-07-03,Trade 1 - Daily Directional,CLEAN,False
+2026-07-03_Trade_2,2026-07-03,Trade 2 - Pivot (TRANSITION breakout side),SUPPRESSED,False
+2026-07-03_Trade_3C,2026-07-03,Trade 3C - Momentum-Breakout (conditional),CLEAN,False
+2026-07-09_Trade_1,2026-07-09,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-09_Trade_2,2026-07-09,Trade 2 - Pivot (sell limit daily P),CLEAN,False
+2026-07-09_Trade_3A,2026-07-09,Trade 3A - Momentum-Pullback (sell stop),CLEAN,False
+2026-07-10_Trade_1,2026-07-10,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-07-10_Trade_2,2026-07-10,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-10_Trade_3C,2026-07-10,Trade 3C - Momentum-Breakout,SUPPRESSED,False
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional,CLEAN,False
+2026-07-13_Trade_2,2026-07-13,Trade 2 - Pivot (TRANSITION breakout side),DUD_TP1_SIDE,True
+2026-07-13_Trade_3C,2026-07-13,Trade 3C - Momentum-Breakout,SUPPRESSED,False
+2026-07-14_Trade_1,2026-07-14,Trade 1 - Daily Directional,CLEAN,False
+2026-07-14_Trade_2,2026-07-14,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-07-14_Trade_3A,2026-07-14,Trade 3A - Momentum-Pullback (breakout stop),CLEAN,False
+2026-07-15_Trade_1,2026-07-15,Trade 1 - Daily Directional,CLEAN,False
+2026-07-15_Trade_2,2026-07-15,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-07-15_Trade_3C,2026-07-15,Trade 3C - Momentum-Breakout,SUPPRESSED,False
+2026-07-16_Trade_1,2026-07-16,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-07-16_Trade_2,2026-07-16,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-07-16_Trade_3C,2026-07-16,Trade 3C - Transition Breakout,SUPPRESSED,False
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional,CLEAN,False
+2026-07-17_Trade_2,2026-07-17,Trade 2 - Pivot (buy limit daily S1),WARN_DUPLICATE,False
+2026-07-17_Trade_3,2026-07-17,Trade 3 - Pivot fade (sell limit daily R1),CLEAN,False
+2026-07-20_Trade_1,2026-07-20,Trade 1 - Daily Directional,CLEAN,False
+2026-07-20_Trade_2,2026-07-20,Trade 2 - Pivot (TRANSITION down-break side),CLEAN,False
+2026-07-20_Trade_3C,2026-07-20,Trade 3C - Momentum-Breakout (conditional),CLEAN,False
+2026-07-21_Trade_1,2026-07-21,Trade 1 - Daily Directional,CLEAN,False
+2026-07-21_Trade_2,2026-07-21,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-21_Trade_3C,2026-07-21,Trade 3C - Momentum-Breakout (conditional short),CLEAN,False
+2026-07-22_Trade_1,2026-07-22,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-22_Trade_2,2026-07-22,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-22_Trade_3B,2026-07-22,"Trade 3B - Mean-Reversion (range fade, short leg)",CLEAN,False
+2026-07-23_Trade_1,2026-07-23,Trade 1 - Daily Directional,CLEAN,False
+2026-07-23_Trade_2,2026-07-23,Trade 2 - Pivot (buy limit daily S1),CLEAN,False
+2026-07-23_Trade_3,2026-07-23,Trade 3 - Pivot fade (sell limit daily R2),CLEAN,False
+2026-07-24_Trade_1,2026-07-24,Trade 1 - Daily Directional,CLEAN,False
+2026-07-24_Trade_2,2026-07-24,Trade 2 - Pivot (sell limit daily P),CLEAN,False
+2026-07-24_Trade_3A,2026-07-24,Trade 3A - Momentum-Pullback (38.2% rally-sell),CLEAN,False
+2026-07-27_Trade_1,2026-07-27,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-27_Trade_2,2026-07-27,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-07-27_Trade_3C,2026-07-27,Trade 3C - Momentum-Breakout (conditional upside),CLEAN,False
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional,CLEAN,False
+2026-07-28_Trade_2,2026-07-28,Trade 2 - Pivot (buy limit daily S1),CLEAN,False
+2026-07-28_Trade_3,2026-07-28,Trade 3 - Mean-Reversion (buy stop on P reclaim),CLEAN,False
+2026-07-29_Trade_1,2026-07-29,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-29_Trade_2,2026-07-29,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-07-29_Trade_3C,2026-07-29,Trade 3C - Momentum-Breakout (conditional upside),WARN_DUPLICATE,False
+2026-07-30_Trade_1,2026-07-30,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-07-30_Trade_2,2026-07-30,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-30_Trade_3C,2026-07-30,Trade 3C - Momentum-Breakout (conditional short),CLEAN,False
+2026-07-31_Trade_1,2026-07-31,Trade 1 - Daily Directional (breakout stop),CLEAN,False
+2026-07-31_Trade_2,2026-07-31,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-07-31_Trade_3A,2026-07-31,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False

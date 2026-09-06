@@ -1,0 +1,4 @@
+data/slices/*/*.csv
+__pycache__/
+*.pyc
+/tmp/

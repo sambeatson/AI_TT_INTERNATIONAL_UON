@@ -1,0 +1,160 @@
+card_id,report_date,strategy,family,direction,policy,fill_status,entry_rule,fill_ts,fill_px,R_points,risk_vs_card,units,blended_R,blended_R_card
+2026-05-11_Trade_1,2026-05-11,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-12 02:00:00,7423.0,101.8,1.31,3,0.537,1.013
+2026-05-11_Trade_2,2026-05-11,Trade 2 - Pivot pullback (buy daily-S1),Trade 2,LONG,midnight,FILLED,LIMIT touched,2026-05-12 18:15:00,7358.92,40.01,1.0,3,1.376,1.376
+2026-05-11_Trade_3A,2026-05-11,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-12_Trade_1,2026-05-12,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-13 02:00:00,7404.0,60.0,0.872,3,0.4,0.221
+2026-05-12_Trade_2,2026-05-12,"Trade 2 - Pivot (TREND_UP pullback, buy daily P)",Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-12_Trade_3A,2026-05-12,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-13_Trade_1,2026-05-13,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-13_Trade_2,2026-05-13,"Trade 2 - Pivot (TREND breakout, buy stop)",Trade 2,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-05-14 02:00:00,7461.9,98.81,4.497,3,-0.28,2.237
+2026-05-13_Trade_3C,2026-05-13,Trade 3C - Momentum-Breakout (buy stop),Trade 3C,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-05-14 02:00:00,7461.9,126.9,1.308,3,-0.046,0.248
+2026-05-14_Trade_1,2026-05-14,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-14_Trade_2,2026-05-14,Trade 2 - Pivot (buy limit weekly P),Trade 2,LONG,midnight,FILLED,LIMIT touched,2026-05-15 23:00:00,7402.0,35.0,1.0,3,-0.678,-0.678
+2026-05-14_Trade_3A,2026-05-14,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,midnight,FILLED,LIMIT touched,2026-05-15 11:30:00,7422.0,44.0,1.0,3,-0.462,-0.462
+2026-05-15_Trade_1,2026-05-15,Trade 1 - Daily Directional,Trade 1,LONG,midnight,SKIPPED_MALFORMED,MARKET at 02:00 open,2026-05-18 02:00:00,7413.7,39.89,0.831,1,0.0,0.0
+2026-05-15_Trade_2,2026-05-15,"Trade 2 - Pivot (TREND breakout, buy stop)",Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-15_Trade_3C,2026-05-15,Trade 3C - Momentum-Breakout (buy stop),Trade 3C,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-18_Trade_1,2026-05-18,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-05-19 02:00:00,7418.9,47.2,5.37,3,-0.29,2.815
+2026-05-18_Trade_2,2026-05-18,Trade 2 - Pivot fade (sell limit daily R1),Trade 2,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-18_Trade_3C,2026-05-18,"Trade 3C - Transition Breakout (sell stop, conditional)",Trade 3C,SHORT,midnight,FILLED,STOP touched,2026-05-19 07:15:00,7386.25,73.1,1.0,3,-1.0,-1.0
+2026-05-19_Trade_1,2026-05-19,Trade 1 - Daily Directional (mean-reversion),Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-20 02:00:00,7360.3,25.3,0.372,3,5.482,1.41
+2026-05-19_Trade_2,2026-05-19,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,midnight,FILLED,LIMIT already marketable at 02:00 - filled at open,2026-05-20 02:00:00,7360.3,12.3,0.516,3,-1.0,-1.0
+2026-05-19_Trade_3A,2026-05-19,Trade 3A - Momentum-Pullback (layered fib limits),Trade 3A,LONG,midnight,SKIPPED_MICRO_R,LIMIT already marketable at 02:00 - filled at open,2026-05-20 02:00:00,7360.3,0.3,0.004,1,0.0,0.0
+2026-05-20_Trade_1,2026-05-20,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-20_Trade_2,2026-05-20,Trade 2 - Pivot (weekly TREND breakout),Trade 2,LONG,midnight,FILLED,STOP touched,2026-05-21 08:00:00,7442.17,69.25,1.0,3,0.689,0.689
+2026-05-20_Trade_3A,2026-05-20,Trade 3A - Momentum-Pullback (demand-zone retest),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-21_Trade_1,2026-05-21,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-22 02:00:00,7463.5,137.26,1.286,3,-0.13,0.118
+2026-05-21_Trade_2,2026-05-21,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-05-22 02:00:00,7463.5,88.49,1.313,3,0.703,1.235
+2026-05-21_Trade_3C,2026-05-21,Trade 3C - Range Breakout (conditional),Trade 3C,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-26 02:00:00,7537.7,312.59,1.075,3,0.651,0.775
+2026-05-22_Trade_1,2026-05-22,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-22_Trade_2,2026-05-22,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-05-25 02:00:00,7521.1,166.1,2.768,3,-0.302,0.933
+2026-05-22_Trade_3C,2026-05-22,Trade 3C - Momentum-Breakout (conditional),Trade 3C,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-26 02:00:00,7537.7,344.7,0.996,3,0.59,0.584
+2026-05-25_Trade_1,2026-05-25,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-26 02:00:00,7537.7,134.4,1.915,3,0.163,1.228
+2026-05-25_Trade_2,2026-05-25,"Trade 2 - Pivot (TREND breakout, buy stop)",Trade 2,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-05-26 02:00:00,7537.7,111.27,5.273,3,-0.513,1.568
+2026-05-25_Trade_3A,2026-05-25,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-26_Trade_1,2026-05-26,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-27 02:00:00,7522.5,124.54,1.649,3,0.399,1.307
+2026-05-26_Trade_2,2026-05-26,"Trade 2 - Pivot (TRANSITION breakout, buy stop)",Trade 2,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-05-27 02:00:00,7522.5,96.17,4.377,3,-0.417,1.55
+2026-05-26_Trade_3C,2026-05-26,Trade 3C - Range Breakout (conditional),Trade 3C,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-29 02:00:00,7575.6,415.31,1.002,3,0.399,0.402
+2026-05-27_Trade_1,2026-05-27,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-28 02:00:00,7535.8,205.45,1.088,3,-0.598,-0.562
+2026-05-27_Trade_2,2026-05-27,Trade 2 - Pivot (TREND_UP),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-27_Trade_3A,2026-05-27,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-05-29 02:00:00,7575.6,104.4,2.184,3,-0.086,0.996
+2026-05-28_Trade_2,2026-05-28,Trade 2 - Pivot (daily P / weekly R1 retest),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-28_Trade_3A,2026-05-28,Trade 3A - Momentum-Pullback,Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-29_Trade_1,2026-05-29,Trade 1 - Daily Directional,Trade 1,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-29_Trade_2,2026-05-29,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-05-29_Trade_3A,2026-05-29,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-06-01 02:00:00,7593.7,65.7,1.493,3,-0.554,-0.333
+2026-06-01_Trade_1,2026-06-01,Trade 1 - Daily Directional (breakout stop),Trade 1,LONG,midnight,FILLED,STOP touched,2026-06-02 11:00:00,7599.5,36.9,1.0,3,-0.47,-0.47
+2026-06-01_Trade_2,2026-06-01,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,FILLED,LIMIT touched,2026-06-02 03:00:00,7581.0,35.8,1.0,3,0.377,0.377
+2026-06-01_Trade_3A,2026-06-01,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-02_Trade_1,2026-06-02,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-06-03 02:00:00,7614.7,63.19,1.304,3,-1.0,-1.0
+2026-06-02_Trade_2,2026-06-02,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,FILLED,LIMIT touched,2026-06-03 16:45:00,7580.81,30.05,1.0,3,-1.0,-1.0
+2026-06-02_Trade_3A,2026-06-02,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-03_Trade_1,2026-06-03,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-06-04 02:00:00,7536.5,37.36,0.433,3,-0.26,-0.68
+2026-06-03_Trade_2,2026-06-03,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,SKIPPED_MALFORMED,LIMIT already marketable at 02:00 - filled at open,2026-06-04 02:00:00,7536.5,21.31,0.49,1,0.0,0.0
+2026-06-03_Trade_3A,2026-06-03,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,midnight,FILLED,LIMIT already marketable at 02:00 - filled at open,2026-06-04 02:00:00,7536.5,52.5,0.585,3,-1.0,-1.0
+2026-06-04_Trade_1,2026-06-04,Trade 1 - Daily Directional,Trade 1,LONG,midnight,SKIPPED_MICRO_R,MARKET at 02:00 open,2026-06-05 02:00:00,7578.5,4.79,0.133,1,0.0,0.0
+2026-06-04_Trade_2,2026-06-04,Trade 2 - Pivot (TREND_UP breakout),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-04_Trade_3A,2026-06-04,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,midnight,FILLED,LIMIT touched,2026-06-05 03:30:00,7554.26,63.76,1.0,3,-1.0,-1.0
+2026-06-05_Trade_1,2026-06-05,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-05_Trade_2,2026-06-05,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,SKIPPED_MALFORMED,LIMIT already marketable at 02:00 - filled at open,2026-06-08 02:00:00,7362.7,149.3,2.574,1,0.0,0.0
+2026-06-05_Trade_3A,2026-06-05,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-06-09 02:00:00,7407.2,67.8,0.745,3,-1.0,-1.0
+2026-06-08_Trade_3A,2026-06-08,Trade 3A - Momentum-Pullback (sell limit weekly S2),Trade 3A,SHORT,midnight,FILLED,LIMIT touched,2026-06-09 16:30:00,7460.0,105.0,1.0,3,0.679,0.679
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-06-10 02:00:00,7366.3,117.7,1.177,3,0.196,0.408
+2026-06-09_Trade_3A,2026-06-09,Trade 3A - Momentum-Pullback (sell limit daily P),Trade 3A,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-10_Trade_1,2026-06-10,Trade 1 - Daily Directional (sell stop),Trade 1,SHORT,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-06-11 02:00:00,7240.7,235.3,1.612,3,-0.574,-0.314
+2026-06-10_Trade_2,2026-06-10,Trade 2 - Pivot (sell limit weekly P),Trade 2,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-10_Trade_3C,2026-06-10,Trade 3C - Momentum-Breakout (sell stop),Trade 3C,SHORT,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-06-11 02:00:00,7240.7,155.3,2.099,3,-0.682,-0.333
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-06-12 02:00:00,7408.9,143.55,0.504,3,-0.725,-0.861
+2026-06-11_Trade_3A,2026-06-11,Trade 3A - Momentum-Pullback (57.5% rally-sell),Trade 3A,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-15_Trade_1,2026-06-15,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-06-16 02:00:00,7552.5,213.59,2.307,3,-0.432,0.309
+2026-06-15_Trade_2,2026-06-15,Trade 2 - Pivot (buy stop daily R1),Trade 2,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-06-16 02:00:00,7552.5,135.64,2.51,3,-0.734,-0.334
+2026-06-15_Trade_3C,2026-06-15,Trade 3C - Breakout (buy stop 5-day swing high),Trade 3C,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-06-16 02:00:00,7552.5,135.54,2.048,3,-0.675,-0.334
+2026-06-16_Trade_1,2026-06-16,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-06-17 02:00:00,7532.4,143.16,3.409,3,-0.108,2.039
+2026-06-16_Trade_2,2026-06-16,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-16_Trade_3A,2026-06-16,Trade 3A - Momentum-Pullback (pivot confluence),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-17_Trade_1,2026-06-17,Trade 1 - Daily Directional,Trade 1,LONG,midnight,SKIPPED_MALFORMED,LIMIT already marketable at 02:00 - filled at open,2026-06-18 02:00:00,7462.3,12.7,0.153,1,0.0,0.0
+2026-06-17_Trade_2,2026-06-17,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,midnight,SKIPPED_MALFORMED,LIMIT already marketable at 02:00 - filled at open,2026-06-18 02:00:00,7462.3,7.7,0.135,1,0.0,0.0
+2026-06-17_Trade_3A,2026-06-17,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,SKIPPED_MICRO_R,MARKET at 02:00 open,2026-06-19 02:00:00,7498.7,2.3,0.028,1,0.0,0.0
+2026-06-18_Trade_2,2026-06-18,Trade 2 - Pivot (sell limit monthly S1 / daily P),Trade 2,SHORT,midnight,SKIPPED_MICRO_R,LIMIT already marketable at 02:00 - filled at open,2026-06-19 02:00:00,7498.7,7.3,0.13,1,0.0,0.0
+2026-06-18_Trade_3C,2026-06-18,Trade 3C - Momentum-Breakout (sell stop),Trade 3C,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-06-22 02:00:00,7477.8,12.8,0.36,3,-1.0,-1.0
+2026-06-19_Trade_2,2026-06-19,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,midnight,FILLED,LIMIT touched,2026-06-22 02:00:00,7475.58,25.01,1.0,3,1.067,1.067
+2026-06-19_Trade_3A,2026-06-19,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,midnight,FILLED,STOP touched,2026-06-22 14:00:00,7512.0,34.0,1.0,3,-1.0,-1.0
+2026-06-24_Trade_1,2026-06-24,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-06-25 02:00:00,7408.6,61.57,0.586,3,-0.497,-0.705
+2026-06-24_Trade_2,2026-06-24,Trade 2 - Pivot (sell limit daily P shelf),Trade 2,SHORT,midnight,FILLED,LIMIT already marketable at 02:00 - filled at open,2026-06-25 02:00:00,7408.6,80.4,0.946,3,-0.299,-0.337
+2026-06-24_Trade_3A,2026-06-24,Trade 3A - Momentum-Pullback (38.2% rally-sell),Trade 3A,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot (range fade, sell limit daily R1)",Trade 2,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-25_Trade_3A,2026-06-25,"Trade 3A - Momentum-Pullback (sell stop, break of 23 Jun low)",Trade 3A,SHORT,midnight,FILLED,STOP touched,2026-06-26 04:30:00,7346.0,39.0,1.0,3,0.214,0.214
+2026-06-26_Trade_1,2026-06-26,Trade 1 - Daily Directional (sell stop),Trade 1,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-26_Trade_2,2026-06-26,Trade 2 - Pivot (sell limit daily P),Trade 2,SHORT,midnight,FILLED,LIMIT already marketable at 02:00 - filled at open,2026-06-29 02:00:00,7380.0,85.61,0.938,3,-1.0,-1.0
+2026-06-26_Trade_3A,2026-06-26,Trade 3A - Momentum-Pullback (sell limit daily R1 / 38.2%),Trade 3A,SHORT,midnight,FILLED,LIMIT touched,2026-06-29 13:45:00,7411.91,53.7,1.0,3,-0.326,-0.326
+2026-06-29_Trade_1,2026-06-29,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-06-30 02:00:00,7440.4,117.6,0.576,3,-0.799,-0.884
+2026-06-29_Trade_2,2026-06-29,Trade 2 - Pivot (sell stop below daily S1),Trade 2,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-29_Trade_3C,2026-06-29,"Trade 3C - Momentum-Breakout (sell stop, conditional)",Trade 3C,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,SKIPPED_MICRO_R,MARKET at 02:00 open,2026-07-01 02:00:00,7489.8,10.2,0.07,1,0.0,0.0
+2026-06-30_Trade_2,2026-06-30,Trade 2 - Pivot (sell stop below P),Trade 2,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-06-30_Trade_3A,2026-06-30,Trade 3A - Momentum-Pullback (57.5% rally-sell),Trade 3A,SHORT,midnight,SKIPPED_MICRO_R,LIMIT already marketable at 02:00 - filled at open,2026-07-01 02:00:00,7489.8,10.2,0.127,1,0.0,0.0
+2026-07-01_Trade_1,2026-07-01,Trade 1 - Daily Directional (buy limit daily P),Trade 1,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-01_Trade_2,2026-07-01,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-01_Trade_3A,2026-07-01,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-07-02 02:00:00,7487.2,86.2,1.916,3,0.233,1.363
+2026-07-02_Trade_1,2026-07-02,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-07-03 02:00:00,7483.3,70.74,0.815,3,0.252,0.02
+2026-07-02_Trade_2,2026-07-02,Trade 2 - Pivot (regime-aware),Trade 2,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-02_Trade_3A,2026-07-02,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-03_Trade_1,2026-07-03,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-07-06 02:00:00,7512.6,84.6,1.552,3,-0.105,0.39
+2026-07-03_Trade_2,2026-07-03,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-03_Trade_3C,2026-07-03,Trade 3C - Momentum-Breakout (conditional),Trade 3C,LONG,midnight,FILLED,MARKET at 02:00 open,2026-08-05 02:00:00,7754.3,363.3,1.58,3,-0.036,0.523
+2026-07-09_Trade_1,2026-07-09,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-09_Trade_2,2026-07-09,Trade 2 - Pivot (sell limit daily P),Trade 2,SHORT,midnight,SKIPPED_MICRO_R,LIMIT already marketable at 02:00 - filled at open,2026-07-10 02:00:00,7539.3,5.7,0.158,1,0.0,0.0
+2026-07-09_Trade_3A,2026-07-09,Trade 3A - Momentum-Pullback (sell stop),Trade 3A,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-10_Trade_1,2026-07-10,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-07-13 02:00:00,7556.2,83.46,1.177,3,-0.85,-0.824
+2026-07-10_Trade_2,2026-07-10,Trade 2 - Pivot (regime-aware),Trade 2,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_3C,2026-07-10,Trade 3C - Momentum-Breakout,Trade 3C,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-07-14 02:00:00,7508.1,27.85,0.293,3,-0.194,-0.764
+2026-07-13_Trade_2,2026-07-13,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-13_Trade_3C,2026-07-13,Trade 3C - Momentum-Breakout,Trade 3C,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_1,2026-07-14,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-07-15 02:00:00,7545.6,16.54,0.357,3,-1.0,-1.0
+2026-07-14_Trade_2,2026-07-14,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,FILLED,LIMIT already marketable at 02:00 - filled at open,2026-07-15 02:00:00,7545.6,62.88,0.876,3,-1.0,-1.0
+2026-07-14_Trade_3A,2026-07-14,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,midnight,FILLED,STOP touched,2026-07-15 16:30:00,7581.0,72.84,1.0,3,-1.0,-1.0
+2026-07-15_Trade_1,2026-07-15,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-07-16 02:00:00,7576.0,92.6,1.538,3,-0.846,-0.763
+2026-07-15_Trade_2,2026-07-15,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-07-16 02:00:00,7576.0,78.2,2.384,3,-0.047,1.273
+2026-07-15_Trade_3C,2026-07-15,Trade 3C - Momentum-Breakout,Trade 3C,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-16_Trade_1,2026-07-16,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,MARKET at 02:00 open,2026-07-17 02:00:00,7524.4,122.14,0.864,3,-0.855,-0.875
+2026-07-16_Trade_2,2026-07-16,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,FILLED,LIMIT already marketable at 02:00 - filled at open,2026-07-17 02:00:00,7524.4,5.67,0.293,3,-1.0,-1.0
+2026-07-16_Trade_3C,2026-07-16,Trade 3C - Transition Breakout,Trade 3C,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-07-20 02:00:00,7456.8,129.47,2.976,3,-0.04,1.857
+2026-07-17_Trade_2,2026-07-17,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,midnight,SKIPPED_MICRO_R,LIMIT already marketable at 02:00 - filled at open,2026-07-20 02:00:00,7456.8,3.23,0.067,1,0.0,0.0
+2026-07-17_Trade_3,2026-07-17,Trade 3 - Pivot fade (sell limit daily R1),Trade 3,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-20_Trade_1,2026-07-20,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-07-21 02:00:00,7437.2,79.32,1.348,3,-0.946,-0.927
+2026-07-20_Trade_2,2026-07-20,Trade 2 - Pivot (TRANSITION down-break side),Trade 2,SHORT,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-07-21 02:00:00,7437.2,50.24,1.758,3,-1.0,-1.0
+2026-07-20_Trade_3C,2026-07-20,Trade 3C - Momentum-Breakout (conditional),Trade 3C,SHORT,midnight,NO TRIGGER,,,,,,1,0.0,0.0
+2026-07-21_Trade_1,2026-07-21,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,SKIPPED_MALFORMED,MARKET at 02:00 open,2026-07-22 02:00:00,7503.3,1.3,0.022,1,0.0,0.0
+2026-07-21_Trade_2,2026-07-21,Trade 2 - Pivot (regime-aware),Trade 2,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_3C,2026-07-21,Trade 3C - Momentum-Breakout (conditional short),Trade 3C,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-07-24 02:00:00,7417.1,112.9,1.298,3,-1.0,-1.0
+2026-07-22_Trade_1,2026-07-22,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_2,2026-07-22,Trade 2 - Pivot (regime-aware),Trade 2,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_3B,2026-07-22,"Trade 3B - Mean-Reversion (range fade, short leg)",Trade 3B,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-23_Trade_1,2026-07-23,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,FILLED,MARKET at 02:00 open,2026-07-24 02:00:00,7417.1,104.04,4.691,3,-0.245,2.543
+2026-07-23_Trade_2,2026-07-23,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,midnight,SKIPPED_MICRO_R,LIMIT already marketable at 02:00 - filled at open,2026-07-24 02:00:00,7417.1,2.46,0.036,1,0.0,0.0
+2026-07-23_Trade_3,2026-07-23,Trade 3 - Pivot fade (sell limit daily R2),Trade 3,SHORT,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-24_Trade_1,2026-07-24,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,SKIPPED_MALFORMED,MARKET at 02:00 open,2026-07-27 02:00:00,7458.3,11.78,0.308,1,0.0,0.0
+2026-07-24_Trade_2,2026-07-24,Trade 2 - Pivot (sell limit daily P),Trade 2,SHORT,midnight,FILLED,LIMIT already marketable at 02:00 - filled at open,2026-07-27 02:00:00,7458.3,20.98,0.412,3,-1.0,-1.0
+2026-07-24_Trade_3A,2026-07-24,Trade 3A - Momentum-Pullback (38.2% rally-sell),Trade 3A,SHORT,midnight,FILLED,LIMIT touched,2026-07-27 09:00:00,7481.66,71.33,1.0,3,1.158,1.158
+2026-07-27_Trade_1,2026-07-27,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-27_Trade_2,2026-07-27,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,midnight,FILLED,STOP touched,2026-07-28 15:30:00,7425.82,32.91,1.0,3,-1.0,-1.0
+2026-07-27_Trade_3C,2026-07-27,Trade 3C - Momentum-Breakout (conditional upside),Trade 3C,LONG,midnight,FILLED,MARKET at 02:00 open,2026-08-04 02:00:00,7607.9,198.79,1.052,3,0.671,0.758
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional,Trade 1,LONG,midnight,FILLED,LIMIT touched,2026-07-29 16:45:00,7392.0,35.0,1.0,3,-1.0,-1.0
+2026-07-28_Trade_2,2026-07-28,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,midnight,FILLED,LIMIT touched,2026-07-29 17:00:00,7387.0,25.0,1.0,3,-1.0,-1.0
+2026-07-28_Trade_3,2026-07-28,Trade 3 - Mean-Reversion (buy stop on P reclaim),Trade 3,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-07-29 02:00:00,7420.0,42.0,1.0,3,0.479,0.479
+2026-07-29_Trade_1,2026-07-29,Trade 1 - Daily Directional,Trade 1,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-29_Trade_2,2026-07-29,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,midnight,FILLED,STOP touched,2026-07-30 22:00:00,7438.79,39.4,1.0,3,-0.333,-0.333
+2026-07-29_Trade_3C,2026-07-29,Trade 3C - Momentum-Breakout (conditional upside),Trade 3C,LONG,midnight,FILLED,MARKET at 02:00 open,2026-08-04 02:00:00,7607.9,198.79,1.052,3,0.671,0.758
+2026-07-30_Trade_1,2026-07-30,Trade 1 - Daily Directional,Trade 1,SHORT,midnight,SKIPPED_MALFORMED,MARKET at 02:00 open,2026-07-31 02:00:00,7454.1,53.1,0.625,1,0.0,0.0
+2026-07-30_Trade_2,2026-07-30,Trade 2 - Pivot (regime-aware),Trade 2,n/a,midnight,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-30_Trade_3C,2026-07-30,Trade 3C - Momentum-Breakout (conditional short),Trade 3C,SHORT,midnight,NO TRIGGER,,,,,,1,0.0,0.0
+2026-07-31_Trade_1,2026-07-31,Trade 1 - Daily Directional (breakout stop),Trade 1,LONG,midnight,FILLED,STOP already marketable at 02:00 - filled at open,2026-08-03 02:00:00,7517.5,151.5,1.702,3,0.314,1.237
+2026-07-31_Trade_2,2026-07-31,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,midnight,NO FILL,,,,,,1,0.0,0.0
+2026-07-31_Trade_3A,2026-07-31,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,midnight,NO FILL,,,,,,1,0.0,0.0

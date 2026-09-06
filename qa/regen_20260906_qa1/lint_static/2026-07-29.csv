@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-29_Trade_1,2026-07-29,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-29_Trade_2,2026-07-29,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-07-29_Trade_3C,2026-07-29,Trade 3C - Momentum-Breakout (conditional upside),WARN_TARGET_FAR(3.32xATR),False

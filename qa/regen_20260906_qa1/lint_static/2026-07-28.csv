@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional,CLEAN,False
+2026-07-28_Trade_2,2026-07-28,Trade 2 - Pivot (buy limit daily S1),WARN_R_TINY(0.30xATR),False
+2026-07-28_Trade_3,2026-07-28,Trade 3 - Mean-Reversion (buy stop on P reclaim),CLEAN,False

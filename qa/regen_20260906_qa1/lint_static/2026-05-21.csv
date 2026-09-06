@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-21_Trade_1,2026-05-21,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-05-21_Trade_2,2026-05-21,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-05-21_Trade_3C,2026-05-21,Trade 3C - Range Breakout (conditional),WARN_R_HUGE(3.54xATR)|WARN_TARGET_FAR(5.42xATR),False

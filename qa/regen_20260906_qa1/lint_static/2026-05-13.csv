@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-13_Trade_1,2026-05-13,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-13_Trade_2,2026-05-13,"Trade 2 - Pivot (TREND breakout, buy stop)",WARN_R_TINY(0.29xATR),False
+2026-05-13_Trade_3C,2026-05-13,Trade 3C - Momentum-Breakout (buy stop),WARN_TP3_ORDER,False

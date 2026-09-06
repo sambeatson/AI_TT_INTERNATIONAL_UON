@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-26_Trade_1,2026-06-26,Trade 1 - Daily Directional (sell stop),CLEAN,False
+2026-06-26_Trade_2,2026-06-26,Trade 2 - Pivot (sell limit daily P),CLEAN,False
+2026-06-26_Trade_3A,2026-06-26,Trade 3A - Momentum-Pullback (sell limit daily R1 / 38.2%),CLEAN,False

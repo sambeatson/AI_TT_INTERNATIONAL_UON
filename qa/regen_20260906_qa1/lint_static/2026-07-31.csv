@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-31_Trade_1,2026-07-31,Trade 1 - Daily Directional (breakout stop),CLEAN,False
+2026-07-31_Trade_2,2026-07-31,Trade 2 - Pivot (buy limit daily P),CLEAN,False
+2026-07-31_Trade_3A,2026-07-31,Trade 3A - Momentum-Pullback (38.2% fib),CLEAN,False

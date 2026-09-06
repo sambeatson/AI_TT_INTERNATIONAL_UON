@@ -1,0 +1,1418 @@
+<!-- page 1 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 1 of 28 
+Quality Assurance & AI Governance 
+AI Output Trust Score 
+Evaluation Framework 
+A practical, repeatable scoring framework for assessing AI-generated outputs produced through 
+the modular prompting architecture (Variables · Module 1 Research Standard · Module 2 
+Methodology · Module 3 Output Structure). 
+ 
+Document Control 
+Detail 
+Document title 
+AI Output Trust Score Evaluation Framework 
+Version 
+1.0 
+Audience 
+AI governance, QA reviewers, prompt engineers, compliance, business 
+stakeholders 
+Source basis 
+Modular Prompting Guide (supplied PDF, Pages 1–2) 
+Total score 
+100 points across five weighted categories 
+Review cadence 
+Quarterly recalibration (recommended assumption — see Section 10) 
+ 
+ 
+
+
+<!-- page 2 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 2 of 28 
+1. Executive Summary 
+The AI Output Trust Score is a single, defensible number — out of 100 — that tells a reviewer whether an 
+AI-generated analytical output can be trusted, used, escalated, or rejected. It exists because the difference 
+between a usable AI deliverable and an unusable one is no longer about fluency; it is about whether the 
+output is grounded in evidence, follows the agreed methodology, conforms to the agreed structure, and 
+exposes its own assumptions and uncertainties. 
+This framework is purpose-built to evaluate outputs produced through the modular prompting 
+architecture described in the supplied source PDF. That architecture separates what changes (Variables) 
+from what is fixed (Module 1 Research Standard, Module 2 Methodology, Module 3 Output Structure). 
+Because the prompt itself enforces a quality bar, a methodology, and a deliverable format, evaluators can 
+— and must — score the resulting output against those exact same anchors. 
+The framework converts the four failures that the PDF identifies in single-shot prompting (no quality 
+standard, no methodology, no output structure, no data anchoring) into five weighted scoring categories 
+that together total 100 points. Reviewers apply a 0–5 rubric within each category, multiply by the category 
+weight, and sum to a Trust Score. The Trust Score then maps to one of five interpretation bands ranging 
+from Very High Trust (90–100) to Very Low Trust (0–39), each with an associated usage decision and 
+remediation pathway. 
+Why this framework exists 
+Single-shot prompts produce outputs that look polished but cannot be trusted, compared, or 
+repeated. The modular prompting framework fixes the prompt side. This Trust Score framework 
+fixes the evaluation side — so that the same output, reviewed by two different people, lands at 
+substantially the same score. 
+2. Purpose and Scope 
+This framework applies to AI-generated analytical outputs that were produced using a modular prompt 
+of the form described in the source PDF — that is, a prompt composed of an editable Variables block plus 
+three fixed modules (Research Standard, Methodology, Output Structure). 
+In scope 
+• Financial-analysis outputs of the kinds illustrated in the PDF: Market Snapshot, Commodity 
+Review, Financial Health, Portfolio Checkup, and Macro Backdrop. 
+• Any other analytical deliverable generated through the same modular prompt template, where 
+Variables, Research Standard, Methodology, and Output Structure can be identified. 
+• Outputs intended for downstream business use — investment memos, internal review packs, 
+client-facing summaries, or analyst handoffs. 
+
+
+<!-- page 3 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 3 of 28 
+Out of scope (and why) 
+• Free-form chat replies, brainstorming, or exploratory prompting where no Variables/Modules 
+contract exists. The Structural and Modular Framework Alignment category cannot be scored 
+against an absent template. 
+• Code generation, translation, and other non-analytical tasks. Reviewers should use a task-
+appropriate rubric for those. 
+• Confidential model-internals review (e.g., chain-of-thought audits). This framework scores the 
+visible output, not the model's hidden reasoning. 
+Who uses this framework 
+• Quality assurance reviewers and AI governance teams, as the primary scorers. 
+• Prompt engineers, as a feedback loop into module design. 
+• Compliance reviewers, who rely on the score band to decide whether a human sign-off is 
+required. 
+• Business stakeholders and analysts consuming the output, as a single, transparent quality signal. 
+3. Evaluation Principles 
+Every score awarded under this framework should follow the seven principles below. They exist to make 
+scores defensible, comparable, and resistant to reviewer drift. 
+Principle 
+What it means in practice 
+Objectivity 
+Score the output on the page, not the reputation of the model, the 
+analyst, or the company under analysis. A confident tone is not 
+evidence; a citation is. 
+Traceability 
+Every point awarded or withheld must be tied to a specific observation 
+in the output (a sentence, a table cell, a missing section). Reviewer 
+notes must record where the evidence was — or was not — found. 
+Prompt alignment 
+The prompt is the contract. Score adherence to the Variables, the 
+Research Standard, the Methodology, and the Output Structure as 
+supplied — not to an idealised prompt the reviewer wishes had been 
+used. 
+Evidence-based scoring 
+Claims without sourced evidence are penalised in Category 3. Claims 
+with sourced evidence that does not actually support them are 
+penalised more heavily — fabricated sourcing is worse than no sourcing. 
+
+
+<!-- page 4 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 4 of 28 
+Principle 
+What it means in practice 
+Transparency 
+Reviewers must show their working: rubric level chosen, raw category 
+scores, weighted contribution, and final total. A Trust Score with no 
+audit trail is itself a red flag. 
+Currency 
+Outputs are scored against the data recency expectations stated in the 
+prompt's Coverage Period and Data Sources fields. Stale data presented 
+as current is a Category 5 failure. 
+Proportional judgment 
+Minor formatting deviations should not collapse a score; material 
+methodology gaps or fabricated facts should. Category weights and the 
+0–5 rubric exist to enforce this. 
+4. Overview of the Trust Score Model 
+The Trust Score is composed of five weighted categories. Each category is scored on a 0–5 rubric 
+(described in Section 5), and the rubric level is converted into the category's weighted point contribution. 
+The five categories together total exactly 100 points. 
+Category weights and PDF anchors 
+# 
+Category 
+Max 
+points 
+Anchored to (from the source PDF) 
+1 
+Prompt Adherence and 
+Instruction Compliance 
+20 
+Variables block (Company, Identifier, Coverage 
+Period, Peer Set, Purpose & Audience, Data Sources, 
+Accounting/Currency Notes) 
+2 
+Structural and Modular 
+Framework Alignment 
+20 
+Module 3 — Output Structure (Executive Snapshot 
+→ Scorecard → Deep Dive → Peer Context → Risks 
+→ Catalysts → Bottom Line + Watchlist) and the 9-
+step sequence in Module 2 
+3 
+Accuracy, Evidence, and 
+Factual Reliability 
+25 
+Module 1 — Research Standard: evidence 
+grounding, source citation, calculation transparency. 
+Addresses the PDF's most-flagged failure: 'No Data 
+Anchoring'. 
+
+
+<!-- page 5 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 5 of 28 
+# 
+Category 
+Max 
+points 
+Anchored to (from the source PDF) 
+4 
+Reasoning, Judgment, 
+and Evaluation Quality 
+20 
+Module 2 — Methodology (Steps 2–9: Trend, 
+Liquidity, Leverage, Cash flow, Efficiency, Peer 
+context, Risk & catalyst, Synthesis) 
+5 
+Currency, Risk 
+Awareness, Restrictions, 
+and Transparency 
+15 
+Module 1 — Research Standard: data recency 
+checks, explicit assumptions, calibrated language, 
+red-flag surfacing 
+ 
+Total Trust Score 
+100 
+Five categories, 0–5 rubric each, weighted to a 
+single number out of 100 
+ 
+How a category score is calculated 
+Each category uses a 0–5 rubric. The reviewer's chosen rubric level is converted to the category's weighted 
+contribution as follows: 
+Rubric level 
+Multiplier 
+Plain-English 
+label 
+What it indicates 
+5 
+1.00 × max 
+Excellent 
+Fully meets the criterion with no observable 
+gaps. 
+4 
+0.85 × max 
+Strong 
+Meets the criterion with minor, non-material 
+gaps. 
+3 
+0.65 × max 
+Adequate 
+Meets most of the criterion but has visible 
+weaknesses that require reviewer notes. 
+2 
+0.40 × max 
+Weak 
+Substantial gaps that materially affect the 
+trustworthiness of the output. 
+1 
+0.20 × max 
+Poor 
+The criterion is barely addressed; the output is 
+at high risk of being misleading. 
+0 
+0.00 × max 
+Fail 
+The criterion is absent, fabricated, or actively 
+harmful (e.g., hallucinated sources). 
+ 
+
+
+<!-- page 6 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 6 of 28 
+Worked formula: Trust Score = Σ (rubric multiplier × category max) across all five categories. The result 
+is rounded to the nearest whole number. 
+5. Detailed Scoring Framework 
+Each of the five subsections below specifies, for one category: the score weighting, the criteria, the 0–5 
+rubric, three illustrative examples, the reviewer checklist, common failure modes, red flags, and 
+consistency guidance. Reviewers should work through them in order; Section 7 provides a single 
+consolidated checklist for use during review. 
+5.1 Category 1: Prompt Adherence and Instruction Compliance 
+Field 
+Detail 
+Maximum score 
+20 points 
+Purpose 
+Measures the degree to which the AI output respects the seven editable 
+Variables and the explicit instructions supplied in the prompt (Company, 
+Identifier, Coverage Period, Peer Set, Purpose & Audience, Data 
+Sources, Accounting/Currency Notes). 
+Why it matters for trust 
+The Variables block is the only part of the prompt that defines what the 
+user actually asked for. If the output drifts from the Variables — wrong 
+company, wrong period, wrong peer set, wrong audience register — 
+every subsequent strength is wasted. Adherence is the foundation of 
+every other score. 
+ 
+Detailed scoring criteria 
+• The output addresses the exact Company and Identifier supplied; no substitution, no implicit 
+broadening. 
+• The Coverage Period is respected — no smuggling-in of out-of-scope quarters or years. 
+• The Peer Set used in comparisons matches the supplied list; no silent additions or omissions. 
+• The Purpose & Audience drives tone, depth, and emphasis (e.g., a CFO audience is treated 
+differently from a retail-investor audience). 
+• Only the supplied Data Sources are used; if the output draws on others, it must say so explicitly. 
+• Accounting/Currency Notes (e.g., USD vs. local currency, IFRS vs. US GAAP) are observed and 
+applied throughout. 
+
+
+<!-- page 7 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 7 of 28 
+• Any restrictions or exclusions stated in the prompt (e.g., 'do not include forward guidance') are 
+honoured. 
+0–5 scoring rubric 
+Level 
+Label 
+Description (what the reviewer should observe) 
+5 
+Excellent 
+All seven Variables and any prompt restrictions are visibly respected. The 
+output reads as if the prompt template were a hard contract. 
+4 
+Strong 
+All Variables respected; one minor instruction (e.g., audience register) is 
+slightly off but causes no material distortion. 
+3 
+Adequate 
+Five to six Variables respected; one moderate deviation (e.g., wrong 
+Coverage Period for a sub-section, or two extra peers). 
+2 
+Weak 
+Multiple Variables ignored or interpreted loosely; the output partially 
+answers a different question than the one asked. 
+1 
+Poor 
+Most Variables ignored; the output uses a generic template rather than 
+the supplied parameters. 
+0 
+Fail 
+Output is for the wrong company, wrong period, or wrong audience; or it 
+openly violates an explicit restriction. 
+ 
+Examples 
+High-scoring example (5) 
+An output that opens by re-stating the seven Variables, names the exact Coverage Period in every 
+section heading, uses precisely the named peer set in the Peer Context section, expresses every 
+monetary figure in the currency specified in the Accounting/Currency Notes, and adopts the 
+language register implied by the Purpose & Audience field. 
+ 
+Medium-scoring example (≈3) 
+An output that uses the right Company and Coverage Period but adds one peer that was not on the 
+supplied Peer Set, and reports a few figures in USD when the prompt specified GBP — without 
+flagging the conversion. 
+ 
+
+
+<!-- page 8 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 8 of 28 
+Low-scoring example (≤1) 
+An output that analyses the parent group instead of the specified subsidiary, uses trailing-twelve-
+months data when the prompt asked for FY2024, and addresses a generic 'investor' audience when 
+the prompt specified an internal credit committee. 
+ 
+Reviewer checklist questions 
+• Are all seven Variables explicitly observable in the output? 
+• Is the Coverage Period visibly enforced section-by-section? 
+• Does the Peer Set in the Peer Context section match the supplied list exactly? 
+• Does the tone and depth match the Purpose & Audience field? 
+• Is the currency and accounting basis consistent throughout? 
+• Are any prompt-level restrictions (exclusions, scope limits) honoured? 
+• Where the output departs from the prompt, is the departure flagged and justified? 
+Common failure modes 
+• Silent substitution of an entity (e.g., parent for subsidiary) without disclosure. 
+• Period drift — switching from the stated Coverage Period to a more convenient one inside the 
+analysis. 
+• Peer-set inflation, where extra comparable companies are added 'for completeness'. 
+• Audience mismatch, producing executive-summary tone for a technical credit-committee request, 
+or vice versa. 
+Red flags that should reduce the score 
+• Output ignores a stated restriction (e.g., 'do not include forecasts') and includes the restricted 
+content anyway. 
+• Currency or unit changes mid-document without an explicit note. 
+• Generic boilerplate that does not reference the supplied Variables at all. 
+How to apply this score consistently 
+Score Category 1 first, before reading the body of the output for analysis quality. Cross-check each 
+Variable against the relevant section of the output and tick it off explicitly in your reviewer notes. If 
+three or more Variables are not visibly respected, the category cannot score above 3 regardless of the 
+analytical quality elsewhere. 
+5.2 Category 2: Structural and Modular Framework Alignment 
+
+
+<!-- page 9 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 9 of 28 
+Field 
+Detail 
+Maximum score 
+20 points 
+Purpose 
+Measures whether the output conforms to Module 3's fixed deliverable 
+format (Executive Snapshot → Key Metrics Scorecard → Deep Dive by 
+Pillar → Peer Context → Risks & Red Flags → Catalysts → Bottom Line + 
+Watchlist) and whether the analytical journey follows Module 2's nine-
+step methodology. 
+Why it matters for trust 
+Structural alignment is what makes outputs comparable across 
+companies, periods, and reviewers. The PDF identifies 'No Output 
+Structure' as one of the four single-shot failures: without it, every 
+response looks different and review becomes painful. A score in this 
+category is, in effect, a measure of whether the output is fit for 
+downstream comparison and handoff. 
+ 
+Detailed scoring criteria 
+• All seven Module 3 sections are present, in the correct order, with appropriate headings. 
+• The Key Metrics Scorecard is rendered as an actual table — not a paragraph or a bulleted list. 
+• The Deep Dive by Pillar covers Methodology Steps 3–6 (Liquidity & working capital, Leverage & 
+solvency, Cash flow quality, Efficiency & returns) at minimum. 
+• Peer Context (Step 7) is a distinct section, not a sentence buried inside the Deep Dive. 
+• Risks & Red Flags and Catalysts (Step 8) are separated, not merged into a single 'Risks/Catalysts' 
+bucket. 
+• The Bottom Line + Watchlist (Step 9, Synthesis) provides a clear summary plus forward-looking 
+watchlist items. 
+• Section depth is balanced — no single section is starved of content while another is over-padded. 
+0–5 scoring rubric 
+Level 
+Label 
+Description (what the reviewer should observe) 
+5 
+Excellent 
+All seven Module 3 sections present, correctly ordered, appropriately 
+weighted; Module 2 steps are visibly traceable inside the Deep Dive. 
+4 
+Strong 
+All seven sections present; one section is light or out of order, but no 
+information is lost. 
+
+
+<!-- page 10 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 10 of 28 
+Level 
+Label 
+Description (what the reviewer should observe) 
+3 
+Adequate 
+Five to six sections present; one section missing or merged. Scorecard may 
+be a list rather than a table. 
+2 
+Weak 
+Three to four sections present; structure improvised; comparability with 
+sibling outputs is reduced. 
+1 
+Poor 
+Output is largely free-form prose with section headings used decoratively 
+rather than structurally. 
+0 
+Fail 
+No discernible alignment with Module 3; output looks like a single-shot 
+reply. 
+ 
+Examples 
+High-scoring example (5) 
+An output with the seven Module 3 headings exactly as named, a Scorecard rendered as a four-
+column table (metric, value, peer median, signal), Deep Dive subsections labelled Liquidity / 
+Leverage / Cash flow / Efficiency, and a Bottom Line + Watchlist section that ends with three named 
+items to monitor next quarter. 
+ 
+Medium-scoring example (≈3) 
+An output that has six of the seven sections, merges Risks and Catalysts into one section, and 
+presents the Scorecard as a bullet list rather than a table — but otherwise follows the order. 
+ 
+Low-scoring example (≤1) 
+An output structured as 'Overview / Analysis / Conclusion' with no Scorecard, no Peer Context 
+section, and risks mentioned only in passing inside the conclusion. 
+ 
+Reviewer checklist questions 
+• Are all seven Module 3 sections present, in order? 
+• Is the Key Metrics Scorecard a real table? 
+• Is each of Methodology Steps 3–6 (Liquidity, Leverage, Cash flow, Efficiency) visibly addressed in 
+the Deep Dive? 
+
+
+<!-- page 11 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 11 of 28 
+• Is Peer Context a standalone section? 
+• Are Risks & Red Flags and Catalysts kept separate? 
+• Does the Bottom Line + Watchlist contain forward-looking items? 
+• Is the depth balanced across sections? 
+Common failure modes 
+• Decorative section headings that do not match Module 3 (e.g., 'Strengths and Weaknesses' 
+instead of the named sections). 
+• Scorecard rendered as prose, removing the comparability the table format provides. 
+• Risks and Catalysts merged, losing the analytical separation between downside and upside drivers. 
+• Empty Watchlist — the Bottom Line ends without forward-looking monitoring items. 
+Red flags that should reduce the score 
+• Two or more Module 3 sections missing entirely. 
+• Sections present but in the wrong order (e.g., Bottom Line before Deep Dive). 
+• Methodology Steps 3–6 are not traceable in the Deep Dive — i.e., one or more pillars are absent. 
+How to apply this score consistently 
+Score Category 2 by checklist, not impression. Tick each of the seven Module 3 sections, and tick each of 
+the nine Module 2 steps as you find them in the body. The weight is set so that a perfectly-formatted but 
+shallow output cannot win on structure alone; conversely, a structurally weak output cannot be rescued 
+by a strong synthesis. 
+5.3 Category 3: Accuracy, Evidence, and Factual Reliability 
+Field 
+Detail 
+Maximum score 
+25 points 
+Purpose 
+Measures the degree to which factual claims, numbers, and citations in 
+the output are correct, sourced, and reproducible. Anchored to Module 
+1 — Research Standard: evidence grounding, source citation, and 
+calculation transparency. 
+Why it matters for trust 
+This is the highest-weighted category because the source PDF identifies 
+'No Data Anchoring' as the failure with the most damaging 
+consequence: hallucination risk. An output that scores well everywhere 
+else but contains fabricated numbers or invented sources is more 
+
+
+<!-- page 12 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 12 of 28 
+Field 
+Detail 
+dangerous, not less, because its surface polish increases the chance the 
+user will act on it without checking. 
+ 
+Detailed scoring criteria 
+• Every quantitative claim is sourced — the reader can identify the document, page, or dataset 
+behind each number. 
+• Cited sources actually exist and actually contain the cited data (no fabricated URLs, ticker symbols, 
+or report names). 
+• Calculations are transparent: ratios show numerator and denominator, growth rates show base 
+and end period, percentages show their derivation. 
+• Numbers reconcile across sections (e.g., the figure used in the Scorecard matches the figure used 
+in the Deep Dive). 
+• Where data is estimated or interpolated, this is stated explicitly and the method is described. 
+• Statements of fact about the company, peers, or macro environment are accurate as of the 
+Coverage Period. 
+• No claim is materially overstated, understated, or selectively framed. 
+0–5 scoring rubric 
+Level 
+Label 
+Description (what the reviewer should observe) 
+5 
+Excellent 
+Every claim sourced; sources verifiable; calculations transparent; no 
+factual errors detected. 
+4 
+Strong 
+All material claims sourced; one minor citation gap or one trivial 
+computational rounding error; no fabrication. 
+3 
+Adequate 
+Most claims sourced; one or two unsourced quantitative statements; 
+calculations partially shown; no fabricated sources. 
+2 
+Weak 
+Frequent unsourced claims; calculations not shown; one factual error of 
+moderate consequence. 
+1 
+Poor 
+Most claims unsourced; multiple factual errors; numbers do not reconcile 
+across sections. 
+
+
+<!-- page 13 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 13 of 28 
+Level 
+Label 
+Description (what the reviewer should observe) 
+0 
+Fail 
+Hallucinated source(s) detected, or a material number is fabricated, or a 
+factual claim would mislead a decision-maker. 
+ 
+Examples 
+High-scoring example (5) 
+An output that, for every figure in the Scorecard, gives the source document and page; shows ratio 
+derivations inline (e.g., 'Current ratio = $4.2bn / $2.8bn = 1.50'); reconciles to the Deep Dive figures; 
+and explicitly flags one estimated input as 'Q4 inventory not yet filed; estimated at run-rate'. 
+ 
+Medium-scoring example (≈3) 
+An output where Scorecard numbers are correct and broadly sourced ('per FY2024 10-K') but two 
+ratios are stated as outputs without showing inputs, and one peer figure is referenced without a 
+specific source. 
+ 
+Low-scoring example (≤1) 
+An output that quotes a 'Bloomberg consensus' figure with no date, includes a revenue number 
+that does not match the cited 10-K, and contains a paragraph of analysis whose key statistic cannot 
+be traced to any source — or worse, cites a report that does not exist. 
+ 
+Reviewer checklist questions 
+• Is every number in the Scorecard sourced and verifiable? 
+• Do the cited sources actually exist (spot-check at least three)? 
+• Are ratios and growth rates shown with their derivations? 
+• Do figures reconcile across the Scorecard, Deep Dive, and Bottom Line? 
+• Are estimates explicitly labelled as such, with method disclosed? 
+• Are factual statements about the company correct as of the Coverage Period? 
+• Is any claim selectively framed in a way that misleads? 
+Common failure modes 
+• Hallucinated citations — sources that look plausible but do not exist. 
+
+
+<!-- page 14 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 14 of 28 
+• 'Phantom precision' — figures quoted to two decimal places with no underlying data. 
+• Calculation opacity — final ratio given without numerator/denominator. 
+• Reconciliation breaks — different figures for the same metric in different sections. 
+• Selective sourcing — citing only the data points that support the conclusion. 
+Red flags that should reduce the score 
+• Any fabricated source, dataset, or report name (immediate score-zero trigger for the category). 
+• Material number that cannot be reconciled to a cited source. 
+• Use of phrases like 'industry estimates' or 'market consensus' with no specific reference. 
+• Ratios presented without inputs. 
+How to apply this score consistently 
+Spot-check at least three citations per output. Pick one from the Scorecard, one from the Deep Dive, and 
+one from the Risks section. If any of the three is fabricated, the category cannot score above 1 
+regardless of the other criteria. This is the most expensive category to under-review; budget time 
+accordingly. 
+5.4 Category 4: Reasoning, Judgment, and Evaluation Quality 
+Field 
+Detail 
+Maximum score 
+20 points 
+Purpose 
+Measures the analytical quality of the output: whether the reasoning is 
+sound, the synthesis is coherent, the peer context is interpreted (not 
+just listed), and the judgments are calibrated. Anchored to Methodology 
+Steps 2–9 (Trend, Liquidity, Leverage, Cash flow, Efficiency, Peer 
+context, Risk & catalyst map, Synthesis). 
+Why it matters for trust 
+An output can be perfectly compliant, perfectly structured, and 
+perfectly sourced and still fail to add value if its reasoning is shallow. 
+This category captures the difference between an AI output that 
+summarises and one that interprets. 
+ 
+Detailed scoring criteria 
+• Trend analysis explains direction, magnitude, and likely drivers — not just the change in numbers. 
+• Each Deep Dive pillar reaches a conclusion, not merely a description. 
+
+
+<!-- page 15 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 15 of 28 
+• Peer Context interprets relative position (where does the company stand and why), not just lists 
+peer values. 
+• The Risk & Catalyst map links each risk and catalyst to a plausible mechanism and a plausible 
+magnitude. 
+• The Synthesis reconciles tensions between pillars (e.g., strong margins but deteriorating cash 
+conversion) rather than averaging them away. 
+• Language is calibrated — degrees of confidence are explicit ('likely', 'possible', 'highly uncertain') 
+and used appropriately. 
+• The output identifies what the analyst should watch next, not just what has happened. 
+0–5 scoring rubric 
+Level 
+Label 
+Description (what the reviewer should observe) 
+5 
+Excellent 
+Every pillar reaches a defended conclusion; peer context is interpreted; 
+synthesis reconciles tensions; language is calibrated; watchlist is specific. 
+4 
+Strong 
+Reasoning is sound across pillars; one pillar is descriptive rather than 
+evaluative; synthesis is coherent. 
+3 
+Adequate 
+Reasoning is acceptable in two-to-three pillars; one or two pillars are 
+descriptive; peer context is listed rather than interpreted. 
+2 
+Weak 
+Most pillars are descriptive; synthesis is a recap; few defended 
+conclusions. 
+1 
+Poor 
+Output is a paraphrase of the inputs with no analytical value added. 
+0 
+Fail 
+Conclusions contradict the evidence, or the synthesis is internally 
+inconsistent in a way that would mislead a decision-maker. 
+ 
+Examples 
+High-scoring example (5) 
+An output that, in the Cash flow pillar, observes an FCF/net income ratio falling below 0.7 for two 
+consecutive years, traces it to extending DSO and rising inventory, links it to the Liquidity pillar, and 
+concludes — calibrated as 'likely, not certain' — that working-capital pressure rather than 
+profitability is the main concern. 
+ 
+
+
+<!-- page 16 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 16 of 28 
+Medium-scoring example (≈3) 
+An output that lists the same FCF/net income figures, notes they have declined, but does not 
+connect the decline to any specific mechanism or to other pillars; the synthesis simply restates each 
+pillar in turn. 
+ 
+Low-scoring example (≤1) 
+An output that describes each pillar in isolation, makes no comparative interpretation against 
+peers, uses uniformly confident language ('the company is strong / weak'), and concludes with a 
+generic recommendation that does not follow from the analysis. 
+ 
+Reviewer checklist questions 
+• Does each Deep Dive pillar reach a defended conclusion? 
+• Is Peer Context interpreted, not just listed? 
+• Are risks and catalysts linked to mechanism and magnitude? 
+• Does the Synthesis reconcile tensions between pillars? 
+• Is language calibrated — are degrees of confidence explicit and appropriate? 
+• Does the Watchlist contain forward-looking items, not retrospective summaries? 
+• Would two analysts reading this output reach broadly the same takeaway? 
+Common failure modes 
+• Description without interpretation — peer values listed but not explained. 
+• Pillar isolation — pillars analysed independently with no synthesis across them. 
+• Confidence creep — 'will' used where 'may' is supported; or, conversely, hedging used to dodge a 
+clearly supported conclusion. 
+• Watchlist as recap — backward-looking summary instead of forward-looking monitoring items. 
+Red flags that should reduce the score 
+• Internal contradiction — synthesis conclusion not supported by, or in tension with, the pillar 
+conclusions. 
+• Use of recommendation language ('buy', 'sell', 'hold') without any supporting evidence chain. 
+• Pillars given equal weight when the evidence clearly elevates one pillar's importance. 
+How to apply this score consistently 
+
+
+<!-- page 17 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 17 of 28 
+Read the Synthesis first, then back-solve: does each conclusion in the Synthesis trace to a defended pillar 
+conclusion above it? Where the Synthesis introduces a claim that is not earned in the body, deduct from 
+this category, not Category 3 — this is a reasoning failure, not a fact failure. 
+5.5 Category 5: Currency, Risk Awareness, Restrictions, and Transparency 
+Field 
+Detail 
+Maximum score 
+15 points 
+Purpose 
+Measures whether the output handles time, uncertainty, and prompt-
+level restrictions transparently. Anchored to Module 1 — Research 
+Standard: data recency checks, explicit assumptions, calibrated 
+language, and red-flag surfacing. 
+Why it matters for trust 
+Even a fully accurate output becomes untrustworthy if it presents stale 
+data as current, hides its assumptions, ignores stated restrictions, or 
+fails to surface red flags. This category captures the 'meta-quality' of the 
+output — its honesty about its own limitations. 
+ 
+Detailed scoring criteria 
+• Data recency is explicit — every key data point is dated. 
+• Where data is older than the Coverage Period would imply, the staleness is flagged. 
+• All material assumptions are stated up front, not buried. 
+• Red flags identified during analysis are surfaced in the Risks & Red Flags section, not soft-pedalled 
+in passing. 
+• Restrictions stated in the prompt (e.g., 'do not provide investment advice') are honoured visibly. 
+• Limitations of the analysis (data gaps, peer comparability issues, accounting differences) are 
+disclosed. 
+• Forward-looking statements use calibrated, conditional language rather than asserting the future 
+as fact. 
+0–5 scoring rubric 
+Level 
+Label 
+Description (what the reviewer should observe) 
+5 
+Excellent 
+Every data point dated; all assumptions explicit; red flags surfaced; 
+restrictions honoured; limitations disclosed. 
+
+
+<!-- page 18 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 18 of 28 
+Level 
+Label 
+Description (what the reviewer should observe) 
+4 
+Strong 
+Most data dated; major assumptions stated; one minor limitation not 
+disclosed; restrictions honoured. 
+3 
+Adequate 
+Some data undated; some assumptions implicit; red flags mentioned but 
+understated; one minor restriction softly breached. 
+2 
+Weak 
+Stale data presented as current in places; assumptions largely implicit; red 
+flags missing or buried. 
+1 
+Poor 
+No date stamping; no assumption disclosure; restrictions ignored; output 
+reads as if uncertainty did not exist. 
+0 
+Fail 
+Stale data presented as current with material consequence, or a stated 
+restriction is openly violated, or red flags identifiable in the data are 
+actively suppressed. 
+ 
+Examples 
+High-scoring example (5) 
+An output that opens its Scorecard with 'all figures as of Q3 2024 unless dated otherwise', flags one 
+data point ('Q4 2024 inventory not yet filed — Q3 figure used'), states two assumptions explicitly, 
+surfaces a deteriorating-receivables red flag in the Risks section, and uses 'may' / 'likely' / 'is highly 
+uncertain' language consistently in the Catalysts section. 
+ 
+Medium-scoring example (≈3) 
+An output that dates the headline figures but not the peer figures, states one of three relevant 
+assumptions, and mentions a red flag only in passing inside the Cash flow pillar without elevating it 
+to the Risks section. 
+ 
+Low-scoring example (≤1) 
+An output that uses 'currently' and 'as of today' without dates, makes no assumptions explicit, 
+presents trailing data as current, ignores a clearly stated 'no forward guidance' restriction, and uses 
+uniformly confident language about the future. 
+ 
+
+
+<!-- page 19 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 19 of 28 
+Reviewer checklist questions 
+• Is every key data point dated? 
+• Where data is older than the Coverage Period, is the staleness flagged? 
+• Are material assumptions stated up front? 
+• Are red flags surfaced in the Risks section, not buried in pillars? 
+• Are all stated prompt restrictions visibly honoured? 
+• Are analytical limitations (data gaps, peer comparability) disclosed? 
+• Is forward-looking language calibrated and conditional? 
+Common failure modes 
+• Date-free framing — 'currently' or 'as of today' without an actual date. 
+• Hidden assumptions — key inputs (e.g., FX rate, growth assumption) not stated. 
+• Red-flag suppression — issues acknowledged inside the analysis but not elevated to Risks. 
+• Restriction creep — output drifts past stated restrictions section by section. 
+Red flags that should reduce the score 
+• Output presents data older than the Coverage Period as if it were current, with no flag. 
+• An explicit prompt restriction is breached. 
+• Forward-looking statements asserted as fact ('will', 'definitely') without supporting evidence. 
+How to apply this score consistently 
+Score this category last, after the analytical categories. Many of its failures are visible only once the 
+reviewer knows what the analysis actually concluded, for example, a missing red flag is recognisable only 
+when the underlying data has been checked. Use the Trust Score's overall direction as a sanity check: a 
+strong analytical output with weak transparency often deserves a band downgrade rather than a small 
+deduction here. 
+6. Trust Score Interpretation Bands 
+The Trust Score (0–100) maps to one of five bands. The band determines whether the output can be used 
+as-is, requires human review, or must be rejected and regenerated. Bands are deliberately wide so that 
+small reviewer disagreements at the rubric level rarely change the operational decision. 
+Band 
+Score range 
+Meaning 
+When the output 
+can be used 
+Required action 
+Very High 
+Trust 
+90–100 
+Output meets the 
+modular framework's 
+May be used as a 
+finished deliverable 
+Spot-check 3 
+citations and the 
+
+
+<!-- page 20 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 20 of 28 
+Band 
+Score range 
+Meaning 
+When the output 
+can be used 
+Required action 
+full quality bar; minor, 
+non-material gaps 
+only. 
+with sample-based 
+review. 
+Scorecard. No 
+remediation 
+required. 
+High Trust 
+75–89 
+Output is reliable; one 
+or two categories 
+carry visible 
+weaknesses that do 
+not change the 
+conclusions. 
+May be used after 
+light human review 
+focused on the 
+weakest category. 
+Reviewer fixes 
+specific gaps (e.g., 
+missing citation, 
+missing watchlist 
+item). No 
+regeneration. 
+Moderate 
+Trust 
+60–74 
+Output is partially 
+reliable; meaningful 
+gaps in at least one 
+category that affect 
+downstream use. 
+Must not be used as-
+is. Suitable for 
+internal drafting or 
+as an input to 
+human-led analysis. 
+Targeted 
+regeneration of the 
+weakest category, 
+or substantial 
+human edit, before 
+any external use. 
+Low Trust 
+40–59 
+Output has structural 
+or factual weaknesses 
+that make it unsafe to 
+rely on without 
+rework. 
+Not suitable for use. 
+May be salvaged for 
+skeleton or framing 
+only. 
+Full prompt review 
+and regeneration. 
+Investigate 
+whether the 
+prompt template 
+was correctly 
+applied. 
+Very Low 
+Trust 
+0–39 
+Output is unreliable. 
+Likely failures include 
+missing structure, 
+fabricated sources, or 
+material factual 
+errors. 
+Must not be used in 
+any form. Treat as a 
+failed run. 
+Reject and 
+regenerate. 
+Escalate to prompt 
+engineering if 
+pattern repeats 
+across runs. 
+ 
+Override rules 
+Two override rules apply on top of the band table, because some failures are too consequential to be 
+averaged out by strong scores elsewhere: 
+
+
+<!-- page 21 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 21 of 28 
+• Hallucinated source override. If any cited source is fabricated, the output is capped at the Low 
+Trust band (40–59) regardless of total score, and the Category 3 score is set to 0. 
+• Restriction breach override. If a prompt-stated restriction is openly violated, the output is capped 
+at Moderate Trust (60–74) regardless of total score, and Category 1 is reduced by at least one 
+rubric level. 
+7. Evaluation Checklist 
+This is the single consolidated checklist reviewers should complete during scoring. It is designed to be 
+used inline — one row per evaluation item, with reviewer notes, observed evidence, the score awarded, 
+and the action required if the score is below threshold. 
+Evaluation item 
+Reviewer notes 
+Evidence 
+observed 
+Score 
+(0–5) 
+Action required 
+1.1 All seven Variables 
+visibly respected 
+ 
+ 
+ 
+If <4: list which 
+Variables were not 
+respected 
+1.2 Coverage Period and 
+currency consistent 
+throughout 
+ 
+ 
+ 
+If <4: flag specific 
+drift points 
+1.3 Audience and tone 
+match Purpose & 
+Audience field 
+ 
+ 
+ 
+If <3: rewrite affected 
+sections 
+2.1 All seven Module 3 
+sections present and 
+correctly ordered 
+ 
+ 
+ 
+If <4: list 
+missing/misplaced 
+sections 
+2.2 Key Metrics 
+Scorecard rendered as a 
+table 
+ 
+ 
+ 
+If <4: convert to table 
+format 
+2.3 Module 2 Steps 3–6 
+visibly addressed in Deep 
+Dive 
+ 
+ 
+ 
+If <4: identify missing 
+pillar(s) 
+3.1 Every quantitative 
+claim sourced 
+ 
+ 
+ 
+If <4: flag unsourced 
+claims for verification 
+
+
+<!-- page 22 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 22 of 28 
+Evaluation item 
+Reviewer notes 
+Evidence 
+observed 
+Score 
+(0–5) 
+Action required 
+3.2 Spot-checked 
+citations exist and 
+contain the cited data 
+ 
+ 
+ 
+If any fail: trigger 
+hallucination 
+override 
+3.3 Calculations 
+transparent 
+(numerator/denominator 
+shown) 
+ 
+ 
+ 
+If <3: request 
+derivation rebuild 
+3.4 Numbers reconcile 
+across Scorecard, Deep 
+Dive, Bottom Line 
+ 
+ 
+ 
+If <4: identify 
+reconciliation breaks 
+4.1 Each pillar reaches a 
+defended conclusion 
+ 
+ 
+ 
+If <4: list descriptive-
+only pillars 
+4.2 Peer Context is 
+interpreted, not listed 
+ 
+ 
+ 
+If <3: request 
+interpretation pass 
+4.3 Synthesis reconciles 
+tensions across pillars 
+ 
+ 
+ 
+If <3: regenerate 
+Synthesis section 
+4.4 Calibrated language 
+used appropriately 
+ 
+ 
+ 
+If <4: request 
+hedge/confidence 
+rebalance 
+5.1 Data points dated; 
+staleness flagged where 
+present 
+ 
+ 
+ 
+If <4: add date 
+stamps 
+5.2 Material assumptions 
+stated up front 
+ 
+ 
+ 
+If <3: surface 
+assumptions to 
+opening 
+5.3 Red flags surfaced in 
+Risks & Red Flags section 
+ 
+ 
+ 
+If <4: elevate buried 
+red flags 
+
+
+<!-- page 23 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 23 of 28 
+Evaluation item 
+Reviewer notes 
+Evidence 
+observed 
+Score 
+(0–5) 
+Action required 
+5.4 All prompt 
+restrictions honoured 
+ 
+ 
+ 
+If breached: trigger 
+restriction override 
+ 
+Reviewer roll-up: Each block (1.x, 2.x, 3.x, 4.x, 5.x) feeds the corresponding category score. The category 
+score is the average of its rows, rounded to the nearest rubric level (0–5), then converted via the 
+multiplier table in Section 4 to its weighted contribution. 
+8. Worked Example 
+The example below applies the framework to a hypothetical financial-health output for a fictional 
+company, NorthArc Industrials plc, FY2024, generated through the modular prompting template 
+described in the source PDF. The example illustrates how rubric levels translate into weighted points and 
+how the band override rules apply. 
+Input prompt summary 
+Variable 
+Value supplied 
+Company 
+NorthArc Industrials plc 
+Identifier 
+LSE: NARC 
+Coverage Period 
+FY2024 (year ended 31 December 2024) 
+Peer Set 
+Peer A plc, Peer B SA, Peer C Inc. 
+Purpose & Audience 
+Internal credit committee — focused on liquidity and leverage 
+Data Sources 
+FY2024 10-K, Q4 2024 trading update, Bloomberg consensus 
+Accounting/Currency 
+Notes 
+IFRS; figures in GBP 
+ 
+Reviewer observations 
+• All seven Module 3 sections were present, in the correct order; the Scorecard was rendered as a 
+table. 
+
+
+<!-- page 24 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 24 of 28 
+• Peer Set was respected with one extension: a fourth peer (Peer D AG) was added without 
+disclosure. 
+• Most quantitative claims were sourced to the FY2024 10-K; two ratios in the Leverage pillar were 
+stated without showing numerator/denominator. 
+• Cash flow pillar identified that FCF/net income had fallen from 0.92 to 0.61 over two years, but 
+this red flag was not elevated to the Risks & Red Flags section. 
+• Forward-looking language in the Catalysts section was appropriately calibrated; the Watchlist 
+contained three specific, monitorable items for the next quarter. 
+• No hallucinated sources detected on three-source spot-check. 
+Category-by-category scoring 
+Category 
+Max 
+Rubric 
+level 
+Multiplier 
+Points 
+Justification 
+1. Prompt Adherence and 
+Instruction Compliance 
+20 
+4 (Strong) 
+0.85 × 20 
+17.0 
+All seven Variables 
+addressed; one peer 
+added beyond the 
+supplied Peer Set; 
+currency consistent. 
+2. Structural and Modular 
+Framework Alignment 
+20 
+5 
+(Excellent) 
+1.00 × 20 
+20.0 
+All seven Module 3 
+sections present, 
+correctly ordered; 
+Scorecard is a table; 
+Steps 3–6 visible. 
+3. Accuracy, Evidence, and 
+Factual Reliability 
+25 
+3 
+(Adequate) 
+0.65 × 25 
+16.3 
+Most figures sourced 
+to the FY2024 10-K; 
+two ratios shown 
+without inputs; one 
+peer figure 
+unsourced; no 
+fabrication detected. 
+4. Reasoning, Judgment, and 
+Evaluation Quality 
+20 
+4 (Strong) 
+0.85 × 20 
+17.0 
+Pillars reach 
+defended 
+conclusions; 
+Synthesis reconciles 
+tensions; Watchlist is 
+specific; Peer Context 
+
+
+<!-- page 25 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 25 of 28 
+Category 
+Max 
+Rubric 
+level 
+Multiplier 
+Points 
+Justification 
+slightly listed rather 
+than interpreted. 
+5. Currency, Risk Awareness, 
+Restrictions, and 
+Transparency 
+15 
+3 
+(Adequate) 
+0.65 × 15 
+9.8 
+Headline figures 
+dated; peer figures 
+undated; one 
+assumption explicit, 
+two implicit; red flag 
+mentioned in Cash 
+flow pillar but not 
+elevated to Risks. 
+ 
+Total Trust Score: 17.0 + 20.0 + 16.3 + 17.0 + 9.8 = 80.1 → 80 / 100 
+Band: High Trust (75–89). 
+Override check: No hallucinated source; no restriction breach. No override applies. 
+Recommended action 
+Review verdict 
+Use after light human review. Two specific edits required before the output is sent to the credit 
+committee: (1) elevate the FCF/net income deterioration from the Cash flow pillar into the Risks & 
+Red Flags section; and (2) supply the numerator/denominator for the two leverage ratios. Reviewer 
+should also note the addition of Peer D AG and either remove it or document why it was added. 
+9. Reviewer Guidance 
+This section gives reviewers a consistent way to handle the situations that most often cause score drift 
+between reviewers. 
+Situation 
+How to handle it 
+Uncertainty about a 
+category score 
+Pick the lower rubric level when in doubt, and document the reason in 
+reviewer notes. Consistency is more valuable than charity. 
+
+
+<!-- page 26 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 26 of 28 
+Situation 
+How to handle it 
+Missing evidence 
+Treat absence of evidence as evidence of absence for scoring purposes. 
+Do not assume a citation 'must be there somewhere'. Score against 
+what the reviewer can actually see in the output. 
+Unsupported claim 
+Score under Category 3, not Category 4. The deduction belongs to 
+factual reliability, even if the unsupported claim is part of an analytical 
+conclusion. 
+Outdated information 
+If the data is older than the Coverage Period implies and is not flagged 
+as such, deduct in Category 5. If it is flagged, no deduction — the 
+transparency is the point. 
+Hallucination (fabricated 
+source or number) 
+Apply the hallucinated source override (Section 6). Category 3 is set to 
+0 and the output is capped at Low Trust regardless of other scores. 
+Document the hallucinated reference verbatim in reviewer notes. 
+Non-compliance with 
+prompt restrictions 
+Apply the restriction breach override. Category 1 reduced by at least 
+one rubric level; total score capped at Moderate Trust. 
+Poor formatting 
+If formatting issues are cosmetic (font, spacing), do not deduct. If they 
+affect comparability or comprehension (Scorecard rendered as prose, 
+missing section headings), deduct in Category 2. 
+Weak reasoning despite 
+strong facts 
+Deduct in Category 4. A factually correct but analytically shallow 
+output is a Category 4 problem, not a Category 3 problem. 
+Overconfident conclusions 
+Deduct in Category 4 (calibrated-language criterion). Use Category 5 
+only if overconfidence is paired with hidden assumptions. 
+Reviewer disagreement 
+Escalate to a second reviewer rather than averaging. If the second 
+reviewer's score is in a different band, the lower band applies and the 
+case is logged for the next calibration cycle. 
+10. Governance and Continuous Improvement 
+This framework is itself a living artefact and should be governed in step with the modular prompting 
+framework it evaluates. The mechanisms below are recommended and should be adapted to the 
+organisation's broader AI governance regime. 
+
+
+<!-- page 27 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 27 of 28 
+Note: the cadences and mechanisms in this section are professional assumptions, not derived from the 
+source PDF. The PDF describes the modular prompting framework but does not prescribe its own 
+governance. 
+Ownership 
+• A single named owner — typically AI Governance or QA leadership — owns the framework's 
+content, version history, and calibration log. 
+• Prompt engineering owns the modular prompt template (Variables, Module 1, Module 2, Module 
+3); coordination between the two owners is required whenever either changes. 
+Calibration cadence 
+• Quarterly: a calibration session in which two reviewers independently score the same five recent 
+outputs. Score gaps greater than one band trigger a guidance update. 
+• Ad-hoc: any time the modular prompt template adds, removes, or renames a Variable or a 
+Module section, the framework is reviewed to confirm category criteria still align. 
+Versioning 
+• The framework is versioned (v1.0, v1.1, v2.0). Major versions reflect category changes; minor 
+versions reflect rubric or guidance refinement. 
+• Each output's Trust Score should record the framework version under which it was scored, so 
+historical comparisons remain meaningful. 
+Continuous improvement signals 
+• Recurring failure patterns observed in reviewer notes feed back into the prompt template — 
+typically into Module 1 (Research Standard) or Module 3 (Output Structure). 
+• Rubric levels that produce frequent reviewer disagreement are candidates for sharper criteria or 
+worked examples. 
+• Override rules are reviewed annually; new override candidates require evidence of repeated, 
+high-consequence failure. 
+11. Final Summary 
+The AI Output Trust Score Evaluation Framework converts the modular prompting architecture in the 
+source PDF into an evaluation contract. Where the prompt template enforces a quality bar, a 
+methodology, and a deliverable format on the input side, this framework enforces the matching standards 
+on the output side, using five weighted categories that together total 100 points. 
+By scoring Prompt Adherence, Structural Alignment, Accuracy and Evidence, Reasoning Quality, and 
+Currency and Transparency separately and explicitly, the framework gives reviewers a defensible audit 
+trail, gives prompt engineers a feedback loop, and gives business stakeholders a single trust signal that 
+
+
+<!-- page 28 -->
+AI Output Trust Score · Evaluation Framework (Light)  
+v3.7 
+Internal Use & Fin UK +  
+Page 28 of 28 
+maps directly to a usage decision. The interpretation bands and override rules ensure that the most 
+consequential failures, fabricated sources, restriction breaches, cannot be averaged away by surface 
+polish elsewhere. 
+Used consistently, the framework improves three things at once: confidence in individual outputs, 
+accountability across the AI delivery chain, and consistency between reviewers, periods, and use cases. It 
+is intended to evolve alongside the modular prompting template itself, with calibration and versioning as 
+standing practices rather than one-off projects. 
+Bottom line 
+Modular prompting fixes how AI outputs are produced. The Trust Score framework fixes how they 
+are evaluated. Together, they make analytical AI deliverables comparable, defensible, and fit for 
+downstream business use. 
+ 

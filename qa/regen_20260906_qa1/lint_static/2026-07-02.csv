@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-02_Trade_1,2026-07-02,Trade 1 - Daily Directional,CLEAN,False
+2026-07-02_Trade_2,2026-07-02,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-02_Trade_3A,2026-07-02,Trade 3A - Momentum-Pullback (57.5% fib),CLEAN,False

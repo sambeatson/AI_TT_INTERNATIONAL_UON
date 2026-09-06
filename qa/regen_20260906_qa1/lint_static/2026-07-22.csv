@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-22_Trade_1,2026-07-22,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-22_Trade_2,2026-07-22,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-22_Trade_3B,2026-07-22,"Trade 3B - Mean-Reversion (range fade, short leg)",CLEAN,False

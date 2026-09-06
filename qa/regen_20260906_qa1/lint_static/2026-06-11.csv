@@ -1,0 +1,3 @@
+card_id,report_date,strategy,flags,dud
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional,WARN_TP3_ORDER|WARN_TARGET_FAR(2.87xATR),False
+2026-06-11_Trade_3A,2026-06-11,Trade 3A - Momentum-Pullback (57.5% rally-sell),CLEAN,False

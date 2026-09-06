@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional,CLEAN,False
+2026-06-18_Trade_2,2026-06-18,Trade 2 - Pivot (sell limit monthly S1 / daily P),CLEAN,False
+2026-06-18_Trade_3C,2026-06-18,Trade 3C - Momentum-Breakout (sell stop),CLEAN,False

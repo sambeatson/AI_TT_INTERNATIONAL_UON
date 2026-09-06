@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot (range fade, sell limit daily R1)",WARN_R_TINY(0.21xATR),False
+2026-06-25_Trade_3A,2026-06-25,"Trade 3A - Momentum-Pullback (sell stop, break of 23 Jun low)",WARN_R_TINY(0.30xATR),False

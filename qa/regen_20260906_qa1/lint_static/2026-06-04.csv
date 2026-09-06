@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-04_Trade_1,2026-06-04,Trade 1 - Daily Directional,CLEAN,False
+2026-06-04_Trade_2,2026-06-04,Trade 2 - Pivot (TREND_UP breakout),WARN_R_TINY(0.21xATR),False
+2026-06-04_Trade_3A,2026-06-04,Trade 3A - Momentum-Pullback (57.5% fib),CLEAN,False

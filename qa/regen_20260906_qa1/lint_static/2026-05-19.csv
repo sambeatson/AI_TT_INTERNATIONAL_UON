@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-19_Trade_1,2026-05-19,Trade 1 - Daily Directional (mean-reversion),CLEAN,False
+2026-05-19_Trade_2,2026-05-19,Trade 2 - Pivot (buy limit daily S1),WARN_R_TINY(0.29xATR),False
+2026-05-19_Trade_3A,2026-05-19,Trade 3A - Momentum-Pullback (layered fib limits),CLEAN,False

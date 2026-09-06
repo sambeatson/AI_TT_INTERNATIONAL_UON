@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-15_Trade_1,2026-06-15,Trade 1 - Daily Directional,CLEAN,False
+2026-06-15_Trade_2,2026-06-15,Trade 2 - Pivot (buy stop daily R1),CLEAN,False
+2026-06-15_Trade_3C,2026-06-15,Trade 3C - Breakout (buy stop 5-day swing high),CLEAN,False

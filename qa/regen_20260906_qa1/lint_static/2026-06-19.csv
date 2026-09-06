@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional,WARN_R_TINY(0.29xATR),False
+2026-06-19_Trade_2,2026-06-19,Trade 2 - Pivot (buy limit daily S1),WARN_R_TINY(0.20xATR),False
+2026-06-19_Trade_3A,2026-06-19,Trade 3A - Momentum-Pullback (breakout stop),WARN_R_TINY(0.27xATR),False

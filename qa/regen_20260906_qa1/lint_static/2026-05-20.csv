@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-20_Trade_1,2026-05-20,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-20_Trade_2,2026-05-20,Trade 2 - Pivot (weekly TREND breakout),CLEAN,False
+2026-05-20_Trade_3A,2026-05-20,Trade 3A - Momentum-Pullback (demand-zone retest),CLEAN,False

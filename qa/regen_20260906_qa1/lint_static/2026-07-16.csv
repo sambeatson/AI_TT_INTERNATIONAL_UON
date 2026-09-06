@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-16_Trade_1,2026-07-16,Trade 1 - Daily Directional,WARN_TP3_ORDER,False
+2026-07-16_Trade_2,2026-07-16,Trade 2 - Pivot (buy limit daily P),WARN_R_TINY(0.24xATR),False
+2026-07-16_Trade_3C,2026-07-16,Trade 3C - Transition Breakout,SUPPRESSED,False

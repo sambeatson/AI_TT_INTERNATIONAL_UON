@@ -1,0 +1,3 @@
+card_id,report_date,strategy,flags,dud
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,CLEAN,False
+2026-06-08_Trade_3A,2026-06-08,Trade 3A - Momentum-Pullback (sell limit weekly S2),CLEAN,False

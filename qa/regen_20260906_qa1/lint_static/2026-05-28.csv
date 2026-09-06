@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,CLEAN,False
+2026-05-28_Trade_2,2026-05-28,Trade 2 - Pivot (daily P / weekly R1 retest),CLEAN,False
+2026-05-28_Trade_3A,2026-05-28,Trade 3A - Momentum-Pullback,CLEAN,False

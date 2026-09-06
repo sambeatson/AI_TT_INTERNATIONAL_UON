@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional,CLEAN,False
+2026-07-17_Trade_2,2026-07-17,Trade 2 - Pivot (buy limit daily S1),CLEAN,False
+2026-07-17_Trade_3,2026-07-17,Trade 3 - Pivot fade (sell limit daily R1),CLEAN,False

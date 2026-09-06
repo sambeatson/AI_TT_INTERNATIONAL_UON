@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-18_Trade_1,2026-05-18,Trade 1 - Daily Directional,WARN_R_TINY(0.11xATR),False
+2026-05-18_Trade_2,2026-05-18,Trade 2 - Pivot fade (sell limit daily R1),DUD_TP2_ORDER,True
+2026-05-18_Trade_3C,2026-05-18,"Trade 3C - Transition Breakout (sell stop, conditional)",CLEAN,False

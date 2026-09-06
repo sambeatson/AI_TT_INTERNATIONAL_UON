@@ -88,7 +88,7 @@ def main():
         d = pd.read_csv(a.data); d['bt'] = pd.to_datetime(d['DateTime_Broker']); d = d.sort_values('bt'); d['bdate'] = d['bt'].dt.date
     r = lint(cards, d); r.to_csv(a.out, index=False)
     n = len(r[r['flags'] != 'SUPPRESSED'])
-    print(f'{n} cards linted | duds {r.dud.sum()} | clean {(r['flags']=="CLEAN").sum()}')
+    print(f'{n} cards linted | duds {r.dud.sum()} | clean {(r["flags"]=="CLEAN").sum()}')
     fl = r[r['flags'].isin(['CLEAN','SUPPRESSED'])==False]['flags'].str.split('|').explode().str.replace(r'\(.*\)','',regex=True)
     print(fl.value_counts().to_string())
 

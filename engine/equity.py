@@ -36,7 +36,7 @@ def main():
         d = curve(p, a.account, a.risk); col = PALETTE[i % len(PALETTE)]
         x = pd.to_datetime(d.report_date)
         ax.plot(x, d['eq'], color=col, lw=2.2 if i == 0 else 1.5, label=f'{lab}   ({d.blended_R.sum():+.1f}R)')
-        ax.annotate(f'{d['eq'].iloc[-1]/1000:.0f}k', xy=(x.iloc[-1], d['eq'].iloc[-1]), xytext=(6, 0), textcoords='offset points', color=col, fontsize=9, va='center')
+        ax.annotate(f'{d["eq"].iloc[-1]/1000:.0f}k', xy=(x.iloc[-1], d["eq"].iloc[-1]), xytext=(6, 0), textcoords='offset points', color=col, fontsize=9, va='center')
         ax2.plot(x, d.dd, color=col, lw=1.2); ax2.fill_between(x, d.dd, 0, color=col, alpha=.15)
         stats.append(dict(run=lab, totR=round(d.blended_R.sum(), 2), final=round(d['eq'].iloc[-1]), maxdd=round(d.dd.min(), 1),
                           peak=round(d['eq'].max()), n=int((d.blended_R != 0).sum())))

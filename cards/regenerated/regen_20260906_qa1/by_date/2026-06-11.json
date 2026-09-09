@@ -54,7 +54,7 @@
   "confluences": "None logged - a suppressed row carries no entry, stop or target to attach confluences to. For reference only, the unarmed sell-side tiers would have been daily S1 7228.57 / S1.5 7207.00 / S2 7185.43, with weekly S2 7211.50 sitting inside that band."
  },
  {
-  "card_id": "2026-06-11_Trade_3",
+  "card_id": "2026-06-11_Trade_3C",
   "report_date": "2026-06-11",
   "report_file": "SP500_Report_11Jun2026.md",
   "strategy": "Trade 3C - Momentum-Breakout (TRANSITION fork)",

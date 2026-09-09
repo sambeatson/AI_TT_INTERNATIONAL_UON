@@ -12,8 +12,11 @@ import argparse, glob, json, os, sys, pandas as pd
 COLS = ['card_id','report_date','report_file','strategy','family','direction','entry_mode',
         'entry_mode_text','anchor_broker','entry','stop','tp1','tp2','tp3','card_R_points',
         'be_rule','runner_rule','management_text','suppressed','source','slice_file','last_bar_broker']
-REQ = ['card_id','report_date','family','direction','entry_mode','anchor_broker','entry','stop',
-       'tp1','tp2','card_R_points','suppressed','source','slice_file','last_bar_broker']
+# Required on every record. A suppressed card carries no order and no ladder by rule, so the
+# level fields and entry_mode are required only on live cards (checked separately below).
+REQ = ['card_id','report_date','family','direction','anchor_broker','suppressed','source',
+       'slice_file','last_bar_broker']
+REQ_LIVE = ['entry_mode','entry','stop','tp1','tp2','card_R_points']
 
 def main():
     ap = argparse.ArgumentParser()
@@ -30,8 +33,13 @@ def main():
         if not isinstance(recs, list): problems.append(f'{D}: top level is not a list'); continue
         if not recs: problems.append(f'{D}: empty list'); continue
         for r in recs:
-            miss = [k for k in REQ if k not in r or r[k] is None and k not in ('tp3',)]
+            sup = str(r.get('suppressed')).lower() in ('true','1','yes')
+            need = REQ if sup else REQ + REQ_LIVE
+            miss = [k for k in need if k not in r or r[k] is None]
             if miss: problems.append(f'{D} {r.get("card_id","?")}: missing {miss}')
+            if sup:
+                carried = [k for k in REQ_LIVE if k != 'entry_mode' and r.get(k) is not None]
+                if carried: problems.append(f'{D} {r.get("card_id","?")}: SUPPRESSED but carries {carried}')
             if str(r.get('report_date')) != D: problems.append(f'{D} {r.get("card_id","?")}: report_date mismatch')
             if not str(r.get('source','')).startswith('regen_'): problems.append(f'{D} {r.get("card_id","?")}: bad source "{r.get("source")}"')
             rows.append({c: r.get(c) for c in COLS})

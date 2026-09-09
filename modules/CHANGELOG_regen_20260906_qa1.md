@@ -105,3 +105,28 @@ number, a named session a derivation must use, or a gate that fails loudly — r
 - **Linter scope.** The summary notes the static linter cannot test whether the right recipe was
   applied. That is addressed inside the modules by the M5 §9a pre-emit checklist rather than by any
   change to `engine/`, which is outside the scope of a module revision.
+
+---
+
+## Correction, after Stage 2 draw 1
+
+**M5 §5.2a and §10 — what the corroboration flag means when the execution series is in hand.**
+
+Edit 8 above tightened the pivot-corroboration gate to stop reports stating that every tier was
+single-source-indicative and then shipping the card anyway. That was the right fix for the failure it
+addressed, but it left the flag's meaning unstated for the case where the pivots are computed from the
+broker price series itself rather than quoted from a news aggregator.
+
+Regeneration sessions read the flag as a property of the report and inherited it, suppressing cards whose
+pivots they had just recomputed from the execution feed. That is wrong: the feed a card is filled and
+settled against is the settlement source, not a secondary quote about the market, so a tier struck from it
+is corroborated by construction and there is nothing for a second source to corroborate it against. The
+gate is for tiers whose true prior-period H/L cannot be established at all.
+
+**Effect on draw 1**: 28 of 162 cards (17% of the book, and 20 of the 54 Trade 2 cards) were suppressed on
+this ground. Those cards are being rebuilt; the other 47 suppressions — 28 on conviction and 19 on an
+unconfirmed break — are unaffected and stand.
+
+**Verification in the next generation**: no card is suppressed as indicative where its pivot tier was
+computed from the execution series; every produced pivot card names the series and session its tier came
+from and records the flag as CORROBORATED.

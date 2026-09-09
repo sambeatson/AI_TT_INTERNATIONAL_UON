@@ -41,6 +41,10 @@ Prioritize sources in this order unless a lower-ranked source is clearly more cu
 
 - Do not fabricate prices, sources, or assumptions.
 
+- Establish the as-of session before collecting anything: it is the last completed regular session of the primary asset that closed strictly before the report date. State its date. All price evidence, every lookback window and every derived level end at that session. A settled close from that session is required — an intraday mark, a part-session level, or the previous session’s close standing in for it makes the whole report one session stale, and every downstream number inherits the error.
+
+- Distinguish an observed value from a reconstructed one at every point of use. A price read off a narrative percentage change, interpolated between two other prices, scaled from a proxy instrument such as an ETF or a CFD, or taken from a session with different hours, is reconstructed. It may be published where the reconstruction is disclosed in the same place, but it may not be counted toward corroboration, described as corroborated, or used as an execution reference. Where a quote is on a different basis from the declared one, state the basis and the delta rather than presenting the number bare.
+
 - If a live current price cannot be established reliably, state so and provide a supported indicative range.
 
 **4.  Analytical Standard**
@@ -135,6 +139,8 @@ For each article, capture:
 | Headline | Exact article headline — do not paraphrase |
 | Classification (before reading) | Tag: Institutional / Media / Trade Press / Official (central bank / government) |
 | Derived sentiment | Explicit classification derived in Step 9 — populated after Step 9 is complete |
+| Date consistency | The publication date must be a real date consistent with the trading calendar and with the events the article describes. An article dated to a weekend or holiday while reporting a session’s close, or dated outside the stated window, is re-dated against the source or dropped. |
+| Consistent use | A source rejected at the price-evidence step may not reappear as a corroborating price source elsewhere in the report, and a source relied on for news but rejected for prices must be described that way at both points of use. Where two cited sources make claims that cannot both be true, resolve the conflict in the text or drop the claim — do not carry both forward and quietly adopt one. |
 
 | **9** | **Sentiment Extraction** |
 | --- | --- |

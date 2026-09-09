@@ -45,6 +45,8 @@ This module runs after M1 variables are declared and M2 source standards are in 
 
 **1a.  Trading Date Validation**
 
+- Fix the as-of session first, before any other step. The as-of session is the **last completed regular session of [PRIMARY_ASSET] that closed strictly before the report date**, on the [DELIVERY_BASIS] calendar. Call it D-1 and state its date once, in words and figures. Every window in this module ends at D-1: the [LOOKBACK_SHORT] block, the [LOOKBACK_MEDIUM] block, the pivot prior periods, the swing lookbacks and the backtest window. If a session has closed before the report date and is absent from the block, the block is wrong — a report assembled before that close must be re-run against it, not shipped one session behind. Never take D-2 as the as-of because D-1 was inconvenient to source; if D-1 cannot be corroborated, that is a DataCorroborationError, not a licence to shift the window.
+
 - Accept only Monday–Friday dates. Any Saturday or Sunday row must be rejected and logged.
 
 - Verify the session count matches the expected trading calendar for the relevant exchange. Note any verified public holidays that reduce the count.
@@ -65,6 +67,8 @@ A value is accepted only when at least TWO independent sources agree within the 
 | USDX / DXY | ± 0.050 pts | All OHLC fields; pivot prior-period H / L / C |
 | Commodity — set per [UNIT_OF_MEASURE] | Asset-specific; document assumption | All OHLC fields; pivot prior-period H / L / C |
 
+- Every OHLC field must come from a source that publishes that field for the named session on the declared basis. A value **reconstructed** — read off a narrative percentage change, interpolated from a prior close, scaled from an ETF or CFD proxy, or taken from a differently-houred session — is not an observation of that field. It may be shown only where it is labelled as reconstructed at every point of use, and it may never be counted as one of the two corroborating sources, described as corroborated, or used as an execution reference. State the basis of the table once (which session, which hours) and state the delta where a quoted source is on a different basis, so a reader can tell a basis gap from an error.
+
 - If fewer than two sources agree within tolerance, mark that field “single-source — indicative only” in the OHLC table and in any chart that uses it.
 
 - Record every source attempt in the Agent Log: source name, tier, outcome (corroborated / single-source / failed / not attempted), and the corroborated pair with delta when corroboration is achieved.
@@ -79,6 +83,12 @@ Produce a validated OHLC table covering the last [LOOKBACK_SHORT] valid trading 
 - Date  |  Open  |  High  |  Low  |  Close  |  RSI2  |  Trend  |  Source A  |  Source B  |  Final Value Used  |  Validation Outcome
 
 - RSI2 is fixed at period 2. Do not change the period. Compute from the validated close sequence. RSI2 = 100 − (100 / (1 + RS)) where RS = mean gain / mean loss over 2 periods.
+
+- The column must **reproduce from the close column printed in the same table**. Compute it from those closes and nothing else: no smoothing, no seeded average, no value carried over from a previous report, no row shifted by a session. Take the two most recent close-to-close changes, average the positive ones as the mean gain and the absolute negative ones as the mean loss, then apply the formula. Two consecutive up closes give mean loss = 0 and RSI2 = 100.0; two consecutive down closes give mean gain = 0 and RSI2 = 0.0 — if a row between 0 and 100 sits on two same-signed closes, the row is wrong.
+
+- Worked check (verbatim method, illustrative numbers). Closes 100.0 → 102.0 → 101.0. Changes +2.0 and −1.0. Mean gain = 2.0 ÷ 2 = 1.0; mean loss = 1.0 ÷ 2 = 0.5; RS = 2.0; RSI2 = 100 − 100 ÷ 3 = 66.7. Print the two changes and the RS alongside the D-1 value so the reader can repeat this in one line. Where the two closes that seed the earliest row lie outside the printed block, print those two closes with their dates as well; a value that cannot be reproduced from stated closes may not be published.
+
+- Apply the same discipline to the derived Trend column: it is a function of the printed Open, Close and RSI2 of that same row. Re-read the row before labelling it.
 
 - Trend classification per session: if Close > Open AND RSI2 > 50 → Bullish.  If Close < Open AND RSI2 < 50 → Bearish.  Otherwise → Neutral / Transition.
 
@@ -196,6 +206,14 @@ Normalise raw volatility by price (divide by Close) before scaling unless [VOL_M
 
 Fit a linear trend to the last 10 observations of the scaled VOLator series for [PRIMARY_ASSET]. A positive slope confirms volatility expansion (trending signal). A negative slope confirms contraction (ranging / transitional signal). Report this slope to Step 3d and Step 4 synthesis.
 
+**5d.  ATR(14) — stated value**
+
+The 14-session ATR of [PRIMARY_ASSET] is a required published scalar, not an intermediate. Compute it from the validated OHLC of the 14 sessions ending at D-1 using the TR definition above, and **print it as a number** in the volatility section of the report and again on every trade card, together with its window (14) and the bar basis it was computed on (which session hours). Every buffer, cap, tier and flag downstream is a multiple of this one figure, so one value is computed and the same value is used everywhere.
+
+- A close-to-close proxy, an implied-volatility reading, a range average or a figure carried over from an earlier report is not ATR(14) and may not be substituted. If the true-range inputs are unavailable, that is a data failure to be raised, not a licence to proxy.
+
+- ATR(14) may not be left implicit for the reader to infer from a stated buffer or cap. If the number appears nowhere as a number, the volatility section is incomplete and the cards that depend on it cannot be checked.
+
 | **STEP 6** | **CROSS-ASSET CONFIRMATION** |
 | --- | --- |
 
@@ -265,6 +283,16 @@ Calculate floor pivots for [PRIMARY_ASSET] for each timeframe where the correspo
 
 - [PIVOT_MONTHLY] = YES → calculate using prior month H / L / C
 
+**The ‘prior period’ is defined against the as-of session D-1 fixed in Step 1a, and is not open to interpretation:**
+
+- Prior day = the D-1 session itself — the last completed session strictly before the report date. Not D-2, and not the session the analysis happened to be drafted after.
+
+- Prior week = the last calendar week that had fully completed before the report date, taken as a whole. Its H is the highest high and its L the lowest low across **every** session in that week, not the extremes of one session in it. Its C is that week’s final close. For a report dated inside a week, the prior week is the week before the current one — never the current part-week, never the week before that.
+
+- Prior month = the last calendar month that had fully completed before the report date, with H, L and C taken across all of its sessions on the same basis.
+
+- Print the H, L and C actually used for each active timeframe, each with the date or date range it came from, immediately above the levels they generate. A pivot table whose inputs are not shown cannot be checked and is treated as unverified.
+
 **8a.  Formula**
 
 - P = (H_prior + L_prior + C_prior) / 3
@@ -272,6 +300,8 @@ Calculate floor pivots for [PRIMARY_ASSET] for each timeframe where the correspo
 - R1 = 2P − L_prior  |  R2 = P + (H_prior − L_prior)  |  R3 = H_prior + 2(P − L_prior)  |  R4 = R3 + (H_prior − L_prior)  |  R5 = R4 + (H_prior − L_prior)
 
 - S1 = 2P − H_prior  |  S2 = P − (H_prior − L_prior)  |  S3 = L_prior − 2(H_prior − P)  |  S4 = S3 − (H_prior − L_prior)  |  S5 = S4 − (H_prior − L_prior)
+
+- **Self-check before publishing any pivot table.** The floor-pivot set satisfies R2 − P = P − S2 = H_prior − L_prior, and R1 − P = P − S1 = P − L_prior − (H_prior − P). Compute both identities and confirm they hold to the printed precision. If they do not, the arithmetic is wrong; if they hold but the levels disagree with a prior report’s levels for the same period, the H/L/C inputs are wrong. In either case fix the inputs before any downstream section, narrative or trade card cites a level — a pivot error propagates into every one of them.
 
 | **SOURCE RULE** Prior-period H / L / C must each be verified by at least two independent sources within the stated corroboration tolerance before any pivot levels are computed. If fewer than two sources are available, mark all pivot levels for that timeframe ‘indicative — single source only’ in the table and in the chart. |
 | --- |
@@ -355,7 +385,7 @@ Emit the following named values for [PRIMARY_ASSET] only.  Counter and secondary
 
 | **Named output** | **Source step** | **Definition / format** |
 | --- | --- | --- |
-| atr_14 | Step 5 (VOLator) | ATR on [PRIMARY_ASSET], 14-session lookback. Native units — same as price. Required scalar. |
+| atr_14 | Step 5d | ATR on [PRIMARY_ASSET], 14-session lookback, computed on the 14 sessions ending at D-1. Native units — same as price. Required scalar, and required to appear as a printed number in the report per Step 5d. A proxy value may not be placed in this field. |
 | rsi2_latest | Step 2 | Most recent RSI2 value for [PRIMARY_ASSET]. Range 0–100. |
 | swing_high_5d / swing_low_5d | Step 2 (5-day block) | Highest high and lowest low across the [LOOKBACK_SHORT] validated sessions. Two scalars in price units. |
 | swing_high_25d / swing_low_25d | Step 3 (5-week block) | Highest high and lowest low across the [LOOKBACK_MEDIUM] validated sessions. Two scalars in price units. |
@@ -394,11 +424,15 @@ Each active counter from Step 6 emits a per-counter label of Confirms / Contradi
 
 - NEUTRAL if all active counters are Neutral, or if fewer than two counters are active.
 
-**11d.  Single-source flagging on the surface**
+**11d.  Surface names are internal**
+
+The field names on this surface are addresses for downstream modules. They are not report vocabulary and must not appear in the deliverable — neither the field name, nor the step or module code that produced it, nor any bracketed variable token. Publish the value and a plain-English account of how it was derived. The surface is the contract between modules; the report is written for a reader who has never seen it.
+
+**11e.  Single-source flagging on the surface**
 
 Any pivot level emitted on the surface that came from a single-source prior-period H/L/C carries the SINGLE-SOURCE-INDICATIVE corroboration flag.  M5 reads this flag and suppresses Trade 2 entirely if all accessible pivot tiers for the active direction are SINGLE-SOURCE-INDICATIVE.  Do not strip the flag for compactness — it is part of the contract.
 
-**11e.  Worked example (illustrative)**
+**11f.  Worked example (illustrative)**
 
 To illustrate the format, not to define values. Real values come from the live data.
 

@@ -34,7 +34,7 @@
 | **[CURRENCY]** | **USD** | e.g., USD / EUR / GBP / MYR |
 | **[TICK_SIZE]** |  | Smallest price increment for the primary asset, in [UNIT_OF_MEASURE]. Examples: EUR/USD = 0.0001 (one pip). WTI futures = 0.01 (one cent). ES futures = 0.25 (one quarter-point). S&P 500 cash = 0.01. Required when [PRODUCE_STRATEGY_RECOMMENDATIONS] = YES; may be left blank otherwise. |
 | **[TICK_NAME]** |  | Native execution-unit label for the primary asset. Examples: EUR/USD = pip / WTI = tick / ES = tick / S&P 500 cash = point / Gold = tick. Required when [PRODUCE_STRATEGY_RECOMMENDATIONS] = YES; may be left blank otherwise. |
-| **[AS_OF_DATE]** |  | Insert exact date — e.g., 15 April 2026 |
+| **[AS_OF_DATE]** |  | Insert exact date — e.g., 15 April 2026. This is the date of the **as-of session**: the last completed regular session of the primary asset that closed strictly before the report date. It is not the date the run was executed, and it does not move back a session because that session’s close was awkward to source. Every lookback window, pivot prior period and trade-card reference close in the run ends here. |
 | **[AS_OF_TIMEZONE]** | **UTC** | e.g., America/New_York / Europe/London / Asia/Singapore |
 | **[LOOKBACK_WINDOW]** | **5 days** | Consensus research window — e.g., last 5 trading days / last 10 calendar days |
 
@@ -210,7 +210,7 @@ Section H governs the regime-aware, three-tier strategies module. Defaults below
 | **Variable** | **Default** | **Options / Description** |
 | --- | --- | --- |
 | **[PRODUCE_STRATEGY_RECOMMENDATIONS]** | **NO** | Master switch. YES enables the strategies module and adds §21 Strategy Recommendations to the report. NO suppresses the entire module — M5 is skipped and the report ends at §20. |
-| **[DAILY_OPEN_ANCHOR]** | **00:00 UK** | 00:00 UK / 07:00 UK. Defines the entry timestamp for the Trade 1 daily directional. Use the value matching when the analysis run completes. For 24-hour assets (FX, futures), 00:00 UK is the natural session open. For S&P 500 cash, 07:00 UK reflects the pre-market window before NY open. |
+| **[DAILY_OPEN_ANCHOR]** | **00:00 UK** | 00:00 UK / 07:00 UK. Defines the entry timestamp for the Trade 1 daily directional. These two options are the menu from which a **populated instance** selects once, at set-up; the value in the populated instance then governs every run of that instance and is not re-selected at run time, per session, or to suit when an analysis happened to finish. For 24-hour assets (FX, futures), 00:00 UK is the natural session open. For S&P 500 cash, 07:00 UK reflects the pre-market window before NY open. A deviation from the populated value is a logged non-conformance, not an anchor: it is recorded as such, the same converted time appears on the card, in the handoff record and in the report body, and it is never presented as the instance’s anchor value. |
 | **[PRODUCE_PIVOT_TRADE]** | **YES** | Trade 2 gate. YES produces the regime-aware pivot trade card. NO suppresses Trade 2 only. |
 | **[PRODUCE_COMPLEX_TRADE]** | **YES** | Trade 3 gate. YES produces the regime-driven complex trade card. Single switch — regime determines whether 3A (momentum-pullback), 3B (mean-reversion), or 3C (transition breakout) is built. NO suppresses Trade 3 only. |
 | **[MAX_SIMULTANEOUS_LONG_SHORT]** | **YES** | If YES, opposing trade cards are permitted across the three strategies (e.g., long Trade 1 + short Trade 2 limit at R2). If NO, the most-recent strategy in build order is suppressed when its direction conflicts with an earlier strategy. |

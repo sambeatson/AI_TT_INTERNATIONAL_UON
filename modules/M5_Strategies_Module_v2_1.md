@@ -30,7 +30,7 @@ This module runs **after** M3 has produced its Named Output Surface, and **befor
 | [CONVICTION_THRESHOLD] | Absolute conviction score below which Trade 1 is suppressed. Default 0.25. |
 | [W_SHORT_TECH] / [W_MEDIUM_REGIME] / [W_VOLATOR] / [W_KAUFMAN] / [W_SENTIMENT] / [W_CROSS_ASSET] | Direction-scoring weights consumed in §2. Defaults sum to 1.00. Locked for a minimum of 20 sessions before any tuning. |
 
-| **ABSOLUTE RULES — strategies are deterministic, structural, and traceable** 1. SINGLE INPUT CONTRACT.  M5 reads from one upstream surface only: the M3 §11 Named Output Surface. M5 may not reach into M3 sub-steps directly, may not re-derive any value already on the surface, and may not call M2 or M1 except for the variables explicitly listed above. If a required surface value is absent, suppress the affected trade card and log the reason — never substitute or estimate. 2. NO NEW DATA.  M5 fetches nothing. Every value used must already exist in M1 variables or on the M3 §11 surface. 3. NO SYNTHESIS OF LEVELS.  Pivots, swings, ATR, regime, and sentiment tilt come from the surface only. M5 may compute the fib swing anchor and floor-pivot midpoints (R1.5 / S1.5), but never invents an OHLC, pivot, or sentiment value. 4. SINGLE-SOURCE INDICATIVE PROPAGATION.  Any trade card whose entry or stop references a SINGLE-SOURCE-INDICATIVE level (per the corroboration flag on the surface) must carry the indicative qualifier in §21b and the same flag in M4 §19. Trade 2 is suppressed entirely if all accessible pivot tiers are SINGLE-SOURCE-INDICATIVE. 5. PRIMARY ASSET ONLY.  No trade card may reference a price, level, or invalidation in a secondary or counter asset. Cross-asset signals contribute to direction scoring (via the surface’s cross_asset_confirm field) only. 6. NO OVERRIDE OF §17.  M5 does not modify, soften, or contradict the §17 Forecast. Conflicts between the §21a directional conviction and the §17 forecast are flagged in §21a but never resolved by editing either output. 7. THREE TRANCHES, ALWAYS.  Every triggered trade is composed of three equal units. Tranching, BE+[BE_TRAIL_R]·R management, and runner exit rules are universal across all trade types except where a structural runner rule explicitly supersedes them (Trade 3A 100%-extension stop pull is the only such case). |
+| **ABSOLUTE RULES — strategies are deterministic, structural, and traceable** 1. SINGLE INPUT CONTRACT.  M5 reads from one upstream surface only: the M3 §11 Named Output Surface. M5 may not reach into M3 sub-steps directly, may not re-derive any value already on the surface, and may not call M2 or M1 except for the variables explicitly listed above. If a required surface value is absent, suppress the affected trade card and log the reason — never substitute or estimate. 2. NO NEW DATA.  M5 fetches nothing. Every value used must already exist in M1 variables or on the M3 §11 surface. 3. NO SYNTHESIS OF LEVELS.  Pivots, swings, ATR, regime, and sentiment tilt come from the surface only. M5 may compute the fib swing anchor and floor-pivot midpoints (R1.5 / S1.5), but never invents an OHLC, pivot, or sentiment value. 4. SINGLE-SOURCE INDICATIVE PROPAGATION.  Any trade card whose entry or stop references a SINGLE-SOURCE-INDICATIVE level (per the corroboration flag on the surface) must carry the indicative qualifier in §21b and the same flag in M4 §19. Trade 2 is suppressed entirely if all accessible pivot tiers are SINGLE-SOURCE-INDICATIVE. 5. PRIMARY ASSET ONLY.  No trade card may reference a price, level, or invalidation in a secondary or counter asset. Cross-asset signals contribute to direction scoring (via the surface’s cross_asset_confirm field) only. 6. NO OVERRIDE OF §17.  M5 does not modify, soften, or contradict the §17 Forecast. Conflicts between the §21a directional conviction and the §17 forecast are flagged in §21a but never resolved by editing either output. 7. THREE TRANCHES, ALWAYS.  Every triggered trade is composed of three equal units. Tranching, BE+[BE_TRAIL_R]·R management, and runner exit rules are universal across all trade types except where a structural runner rule explicitly supersedes them (Trade 3A 100%-extension stop pull is the only such case). 8. GATES ARE NON-OVERRIDABLE.  The suppression triggers in §10, the order-side and anchor rules in §5.0, and the pre-emit checklist in §9a are part of the fixed module. No run-time direction, user instruction, operator note, standing preference, or convenience argument may relax, defer, or reverse them, and no such instruction may be cited in the report as authority for doing so. If a gate fires, the only compliant outputs are the SUPPRESSED row or a rebuild that clears the gate on its merits. A card emitted against a fired gate is a P-level QA failure regardless of how well formed it is. |
 | --- |
 
 # **§1  Inputs Consumed (Single-source contract)**
@@ -150,6 +150,17 @@ The prior range is bounded by swing_high_25d and swing_low_25d on the surface. �
 
 # **§5  Trade Construction**
 
+## **§5.0  Order-side, anchor, and reference-close rules (apply to every card)**
+
+These four rules bind every card built in §5.1–§5.3 and are checked again at §9a. They add no strategy logic — they state the conditions a card must already satisfy.
+
+| **Rule** | **Condition** |
+| --- | --- |
+| Reference close | Every card is built against one reference close: the settled close of the last completed primary-asset session strictly before the report date (D-1). Print that close, as a number and with its session date, on every card. A card built on a D-2 close, an intraday mark, or a proxy-instrument close is non-compliant. |
+| MARKET entry | A MARKET card enters at the D-1 reference close. State the level as a number; do not substitute a prior session’s close, a synthetic open, or a rounded figure. |
+| Order side | A BUY LIMIT and a SELL STOP must sit at or below the D-1 reference close. A SELL LIMIT and a BUY STOP must sit at or above it. A card whose entry sits on the wrong side of that close is non-compliant and must be rebuilt or suppressed — it is never shipped with a note. State the entry, the reference close, and the signed gap between them on the card. |
+| Anchor | Entry timing is [DAILY_OPEN_ANCHOR] as populated in the M1 instance in force for this run. That value governs; it is not re-selected per run, per session, or per convenience. One anchor is stated on the card, in the handoff record, and in the report body, and the three must read the same converted time. |
+
 ## **§5.1  Trade 1 — Daily Directional**
 
 Direction-of-the-day expression. Always entered at [DAILY_OPEN_ANCHOR]. Suppressed if §2 score is NEUTRAL.
@@ -157,18 +168,20 @@ Direction-of-the-day expression. Always entered at [DAILY_OPEN_ANCHOR]. Suppress
 | **Element** | **Rule** |
 | --- | --- |
 | Direction | From §2 (LONG / SHORT). Suppressed if NEUTRAL. |
-| Entry | Market or just-fillable order at [DAILY_OPEN_ANCHOR] (00:00 UK or 07:00 UK). |
+| Entry | Market or just-fillable order at [DAILY_OPEN_ANCHOR] as populated in the M1 instance — the parenthetical options in the M1 variables contract are the menu the instance chooses from, not a choice left open at run time. The fill level is the D-1 reference close per §5.0. |
 | Stop loss | Per §4c. Tighter of (5-day swing extreme + 0.25 × atr_14) or (nearest_support/resistance + 0.25 × atr_14), capped at [ATR_STOP_CAP] × atr_14. |
 | Position structure | 3 equal units. |
 | TP1 (Unit 1) | Entry ± 1 × R, where R = entry-to-SL distance. |
 | TP2 (Unit 2) | Entry ± 2 × R. On fill, Unit 3 SL moves to entry ± [BE_TRAIL_R] × R. |
 | TP3 (Unit 3 — runner) | Time-stopped at session close, OR price-stopped at 3 × atr_14 from entry, whichever triggers first. |
-| Sanity check | If 1 × R > 1 × atr_14, flag ‘wide stop’ in the card. If 2 × R > 3 × atr_14, flag ‘TP2 ambitious for a daily horizon’ — do not suppress. |
-| Thesis invalidation | Next structural level beyond SL. May coincide with SL; recorded explicitly. |
+| Sanity check | Mandatory on every card in §5, not Trade 1 alone. Print R in points and as a multiple of atr_14 (R ÷ atr_14, two decimals). If R > 1 × atr_14, the card carries the ‘wide stop’ flag — the flag is set by the arithmetic, not by judgement, and omitting it is a construction defect even where the stop is otherwise correct. If 2 × R > 3 × atr_14, flag ‘TP2 ambitious for a daily horizon’ — do not suppress. Both tests use the stated atr_14 from the surface; a proxy or implied volatility figure may not be substituted. |
+| Thesis invalidation | The next structural level beyond SL, and a different price from the SL. It may not be set equal to the stop, nor placed so close to it that it carries no information the stop does not already carry. State it as a close-through condition on a named level. |
 
 ## **§5.2  Trade 2 — Pivot, regime-aware**
 
 Trade 2 is fully regime-driven. Direction does NOT inherit from §2. In RANGE, Trade 2 fades pivots; in TREND, Trade 2 follows the trend across the pivot; in TRANSITION, Trade 2 plays the breakout side only.
+
+The branch is selected by regime_label on the surface and by nothing else. One regime label governs the whole run: the label used to pick this branch must be the same label reported in the technical sections and the same label used to fork Trade 3. Name the branch on the card (RANGE / TREND / TRANSITION) and build every element from that branch’s row only. Borrowing geometry across branches — a mean-reversion limit under TREND or TRANSITION, a pivot-fade ladder where the breakout rule applies — is a construction defect even when the resulting levels are internally consistent. If the regime is TRANSITION, the only permitted Trade 2 is a breakout-side entry beyond the boundary; a limit on the counter side is suppressed, not re-labelled.
 
 ### **§5.2a  RANGE regime — mean-reversion at pivots**
 
@@ -181,7 +194,7 @@ Trade 2 is fully regime-driven. Direction does NOT inherit from §2. In RANGE, T
 | Stop loss | [ATR_STOP_CAP] × atr_14 from entry, beyond the pivot. If a structural level (next pivot tier, swing extreme) sits closer than the ATR cap, the structural level + 0.25 × atr_14 buffer is used instead. |
 | Position structure | 3 equal units. |
 | TP1 / TP2 / TP3 | Entry ± 1 × R / Entry ± 2 × R / runner toward P (the pivot). |
-| Suppression | Suppressed entirely if all accessible pivot tiers carry the SINGLE-SOURCE-INDICATIVE flag on the surface (i.e. corroboration field of pivots_daily / pivots_weekly is SINGLE-SOURCE-INDICATIVE for every active timeframe). |
+| Suppression | Suppressed entirely if all accessible pivot tiers carry the SINGLE-SOURCE-INDICATIVE flag on the surface (i.e. corroboration field of pivots_daily / pivots_weekly is SINGLE-SOURCE-INDICATIVE for every active timeframe). ‘Accessible’ means every pivot timeframe toggled YES in M1 that this card could draw a level from — not merely the tier the card happened to choose. The test is symmetric: if the report states anywhere that every pivot tier is indicative, the card is suppressed; if a card is produced, the report must show which tier is corroborated and by which second source. Stating the flag and shipping the card anyway is the failure this rule exists to prevent. A tier that is absent or uncomputed is not the same as one that is indicative — pivots that can be computed from corroborated prior-period H/L/C must be computed before this test is run. |
 
 ### **§5.2b  TREND regime — pivot breakout**
 
@@ -200,7 +213,7 @@ In TRANSITION, Trade 2 is allowed only on the breakout side as identified by Tra
 
 ## **§5.3  Trade 3 — Regime-driven, structural TPs preserved**
 
-Single switch [PRODUCE_COMPLEX_TRADE]. regime_label determines which variant is built.
+Single switch [PRODUCE_COMPLEX_TRADE]. regime_label determines which variant is built, on a fixed mapping with no discretion: TREND_UP / TREND_DOWN → 3A, RANGE → 3B, TRANSITION → 3C. Name the fork and the label that selected it on the card. A card headed with one variant and built with another variant’s geometry is non-compliant; so is a variant chosen because its levels look more tradeable. If the selected variant’s own eligibility test fails (§4b for 3A/3B, §4d for 3C), the outcome is the SUPPRESSED row for that variant — never a substitution of a different variant, and never pivot levels standing in for swing or range levels.
 
 ### **§5.3a  Trade 3A — Momentum-Pullback (regime_label ∈ {TREND_UP, TREND_DOWN})**
 
@@ -253,7 +266,7 @@ The post-fakeout breakout play. Generous structural stop reflecting the prior ch
 
 ### **§6a  Invalidation**
 
-Every trade card carries an explicit ‘thesis invalidation’ value separate from the stop loss. The invalidation is the first level whose close-through breaks the directional narrative. May sit beyond the stop, at the stop, or — for tightly stopped pivot trades — slightly inside the stop. When invalidation is wider than stop, the card notes ‘stop ahead of invalidation’.
+Every trade card carries an explicit ‘thesis invalidation’ value separate from the stop loss. The invalidation is the first level whose close-through breaks the directional narrative. It must be a named structural level and a different price from the stop: it may sit beyond the stop or — for tightly stopped pivot trades — inside it, but an invalidation set equal to the stop, or within 0.15 × atr_14 of it, is not an invalidation and the card is non-compliant. The stop is an intraday price; the invalidation is a close-through condition. When invalidation is wider than stop, the card notes ‘stop ahead of invalidation’.
 
 ### **§6b  Confluences**
 
@@ -315,6 +328,8 @@ Five-session windows are too small for statistical claims. The framework cannot 
 | §21c 5-session backtest table | Per-session rows: date, strategy, direction, triggered, entry, exit, R outcome, days-to-resolution. |
 | §21d ‘What is working’ summary | Per §7c plus one-line limitations boilerplate from §7d. |
 
+The surface field names, trigger names, weight names and module or step codes used throughout M5 are internal addresses for building the handoff object. They are not report language. What crosses into M4 is the value, the plain-English description of how it was derived, and the report’s own section numbers — never the identifier. This applies to the Agent Log feed as much as to the card body.
+
 # **§9  Procedure (run order)**
 
 - Read M1. Confirm [PRODUCE_STRATEGY_RECOMMENDATIONS] = YES. If NO, halt M5 and signal M4 to omit §21. If YES, read all M1 strategy variables and tick spec; record for the Agent Log.
@@ -339,11 +354,40 @@ Five-session windows are too small for statistical claims. The framework cannot 
 
 - Run §7 backtest. Reconstruct prior [BACKTEST_LOOKBACK_DAYS] sessions. Resolve on actual OHLC. Aggregate per §7c.
 
+- Run the §9a pre-emit checklist. Do not emit any card until every row passes.
+
 - Emit the §8 handoff object to M4 §21. Write the full M5 trace to the Agent Log section that M4 §20 will consume.
+
+### **§9a  Pre-emit checklist (mandatory, per card)**
+
+Run this before any card leaves M5. Each row is a test on a number already computed — none of it is new analysis. Record the row, the value tested and PASS or FAIL in the trace. **A FAIL is not a caveat.** The card is rebuilt until the row passes, or it is emitted as a SUPPRESSED row. A card shipped with a known FAIL, however well annotated, is a P-level QA failure.
+
+| # | Check | Passes when |
+| --- | --- | --- |
+| 1 | Reference close | The D-1 reference close is printed as a number with its session date, and it is the settled close of the last completed session strictly before the report date. |
+| 2 | Suppression gates | Every §10 trigger has been tested and its outcome logged. No fired trigger has been overridden. No suppressed row carries a stop, R or TP ladder. |
+| 3 | Order side | MARKET entry equals the reference close; every LIMIT / STOP entry sits on the side of that close required by §5.0, with the signed gap printed. |
+| 4 | Anchor | One anchor value, matching the M1 instance, stated identically on the card, in the handoff record and in the report body. |
+| 5 | atr_14 stated | atr_14 appears on the card as a number, with its window and bar basis named. No proxy, no ‘implied’ or ‘approximate’ figure, no value inferred backwards from a buffer. |
+| 6 | R and the wide-stop flag | R is printed in points and as R ÷ atr_14. Where that ratio exceeds 1.00 the ‘wide stop’ flag is present. Where it falls outside 0.3–3.0 the card is rebuilt, not warned. |
+| 7 | Ladder order | For a long: stop < entry < TP1 < TP2 < TP3 (or TP3 null). Mirrored for a short. An inversion is resolved before emission, never narrated. |
+| 8 | Branch and fork | The regime label is stated once, is the same label used in the technical sections, and the Trade 2 branch and Trade 3 fork named on the cards are the ones that label selects. |
+| 9 | Derivation session | Every pivot level cited is from the prior period defined in M3 Step 8, and every swing endpoint is dated and inside the stated lookback. |
+| 10 | Invalidation | Present, a named structural level, and a different price from the stop by more than 0.15 × atr_14. |
+| 11 | Units | Every stop and target appears in both price and the native execution unit. |
+| 12 | Naming | No surface field name, trigger name, weight name, module or step code, bracketed variable token or framework identifier appears anywhere in the emitted card or its caveats. |
 
 # **§10  Suppression and Anomaly Rules**
 
 Trade cards are suppressed — not faked, softened, or interpolated — when their construction inputs fail. Suppression is itself an output: §21b carries a one-line ‘SUPPRESSED — [reason]’ entry rather than being silently omitted.
+
+Three points make this checkable rather than advisory.
+
+- **The triggers below are not discretionary.** Each is a test on a stated value. When a trigger fires the card is suppressed, and no run-time instruction, user direction, operator preference or leniency note may reverse it. An emitted card that cites such an instruction as its authority is a P-level QA failure, and the instruction itself must not appear in the report.
+
+- **A suppressed card is a row, not a card.** The SUPPRESSED row carries the trade name, the trigger that fired, and the value that fired it. It does not carry an entry, stop, R, or TP ladder. Where a contingent arming level is genuinely useful it may be given as a single trigger condition, outside §21b and labelled as commentary.
+
+- **The suppression decision is recorded even when it does not fire.** For every trade, log the trigger tested, the value tested, and the outcome, so that a produced card is as auditable as a suppressed one.
 
 | **Trigger** | **Action** |
 | --- | --- |

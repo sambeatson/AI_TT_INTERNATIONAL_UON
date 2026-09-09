@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-30_Trade_1,2026-07-30,Trade 1 — Daily Directional (SHORT),CLEAN,False
+2026-07-30_Trade_2,2026-07-30,"Trade 2 — Pivot, TRANSITION (breakout-side only)",WARN_TP3_ORDER,False
+2026-07-30_Trade_3C,2026-07-30,"Trade 3C — Momentum-Breakout (TRANSITION, downside)",UNPRICED,True

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-05_Trade_1,2026-06-05,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-05_Trade_2,2026-06-05,"Trade 2 - Pivot, regime-aware (RANGE - mean-reversion fade)",WARN_TP3_ORDER,False
+2026-06-05_Trade_3B,2026-06-05,Trade 3 - Mean-Reversion (variant 3B; regime = RANGE),CLEAN,False

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-07-28_Trade_2,2026-07-28,"Trade 2 - TRANSITION: breakout-side only (upside), aligned with the 3C long thesis",CLEAN,False
+2026-07-28_Trade_3C,2026-07-28,Trade 3C - post-consolidation upside breakout of the 25-session range,WARN_R_HUGE(4.57xATR)|WARN_TARGET_FAR(7.05xATR),False

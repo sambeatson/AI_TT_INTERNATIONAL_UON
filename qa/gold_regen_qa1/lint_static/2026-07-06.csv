@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-06_Trade_1,2026-07-06,Trade 1 — Daily Directional (LONG — direction score +0.43),CLEAN,False
+2026-07-06_Trade_2,2026-07-06,"Trade 2 — Pivot (TRANSITION, breakout side only — LONG)",CLEAN,False
+2026-07-06_Trade_3C,2026-07-06,Trade 3 — Momentum-Breakout 3C (TRANSITION regime),CLEAN,False

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-25_Trade_1,2026-05-25,Trade 1 — Daily Directional,CLEAN,False
+2026-05-25_Trade_2,2026-05-25,Trade 2 — Pivot (TRANSITION regime),SUPPRESSED,False
+2026-05-25_Trade_3C,2026-05-25,Trade 3C — Momentum-Breakout,SUPPRESSED,False

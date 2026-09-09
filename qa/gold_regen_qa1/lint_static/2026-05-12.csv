@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-12_Trade_1,2026-05-12,"Trade 1 — Daily Directional Long (Market at 00:00 UK, 12 May)",CLEAN,False
+2026-05-12_Trade_2,2026-05-12,Trade 2 — Pivot Trade (TREND_UP fork → trend-pullback long at daily S1.5),CLEAN,False
+2026-05-12_Trade_3A,2026-05-12,Trade 3A — Momentum-Pullback Long (38.2% fib retrace of the 4-May → 8-May swing),WARN_R_TINY(0.24xATR),False

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-20_Trade_1,2026-07-20,"Trade 1 — Daily Directional (SHORT — regime bias bearish, conviction −0.51)",WARN_R_TINY(0.19xATR),False
+2026-07-20_Trade_2,2026-07-20,Trade 2 — Pivot (regime-aware),SUPPRESSED,False
+2026-07-20_Trade_3C,2026-07-20,Trade 3C — Momentum-Breakout. TRANSITION regime; trades the confirmed break of the 25-session range.,UNPRICED,True

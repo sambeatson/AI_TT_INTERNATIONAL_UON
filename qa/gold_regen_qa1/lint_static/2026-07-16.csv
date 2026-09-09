@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-16_Trade_1,2026-07-16,TRADE 1 - Daily Directional · SUPPRESSED,SUPPRESSED,False
+2026-07-16_Trade_2,2026-07-16,TRADE 2 - Regime-Aware Pivot · ACTIVE (Leg B — LONG from support),CLEAN,False
+2026-07-16_Trade_3C,2026-07-16,TRADE 3 - Regime-Driven Complex · FORK: 3C (Breakout) — downside leg,CLEAN,False

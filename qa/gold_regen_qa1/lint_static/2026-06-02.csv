@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-02_Trade_1,2026-06-02,Trade 1 - Daily Directional (SHORT),CLEAN,False
+2026-06-02_Trade_2,2026-06-02,"Trade 2 - Pivot, regime-aware (SHORT-from-resistance)",CLEAN,False
+2026-06-02_Trade_3B,2026-06-02,Trade 3 - Regime-driven complex → fork 3B (Mean-Reversion),CLEAN,False

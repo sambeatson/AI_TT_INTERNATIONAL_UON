@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-17_Trade_1,2026-07-17,Trade 1 — Daily Directional,CLEAN,False
+2026-07-17_Trade_2,2026-07-17,"Trade 2 — Pivot (regime-aware). TREND_DOWN regime: the fade-to-pivot variant is disabled and the trend-continuation variant is active — the pivot is treated as resistance to sell into, not as a magnet to fade toward.",CLEAN,False
+2026-07-17_Trade_3A,2026-07-17,Trade 3A — Momentum-Pullback. Regime fork: TREND_DOWN selects variant 3A. Qualifying swing found at the default 4-session lookback — no adaptive extension needed.,CLEAN,False

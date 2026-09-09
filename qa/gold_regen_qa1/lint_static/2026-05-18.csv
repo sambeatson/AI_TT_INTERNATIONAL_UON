@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-18_Trade_1,2026-05-18,Trade 1 — Daily Directional (score-driven),CLEAN,False
+2026-05-18_Trade_2,2026-05-18,"Trade 2 — Pivot (regime-aware) — TRANSITION regime, breakout-side only",CLEAN,False
+2026-05-18_Trade_3C,2026-05-18,Trade 3C — Momentum-Breakout (regime_label = TRANSITION),WARN_TARGET_FAR(2.86xATR),False

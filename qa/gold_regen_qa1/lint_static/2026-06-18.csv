@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional,CLEAN,False
+2026-06-18_Trade_2,2026-06-18,Trade 2 - Pivot (TRANSITION),SUPPRESSED,False
+2026-06-18_Trade_3A,2026-06-18,Trade 3A - Momentum-Pullback (TRANSITION → fork defaults to 3A),WARN_TP3_ORDER,False

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-07_Trade_1,2026-07-07,Trade 1 - Daily Directional (LONG),UNPRICED,True
+2026-07-07_Trade_2,2026-07-07,"Trade 2 - Pivot, TRANSITION (breakout-side only)",UNPRICED,True
+2026-07-07_Trade_3C,2026-07-07,"Trade 3 - Momentum-Breakout 3C (TRANSITION, armed)",UNPRICED,True

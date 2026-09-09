@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-01_Trade_1,2026-07-01,Trade 1 — Daily Directional,SUPPRESSED,False
+2026-07-01_Trade_2,2026-07-01,"Trade 2 — Pivot, TREND-continuation (medium regime TREND_DOWN)",WARN_TP3_ORDER,False
+2026-07-01_Trade_3A,2026-07-01,Trade 3A — Momentum-Pullback (regime TREND_DOWN; sell the counter-trend bounce),CLEAN,False

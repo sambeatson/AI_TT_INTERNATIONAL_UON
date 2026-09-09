@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-27_Trade_1,2026-05-27,Trade 1 — Daily Directional (direction-of-the-day expression),CLEAN,False
+2026-05-27_Trade_2,2026-05-27,"Trade 2 — Pivot, trend-following short across the daily pivot.",CLEAN,False
+2026-05-27_Trade_3A,2026-05-27,Trade 3 → variant 3A — Momentum-Pullback short (regime fork to 3A on a TREND_DOWN label).,DUD_TP1_SIDE,True

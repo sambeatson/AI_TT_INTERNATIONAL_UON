@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-27_Trade_1,2026-07-27,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-27_Trade_2,2026-07-27,Trade 2 - Pivot fade at validated range extreme (Ranging regime).,CLEAN,False
+2026-07-27_Trade_3A,2026-07-27,Trade 3A - Momentum-Pullback. RANGE dual-gate fails (VOLator slope +0.01 not ≤ 0) → fork falls through to 3A.,CLEAN,False

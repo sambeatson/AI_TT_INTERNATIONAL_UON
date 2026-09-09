@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-10_Trade_1,2026-07-10,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-10_Trade_2,2026-07-10,"Trade 2 - Pivot, regime-aware. TREND_DOWN branch: fade rallies into resistance rather than buy dips into support.",WARN_TP3_ORDER,False
+2026-07-10_Trade_3A,2026-07-10,Trade 3A - Momentum-Pullback. Variant selected by the TREND_DOWN regime fork: sell the retracement of the dominant downswing.,CLEAN,False

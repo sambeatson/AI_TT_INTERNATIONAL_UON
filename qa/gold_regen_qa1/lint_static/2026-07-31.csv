@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-31_Trade_1,2026-07-31,"Trade 1 — Daily Directional (long bias, override-produced)",CLEAN,False
+2026-07-31_Trade_2,2026-07-31,"Trade 2 — Pivot, regime-aware (TRANSITION → breakout side)",CLEAN,False
+2026-07-31_Trade_3C,2026-07-31,"Trade 3 — Momentum-Breakout (3C, TRANSITION regime)",WARN_R_HUGE(3.30xATR)|WARN_TARGET_FAR(4.78xATR),False

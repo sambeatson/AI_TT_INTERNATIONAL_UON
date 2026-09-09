@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-21_Trade_1,2026-07-21,"Trade 1 — Daily Directional (SHORT — bearish regime, conviction −0.71)",CLEAN,False
+2026-07-21_Trade_2,2026-07-21,"Trade 2 — Pivot (regime-aware, TREND branch: sell rallies to resistance)",WARN_R_TINY(0.23xATR),False
+2026-07-21_Trade_3A,2026-07-21,Trade 3A — Momentum-Pullback (regime = TREND_DOWN → 3A active),CLEAN,False

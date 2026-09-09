@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-13_Trade_2,2026-07-13,Trade 2 - Pivot (regime-aware); RANGE regime -> fade toward pivot,WARN_R_TINY(0.26xATR),False
+2026-07-13_Trade_3B,2026-07-13,Trade 3B - Mean-Reversion (RANGE + KER below trend threshold + flat VOLator slope),WARN_R_TINY(0.27xATR),False

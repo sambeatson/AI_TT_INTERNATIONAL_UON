@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional,WARN_R_TINY(0.28xATR),False
+2026-06-30_Trade_2,2026-06-30,"Trade 2 - Pivot (regime-aware, TREND)",WARN_R_TINY(0.28xATR),False
+2026-06-30_Trade_3A,2026-06-30,Trade 3 - Complex (fork → 3A Momentum-Pullback),WARN_R_TINY(0.21xATR),False

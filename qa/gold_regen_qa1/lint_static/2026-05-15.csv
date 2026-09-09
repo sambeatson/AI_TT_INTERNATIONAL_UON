@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-15_Trade_1,2026-05-15,Trade 1 — Daily Directional,CLEAN,False
+2026-05-15_Trade_2,2026-05-15,Trade 2 — Pivot (TREND_DOWN: short entry on retest of broken pivot),WARN_TP3_ORDER,False
+2026-05-15_Trade_3C,2026-05-15,Trade 3C — Momentum-Breakout (regime: TRANSITION; VOLator slope positive disqualifies pure RANGE / 3B mean-reversion),CLEAN,False

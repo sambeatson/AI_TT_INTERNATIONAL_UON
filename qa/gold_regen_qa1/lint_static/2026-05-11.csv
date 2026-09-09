@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-11_Trade_1,2026-05-11,Trade 1 — Daily Directional (direction-of-the-day expression),CLEAN,False
+2026-05-11_Trade_2,2026-05-11,"Trade 2 — Pivot (TREND_UP breakout, daily timeframe)",CLEAN,False
+2026-05-11_Trade_3A,2026-05-11,Trade 3A — Momentum-Pullback,CLEAN,False

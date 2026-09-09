@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-02_Trade_1,2026-07-02,Trade 1 — Daily Directional,SUPPRESSED,False
+2026-07-02_Trade_2,2026-07-02,"Trade 2 — Pivot (regime-aware, TRANSITION → sell rally into resistance)",CLEAN,False
+2026-07-02_Trade_3A,2026-07-02,"Trade 3 — Complex (fork → 3A Momentum-Pullback, short side)",WARN_R_TINY(0.25xATR),False

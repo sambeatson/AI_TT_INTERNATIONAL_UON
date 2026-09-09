@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-28_Trade_1,2026-05-28,"Daily directional short, entered at session anchor",CLEAN,False
+2026-05-28_Trade_2,2026-05-28,Regime-aware pivot trade. Active regime: TRANSITIONAL → breakout-side bias. Broken side = SHORT.,CLEAN,False
+2026-05-28_Trade_3C,2026-05-28,Trade 3C — regime-driven transition breakout. Regime TRANSITIONAL with bearish lean → broken-side direction = SHORT.,CLEAN,False

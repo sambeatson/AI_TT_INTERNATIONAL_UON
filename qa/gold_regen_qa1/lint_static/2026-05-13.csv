@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-13_Trade_1,2026-05-13,Trade 1 - Daily Directional (reduced conviction),CLEAN,False
+2026-05-13_Trade_2,2026-05-13,RANGE FADE: short the upper rail / long the lower rail,WARN_R_TINY(0.29xATR),False
+2026-05-13_Trade_3B,2026-05-13,"Trade 3 - Complex (variant 3B - Mean-Reversion, range regime)",CLEAN,False

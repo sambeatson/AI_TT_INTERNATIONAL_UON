@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional (SHORT),UNPRICED,True
+2026-06-08_Trade_2,2026-06-08,"Trade 2 - Pivot, regime-aware (SHORT / trend)",CLEAN,False
+2026-06-08_Trade_3C,2026-06-08,Trade 3C - Momentum-Breakout (SHORT),CLEAN,False

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-19_Trade_1,2026-05-19,"Trade 1 — Daily Directional (SHORT, conviction-based)",CLEAN,False
+2026-05-19_Trade_2,2026-05-19,"Trade 2 — Pivot, Regime-Aware (TREND_DOWN: pivot breakout, SHORT side)",CLEAN,False
+2026-05-19_Trade_3A,2026-05-19,Trade 3A — Regime-Driven Complex: Momentum-Pullback SHORT (TREND_DOWN active),CLEAN,False

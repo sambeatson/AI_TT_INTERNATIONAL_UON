@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-14_Trade_1,2026-05-14,"Trade 1 — Daily Directional (00:00 UK anchor, 14 May 2026)",CLEAN,False
+2026-05-14_Trade_2,2026-05-14,Trade 2 — Regime-aware Pivot (indicative),CLEAN,False
+2026-05-14_Trade_3C,2026-05-14,Trade 3 — Complex (3C transition breakout),CLEAN,False

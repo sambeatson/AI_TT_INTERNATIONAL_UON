@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-03_Trade_1,2026-07-03,Trade 1 — Daily Directional,SUPPRESSED,False
+2026-07-03_Trade_2,2026-07-03,"Trade 2 — Pivot, range-fade variant (TRANSITION regime)",CLEAN,False
+2026-07-03_Trade_3A,2026-07-03,"Trade 3A — Momentum-Pullback (fork selected: TRANSITION with short-term bullish impulse → buy the pullback, tight)",CLEAN,False

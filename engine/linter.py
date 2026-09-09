@@ -40,7 +40,15 @@ def anchor_price(d, D, hhmm):
     s = d[(d['bdate'] == pd.Timestamp(D).date()) & (d['bt'].dt.time >= pd.Timestamp(hhmm).time())]
     return (float(s.iloc[0]['Open']), s.iloc[0]['bt']) if len(s) else (None, None)
 
-def lint(cards, d=None):
+STALE_PTS = 15.0      # shipped default, calibrated on US500 (~0.17 x ATR14)
+
+def lint(cards, d=None, stale_atr=None):
+    """stale_atr: if given, STALE_ANCHOR triggers at stale_atr x ATR14(D-1) instead of the fixed
+    STALE_PTS. The fixed 15 points is an S&P-scale constant and does not port: gold's ATR14 averages
+    102 points against the S&P's 87 on the same window, so the same absolute tolerance means a
+    different thing on each asset. Left off by default so US500 output stays byte-identical."""
+    def stale_tol(atr):
+        return STALE_PTS if (stale_atr is None or not atr) else stale_atr * atr
     out = []
     prev = {}
     for _, c in cards.iterrows():
@@ -70,7 +78,7 @@ def lint(cards, d=None):
             if px is not None:
                 m = str(c.entry_mode).upper()
                 if m == 'MARKET':
-                    if abs(px-E) > 15: flags.append(f'STALE_ANCHOR({px-E:+.1f})')
+                    if abs(px-E) > stale_tol(atr): flags.append(f'STALE_ANCHOR({px-E:+.1f})')
                     if s*(px-SL) <= 0: flags.append('MALFORMED_FILL')
                 elif m == 'LIMIT' and ((L and px < E) or ((not L) and px > E)): flags.append(f'MISPLACED_LIMIT({px-E:+.1f})')
                 elif m == 'STOP' and ((L and px > E) or ((not L) and px < E)): flags.append(f'MISPLACED_STOP({px-E:+.1f})')
@@ -81,12 +89,14 @@ def lint(cards, d=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--cards', required=True); ap.add_argument('--data', default=None); ap.add_argument('--out', required=True)
+    ap.add_argument('--stale-atr', type=float, default=None,
+                    help='STALE_ANCHOR tolerance as a multiple of ATR14(D-1) instead of the fixed 15 pts')
     a = ap.parse_args()
     cards = pd.read_csv(a.cards)
     d = None
     if a.data:
         d = pd.read_csv(a.data); d['bt'] = pd.to_datetime(d['DateTime_Broker']); d = d.sort_values('bt'); d['bdate'] = d['bt'].dt.date
-    r = lint(cards, d); r.to_csv(a.out, index=False)
+    r = lint(cards, d, stale_atr=a.stale_atr); r.to_csv(a.out, index=False)
     n = len(r[r['flags'] != 'SUPPRESSED'])
     print(f'{n} cards linted | duds {r.dud.sum()} | clean {(r["flags"]=="CLEAN").sum()}')
     fl = r[r['flags'].isin(['CLEAN','SUPPRESSED'])==False]['flags'].str.split('|').explode().str.replace(r'\(.*\)','',regex=True)

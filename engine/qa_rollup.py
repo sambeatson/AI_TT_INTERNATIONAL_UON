@@ -20,41 +20,78 @@ BANDS = [(90, 'Very High'), (75, 'High'), (60, 'Moderate'), (40, 'Low'), (0, 'Ve
 def band_of(total):
     return next(name for lo, name in BANDS if total >= lo)
 
+def norm_override(s):
+    """Map whatever the session wrote onto the three values the framework defines.
+
+    Real variants seen: "restriction_breach**", "none`", "not triggered", "-1 level**" (a session
+    describing the override's *effect* rather than naming it). Anything that mentions a restriction
+    or a fabricated source is that override; anything else is none.
+    """
+    v = re.sub(r'[^a-z ]', ' ', str(s or 'none').lower())
+    if 'hallucinat' in v or 'fabricat' in v:
+        return 'hallucinated_source'
+    if 'restriction' in v or 'breach' in v:
+        return 'restriction_breach'
+    return 'none'
+
+
 def norm_band(s):
     """Sessions write 'High', 'High_Trust', 'High Trust' - all the same band."""
     s = re.sub(r'[_\s]*trust[_\s]*', ' ', str(s), flags=re.I).strip()
     return ' '.join(w.capitalize() for w in s.split())
 
-def grab(txt, key, cast=float):
-    """Sessions state the score block in whatever markdown they chose, so parse defensively.
+SCORE_KEYS = ('c1', 'c2', 'c3', 'c4', 'c5', 'total', 'band', 'override',
+              'card_integrity', 'n_cards', 'n_duds', 'n_warns')
 
-    Two traps seen in practice: an arithmetic line ("Total = 20.00 + 20.00 + ... = 70.75 -> 71")
-    whose first number is a category max, not the total; and category levels given only inside the
-    scorecard table. So prefer a compact one-line block, then take the LAST bare-number match
-    (the summary sits at the end), and fall back to the table for c1..c5.
+def score_line(txt):
+    """The canonical one-line score block, if the session wrote one.
+
+    Sessions were asked to state the block on its own lines, and most also emit a single summary
+    line. Prefer that line: parsing it avoids every trap in the prose (an arithmetic derivation
+    whose first number is a category max, a "Reviewer note on the band:" paragraph, a percentage
+    in a table cell). A line qualifies if it carries `total` plus at least two other score keys.
     """
-    compact = re.search(r'\bc1\s*=\s*\d.*?\bc5\s*=\s*\d[^\n]*', txt, re.I)
-    if compact:
-        m = re.search(rf'\b{key}\s*[=:]\s*`?([A-Za-z0-9_.]+)', compact.group(0), re.I)
-        if m and (cast is str or re.fullmatch(r'-?\d+(?:\.\d+)?', m.group(1))):
-            return m.group(1).strip() if cast is str else cast(float(m.group(1)))
+    best = None
+    for line in txt.splitlines():
+        if not re.search(r'\btotal\s*[=:]', line, re.I):
+            continue
+        n = sum(1 for k in SCORE_KEYS if re.search(rf'\b{k}\s*[=:]', line, re.I))
+        if n >= 3 and (best is None or n >= best[0]):
+            best = (n, line)
+    return best[1] if best else None
 
-    hits = re.findall(rf'^[^\n|]*?[`*\-\s]*{key}\s*[=:]\s*`?\**([A-Za-z0-9_.%/ ]+?)\**`?\s*$',
-                      txt, re.I | re.M)
-    for v in reversed(hits):
-        v = v.strip().rstrip('.').split('/')[0].strip()
+
+def _num(seg, cast):
+    seg = re.sub(r'/\s*100\b', '', seg)          # "83/100" is a score out of 100, not two numbers
+    nums = re.findall(r'-?\d+(?:\.\d+)?', seg)
+    if not nums:
+        return None
+    # A rounding arrow ("76.75 -> 77") or an explicit sum ("20.00 + 17.00 + ... = 83") both put the
+    # answer last. Anything else - a bare value, or a value followed by prose - puts it first.
+    pick = nums[-1] if re.search(r'->|\u2192|\+', seg) else nums[0]
+    return cast(float(pick))
+
+
+def grab(txt, key, cast=float, line=None):
+    """Pull one score field. `line` is the canonical block when one was found."""
+    for src in ([line] if line else []) + [txt]:
+        m = re.search(rf'\b{key}\s*[=:]\s*(.*?)(?=\s+[a-z_]+\s*[=:]|$)', src,
+                      re.I | (0 if src is line else re.M))
+        if not m:
+            continue
+        seg = m.group(1).strip().strip('*`').rstrip('.').strip()
         if cast is str:
+            v = re.split(r'\s*[(\u2014-]{1,2}\s|\s*\(', seg)[0].strip()
+            if v and len(v) < 40:
+                return v
+            continue
+        v = _num(seg, cast)
+        if v is not None:
             return v
-        if re.fullmatch(r'-?\d+(?:\.\d+)?', v):
-            return cast(float(v))
-
-    if re.fullmatch(r'c[1-5]', key, re.I):          # scorecard-table fallback: | C3 ... | 2 | 0.40 | 25 | ...
+    if re.fullmatch(r'c[1-5]', key, re.I):        # scorecard-table fallback: | C3 ... | 2 | 0.40 | 25 |
         m = re.search(rf'^\|\s*\**{key}\b[^|]*\|\s*\**\s*([0-5])\s*\**\s*\|', txt, re.I | re.M)
         if m:
             return cast(float(m.group(1)))
-    if cast is str:
-        m = re.search(rf'{key}\s*[=:]\s*\**([A-Za-z_][A-Za-z0-9_ ]*)', txt, re.I)
-        return m.group(1).strip() if m else None
     return None
 
 
@@ -68,15 +105,15 @@ def main():
     for f in sorted(glob.glob(f'{a.dir}/*_trust_score.md')):
         D = os.path.basename(f).replace('_trust_score.md', '')
         t = open(f).read()
+        sl = score_line(t)
         r = {'report_date': D}
         for k in MAXES:
-            r[k] = grab(t, k, int)
-        r['total'] = grab(t, 'total', int)
-        r['band'] = norm_band(grab(t, 'band', str) or '')
-        ov = str(grab(t, 'override', str) or 'none').lower().strip()
-        r['override'] = 'none' if ov in ('none', 'na', 'n/a', '-') else ov
+            r[k] = grab(t, k, int, sl)
+        r['total'] = grab(t, 'total', int, sl)
+        r['band'] = norm_band(grab(t, 'band', str, sl) or '')
+        r['override'] = norm_override(grab(t, 'override', str, sl))
         for k in ('card_integrity', 'n_cards', 'n_duds', 'n_warns'):
-            r[k] = grab(t, k, float)
+            r[k] = grab(t, k, float, sl)
 
         miss = [k for k in list(MAXES) + ['total', 'band'] if r.get(k) is None]
         if miss:

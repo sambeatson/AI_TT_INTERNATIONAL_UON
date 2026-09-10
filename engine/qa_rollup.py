@@ -36,8 +36,10 @@ def norm_override(s):
 
 
 def norm_band(s):
-    """Sessions write 'High', 'High_Trust', 'High Trust' - all the same band."""
-    s = re.sub(r'[_\s]*trust[_\s]*', ' ', str(s), flags=re.I).strip()
+    """Sessions write 'High', 'High_Trust', 'High Trust', 'High**', 'High (75-89)' - one band."""
+    s = re.sub(r'\([^)]*\)', ' ', str(s))            # drop a parenthesised range
+    s = re.sub(r'[*_`]', ' ', s)                      # drop markdown emphasis
+    s = re.sub(r'[_\s]*trust[_\s]*', ' ', s, flags=re.I).strip()
     return ' '.join(w.capitalize() for w in s.split())
 
 SCORE_KEYS = ('c1', 'c2', 'c3', 'c4', 'c5', 'total', 'band', 'override',
@@ -126,12 +128,23 @@ def main():
         calc = round(sum(MULT.get(r[k], 0) * MAXES[k] for k in MAXES))
         capped = min(calc, CAP[r['override']]) if r['override'] in CAP else calc
         r['total_recomputed'] = capped
-        if abs(r['total'] - capped) > 1:
-            problems.append(f'{D}: stated total {r["total"]} vs recomputed {capped} '
-                            f'(uncapped {calc}, override {r["override"]})')
-        if r['band'] != band_of(r['total']):
-            problems.append(f'{D}: band "{r["band"]}" does not match total {r["total"]} '
-                            f'(expected "{band_of(r["total"])}")')
+        r['total_uncapped'] = calc
+
+        # The framework says an override "caps the band". Sessions read that two ways, and both are
+        # defensible: cap the number (total -> 74) or keep the raw number and cap only the label.
+        # Accept either, record which was used, and still reject a report that matches neither.
+        as_capped = abs(r['total'] - capped) <= 1 and r['band'] == band_of(capped)
+        as_labelled = abs(r['total'] - calc) <= 1 and r['band'] == band_of(capped)
+        r['cap_convention'] = ('n/a' if capped == calc else
+                               'capped_total' if as_capped else
+                               'capped_band_only' if as_labelled else 'inconsistent')
+        if not (as_capped or as_labelled):
+            if abs(r['total'] - capped) > 1 and abs(r['total'] - calc) > 1:
+                problems.append(f'{D}: stated total {r["total"]} matches neither the recomputation '
+                                f'{calc} nor its capped value {capped} (override {r["override"]})')
+            else:
+                problems.append(f'{D}: band "{r["band"]}" is not "{band_of(capped)}" as the '
+                                f'{r["override"]} override requires')
         if r['override'] == 'hallucinated_source' and r['c3'] != 0:
             problems.append(f'{D}: hallucinated_source override requires c3=0, got c3={r["c3"]}')
         if not os.path.exists(f'{a.dir}/{D}_feedback.md'):

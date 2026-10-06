@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-22",
+  "report_file": "FTSE_EuroStoxx_Report_22Jul2026.md",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 22:45:00",
+  "direction_score": 0.149,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "RSI2 cash 48.88 (<50), D-1 close>open, 5-day closes 10540.4/10573.4/10534.7/10571.7 sideways: Neutral"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed swing x 0.5; last completed swing is up (low 10429.4 on 2026-07-16 10:00 broker to high 10616.2 on 2026-07-17 11:00 broker)"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "report reading carried (mildly positive, expanding); cash ATR14 5-day change 118.3 to 119.6 (+1.1%), flat-to-slightly-up; expansion-up aligned with the 2 Jul upside break"
+   },
+   "kaufman": {
+    "signal": 0.056,
+    "weight": 0.15,
+    "contribution": 0.0084,
+    "basis": "KER over 25 cash daily closes = +0.056 (net change positive), Ranging-Neutral"
+   },
+   "sentiment": {
+    "signal": 0.44,
+    "weight": 0.15,
+    "contribution": 0.066,
+    "basis": "carried from report s13b tilt +0.44; news not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "CONTRADICT x sign(+1). 5-session closes 15->21 Jul: US500 7572.8->7503.7 (-0.9%) falling, USDX 100.49->101.20 rising, VIX 17.04->17.43 flat-up; FTSE cash +0.7% over same window. D-1 alone: US500 +0.8%, VIX -3.3% (not enough to offset the 5-session read). DAX/Euro Stoxx/Brent unavailable: report reading not used for the call"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-22_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score +0.149 is below the 0.25 conviction threshold (NEUTRAL)",
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - score +0.149, |score| < 0.25 conviction threshold, so Trade 1 does not trade.",
+  "rationale": "Trigger tested: |direction score| < 0.25. Value: +0.149 (components in direction_components: 0 + 0.10 + 0.05 + 0.0084 + 0.066 - 0.075). Outcome: FIRED, Trade 1 suppressed. Technical, regime and cross-asset components recomputed from slices/level file (cash basis, ATR14 119.56, RSI2 48.88); sentiment tilt +0.44 carried from the report and not verifiable. Sensitivity: the cross-asset read decides it; reading it MIXED rather than CONTRADICT would give about +0.27, but 5-session US500 down and USDX up do not support a MIXED call. Report's original card (live LONG at 10585.91, stop 10449.97) was a defect: live below threshold, report ATR 88 vs actual 119.56, report D-1 close 10585.91 vs cash close 10571.7. Calendar: UK CPI y/y 09:00 broker (07:00 London) consensus 2.5 vs previous 2.8 collides with the 09:00 anchor."
+ },
+ {
+  "report_date": "2026-07-22",
+  "report_file": "FTSE_EuroStoxx_Report_22Jul2026.md",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 22:45:00",
+  "direction_score": 0.149,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "RSI2 cash 48.88 (<50), D-1 close>open, 5-day closes 10540.4/10573.4/10534.7/10571.7 sideways: Neutral"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed swing x 0.5; last completed swing is up (low 10429.4 on 2026-07-16 10:00 broker to high 10616.2 on 2026-07-17 11:00 broker)"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "report reading carried (mildly positive, expanding); cash ATR14 5-day change 118.3 to 119.6 (+1.1%), flat-to-slightly-up; expansion-up aligned with the 2 Jul upside break"
+   },
+   "kaufman": {
+    "signal": 0.056,
+    "weight": 0.15,
+    "contribution": 0.0084,
+    "basis": "KER over 25 cash daily closes = +0.056 (net change positive), Ranging-Neutral"
+   },
+   "sentiment": {
+    "signal": 0.44,
+    "weight": 0.15,
+    "contribution": 0.066,
+    "basis": "carried from report s13b tilt +0.44; news not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "CONTRADICT x sign(+1). 5-session closes 15->21 Jul: US500 7572.8->7503.7 (-0.9%) falling, USDX 100.49->101.20 rising, VIX 17.04->17.43 flat-up; FTSE cash +0.7% over same window. D-1 alone: US500 +0.8%, VIX -3.3% (not enough to offset the 5-session read). DAX/Euro Stoxx/Brent unavailable: report reading not used for the call"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-22_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch (breakout side, upside)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SUPPRESSED - R below the 0.3 x ATR14 floor; would be a BUY LIMIT at 10545.52 (below prev_close_full 10595.1)",
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - R 35.28 pts = 0.295 x ATR14 (119.56 cash), below the 0.3 x ATR14 floor of 35.87.",
+  "rationale": "Regime TRANSITION: report reading (KER ranging, volatility slope mildly positive so the RANGE dual gate is not met) carried. Check on data: KER over 25 cash closes = +0.056 (|KER| < 0.09, ranging-neutral); cash ATR14 flat-to-slightly-up (118.3 -> 119.6 over 5 sessions), so a RANGE label is not demonstrable; close 10571.7 sits at 59% of the 25-day band, inside 10328.1-10739.6. Branch: TRANSITION, breakout side only; side LONG per the upper-boundary retest that failed on 2026-07-07 16:30 broker (high 10739.6, close 10680.1, next session 10457.0), with positive volatility slope; cross-asset does not confirm (caveat). Levels (d_cash, session 2026-07-21 cash 10:00-18:30 broker, CORROBORATED by construction as computed from the execution-price series): P 10538.67, R1 10607.23, S1 10503.13. Entry formula P + 0.10 x (R1 - P) = 10545.52, which is below prev_close_full 10595.1 (and cash close 10571.7), so only a BUY LIMIT is order-side compliant; gap -49.58 to prev_close_full. Stop formula P - 0.8 x (P - S1) = 10510.24. The alternative 'S1 - 0.25 x ATR' = 10473.24 is wider, so the tighter formula governs. R = 10545.52 - 10510.24 = 35.28 pts = 0.295 x ATR14, below the 0.3 x ATR14 = 35.87 floor. Honest construction fails the floor, so the card is suppressed; the stop was not moved to a wider structural tier to clear the floor. TP ladder (R1/R1.5/R2) not issued. The report's original card also failed: all daily tiers declared indicative while the card was live, STOP entry 10559.6 below the D-1 close, R 36 on report pivots."
+ },
+ {
+  "report_date": "2026-07-22",
+  "report_file": "FTSE_EuroStoxx_Report_22Jul2026.md",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 22:45:00",
+  "direction_score": 0.149,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "RSI2 cash 48.88 (<50), D-1 close>open, 5-day closes 10540.4/10573.4/10534.7/10571.7 sideways: Neutral"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed swing x 0.5; last completed swing is up (low 10429.4 on 2026-07-16 10:00 broker to high 10616.2 on 2026-07-17 11:00 broker)"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "report reading carried (mildly positive, expanding); cash ATR14 5-day change 118.3 to 119.6 (+1.1%), flat-to-slightly-up; expansion-up aligned with the 2 Jul upside break"
+   },
+   "kaufman": {
+    "signal": 0.056,
+    "weight": 0.15,
+    "contribution": 0.0084,
+    "basis": "KER over 25 cash daily closes = +0.056 (net change positive), Ranging-Neutral"
+   },
+   "sentiment": {
+    "signal": 0.44,
+    "weight": 0.15,
+    "contribution": 0.066,
+    "basis": "carried from report s13b tilt +0.44; news not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "CONTRADICT x sign(+1). 5-session closes 15->21 Jul: US500 7572.8->7503.7 (-0.9%) falling, USDX 100.49->101.20 rising, VIX 17.04->17.43 flat-up; FTSE cash +0.7% over same window. D-1 alone: US500 +0.8%, VIX -3.3% (not enough to offset the 5-session read). DAX/Euro Stoxx/Brent unavailable: report reading not used for the call"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-22_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION, upside)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond the 25-day high by 0.25 x ATR14",
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - D-1 close 10571.7 is inside the 25-day range; confirmation needs a daily close of at least 10769.49.",
+  "rationale": "Regime TRANSITION: report reading (KER ranging, volatility slope mildly positive so the RANGE dual gate is not met) carried. Check on data: KER over 25 cash closes = +0.056 (|KER| < 0.09, ranging-neutral); cash ATR14 flat-to-slightly-up (118.3 -> 119.6 over 5 sessions), so a RANGE label is not demonstrable; close 10571.7 sits at 59% of the 25-day band, inside 10328.1-10739.6. Fork: TRANSITION selects 3C. Range from level file (cash): swing_high_25d 10739.6 (2026-07-07 16:30 broker), swing_low_25d 10328.1 (2026-06-23 10:00 broker), width 411.5. Confirmed-break test: daily close >= 10739.6 + 0.25 x 119.56 = 10769.49. D-1 cash close 10571.7 (full 10595.1): FAIL by 197.8 pts, so the card is suppressed. Commentary only (not a card): had a break confirmed, stop would be 10328.1 + 0.40 x 411.5 = 10492.7 and TP1 high + width = 11151.1, which sits about 3.2 x ATR14 from the trigger and would breach the 2.5 x ATR14 TP1 limit. The report's original card used a wrong range (10310/10747) and ATR 88."
+ }
+]

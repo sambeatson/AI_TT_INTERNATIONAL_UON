@@ -10,3 +10,5 @@ SESSION_TASK rule, not because it leaks prices. Scores were set before any listi
 | 2026-06-15 | `ls -la qa/ftse_qa1/` after scores were set; hallucinated_source override withheld as a judgement call (TE row self-inconsistent, not proven fabricated) | none on scoring |
 | 2026-06-23 | `ls qa/ftse_qa1/` after writing outputs (filenames only) | none on scoring |
 | 2026-06-11 | `git status` showed other dates' QA filenames (nothing opened) | none on scoring |
+| 2026-06-24 | `git status` showed another session's in-flight filename (nothing opened) | none on scoring |
+| 2026-06-19 | report built through D (as-of breach); reviewer did not check D values against data | none on scoring |

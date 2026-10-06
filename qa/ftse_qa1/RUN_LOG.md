@@ -15,3 +15,4 @@ SESSION_TASK rule, not because it leaks prices. Scores were set before any listi
 | 2026-06-30 | `ls cards/regenerated` (nothing printed) and `ls -la qa/ftse_qa1` (filenames only); both restriction_breach and hallucinated_source applied, CSV records the stricter | none on scoring |
 | 2026-06-26 | `ls cards/regenerated` (run-folder names only, nothing opened) | none on scoring |
 | 2026-06-29 | `ls qa/ftse_qa1/` after writing outputs (filenames only) | none on scoring |
+| 2026-06-25 | `ls` printed subfolder names under `cards/regenerated/` (nothing opened) | none on scoring |

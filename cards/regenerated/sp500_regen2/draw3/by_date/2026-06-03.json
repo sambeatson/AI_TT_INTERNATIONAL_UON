@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-06-03",
+  "report_file": "SP500_Daily_Report_2026-06-03.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-03.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-02.csv",
+  "last_bar_broker": "2026-06-02 23:45",
+  "direction_score": 0.52,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2_cash=100.0; last 5 cash closes 7528.5/7572.5/7584.8/7606.0/7615.8 all rising; 2 Jun closed above open (7615.8 vs 7590.8) -> Bullish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session block Trending Bullish (overlap 0.357<0.45, persistence 0.583>0.55, dir. mean +0.36>0.35, close at 98% of 25d range)"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "cash ATR14 series falling (76.3 -> 63.9; slope -1.34/session over 10 obs) = Compression -> 0"
+   },
+   "kaufman_ker": {
+    "signal": 0.275,
+    "weight": 0.15,
+    "contribution": 0.0413,
+    "basis": "KER13 on cash closes, EMA3-smoothed = +0.275 (>0.13 trend threshold; Trending Up - Moderate: smoothed series falling from 0.318)"
+   },
+   "sentiment": {
+    "signal": 0.17,
+    "weight": 0.15,
+    "contribution": 0.0255,
+    "basis": "CARRIED from report 13b numeric tilt +0.17; news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "only VIX derivable from slices (falling 18.16 -> 16.85 over 8 sessions = confirms); USDX/DAX not in slices and not verifiable -> fewer than two active counters -> NEUTRAL = 0"
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-06-03_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET at 09:00 broker (07:00 UK daily-open anchor) filled at D-1 reference close 7621.3 (2 Jun full-day close); signed gap 0.0",
+  "entry": 7621.3,
+  "stop": 7572.34,
+  "tp1": 7670.26,
+  "tp2": 7719.22,
+  "tp3": 7812.87,
+  "card_R_points": 48.96,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. TP1 = entry+1R (7670.26), TP2 = entry+2R (7719.22); on TP2 fill Unit 3 stop moves to entry+0.2R (7631.09). Unit 3 runner is time-stopped at session close or price-stopped at 3xATR14 from entry (7812.87), whichever first. R=48.96 pts = 0.77xATR14 (no wide-stop flag); 2R = 1.53xATR (not ambitious). Thesis invalidation: daily close below weekly S1 7525.47 (stop ahead of invalidation). Event risk: ADP 15:15, ISM Services 17:00 broker on D; NFP 5 Jun.",
+  "suppressed": false,
+  "rationale": "REGIME: TREND_UP (cash 25-session block: overlap 0.357, persistence 0.583, directional mean +0.36, range-position 98%; 5-day block up every session; KER13 EMA3 +0.275 Trending Up-Moderate; ATR contracting but TREND_UP maps from Trending Bullish/Trending Bullish synthesis irrespective of VOLator). Basis: _cash columns for pivots/ATR/RSI2/swings; MARKET entry = prev_close_full 7621.3 (2 Jun, last bar 23:45 broker; cash close 7615.8). ATR14_cash=63.8571 (0.25xATR=15.964; 0.3x=19.157; 1x=63.857; 2x=127.714; 2.5x=159.64; 3x=191.57; 3.5x=223.50). Report contributes reading only (Trending-Bullish call, sentiment +0.17, event calendar: ADP 15:15/ISM Services 17:00 broker on D, EIA 17:30, NFP 5 Jun inside holding window); none of its price figures used (its 2 Jun close 7585.50 was wrong vs 7615.8/7621.3, and its 'first down day / exhaustion' premise is false). Score +0.52 (0.25+0.20+0.00+0.0413+0.0255+0.00) >= 0.25 -> LONG, Trade 1 live. Anchor 09:00 broker default (07:00 UK); no argument for 02:00/16:30. Stop per M5 4c = tighter of (a) 5d swing low cash 7504.3 (27 May 20:00 broker) -0.25xATR = 7488.34 (R 132.96 = 2.08xATR) and (b) nearest support = 2 Jun cash session low 7588.3 (below the 7615.8 cash close) -0.25xATR 15.964 = 7572.34 (R 48.96 = 0.77xATR) -> (b) is tighter; cap 3.5xATR not binding. TP1 = 7621.3+48.96; TP2 = +97.92; TP3 = entry + 3xATR14 = 7621.3+191.57. TP1 distance 48.96 < 2.5xATR. Floors: 0.3xATR=19.16 <= R <= 3.0xATR=191.6 pass."
+ },
+ {
+  "report_date": "2026-06-03",
+  "report_file": "SP500_Daily_Report_2026-06-03.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-03.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-02.csv",
+  "last_bar_broker": "2026-06-02 23:45",
+  "direction_score": 0.52,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2_cash=100.0; last 5 cash closes 7528.5/7572.5/7584.8/7606.0/7615.8 all rising; 2 Jun closed above open (7615.8 vs 7590.8) -> Bullish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session block Trending Bullish (overlap 0.357<0.45, persistence 0.583>0.55, dir. mean +0.36>0.35, close at 98% of 25d range)"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "cash ATR14 series falling (76.3 -> 63.9; slope -1.34/session over 10 obs) = Compression -> 0"
+   },
+   "kaufman_ker": {
+    "signal": 0.275,
+    "weight": 0.15,
+    "contribution": 0.0413,
+    "basis": "KER13 on cash closes, EMA3-smoothed = +0.275 (>0.13 trend threshold; Trending Up - Moderate: smoothed series falling from 0.318)"
+   },
+   "sentiment": {
+    "signal": 0.17,
+    "weight": 0.15,
+    "contribution": 0.0255,
+    "basis": "CARRIED from report 13b numeric tilt +0.17; news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "only VIX derivable from slices (falling 18.16 -> 16.85 over 8 sessions = confirms); USDX/DAX not in slices and not verifiable -> fewer than two active counters -> NEUTRAL = 0"
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-06-03_Trade_2",
+  "strategy": "Trade 2 - Pivot (TREND breakout/pullback, buy limit)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at P + 0.10x(R1-P) from daily cash pivots of 2 Jun; sits 9.61 below D-1 reference close 7621.3 (valid side)",
+  "entry": 7611.69,
+  "stop": 7578.57,
+  "tp1": 7630.83,
+  "tp2": 7638.35,
+  "tp3": 7645.87,
+  "card_R_points": 33.12,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units; TREND branch pivot ladder TP1 = daily R1 7630.83, TP2 = R1.5 7638.35, TP3 = R2 7645.87 (these are +0.58R / +0.80R / +1.03R, not 1R/2R). On TP2 fill Unit 3 stop moves to entry+0.2R (7618.31). R=33.12 pts = 0.52xATR14. Thesis invalidation: daily close back below daily P 7609.57. Event risk: ADP/ISM Services on D, NFP 5 Jun. Pivots built from the execution (broker cash) series, 2 Jun session -> CORROBORATED.",
+  "suppressed": false,
+  "rationale": "REGIME: TREND_UP (cash 25-session block: overlap 0.357, persistence 0.583, directional mean +0.36, range-position 98%; 5-day block up every session; KER13 EMA3 +0.275 Trending Up-Moderate; ATR contracting but TREND_UP maps from Trending Bullish/Trending Bullish synthesis irrespective of VOLator). Basis: _cash columns for pivots/ATR/RSI2/swings; MARKET entry = prev_close_full 7621.3 (2 Jun, last bar 23:45 broker; cash close 7615.8). ATR14_cash=63.8571 (0.25xATR=15.964; 0.3x=19.157; 1x=63.857; 2x=127.714; 2.5x=159.64; 3x=191.57; 3.5x=223.50). Report contributes reading only (Trending-Bullish call, sentiment +0.17, event calendar: ADP 15:15/ISM Services 17:00 broker on D, EIA 17:30, NFP 5 Jun inside holding window); none of its price figures used (its 2 Jun close 7585.50 was wrong vs 7615.8/7621.3, and its 'first down day / exhaustion' premise is false). TREND branch (regime TREND_UP). Daily cash pivots from 2 Jun: P 7609.5667, R1 7630.8333, S1 7594.5333, R2 7645.8667. Entry = 7609.5667+0.10x(7630.8333-7609.5667)=7611.69. Default stop P-0.8x(P-S1)=7597.54 would give R 14.15=0.22xATR (< 0.3xATR floor). M5 5.2b states the alternative where a confluence (prior-day low) sits just below S1: 2 Jun cash low 7588.3 is 6.2 below S1 7594.53, so stop = S1 - 0.25xATR = 7594.5333-15.9643 = 7578.57 (R 33.12 = 0.52xATR). Same daily tier, no weekly/monthly switch; judgement flagged here: if the 'tighter' proviso is read as binding to the default stop this card would be suppressed. R1.5 = (7630.8333+7645.8667)/2 = 7638.35. TP1 19.14 pts from entry (<2.5xATR). Order side: 7611.69 <= 7621.3 ok."
+ },
+ {
+  "report_date": "2026-06-03",
+  "report_file": "SP500_Daily_Report_2026-06-03.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-03.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-02.csv",
+  "last_bar_broker": "2026-06-02 23:45",
+  "direction_score": 0.52,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2_cash=100.0; last 5 cash closes 7528.5/7572.5/7584.8/7606.0/7615.8 all rising; 2 Jun closed above open (7615.8 vs 7590.8) -> Bullish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session block Trending Bullish (overlap 0.357<0.45, persistence 0.583>0.55, dir. mean +0.36>0.35, close at 98% of 25d range)"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "cash ATR14 series falling (76.3 -> 63.9; slope -1.34/session over 10 obs) = Compression -> 0"
+   },
+   "kaufman_ker": {
+    "signal": 0.275,
+    "weight": 0.15,
+    "contribution": 0.0413,
+    "basis": "KER13 on cash closes, EMA3-smoothed = +0.275 (>0.13 trend threshold; Trending Up - Moderate: smoothed series falling from 0.318)"
+   },
+   "sentiment": {
+    "signal": 0.17,
+    "weight": 0.15,
+    "contribution": 0.0255,
+    "basis": "CARRIED from report 13b numeric tilt +0.17; news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "only VIX derivable from slices (falling 18.16 -> 16.85 over 8 sessions = confirms); USDX/DAX not in slices and not verifiable -> fewer than two active counters -> NEUTRAL = 0"
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-06-03_Trade_3A",
+  "strategy": "Trade 3A - Momentum-Pullback (57.5% retrace, buy limit)",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at 57.5% retracement of cash swing 22 May low 7464.5 -> 2 Jun high 7624.6; sits 88.76 below D-1 reference close 7621.3 (valid side)",
+  "entry": 7532.54,
+  "stop": 7448.54,
+  "tp1": 7563.44,
+  "tp2": 7624.6,
+  "tp3": 7784.7,
+  "card_R_points": 84.0,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. TP1 = 38.2% retrace 7563.44, TP2 = 0% swing origin 7624.6, TP3 = 100% extension 7784.7. On TP2 fill Unit 3 stop moves to entry+0.2R (7549.34). Structural override (additional): if price prints above the 100% extension Unit 3 stop moves to midpoint of entry and TP2 (7578.57). R=84.00 pts = 1.32xATR14 -> WIDE STOP flag; 2R > 3xATR not applicable (ladder is structural). Thesis invalidation: daily close below swing-low anchor 7464.5. Event risk: ADP/ISM Services on D, NFP 5 Jun.",
+  "suppressed": false,
+  "rationale": "REGIME: TREND_UP (cash 25-session block: overlap 0.357, persistence 0.583, directional mean +0.36, range-position 98%; 5-day block up every session; KER13 EMA3 +0.275 Trending Up-Moderate; ATR contracting but TREND_UP maps from Trending Bullish/Trending Bullish synthesis irrespective of VOLator). Basis: _cash columns for pivots/ATR/RSI2/swings; MARKET entry = prev_close_full 7621.3 (2 Jun, last bar 23:45 broker; cash close 7615.8). ATR14_cash=63.8571 (0.25xATR=15.964; 0.3x=19.157; 1x=63.857; 2x=127.714; 2.5x=159.64; 3x=191.57; 3.5x=223.50). Report contributes reading only (Trending-Bullish call, sentiment +0.17, event calendar: ADP 15:15/ISM Services 17:00 broker on D, EIA 17:30, NFP 5 Jun inside holding window); none of its price figures used (its 2 Jun close 7585.50 was wrong vs 7615.8/7621.3, and its 'first down day / exhaustion' premise is false). 3A fork selected by TREND_UP. Swing qualification (M5 4b): lookback widened 4->8 sessions in 1-session steps; lookbacks 4-7 give 109.1/120.3/120.3/120.3 pts (<2xATR=127.71); lookback 8 (22 May-2 Jun) gives low 7464.5 (22 May 17:15 broker) -> high 7624.6 (2 Jun 18:15 broker) = 160.1 pts = 2.51xATR -> qualifies (cash basis). Entry = 7624.6-0.575x160.1 = 7532.54. Stop = 7464.5-0.25x63.8571 = 7448.54 (cap 3.5xATR=223.5 not binding). TP1 = 7624.6-0.382x160.1 = 7563.44 (30.9 pts from entry; coincides with weekly cash P 7563.63 - Pivot confluence); TP2 = 7624.6; TP3 = 7624.6+160.1 = 7784.7. Floors: R 84.0 within 19.16-191.6; TP1 < 2.5xATR. Invalidation 7464.5 is 15.96 (0.25xATR) from stop >0.15xATR."
+ }
+]

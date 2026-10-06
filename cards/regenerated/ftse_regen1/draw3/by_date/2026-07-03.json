@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-03",
+  "report_file": "FTSE100_EuroStoxx_Report_03Jul2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-03.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-02.csv",
+  "last_bar_broker": "2026-07-02 22:45:00",
+  "direction_score": 0.675,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 86.19 (full 82.03); 02 Jul cash close 10654.0 above open 10433.6 and highest close of the 25 sessions; 5-day closes 10516.4 -> 10654.0 rising = Bullish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "TREND_UP: 25-session directional persistence 0.56, close in top 94% of the 25d cash range, KER positive"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR7 127.1 > ATR14 115.75, range expansion on the up-break = Expansion-up +0.5"
+   },
+   "kaufman_ker": {
+    "signal": 0.244,
+    "weight": 0.15,
+    "contribution": 0.0366,
+    "basis": "KER(13) on cash closes, EMA3 smoothed = 0.244 (raw 0.316), positive sign of 25-session move; report's 0.28 not reproduced"
+   },
+   "sentiment": {
+    "signal": 0.625,
+    "weight": 0.15,
+    "contribution": 0.0938,
+    "basis": "CARRIED from report section 13b, unverifiable here: sum(w*s)/sum(w) = 2.5/4.0 = +0.625 using the report's own weights (report headline +0.47 includes an unexplained haircut and is not used)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x 0.3 (sign +): 5-day USDX -0.61%, US500 +1.27%, VIX -5.0% all confirm; 25-day USDX +1.85%, US500 -1.42% do not. DAX/Euro Stoxx/Brent unavailable: report's reading carried (DAX confirms)"
+   }
+  },
+  "regime": "TREND_UP",
+  "anchor_broker": "09:00",
+  "suppressed": false,
+  "card_id": "2026-07-03_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (LONG)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market buy at the 09:00 broker (07:00 UK) anchor, filled at the D-1 reference close 10664.9 (last executable price, full-day). Cash close 10654.0; gap to cash close +10.9 pts.",
+  "entry": 10664.9,
+  "stop": 10461.3,
+  "tp1": 10868.5,
+  "tp2": 11072.1,
+  "tp3": null,
+  "card_R_points": 203.6,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits TP1 (+1R), U2 exits TP2 (+2R); on TP2 fill U3 stop moves to entry + 0.2R = 10705.6 (above entry, long). Runner U3 is time-stopped at the LSE cash close (16:30 UK / 18:30 broker); the 3 x ATR price cap (11012.1) lies below TP2 so it can never bind beyond TP2 and no TP3 price is set. WIDE STOP: R 203.6 pts = 1.76 x ATR14 (>1.00). TP2 ambitious for a daily horizon: 2R = 407.2 > 3 x ATR14 = 347.2. Thesis invalidation: daily close below the 5-day swing low 10401.4 (59.9 pts beyond the stop; stop ahead of invalidation). Event collisions on 03 Jul (broker time): UK/Eurozone services and composite PMIs 10:15-11:30, ECB President Lagarde speech 11:00 (HIGH), BoE Governor Bailey speech 18:00 (HIGH). The report's US labour-data event is not on D (NFP/claims/unemployment printed 02 Jul 15:30; USD calendar on 03 Jul is the Independence Day holiday).",
+  "rationale": "Basis: cash session (10:00-18:30 broker), ATR14 cash 115.75 (14-session simple mean of true range, cash bars), D-1 reference close cash 10654.0 (02 Jul 2026), full-day last executable close 10664.9. Direction score 0.675 -> LONG (>= 0.25), Trade 1 live. Entry = prev_close_full 10664.9 per M5 5.0/5.1 (MARKET). Stop per 4c, tighter of (swing_low_5d_cash 10401.4 + buffer -> 10372.5) and (nearest support = d_cash_S1 10490.2667 minus 0.25*ATR14 28.94 = 10461.3): stop 10461.3 (nearest support taken as daily S1, the nearest S-tier below price; daily P 10588.5 is the pivot itself, not treated as support). R = 10664.9-10461.3 = 203.6 = 1.76 x ATR14, inside 0.3-3.0 and under 3.5 x ATR cap (405.1). TP1 = entry+1R = 10868.5 (203.6 pts from entry, < 2.5 x ATR = 289.4). TP2 = entry+2R = 11072.1. TP3 null: 3 x ATR cap 11012.1 < TP2 (inversion), runner is session-close time-stopped. Regime TREND_UP: persistence 0.56 (>0.55), range position top, KER(EMA3) 0.244 > 0.13 trend threshold, VOLator expanding. Anchor 09:00 broker (default daily-open anchor); report logic gives no reason for 02:00 or 10:00. Levels from the level file only; report's price figures not used."
+ },
+ {
+  "report_date": "2026-07-03",
+  "report_file": "FTSE100_EuroStoxx_Report_03Jul2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-03.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-02.csv",
+  "last_bar_broker": "2026-07-02 22:45:00",
+  "direction_score": 0.675,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 86.19 (full 82.03); 02 Jul cash close 10654.0 above open 10433.6 and highest close of the 25 sessions; 5-day closes 10516.4 -> 10654.0 rising = Bullish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "TREND_UP: 25-session directional persistence 0.56, close in top 94% of the 25d cash range, KER positive"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR7 127.1 > ATR14 115.75, range expansion on the up-break = Expansion-up +0.5"
+   },
+   "kaufman_ker": {
+    "signal": 0.244,
+    "weight": 0.15,
+    "contribution": 0.0366,
+    "basis": "KER(13) on cash closes, EMA3 smoothed = 0.244 (raw 0.316), positive sign of 25-session move; report's 0.28 not reproduced"
+   },
+   "sentiment": {
+    "signal": 0.625,
+    "weight": 0.15,
+    "contribution": 0.0938,
+    "basis": "CARRIED from report section 13b, unverifiable here: sum(w*s)/sum(w) = 2.5/4.0 = +0.625 using the report's own weights (report headline +0.47 includes an unexplained haircut and is not used)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x 0.3 (sign +): 5-day USDX -0.61%, US500 +1.27%, VIX -5.0% all confirm; 25-day USDX +1.85%, US500 -1.42% do not. DAX/Euro Stoxx/Brent unavailable: report's reading carried (DAX confirms)"
+   }
+  },
+  "regime": "TREND_UP",
+  "anchor_broker": "09:00",
+  "suppressed": false,
+  "card_id": "2026-07-03_Trade_2",
+  "strategy": "Trade 2 - Pivot, TREND branch (LONG)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit 10604.9 (daily P + 10% of P-to-R1), below D-1 reference close 10654.0 cash / 10664.9 full: gap to cash close -49.1 pts. Monitoring opens 09:00 broker (07:00 UK).",
+  "entry": 10604.9,
+  "stop": 10509.9,
+  "tp1": 10752.3,
+  "tp2": 10801.4,
+  "tp3": 10850.5,
+  "card_R_points": 95.0,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "TREND branch (TREND_UP). 3 equal units. U1 exits TP1 (daily R1), U2 exits TP2 (daily R1.5), U3 runs to TP3 (daily R2); on TP2 fill U3 stop moves to entry + 0.2R = 10623.9. R 95.0 pts = 0.82 x ATR14 115.75 (cash, 14 sessions). Thesis invalidation: daily close back below daily P 10588.5 (78.6 pts above the stop; invalidation inside the stop). Pivots recomputed from broker UK100 M15 cash session of 2026-07-02 (H 10686.8 / L 10424.8 / C 10654.0): CORROBORATED by construction. Event collisions on 03 Jul (broker time): UK/Eurozone services and composite PMIs 10:15-11:30, ECB President Lagarde speech 11:00 (HIGH), BoE Governor Bailey speech 18:00 (HIGH). The report's US labour-data event is not on D (NFP/claims/unemployment printed 02 Jul 15:30; USD calendar on 03 Jul is the Independence Day holiday).",
+  "rationale": "Basis: cash session (10:00-18:30 broker), ATR14 cash 115.75 (14-session simple mean of true range, cash bars), D-1 reference close cash 10654.0 (02 Jul 2026), full-day last executable close 10664.9. Regime TREND_UP so the TREND branch (M5 5.2b). Daily cash pivots d_cash_P 10588.5333, R1 10752.2667, R2 10850.5333, S1 10490.2667. Entry = P+0.10*(R1-P) = 10588.5333+0.1*163.7334 = 10604.9 (limit; a stop at this level would be below market, so limit). Stop = P-0.8*(P-S1) = 10588.5333-0.8*98.2666 = 10509.9; the alternative S1-0.25*ATR = 10461.3 is wider, so the 0.8 rule is the tighter. TP1 = R1 10752.3, TP2 = R1.5 = (R1+R2)/2 = 10801.4, TP3 = R2 10850.5. TP1 distance 147.4 < 2.5 x ATR. R/ATR 0.82 inside 0.3-3.0. No wide-stop flag (<1.00). Anchor 09:00 broker."
+ },
+ {
+  "report_date": "2026-07-03",
+  "report_file": "FTSE100_EuroStoxx_Report_03Jul2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-03.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-02.csv",
+  "last_bar_broker": "2026-07-02 22:45:00",
+  "direction_score": 0.675,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 86.19 (full 82.03); 02 Jul cash close 10654.0 above open 10433.6 and highest close of the 25 sessions; 5-day closes 10516.4 -> 10654.0 rising = Bullish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "TREND_UP: 25-session directional persistence 0.56, close in top 94% of the 25d cash range, KER positive"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR7 127.1 > ATR14 115.75, range expansion on the up-break = Expansion-up +0.5"
+   },
+   "kaufman_ker": {
+    "signal": 0.244,
+    "weight": 0.15,
+    "contribution": 0.0366,
+    "basis": "KER(13) on cash closes, EMA3 smoothed = 0.244 (raw 0.316), positive sign of 25-session move; report's 0.28 not reproduced"
+   },
+   "sentiment": {
+    "signal": 0.625,
+    "weight": 0.15,
+    "contribution": 0.0938,
+    "basis": "CARRIED from report section 13b, unverifiable here: sum(w*s)/sum(w) = 2.5/4.0 = +0.625 using the report's own weights (report headline +0.47 includes an unexplained haircut and is not used)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x 0.3 (sign +): 5-day USDX -0.61%, US500 +1.27%, VIX -5.0% all confirm; 25-day USDX +1.85%, US500 -1.42% do not. DAX/Euro Stoxx/Brent unavailable: report's reading carried (DAX confirms)"
+   }
+  },
+  "regime": "TREND_UP",
+  "anchor_broker": "09:00",
+  "suppressed": false,
+  "card_id": "2026-07-03_Trade_3A",
+  "strategy": "Trade 3A - Momentum-Pullback (LONG)",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit 10531.1 (57.5% retracement of 10416.0 -> 10686.8), below D-1 reference close 10654.0 cash / 10664.9 full: gap to cash close -122.9 pts. Monitoring opens 09:00 broker (07:00 UK).",
+  "entry": 10531.1,
+  "stop": 10387.1,
+  "tp1": 10583.4,
+  "tp2": 10686.8,
+  "tp3": 10957.6,
+  "card_R_points": 144.0,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Fork 3A (regime TREND_UP). Swing: low 10416.0 (2026-07-01 15:15 broker) to high 10686.8 (2026-07-02 18:00 broker), lookback 4 sessions (default), magnitude 270.8 = 2.34 x ATR14. 3 equal units. U1 exits TP1 (38.2%), U2 exits TP2 (0%, swing high); on TP2 fill U3 stop moves to entry + 0.2R = 10559.9. U3 runs to the 100% extension 10957.6; if price prints above it, U3 stop moves to the halfway point of entry and TP2 = 10609.0. WIDE STOP: R 144.0 pts = 1.24 x ATR14 (>1.00). Note TP1 is 52.3 pts = 0.36R from entry because it is the structural 38.2% level. Thesis invalidation: daily close below the swing-low anchor 10416.0 (stop ahead of invalidation; the stop sits 28.9 pts beyond it, > 0.15 x ATR = 17.4). Event collisions on 03 Jul (broker time): UK/Eurozone services and composite PMIs 10:15-11:30, ECB President Lagarde speech 11:00 (HIGH), BoE Governor Bailey speech 18:00 (HIGH). The report's US labour-data event is not on D (NFP/claims/unemployment printed 02 Jul 15:30; USD calendar on 03 Jul is the Independence Day holiday).",
+  "rationale": "Basis: cash session (10:00-18:30 broker), ATR14 cash 115.75 (14-session simple mean of true range, cash bars), D-1 reference close cash 10654.0 (02 Jul 2026), full-day last executable close 10664.9. Regime TREND_UP so 3A. Fib swing per 4b: default 4-session lookback (29 Jun-02 Jul); swing low 10416.0 (UK100 cash M15 bar 2026-07-01 15:15 broker), swing high 10686.8 (bar 2026-07-02 18:00 broker); up-swing since the high is the more recent endpoint. Width 270.8 = 2.34 x ATR14 >= 2.0 (231.5) so qualifies without extending (5-session alternative 10401.4 not needed). Entry = 10686.8-0.575*270.8 = 10531.1. Stop = 10416.0-0.25*115.75 = 10387.1 (R 144.0 = 1.24 x ATR14, under 3.5 x cap 405.1). TP1 = 10686.8-0.382*270.8 = 10583.4. TP2 = 0% = 10686.8. TP3 = 100% extension = 10686.8+270.8 = 10957.6. Confluence check: entry vs daily S1 10490.3 gap 40.8, vs daily P 10588.5 gap 57.4, both > 0.15 x ATR 17.4: no confluence claimed. Anchor 09:00 broker."
+ }
+]

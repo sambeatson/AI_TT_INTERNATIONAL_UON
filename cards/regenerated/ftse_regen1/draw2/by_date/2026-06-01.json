@@ -1,0 +1,212 @@
+[
+ {
+  "report_date": "2026-06-01",
+  "report_file": "FTSE_EuroStoxx_Report_01Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-01.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-31.csv",
+  "last_bar_broker": "2026-05-29 22:45",
+  "suppressed": true,
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "direction_score": -0.028,
+  "regime": "TRANSITION",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "RSI2_cash=0.0 (closes 10507.9 -> 10432.4 -> 10410.0, two down closes, mean gain 0, RSI2 0.0); last two sessions Bearish by the M3 Trend rule (close<open, RSI2<50); 5-session net -52.3 vs 21 May close 10462.3"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed qualifying swing x 0.5; last confirmed swing is UP 10141.2 (18 May) -> 10560.0 (26 May), 418.8 = 3.69 ATR14"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "compression: cash ATR14 fell 151.8 (20 May) -> 113.4 (29 May); slope of last 10 scaled ATR/close observations about -0.22"
+   },
+   "kaufman_ker": {
+    "signal": 0.2163,
+    "weight": 0.15,
+    "contribution": 0.0324,
+    "basis": "KER(13) on cash closes, EMA(3) smoothed = +0.216 (raw +0.195); Trending Up - Moderate (>0.13, series not clearly rising)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "carried from report s13b (tilt +0.30, Predominantly Bullish); not verifiable from the slices"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED = sign(+) x 0.3. US500 7452.3 -> 7581.1 (21->29 May, confirm); VIX 17.91 -> 16.53 (falling, confirm); USDX 99.237 -> 98.956 (falling; contradicts via the sterling-translation channel the report flags); DAX 40 rising, confirm - carried from report, not in slices; Euro Stoxx 50 and Brent unavailable, not scored"
+   },
+   "sum": -0.0276,
+   "threshold": 0.25,
+   "label": "NEUTRAL"
+  },
+  "card_id": "2026-06-01_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (SUPPRESSED - conviction below threshold)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED: |score| 0.028 < 0.25 conviction threshold. No entry, stop or ladder issued. Anchor would have been 09:00 broker (07:00 UK).",
+  "rationale": "Reference close (D-1 = Fri 2026-05-29): cash close 10410.0 (LSE cash 10:00-18:30 broker); last executable price prev_close_full = 10368.2 (22:45 broker). ATR14 (cash, 14 sessions to 2026-05-29, 10:00-18:30 broker bars) = 113.4. Gate tested: M5 s2b/s10 conviction. Score = -0.25 (short-term technical) +0.10 (medium regime) +0 (VOLator) +0.0324 (KER) +0.045 (sentiment, carried from report s13b) +0.045 (cross-asset MIXED) = -0.0276 -> NEUTRAL, |score| < 0.25 so Trade 1 is suppressed. Sensitivity: if the medium-term swing sign were taken as down (-0.5) the sum is -0.2276, still inside the threshold. The report issued LONG +0.44 because it used a fabricated D-1 series (RSI2 40.7 and a full +0.15 cross-asset credit); on the real data RSI2 is 0.0 and the dollar counter contradicts. Calendar for D (carry for any later reader): Powell speech 03:30 broker (HIGH), US S&P Global Mfg PMI 16:45 and ISM Mfg PMI / Prices Paid 17:00 broker (HIGH), UK CIPS Mfg PMI 11:30 broker, EZ mfg PMIs and retail sales/unemployment; Iran memorandum sign-off per report s13d."
+ },
+ {
+  "report_date": "2026-06-01",
+  "report_file": "FTSE_EuroStoxx_Report_01Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-01.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-31.csv",
+  "last_bar_broker": "2026-05-29 22:45",
+  "suppressed": true,
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "direction_score": -0.028,
+  "regime": "TRANSITION",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "RSI2_cash=0.0 (closes 10507.9 -> 10432.4 -> 10410.0, two down closes, mean gain 0, RSI2 0.0); last two sessions Bearish by the M3 Trend rule (close<open, RSI2<50); 5-session net -52.3 vs 21 May close 10462.3"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed qualifying swing x 0.5; last confirmed swing is UP 10141.2 (18 May) -> 10560.0 (26 May), 418.8 = 3.69 ATR14"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "compression: cash ATR14 fell 151.8 (20 May) -> 113.4 (29 May); slope of last 10 scaled ATR/close observations about -0.22"
+   },
+   "kaufman_ker": {
+    "signal": 0.2163,
+    "weight": 0.15,
+    "contribution": 0.0324,
+    "basis": "KER(13) on cash closes, EMA(3) smoothed = +0.216 (raw +0.195); Trending Up - Moderate (>0.13, series not clearly rising)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "carried from report s13b (tilt +0.30, Predominantly Bullish); not verifiable from the slices"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED = sign(+) x 0.3. US500 7452.3 -> 7581.1 (21->29 May, confirm); VIX 17.91 -> 16.53 (falling, confirm); USDX 99.237 -> 98.956 (falling; contradicts via the sterling-translation channel the report flags); DAX 40 rising, confirm - carried from report, not in slices; Euro Stoxx 50 and Brent unavailable, not scored"
+   },
+   "sum": -0.0276,
+   "threshold": 0.25,
+   "label": "NEUTRAL"
+  },
+  "card_id": "2026-06-01_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch, breakout side (SUPPRESSED - R below 0.3 x ATR14 floor)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED: honest M5 s5.2c construction gives R = 29.73 = 0.26 x ATR14, below the 0.3 x ATR14 (34.02) floor. No entry, stop or ladder issued.",
+  "rationale": "Reference close (D-1 = Fri 2026-05-29): cash close 10410.0 (LSE cash 10:00-18:30 broker); last executable price prev_close_full = 10368.2 (22:45 broker). ATR14 (cash, 14 sessions to 2026-05-29, 10:00-18:30 broker bars) = 113.4. Branch: TRANSITION (KER +0.216 trending-up gate satisfied but 25-session structure Transitional: overlap ~0.45, persistence 0.29, direction mean 0.04; ATR compressing) -> breakout side only (s5.2c), side = Trade 3C direction LONG (the 25-day low 10141.2 was tested and held on 12, 15 and 18 May, last completed swing up, KER positive, US500 up and VIX down; opposite-side construction would be worse, entry P-0.1(P-S1)=10423.57, stop P+0.8(R1-P)=10441.36, R=17.8). Daily cash pivots from the execution series (UK100 broker M15, session 2026-05-29) are CORROBORATED by construction (s5.2a): P 10427.0667, R1 10444.9333, S1 10392.1333. Entry = P+0.10*(R1-P) = 10428.853 (BUY STOP, 18.9 above the D-1 cash close and 60.7 above prev_close_full 10368.2, correct side). Stop = P-0.8*(P-S1) = 10399.1200; the alternative S1-0.25*ATR = 10363.78 is wider so the tighter structural stop applies. R = 29.733 = 0.262 x ATR14 < 0.3 x ATR14 = 34.02 -> fails the risk floor. No switch to weekly/monthly tier or wider stop to clear the floor (no basis-shopping) -> card suppressed. Would-be TP ladder R1 10444.93 / R1.5 10462.40 / R2 10479.87 not issued."
+ },
+ {
+  "report_date": "2026-06-01",
+  "report_file": "FTSE_EuroStoxx_Report_01Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-01.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-31.csv",
+  "last_bar_broker": "2026-05-29 22:45",
+  "suppressed": true,
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "direction_score": -0.028,
+  "regime": "TRANSITION",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "RSI2_cash=0.0 (closes 10507.9 -> 10432.4 -> 10410.0, two down closes, mean gain 0, RSI2 0.0); last two sessions Bearish by the M3 Trend rule (close<open, RSI2<50); 5-session net -52.3 vs 21 May close 10462.3"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed qualifying swing x 0.5; last confirmed swing is UP 10141.2 (18 May) -> 10560.0 (26 May), 418.8 = 3.69 ATR14"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "compression: cash ATR14 fell 151.8 (20 May) -> 113.4 (29 May); slope of last 10 scaled ATR/close observations about -0.22"
+   },
+   "kaufman_ker": {
+    "signal": 0.2163,
+    "weight": 0.15,
+    "contribution": 0.0324,
+    "basis": "KER(13) on cash closes, EMA(3) smoothed = +0.216 (raw +0.195); Trending Up - Moderate (>0.13, series not clearly rising)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "carried from report s13b (tilt +0.30, Predominantly Bullish); not verifiable from the slices"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED = sign(+) x 0.3. US500 7452.3 -> 7581.1 (21->29 May, confirm); VIX 17.91 -> 16.53 (falling, confirm); USDX 99.237 -> 98.956 (falling; contradicts via the sterling-translation channel the report flags); DAX 40 rising, confirm - carried from report, not in slices; Euro Stoxx 50 and Brent unavailable, not scored"
+   },
+   "sum": -0.0276,
+   "threshold": 0.25,
+   "label": "NEUTRAL"
+  },
+  "card_id": "2026-06-01_Trade_3C",
+  "strategy": "Trade 3 - Momentum-Breakout 3C (SUPPRESSED - no confirmed break)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: no daily close beyond 25-day boundary by 0.25 x ATR14. No entry, stop or ladder issued.",
+  "rationale": "Reference close (D-1 = Fri 2026-05-29): cash close 10410.0 (LSE cash 10:00-18:30 broker); last executable price prev_close_full = 10368.2 (22:45 broker). ATR14 (cash, 14 sessions to 2026-05-29, 10:00-18:30 broker bars) = 113.4. Fork: regime TRANSITION -> 3C. Range (cash, 25 sessions from 2026-04-23): high 10560.0 (26 May), low 10141.2 (18 May), width 418.8, midpoint 10350.6; D-1 close 10410.0 sits at 64.2% of the range. Direction LONG: lower boundary tested and held 12/15/18 May (failed downside break), last completed swing up, KER +0.216, cross-asset US500/VIX confirming. Gate (s4d): confirmed close must be >= 10560.0 + 0.25*113.4 = 10588.35; D-1 close 10410.0 is 178.4 short -> gate FAILED -> suppressed. Even if armed, the would-be card (entry 10588.35, stop 10141.2+0.40*418.8=10308.72, R=279.63 = 2.47 x ATR14, TP1 10978.8 = 390.5 from entry = 3.44 x ATR14 > 2.5 x ATR14) would breach the TP1 distance rule. Calendar collisions for D: Powell, US mfg PMIs and ISM (HIGH), Iran sign-off."
+ }
+]

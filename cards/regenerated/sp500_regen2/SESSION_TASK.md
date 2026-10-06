@@ -58,6 +58,9 @@ than D · the web. **You do not know what the market did on or after D. Do not s
 
 Before saving, lint your cards: write them to a temporary CSV with the registry columns and run
 `python engine/linter.py --cards <tmp.csv> --out <tmp_out.csv>` (no `--data`). **Zero DUD flags.** Fix and re-lint.
+**Name both temp files uniquely** — e.g. `/tmp/claude-0/lint_<D>_d<K>_in.csv` and `..._out.csv`. Many sessions
+run at once; a shared name means you may lint someone else's cards. (Every card is re-linted centrally
+afterwards regardless, so this check is for your own correctness, not the final gate.)
 
 ## Output — exactly one file
 `cards/regenerated/sp500_regen2/draw<K>/by_date/<D>.json` — a JSON list of three records. Fields: every

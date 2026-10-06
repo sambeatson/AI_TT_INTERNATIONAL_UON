@@ -1,0 +1,188 @@
+[
+ {
+  "report_date": "2026-05-26",
+  "report_file": "FTSE_EuroStoxx_Report_26May2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-26.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-25.csv",
+  "last_bar_broker": "2026-05-22 22:45:00",
+  "direction_score": 0.6353,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman": {
+    "signal": 0.1387,
+    "weight": 0.15,
+    "contribution": 0.0208
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-05-26_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market buy at the 09:00 broker (07:00 UK) anchor; fill level = D-1 reference close, full-day basis 10436.6 (22 May 2026 22:45 broker bar).",
+  "anchor_broker": "09:00",
+  "entry": 10436.6,
+  "stop": 10385.8,
+  "tp1": 10487.4,
+  "tp2": 10538.2,
+  "tp3": 10868.56,
+  "card_R_points": 50.8,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Unit 1 exits at TP1 10487.4 (+1R); Unit 2 exits at TP2 10538.2 (+2R); on the TP2 fill Unit 3 stop moves to entry+0.2R = 10446.76. Unit 3 runner exits at session close (time-stop) or at the 3xATR14 price cap 10868.56 (entry + 3 x 143.99), whichever comes first. Thesis invalidation: daily close below 10344.7 (21 May cash low), 41 pts beyond the stop, stop ahead of invalidation. Event risk in holding window: USD CB Consumer Confidence (HIGH, 17:00 broker / 15:00 UK, consensus 99.7, prior 92.8) and US-Iran headlines. R = 50.80 pts = 0.35 x ATR14 (cash 143.99, 14 sessions, 10:00-18:30 broker): no wide-stop flag; 2R = 101.6 < 3xATR so no TP2-ambitious flag.",
+  "suppressed": false,
+  "rationale": "Direction score +0.635 (LONG, >= 0.25): short-term technical +1 x0.25 (RSI2 cash 100.0 from closes 10422.9/10462.3/10470.4, five consecutive higher closes 15->22 May) = 0.25; medium-term regime TRANSITION, last completed swing up (18 May low 10141.2 -> 22 May high 10494.5) +0.5 x0.20 = 0.10; VOLator expansion-up +0.5 x0.10 = 0.05; Kaufman smoothed +0.1387 x0.15 = 0.0208; sentiment +0.43 (carried from report s13b, unverifiable) x0.15 = 0.0645; cross-asset CONFIRM (+1) x0.15 = 0.15 [S&P 500 slice 15->22 May 7400.8->7470.9 rising confirms; VIX 19.06->18.16 falling confirms; USDX 99.303->99.344 flat = neutral; 2 of 3 confirm, none contradict]. DAX 40, Euro Stoxx 50, Brent not available: report reading carried, not used in the score. Weights default 0.25/0.20/0.10/0.15/0.15/0.15. Regime: Regime TRANSITION (recomputed on cash daily bars, last 25 sessions to 22 May): overlap ratio 0.51 (neither <0.45 trending nor >0.55 ranging), directional persistence 0.61, range position 63% (mid-range, not top bias), median RSI2 56.8, raw KER13 +0.229 / EMA3-smoothed +0.139 (Trending Up, above the +0.13 threshold used in the report), ATR14/close slope positive over the last 10 sessions (VOLator expansion, the report's 'contracting' reading is not reproduced). Trending criteria fail on overlap and ranging criteria fail on overlap and persistence, so M3 Step 3d gives Transitional and the Step 4 synthesis is Transitional (any) -> TRANSITION. This agrees with the report's regime call. Entry = prev_close_full 10436.6 (last executable price before D; cash close 10470.4 shown for reference). Stop (M5 s4c): candidates (a) swing_low_5d cash 10141.2 (18 May 10:00-18:30 low, bar low at 18 May session) - 0.25xATR = 10105.2 (R 331.4); (b) nearest support below entry = daily cash S2 10421.8 (S1 10446.1 and cash day low 10446.0 sit above the entry) - 0.25 x 143.9857 (= 35.9964) = 10385.8. Tighter = (b), anchor S2. R = 50.8 (0.353 x ATR14), inside 0.3-3.0 x ATR and the 3.5 x ATR cap (503.95). TP1 = entry+R = 10487.4; TP2 = entry+2R = 10538.2; TP3 = entry+3 x ATR14 = 10868.56 (> TP2, so kept with session-close time-stop). TP1 distance 50.8 < 2.5 x ATR. Anchor 09:00 broker default (07:00 UK daily-open anchor). Note the entry is 33.8 below the cash close because the full-day close includes the post-cash drift to 10436.6; the S2 stop is on the cash grid, ATR/pivots cash basis per fixed run basis."
+ },
+ {
+  "report_date": "2026-05-26",
+  "report_file": "FTSE_EuroStoxx_Report_26May2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-26.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-25.csv",
+  "last_bar_broker": "2026-05-22 22:45:00",
+  "direction_score": 0.6353,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman": {
+    "signal": 0.1387,
+    "weight": 0.15,
+    "contribution": 0.0208
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-05-26_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION breakout side (upside) - SUPPRESSED",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SUPPRESSED - R below 0.3 x ATR14 floor on the honest M5 s5.2c/5.2b construction.",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: breakout-side construction gives R = 21.79 pts = 0.15 x ATR14 (143.99 cash), below the 0.3 x ATR14 floor (43.2). Not rebuilt on a wider tier (no basis-shopping).",
+  "suppressed": true,
+  "rationale": "Branch TRANSITION -> breakout side only, upside (aligned with 3C side, direction score +0.635). Daily cash pivots from the execution series (UK100 22 May 10:00-18:30 broker, H 10494.5 / L 10446.0 / C 10470.4) are CORROBORATED by construction, so the all-single-source gate does not fire. Construction: entry = P + 0.10 x (R1-P) = 10470.3 + 0.10 x 24.3 = 10472.73 (buy-stop above the D-1 close 10436.6 full / 10470.4 cash: correct side); stop = P - 0.8 x (P - S1) = 10470.3 - 0.8 x 24.2 = 10450.94. The alternative 'just below S1 minus 0.25 x ATR' (10410.1) is used only where a confluence sits just below S1 AND it is the tighter; rule is 'whichever is tighter', so 10450.94 governs. R = 21.79 = 0.151 x ATR14 < 0.30 floor (43.2) -> honest construction fails the floor -> SUPPRESSED (widening to S2 - 0.25 ATR would be basis-shopping). TP ladder would have been R1 10494.6 / R1.5 10506.7 / R2 10518.8. Regime TRANSITION (recomputed on cash daily bars, last 25 sessions to 22 May): overlap ratio 0.51 (neither <0.45 trending nor >0.55 ranging), directional persistence 0.61, range position 63% (mid-range, not top bias), median RSI2 56.8, raw KER13 +0.229 / EMA3-smoothed +0.139 (Trending Up, above the +0.13 threshold used in the report), ATR14/close slope positive over the last 10 sessions (VOLator expansion, the report's 'contracting' reading is not reproduced). Trending criteria fail on overlap and ranging criteria fail on overlap and persistence, so M3 Step 3d gives Transitional and the Step 4 synthesis is Transitional (any) -> TRANSITION. This agrees with the report's regime call."
+ },
+ {
+  "report_date": "2026-05-26",
+  "report_file": "FTSE_EuroStoxx_Report_26May2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-26.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-25.csv",
+  "last_bar_broker": "2026-05-22 22:45:00",
+  "direction_score": 0.6353,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman": {
+    "signal": 0.1387,
+    "weight": 0.15,
+    "contribution": 0.0208
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-05-26_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (upside) - SUPPRESSED",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond the 25-day upper boundary by 0.25 x ATR14.",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: upside trigger 10702.5 (25-day cash high 10666.5 on 17 Apr + 0.25 x 143.99 = 36.0); D-1 cash close 10470.4 is 232.1 below it. Commentary only: becomes eligible on a daily close above 10702.5 (downside trigger 10105.2 not in play).",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION -> Trade 3 fork = 3C. 25-day cash range 10141.2 (18 May) to 10666.5 (17 Apr), width 525.3. Side: upside - the 18 May retest of the lower boundary failed (low 10141.2, close 10290.8, price +329 off the low by 22 May), VOLator slope positive and cross-asset CONFIRM. Gate (M5 s4d): required close >= 10666.5 + 0.25 x 143.9857 = 10702.5; last close 10470.4 -> gate FAILS by 232.1 pts -> SUPPRESSED. Regime TRANSITION (recomputed on cash daily bars, last 25 sessions to 22 May): overlap ratio 0.51 (neither <0.45 trending nor >0.55 ranging), directional persistence 0.61, range position 63% (mid-range, not top bias), median RSI2 56.8, raw KER13 +0.229 / EMA3-smoothed +0.139 (Trending Up, above the +0.13 threshold used in the report), ATR14/close slope positive over the last 10 sessions (VOLator expansion, the report's 'contracting' reading is not reproduced). Trending criteria fail on overlap and ranging criteria fail on overlap and persistence, so M3 Step 3d gives Transitional and the Step 4 synthesis is Transitional (any) -> TRANSITION. This agrees with the report's regime call."
+ }
+]

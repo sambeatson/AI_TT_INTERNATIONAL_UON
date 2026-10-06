@@ -1,0 +1,191 @@
+[
+ {
+  "report_date": "2026-05-21",
+  "report_file": "FTSE_100_Report_21_May_2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-21.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-20.csv",
+  "last_bar_broker": "2026-05-20 22:45",
+  "regime": "TRANSITION",
+  "direction_score": -0.117,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "signal": 0.025,
+    "weight": 0.15,
+    "contribution": 0.0038
+   },
+   "sentiment": {
+    "signal": -0.17,
+    "weight": 0.15,
+    "contribution": -0.0255,
+    "note": "carried from report s13b, unverifiable"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "card_id": "2026-05-21_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score below conviction threshold",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - |score| 0.12 < 0.25 conviction threshold; no entry, stop, R or TP ladder.",
+  "suppressed": true,
+  "rationale": "Direction score recomputed (M5 s2): short-term technical 0.00 x0.25 (cash RSI2 = 100.0 but the 5-day block is one -167 pt down-session (15 May) followed by three recovery sessions; the report's own s8 label is Indecision; RSI2 at 100 is exhausted/overbought, so bullish momentum and mean-reversion risk offset -> Neutral = 0); medium-term regime -0.50 x0.20 (regime TRANSITION; rule = sign of last completed swing x 0.5; last completed swing is the 25d down-swing 17 Apr high 10,666.5 -> 18 May low 10,141.2, 525.3 pts; the +317.6 pt rebound to the 20 May high 10,458.8 has no reversal yet so is not a completed swing; report s9 bias is Neutral, so this is not read as strongly directional); VOLator +0.50 x0.10 (cash ATR14 expanded from 115.6 on 5 May to 151.76 on 20 May, slope about +1.95 pts/session over the last 10 obs; the latest expansion session 20 May was up); Kaufman +0.025 x0.15 (KER period 13, EMA3, signed, cash closes = +0.025, inside the +/-0.13 neutral band, so it is not a trend signal; the report's -0.14 does not reproduce); sentiment -0.17 x0.15 carried from report s13b (not verifiable here; QA found two of the six rows contradicted; recomputed on the four surviving rows the tilt would be about -0.43, worth a further -0.04 on the score, which does not change the outcome); cross-asset MIXED -> -0.30 x0.15 against the down medium-term sign: USDX 98.478 (13 May) -> 99.150 (20 May) rising and S&P 500 7,458.5 -> 7,420.6 falling over the window (both consistent with a down lean), but on 20 May S&P +0.9%, USDX -0.19%, VIX 19.34 -> 18.45 and FTSE +1.3% over the window run against it; DAX 40 not available, report reading carried (flat, non-confirming). Sum = -0.117, |score| < 0.25 -> NEUTRAL -> Trade 1 suppressed (M5 s10). Robust: the score stays inside +/-0.25 whether medium-term is -0.5, 0 or +0.5 and cross-asset is read either way (range about -0.15 to +0.06 on the main alternatives). Anchor would have been 09:00 broker (07:00 UK) per standard instance; no reason to deviate. Reference close: prev_close_full 10,443.3 (20 May 23:45 broker); cash close 10,422.9; ATR14 cash 151.76 (SMA of 14 true ranges, 7 Apr-20 May cash bars)."
+ },
+ {
+  "report_date": "2026-05-21",
+  "report_file": "FTSE_100_Report_21_May_2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-21.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-20.csv",
+  "last_bar_broker": "2026-05-20 22:45",
+  "regime": "TRANSITION",
+  "direction_score": -0.117,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "signal": 0.025,
+    "weight": 0.15,
+    "contribution": 0.0038
+   },
+   "sentiment": {
+    "signal": -0.17,
+    "weight": 0.15,
+    "contribution": -0.0255,
+    "note": "carried from report s13b, unverifiable"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "card_id": "2026-05-21_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION, breakout side, daily tier)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at daily P + 0.10 x (R1 - P), a pullback fill on the upside-breakout side; 47.26 below prev_close_full 10,443.3",
+  "anchor_broker": "09:00",
+  "entry": 10396.04,
+  "stop": 10325.66,
+  "tp1": 10496.87,
+  "tp2": 10533.85,
+  "tp3": 10570.83,
+  "card_R_points": 70.38,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Three equal units. Unit 1 exits at TP1 (daily R1), Unit 2 at TP2 (daily R1.5); on the Unit 2 fill Unit 3 stop moves to entry + 0.2R (10,410.12); Unit 3 exits at TP3 (daily R2) or the stop. Thesis invalidation: daily close back below daily P 10,384.83.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION (Trade 2 branch = TRANSITION, breakout side only, M5 s5.2c mirrors s5.2b TREND). Regime basis: cash KER(13, EMA3) = +0.025 (inside +/-0.13, so no trend label); 25-session overlap 0.62 and direction persistence 0.57 (range-like); close at the 54th percentile of the 25d range (10,141.2-10,666.5); but ATR14 is expanding (115.6 -> 151.76 over 10 sessions), so the RANGE dual gate (KER neutral AND volator slope <= 0) is NOT met; TRANSITION by exclusion. If the volator slope were read as <= 0 the label would be RANGE; the report's own call was also TRANSITION. Breakout side LONG: the latest boundary tests were at the lower edge (12 May low 10,145.9, 18 May low 10,141.2) and both were rejected (18 May closed +146 from the low), so the fakeout resolves upward (M5 s5.3c); volator expanding up. Cross-asset is not confirming (mixed) and 3C is not eligible, so this is a lower-conviction pivot card. Tier = DAILY (prior session 20 May cash: H 10,458.8 / L 10,272.8 / C 10,422.9) chosen a priori as the horizon-matched tier, not switched to weekly/monthly. Corroboration: all tiers computed from the execution price series (UK100 feed, cash session 10:00-18:30 broker, level file) so CORROBORATED by construction (M5 s5.2a); no suppression. Columns: d_cash_P 10,384.8333, d_cash_R1 10,496.8667, d_cash_S1 10,310.8667, d_cash_R2 10,570.8333. R2-P = 186.0 = P-S2 (10,198.8333) -> 186.0 check OK. Entry = P + 0.10 x (R1 - P) = 10,384.8333 + 0.10 x 112.0333 = 10,396.04 -> BUY LIMIT (stop-or-limit permitted by s5.2b); sits below prev_close_full 10,443.3 (signed gap -47.26) and below the cash close 10,422.9 (-26.86), so the order side is legal; a BUY STOP would have been above the market only at 10,441.9 on the monthly tier, which is not used (no basis-shopping). Stop = P - 0.8 x (P - S1) = 10,384.8333 - 0.8 x 73.9667 = 10,325.66 (the alternative confluence stop S1 10,310.87 - 0.25 x ATR 37.94 = 10,272.93 / 20 May low 10,272.8 is wider, so the formula stop is the tighter one). R = 70.38 = 0.46 x ATR14 (151.76), inside 0.3-3.0 x ATR, no wide-stop flag; stop is 3.5x-cap safe. TP1 = daily R1 10,496.87 (+100.83 pts, 0.66 x ATR, within 2.5 x ATR). TP2 = R1.5 = (R1 + R2)/2 = (10,496.8667 + 10,570.8333)/2 = 10,533.85 (+137.81). TP3 = daily R2 10,570.83 (+174.79). 2R-equivalent not applicable (pivot ladder); TP2 is 2.0R-equivalent 1.96R, no 'TP2 ambitious' flag (2R = 140.8 < 3 x ATR 455.3). Confluences (within 0.15 x ATR = 22.8): entry vs daily P 10,384.83 (11.2); stop vs daily S1 10,310.87 (14.8); TP2 vs weekly R3 10,535.3 (1.5). Invalidation: daily close below daily P 10,384.83 (59.1 pts above the stop, ahead of the stop). Calendar collisions (from the news slice, broker time): UK flash PMIs 11:30 (Composite consensus blank/0, prior 52.6; Services consensus 51.8, prior 52.7; Manufacturing 53.8, prior 53.7) and Eurozone flash PMIs 10:15-11:00 broker; US Initial Jobless Claims and Philly Fed 15:30 (HIGH); BoE Governor Bailey speech 18:00 broker (HIGH), in the holding window. Previous session 20 May: UK CPI y/y 2.8% vs 3.8% consensus (prior 3.4%, HIGH) and Bailey speech. The report's 'Thu 22 May BoE MPC' is not in the calendar slice and 22 May is a Friday; not carried. 25 May is a UK bank holiday. DAX 40, Euro Stoxx 50 and Brent are not in the slices; the report's reading is carried for those."
+ },
+ {
+  "report_date": "2026-05-21",
+  "report_file": "FTSE_100_Report_21_May_2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-21.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-20.csv",
+  "last_bar_broker": "2026-05-20 22:45",
+  "regime": "TRANSITION",
+  "direction_score": -0.117,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "signal": 0.025,
+    "weight": 0.15,
+    "contribution": 0.0038
+   },
+   "sentiment": {
+    "signal": -0.17,
+    "weight": 0.15,
+    "contribution": -0.0255,
+    "note": "carried from report s13b, unverifiable"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "card_id": "2026-05-21_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond the 25-day boundary by 0.25 x ATR",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - no close beyond the 25-day high by 0.25 x ATR: D-1 cash close 10,422.9 vs upside trigger 10,704.4 (281.5 below); downside trigger 10,103.3 also not met. No entry, stop, R or TP ladder.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION -> fork 3C (M5 s3, s5.3). Gate (s4d/s10): confirmed break needs a daily close beyond the 25d boundary by >= 0.25 x ATR14 = 37.94. Boundaries (cash): swing_high_25d 10,666.5 (17 Apr 2026, bar 2026-04-17 cash session), swing_low_25d 10,141.2 (18 May 2026), width 525.3. Upside trigger 10,666.5 + 37.94 = 10,704.4; downside trigger 10,141.2 - 37.94 = 10,103.3. D-1 cash close 10,422.9 is 281.5 below the upside trigger and 281.6 above the downside trigger -> gate fails -> suppressed, never substituted with another variant or with pivot levels. Direction kept as LONG only as the expected breakout side (rejected lower-edge tests on 12 and 18 May, expanding ATR); contingent arming level (commentary only): a daily close >= 10,704.4 would make the card eligible. Not a card."
+ }
+]

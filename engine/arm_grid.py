@@ -61,6 +61,7 @@ def main():
     ap.add_argument('--baseline', required=True); ap.add_argument('--draws', nargs='+', required=True)
     ap.add_argument('--data', required=True); ap.add_argument('--trust', default=None)
     ap.add_argument('--out', required=True)
+    ap.add_argument('--asset', default='US500', help='label used in the equity-chart titles')
     a = ap.parse_args()
     arms = [('baseline', a.baseline)] + [(f'draw{i + 1}', p) for i, p in enumerate(a.draws)]
     reg = {nm: pd.read_csv(p) for nm, p in arms}
@@ -110,7 +111,7 @@ def main():
             c = f'{t}_{p}_becard'
             runs = [os.path.join(a.out, 'runs', nm, c, 'summary.csv') for nm, _ in arms]
             subprocess.run([sys.executable, os.path.join(HERE, 'equity.py'), '--runs', *runs, '--labels', *[nm for nm, _ in arms],
-                            '--out', os.path.join(eq, f'{c}.png'), '--title', f'US500 cards - {t}-session entry, {p}'],
+                            '--out', os.path.join(eq, f'{c}.png'), '--title', f'{a.asset} cards - {t}-session entry, {p}'],
                            check=True, stdout=subprocess.DEVNULL)
     print(f'wrote {a.out}/MASTER.csv, DRAWS.csv, PANEL.csv, equity/*.png')
 

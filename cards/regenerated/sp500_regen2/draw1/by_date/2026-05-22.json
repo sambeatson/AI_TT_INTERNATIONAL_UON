@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-05-22",
+  "report_file": "SP500_Report_22May2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-21.csv",
+  "last_bar_broker": "2026-05-21 23:45:00",
+  "direction_score": 0.2288,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "D-1 cash session Close>Open (7408.6->7450.3) with RSI2_cash=100 (>50) -> Bullish per M3 trend rule; 5-day cash closes 7416.0/7411.0/7362.3/7436.8/7450.3, net +34.3 inside the block, last two sessions up. RSI2=100 is overbought (flagged); even at signal 0 the suppression result is unchanged."
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "basis": "Transition -> sign of last completed swing x 0.5; last completed swing is down (25d high 7522.90 on 2026-05-14 to 5d low 7339.10 on 2026-05-19); the rebound leg is not yet completed."
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "Scaled cash-ATR/close z-score (25 sessions, clipped +-1) slope over last 10 obs = +0.17 (expansion), aligned with the up-side prevailing move."
+   },
+   "kaufman": {
+    "signal": 0.382,
+    "weight": 0.15,
+    "contribution": 0.0573,
+    "basis": "13-session KER on cash closes, EMA(3) smoothed = +0.382 (raw 0.403; >0.13 trend threshold; smoothed series 0.505,0.387,0.361,0.382 = mixed -> Trending Up Moderate) x sign of 25-session move (up) = +0.382."
+   },
+   "sentiment": {
+    "signal": -0.19,
+    "weight": 0.15,
+    "contribution": -0.0285,
+    "basis": "Carried from report 13b/20: source-class-weighted tilt -0.19 (2 bullish / 4 bearish). NOT independently verifiable (news not reconstructed)."
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "Only VIX is derivable from the slices (cash closes 19.06,18.62,18.80,18.40,17.86: falling, -1.20). Fewer than two counters verifiable from data -> NEUTRAL = 0 per M3 11c. (Report's 'VIX rising' is contradicted by the slice; USDX/DAX not in slices.)"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-05-22_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - |score| 0.23 < 0.25 conviction threshold (NEUTRAL)",
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score +0.23 is below the 0.25 threshold; no entry, stop or ladder.",
+  "suppressed": true,
+  "rationale": "Gate tested: |score| = 0.2288 < 0.25 -> NEUTRAL -> Trade 1 suppressed. Components (signal x weight): short-term technical +1.0x0.25=+0.25; medium regime -0.5x0.20=-0.10; VOLator +0.5x0.10=+0.05; Kaufman +0.382x0.15=+0.0573; sentiment -0.19x0.15=-0.0285 (carried from report 13b, unverified); cross-asset 0x0.15=0 (only VIX derivable -> NEUTRAL). Sum +0.2288. The report's score was -0.22 on wrong closes; real data flips the technical sign but still falls below threshold.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null
+ },
+ {
+  "report_date": "2026-05-22",
+  "report_file": "SP500_Report_22May2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-21.csv",
+  "last_bar_broker": "2026-05-21 23:45:00",
+  "direction_score": 0.2288,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "D-1 cash session Close>Open (7408.6->7450.3) with RSI2_cash=100 (>50) -> Bullish per M3 trend rule; 5-day cash closes 7416.0/7411.0/7362.3/7436.8/7450.3, net +34.3 inside the block, last two sessions up. RSI2=100 is overbought (flagged); even at signal 0 the suppression result is unchanged."
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "basis": "Transition -> sign of last completed swing x 0.5; last completed swing is down (25d high 7522.90 on 2026-05-14 to 5d low 7339.10 on 2026-05-19); the rebound leg is not yet completed."
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "Scaled cash-ATR/close z-score (25 sessions, clipped +-1) slope over last 10 obs = +0.17 (expansion), aligned with the up-side prevailing move."
+   },
+   "kaufman": {
+    "signal": 0.382,
+    "weight": 0.15,
+    "contribution": 0.0573,
+    "basis": "13-session KER on cash closes, EMA(3) smoothed = +0.382 (raw 0.403; >0.13 trend threshold; smoothed series 0.505,0.387,0.361,0.382 = mixed -> Trending Up Moderate) x sign of 25-session move (up) = +0.382."
+   },
+   "sentiment": {
+    "signal": -0.19,
+    "weight": 0.15,
+    "contribution": -0.0285,
+    "basis": "Carried from report 13b/20: source-class-weighted tilt -0.19 (2 bullish / 4 bearish). NOT independently verifiable (news not reconstructed)."
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "Only VIX is derivable from the slices (cash closes 19.06,18.62,18.80,18.40,17.86: falling, -1.20). Fewer than two counters verifiable from data -> NEUTRAL = 0 per M3 11c. (Report's 'VIX rising' is contradicted by the slice; USDX/DAX not in slices.)"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-05-22_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION breakout side, upside)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT 7443.2 (pullback entry just above daily pivot, below D-1 reference close 7452.3 by 9.1)",
+  "entry": 7443.2,
+  "stop": 7412.3,
+  "tp1": 7483.4,
+  "tp2": 7499.9,
+  "tp3": 7516.4,
+  "card_R_points": 30.9,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Buy limit 7443.2 from 09:00 broker (07:00 UK). Unit 1 exits at TP1 7483.4 (daily R1, +1.30R), Unit 2 at TP2 7499.9 (R1.5, +1.82R); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 7449.4; Unit 3 runner to TP3 7516.4 (daily R2, +2.36R). Thesis invalidation: daily close below daily pivot 7438.7. Event flag: US Michigan sentiment/inflation expectations 17:00 broker and Waller speech 17:00 broker fall in the session.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION -> Trade 2 breakout side only (M5 5.2c mirrors TREND 5.2b with R1/R1.5/R2); breakout side = upside (KER +0.382, VOLator slope +0.17 >=0, close in range-top 85th percentile, 3C direction long); counter-side fade not built. All levels from d_cash_* columns of the level file (CORROBORATED: computed from the execution price series). P=7438.7333, R1=7483.3667, S1=7405.6667, R2=7516.4333; R1.5=(R1+R2)/2=7499.9. Entry = P+0.10*(R1-P)=7438.7333+4.4633=7443.1967 -> 7443.2. Stop = P-0.8*(P-S1)=7438.7333-26.4533=7412.28 -> 7412.3 (no confluence just below S1 tighter: 7394.1 prior-day low would give S1-0.25*ATR=7386.6, wider). R=30.9 pts = 0.41x ATR14_cash (76.24, 14 sessions to 2026-05-21, cash 16:30-23:00 broker); 0.37x full-day ATR 83.79; inside 0.3-3.0 bounds, no wide-stop flag. TP1=R1 (+40.2 pts, 0.53xATR <2.5xATR), TP2=R1.5, TP3=R2; ladder ascending. Order side: BUY LIMIT 7443.2 <= prev_close_full 7452.3 (gap -9.1). A buy stop is not possible on the formula level (it is below the D-1 close) and no level was shifted to a different tier to force one. Unit-3 BE stop = 7443.2+0.2*30.9=7449.4. Anchor 09:00 broker (07:00 UK daily-open); no reason in the report to use 02:00 or 16:30. Corroboration: all tiers from broker cash series. Report's Trade 2 (buy stop 7415, built on a wrong 7400.30 close) discarded."
+ },
+ {
+  "report_date": "2026-05-22",
+  "report_file": "SP500_Report_22May2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-21.csv",
+  "last_bar_broker": "2026-05-21 23:45:00",
+  "direction_score": 0.2288,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "D-1 cash session Close>Open (7408.6->7450.3) with RSI2_cash=100 (>50) -> Bullish per M3 trend rule; 5-day cash closes 7416.0/7411.0/7362.3/7436.8/7450.3, net +34.3 inside the block, last two sessions up. RSI2=100 is overbought (flagged); even at signal 0 the suppression result is unchanged."
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "basis": "Transition -> sign of last completed swing x 0.5; last completed swing is down (25d high 7522.90 on 2026-05-14 to 5d low 7339.10 on 2026-05-19); the rebound leg is not yet completed."
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "Scaled cash-ATR/close z-score (25 sessions, clipped +-1) slope over last 10 obs = +0.17 (expansion), aligned with the up-side prevailing move."
+   },
+   "kaufman": {
+    "signal": 0.382,
+    "weight": 0.15,
+    "contribution": 0.0573,
+    "basis": "13-session KER on cash closes, EMA(3) smoothed = +0.382 (raw 0.403; >0.13 trend threshold; smoothed series 0.505,0.387,0.361,0.382 = mixed -> Trending Up Moderate) x sign of 25-session move (up) = +0.382."
+   },
+   "sentiment": {
+    "signal": -0.19,
+    "weight": 0.15,
+    "contribution": -0.0285,
+    "basis": "Carried from report 13b/20: source-class-weighted tilt -0.19 (2 bullish / 4 bearish). NOT independently verifiable (news not reconstructed)."
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "Only VIX is derivable from the slices (cash closes 19.06,18.62,18.80,18.40,17.86: falling, -1.20). Fewer than two counters verifiable from data -> NEUTRAL = 0 per M3 11c. (Report's 'VIX rising' is contradicted by the slice; USDX/DAX not in slices.)"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-05-22_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (conditional) - SUPPRESSED",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond 25d boundary by >=0.25xATR",
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - confirmed-break gate failed: D-1 cash close 7450.3 vs required close >= 7522.9 + 0.25*76.24 = 7541.96 (short by 91.7). No entry, stop or ladder.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION -> 3C fork. Gate (M5 4d): swing_high_25d_cash=7522.90 (2026-05-14 cash bar), ATR14_cash=76.2357, trigger = 7522.90+0.25*76.2357=7541.96. D-1 cash close 7450.3 (and full-day 7452.3) is 71.8-91.7 pts below it -> gate FAILS -> suppressed, no substitution of another variant. Upside is the prospective side (KER +, VOLator slope +, range-top bias). For reference only, even on the unmet trigger the 3C construction (stop=7050.7+0.40*472.2=7239.6, TP1=7522.9+472.2) would breach the R<=3.0xATR and TP1<=2.5xATR static bounds.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null
+ }
+]

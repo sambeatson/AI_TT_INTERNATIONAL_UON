@@ -32,7 +32,9 @@ than D · the web. **You do not know what the market did on or after D. Do not s
 - Pivot tiers, ATR14, RSI2 and swing extremes: the **`_cash`** columns (the S&P cash session,
   16:30–23:00 broker, as M3 defines it for an index).
 - A MARKET entry: **`prev_close_full`** — the last executable price before D.
-- Broker time = UK + 2 hours. 00:00 UK = 02:00 broker; 07:00 UK = 09:00 broker; US open = 16:30 broker.
+- Broker time = UK + 2 hours (= UTC+3; verified from the 16:30 volume peak at the US cash open). The
+  slice's `DateTime_UTC` column is **mislabelled** — it is broker − 2h, i.e. UK time, not UTC. Ignore it;
+  use `DateTime_Broker` only. 00:00 UK = 02:00 broker; 07:00 UK = 09:00 broker; US open = 16:30 broker.
 - `anchor_broker` on every card. Trade 1 default **09:00** (07:00 UK, the S&P instance's daily-open
   anchor) unless the report's own logic argues for 02:00 or 16:30 — then say why in `rationale`.
   (Cards will be tested at several entry times regardless; the anchor matters only for the as-written test.)

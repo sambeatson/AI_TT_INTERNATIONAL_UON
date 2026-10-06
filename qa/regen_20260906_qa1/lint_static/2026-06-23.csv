@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-23_Trade_1,2026-06-23,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-23_Trade_2,2026-06-23,"Trade 2 - Pivot (regime-aware), RANGE protocol",WARN_TP3_ORDER,False
+2026-06-23_Trade_3B,2026-06-23,Trade 3B - Mean-Reversion (Transitional/Range regime fork),WARN_R_TINY(0.28xATR),False

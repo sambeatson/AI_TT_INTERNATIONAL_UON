@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-06_Trade_1,2026-07-06,Trade 1 — Daily Directional,SUPPRESSED,False
+2026-07-06_Trade_2,2026-07-06,"Trade 2 — Pivot fade, RANGE regime",CLEAN,False
+2026-07-06_Trade_3B,2026-07-06,Trade 3B — Mean-Reversion to range mid,CLEAN,False

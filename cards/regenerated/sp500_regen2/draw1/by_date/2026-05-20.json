@@ -1,0 +1,209 @@
+[
+ {
+  "report_date": "2026-05-20",
+  "report_file": "SP500_Daily_Report_20May2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-20.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-19.csv",
+  "last_bar_broker": "2026-05-19 23:45:00",
+  "direction_score": 0.0055,
+  "regime": "TREND_UP",
+  "card_id": "2026-05-20_Trade_1",
+  "strategy": "Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - conviction below threshold (|+0.0055| < 0.25)",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - no order. Direction score +0.0055 is NEUTRAL (|score| < 0.25).",
+  "suppressed": true,
+  "rationale": "Direction score recomputed with default weights 0.25/0.20/0.10/0.15/0.15/0.15: short-term technical -1.0 x 0.25 = -0.2500 (cash RSI2 0.00 and bearish 19 May cash bar, 3 lower closes); medium regime TREND_UP +1.0 x 0.20 = +0.2000; VOLator +0.5 x 0.10 = +0.0500; KER +0.387 x 0.15 = +0.0581 (13-period, 3-EMA smoothed cash closes); sentiment -0.35 x 0.15 = -0.0525 (carried from report 13b, unverifiable); cross-asset NEUTRAL 0 x 0.15 = 0 (only VIX in slices). Sum = +0.0055 -> NEUTRAL, |score| < 0.25 so Trade 1 is suppressed (no entry/stop/R). Sensitivity: the other components sum to +0.256, so the verdict rests on short-term technical = -1; flipping that one signal would move the score by 0.50. Report's own score was +0.02, same verdict. Anchor 09:00 broker (07:00 UK) default.",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "cash RSI2 0.00, 19 May cash close 7362.3 < open 7371.0, three lower closes since 14 May (7509.1 > 7416.0 > 7411.0 > 7362.3): bearish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "TREND_UP (report call, corroborated: 25-session cash overlap 0.40, close at 71% of 6969.0-7522.9, smoothed KER +0.39)"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "expansion aligned with the last breakout (14 May ATH); cash TR 5d mean 82.9 vs ATR14 76.1; report VOLator +0.62; VIX 18.75 slice-only"
+   },
+   "kaufman": {
+    "signal": 0.387,
+    "weight": 0.15,
+    "contribution": 0.0581,
+    "basis": "13-period KER on cash closes, 3-EMA smoothed = +0.387 (raw 0.268, falling from 0.643 on 14 May), x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "signal": -0.35,
+    "weight": 0.15,
+    "contribution": -0.0525,
+    "basis": "CARRIED from report section 13b numeric tilt -0.35; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "NEUTRAL: only VIX is available in the slices (fewer than two counters; USDX and DAX not derivable) -> 0"
+   },
+   "sum": 0.0055
+  }
+ },
+ {
+  "report_date": "2026-05-20",
+  "report_file": "SP500_Daily_Report_20May2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-20.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-19.csv",
+  "last_bar_broker": "2026-05-19 23:45:00",
+  "direction_score": 0.0055,
+  "regime": "TREND_UP",
+  "card_id": "2026-05-20_Trade_2",
+  "strategy": "Pivot (TREND breakout, weekly tier)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "BUY STOP 7436.34, armed from 09:00 broker (07:00 UK); reference close 7356.3 (19 May full-day), gap +80.04; TREND branch",
+  "anchor_broker": "09:00",
+  "entry": 7436.34,
+  "stop": 7352.2,
+  "tp1": 7510.83,
+  "tp2": 7558.25,
+  "tp3": 7605.67,
+  "card_R_points": 84.14,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Buy-stop 7436.34. Unit 1 exits at weekly R1 7510.83 (0.89R), Unit 2 at weekly R1.5 7558.25 (1.45R); on the Unit 2 fill Unit 3 stop moves to 7453.17 (entry + 0.2R). Unit 3 runs to weekly R2 7605.67 (2.01R). Thesis invalidation: daily close back below weekly P 7428.07. Wide-stop flag: R = 1.11 x ATR14 (84.14 / 76.13). Armed order carries through NVIDIA earnings (after US close) and FOMC minutes at 21:00 broker.",
+  "suppressed": false,
+  "rationale": "Regime TREND_UP (report call; data check: smoothed KER +0.387 > 0.13, 25-session cash overlap 0.40, close at 71% of 25d range, report VOLator slope positive) -> TREND branch long, weekly tier as in the report's reading. Levels from the cash weekly pivots in the level file (w_cash_*, period 2026-W20): P 7428.0667, R1 7510.8333, S1 7333.2333, R2 7605.6667. Entry = P + 0.10 x (R1 - P) = 7428.0667 + 8.2767 = 7436.34. Stop = P - 0.8 x (P - S1) = 7428.0667 - 75.8667 = 7352.20 (the alternative 'S1 - 0.25 x ATR' = 7314.20 is wider, so not selected). R = 84.14 = 1.105 x ATR14_cash 76.1286 (wide-stop flag; inside 0.3-3.0 x ATR). Stop distance 1.1 x ATR, under the 3.5 x ATR cap. TP1 = weekly R1 7510.83 (74.49 pts = 0.98 x ATR, within 2.5 x ATR), TP2 = R1.5 = (7510.8333 + 7605.6667)/2 = 7558.25, TP3 = weekly R2 7605.67 (TREND ladder R1/R1.5/R2; TP1 is 0.89R, not 1R). Unit 3 stop to entry + 0.2R = 7453.17 on TP2 fill. Order side: buy stop 7436.34 above prev_close_full 7356.3 (correct). Confluences: stop 7352.20 sits 13.1 above the 5d swing low / prior-day cash low 7339.1; weekly S1 7333.23 is 18.97 below the stop. Entry is 8.28 above weekly P; daily cash R2 7427.77 is 8.57 below entry and daily R3 7455.73 is 19.39 above it. Weekly tier used (not daily/monthly) following the report's own TREND-breakout reading; not switched to clear any floor. Invalidation = daily close below weekly P 7428.07 (75.9 pts from the stop, > 0.15 x ATR). Event risk: NVIDIA earnings after the US close, FOMC minutes 21:00 broker and 20-year auction 20:00 broker (news slice schedules the minutes for D; the report's calendar says 21 May). Anchor 09:00 broker (07:00 UK) default.",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "cash RSI2 0.00, 19 May cash close 7362.3 < open 7371.0, three lower closes since 14 May (7509.1 > 7416.0 > 7411.0 > 7362.3): bearish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "TREND_UP (report call, corroborated: 25-session cash overlap 0.40, close at 71% of 6969.0-7522.9, smoothed KER +0.39)"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "expansion aligned with the last breakout (14 May ATH); cash TR 5d mean 82.9 vs ATR14 76.1; report VOLator +0.62; VIX 18.75 slice-only"
+   },
+   "kaufman": {
+    "signal": 0.387,
+    "weight": 0.15,
+    "contribution": 0.0581,
+    "basis": "13-period KER on cash closes, 3-EMA smoothed = +0.387 (raw 0.268, falling from 0.643 on 14 May), x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "signal": -0.35,
+    "weight": 0.15,
+    "contribution": -0.0525,
+    "basis": "CARRIED from report section 13b numeric tilt -0.35; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "NEUTRAL: only VIX is available in the slices (fewer than two counters; USDX and DAX not derivable) -> 0"
+   },
+   "sum": 0.0055
+  }
+ },
+ {
+  "report_date": "2026-05-20",
+  "report_file": "SP500_Daily_Report_20May2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-20.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-19.csv",
+  "last_bar_broker": "2026-05-19 23:45:00",
+  "direction_score": 0.0055,
+  "regime": "TREND_UP",
+  "card_id": "2026-05-20_Trade_3A",
+  "strategy": "Momentum-Pullback (TREND_UP fork)",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SUPPRESSED - 57.5% retrace entry of the most recent qualifying up-swing lies above the reference close; a buy limit cannot be placed",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - no order.",
+  "suppressed": true,
+  "rationale": "Regime TREND_UP -> fork 3A long. Qualification: 2 x ATR14_cash = 152.26. The active swing is up (latest confirmed fractal high 14 May cash 7522.9 is more recent than any confirmed fractal low; the 19 May low 7339.1 is the last bar and not yet a confirmed fractal; the report's 14 May-to-19 May down-leg is the wrong direction for a long). Most recent qualifying up-swings: (a) 12 May cash low 7345.3 (18:15 broker) -> 14 May high 7522.9 (19:00 broker) = 177.6 = 2.33 x ATR; 57.5% retrace entry = 7522.9 - 0.575 x 177.6 = 7420.78; (b) 7 May low 7325.6 (20:15) -> 14 May high = 197.3 = 2.59 x ATR; entry 7409.45. Both entries are above prev_close_full 7356.3 (and the cash close 7362.3): price has already retraced about 84-94% of these legs, through the 57.5% level, so a BUY LIMIT is on the wrong side and cannot be placed (order-side rule). The only anchor giving a valid limit is the 4 May cash low 7177.5 (entry 7324.29, QA's suggestion), but it skips the more recent qualifying swings and lies beyond the 10-session lookback counted from D-1 (12 sessions back); choosing it would be picking the anchor to make the level pass, which the brief forbids. Honest construction fails -> card suppressed, no substitution of another variant or pivot levels. Anchor 09:00 broker.",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "cash RSI2 0.00, 19 May cash close 7362.3 < open 7371.0, three lower closes since 14 May (7509.1 > 7416.0 > 7411.0 > 7362.3): bearish"
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "TREND_UP (report call, corroborated: 25-session cash overlap 0.40, close at 71% of 6969.0-7522.9, smoothed KER +0.39)"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "expansion aligned with the last breakout (14 May ATH); cash TR 5d mean 82.9 vs ATR14 76.1; report VOLator +0.62; VIX 18.75 slice-only"
+   },
+   "kaufman": {
+    "signal": 0.387,
+    "weight": 0.15,
+    "contribution": 0.0581,
+    "basis": "13-period KER on cash closes, 3-EMA smoothed = +0.387 (raw 0.268, falling from 0.643 on 14 May), x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "signal": -0.35,
+    "weight": 0.15,
+    "contribution": -0.0525,
+    "basis": "CARRIED from report section 13b numeric tilt -0.35; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "NEUTRAL: only VIX is available in the slices (fewer than two counters; USDX and DAX not derivable) -> 0"
+   },
+   "sum": 0.0055
+  }
+ }
+]

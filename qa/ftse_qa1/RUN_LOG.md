@@ -18,3 +18,4 @@ SESSION_TASK rule, not because it leaks prices. Scores were set before any listi
 | 2026-06-25 | `ls` printed subfolder names under `cards/regenerated/` (nothing opened) | none on scoring |
 | 2026-07-02 | \`ls cards/regenerated\` (subfolder names only). Reviewer flags the hallucinated_source call as resting partly on a CNBC row dated Sunday 28 Jun: if that is a date slip only, total would be 50 (still Low) | none on scoring; spot-check candidate |
 | 2026-07-07 | `ls cards/regenerated` (subfolder names only, nothing opened) | none on scoring |
+| 2026-07-09 | first `ls` named README.md, docs/ENTRY_POLICIES.md and cards/regenerated/ (none opened) | none on scoring |

@@ -27,3 +27,8 @@ encode where the market opened on D. Held at `/tmp/claude-0/QUARANTINE/sp500_qa_
 history. `docs/ENTRY_POLICIES.md` and `README.md` stay in the tree (they define the engine) but quote past
 aggregate outcomes, so regeneration sessions are now instructed not to open them — a tightening over
 the first run, which allowed `ENTRY_POLICIES.md`.
+
+## Restored after the S&P re-run (2026-10-06)
+All quarantined paths were restored from git history (commits before `6327689` and `38411eb`) once the last
+`sp500_regen2` session finished. Both fixtures re-verified: US500 `band0845` −9.49 R, gold `band0845` −0.59 R.
+**Gold Stage 2 has not run yet: re-apply this quarantine before launching any gold regeneration session.**

@@ -1,0 +1,163 @@
+card_id,report_date,strategy,flags,dud
+2026-05-11_Trade_1,2026-05-11,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-05-11_Trade_2,2026-05-11,"Trade 2 - Pivot, TREND branch (long above daily P)",MISPLACED_LIMIT(-3.4),False
+2026-05-11_Trade_3A,2026-05-11,"Trade 3A - Momentum-Pullback (57.5% fib retracement, TREND_UP fork)",CLEAN,False
+2026-05-12_Trade_1,2026-05-12,"Trade 1 - Daily Directional (LONG, TREND_UP)",STALE_ANCHOR(-16.2),False
+2026-05-12_Trade_2,2026-05-12,"Trade 2 - Pivot, TREND branch (TREND_UP long across the pivot)",MISPLACED_LIMIT(-7.9),False
+2026-05-12_Trade_3A,2026-05-12,"Trade 3A - Momentum-Pullback (57.5% fib retrace, TREND_UP fork)",CLEAN,False
+2026-05-13_Trade_1,2026-05-13,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-13_Trade_2,2026-05-13,"Trade 2 - Pivot, TRANSITION breakout-side (long)",CLEAN,False
+2026-05-13_Trade_3C,2026-05-13,Trade 3C - Momentum-Breakout (TRANSITION fork),SUPPRESSED,False
+2026-05-14_Trade_1,2026-05-14,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-14_Trade_2,2026-05-14,"Trade 2 - Pivot, TREND branch (daily floor pivots)",CLEAN,False
+2026-05-14_Trade_3A,2026-05-14,Trade 3A - Momentum-Pullback (57.5% fib retracement),CLEAN,False
+2026-05-15_Trade_1,2026-05-15,Trade 1 - Daily Directional,STALE_ANCHOR(-60.5)|MALFORMED_FILL,False
+2026-05-15_Trade_2,2026-05-15,"Trade 2 - Pivot, regime-aware (TREND branch)",MISPLACED_LIMIT(-53.2),False
+2026-05-15_Trade_3A,2026-05-15,Trade 3A - Momentum-Pullback (fib retracement),CLEAN,False
+2026-05-18_Trade_1,2026-05-18,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-18_Trade_2,2026-05-18,"Trade 2 - Pivot, TRANSITION breakout side (sell limit below daily P)",CLEAN,False
+2026-05-18_Trade_3C,2026-05-18,"Trade 3C - Momentum-Breakout, 25-day range (conditional)",SUPPRESSED,False
+2026-05-19_Trade_1,2026-05-19,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-19_Trade_2,2026-05-19,"Trade 2 - Pivot (trend branch, buy limit above the daily pivot)",MISPLACED_LIMIT(-20.4),False
+2026-05-19_Trade_3A,2026-05-19,Trade 3A - Momentum-Pullback (fib retracement of the impulse swing),SUPPRESSED,False
+2026-05-20_Trade_1,2026-05-20,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-20_Trade_2,2026-05-20,"Trade 2 - Pivot, TREND branch (weekly floor pivots)",CLEAN,False
+2026-05-20_Trade_3A,2026-05-20,Trade 3A - Momentum-Pullback (57.5% fib retracement),CLEAN,False
+2026-05-21_Trade_1,2026-05-21,Trade 1 - Daily Directional,CLEAN,False
+2026-05-21_Trade_2,2026-05-21,Trade 2 - Pivot (TRANSITION breakout side),CLEAN,False
+2026-05-21_Trade_3C,2026-05-21,Trade 3C - Momentum-Breakout (conditional),SUPPRESSED,False
+2026-05-22_Trade_1,2026-05-22,Trade 1 - Daily Directional (SUPPRESSED - conviction below threshold),SUPPRESSED,False
+2026-05-22_Trade_2,2026-05-22,"Trade 2 - Pivot, regime-aware (TRANSITION branch, breakout side only)",CLEAN,False
+2026-05-22_Trade_3C,2026-05-22,Trade 3C - Momentum-Breakout (SUPPRESSED - no confirmed break at D-1),SUPPRESSED,False
+2026-05-25_Trade_1,2026-05-25,Trade 1 - Daily Directional,STALE_ANCHOR(+73.4),False
+2026-05-25_Trade_2,2026-05-25,"Trade 2 - Pivot, trend-branch breakout",WARN_R_TINY(0.28xATR)|MISPLACED_STOP(+64.1),False
+2026-05-25_Trade_3A,2026-05-25,Trade 3A - Momentum-Pullback (57.5% fib retracement),CLEAN,False
+2026-05-26_Trade_1,2026-05-26,Daily Directional (M5 Trade 1) - LONG at the daily-open anchor,STALE_ANCHOR(-27.0),False
+2026-05-26_Trade_2,2026-05-26,"Pivot, regime-aware (M5 Trade 2), TRANSITION breakout side - SUPPRESSED",SUPPRESSED,False
+2026-05-26_Trade_3C,2026-05-26,"Momentum-Breakout (M5 Trade 3C, TRANSITION regime) - LONG",STALE_ANCHOR(-27.0),False
+2026-05-27_Trade_1,2026-05-27,Trade 1 - Daily Directional,CLEAN,False
+2026-05-27_Trade_2,2026-05-27,"Trade 2 - Pivot, regime-aware (TREND_UP branch - pivot breakout)",CLEAN,False
+2026-05-27_Trade_3A,2026-05-27,Trade 3A - Momentum-Pullback (57.5% fib retracement),CLEAN,False
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,CLEAN,False
+2026-05-28_Trade_2,2026-05-28,"Trade 2 - Pivot, TREND branch (breakout above P)",MISPLACED_LIMIT(-7.1),False
+2026-05-28_Trade_3A,2026-05-28,Trade 3A - Momentum-Pullback (fib retracement),CLEAN,False
+2026-05-29_Trade_1,2026-05-29,Trade 1 - Daily Directional,CLEAN,False
+2026-05-29_Trade_2,2026-05-29,"Trade 2 - Pivot, TREND branch (long across the pivot)",WARN_R_TINY(0.27xATR),False
+2026-05-29_Trade_3A,2026-05-29,Trade 3A - Momentum-Pullback (57.5% fib retracement),CLEAN,False
+2026-06-01_Trade_1,2026-06-01,"Trade 1 - Daily Directional (market at daily-open anchor, TREND_UP long)",STALE_ANCHOR(+25.2),False
+2026-06-01_Trade_2,2026-06-01,"Trade 2 - Pivot, TREND branch (buy stop above daily P, TREND_UP long)",MISPLACED_STOP(+23.5),False
+2026-06-01_Trade_3A,2026-06-01,"Trade 3A - Momentum-Pullback, 57.5% fib retracement (TREND_UP long)",CLEAN,False
+2026-06-02_Trade_1,2026-06-02,"Trade 1 - Daily Directional (LONG, TREND_UP)",STALE_ANCHOR(-19.2),False
+2026-06-02_Trade_2,2026-06-02,"Trade 2 - Pivot, regime-aware (TREND branch, LONG across daily P)",MISPLACED_LIMIT(-15.7),False
+2026-06-02_Trade_3A,2026-06-02,"Trade 3A - Momentum-Pullback (57.5% fib retracement, LONG)",CLEAN,False
+2026-06-03_Trade_1,2026-06-03,"Trade 1 - Daily Directional (LONG, trending-bullish regime)",CLEAN,False
+2026-06-03_Trade_2,2026-06-03,"Trade 2 - Pivot, TREND branch (long breakout above daily P)",CLEAN,False
+2026-06-03_Trade_3A,2026-06-03,"Trade 3A - Momentum-Pullback, 57.5% fib retracement (TREND_UP fork)",CLEAN,False
+2026-06-04_Trade_1,2026-06-04,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-04_Trade_2,2026-06-04,Trade 2 - Pivot (TREND_UP breakout),CLEAN,False
+2026-06-04_Trade_3A,2026-06-04,Trade 3A - Momentum-Pullback (57.5% fib),SUPPRESSED,False
+2026-06-05_Trade_1,2026-06-05,"Trade 1 - Daily Directional (SUPPRESSED, sub-threshold conviction)",SUPPRESSED,False
+2026-06-05_Trade_2,2026-06-05,"Trade 2 - Pivot, transition regime, breakout-side long above the daily pivot",MISPLACED_LIMIT(-31.1),False
+2026-06-05_Trade_3C,2026-06-05,"Trade 3C - Momentum-Breakout (SUPPRESSED, no confirmed break of the 25-session range)",SUPPRESSED,False
+2026-06-08_Trade_1,2026-06-08,"Trade 1 - Daily Directional (SHORT, market at the daily-open anchor)",CLEAN,False
+2026-06-08_Trade_2,2026-06-08,"Trade 2 - Pivot, regime-aware: TRANSITION branch, downside-breakout side only, on the corroborated weekly tiers (SHORT sell limit)",CLEAN,False
+2026-06-08_Trade_3C,2026-06-08,"Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED, no confirmed break of the 25-session range",SUPPRESSED,False
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional (SHORT),STALE_ANCHOR(+21.1),False
+2026-06-09_Trade_2,2026-06-09,"Trade 2 - Pivot, transition breakout side (SHORT)",MISPLACED_LIMIT(+9.5),False
+2026-06-09_Trade_3C,2026-06-09,Trade 3C - Momentum-Breakout (transition regime) - SUPPRESSED,SUPPRESSED,False
+2026-06-10_Trade_1,2026-06-10,"Trade 1 - Daily Directional, SHORT, market at the daily-open anchor",STALE_ANCHOR(-23.1),False
+2026-06-10_Trade_2,2026-06-10,"Trade 2 - Pivot, TRANSITION branch, downside breakout side, SHORT sell stop below daily P",CLEAN,False
+2026-06-10_Trade_3C,2026-06-10,Trade 3C - Momentum-Breakout - SUPPRESSED: no confirmed close beyond the 25-day boundary,SUPPRESSED,False
+2026-06-11_Trade_1,2026-06-11,"Trade 1 - Daily Directional (SHORT, TRANSITION regime, bearish bias)",STALE_ANCHOR(+33.6),False
+2026-06-11_Trade_2,2026-06-11,"Trade 2 - Pivot, regime-aware (TRANSITION branch, breakout side only)",SUPPRESSED,False
+2026-06-11_Trade_3C,2026-06-11,Trade 3C - Momentum-Breakout (TRANSITION fork),SUPPRESSED,False
+2026-06-15_Trade_1,2026-06-15,"Trade 1 - Daily Directional, LONG, market at the daily-open anchor",STALE_ANCHOR(+98.5),False
+2026-06-15_Trade_2,2026-06-15,"Trade 2 - Pivot, TRANSITION branch, upside breakout side, LONG buy limit above daily P",CLEAN,False
+2026-06-15_Trade_3C,2026-06-15,Trade 3C - Momentum-Breakout - SUPPRESSED: no confirmed break of the 25-session range (price test; corroboration gate does not apply),SUPPRESSED,False
+2026-06-16_Trade_1,2026-06-16,"Trade 1 - Daily Directional (LONG, market at the daily-open anchor)",CLEAN,False
+2026-06-16_Trade_2,2026-06-16,"Trade 2 - Pivot, regime-aware (TRANSITION, breakout side only) - SUPPRESSED",SUPPRESSED,False
+2026-06-16_Trade_3C,2026-06-16,Trade 3C - Momentum-Breakout (regime TRANSITION) - SUPPRESSED,SUPPRESSED,False
+2026-06-17_Trade_1,2026-06-17,"Trade 1 - Daily Directional (LONG, market at daily-open anchor)",STALE_ANCHOR(+16.9),False
+2026-06-17_Trade_2,2026-06-17,"Trade 2 - Pivot, TRANSITION branch (breakout side only) - SUPPRESSED",SUPPRESSED,False
+2026-06-17_Trade_3C,2026-06-17,Trade 3C - Momentum-Breakout (regime fork: TRANSITION -> 3C) - SUPPRESSED,SUPPRESSED,False
+2026-06-18_Trade_1,2026-06-18,"Trade 1 - Daily Directional (SHORT, TRANSITION regime, conviction -0.68)",STALE_ANCHOR(+55.5),False
+2026-06-18_Trade_2,2026-06-18,"Trade 2 - Pivot, regime-aware (TRANSITION branch, downside breakout side, SHORT sell limit)",MISPLACED_LIMIT(+32.5),False
+2026-06-18_Trade_3C,2026-06-18,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,SUPPRESSED,False
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional,STALE_ANCHOR(-33.4),False
+2026-06-19_Trade_2,2026-06-19,"Trade 2 - Pivot, transition breakout side (LONG)",MISPLACED_LIMIT(-31.4),False
+2026-06-19_Trade_3C,2026-06-19,Trade 3C - Momentum-Breakout - SUPPRESSED (no confirmed 25-session range break at D-1),SUPPRESSED,False
+2026-06-24_Trade_1,2026-06-24,Trade 1 - Daily Directional,STALE_ANCHOR(+17.6),False
+2026-06-24_Trade_2,2026-06-24,"Trade 2 - Pivot, regime-aware (TREND branch, TREND_DOWN) - SUPPRESSED",SUPPRESSED,False
+2026-06-24_Trade_3A,2026-06-24,Trade 3A - Momentum-Pullback (TREND_DOWN fork) - SUPPRESSED,SUPPRESSED,False
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional - SUPPRESSED,SUPPRESSED,False
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot, regime-aware (TRANSITION, breakout side only) - SHORT",WARN_R_TINY(0.28xATR)|MISPLACED_LIMIT(+33.9),False
+2026-06-25_Trade_3C,2026-06-25,Trade 3C - Momentum-Breakout (regime TRANSITION) - SUPPRESSED,SUPPRESSED,False
+2026-06-26_Trade_1,2026-06-26,"Trade 1 - Daily Directional (market at daily-open anchor, SHORT)",STALE_ANCHOR(-50.8),False
+2026-06-26_Trade_2,2026-06-26,"Trade 2 - Pivot, TRANSITION breakout side only (sell limit at the daily pivot offset, SHORT)",CLEAN,False
+2026-06-26_Trade_3C,2026-06-26,"Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED, no confirmed break of the 25-session range",SUPPRESSED,False
+2026-06-29_Trade_1,2026-06-29,Trade 1 - Daily Directional (SHORT),STALE_ANCHOR(+67.0),False
+2026-06-29_Trade_2,2026-06-29,"Trade 2 - Pivot, breakout side (transitional regime, down-break)",MISPLACED_LIMIT(+61.3),False
+2026-06-29_Trade_3C,2026-06-29,Trade 3C - Momentum-Breakout (transitional regime) - SUPPRESSED,SUPPRESSED,False
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional - SUPPRESSED (directional conviction below threshold),SUPPRESSED,False
+2026-06-30_Trade_2,2026-06-30,"Trade 2 - Pivot, trend branch (short across the daily pivot)",CLEAN,False
+2026-06-30_Trade_3A,2026-06-30,"Trade 3A - Momentum-Pullback, 57.5% retracement short (trending-bearish fork)",CLEAN,False
+2026-07-01_Trade_1,2026-07-01,"Trade 1 - Daily Directional (market at the daily-open anchor, LONG)",STALE_ANCHOR(-19.5),False
+2026-07-01_Trade_2,2026-07-01,"Trade 2 - Pivot, TREND branch (buy limit 10% of the way from the daily pivot to first resistance)",MISPLACED_LIMIT(-13.1),False
+2026-07-01_Trade_3A,2026-07-01,Trade 3A - Momentum-Pullback (buy limit at the 57.5% retracement of the 26-30 Jun up-leg),CLEAN,False
+2026-07-02_Trade_1,2026-07-02,"Trade 1 - Daily Directional (LONG, momentum continuation)",CLEAN,False
+2026-07-02_Trade_2,2026-07-02,"Trade 2 - Pivot (regime-aware, TRANSITION breakout side)",SUPPRESSED,False
+2026-07-02_Trade_3C,2026-07-02,Trade 3C - Momentum-Breakout (25-day range),SUPPRESSED,False
+2026-07-03_Trade_1,2026-07-03,Trade 1 - Daily Directional,STALE_ANCHOR(+29.5),False
+2026-07-03_Trade_2,2026-07-03,Trade 2 - Pivot (TRANSITION breakout side),MISPLACED_STOP(+16.7),False
+2026-07-03_Trade_3C,2026-07-03,Trade 3C - Momentum-Breakout (TRANSITION),SUPPRESSED,False
+2026-07-09_Trade_1,2026-07-09,"Trade 1 - Daily Directional (SHORT, conviction score -0.61)",STALE_ANCHOR(+26.2),False
+2026-07-09_Trade_2,2026-07-09,"Trade 2 - Pivot, TRANSITION branch, downside breakout side only (SHORT sell stop below daily P)",CLEAN,False
+2026-07-09_Trade_3C,2026-07-09,Trade 3C - Momentum-Breakout (25-day range) - SUPPRESSED,SUPPRESSED,False
+2026-07-10_Trade_1,2026-07-10,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-07-10_Trade_2,2026-07-10,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-07-10_Trade_3C,2026-07-10,Trade 3C - Momentum-Breakout,SUPPRESSED,False
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional (LONG),STALE_ANCHOR(-40.7),False
+2026-07-13_Trade_2,2026-07-13,Trade 2 - Pivot (TRANSITION breakout side),SUPPRESSED,False
+2026-07-13_Trade_3C,2026-07-13,Trade 3C - Momentum-Breakout,SUPPRESSED,False
+2026-07-14_Trade_1,2026-07-14,"Trade 1 - Daily Directional (LONG, conviction +0.28 >= 0.25 threshold)",CLEAN,False
+2026-07-14_Trade_2,2026-07-14,"Trade 2 - Pivot, TRANSITION branch, upside breakout side only",CLEAN,False
+2026-07-14_Trade_3C,2026-07-14,"Trade 3C - Momentum-Breakout (regime fork: TRANSITION) - SUPPRESSED, no confirmed break",SUPPRESSED,False
+2026-07-15_Trade_1,2026-07-15,Trade 1 - Daily Directional,STALE_ANCHOR(+19.4),False
+2026-07-15_Trade_2,2026-07-15,"Trade 2 - Pivot (TRANSITION, breakout side only)",SUPPRESSED,False
+2026-07-15_Trade_3C,2026-07-15,Trade 3C - Momentum-Breakout (TRANSITION),SUPPRESSED,False
+2026-07-16_Trade_1,2026-07-16,"Trade 1 - Daily Directional (LONG, conviction +0.2750 >= 0.25 threshold)",CLEAN,False
+2026-07-16_Trade_2,2026-07-16,"Trade 2 - Pivot, regime-aware (TRANSITION branch) - SUPPRESSED, no breakout side identified",SUPPRESSED,False
+2026-07-16_Trade_3C,2026-07-16,"Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED, no confirmed break",SUPPRESSED,False
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional - SUPPRESSED (directional conviction below threshold),SUPPRESSED,False
+2026-07-17_Trade_2,2026-07-17,"Trade 2 - Pivot (regime-aware, TRANSITION breakout side) - SUPPRESSED",SUPPRESSED,False
+2026-07-17_Trade_3C,2026-07-17,Trade 3C - Momentum-Breakout (25-day range) - SUPPRESSED (not eligible),SUPPRESSED,False
+2026-07-20_Trade_1,2026-07-20,Daily Directional,CLEAN,False
+2026-07-20_Trade_2,2026-07-20,"Pivot (TRANSITION, breakout side only)",CLEAN,False
+2026-07-20_Trade_3C,2026-07-20,Momentum-Breakout,SUPPRESSED,False
+2026-07-21_Trade_1,2026-07-21,"Trade 1 - Daily Directional (SHORT, bearish continuation)",STALE_ANCHOR(+36.1),False
+2026-07-21_Trade_2,2026-07-21,"Trade 2 - Pivot (regime-aware, TRANSITION breakout side, SHORT)",MISPLACED_LIMIT(+21.1),False
+2026-07-21_Trade_3C,2026-07-21,Trade 3C - Momentum-Breakout (25-day range),SUPPRESSED,False
+2026-07-22_Trade_1,2026-07-22,Trade 1 - Daily Directional - SUPPRESSED (directional conviction inside the neutral band),SUPPRESSED,False
+2026-07-22_Trade_2,2026-07-22,"Trade 2 - Pivot (regime-aware, RANGE mean-reversion at daily R1)",CLEAN,False
+2026-07-22_Trade_3B,2026-07-22,"Trade 3B - Mean-Reversion (25-day range fade, short leg)",CLEAN,False
+2026-07-23_Trade_1,2026-07-23,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-23_Trade_2,2026-07-23,"Trade 2 - Pivot, TRANSITION branch (breakout side only)",SUPPRESSED,False
+2026-07-23_Trade_3C,2026-07-23,Trade 3C - Momentum-Breakout (regime-driven complex),SUPPRESSED,False
+2026-07-24_Trade_1,2026-07-24,Daily Directional,CLEAN,False
+2026-07-24_Trade_2,2026-07-24,Pivot - breakout side (transition regime),CLEAN,False
+2026-07-24_Trade_3C,2026-07-24,Momentum-Breakout,SUPPRESSED,False
+2026-07-27_Trade_1,2026-07-27,Trade 1 - Daily Directional - SUPPRESSED (conviction below threshold),SUPPRESSED,False
+2026-07-27_Trade_2,2026-07-27,"Trade 2 - Pivot, TRANSITION branch (breakout side only) - SUPPRESSED (no breakout side; ladder inverts)",SUPPRESSED,False
+2026-07-27_Trade_3C,2026-07-27,"Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED, no confirmed break",SUPPRESSED,False
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-28_Trade_2,2026-07-28,Trade 2 - Pivot (RANGE mean-reversion),CLEAN,False
+2026-07-28_Trade_3B,2026-07-28,"Trade 3B - Mean-Reversion (25-session range fade, long from the lower band)",CLEAN,False
+2026-07-29_Trade_1,2026-07-29,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-29_Trade_2,2026-07-29,Trade 2 - Pivot (TRANSITION breakout side),SUPPRESSED,False
+2026-07-29_Trade_3C,2026-07-29,Trade 3C - Momentum-Breakout (conditional upside),SUPPRESSED,False
+2026-07-30_Trade_1,2026-07-30,Trade 1 - Daily Directional,STALE_ANCHOR(+20.2),False
+2026-07-30_Trade_2,2026-07-30,Trade 2 - Pivot (regime-aware),CLEAN,False
+2026-07-30_Trade_3C,2026-07-30,Trade 3C - Momentum-Breakout (conditional short),SUPPRESSED,False
+2026-07-31_Trade_1,2026-07-31,Trade 1 - Daily Directional (SUPPRESSED - conviction gate),SUPPRESSED,False
+2026-07-31_Trade_2,2026-07-31,"Trade 2 - Pivot, regime-aware (SUPPRESSED - TRANSITION regime, no breakout side)",SUPPRESSED,False
+2026-07-31_Trade_3C,2026-07-31,Trade 3C - Momentum-Breakout (SUPPRESSED - no confirmed break),SUPPRESSED,False

@@ -63,7 +63,12 @@ Entry monitoring opens at the **card's own stated anchor** translated to broker 
 
 Where a card specifies its own timing explicitly, the card wins — that is the point of scoring the card as written. The table above is the default when the card is silent.
 
-**Entry session** is the trading session *after* the report date, unless the card states same-session execution. For conditional/breakout cards, it is the session after the confirming daily close.
+**Entry session** is the trading session *after* the report date, unless the card states same-session execution.
+
+> **Correction (2026-10-06).** The S&P reports name their own target session ("Report dated for Monday 11 May
+> 2026 session", "Forward date: Tuesday 16 June"), so the report date *is* the entry session. Score with
+> `--same-session` as the primary timing; the next-session default is kept only for comparison with earlier runs.
+> See `results/sp500_v2/REPORT.md`. For conditional/breakout cards, it is the session after the confirming daily close.
 
 ---
 

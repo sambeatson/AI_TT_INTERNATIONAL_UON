@@ -1,0 +1,206 @@
+[
+ {
+  "card_id": "2026-07-02_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (NEUTRAL, suppressed)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market at the 09:00 broker anchor (07:00 UK) would fill at the D-1 reference close; not issued.",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score +0.149 is below the 0.25 conviction threshold (NEUTRAL), so no Trade 1 is issued.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION. 25-session block (62 cash sessions in slice, last 25 to 1 Jul): overlap ratio 0.53 and persistence 0.46, so neither the trending test (persistence>0.55, overlap<0.45) nor the ranging test (overlap>0.55) is met -> Transitional; 5-day block also mixed (overlap 0.54, net +17, last three sessions Bearish). Step-4 'Transitional (any)' makes TREND_UP unavailable even though smoothed KER 0.171 > 0.13 and VOLator slope >= 0, so the label falls through to TRANSITION. The report called it Trending-Bullish (and labelled Trade 2 TREND_UP) on stale/incorrect inputs; that call is not reproduced on D-1 data (QA feedback items 9, 19). Direction score recomputed per M5 section 2: sum of signal x weight = -0.250 +0.100 +0.050 +0.0257 +0.0735 +0.150 = +0.149; |0.149| < 0.25 -> NEUTRAL -> Trade 1 suppressed. Components and bases in direction_components. The decisive judgement is the short-term bias at -1 (three consecutive Bearish session labels, RSI2 11.28); had it been read Neutral the score would be +0.399 and Trade 1 would be LONG, so the suppression rests on that reading. Sentiment is carried from report section 13b and not verified. Thesis-level gate tested: |score| 0.149 < 0.25 FIRED. No entry/stop/ladder given. Reference close for any MARKET card on this run is prev_close_full 10461.7 (1 Jul), cash close 10472.4.",
+  "report_date": "2026-07-02",
+  "report_file": "FTSE_100_Report_02Jul2026.md",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-02.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-01.csv",
+  "last_bar_broker": "2026-07-01 22:45",
+  "direction_score": 0.149,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "value": -1,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "Cash RSI2 11.28 (D-1); per-session trend labels over 5 sessions (25 Jun to 1 Jul): Bullish, Bullish, Bearish, Bearish, Bearish (close<open and RSI2<50 on 29 Jun, 30 Jun, 1 Jul); closes 10538.0/10516.4/10497.8/10501.5/10472.4 stepping down; net 5-session change +17.3 (vs 24 Jun close 10455.1) is flat. Net bearish."
+   },
+   "medium_term_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session block read Transitional (overlap 0.53 between the 0.45/0.55 bands, persistence 0.46 < 0.55, RSI2 median 50.9, range position 71.7%). Transition = sign of last completed swing x 0.5; last completed swing is up (10 Jun low 10126.2 to 30 Jun high 10608.8) -> +0.5."
+   },
+   "volator": {
+    "value": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR14/close z-scored over 25 sessions, clipped; last-10 slope +0.07 (expansion); most recent breakout was up (25 Jun and 30 Jun highs) -> +0.5. Own-series ATR proxy; counters not scaled."
+   },
+   "kaufman": {
+    "value": 0.171,
+    "weight": 0.15,
+    "contribution": 0.0257,
+    "basis": "13-session KER on cash closes, EMA3 smoothed = 0.171 (raw 0.025; 30 Jun smoothed 0.317); 13-session move +12.9 so sign +; class Ranging-to-Trending band, falling from prior day."
+   },
+   "sentiment": {
+    "value": 0.49,
+    "weight": 0.15,
+    "contribution": 0.0735,
+    "basis": "CARRIED unverified from report section 13b (weighted tilt +0.49, six articles dated up to 30 Jun). Not checkable against any slice; pre-dates the 1 Jul euro-area CPI release (y/y 3.0 vs 2.1 consensus)."
+   },
+   "cross_asset": {
+    "value": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM x sign(+1, up-swing). Verified on slices over 5 sessions to 1 Jul: US500 rising (7418.0 -> 7478.8, +0.8%) confirms; VIX falling (18.40 -> 17.81) confirms; USDX flat (101.59 -> 101.41, -0.2%) neutral. DAX 40 / Euro Stoxx 50 not available, report reading (rising, confirms) carried and not counted toward the verified aggregate. 2 of 3 verified counters confirm, none contradict -> CONFIRM."
+   }
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-07-02_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch (breakout side, LONG)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "Buy-stop at P + 10% of (R1 - P), armed from the 09:00 broker anchor; reference close (prev_close_full, 1 Jul) 10461.7, entry +5.89 above it.",
+  "anchor_broker": "09:00",
+  "entry": 10467.59,
+  "stop": 10432.98,
+  "tp1": 10509.8,
+  "tp2": 10528.5,
+  "tp3": 10547.2,
+  "card_R_points": 34.61,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits at TP1 (daily R1 10509.8), Unit 2 at TP2 (daily R1.5 10528.5); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 10474.51; Unit 3 exits at TP3 (daily R2 10547.2). Thesis invalidation: daily close back below daily P 10462.9. Not wide-stop (R = 0.32 x ATR14). Event risk in the holding window (broker time, 2 Jul): euro-area unemployment 10:00/12:00; BoE Credit Conditions Survey 11:30; US Nonfarm Payrolls, unemployment rate, average hourly earnings and initial jobless claims 15:30 (all HIGH); BoE MPC Mann 17:00.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION. 25-session block (62 cash sessions in slice, last 25 to 1 Jul): overlap ratio 0.53 and persistence 0.46, so neither the trending test (persistence>0.55, overlap<0.45) nor the ranging test (overlap>0.55) is met -> Transitional; 5-day block also mixed (overlap 0.54, net +17, last three sessions Bearish). Step-4 'Transitional (any)' makes TREND_UP unavailable even though smoothed KER 0.171 > 0.13 and VOLator slope >= 0, so the label falls through to TRANSITION. The report called it Trending-Bullish (and labelled Trade 2 TREND_UP) on stale/incorrect inputs; that call is not reproduced on D-1 data (QA feedback items 9, 19). ATR14 cash = 109.4357 (14 sessions to 1 Jul 2026, LSE cash bars 10:00-18:30 broker). Trade 2 branch = TRANSITION, breakout side only (M5 5.2c, mirrors 5.2b). Breakout direction taken from the 3C direction trigger: the 30 Jun test of the 25-day high 10608.8 (high 10608.8, close 10501.5) is the recent failed retest of the upper boundary -> LONG per module wording; VOLator slope +0.07 >= 0 and cross-asset CONFIRM agree. No counter-side (short) limit issued. Levels, all from level file columns d_cash_*: P 10462.9, R1 10509.8, S1 10425.5, R2 10547.2 (daily tier from 1 Jul 2026 cash H/L/C 10500.3/10416.0/10472.4; execution-series computed, so CORROBORATED by construction). Entry = P + 0.10*(R1-P) = 10462.9 + 4.69 = 10467.59. Stop = P - 0.8*(P-S1) = 10462.9 - 29.92 = 10432.98; the alternative (S1 - 0.25*ATR = 10398.14, below the prior-day low 10416.0) is wider, so the formula stop is the tighter and is used. R = 34.61 = 0.316 x ATR14 (floor 0.3 x ATR14 = 32.83 passes; no wide-stop flag; cap 3.5 x ATR not engaged). TP1 = R1 10509.8 (42.21 from entry, 0.39 x ATR); TP2 = R1.5 = (10509.8+10547.2)/2 = 10528.5; TP3 = R2 10547.2. Order side: buy-stop 10467.59 vs prev_close_full 10461.7 (the fixed reference for this run) = +5.89, correct side. NOTE it sits 4.81 below the cash session close 10472.4, so it is a buy-stop above the last executable price but would be marketable against the cash close; basis kept at cash pivots / full last price as fixed by the run, no tier switched. Confluence: entry within 6.5 of weekly P 10474.07 (inside 0.15 x ATR, strong confluence); stop 7.5 above S1 10425.5 and 16.98 above prior-day low 10416.0; TP1 R1 10509.8. Invalidation = daily close below P 10462.9 (29.9 above stop, > 0.15 x ATR). Calendar: 15:30 broker US NFP (cons 43, prev 172), unemployment rate 4.2 vs 4.3, AHE, jobless claims 209 vs 215 are HIGH and fall in the holding window; euro-area flash CPI y/y printed 3.0 vs 2.1 consensus on 1 Jul (already in the price). Report's own numbers (entry 10536, stop 10466) are stale 30 Jun-session pivots and are not used.",
+  "report_date": "2026-07-02",
+  "report_file": "FTSE_100_Report_02Jul2026.md",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-02.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-01.csv",
+  "last_bar_broker": "2026-07-01 22:45",
+  "direction_score": 0.149,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "value": -1,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "Cash RSI2 11.28 (D-1); per-session trend labels over 5 sessions (25 Jun to 1 Jul): Bullish, Bullish, Bearish, Bearish, Bearish (close<open and RSI2<50 on 29 Jun, 30 Jun, 1 Jul); closes 10538.0/10516.4/10497.8/10501.5/10472.4 stepping down; net 5-session change +17.3 (vs 24 Jun close 10455.1) is flat. Net bearish."
+   },
+   "medium_term_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session block read Transitional (overlap 0.53 between the 0.45/0.55 bands, persistence 0.46 < 0.55, RSI2 median 50.9, range position 71.7%). Transition = sign of last completed swing x 0.5; last completed swing is up (10 Jun low 10126.2 to 30 Jun high 10608.8) -> +0.5."
+   },
+   "volator": {
+    "value": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR14/close z-scored over 25 sessions, clipped; last-10 slope +0.07 (expansion); most recent breakout was up (25 Jun and 30 Jun highs) -> +0.5. Own-series ATR proxy; counters not scaled."
+   },
+   "kaufman": {
+    "value": 0.171,
+    "weight": 0.15,
+    "contribution": 0.0257,
+    "basis": "13-session KER on cash closes, EMA3 smoothed = 0.171 (raw 0.025; 30 Jun smoothed 0.317); 13-session move +12.9 so sign +; class Ranging-to-Trending band, falling from prior day."
+   },
+   "sentiment": {
+    "value": 0.49,
+    "weight": 0.15,
+    "contribution": 0.0735,
+    "basis": "CARRIED unverified from report section 13b (weighted tilt +0.49, six articles dated up to 30 Jun). Not checkable against any slice; pre-dates the 1 Jul euro-area CPI release (y/y 3.0 vs 2.1 consensus)."
+   },
+   "cross_asset": {
+    "value": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM x sign(+1, up-swing). Verified on slices over 5 sessions to 1 Jul: US500 rising (7418.0 -> 7478.8, +0.8%) confirms; VIX falling (18.40 -> 17.81) confirms; USDX flat (101.59 -> 101.41, -0.2%) neutral. DAX 40 / Euro Stoxx 50 not available, report reading (rising, confirms) carried and not counted toward the verified aggregate. 2 of 3 verified counters confirm, none contradict -> CONFIRM."
+   }
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-07-02_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION, suppressed: no confirmed break)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "Would enter at the breakout candle close / next session open after a confirmed daily close above the 25-day high; not issued.",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - no confirmed break of the 25-day range: highest daily close in the block is 10538.0 (25 Jun) against the required close of at least 10636.2 (25-day high 10608.8 + 0.25 x ATR14 27.36); D-1 close 10472.4 is 163.8 below the trigger.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION. 25-session block (62 cash sessions in slice, last 25 to 1 Jul): overlap ratio 0.53 and persistence 0.46, so neither the trending test (persistence>0.55, overlap<0.45) nor the ranging test (overlap>0.55) is met -> Transitional; 5-day block also mixed (overlap 0.54, net +17, last three sessions Bearish). Step-4 'Transitional (any)' makes TREND_UP unavailable even though smoothed KER 0.171 > 0.13 and VOLator slope >= 0, so the label falls through to TRANSITION. The report called it Trending-Bullish (and labelled Trade 2 TREND_UP) on stale/incorrect inputs; that call is not reproduced on D-1 data (QA feedback items 9, 19). ATR14 cash = 109.4357 (14 sessions to 1 Jul 2026, LSE cash bars 10:00-18:30 broker). Fork: TRANSITION -> 3C (fixed mapping, no substitute variant; 3A/3B not built). Range from level file: swing_high_25d_cash 10608.8 (30 Jun 2026, broker 10:00-18:30 bars), swing_low_25d_cash 10126.2 (10 Jun 2026); width 482.6. Gate (M5 4d): daily close beyond the boundary by >= 0.25 x ATR14 = 27.36, i.e. close >= 10636.16 (upside) or <= 10098.84 (downside). 30 Jun traded to 10608.8 but closed 10501.5, and no close in the 25-session block exceeds 10538.0. Gate FAILED -> SUPPRESSED row; no entry/stop/ladder. Direction LONG retained as the side the failed-retest trigger points to (30 Jun rejection at the upper boundary); a close above 10636.16 would be the arming condition (commentary only). The report's Trade 3A (swing 10395-10613, 2.0 x ATR) is not a valid fork under TRANSITION and its swing also fails the 2 x ATR test on corrected data.",
+  "report_date": "2026-07-02",
+  "report_file": "FTSE_100_Report_02Jul2026.md",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-02.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-01.csv",
+  "last_bar_broker": "2026-07-01 22:45",
+  "direction_score": 0.149,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "value": -1,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "Cash RSI2 11.28 (D-1); per-session trend labels over 5 sessions (25 Jun to 1 Jul): Bullish, Bullish, Bearish, Bearish, Bearish (close<open and RSI2<50 on 29 Jun, 30 Jun, 1 Jul); closes 10538.0/10516.4/10497.8/10501.5/10472.4 stepping down; net 5-session change +17.3 (vs 24 Jun close 10455.1) is flat. Net bearish."
+   },
+   "medium_term_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session block read Transitional (overlap 0.53 between the 0.45/0.55 bands, persistence 0.46 < 0.55, RSI2 median 50.9, range position 71.7%). Transition = sign of last completed swing x 0.5; last completed swing is up (10 Jun low 10126.2 to 30 Jun high 10608.8) -> +0.5."
+   },
+   "volator": {
+    "value": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR14/close z-scored over 25 sessions, clipped; last-10 slope +0.07 (expansion); most recent breakout was up (25 Jun and 30 Jun highs) -> +0.5. Own-series ATR proxy; counters not scaled."
+   },
+   "kaufman": {
+    "value": 0.171,
+    "weight": 0.15,
+    "contribution": 0.0257,
+    "basis": "13-session KER on cash closes, EMA3 smoothed = 0.171 (raw 0.025; 30 Jun smoothed 0.317); 13-session move +12.9 so sign +; class Ranging-to-Trending band, falling from prior day."
+   },
+   "sentiment": {
+    "value": 0.49,
+    "weight": 0.15,
+    "contribution": 0.0735,
+    "basis": "CARRIED unverified from report section 13b (weighted tilt +0.49, six articles dated up to 30 Jun). Not checkable against any slice; pre-dates the 1 Jul euro-area CPI release (y/y 3.0 vs 2.1 consensus)."
+   },
+   "cross_asset": {
+    "value": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM x sign(+1, up-swing). Verified on slices over 5 sessions to 1 Jul: US500 rising (7418.0 -> 7478.8, +0.8%) confirms; VIX falling (18.40 -> 17.81) confirms; USDX flat (101.59 -> 101.41, -0.2%) neutral. DAX 40 / Euro Stoxx 50 not available, report reading (rising, confirms) carried and not counted toward the verified aggregate. 2 of 3 verified counters confirm, none contradict -> CONFIRM."
+   }
+  },
+  "regime": "TRANSITION"
+ }
+]

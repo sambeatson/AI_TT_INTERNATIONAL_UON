@@ -1,0 +1,191 @@
+[
+ {
+  "report_date": "2026-05-14",
+  "report_file": "SP500_Report_14May2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-14.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-13.csv",
+  "last_bar_broker": "2026-05-13 23:45:00",
+  "direction_score": 0.4993,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_KER": {
+    "signal": 0.595,
+    "weight": 0.15,
+    "contribution": 0.0893
+   },
+   "sentiment": {
+    "signal": 0.1,
+    "weight": 0.15,
+    "contribution": 0.015
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045
+   },
+   "sum": 0.4993
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-05-14_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (market long at 09:00 broker anchor)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market buy at 09:00 broker (07:00 UK) at the D-1 reference close prev_close_full 7458.5 (13 May, 23:45 broker bar)",
+  "anchor_broker": "09:00",
+  "entry": 7458.5,
+  "stop": 7416.46,
+  "tp1": 7500.54,
+  "tp2": 7542.58,
+  "tp3": null,
+  "card_R_points": 42.04,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits at TP1 (+1R), Unit 2 at TP2 (+2R); on TP2 fill Unit 3 stop moves to entry + 0.2R = 7466.91. Unit 3 runner: session-close time-stop or price stop 3 x ATR14 (198.45) from entry, whichever first. Invalidation: daily close below 7381.5 (13 May cash low), 35.0 pts beyond the stop.",
+  "suppressed": false,
+  "rationale": "Direction score (M5 2a, default weights): short-term technical +1 (5-day sequence bullish, cash RSI2=80.8 > 50, 13 May close 7451.5 > open 7412.0) x0.25=+0.250; medium-term regime TRANSITION = sign of last completed swing (up) x0.5 = +0.5 x0.20=+0.100; VOLator slope -0.03 ~ flat/compression = 0 x0.10=0; KER +0.595 x0.15=+0.0893; sentiment +0.10 (carried from report section 13b, not verifiable) x0.15=+0.015; cross-asset MIXED (VIX slice flat 19.45->19.39 over 5 sessions; DAX/USDX carried from report section 10, not verifiable) +0.3 x0.15=+0.045. Sum +0.4993 >= 0.25 -> LONG. Regime TRANSITION (report section 20 label, confirmed on data): cash daily closes to 13 May give smoothed KER(13,EMA3)=0.595 (>0.13, rising) but 5-week structure fails the M3 Step 3d trending test (directional persistence 0.43 < 0.55; overlap 0.40) and the VOLator slope (scaled ATR14 z-score, last 10 obs) is -0.03, i.e. KER and VOLator disagree, so the M3 11b fall-through gives TRANSITION. ATR14 cash (14 sessions to 13 May, 16:30-23:00 broker bars) = 66.15 (full-day 75.35 not used). Entry = prev_close_full 7458.5 (MARKET rule, D-1 13 May). Stop per M5 4c, tighter of (5d swing low cash 7325.6 [07 May 16:30-23:00 bars] - 0.25*ATR = 7309.06, R 149.4) or (nearest support = daily cash pivot P 7433.0 [d_cash_P] - 0.25*66.15 = 7416.46); the P-based anchor is tighter and used; below 3.5xATR cap (231.5). R=42.04 = 0.64xATR14 (<=1, no wide-stop flag); TP1=E+1R=7500.54 (2xR=84.1 < 3xATR so TP2 not ambitious). Event collisions: Retail Sales and jobless claims 15:30 broker Thu 14 May, Trump-Xi summit per report section 13d (unverified)."
+ },
+ {
+  "report_date": "2026-05-14",
+  "report_file": "SP500_Report_14May2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-14.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-13.csv",
+  "last_bar_broker": "2026-05-13 23:45:00",
+  "direction_score": 0.4993,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_KER": {
+    "signal": 0.595,
+    "weight": 0.15,
+    "contribution": 0.0893
+   },
+   "sentiment": {
+    "signal": 0.1,
+    "weight": 0.15,
+    "contribution": 0.015
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045
+   },
+   "sum": 0.4993
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-05-14_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch (breakout side, long)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at 7438.15 (daily cash P + 0.10*(R1-P)); -20.35 pts vs prev_close_full 7458.5 (below close, valid side). Valid for the 14 May session from 09:00 broker.",
+  "anchor_broker": "09:00",
+  "entry": 7438.15,
+  "stop": 7406.6,
+  "tp1": 7484.5,
+  "tp2": 7501.0,
+  "tp3": 7517.5,
+  "card_R_points": 31.55,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits at TP1 = daily R1 7484.5; Unit 2 at TP2 = daily R1.5 7501.0; Unit 3 at TP3 = daily R2 7517.5. On TP2 fill Unit 3 stop moves to entry + 0.2R = 7444.46. Invalidation: daily close back through daily P 7433.0 (26.4 pts beyond the stop).",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION (report section 20 label, confirmed on data): cash daily closes to 13 May give smoothed KER(13,EMA3)=0.595 (>0.13, rising) but 5-week structure fails the M3 Step 3d trending test (directional persistence 0.43 < 0.55; overlap 0.40) and the VOLator slope (scaled ATR14 z-score, last 10 obs) is -0.03, i.e. KER and VOLator disagree, so the M3 11b fall-through gives TRANSITION. ATR14 cash (14 sessions to 13 May, 16:30-23:00 broker bars) = 66.15 (full-day 75.35 not used). Branch TRANSITION -> breakout side only (M5 5.2c, mirrors 5.2b). Side = LONG (upper 25d boundary 7466.0 tested on 13 May and rejected at the close; 13 May close in the upper range; score +0.50 aligned; 3C itself suppressed because no confirmed close beyond boundary). Levels from daily CASH pivots of the 13 May cash bar (O 7412.0 H 7466.0 L 7381.5 C 7451.5), flag CORROBORATED (computed from the execution broker series): P 7433.0, R1 7484.5, S1 7400.0, R2 7517.5. Entry = P+0.10*(R1-P) = 7433.0+0.10*51.5 = 7438.15. Stop = P-0.8*(P-S1) = 7433.0-0.8*33.0 = 7406.6 (S1-0.25*ATR alt = 7383.46 is wider, so the tighter formulaic stop is used). TP1/TP2/TP3 = R1 / R1.5=(7484.5+7517.5)/2=7501.0 / R2. R=31.55 = 0.48xATR14; TP1 distance 46.35 < 2.5xATR. Not a mean-reversion limit at P; no counter-side order. Event collisions: 14 May Retail Sales / claims (15:30 broker) and the Trump-Xi summit per report."
+ },
+ {
+  "report_date": "2026-05-14",
+  "report_file": "SP500_Report_14May2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-14.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-13.csv",
+  "last_bar_broker": "2026-05-13 23:45:00",
+  "direction_score": 0.4993,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_KER": {
+    "signal": 0.595,
+    "weight": 0.15,
+    "contribution": 0.0893
+   },
+   "sentiment": {
+    "signal": 0.1,
+    "weight": 0.15,
+    "contribution": 0.015
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045
+   },
+   "sum": 0.4993
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-05-14_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (SUPPRESSED: no confirmed break)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no daily close beyond the 25-day boundary by >= 0.25 x ATR14",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - gate failed (M5 4d / 10).",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION (report section 20 label, confirmed on data): cash daily closes to 13 May give smoothed KER(13,EMA3)=0.595 (>0.13, rising) but 5-week structure fails the M3 Step 3d trending test (directional persistence 0.43 < 0.55; overlap 0.40) and the VOLator slope (scaled ATR14 z-score, last 10 obs) is -0.03, i.e. KER and VOLator disagree, so the M3 11b fall-through gives TRANSITION. ATR14 cash (14 sessions to 13 May, 16:30-23:00 broker bars) = 66.15 (full-day 75.35 not used). Gate test (M5 4d): upper boundary swing_high_25d cash = 7466.0 (13 May); confirmation needs a daily close >= 7466.0 + 0.25*66.15 = 7482.54. D-1 cash close 7451.5 is 14.5 pts BELOW the boundary (shortfall 31.0 pts to the confirmation level). Downside boundary swing_low_25d cash 6763.4 (09 Apr) far away. Gate fails -> Trade 3C suppressed; no 3A/3B substitution (M5 5.3)."
+ }
+]

@@ -39,3 +39,9 @@ write, not a second draw.
 
 ## Late-date QA
 2026-06-23, 07-06, 07-07 were QA-scored late under the same brief as the other 54.
+
+## Minor listing (2026-05-22, draw 2)
+The session ran `ls data/slices/`, which returns only the asset folder names (NEWS, US500, USDX, VIX,
+XAUUSD), with no dated files and no prices. No post-D content was exposed, so the output is kept.
+2026-06-01 draw 2 ran `ls` on its own output folder `draw2/by_date/`: filenames of other draw-2 dates only,
+no file opened, no prices. Kept.

@@ -1,0 +1,206 @@
+[
+ {
+  "card_id": "2026-06-15_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score NEUTRAL (|score| < 0.25)",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score +0.1615 is inside +/-0.25 threshold; Trade 1 not issued.",
+  "suppressed": true,
+  "direction_score": 0.1615,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash=100.0; 5-session closes 7411.0/7387.3/7271.7/7391.9/7431.9 net up, last two sessions up -> Bullish"
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "basis": "TRANSITION = sign of last completed swing x0.5; last completed swing is the down-leg 7624.6 (2026-06-02 18:15) -> 7243.1 (2026-06-09 19:30); the rebound off 7243.1 has no confirmed high yet"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "compression: D-1 cash range 94.8 vs 156/129 on 11/10 Jun; no breakout; carried from report (negative slope)"
+   },
+   "kaufman": {
+    "signal": -0.173,
+    "weight": 0.15,
+    "contribution": -0.026,
+    "basis": "cash-close KER13 3-EMA smoothed = -0.173 (net -95.6 over 13 sessions, raw -0.140); sign of medium move negative"
+   },
+   "sentiment": {
+    "signal": 0.55,
+    "weight": 0.15,
+    "contribution": 0.0825,
+    "basis": "carried from report s13b (+0.55); news not verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045,
+    "basis": "only VIX derivable from slices (USDX/DAX not available): 13-session VIX up (17.72->18.77) vs SPX down confirms medium-term decline, but VIX fell 20.43->18.77 over last two sessions, against it -> MIXED = sign(-)x0.3"
+   }
+  },
+  "regime": "TRANSITION",
+  "rationale": "Gate: |score|<0.25 -> suppressed. Score = 0.25 - 0.10 + 0 - 0.026 + 0.0825 - 0.045 = +0.1615. Price-derived components recomputed from the cash slice (RSI2 cash 100.0, 13-session KER, last completed swing, VIX). The report carried +0.5 on the medium regime and CONFIRM on cross-asset (report used wrong VIX levels and unverifiable USDX/DAX); on the slice the last completed swing is down (7624.6 -> 7243.1), so medium = -0.5, and cross-asset is MIXED. Sentiment +0.55 carried from report s13b, unverified. Sensitivity: strict CONFIRM on the medium-term sign gives -0.15 (score +0.056); either way |score|<0.25. Reference close D-1 full = 7433.9; atr14_cash = 94.0429.",
+  "report_date": "2026-06-15",
+  "report_file": "SP500_Report_15Jun2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-15.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-14.csv",
+  "last_bar_broker": "2026-06-12 23:45:00",
+  "anchor_broker": "09:00"
+ },
+ {
+  "card_id": "2026-06-15_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION breakout side, buy limit daily P+10% of P-R1)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at daily P + 0.10x(R1-P) = 7423.59; reference close D-1 (2026-06-12, full) 7433.9; signed gap -10.31",
+  "entry": 7423.59,
+  "stop": 7385.74,
+  "tp1": 7472.43,
+  "tp2": 7492.7,
+  "tp3": 7512.97,
+  "card_R_points": 37.85,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 exits at TP1 (daily R1 7472.43, +48.84 pts); U2 at TP2 (daily R1.5 7492.70, +69.11 pts); on U2 fill U3 stop moves to entry+0.2R = 7431.16 (+7.57 pts); U3 runner to TP3 daily R2 7512.97 (+89.38 pts). Stop 7385.74 is 37.85 pts below entry. R=37.85 pts = 0.40xATR14 (cash, 14 sessions, 16:30-23:00 broker = 94.04); not a wide stop. Thesis invalidation: daily close below daily P 7418.17 (invalidation sits 32.43 pts above the stop). Branch TRANSITION breakout side, long, aligned with Trade 3C direction.",
+  "suppressed": false,
+  "direction_score": 0.1615,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash=100.0; 5-session closes 7411.0/7387.3/7271.7/7391.9/7431.9 net up, last two sessions up -> Bullish"
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "basis": "TRANSITION = sign of last completed swing x0.5; last completed swing is the down-leg 7624.6 (2026-06-02 18:15) -> 7243.1 (2026-06-09 19:30); the rebound off 7243.1 has no confirmed high yet"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "compression: D-1 cash range 94.8 vs 156/129 on 11/10 Jun; no breakout; carried from report (negative slope)"
+   },
+   "kaufman": {
+    "signal": -0.173,
+    "weight": 0.15,
+    "contribution": -0.026,
+    "basis": "cash-close KER13 3-EMA smoothed = -0.173 (net -95.6 over 13 sessions, raw -0.140); sign of medium move negative"
+   },
+   "sentiment": {
+    "signal": 0.55,
+    "weight": 0.15,
+    "contribution": 0.0825,
+    "basis": "carried from report s13b (+0.55); news not verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045,
+    "basis": "only VIX derivable from slices (USDX/DAX not available): 13-session VIX up (17.72->18.77) vs SPX down confirms medium-term decline, but VIX fell 20.43->18.77 over last two sessions, against it -> MIXED = sign(-)x0.3"
+   }
+  },
+  "regime": "TRANSITION",
+  "rationale": "Regime TRANSITION (report s9/s20: overlap 0.49, KER smoothed -0.13 (slice cash -0.17), neither trend nor range; price mid-range 7431.9 inside 25d range 7243.1-7624.6) -> Trade 2 = breakout-side only, M5 5.2c mirroring 5.2b, long (matches Trade 3C direction, report). Levels from level file _cash columns: d_cash_P=7418.1667, d_cash_R1=7472.4333, d_cash_S1=7377.6333, d_cash_R2=7512.9667. Entry = P+0.10*(R1-P)=7418.1667+5.4267=7423.5934 -> 7423.59; it is below prev_close_full 7433.9 so the permitted limit form is used (buy limit at/below close; a buy stop at that level would be on the wrong side). Stop = P-0.8*(P-S1)=7418.1667-32.4267=7385.7400 -> 7385.74; the S1-0.25*ATR alternative (7377.63-23.51=7354.12; prior-day low 7363.9 sits just below S1) is wider so the formula stop is the tighter. TP1=R1 7472.43, TP2=R1.5=(R1+R2)/2=7492.70, TP3=R2 7512.97. R=37.85=0.40xATR14 (0.3-3.0 ok); TP1 distance 48.84=0.52xATR (<2.5). Pivot tier: daily pivot computed from the broker execution series cash session 2026-06-12 (H 7458.7 L 7363.9 C 7431.9) -> CORROBORATED by construction (M5 5.2a), so the single-source suppression gate does not fire. Report s21b Trade 2 (buy stop at R1, stop 7416.86) not used: it was a 5.2 borrowing of the R1 breakout and carried no buffer. Anchor 09:00 broker (07:00 UK).",
+  "report_date": "2026-06-15",
+  "report_file": "SP500_Report_15Jun2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-15.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-14.csv",
+  "last_bar_broker": "2026-06-12 23:45:00",
+  "anchor_broker": "09:00"
+ },
+ {
+  "card_id": "2026-06-15_Trade_3C",
+  "strategy": "Trade 3C - Breakout (TRANSITION)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond 25-day boundary by >= 0.25xATR14",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - D-1 cash close 7431.9 vs required close >= 7624.6 + 0.25x94.04 = 7648.11 (216.2 pts short). Commentary only: card becomes eligible after a daily close >= 7648.11.",
+  "suppressed": true,
+  "direction_score": 0.1615,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash=100.0; 5-session closes 7411.0/7387.3/7271.7/7391.9/7431.9 net up, last two sessions up -> Bullish"
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "basis": "TRANSITION = sign of last completed swing x0.5; last completed swing is the down-leg 7624.6 (2026-06-02 18:15) -> 7243.1 (2026-06-09 19:30); the rebound off 7243.1 has no confirmed high yet"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "compression: D-1 cash range 94.8 vs 156/129 on 11/10 Jun; no breakout; carried from report (negative slope)"
+   },
+   "kaufman": {
+    "signal": -0.173,
+    "weight": 0.15,
+    "contribution": -0.026,
+    "basis": "cash-close KER13 3-EMA smoothed = -0.173 (net -95.6 over 13 sessions, raw -0.140); sign of medium move negative"
+   },
+   "sentiment": {
+    "signal": 0.55,
+    "weight": 0.15,
+    "contribution": 0.0825,
+    "basis": "carried from report s13b (+0.55); news not verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045,
+    "basis": "only VIX derivable from slices (USDX/DAX not available): 13-session VIX up (17.72->18.77) vs SPX down confirms medium-term decline, but VIX fell 20.43->18.77 over last two sessions, against it -> MIXED = sign(-)x0.3"
+   }
+  },
+  "regime": "TRANSITION",
+  "rationale": "Regime TRANSITION -> fork 3C (M5 5.3c). Gate 4d: swing_high_25d_cash=7624.6 (2026-06-02 18:15 broker), swing_low_25d_cash=7243.1 (2026-06-09 19:30), width 381.5, atr14_cash 94.0429. Confirmed break needs daily close >= 7624.6+23.51 = 7648.11; last close 7431.90 (cash) -> gate fails -> suppressed. Direction LONG retained from the report (failed downside break at 7243.1 on 9 Jun, close 7387.3; volator compression, cross-asset MIXED). The report s21b 3C card (buy stop at 5-day high 7483.15) was not a 3C entry and is not reproduced.",
+  "report_date": "2026-06-15",
+  "report_file": "SP500_Report_15Jun2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-15.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-14.csv",
+  "last_bar_broker": "2026-06-12 23:45:00",
+  "anchor_broker": "09:00"
+ }
+]

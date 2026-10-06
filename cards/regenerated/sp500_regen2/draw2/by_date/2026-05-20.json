@@ -32,7 +32,7 @@
    "short_term_technical(w0.25)": {
     "value": -1.0,
     "contribution": -0.25,
-    "basis": "RSI2_cash=0.00 (two down closes 7411.0->7362.3), 19 May close<open, 5d net -47.5 (7409.1... 13 May 7451.5 -> 7362.3), 3 consecutive lower closes: Bearish"
+    "basis": "RSI2_cash=0.00 (two down closes 7411.0->7362.3), 19 May close<open, 5d net -89.2 (13 May close 7451.5 -> 7362.3), 3 consecutive lower closes: Bearish"
    },
    "medium_regime(w0.20)": {
     "value": 1.0,
@@ -77,10 +77,10 @@
   "card_R_points": 84.14,
   "be_rule": "BE_0.2R_ON_TP2",
   "runner_rule": "TRACE",
-  "management_text": "3 equal units. Unit 1 exits at weekly R1 7510.83 (0.89R); Unit 2 exits at weekly R1.5 7558.25 (1.45R); Unit 3 runner exits at weekly R2 7605.67 (2.01R). On the TP2 fill Unit 3 stop moves to entry + 0.2R = 7453.17. R = 84.14 pts = 1.11 x ATR14 (76.13, 14 sessions, cash bars 16:30-23:00 broker): WIDE STOP flag. Thesis invalidation (separate from stop): daily close back below weekly P 7428.07 (8.3 below entry, 75.9 above the stop). Confluences: entry 5.16... see rationale. Hold-through risk: NVIDIA results after the 20 May close and FOMC minutes 21:00 broker.",
+  "management_text": "3 equal units. Unit 1 exits at weekly R1 7510.83 (0.89R); Unit 2 exits at weekly R1.5 7558.25 (1.45R); Unit 3 runner exits at weekly R2 7605.67 (2.01R). On the TP2 fill Unit 3 stop moves to entry + 0.2R = 7453.17. R = 84.14 pts = 1.11 x ATR14 (76.13, 14 sessions, cash bars 16:30-23:00 broker): WIDE STOP flag. Thesis invalidation (separate from stop): daily close back below weekly P 7428.07 (8.3 below entry, 75.9 above the stop). Confluences: entry sits 8.27 above weekly P 7428.07; stop sits between daily S1 7334.33 and daily P 7367.07; TP1 is 12.07 below the 14 May swing high 7522.90. Hold-through risk: NVIDIA results after the 20 May close and FOMC minutes 21:00 broker.",
   "suppressed": false,
   "regime": "TREND_UP",
-  "rationale": "Reference close: prev_close_full 7356.30 (19 May, last bar 23:45 broker); cash close 7362.30. ATR14_cash 76.1286 (14 sessions to 19 May, 16:30-23:00 broker bars; full-day 83.28 not used). Score = -0.25+0.20+0.05+0.058-0.0525+0.045 = +0.0506 -> NEUTRAL (|score|<0.25). Regime TREND_UP: 5-week block trending bullish (overlap 0.40, range position 71%, smoothed KER 0.387>0.13, VOLator slope +0.11>=0) with the 5-day leg a bearish pullback inside the trend (pullback-within-trend row, favour resumption); consistent with the report's Trending-bullish call. Anchor 09:00 broker (07:00 UK) uniform on all cards: no argument in the report for 02:00 or 16:30; the report's 14:30 UK override was flagged by QA and is not used. Trade 2 TREND branch (M5 5.2b), weekly tier from level file w_cash_* (period 2026-W20 = 11-15 May cash H/L/C; CORROBORATED by construction, execution series): P 7428.0667, R1 7510.8333, S1 7333.2333, R2 7605.6667, R1.5=(R1+R2)/2=7558.25. Entry = P+0.10*(R1-P)=7428.0667+8.2767=7436.3434 -> 7436.34 (buy stop, +80.04 above prev_close_full 7356.30; +74.04 above cash close 7362.30). Stop = P-0.8*(P-S1)=7428.0667-75.8667=7352.20. The 'just below S1 minus 0.25xATR' alternative (7314.20) was not used: no confluence (5d swing low 7339.10, prior-day low 7339.10) sits below S1 7333.23, and 7352.20 is the tighter. R=84.14=1.105xATR14 -> wide-stop flag; within [0.3,3.0]xATR and well inside the 3.5xATR cap (266.4); 2R=2.21xATR (<3, no ambitious-TP2 flag). TP1=weekly R1 7510.83 (74.49 from entry = 0.98xATR <2.5xATR; 0.89R, labelled as pivot R1 not +1R), TP2=R1.5 7558.25, TP3=R2 7605.67. Unit 3 stop after TP2 fill = 7436.34+0.2*84.14 = 7453.17. Confluences: entry 8.27 above weekly P 7428.07; stop 14.97 above daily full-day S2? no - stop 7352.20 sits 17.9 above daily cash P-S1 zone: 7352.20 vs daily cash S1 7334.33 (+17.87) and P 7367.07 (-14.87), i.e. between daily S1 and P; TP1 7510.83 is 11.7 below the 14 May swing high 7522.90. Basis: all levels _cash columns, no weekly/monthly tier switching. Gate log: all-pivot-tiers-indicative test not fired (weekly computed from execution series).",
+  "rationale": "Reference close: prev_close_full 7356.30 (19 May, last bar 23:45 broker); cash close 7362.30. ATR14_cash 76.1286 (14 sessions to 19 May, 16:30-23:00 broker bars; full-day 83.28 not used). Score = -0.25+0.20+0.05+0.058-0.0525+0.045 = +0.0506 -> NEUTRAL (|score|<0.25). Regime TREND_UP: 5-week block trending bullish (overlap 0.40, range position 71%, smoothed KER 0.387>0.13, VOLator slope +0.11>=0) with the 5-day leg a bearish pullback inside the trend (pullback-within-trend row, favour resumption); consistent with the report's Trending-bullish call. Anchor 09:00 broker (07:00 UK) uniform on all cards: no argument in the report for 02:00 or 16:30; the report's 14:30 UK override was flagged by QA and is not used. Trade 2 TREND branch (M5 5.2b), weekly tier from level file w_cash_* (period 2026-W20 = 11-15 May cash H/L/C; CORROBORATED by construction, execution series): P 7428.0667, R1 7510.8333, S1 7333.2333, R2 7605.6667, R1.5=(R1+R2)/2=7558.25. Entry = P+0.10*(R1-P)=7428.0667+8.2767=7436.3434 -> 7436.34 (buy stop, +80.04 above prev_close_full 7356.30; +74.04 above cash close 7362.30). Stop = P-0.8*(P-S1)=7428.0667-75.8667=7352.20. The 'just below S1 minus 0.25xATR' alternative (7314.20) was not used: no confluence (5d swing low 7339.10, prior-day low 7339.10) sits below S1 7333.23, and 7352.20 is the tighter. R=84.14=1.105xATR14 -> wide-stop flag; within [0.3,3.0]xATR and well inside the 3.5xATR cap (266.4); 2R=2.21xATR (<3, no ambitious-TP2 flag). TP1=weekly R1 7510.83 (74.49 from entry = 0.98xATR <2.5xATR; 0.89R, labelled as pivot R1 not +1R), TP2=R1.5 7558.25, TP3=R2 7605.67. Unit 3 stop after TP2 fill = 7436.34+0.2*84.14 = 7453.17. Confluences: entry 8.27 above weekly P 7428.07; stop 7352.20 is 17.87 above daily cash S1 7334.33 and 14.87 below daily cash P 7367.07 (between them); TP1 7510.83 is 12.07 below the 14 May swing high 7522.90. Basis: all levels _cash columns, no weekly/monthly tier switching. Gate log: all-pivot-tiers-indicative test not fired (weekly computed from execution series).",
   "report_date": "2026-05-20",
   "report_file": "SP500_Daily_Report_20May2026.md",
   "source": "regen_sp500_regen2_draw2",
@@ -94,7 +94,7 @@
    "short_term_technical(w0.25)": {
     "value": -1.0,
     "contribution": -0.25,
-    "basis": "RSI2_cash=0.00 (two down closes 7411.0->7362.3), 19 May close<open, 5d net -47.5 (7409.1... 13 May 7451.5 -> 7362.3), 3 consecutive lower closes: Bearish"
+    "basis": "RSI2_cash=0.00 (two down closes 7411.0->7362.3), 19 May close<open, 5d net -89.2 (13 May close 7451.5 -> 7362.3), 3 consecutive lower closes: Bearish"
    },
    "medium_regime(w0.20)": {
     "value": 1.0,
@@ -156,7 +156,7 @@
    "short_term_technical(w0.25)": {
     "value": -1.0,
     "contribution": -0.25,
-    "basis": "RSI2_cash=0.00 (two down closes 7411.0->7362.3), 19 May close<open, 5d net -47.5 (7409.1... 13 May 7451.5 -> 7362.3), 3 consecutive lower closes: Bearish"
+    "basis": "RSI2_cash=0.00 (two down closes 7411.0->7362.3), 19 May close<open, 5d net -89.2 (13 May close 7451.5 -> 7362.3), 3 consecutive lower closes: Bearish"
    },
    "medium_regime(w0.20)": {
     "value": 1.0,

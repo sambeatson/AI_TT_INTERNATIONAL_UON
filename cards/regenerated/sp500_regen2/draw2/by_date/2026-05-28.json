@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-05-28",
+  "report_file": "SP500_Daily_Report_28May2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-28.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-27.csv",
+  "last_bar_broker": "2026-05-27 23:45:00",
+  "anchor_broker": "09:00",
+  "card_id": "2026-05-28_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market buy at the 09:00 broker (07:00 UK) anchor, filled at the D-1 reference close 7543.0 (gap 0.0).",
+  "entry": 7543.0,
+  "stop": 7492.48,
+  "tp1": 7593.52,
+  "tp2": 7644.04,
+  "tp3": 7751.61,
+  "card_R_points": 50.52,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Unit 1 exits at TP1 (entry+1R = 7593.52), Unit 2 at TP2 (entry+2R = 7644.04); on the TP2 fill Unit 3 stop moves to entry+0.2R = 7553.10. Unit 3 runner exits at session-close time-stop or the 3xATR cap 7751.61 (entry+208.61), whichever first. R = 50.52 pts = 0.73 x ATR14 (no wide-stop flag). Thesis invalidation: daily close below weekly P 7441.33 (beyond the stop). Event collision: Core PCE/GDP/claims/durables at 15:30 broker on 28 May inside holding window.",
+  "suppressed": false,
+  "rationale": "Reference close (prev_close_full) 7543.0, session 2026-05-27 last bar 23:45 broker. ATR14 cash = 69.5357 (14 cash-session daily true ranges, 16:30-23:00 broker, incl. the 15-bar 25 May US-holiday session; level file atr14_cash). Direction score 0.4435 -> +0.44 (LONG, >= 0.25). Regime TREND_UP. Regime TREND_UP: 5-week block overlap 0.36 (<0.45), range-top bias 94th pct, smoothed KER 0.304 > 0.13 trending up (Moderate: smoothed series falling 0.38->0.30), 5-day block net +78 pts on higher highs/closes; VOLator slope -0.002 (flat). Directional persistence 0.46 and directional mean 0.25 do not reach the 0.55/0.35 trending bars, so the call is not 'Strong' as the report says and is the weakest link; RANGE is excluded (KER well above 0.13 and overlap far below 0.55). Anchor 09:00 broker = 07:00 UK, the instance's daily-open anchor; report logic gives no reason to move it, but the 15:30 release lands after it. Entry: MARKET = prev_close_full 7543.0 (no rounding). Stop per M5 4c: candidate (a) swing_low_5d_cash 7394.1 (21 May 18:00 broker) - 0.25xATR(17.38) = 7376.72, R 166.28; candidate (b) nearest support = daily cash S1 7509.8667 (d_cash_S1) - 17.38 = 7492.48, R 50.52. Tighter = (b) -> stop 7492.48. Pivot P/R1 treated as pivot/resistance, not support, so P 7522.93 and R1 7541.57 are not used as a stop anchor (R1 sits 1.43 pts below entry; a stop there would give R 18.8 < 0.3xATR and would be a floor-driven choice). Cap 3.5xATR = 243.4 not binding. R=50.52 within [20.86,208.61]; R/ATR 0.73. TP1 = 7543.0+50.52 = 7593.52 (50.52 <= 173.84 limit). TP2 = 7543.0+101.04 = 7644.04; 2R=101.04 < 3xATR so no 'TP2 ambitious' flag. TP3 = entry+3xATR = 7543.0+208.61 = 7751.61 (runner price cap). Unit 3 stop after TP2 = 7543.0+0.2x50.52 = 7553.10. Event collision: 28 May 15:30 broker (08:30 ET, before the 16:30 cash open) carries Core PCE m/m and y/y (HIGH), GDP q/q (HIGH), Initial Jobless Claims (HIGH), Durable Goods (HIGH) and Personal Income/Spending, per the news slice; these fall inside the holding window of every card, not on 29 May as the report states. ",
+  "direction_score": 0.44,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "5-day trend up (21-27 May cash closes 7450.3 to 7528.5) but D-1 row is Bearish by the M3 rule (close 7528.5 < open 7531.0 and RSI2 cash 3.82 < 50); two same-signed down/flat closes leave RSI2 at 3.82. Bullish trend offset by Bearish latest row = Neutral."
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session cash block: mean overlap 0.36 (<0.45), close at 94th percentile of 25d range (Range Top Bias), +7.2% from 23 Apr low; Trend up = +1."
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close z-score (25-session window, clipped +-1) 10-obs slope = -0.002, i.e. flat/compression = 0."
+   },
+   "kaufman": {
+    "signal": 0.304,
+    "weight": 0.15,
+    "contribution": 0.0455,
+    "basis": "KER period 13, EMA3 smoothed = 0.304 (> 0.13 threshold), direction up; series falling from 0.38 so class Trending Up - Moderate, not Strong. Signal = ker_value x sign(+)."
+   },
+   "sentiment": {
+    "signal": 0.32,
+    "weight": 0.15,
+    "contribution": 0.048,
+    "basis": "Carried from report 13b numeric tilt +0.32; news not verifiable from slices."
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM x sign(+1). Verified from VIX slice: cash closes 18.40 (20 May) -> 17.18 (27 May), falling while SPX rose. DAX confirms and USDX neutral are carried from report 10, not derivable from slices."
+   }
+  },
+  "regime": "TREND_UP"
+ },
+ {
+  "report_date": "2026-05-28",
+  "report_file": "SP500_Daily_Report_28May2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-28.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-27.csv",
+  "last_bar_broker": "2026-05-27 23:45:00",
+  "anchor_broker": "09:00",
+  "card_id": "2026-05-28_Trade_2",
+  "strategy": "Trade 2 - Pivot (TREND branch, suppressed)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SUPPRESSED - TREND-branch buy limit at P+0.10x(R1-P) would be 7524.80 (below reference close 7543.0, correct side) but the stop floor fails.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": null,
+  "runner_rule": null,
+  "management_text": "SUPPRESSED - R below 0.3 x ATR14 floor: M5 TREND stop P - 0.8x(P-S1) = 7512.48 gives R = 12.31 pts = 0.18 x ATR14 (floor 20.86). No ladder issued.",
+  "suppressed": true,
+  "rationale": "Reference close (prev_close_full) 7543.0, session 2026-05-27 last bar 23:45 broker. ATR14 cash = 69.5357 (14 cash-session daily true ranges, 16:30-23:00 broker, incl. the 15-bar 25 May US-holiday session; level file atr14_cash). Direction score 0.4435 -> +0.44 (LONG, >= 0.25). Regime TREND_UP. Regime TREND_UP: 5-week block overlap 0.36 (<0.45), range-top bias 94th pct, smoothed KER 0.304 > 0.13 trending up (Moderate: smoothed series falling 0.38->0.30), 5-day block net +78 pts on higher highs/closes; VOLator slope -0.002 (flat). Directional persistence 0.46 and directional mean 0.25 do not reach the 0.55/0.35 trending bars, so the call is not 'Strong' as the report says and is the weakest link; RANGE is excluded (KER well above 0.13 and overlap far below 0.55). Branch TREND (regime_label TREND_UP; same label forks Trade 3A). Daily cash pivots from 27 May cash H 7536.0 / L 7504.3 / C 7528.5: P 7522.9333, R1 7541.5667, S1 7509.8667. M5 5.2b entry = P + 0.10x(R1-P) = 7524.80; stop = P - 0.8x(P-S1) = 7522.9333 - 10.4533 = 7512.48; R = 12.31 = 0.18xATR14 (69.5357) < 0.3xATR (20.86) -> static floor fails. The alternative stop 'just below S1 minus 0.25xATR' = 7492.48 (prior-day low 7504.3 sits 5.6 below S1) is WIDER than the formula stop, and M5 permits the alternative only where it is the tighter of the two, so it is not available; adopting it to clear the floor (R 32.31) would be a floor-driven choice, which the run rules forbid. Weekly/monthly tiers not substituted. Suppressed with reason R 12.31 < 20.86. Pivot corroboration: daily cash tier computed from the execution (broker) series, CORROBORATED by construction. Event collision: 28 May 15:30 broker (08:30 ET, before the 16:30 cash open) carries Core PCE m/m and y/y (HIGH), GDP q/q (HIGH), Initial Jobless Claims (HIGH), Durable Goods (HIGH) and Personal Income/Spending, per the news slice; these fall inside the holding window of every card, not on 29 May as the report states. ",
+  "direction_score": 0.44,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "5-day trend up (21-27 May cash closes 7450.3 to 7528.5) but D-1 row is Bearish by the M3 rule (close 7528.5 < open 7531.0 and RSI2 cash 3.82 < 50); two same-signed down/flat closes leave RSI2 at 3.82. Bullish trend offset by Bearish latest row = Neutral."
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session cash block: mean overlap 0.36 (<0.45), close at 94th percentile of 25d range (Range Top Bias), +7.2% from 23 Apr low; Trend up = +1."
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close z-score (25-session window, clipped +-1) 10-obs slope = -0.002, i.e. flat/compression = 0."
+   },
+   "kaufman": {
+    "signal": 0.304,
+    "weight": 0.15,
+    "contribution": 0.0455,
+    "basis": "KER period 13, EMA3 smoothed = 0.304 (> 0.13 threshold), direction up; series falling from 0.38 so class Trending Up - Moderate, not Strong. Signal = ker_value x sign(+)."
+   },
+   "sentiment": {
+    "signal": 0.32,
+    "weight": 0.15,
+    "contribution": 0.048,
+    "basis": "Carried from report 13b numeric tilt +0.32; news not verifiable from slices."
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM x sign(+1). Verified from VIX slice: cash closes 18.40 (20 May) -> 17.18 (27 May), falling while SPX rose. DAX confirms and USDX neutral are carried from report 10, not derivable from slices."
+   }
+  },
+  "regime": "TREND_UP"
+ },
+ {
+  "report_date": "2026-05-28",
+  "report_file": "SP500_Daily_Report_28May2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-28.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-27.csv",
+  "last_bar_broker": "2026-05-27 23:45:00",
+  "anchor_broker": "09:00",
+  "card_id": "2026-05-28_Trade_3A",
+  "strategy": "Trade 3A - Momentum-Pullback",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at the 57.5% retracement of the 21 May low to 25 May high swing, 7463.50, armed from 09:00 broker; 79.5 pts below the reference close 7543.0.",
+  "entry": 7463.5,
+  "stop": 7376.72,
+  "tp1": 7495.02,
+  "tp2": 7557.4,
+  "tp3": 7720.7,
+  "card_R_points": 86.78,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Three equal units. Unit 1 exits at TP1 = 38.2% retracement 7495.02; Unit 2 at TP2 = 0% swing origin/high 7557.40; on the TP2 fill Unit 3 stop moves to entry+0.2R = 7480.86. Unit 3 runner targets the 100% extension 7720.70; if price prints above it, Unit 3 stop moves to the 50% mark between entry and TP2 = 7510.45 (the one structural override). R = 86.78 pts = 1.25 x ATR14: WIDE STOP flag. Thesis invalidation: daily close below the swing-low anchor 7394.10. Event collision: Core PCE/GDP/claims/durables at 15:30 broker on 28 May inside holding window.",
+  "suppressed": false,
+  "rationale": "Reference close (prev_close_full) 7543.0, session 2026-05-27 last bar 23:45 broker. ATR14 cash = 69.5357 (14 cash-session daily true ranges, 16:30-23:00 broker, incl. the 15-bar 25 May US-holiday session; level file atr14_cash). Direction score 0.4435 -> +0.44 (LONG, >= 0.25). Regime TREND_UP. Regime TREND_UP: 5-week block overlap 0.36 (<0.45), range-top bias 94th pct, smoothed KER 0.304 > 0.13 trending up (Moderate: smoothed series falling 0.38->0.30), 5-day block net +78 pts on higher highs/closes; VOLator slope -0.002 (flat). Directional persistence 0.46 and directional mean 0.25 do not reach the 0.55/0.35 trending bars, so the call is not 'Strong' as the report says and is the weakest link; RANGE is excluded (KER well above 0.13 and overlap far below 0.55). Fork: TREND_UP -> 3A. Swing per M5 4b, adaptive lookback: 4 sessions (22-27 May) swing 7464.5 (22 May) -> 7557.4 = 92.9 = 1.34xATR < 2xATR, fails; 5 sessions (21-27 May) qualifies: swing low 7394.1 at 2026-05-21 18:00 broker (swing_low_5d_cash) -> swing high 7557.4 at 2026-05-25 18:00 broker (swing_high_5d_cash), magnitude 163.30 = 2.35xATR14 >= 139.07. Active swing is up (high more recent than low). Note the 25 May high prints on a US-holiday session (15 cash bars); the level file counts it, and it is kept. Entry = 7557.4 - 0.575x163.3 = 7463.50 (<= reference close 7543.0, gap -79.50, LIMIT side correct). Stop = 0% anchor 7394.1 - 0.25xATR (17.38) = 7376.72; R = 86.78 = 1.25xATR14 (wide-stop flag, inside 0.3-3.0 band, below 3.5xATR cap 243.4). TP1 = 38.2% retrace = 7557.4 - 0.382x163.3 = 7495.02 (31.52 from entry, <= 173.84). TP2 = 0% = 7557.40. TP3 = 100% extension = 7557.4 + 163.3 = 7720.70. Unit 3 stop after TP2 = 7463.50 + 0.2x86.78 = 7480.86. Invalidation 7394.10 differs from stop by 17.38 > 0.15xATR (10.43). Confluences: no strong confluence (TP1 7495.02 is 14.85 below daily cash S1 7509.87; entry 7463.50 is 22.2 above weekly cash P 7441.33). Event collision: 28 May 15:30 broker (08:30 ET, before the 16:30 cash open) carries Core PCE m/m and y/y (HIGH), GDP q/q (HIGH), Initial Jobless Claims (HIGH), Durable Goods (HIGH) and Personal Income/Spending, per the news slice; these fall inside the holding window of every card, not on 29 May as the report states. ",
+  "direction_score": 0.44,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "5-day trend up (21-27 May cash closes 7450.3 to 7528.5) but D-1 row is Bearish by the M3 rule (close 7528.5 < open 7531.0 and RSI2 cash 3.82 < 50); two same-signed down/flat closes leave RSI2 at 3.82. Bullish trend offset by Bearish latest row = Neutral."
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session cash block: mean overlap 0.36 (<0.45), close at 94th percentile of 25d range (Range Top Bias), +7.2% from 23 Apr low; Trend up = +1."
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close z-score (25-session window, clipped +-1) 10-obs slope = -0.002, i.e. flat/compression = 0."
+   },
+   "kaufman": {
+    "signal": 0.304,
+    "weight": 0.15,
+    "contribution": 0.0455,
+    "basis": "KER period 13, EMA3 smoothed = 0.304 (> 0.13 threshold), direction up; series falling from 0.38 so class Trending Up - Moderate, not Strong. Signal = ker_value x sign(+)."
+   },
+   "sentiment": {
+    "signal": 0.32,
+    "weight": 0.15,
+    "contribution": 0.048,
+    "basis": "Carried from report 13b numeric tilt +0.32; news not verifiable from slices."
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM x sign(+1). Verified from VIX slice: cash closes 18.40 (20 May) -> 17.18 (27 May), falling while SPX rose. DAX confirms and USDX neutral are carried from report 10, not derivable from slices."
+   }
+  },
+  "regime": "TREND_UP"
+ }
+]

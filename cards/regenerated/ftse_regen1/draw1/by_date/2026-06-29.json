@@ -1,0 +1,206 @@
+[
+ {
+  "card_id": "2026-06-29_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market buy at 09:00 broker (07:00 UK) at the D-1 reference close (full-day 22:45 broker bar close of Fri 26 Jun 2026) = 10476.0",
+  "anchor_broker": "09:00",
+  "entry": 10476.0,
+  "stop": 10409.7,
+  "tp1": 10542.3,
+  "tp2": 10608.6,
+  "tp3": 10836.36,
+  "card_R_points": 66.3,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits TP1 (+1R); Unit 2 exits TP2 (+2R); on Unit 2 fill Unit 3 stop moves to entry + 0.2R = 10489.26 (above entry, profitable side). Unit 3 runner: time-stop at session close or price-stop at entry + 3 x ATR14 = 10836.36, whichever first. Thesis invalidation: daily close below weekly S1 10370.43 (stop ahead of invalidation).",
+  "suppressed": false,
+  "rationale": "Score +0.38 >= 0.25 -> LONG (components recorded). Reference close D-1 (Fri 26 Jun 2026) full-day prev_close_full 10476.0 (cash close 10516.4 not used: MARKET entry basis fixed to prev_close_full). ATR14 cash (14 sessions ending 26 Jun, LSE cash 10:00-18:30 broker) = 120.12. Stop anchor: tighter of (a) swing_low_5d_cash 10328.1 (23 Jun 10:00 broker) -> 10298.07 and (b) nearest support below entry = daily cash S1 10439.73 -> 10439.73 - 0.25x120.12 (30.03) = 10409.7; (b) chosen (R 66.3 vs 177.9). R = 66.3 pts = 0.55 x ATR (no wide-stop flag; inside 0.3-3.0 band; stop distance far under 3.5xATR cap). TP1 = entry+1R = 10542.3, TP2 = entry+2R = 10608.6 (2R = 1.10 ATR, no ambitious flag). TP3 field = runner price-stop cap entry+3xATR = 10836.36. Anchor 09:00 broker = 07:00 UK default. Invalidation = weekly cash S1 10370.43 (W26), 39.3 pts below stop (> 0.15 ATR). Confluence: entry sits 2.07 below daily cash P 10478.07. Calendar D: EUR CPI/HICP y/y 10:00 broker (MODERATE), EUR Consumer Price Expectations 12:00 broker (HIGH), BoE Pill 08:00 broker, Lagarde 22:00 broker (HIGH); holding period collides with these. Sentiment component carried from report 13b.",
+  "report_date": "2026-06-29",
+  "report_file": "FTSE100_EuroStoxx_Report_29Jun2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-28.csv",
+  "last_bar_broker": "2026-06-26 22:45",
+  "direction_score": 0.38,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "cash RSI2 79.33 (last two cash closes changes +82.9 then -21.6: mean gain 41.45, mean loss 10.8, RS 3.84; matches level file); all 5 of the last 5 cash sessions Close>Open (RSI2 65.19,100,100,100,79.33 all >50); 5-day trend Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session cash block: overlap 0.50 (0.45-0.55 band), persistence 0.46-0.54 (<0.55), directional mean 0.12-0.20 -> 5-week line Transitional, not clearly Trending; Transition rule = sign of last completed swing (up, 23 Jun low to 25 Jun high) x 0.5"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR method, historical z-score over 25 sessions, last-10 slope +0.084 (expansion) with price rising -> expansion-up +0.5; ATR14 cash 120.12 rising from 97.7 twelve sessions ago"
+   },
+   "kaufman_ker": {
+    "signal": 0.286,
+    "weight": 0.15,
+    "contribution": 0.043,
+    "basis": "KER period 13 on cash closes, EMA3 smoothed = +0.286 (>0.13, rising: Trending Up - Strong), x sign of medium move (+)"
+   },
+   "sentiment": {
+    "signal": 0.1,
+    "weight": 0.15,
+    "contribution": 0.015,
+    "basis": "CARRIED from report section 13b tilt +0.10; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "CONTRADICT: USDX 100.82->101.41 (+0.59%, rising), US500 7494.2->7345.6 (-1.98%), VIX 17.92->18.78 (+4.8%) all risk-negative vs a rising FTSE; DAX/Brent/STOXX not available (report reading not used in score)"
+   }
+  },
+  "regime": "TREND_UP"
+ },
+ {
+  "card_id": "2026-06-29_Trade_2",
+  "strategy": "Trade 2 - Pivot, TREND_UP (pivot breakout, long)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "Buy stop at 10485.73 = daily cash P + 0.10 x (R1 - P); 9.73 pts above D-1 reference close 10476.0 (valid BUY STOP side)",
+  "anchor_broker": "10:00",
+  "entry": 10485.73,
+  "stop": 10447.4,
+  "tp1": 10554.73,
+  "tp2": 10573.9,
+  "tp3": 10593.07,
+  "card_R_points": 38.33,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits TP1 = daily R1 10554.73; Unit 2 exits TP2 = R1.5 10573.9; on Unit 2 fill Unit 3 stop moves to entry + 0.2R = 10493.4; Unit 3 targets R2 10593.07. Thesis invalidation: daily close back below daily P 10478.07.",
+  "suppressed": false,
+  "rationale": "Regime TREND_UP -> TREND branch (pivot breakout, long) of M5 5.2b; one regime label for Trade 2/3A. Pivot tier = daily cash floor pivots from D-1 (Fri 26 Jun) cash H/L/C 10516.4/10401.4/10516.4: P 10478.0667, R1 10554.7333, S1 10439.7333, R2 10593.0667. Provenance: computed from the broker execution series (UK100 M15 feed) -> CORROBORATED by construction (M5 5.2a), so the single-source suppression gate does not fire. Entry = P + 0.10(R1-P) = 10478.0667 + 7.6667 = 10485.73. Stop = P - 0.8(P-S1) = 10478.0667 - 30.6667 = 10447.4; alternative S1 - 0.25ATR = 10409.70 is wider so the formula stop is tighter. R = 38.33 pts = 0.32 x ATR14 (cash 120.12; floor 0.3x = 36.04, passes). TP1 = R1 = 10554.73 (69.0 pts = 1.80R), TP2 = R1.5 = (R1+R2)/2 = 10573.9, TP3 = R2 = 10593.07. Order side: STOP at 10485.73 > prev_close_full 10476.0 (gap +9.73). Note the cash close 10516.4 is above the entry, but the last executable price (22:45 broker) is 10476.0, so a buy stop is the correct side. Anchor 10:00 broker (LSE cash open, matches cash-basis pivots). Invalidation = daily close below P 10478.07, 30.7 pts above stop (stop is inside invalidation). Confluence: entry 7.67 above P; TP1 R1; weekly cash P 10474.07 within 4 pts of daily P (strong confluence at the base).",
+  "report_date": "2026-06-29",
+  "report_file": "FTSE100_EuroStoxx_Report_29Jun2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-28.csv",
+  "last_bar_broker": "2026-06-26 22:45",
+  "direction_score": 0.38,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "cash RSI2 79.33 (last two cash closes changes +82.9 then -21.6: mean gain 41.45, mean loss 10.8, RS 3.84; matches level file); all 5 of the last 5 cash sessions Close>Open (RSI2 65.19,100,100,100,79.33 all >50); 5-day trend Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session cash block: overlap 0.50 (0.45-0.55 band), persistence 0.46-0.54 (<0.55), directional mean 0.12-0.20 -> 5-week line Transitional, not clearly Trending; Transition rule = sign of last completed swing (up, 23 Jun low to 25 Jun high) x 0.5"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR method, historical z-score over 25 sessions, last-10 slope +0.084 (expansion) with price rising -> expansion-up +0.5; ATR14 cash 120.12 rising from 97.7 twelve sessions ago"
+   },
+   "kaufman_ker": {
+    "signal": 0.286,
+    "weight": 0.15,
+    "contribution": 0.043,
+    "basis": "KER period 13 on cash closes, EMA3 smoothed = +0.286 (>0.13, rising: Trending Up - Strong), x sign of medium move (+)"
+   },
+   "sentiment": {
+    "signal": 0.1,
+    "weight": 0.15,
+    "contribution": 0.015,
+    "basis": "CARRIED from report section 13b tilt +0.10; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "CONTRADICT: USDX 100.82->101.41 (+0.59%, rising), US500 7494.2->7345.6 (-1.98%), VIX 17.92->18.78 (+4.8%) all risk-negative vs a rising FTSE; DAX/Brent/STOXX not available (report reading not used in score)"
+   }
+  },
+  "regime": "TREND_UP"
+ },
+ {
+  "card_id": "2026-06-29_Trade_3A",
+  "strategy": "Trade 3 - Momentum-Pullback (3A), regime TREND_UP",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at 10434.18 = 57.5% retracement of up-swing 10328.1 -> 10577.7; -41.82 pts vs D-1 reference close 10476.0 (below, valid BUY LIMIT side)",
+  "anchor_broker": "10:00",
+  "entry": 10434.18,
+  "stop": 10298.07,
+  "tp1": 10482.35,
+  "tp2": 10577.7,
+  "tp3": 10827.3,
+  "card_R_points": 136.11,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits TP1 = 38.2% retracement 10482.35; Unit 2 exits TP2 = 0% swing high 10577.7; on Unit 2 fill Unit 3 stop moves to entry + 0.2R = 10461.4. Unit 3 runner targets 100% extension 10827.3; if price prints above the extension, Unit 3 stop moves to the 50% mark of the entry-to-TP2 leg = 10505.94. Wide stop flag (R > 1 x ATR14). Thesis invalidation: daily close below 10328.1.",
+  "suppressed": false,
+  "rationale": "Regime TREND_UP -> 3A. Swing (cash basis, fixed): low 10328.1 at 2026-06-23 10:00 broker, high 10577.7 at 2026-06-25 17:15 broker; low precedes high so the active swing is UP; lookback used = 4 sessions (23-26 Jun, default). Magnitude 249.6 = 2.08 x ATR14 (cash 120.12) >= 2.00 -> qualifies (on the full-day basis 259.6 < 2x141.24 would not; cash basis is the fixed basis so no basis switch). Entry = 10577.7 - 0.575x249.6 = 10434.18. Stop = 10328.1 - 0.25x120.12 (30.03) = 10298.07. R = 136.11 = 1.13 x ATR -> WIDE STOP flag (R > 1 ATR); within 0.3-3.0 band and 3.5xATR cap (stop distance 1.13 ATR). TP1 38.2% = 10482.35 (48.17 pts), TP2 0% = 10577.7 (143.52 pts), TP3 100% ext = 10827.3. Order side: LIMIT 10434.18 < prev_close_full 10476.0 (gap -41.82). Anchor 10:00 broker. Confluence: entry 5.6 pts from daily cash S1 10439.73 (within 0.15 ATR = 18.0 -> strong confluence). Note Fri cash low 10401.4 already retraced 70.6% of the swing, so the limit needs a renewed dip. Invalidation: daily close below 10328.1 (30.03 above stop). Sentiment carried.",
+  "report_date": "2026-06-29",
+  "report_file": "FTSE100_EuroStoxx_Report_29Jun2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-28.csv",
+  "last_bar_broker": "2026-06-26 22:45",
+  "direction_score": 0.38,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "cash RSI2 79.33 (last two cash closes changes +82.9 then -21.6: mean gain 41.45, mean loss 10.8, RS 3.84; matches level file); all 5 of the last 5 cash sessions Close>Open (RSI2 65.19,100,100,100,79.33 all >50); 5-day trend Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session cash block: overlap 0.50 (0.45-0.55 band), persistence 0.46-0.54 (<0.55), directional mean 0.12-0.20 -> 5-week line Transitional, not clearly Trending; Transition rule = sign of last completed swing (up, 23 Jun low to 25 Jun high) x 0.5"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "ATR method, historical z-score over 25 sessions, last-10 slope +0.084 (expansion) with price rising -> expansion-up +0.5; ATR14 cash 120.12 rising from 97.7 twelve sessions ago"
+   },
+   "kaufman_ker": {
+    "signal": 0.286,
+    "weight": 0.15,
+    "contribution": 0.043,
+    "basis": "KER period 13 on cash closes, EMA3 smoothed = +0.286 (>0.13, rising: Trending Up - Strong), x sign of medium move (+)"
+   },
+   "sentiment": {
+    "signal": 0.1,
+    "weight": 0.15,
+    "contribution": 0.015,
+    "basis": "CARRIED from report section 13b tilt +0.10; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "CONTRADICT: USDX 100.82->101.41 (+0.59%, rising), US500 7494.2->7345.6 (-1.98%), VIX 17.92->18.78 (+4.8%) all risk-negative vs a rising FTSE; DAX/Brent/STOXX not available (report reading not used in score)"
+   }
+  },
+  "regime": "TREND_UP"
+ }
+]

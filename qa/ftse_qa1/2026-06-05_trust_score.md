@@ -82,9 +82,8 @@ Pivots:
 | P | 10,313.3 | absent | 10,449.6 | 10,429 | −20.6 | 10,370.4 | 10,455 | +84.6 |
 | S1 | 10,266.5 | absent | 10,339.2 | 10,388 | +48.8 | 10,180.8 | 10,362 | +181.2 |
 | S2 | 10,189.6 | absent | 10,268.4 | 10,347 | +78.6 | 9,951.6 | 10,296 | +344.4 |
-| S3 | 10,142.8 | absent | 10,158.0 | 10,306 | +148.0 | 9,762.0 | 10,296→10,203 | +441.0 |
+| S3 | 10,142.8 | absent | 10,158.0 | 10,306 | +148.0 | 9,762.0 | 10,203 | +441.0 |
 
-(Monthly S3 report value 10,203.) The report's weekly set implies a week range of 82 pts (R1−S1) against the real 181.2 (10,560.0 high 26 May, 10,378.8 low 28 May); the monthly set implies 160 pts against the real 418.8 (10,560.0 / 10,141.2). The weekly set matches a single-bar H 10,470 / L 10,388 / C 10,429. The "10,296–10,306 confluence (weekly S3 / monthly S2)" that anchors §11, §15, §16, §17 and Trades 2/3C does not exist in the level file.
 25-day range: real high 10,560.0 (26 May), low 10,141.2 (18 May); report uses 10,548 / 10,300 (the 4 Jun low). 5-day swing: 10,462.0 / 10,236.5 (report 10,468 / 10,300).
 
 ## 4. Total, band, override

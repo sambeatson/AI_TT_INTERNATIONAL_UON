@@ -116,7 +116,7 @@ Other counters:
 |---|---|---|---|---|
 | C1 Prompt adherence (20) | 2 | 0.40 | 8.0 | Row mean of 1.1/1.2/1.3 is 3.0. The restriction breach (5.4) lowers it one level. Source count is short and the date labels are wrong. |
 | C2 Structure (20) | 4 | 0.85 | 17.0 | All sections are present and ordered. The §6 table is missing columns and the §13 numbering differs from the brief. |
-| C3 Accuracy and evidence (25) | 1 | 0.20 | 5.0 | Three closes are off by 127 to 182 points and one by 21 points. RSI2 does not reproduce. 16 of the 18 pivot levels are off by more than 5 points and 10 by more than 40. Row mean (2, 2, 1, 1, 1) = 1.4, which rounds to 1. |
+| C3 Accuracy and evidence (25) | 1 | 0.20 | 5.0 | Three closes are off by 127 to 182 points and one by 21 points. RSI2 does not reproduce. All 21 pivot levels differ from the data by more than 5 points and 16 by more than 40. Row mean (2, 2, 1, 1, 1) = 1.4, which rounds to 1. |
 | C4 Reasoning and judgment (20) | 3 | 0.65 | 13.0 | The pillar reasoning is decent. Row mean (4, 4, 2, 4, 1) = 3.0. The cards drag the score down, and the shorts conflict with the §9 "avoid fresh shorts" protocol. |
 | C5 Currency and transparency (15) | 2 | 0.40 | 6.0 | The caveats are present but data are declared "CORROBORATED" when they are not. Row mean (2, 3, 3, 1) = 2.25, which rounds to 2. |
 

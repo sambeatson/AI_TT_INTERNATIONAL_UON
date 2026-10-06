@@ -1,0 +1,194 @@
+[
+ {
+  "report_date": "2026-07-06",
+  "report_file": "SP500_Report_06Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-06.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-05.csv",
+  "last_bar_broker": "2026-07-03 20:00:00",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-06_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score 0.2078 below 0.25 conviction threshold; no directional edge",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - |score| 0.2078 < 0.25 (NEUTRAL). No order.",
+  "suppressed": true,
+  "direction_score": 0.2078,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman": {
+    "signal": 0.095,
+    "weight": 0.15,
+    "contribution": 0.0143
+   },
+   "sentiment": {
+    "signal": 0.29,
+    "weight": 0.15,
+    "contribution": 0.0435,
+    "note": "carried from report 13b tilt +0.29; not verifiable"
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "note": "CONFIRM; only VIX derivable from slices (17.14 vs 18.78 on 26 Jun, falling while index rises); USDX/DAX carried from report"
+   }
+  },
+  "regime": "RANGE",
+  "rationale": "Direction score 0.2078 = 0.25*0 (short-term technical) + 0.20*0 (medium regime=Range) + 0.10*0 (VOLator compression) + 0.15*0.095 (KER smoothed, 13/EMA3, excl. holiday stubs, through 02 Jul) + 0.15*0.29 (sentiment, carried from report 13b, unverified) + 0.15*1.0 (cross-asset CONFIRM, sign +; VIX verified, USDX/DAX carried). Short-term technical set to 0: RSI2_cash 66.11 (levels file) lies inside the 30-70 neutral band, last genuine cash session 02 Jul is C<O with RSI2>50 = Neutral under the M3 trend rule, and the 5-day sequence is indecision (closes 7493.3/7489.1/7472.8 within 21 pts). The 03 Jul bar is a 15-bar holiday stub (range 12.2) and is not treated as a session for this signal; if it were (C>O, RSI2 66.1 -> Bullish +1) the score would be 0.458 and Trade 1 LONG - disclosed as the sensitivity. |0.2078| < 0.25 -> NEUTRAL, Trade 1 suppressed. Regime: RANGE. 25 cash sessions to 02 Jul (half-day stubs 19 Jun and 03 Jul excluded): overlap ratio 0.57 (>0.55), |directional mean| 0.04 (<0.25), smoothed KER(13,EMA3) +0.095 (|KER|<0.13), VOLator (ATR14/price z-score over 25, slope of last 10) -0.08 to -0.17 (<=0), so the M3 11b dual gate passes. Directional persistence (close-to-close) 0.52-0.54 is marginally above the 0.50 ranging line but below the 0.55 trending line and every trending criterion fails; report's RANGE call retained. Close sits at 60-69% of the 25d range (7243.1-7624.6)."
+ },
+ {
+  "report_date": "2026-07-06",
+  "report_file": "SP500_Report_06Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-06.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-05.csv",
+  "last_bar_broker": "2026-07-03 20:00:00",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-06_Trade_2",
+  "strategy": "Trade 2 - Pivot fade, RANGE regime",
+  "family": "Trade 2",
+  "direction": "n/a",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SUPPRESSED - RANGE fade at daily cash pivots fails the R floor (R 24.0-24.4 pts < 0.3xATR14 = 25.40)",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - honest construction fails the 0.3xATR14 R floor. No order.",
+  "suppressed": true,
+  "direction_score": 0.2078,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman": {
+    "signal": 0.095,
+    "weight": 0.15,
+    "contribution": 0.0143
+   },
+   "sentiment": {
+    "signal": 0.29,
+    "weight": 0.15,
+    "contribution": 0.0435,
+    "note": "carried from report 13b tilt +0.29; not verifiable"
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "note": "CONFIRM; only VIX derivable from slices (17.14 vs 18.78 on 26 Jun, falling while index rises); USDX/DAX carried from report"
+   }
+  },
+  "regime": "RANGE",
+  "rationale": "Branch RANGE (5.2a), daily cash tier. Levels file d_cash: P 7503.8667, R1 7510.3333, S1 7498.1333, R2 7516.0667, S2 7491.6667 (built from the 03 Jul holiday stub bar H 7509.6 L 7497.4 C 7504.6, range 12.2 pts). Price 7504.6 is 5.7 pts from R1 -> tier 1 (<1xATR14 84.66). Structure beyond the pivot is the next tier: short R1.5=(7510.3333+7516.0667)/2=7513.20, stop=R1.5+0.25*84.6643=7534.37, R=24.04 (0.284xATR); long S1.5=(7498.1333+7491.6667)/2=7494.90, stop=7494.90-21.17=7473.73, R=24.40 (0.288xATR). Both < 0.3xATR14 = 25.40 -> fails static floor. Moving the stop to R2/S2 or the entry/stop to the weekly or monthly tier solely to clear the floor would be basis-shopping, so the card is suppressed. Weekly cash tier (w_cash R1 7578.7/S1 7392.8) deliberately not substituted. Caveat: the daily cash pivots rest on a non-session stub; the 02 Jul cash session (H 7541.0 L 7427.0 C 7472.8) is not what the levels file uses. Regime: RANGE. 25 cash sessions to 02 Jul (half-day stubs 19 Jun and 03 Jul excluded): overlap ratio 0.57 (>0.55), |directional mean| 0.04 (<0.25), smoothed KER(13,EMA3) +0.095 (|KER|<0.13), VOLator (ATR14/price z-score over 25, slope of last 10) -0.08 to -0.17 (<=0), so the M3 11b dual gate passes. Directional persistence (close-to-close) 0.52-0.54 is marginally above the 0.50 ranging line but below the 0.55 trending line and every trending criterion fails; report's RANGE call retained. Close sits at 60-69% of the 25d range (7243.1-7624.6)."
+ },
+ {
+  "report_date": "2026-07-06",
+  "report_file": "SP500_Report_06Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-06.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-05.csv",
+  "last_bar_broker": "2026-07-03 20:00:00",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-06_Trade_3B",
+  "strategy": "Trade 3B - Mean-Reversion to range mid",
+  "family": "Trade 3B",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit 7324.7 (21.4% of 25-day cash range 7243.1-7624.6); reference close 7504.6 (03 Jul broker close, last executable), signed gap -179.9; active from 09:00 broker (07:00 UK)",
+  "entry": 7324.7,
+  "stop": 7281.25,
+  "tp1": 7433.85,
+  "tp2": 7586.45,
+  "tp3": null,
+  "card_R_points": 43.45,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 exits at range midpoint 7433.85 (+109.15 pts); U2 exits at 7586.45 (high - 10% width, +261.75 pts); on the U2 fill U3 stop moves to entry+0.2R = 7333.39 (+8.69 pts); U3 is a breakout runner with no fixed target, traced. R=43.45 pts = 0.51xATR14 (84.66, 14 daily cash-session bars, level file); no wide-stop flag. Invalidation: daily close below the 25-day low 7243.1 (38.15 pts beyond the stop). Caveat: counters other than VIX indicative; 06 Jul reopen gap risk.",
+  "suppressed": false,
+  "direction_score": 0.2078,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman": {
+    "signal": 0.095,
+    "weight": 0.15,
+    "contribution": 0.0143
+   },
+   "sentiment": {
+    "signal": 0.29,
+    "weight": 0.15,
+    "contribution": 0.0435,
+    "note": "carried from report 13b tilt +0.29; not verifiable"
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "note": "CONFIRM; only VIX derivable from slices (17.14 vs 18.78 on 26 Jun, falling while index rises); USDX/DAX carried from report"
+   }
+  },
+  "regime": "RANGE",
+  "rationale": "Branch 3B because regime=RANGE (dual gate passed, see regime). Range: swing_high_25d_cash 7624.6 (02 Jun 18:15 broker) / swing_low_25d_cash 7243.1 (09 Jun 19:30 broker), width 381.5. Eligibility 4.b: qualifying swing 7355.1 (29 Jun 17:15 broker) -> 7541.0 (02 Jul 16:45 broker) = 185.9 pts = 2.20xATR14_cash (84.6643), >= 2x (169.3), found at the default 4-session lookback; swing is up (high more recent than low). Direction LONG: score sign positive (+0.21), report's mild upward lean; price at 68.5% of range so the long zone 11.4-21.4% (7286.6-7324.7) is a deep pullback entry. Entry 21.4% = 7243.1+0.214*381.5 = 7324.74 -> 7324.7, the zone edge nearest the market (maximises fill probability); not chosen to clear the R floor (it clears it: R 43.45 vs floor 25.40). Stop = low+0.10*width = 7243.1+38.15 = 7281.25. TP1 = mid = 7243.1+0.5*381.5 = 7433.85. TP2 = high-0.10*width = 7624.6-38.15 = 7586.45. TP3 null (breakout runner per M5 3B). Checks: stop<entry<TP1<TP2; R/ATR14 0.51 within 0.3-3.0; TP1 distance 109.15 = 1.29xATR <= 2.5; buy limit 7324.7 <= prev_close_full 7504.6. Anchor 09:00 broker default (daily-open 07:00 UK); the report's logic does not argue for 02:00 or 16:30. Not overlapping any other live card. Regime: RANGE. 25 cash sessions to 02 Jul (half-day stubs 19 Jun and 03 Jul excluded): overlap ratio 0.57 (>0.55), |directional mean| 0.04 (<0.25), smoothed KER(13,EMA3) +0.095 (|KER|<0.13), VOLator (ATR14/price z-score over 25, slope of last 10) -0.08 to -0.17 (<=0), so the M3 11b dual gate passes. Directional persistence (close-to-close) 0.52-0.54 is marginally above the 0.50 ranging line but below the 0.55 trending line and every trending criterion fails; report's RANGE call retained. Close sits at 60-69% of the 25d range (7243.1-7624.6)."
+ }
+]

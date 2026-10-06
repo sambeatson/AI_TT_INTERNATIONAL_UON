@@ -1,0 +1,209 @@
+[
+ {
+  "card_id": "2026-05-29_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score +0.036, |score| < 0.25 conviction threshold (NEUTRAL)",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score +0.036 is inside +/-0.25; no card issued.",
+  "suppressed": true,
+  "rationale": "Reference close = prev_close_full 10407.1 (28 May full-day, last bar 2026-05-28 22:45 broker); cash close 10432.4. ATR14_cash = 117.3286 (14 cash sessions to 28 May, TR basis, 10:00-18:30 broker). 25d cash range 10141.2-10560.0 (width 418.8). Regime TRANSITION (fall-through, M3 11b). 5-day block: 4 up closes then a 75-pt down close, RSI2_cash 8.71, exhaustion/reversal -> Transitional. 5-week (25 cash sessions from 2026-04-22): overlap mean 0.44, persistence 0.54, close at 69.5th percentile of the 25-day range (range-top bias), VOLator slope negative -> neither Trending nor Ranging -> Transitional. Step 4 = Transitional (any). KER gate: smoothed KER +0.237 (Trending Up) disagrees with contracting VOLator -> not RANGE (|KER| >= 0.13) and not TREND. Same label as the report's own s9 'Transitional'. Direction score = -0.25 (short-term technical) +0.10 (medium regime) +0.00 (VOLator) +0.0356 (KER) +0.00 (sentiment, carried from report s13b) +0.15 (cross-asset CONFIRM) = +0.036 -> NEUTRAL -> Trade 1 suppressed (M5 s2b/s10). Test margin: even a Neutral technical reading (0) would give +0.286, but the D-1 row Bearish rule (Close<Open, RSI2<50) is applied as written. Anchor would have been 09:00 broker (07:00 UK) default.",
+  "report_date": "2026-05-29",
+  "report_file": "FTSE_100_Daily_Report_29May2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-28.csv",
+  "last_bar_broker": "2026-05-28 22:45",
+  "direction_score": 0.036,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "D-1 cash row Close 10432.4 < Open 10434.1 and RSI2_cash 8.71 < 50 -> Bearish per M3 Step 2a; 5-day sequence = up-then-reject exhaustion (closes 10462.3, 10470.4, 10500.7, 10507.9, 10432.4)"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION: sign of last completed swing x 0.5; last completed swing = up (21 May low 10344.7 -> 26 May high 10560.0)"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close contracting (0.01456 on 20 May -> 0.01125 on 28 May; 10-obs slope negative) -> compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.237,
+    "weight": 0.15,
+    "contribution": 0.0356,
+    "basis": "13-session cash-close KER raw +0.274, EMA3-smoothed +0.237 (positive: 13-session move up), classification Trending Up (>0.13)"
+   },
+   "sentiment": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "carried from report s13b tilt = 0.00 (unverifiable; QA notes the Morningstar evergreen row should not be scored, not adjusted here)"
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM (3 of 3 counters supportive, none contradict): USDX 21->28 May 99.237->99.023 falling; US500 7452.3->7578.2 rising; VIX 17.91->16.78 falling. Sign = + (medium-term swing/KER up). DAX, Euro Stoxx, Brent not available: report reading not used in the score"
+   },
+   "sum": 0.0356
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-05-29_Trade_2",
+  "strategy": "Trade 2 - Pivot, regime-aware (TRANSITION, breakout side only)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SUPPRESSED - TRANSITION breakout-side buy stop would have been 10423.31, but R is below the 0.3 x ATR floor",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - honest construction fails the 0.3 x ATR14 minimum R; no card issued.",
+  "suppressed": true,
+  "rationale": "Reference close = prev_close_full 10407.1 (28 May full-day, last bar 2026-05-28 22:45 broker); cash close 10432.4. ATR14_cash = 117.3286 (14 cash sessions to 28 May, TR basis, 10:00-18:30 broker). 25d cash range 10141.2-10560.0 (width 418.8). Regime TRANSITION (fall-through, M3 11b). 5-day block: 4 up closes then a 75-pt down close, RSI2_cash 8.71, exhaustion/reversal -> Transitional. 5-week (25 cash sessions from 2026-04-22): overlap mean 0.44, persistence 0.54, close at 69.5th percentile of the 25-day range (range-top bias), VOLator slope negative -> neither Trending nor Ranging -> Transitional. Step 4 = Transitional (any). KER gate: smoothed KER +0.237 (Trending Up) disagrees with contracting VOLator -> not RANGE (|KER| >= 0.13) and not TREND. Same label as the report's own s9 'Transitional'. Branch = TRANSITION (M5 5.2c): only breakout-side entry allowed, mirror of 5.2b. Breakout side = up (most recent failed retest of a 25d boundary: upper 10560.0 on 26 May, closed 10500.7; volator slope <=0 and cross-asset CONFIRM do not contradict). Counter-side long limit at S1/S2 is not permitted. Daily cash pivots from 28 May session (d_cash_*): P 10419.2667, R1 10459.7333, S1 10391.9333, flag CORROBORATED (execution series, M5 5.2a). Entry = P + 0.10 x (R1-P) = 10419.2667 + 4.0467 = 10423.3133 (buy stop; +16.2 above reference close 10407.1, correct side). Stop = P - 0.8 x (P-S1) = 10419.2667 - 21.8667 = 10397.4000; the confluence alternative (S1 - 0.25 x ATR = 10362.6) is wider so 'whichever is tighter' keeps 10397.4. R = 25.91 pts = 0.22 x ATR14 (117.33) < 0.30 x ATR floor of 35.20 -> static-integrity fail. No tier switch to weekly/monthly (basis-shopping barred) -> SUPPRESSED. Also: the breakout side is unconfirmed (D-1 cash close 10432.4 is 127.6 pts below the 10560.0 boundary; 3C gate fails), and the 10423 entry lies inside the range, not beyond the boundary. Calendar collisions that would have applied (per QA, from news slice): BoE Bailey speech 12:10 broker, Euro-area CPI flash 10:00 broker, MNI Chicago PMI 16:45 broker; US PCE already released 28 May.",
+  "report_date": "2026-05-29",
+  "report_file": "FTSE_100_Daily_Report_29May2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-28.csv",
+  "last_bar_broker": "2026-05-28 22:45",
+  "direction_score": 0.036,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "D-1 cash row Close 10432.4 < Open 10434.1 and RSI2_cash 8.71 < 50 -> Bearish per M3 Step 2a; 5-day sequence = up-then-reject exhaustion (closes 10462.3, 10470.4, 10500.7, 10507.9, 10432.4)"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION: sign of last completed swing x 0.5; last completed swing = up (21 May low 10344.7 -> 26 May high 10560.0)"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close contracting (0.01456 on 20 May -> 0.01125 on 28 May; 10-obs slope negative) -> compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.237,
+    "weight": 0.15,
+    "contribution": 0.0356,
+    "basis": "13-session cash-close KER raw +0.274, EMA3-smoothed +0.237 (positive: 13-session move up), classification Trending Up (>0.13)"
+   },
+   "sentiment": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "carried from report s13b tilt = 0.00 (unverifiable; QA notes the Morningstar evergreen row should not be scored, not adjusted here)"
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM (3 of 3 counters supportive, none contradict): USDX 21->28 May 99.237->99.023 falling; US500 7452.3->7578.2 rising; VIX 17.91->16.78 falling. Sign = + (medium-term swing/KER up). DAX, Euro Stoxx, Brent not available: report reading not used in the score"
+   },
+   "sum": 0.0356
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-05-29_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond the 25-day boundary by >= 0.25 x ATR",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - 3C gate fails (no confirmed break); no card issued.",
+  "suppressed": true,
+  "rationale": "Reference close = prev_close_full 10407.1 (28 May full-day, last bar 2026-05-28 22:45 broker); cash close 10432.4. ATR14_cash = 117.3286 (14 cash sessions to 28 May, TR basis, 10:00-18:30 broker). 25d cash range 10141.2-10560.0 (width 418.8). Regime TRANSITION (fall-through, M3 11b). 5-day block: 4 up closes then a 75-pt down close, RSI2_cash 8.71, exhaustion/reversal -> Transitional. 5-week (25 cash sessions from 2026-04-22): overlap mean 0.44, persistence 0.54, close at 69.5th percentile of the 25-day range (range-top bias), VOLator slope negative -> neither Trending nor Ranging -> Transitional. Step 4 = Transitional (any). KER gate: smoothed KER +0.237 (Trending Up) disagrees with contracting VOLator -> not RANGE (|KER| >= 0.13) and not TREND. Same label as the report's own s9 'Transitional'. Fork: TRANSITION -> 3C (fixed mapping; no 3A/3B substitution). Gate (M5 4d): confirmed break needs a daily close beyond swing_high_25d 10560.0 by >= 0.25 x ATR (>= 10589.3) or below swing_low_25d 10141.2 by >= 29.3 (<= 10111.9). D-1 cash close = 10432.4 (127.6 below the upper trigger line, 291.2 above the lower boundary) -> gate fails -> SUPPRESSED. Breakout side if it armed would be up (failed retest of the upper boundary 26 May, high 10560.0 close 10500.7); had it armed, stop = 10141.2 + 0.40 x 418.8 = 10308.7, TP1 = 10560.0 + 418.8, TP2 = 1.5 x MM (not issued).",
+  "report_date": "2026-05-29",
+  "report_file": "FTSE_100_Daily_Report_29May2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-28.csv",
+  "last_bar_broker": "2026-05-28 22:45",
+  "direction_score": 0.036,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25,
+    "basis": "D-1 cash row Close 10432.4 < Open 10434.1 and RSI2_cash 8.71 < 50 -> Bearish per M3 Step 2a; 5-day sequence = up-then-reject exhaustion (closes 10462.3, 10470.4, 10500.7, 10507.9, 10432.4)"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION: sign of last completed swing x 0.5; last completed swing = up (21 May low 10344.7 -> 26 May high 10560.0)"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close contracting (0.01456 on 20 May -> 0.01125 on 28 May; 10-obs slope negative) -> compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.237,
+    "weight": 0.15,
+    "contribution": 0.0356,
+    "basis": "13-session cash-close KER raw +0.274, EMA3-smoothed +0.237 (positive: 13-session move up), classification Trending Up (>0.13)"
+   },
+   "sentiment": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "carried from report s13b tilt = 0.00 (unverifiable; QA notes the Morningstar evergreen row should not be scored, not adjusted here)"
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15,
+    "basis": "CONFIRM (3 of 3 counters supportive, none contradict): USDX 21->28 May 99.237->99.023 falling; US500 7452.3->7578.2 rising; VIX 17.91->16.78 falling. Sign = + (medium-term swing/KER up). DAX, Euro Stoxx, Brent not available: report reading not used in the score"
+   },
+   "sum": 0.0356
+  },
+  "regime": "TRANSITION"
+ }
+]

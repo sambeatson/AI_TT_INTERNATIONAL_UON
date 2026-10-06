@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-13",
+  "report_file": "FTSE_EuroStoxx_Report_13Jul2026.md",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "suppressed": true,
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-13.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-12.csv",
+  "last_bar_broker": "2026-07-10 22:45:00",
+  "direction_score": -0.1051,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "product": 0.0,
+    "basis": "Cash RSI2 100.0 (changes 0.0 and +30.2; level file) but 5-day tape -1.6% (cash close 10,660.5 on 3 Jul to 10,487.2) and the 10 Jul row is Close<Open with RSI2>50 = Neutral/Transition; row trends Bearish/Bullish/Bearish/Neutral/Neutral -> Neutral"
+   },
+   "medium_term_regime": {
+    "value": -0.5,
+    "weight": 0.2,
+    "product": -0.1,
+    "basis": "TRANSITION -> sign of last completed swing x 0.5; swing high 10,739.6 (7 Jul) to swing low 10,380.4 (9 Jul) is down, completed (10 Jul low 10,451.1 above it)"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "Slope of last 10 scaled Parkinson-volatility z-scores is negative (about -0.02 daily, -0.04 on 5d window) = compression -> 0"
+   },
+   "kaufman_ker": {
+    "value": 0.096,
+    "weight": 0.15,
+    "product": 0.0144,
+    "basis": "KER(13) on cash closes, EMA3 smoothed = +0.096 (raw 0.052): Ranging - Upward Bias, below the 0.13 trend threshold"
+   },
+   "sentiment": {
+    "value": 0.17,
+    "weight": 0.15,
+    "product": 0.0255,
+    "basis": "Carried from report 13b numeric tilt +0.17; not verifiable from data"
+   },
+   "cross_asset": {
+    "value": -0.3,
+    "weight": 0.15,
+    "product": -0.045,
+    "basis": "MIXED x 0.3 x sign(-1 medium-term down): USDX 3 Jul 100.821 -> 10 Jul 100.976 (+0.15%) Neutral; US500 7,504.6 -> 7,579.9 (+1.0%) Contradicts; VIX 17.14 -> 16.66 (falling) Contradicts; DAX 40 carried from report (Confirms, not verifiable here); Euro Stoxx 50 and Brent not available"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-13_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (SUPPRESSED: conviction below gate)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - |score| 0.105 < 0.25 conviction gate (score -0.1051). No entry, stop, R or targets issued.",
+  "rationale": "Gate tested: |direction score| vs 0.25. Score = sum of signal x weight = 0.0000 -0.1000 +0.0000 +0.0144 +0.0255 -0.0450 = -0.1051 (components in direction_components; price-derived parts from the level file/slice, sentiment +0.17 carried from report 13b and unverifiable). |-0.105| < 0.25 -> NEUTRAL -> Trade 1 suppressed, as the QA feedback required (report's -0.21 was also below the gate but issued live). TRANSITION: 5-day block (6-10 Jul, cash) overlap 0.34 but directional persistence 0.00 and |directional mean| 0.25, VOLator slope negative = neither Trending (needs persistence>0.55, overlap<0.45 and positive slope, or |mean|>0.35) nor Ranging (needs overlap>0.55); 25-day block overlap 0.51, persistence 0.39 = neither; synthesis is Transitional -> fall-through label TRANSITION. Smoothed KER +0.096 is inside the 0.13 trend threshold and not in conflict. Report's own reading (Transitional, bearish tilt) agrees. Reference close (cash) 10,487.2 on 2026-07-10; prev_close_full 10,522.4; ATR14 cash 122.2786 (14-session simple mean of true range on 08:00-16:30 London bars; reproduced from the slice); 0.25xATR=30.57, 0.3xATR=36.68, 3xATR=366.8, 3.5xATR=427.97. Sensitivity: the only way the gate clears is a Bearish short-term call (-0.25 weight) which the data do not support (RSI2 100 on cash, session row Neutral). Report's price figures (close 10,497.29, RSI2 20.9, ATR '60-70') were not used.",
+  "entry_mode_text": "MARKET (suppressed; no order issued)"
+ },
+ {
+  "report_date": "2026-07-13",
+  "report_file": "FTSE_EuroStoxx_Report_13Jul2026.md",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "suppressed": true,
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-13.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-12.csv",
+  "last_bar_broker": "2026-07-10 22:45:00",
+  "direction_score": -0.1051,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "product": 0.0,
+    "basis": "Cash RSI2 100.0 (changes 0.0 and +30.2; level file) but 5-day tape -1.6% (cash close 10,660.5 on 3 Jul to 10,487.2) and the 10 Jul row is Close<Open with RSI2>50 = Neutral/Transition; row trends Bearish/Bullish/Bearish/Neutral/Neutral -> Neutral"
+   },
+   "medium_term_regime": {
+    "value": -0.5,
+    "weight": 0.2,
+    "product": -0.1,
+    "basis": "TRANSITION -> sign of last completed swing x 0.5; swing high 10,739.6 (7 Jul) to swing low 10,380.4 (9 Jul) is down, completed (10 Jul low 10,451.1 above it)"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "Slope of last 10 scaled Parkinson-volatility z-scores is negative (about -0.02 daily, -0.04 on 5d window) = compression -> 0"
+   },
+   "kaufman_ker": {
+    "value": 0.096,
+    "weight": 0.15,
+    "product": 0.0144,
+    "basis": "KER(13) on cash closes, EMA3 smoothed = +0.096 (raw 0.052): Ranging - Upward Bias, below the 0.13 trend threshold"
+   },
+   "sentiment": {
+    "value": 0.17,
+    "weight": 0.15,
+    "product": 0.0255,
+    "basis": "Carried from report 13b numeric tilt +0.17; not verifiable from data"
+   },
+   "cross_asset": {
+    "value": -0.3,
+    "weight": 0.15,
+    "product": -0.045,
+    "basis": "MIXED x 0.3 x sign(-1 medium-term down): USDX 3 Jul 100.821 -> 10 Jul 100.976 (+0.15%) Neutral; US500 7,504.6 -> 7,579.9 (+1.0%) Contradicts; VIX 17.14 -> 16.66 (falling) Contradicts; DAX 40 carried from report (Confirms, not verifiable here); Euro Stoxx 50 and Brent not available"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-13_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION branch, breakout side only: SUPPRESSED, R below 0.3xATR floor)",
+  "family": "Trade 2",
+  "direction": "n/a",
+  "entry_mode": "CONDITIONAL",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - TRANSITION permits breakout-side Trade 2 only (P +/- 0.10x(R1-P) entry, stop P -/+ 0.8x(P-S1 / R1-P)); on either side the honest construction gives R 22.0-26.3 pts = 0.18-0.22xATR14, below the 0.3xATR14 floor (36.68). Not widened to clear the floor.",
+  "rationale": "TRANSITION: 5-day block (6-10 Jul, cash) overlap 0.34 but directional persistence 0.00 and |directional mean| 0.25, VOLator slope negative = neither Trending (needs persistence>0.55, overlap<0.45 and positive slope, or |mean|>0.35) nor Ranging (needs overlap>0.55); 25-day block overlap 0.51, persistence 0.39 = neither; synthesis is Transitional -> fall-through label TRANSITION. Smoothed KER +0.096 is inside the 0.13 trend threshold and not in conflict. Report's own reading (Transitional, bearish tilt) agrees. Reference close (cash) 10,487.2 on 2026-07-10; prev_close_full 10,522.4; ATR14 cash 122.2786 (14-session simple mean of true range on 08:00-16:30 London bars; reproduced from the slice); 0.25xATR=30.57, 0.3xATR=36.68, 3xATR=366.8, 3.5xATR=427.97. Branch: TRANSITION -> breakout side only; no counter-side fade limit at R1 (that is the RANGE form the original used). Pivots: daily cash P 10,481.0333, R1 10,510.9667, S1 10,457.2667 (prior session 10 Jul, execution series, CORROBORATED by construction). UP side (retests of the 25d high 10,739.6 on 6 Jul (10,726.7) and 7 Jul (10,739.6), both closing back inside): entry P+0.10x(R1-P)=10,484.03 (buy limit, at/below prev_close_full 10,522.4, gap -38.4); stop P-0.8x(P-S1)=10,462.02; R=22.01=0.18xATR. Prior-day low 10,451.1 sits just under S1 so the S1-0.25xATR alternative (10,426.7) exists, but the rule takes whichever is TIGHTER, which is 10,462.02; using 10,426.7 only to clear the floor would be basis-shopping. DOWN side: entry P-0.10x(P-S1)=10,478.66 (sell stop, below prev_close_full); stop P+0.8x(R1-P)=10,504.98; R=26.32=0.22xATR. Both < 0.3xATR14=36.68 -> card suppressed (static integrity floor). Breakout side is also not confirmed: volator slope negative (contraction) and cross-asset MIXED, so no direction identified. Single-source flag: not applicable (pivots from broker execution series). Report's R 29 pts card and TP ladder discarded.",
+  "entry_mode_text": "CONDITIONAL (suppressed; no order issued)"
+ },
+ {
+  "report_date": "2026-07-13",
+  "report_file": "FTSE_EuroStoxx_Report_13Jul2026.md",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "suppressed": true,
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-13.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-12.csv",
+  "last_bar_broker": "2026-07-10 22:45:00",
+  "direction_score": -0.1051,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "product": 0.0,
+    "basis": "Cash RSI2 100.0 (changes 0.0 and +30.2; level file) but 5-day tape -1.6% (cash close 10,660.5 on 3 Jul to 10,487.2) and the 10 Jul row is Close<Open with RSI2>50 = Neutral/Transition; row trends Bearish/Bullish/Bearish/Neutral/Neutral -> Neutral"
+   },
+   "medium_term_regime": {
+    "value": -0.5,
+    "weight": 0.2,
+    "product": -0.1,
+    "basis": "TRANSITION -> sign of last completed swing x 0.5; swing high 10,739.6 (7 Jul) to swing low 10,380.4 (9 Jul) is down, completed (10 Jul low 10,451.1 above it)"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "Slope of last 10 scaled Parkinson-volatility z-scores is negative (about -0.02 daily, -0.04 on 5d window) = compression -> 0"
+   },
+   "kaufman_ker": {
+    "value": 0.096,
+    "weight": 0.15,
+    "product": 0.0144,
+    "basis": "KER(13) on cash closes, EMA3 smoothed = +0.096 (raw 0.052): Ranging - Upward Bias, below the 0.13 trend threshold"
+   },
+   "sentiment": {
+    "value": 0.17,
+    "weight": 0.15,
+    "product": 0.0255,
+    "basis": "Carried from report 13b numeric tilt +0.17; not verifiable from data"
+   },
+   "cross_asset": {
+    "value": -0.3,
+    "weight": 0.15,
+    "product": -0.045,
+    "basis": "MIXED x 0.3 x sign(-1 medium-term down): USDX 3 Jul 100.821 -> 10 Jul 100.976 (+0.15%) Neutral; US500 7,504.6 -> 7,579.9 (+1.0%) Contradicts; VIX 17.14 -> 16.66 (falling) Contradicts; DAX 40 carried from report (Confirms, not verifiable here); Euro Stoxx 50 and Brent not available"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-13_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (SUPPRESSED: no confirmed 25-day break)",
+  "family": "Trade 3C",
+  "direction": "n/a",
+  "entry_mode": "CONDITIONAL",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - no daily close beyond the 25-day boundary by >= 0.25xATR14 (30.57): close 10,487.2 is inside 10,126.2-10,739.6; needs close > 10,770.2 or < 10,095.6.",
+  "rationale": "TRANSITION: 5-day block (6-10 Jul, cash) overlap 0.34 but directional persistence 0.00 and |directional mean| 0.25, VOLator slope negative = neither Trending (needs persistence>0.55, overlap<0.45 and positive slope, or |mean|>0.35) nor Ranging (needs overlap>0.55); 25-day block overlap 0.51, persistence 0.39 = neither; synthesis is Transitional -> fall-through label TRANSITION. Smoothed KER +0.096 is inside the 0.13 trend threshold and not in conflict. Report's own reading (Transitional, bearish tilt) agrees. Reference close (cash) 10,487.2 on 2026-07-10; prev_close_full 10,522.4; ATR14 cash 122.2786 (14-session simple mean of true range on 08:00-16:30 London bars; reproduced from the slice); 0.25xATR=30.57, 0.3xATR=36.68, 3xATR=366.8, 3.5xATR=427.97. Fork: regime TRANSITION -> 3C (not 3A: the 5-day swing 10,739.6 -> 10,380.4 = 359.2 pts = 2.94xATR would qualify in magnitude, but 3A needs TREND_UP/TREND_DOWN and may not be substituted; the original report's 'TRANSITION breakout-side long' at 10,540 matched neither form). Gate tested: confirmed close beyond 25d boundary by >= 0.25xATR14 = 30.57 -> upper trigger 10,739.6+30.57=10,770.2, lower trigger 10,126.2-30.57=10,095.6; D-1 cash close 10,487.2 sits at 59% of the 25d range (width 613.4) -> FAIL -> suppressed. Pending levels, if a later session closes through a boundary: long stop would be 10,126.2+0.40x613.4=10,371.6, TP1 10,739.6+613.4=11,353.0 (commentary only, not a card).",
+  "entry_mode_text": "CONDITIONAL (suppressed; no order issued)"
+ }
+]

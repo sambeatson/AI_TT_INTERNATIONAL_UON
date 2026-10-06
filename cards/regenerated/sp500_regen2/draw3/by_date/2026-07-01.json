@@ -1,0 +1,209 @@
+[
+ {
+  "report_date": "2026-07-01",
+  "report_file": "SP500_Report_01Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-01.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-30.csv",
+  "last_bar_broker": "2026-06-30 23:45:00",
+  "direction_score": 0.411,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contrib": 0.25,
+    "basis": "30 Jun cash close 7493.3 > open 7446.2 and RSI2_cash=100.0 (two consecutive up closes) -> Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contrib": 0.1,
+    "basis": "TRANSITION: sign of last completed swing (up-leg 7303.1 on 26 Jun -> 7513.4 on 30 Jun) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "basis": "ATR14 cash falling (108.1 -> 97.5 over last 10 sessions, slope about -1.0/session): compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.109,
+    "weight": 0.15,
+    "contrib": 0.0164,
+    "basis": "KER(13) on cash closes raw +0.144, EMA3 smoothed +0.109 (< 0.13 threshold: ranging-upward-bias, not trending)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contrib": 0.045,
+    "basis": "carried from report s13b tilt +0.30; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contrib": 0.0,
+    "basis": "only VIX derivable from slices (cash close 18.63 on 26 Jun -> 17.54 on 30 Jun, confirms) ; fewer than two verifiable counters -> NEUTRAL=0. Report's USDX/DAX reads not verifiable and not used"
+   },
+   "sum": 0.411
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-01_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (market at daily-open anchor)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market at the 07:00 UK (09:00 broker) daily-open anchor; fill level = prev_close_full 7487.2 (30 Jun full-day close; reference close, gap 0.0)",
+  "anchor_broker": "09:00",
+  "entry": 7487.2,
+  "stop": 7427.83,
+  "tp1": 7546.57,
+  "tp2": 7605.94,
+  "tp3": 7779.61,
+  "card_R_points": 59.37,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits TP1 7546.57 (+59.37 pts, +1R); U2 exits TP2 7605.94 (+118.74 pts, +2R); on U2 fill U3 stop moves to 7499.07 (entry +0.2R = +11.87 pts). U3 runner: session-close time-stop OR 3xATR14 price cap 7779.61 (+292.41 pts), whichever first. Stop 7427.83 (-59.37 pts). R/ATR14 = 0.61: no wide-stop flag; 2R=118.7 < 3xATR so no 'TP2 ambitious' flag. Thesis invalidation: daily close below weekly cash P 7392.57 (beyond the stop; stop ahead of invalidation).",
+  "suppressed": false,
+  "rationale": "Score +0.411 >= 0.25 -> LONG, Trade 1 live. Anchor 09:00 broker = 07:00 UK, the S&P instance daily-open anchor; the report's logic gives no reason to move it. ENTRY: MARKET at prev_close_full = 7487.2 (level file, last bar 2026-06-30 23:45 broker). Cash basis ATR14_cash = 97.4714 (window: 14 cash sessions to 30 Jun; 16:30-22:45 broker bars). STOP per M5 s4c: tighter of (a) 5d swing low cash 7303.1 (bar 2026-06-26 16:30 broker) -0.25xATR = 7278.73, or (b) nearest structural support below entry = daily cash S1 7452.2 - 0.25xATR (24.37) = 7427.83. Tighter = (b). Daily P 7482.8 sits only 4.4 pts under entry and is the pivot axis rather than a stand-off support; S1 is the first pivot support tier (also the QA-endorsed anchor). R = 7487.2 - 7427.83 = 59.37 = 0.61xATR14 (within 0.3-3.0, within 3.5xATR cap 341.15, TP1 distance 59.37 < 2.5xATR 243.68). TP1=entry+1R=7546.57; TP2=entry+2R=7605.94; TP3=entry+3xATR14=7779.61 (price cap of the runner). U3 BE stop = entry+0.2R=7499.07. Report's own numbers (entry 7413 limit, stop 7377, 5-session ATR proxy 73) are discarded: they came from the 29 Jun session. Report contribution: direction/regime reading and sentiment tilt +0.30 only. Event risk: ADP 15:15, S&P Mfg PMI 16:45, ISM Mfg 17:00 broker on D, all inside the holding window. Regime TRANSITION (default fall-through, M3 s11b). Data: smoothed KER(13,EMA3)=+0.109 < 0.13 so TREND_UP is not available (report's KER 0.77 does not reproduce; raw KER on cash closes 0.144). 5-day block: overlap 0.60 (>0.55) but persistence 0.60 (>0.50) and a 4-down/2-up reversal with RSI2 100 -> Transitional (mixed). 25-day block: overlap 0.56, persistence 0.56 (not <0.50), mean direction +0.04, range position 66% (mid-range) -> Transitional/Ranging mixed; Step4 synthesis therefore not 'Ranging-Ranging', so RANGE is not permitted and TREND_UP not supported. The report's Transitional-to-Trending read is carried only as narrative."
+ },
+ {
+  "report_date": "2026-07-01",
+  "report_file": "SP500_Report_01Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-01.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-30.csv",
+  "last_bar_broker": "2026-06-30 23:45:00",
+  "direction_score": 0.411,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contrib": 0.25,
+    "basis": "30 Jun cash close 7493.3 > open 7446.2 and RSI2_cash=100.0 (two consecutive up closes) -> Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contrib": 0.1,
+    "basis": "TRANSITION: sign of last completed swing (up-leg 7303.1 on 26 Jun -> 7513.4 on 30 Jun) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "basis": "ATR14 cash falling (108.1 -> 97.5 over last 10 sessions, slope about -1.0/session): compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.109,
+    "weight": 0.15,
+    "contrib": 0.0164,
+    "basis": "KER(13) on cash closes raw +0.144, EMA3 smoothed +0.109 (< 0.13 threshold: ranging-upward-bias, not trending)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contrib": 0.045,
+    "basis": "carried from report s13b tilt +0.30; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contrib": 0.0,
+    "basis": "only VIX derivable from slices (cash close 18.63 on 26 Jun -> 17.54 on 30 Jun, confirms) ; fewer than two verifiable counters -> NEUTRAL=0. Report's USDX/DAX reads not verifiable and not used"
+   },
+   "sum": 0.411
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-01_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch (breakout side, long) - SUPPRESSED",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SUPPRESSED - risk floor failed on honest construction",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: honest TRANSITION-branch construction gives R below the 0.3xATR14 floor.",
+  "suppressed": true,
+  "rationale": "Branch TRANSITION -> breakout side only (long, same side as Trade 3C bias: lower 25d boundary 7243.1 held on 9-11 Jun and 26 Jun, price in upper half, score positive). Build mirrors s5.2b with cash daily pivots (P 7482.8, R1 7523.9, S1 7452.2, R2 7554.5): entry = P+0.10x(R1-P) = 7486.91 (buy limit, below prev_close_full 7487.2: correct side, gap -0.29); stop = P-0.8x(P-S1) = 7458.32 (template stop). The alternative 'just below S1 minus 0.25xATR' = 7427.83 is wider, and the rule takes whichever is tighter, so it is not available. R = 7486.91-7458.32 = 28.59 = 0.293xATR14 (97.4714) < floor 0.3xATR = 29.24 -> fails the static-integrity floor. Not widening the stop or switching tier to clear the floor (no basis-shopping): card suppressed. Would-be TPs R1 7523.9 / R1.5 7539.2 / R2 7554.5 are not issued. Regime TRANSITION (default fall-through, M3 s11b). Data: smoothed KER(13,EMA3)=+0.109 < 0.13 so TREND_UP is not available (report's KER 0.77 does not reproduce; raw KER on cash closes 0.144). 5-day block: overlap 0.60 (>0.55) but persistence 0.60 (>0.50) and a 4-down/2-up reversal with RSI2 100 -> Transitional (mixed). 25-day block: overlap 0.56, persistence 0.56 (not <0.50), mean direction +0.04, range position 66% (mid-range) -> Transitional/Ranging mixed; Step4 synthesis therefore not 'Ranging-Ranging', so RANGE is not permitted and TREND_UP not supported. The report's Transitional-to-Trending read is carried only as narrative."
+ },
+ {
+  "report_date": "2026-07-01",
+  "report_file": "SP500_Report_01Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-01.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-30.csv",
+  "last_bar_broker": "2026-06-30 23:45:00",
+  "direction_score": 0.411,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contrib": 0.25,
+    "basis": "30 Jun cash close 7493.3 > open 7446.2 and RSI2_cash=100.0 (two consecutive up closes) -> Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contrib": 0.1,
+    "basis": "TRANSITION: sign of last completed swing (up-leg 7303.1 on 26 Jun -> 7513.4 on 30 Jun) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "basis": "ATR14 cash falling (108.1 -> 97.5 over last 10 sessions, slope about -1.0/session): compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.109,
+    "weight": 0.15,
+    "contrib": 0.0164,
+    "basis": "KER(13) on cash closes raw +0.144, EMA3 smoothed +0.109 (< 0.13 threshold: ranging-upward-bias, not trending)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contrib": 0.045,
+    "basis": "carried from report s13b tilt +0.30; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contrib": 0.0,
+    "basis": "only VIX derivable from slices (cash close 18.63 on 26 Jun -> 17.54 on 30 Jun, confirms) ; fewer than two verifiable counters -> NEUTRAL=0. Report's USDX/DAX reads not verifiable and not used"
+   },
+   "sum": 0.411
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-01_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond the 25-day boundary",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: s4d gate failed.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION -> fork 3C (no substitution of 3A/3B). Gate s4d: 25d cash range high 7624.6 (bar 2026-06-02 18:15 broker) / low 7243.1 (bar 2026-06-09 19:30 broker), width 381.5. Needs a daily close >= 7624.6+0.25xATR(24.37)=7648.97 for a long break (or <= 7243.1-24.37=7218.73 for a short). D-1 cash close 7493.3 is 131.3 pts below the upper boundary and 250.2 above the lower: no confirmed break -> suppressed. Direction shown LONG is tentative (lower boundary held on 9-11 Jun and 26 Jun; score +0.411) and is not tradable until the gate passes. The report's 3A momentum-pullback does not apply: its TREND_UP label is not supported by smoothed KER 0.109. Note for reference only (commentary, not a card): the 3A swing 7303.1->7513.4 (210.3 = 2.16xATR) would qualify but 3A is not the selected fork. Regime TRANSITION (default fall-through, M3 s11b). Data: smoothed KER(13,EMA3)=+0.109 < 0.13 so TREND_UP is not available (report's KER 0.77 does not reproduce; raw KER on cash closes 0.144). 5-day block: overlap 0.60 (>0.55) but persistence 0.60 (>0.50) and a 4-down/2-up reversal with RSI2 100 -> Transitional (mixed). 25-day block: overlap 0.56, persistence 0.56 (not <0.50), mean direction +0.04, range position 66% (mid-range) -> Transitional/Ranging mixed; Step4 synthesis therefore not 'Ranging-Ranging', so RANGE is not permitted and TREND_UP not supported. The report's Transitional-to-Trending read is carried only as narrative."
+ }
+]

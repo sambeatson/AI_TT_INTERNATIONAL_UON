@@ -27,7 +27,7 @@
     "signal": 0.0,
     "weight": 0.1,
     "contribution": 0.0,
-    "basis": "slope of last 10 scaled ATR/close observations = -0.11 (compression) -> 0"
+    "basis": "slope of last 10 scaled observations of ATR14/close (z-score vs own history, clipped to +-1; history limited to ~24 observations) = -0.11 (compression) -> 0"
    },
    "kaufman_ker": {
     "signal": 0.201,
@@ -45,7 +45,7 @@
     "signal": 1.0,
     "weight": 0.15,
     "contribution": 0.15,
-    "basis": "verified from slices, 5 sessions to 27 May: US500 +1.36% (cash-hours close 7,517.5 vs 7,416.9... 19 May to 27 May) confirms; VIX 18.80 -> 17.58 falling confirms; USDX +0.07% flat = neutral; 2 of 3 verifiable counters confirm, none contradict -> CONFIRM. DAX 40 and Euro Stoxx 50 unavailable: report reading (rising, confirms) carried, not counted"
+    "basis": "verified from slices, 20 May close to 27 May close (LSE-hours closes): US500 7,416.9 -> 7,517.5 (+1.36%) confirms; VIX 18.55 -> 17.58 falling confirms; USDX 99.110 -> 99.181 (+0.07%) flat = neutral; 2 of 3 verifiable counters confirm, none contradict -> CONFIRM. DAX 40 and Euro Stoxx 50 unavailable: report reading (rising, confirms) carried, not counted"
    }
   },
   "card_id": "2026-05-28_Trade_1",
@@ -95,7 +95,7 @@
     "signal": 0.0,
     "weight": 0.1,
     "contribution": 0.0,
-    "basis": "slope of last 10 scaled ATR/close observations = -0.11 (compression) -> 0"
+    "basis": "slope of last 10 scaled observations of ATR14/close (z-score vs own history, clipped to +-1; history limited to ~24 observations) = -0.11 (compression) -> 0"
    },
    "kaufman_ker": {
     "signal": 0.201,
@@ -113,7 +113,7 @@
     "signal": 1.0,
     "weight": 0.15,
     "contribution": 0.15,
-    "basis": "verified from slices, 5 sessions to 27 May: US500 +1.36% (cash-hours close 7,517.5 vs 7,416.9... 19 May to 27 May) confirms; VIX 18.80 -> 17.58 falling confirms; USDX +0.07% flat = neutral; 2 of 3 verifiable counters confirm, none contradict -> CONFIRM. DAX 40 and Euro Stoxx 50 unavailable: report reading (rising, confirms) carried, not counted"
+    "basis": "verified from slices, 20 May close to 27 May close (LSE-hours closes): US500 7,416.9 -> 7,517.5 (+1.36%) confirms; VIX 18.55 -> 17.58 falling confirms; USDX 99.110 -> 99.181 (+0.07%) flat = neutral; 2 of 3 verifiable counters confirm, none contradict -> CONFIRM. DAX 40 and Euro Stoxx 50 unavailable: report reading (rising, confirms) carried, not counted"
    }
   },
   "card_id": "2026-05-28_Trade_2",
@@ -163,7 +163,7 @@
     "signal": 0.0,
     "weight": 0.1,
     "contribution": 0.0,
-    "basis": "slope of last 10 scaled ATR/close observations = -0.11 (compression) -> 0"
+    "basis": "slope of last 10 scaled observations of ATR14/close (z-score vs own history, clipped to +-1; history limited to ~24 observations) = -0.11 (compression) -> 0"
    },
    "kaufman_ker": {
     "signal": 0.201,
@@ -181,7 +181,7 @@
     "signal": 1.0,
     "weight": 0.15,
     "contribution": 0.15,
-    "basis": "verified from slices, 5 sessions to 27 May: US500 +1.36% (cash-hours close 7,517.5 vs 7,416.9... 19 May to 27 May) confirms; VIX 18.80 -> 17.58 falling confirms; USDX +0.07% flat = neutral; 2 of 3 verifiable counters confirm, none contradict -> CONFIRM. DAX 40 and Euro Stoxx 50 unavailable: report reading (rising, confirms) carried, not counted"
+    "basis": "verified from slices, 20 May close to 27 May close (LSE-hours closes): US500 7,416.9 -> 7,517.5 (+1.36%) confirms; VIX 18.55 -> 17.58 falling confirms; USDX 99.110 -> 99.181 (+0.07%) flat = neutral; 2 of 3 verifiable counters confirm, none contradict -> CONFIRM. DAX 40 and Euro Stoxx 50 unavailable: report reading (rising, confirms) carried, not counted"
    }
   },
   "card_id": "2026-05-28_Trade_3C",

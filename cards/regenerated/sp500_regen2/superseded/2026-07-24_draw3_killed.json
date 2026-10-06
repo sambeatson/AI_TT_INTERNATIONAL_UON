@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-24",
+  "report_file": "SP500_Report_24Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-24.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-23.csv",
+  "last_bar_broker": "2026-07-23 23:45",
+  "direction_score": -0.544,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -0.5,
+    "weight": 0.25,
+    "contrib": -0.125,
+    "note": "5-session cash trend down (16 Jul close 7536.2 -> 23 Jul 7405.5, lower highs/lows; report 8) = -1; RSI2_cash = 0.0 (level file) is extreme oversold, read as neutral/mean-reversion offset per report 8 caution; average -0.5"
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contrib": -0.1,
+    "note": "TRANSITION: sign of last completed swing (15 Jul 7582.8 -> 23 Jul 7375.3, down) x 0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contrib": -0.05,
+    "note": "expansion with price falling: ATR14 cash 63.97 (22 Jul) -> 70.16 (23 Jul), VIX 17.55 -> 18.58 full-day last; report 9 reads expansion; expansion-down = -0.5"
+   },
+   "kaufman": {
+    "signal": -0.2437,
+    "weight": 0.15,
+    "contrib": -0.0366,
+    "note": "13-session ER on cash closes = -0.2437 (computed from slice; report quoted -0.16 smoothed)"
+   },
+   "sentiment": {
+    "signal": -0.55,
+    "weight": 0.15,
+    "contrib": -0.0825,
+    "note": "CARRIED from report 13b numeric tilt -0.55 (QA arithmetic gives -0.571); news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": -1.0,
+    "weight": 0.15,
+    "contrib": -0.15,
+    "note": "CONFIRM x sign(-1): VIX verified rising from slice (16 Jul 17.40 -> 23 Jul 18.58 full-day last; cash 18.43); USDX rising per QA (100.741 -> 101.43); DAX falling carried from report 10, not verifiable"
+   }
+  },
+  "regime": "TRANSITION (TRANSITION_DOWN per report 9; confirmed on data: 25d cash range 7303.1-7582.8 width 279.70, D-1 cash close 7405.5 inside the range, below 25d midpoint 7442.95, 13-session ER -0.24)",
+  "card_id": "2026-07-24_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "SHORT",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET sell at the 09:00 broker (07:00 UK) daily-open anchor; fill level = D-1 reference close prev_close_full 7418.0 (session 2026-07-23, last bar 23:45 broker)",
+  "anchor_broker": "09:00",
+  "entry": 7418.0,
+  "stop": 7462.64,
+  "tp1": 7373.36,
+  "tp2": 7328.72,
+  "tp3": 7207.51,
+  "card_R_points": 44.64,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Unit 1 exits at TP1 (entry-1R 7373.36); Unit 2 at TP2 (entry-2R 7328.72); on the TP2 fill Unit 3 stop moves to entry-0.2R = 7409.07 (below entry, profitable side). Unit 3 runner: time-stopped at the cash close or price-stopped at 3xATR14 from entry (7207.51), whichever first. Thesis invalidation: daily close above daily R2 7484.70 (distinct from stop; 22.06 pts beyond it). Wide-stop flag: no (R/ATR14 = 0.64). Caveat: New Home Sales (HIGH) 24 Jul 17:00 broker, inside the cash session; overnight Middle East gap risk per report 13d; RSI2_cash is 0.0 so an oversold bounce is the main hazard.",
+  "suppressed": false,
+  "rationale": "SCORE -0.544 (components in direction_components; sentiment carried from report 13b, not verifiable) -> SHORT, clears 0.25. Entry = prev_close_full 7418.0 (level file); anchor 09:00 broker = 07:00 UK, report gives no argument for 02:00 or 16:30 (its 14:30 UK override is a desk deviation not adopted). ATR14_cash = 70.1643 (0.25xATR = 17.54; 1xATR wide-stop line 70.16; cap 3.5xATR = 245.56). Stop = tighter of (a) swing_high_5d_cash 7525.5 (22 Jul 2026, M15 bar in 22 Jul cash session) + 17.54 = 7543.04 and (b) nearest resistance above entry = d_cash_R1 7445.1 + 17.54 = 7462.64 (d_cash_P 7410.2 sits below entry so is not resistance) -> 7462.64. R = 7462.64-7418.0 = 44.64 = 0.64xATR14 (in 0.3-3.0 band; no wide-stop flag; 2R=89.28=1.27 ATR so no ambitious flag). TP1 = 7418.0-44.64 = 7373.36 (45 pts, 0.64 ATR; near d_cash_S1 7370.6). TP2 = 7418.0-89.28 = 7328.72 (near d_cash_S2 7335.7). TP3 = 7418.0-3x70.1643 = 7207.51. Unit-3 stop after TP2 = 7418.0-8.93 = 7409.07. Invalidation = close above d_cash_R2 7484.70 (|gap to stop| 22.06 > 0.15xATR 10.52). Confluences: TP1 within 2.76 of d_cash_S1; TP2 within 7.0 of d_cash_S2; stop 17.5 above d_cash_R1 by construction. Basis: all levels _cash columns; no report price figures used."
+ },
+ {
+  "report_date": "2026-07-24",
+  "report_file": "SP500_Report_24Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-24.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-23.csv",
+  "last_bar_broker": "2026-07-23 23:45",
+  "direction_score": -0.544,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -0.5,
+    "weight": 0.25,
+    "contrib": -0.125,
+    "note": "5-session cash trend down (16 Jul close 7536.2 -> 23 Jul 7405.5, lower highs/lows; report 8) = -1; RSI2_cash = 0.0 (level file) is extreme oversold, read as neutral/mean-reversion offset per report 8 caution; average -0.5"
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contrib": -0.1,
+    "note": "TRANSITION: sign of last completed swing (15 Jul 7582.8 -> 23 Jul 7375.3, down) x 0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contrib": -0.05,
+    "note": "expansion with price falling: ATR14 cash 63.97 (22 Jul) -> 70.16 (23 Jul), VIX 17.55 -> 18.58 full-day last; report 9 reads expansion; expansion-down = -0.5"
+   },
+   "kaufman": {
+    "signal": -0.2437,
+    "weight": 0.15,
+    "contrib": -0.0366,
+    "note": "13-session ER on cash closes = -0.2437 (computed from slice; report quoted -0.16 smoothed)"
+   },
+   "sentiment": {
+    "signal": -0.55,
+    "weight": 0.15,
+    "contrib": -0.0825,
+    "note": "CARRIED from report 13b numeric tilt -0.55 (QA arithmetic gives -0.571); news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": -1.0,
+    "weight": 0.15,
+    "contrib": -0.15,
+    "note": "CONFIRM x sign(-1): VIX verified rising from slice (16 Jul 17.40 -> 23 Jul 18.58 full-day last; cash 18.43); USDX rising per QA (100.741 -> 101.43); DAX falling carried from report 10, not verifiable"
+   }
+  },
+  "regime": "TRANSITION (TRANSITION_DOWN per report 9; confirmed on data: 25d cash range 7303.1-7582.8 width 279.70, D-1 cash close 7405.5 inside the range, below 25d midpoint 7442.95, 13-session ER -0.24)",
+  "card_id": "2026-07-24_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION breakout side, short)",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SELL STOP at 7406.24 (daily cash P less 10% of the way to S1), downside breakout side only; armed from the 09:00 broker anchor; reference close prev_close_full 7418.0, gap -11.76 (below, correct side for a sell stop)",
+  "anchor_broker": "09:00",
+  "entry": 7406.24,
+  "stop": 7438.12,
+  "tp1": 7370.6,
+  "tp2": 7353.15,
+  "tp3": 7335.7,
+  "card_R_points": 31.88,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Three equal units. Unit 1 exits at TP1 = daily S1 7370.6; Unit 2 at TP2 = daily S1.5 7353.15; on the TP2 fill Unit 3 stop moves to entry-0.2R = 7399.86 (below entry). Unit 3 runner targets daily S2 7335.7 and is then traced. Thesis invalidation: daily close back above daily P 7410.2 (named level, inside the stop; module 5.2b/5.2c). Branch: TRANSITION breakout side only (mirrors TREND-breakout geometry to the downside; no counter-side limit). Caveat: New Home Sales (HIGH) 24 Jul 17:00 broker inside cash session; fills only if price trades down through 7406.24.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION -> Trade 2 breakout side only (M5 5.2c). Breakout side = downside (score -0.544, last completed swing down, 22 Jul rejection at 7525.5, report 16-17 bearish). Pivots d_cash from D-1 cash H/L/C 7449.8/7375.3/7405.5, computed from the execution series so CORROBORATED: P 7410.2, R1 7445.1, S1 7370.6, S2 7335.7. Mirror of the 5.2b long rule: entry = P - 0.10x(P-S1) = 7410.2-3.96 = 7406.24 (QA quoted 7406.71 using the R1-P leg; difference 0.47 pt). Stop = P + 0.8x(R1-P) = 7410.2+27.92 = 7438.12 (no swing confluence just above R1; swing_high_5d_cash 7525.5 is far). R = 31.88 = 0.45xATR14 70.1643 (inside 0.3-3.0). TP1/TP2/TP3 = S1/S1.5/S2 = 7370.6/7353.15/7335.7 per the mirrored R1/R1.5/R2 ladder; TP1 is 35.64 pts from entry (<2.5 ATR); TP1 = 1.12R, TP2 = 1.67R, TP3 = 2.21R. Unit-3 stop after TP2 = 7399.86. Confluence: entry sits 0.74 pt from the D-1 cash close 7405.5 (inside 0.15xATR = 10.52). Invalidation d_cash_P is 27.92 pts inside the stop (0.15xATR=10.52 test passed). The report sell-limit at P (a fade) is dropped as counter-breakout side."
+ },
+ {
+  "report_date": "2026-07-24",
+  "report_file": "SP500_Report_24Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-24.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-23.csv",
+  "last_bar_broker": "2026-07-23 23:45",
+  "direction_score": -0.544,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -0.5,
+    "weight": 0.25,
+    "contrib": -0.125,
+    "note": "5-session cash trend down (16 Jul close 7536.2 -> 23 Jul 7405.5, lower highs/lows; report 8) = -1; RSI2_cash = 0.0 (level file) is extreme oversold, read as neutral/mean-reversion offset per report 8 caution; average -0.5"
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contrib": -0.1,
+    "note": "TRANSITION: sign of last completed swing (15 Jul 7582.8 -> 23 Jul 7375.3, down) x 0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contrib": -0.05,
+    "note": "expansion with price falling: ATR14 cash 63.97 (22 Jul) -> 70.16 (23 Jul), VIX 17.55 -> 18.58 full-day last; report 9 reads expansion; expansion-down = -0.5"
+   },
+   "kaufman": {
+    "signal": -0.2437,
+    "weight": 0.15,
+    "contrib": -0.0366,
+    "note": "13-session ER on cash closes = -0.2437 (computed from slice; report quoted -0.16 smoothed)"
+   },
+   "sentiment": {
+    "signal": -0.55,
+    "weight": 0.15,
+    "contrib": -0.0825,
+    "note": "CARRIED from report 13b numeric tilt -0.55 (QA arithmetic gives -0.571); news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": -1.0,
+    "weight": 0.15,
+    "contrib": -0.15,
+    "note": "CONFIRM x sign(-1): VIX verified rising from slice (16 Jul 17.40 -> 23 Jul 18.58 full-day last; cash 18.43); USDX rising per QA (100.741 -> 101.43); DAX falling carried from report 10, not verifiable"
+   }
+  },
+  "regime": "TRANSITION (TRANSITION_DOWN per report 9; confirmed on data: 25d cash range 7303.1-7582.8 width 279.70, D-1 cash close 7405.5 inside the range, below 25d midpoint 7442.95, 13-session ER -0.24)",
+  "card_id": "2026-07-24_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (downside, SUPPRESSED)",
+  "family": "Trade 3C",
+  "direction": "SHORT",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed break of the 25-day boundary",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - gate fired: M5 4d / 5.3c requires a daily close beyond the 25-day boundary by >= 0.25xATR14. Downside trigger = close <= 7303.1-17.54 = 7285.56; D-1 cash close 7405.5 is 119.94 pts above it and inside the range 7303.1-7582.8.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION -> 3C fork (report 9 TRANSITION_DOWN, data consistent). 25-day cash range from level file: swing_high_25d_cash 7582.8 (15 Jul 2026), swing_low_25d_cash 7303.1 (26 Jun 2026), width 279.70. Direction side = downside (failed retest of the upper area 22 Jul, score negative). Confirmed-break test: need close <= 7285.56 (7303.1 - 0.25x70.1643 = 17.54); D-1 cash close 7405.5 (full-day 7418.0) fails -> gate fires -> SUPPRESSED, no card substitution to 3A/3B and no swing/pivot levels standing in. Contingent arming condition (commentary only): a daily close <= 7285.56 would give stop 7414.98 (low+0.40 width), TP1 7005.86, TP2 6866.01."
+ }
+]

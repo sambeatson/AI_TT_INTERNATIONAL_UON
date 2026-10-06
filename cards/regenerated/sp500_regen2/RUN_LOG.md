@@ -46,3 +46,9 @@ XAUUSD), with no dated files and no prices. No post-D content was exposed, so th
 2026-06-01 draw 2 ran `ls` on its own output folder `draw2/by_date/`: filenames of other draw-2 dates only,
 no file opened, no prices. Kept.
 2026-05-29 draw 3: same `ls data/slices` (folder names only). Kept.
+
+## Usage-limit interruption (draw 3)
+Fourteen draw-3 sessions (07-06, 07-09, 07-10, 07-16, 07-20, 07-21, 07-22, 07-23, 07-24, 07-27, 07-28, 07-29,
+07-30, 07-31) were killed mid-run by an account usage limit. Eight had already written an output file; whether
+each was complete cannot be verified, so all eight are moved to `superseded/<D>_draw3_killed.json` and all
+fourteen dates are re-run from a clean scratch folder.

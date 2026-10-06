@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-29",
+  "report_file": "SP500_Report_29Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-29.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-28.csv",
+  "last_bar_broker": "2026-07-28 23:45",
+  "direction_score": -0.2424,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "note": "cash RSI2=100.0 (bullish-extreme) vs 5-session close trend down 7498.8->7433.6 (-65.2): conflicting, Neutral (report s8 label Indecision)"
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "note": "TRANSITION: sign of last completed swing (7582.8 on 2026-07-15 -> 7375.3 on 2026-07-23, down) x 0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05,
+    "note": "expansion (cash ATR5 78.26 > ATR14 72.66; report slope +0.07) signed by most recent break, the 23 Jul down-thrust"
+   },
+   "kaufman_ker": {
+    "signal": -0.236,
+    "weight": 0.15,
+    "contribution": -0.0354,
+    "note": "KER(13) from cash closes = -109.2/462.4 = -0.236 (raw, no EMA3 smoothing; report prints -0.22)"
+   },
+   "sentiment": {
+    "signal": -0.08,
+    "weight": 0.15,
+    "contribution": -0.012,
+    "note": "carried from report s13b tilt -0.08; not verifiable here"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045,
+    "note": "MIXED x 0.3 x medium-term direction (down); VIX 5d up 17.40->18.20 per slice, USDX/DAX not in slices so carried from report s10"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-29_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score -0.2424, |score| < 0.25 conviction threshold (NEUTRAL)",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score -0.2424 (|score| 0.2424 < 0.25 threshold). Anchor 09:00 broker (07:00 UK).",
+  "suppressed": true,
+  "rationale": "Score = sum(signal x weight) over the six M5 s2a components (see direction_components): 0 -0.10 -0.05 -0.0354 -0.012 -0.045 = -0.2424. Price-derived components from cash data (RSI2 100.0, 25d swing, ATR5/ATR14, KER13); sentiment -0.08 carried from report s13b (unverifiable here); cross-asset MIXED carried from report s10 with VIX confirmed from slice. Margin to the threshold is only 0.0076, but the rule is deterministic: NEUTRAL, Trade 1 suppressed. No entry/stop/R/TP carried on a suppressed row."
+ },
+ {
+  "report_date": "2026-07-29",
+  "report_file": "SP500_Report_29Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-29.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-28.csv",
+  "last_bar_broker": "2026-07-28 23:45",
+  "direction_score": -0.2424,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "note": "cash RSI2=100.0 (bullish-extreme) vs 5-session close trend down 7498.8->7433.6 (-65.2): conflicting, Neutral (report s8 label Indecision)"
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "note": "TRANSITION: sign of last completed swing (7582.8 on 2026-07-15 -> 7375.3 on 2026-07-23, down) x 0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05,
+    "note": "expansion (cash ATR5 78.26 > ATR14 72.66; report slope +0.07) signed by most recent break, the 23 Jul down-thrust"
+   },
+   "kaufman_ker": {
+    "signal": -0.236,
+    "weight": 0.15,
+    "contribution": -0.0354,
+    "note": "KER(13) from cash closes = -109.2/462.4 = -0.236 (raw, no EMA3 smoothing; report prints -0.22)"
+   },
+   "sentiment": {
+    "signal": -0.08,
+    "weight": 0.15,
+    "contribution": -0.012,
+    "note": "carried from report s13b tilt -0.08; not verifiable here"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045,
+    "note": "MIXED x 0.3 x medium-term direction (down); VIX 5d up 17.40->18.20 per slice, USDX/DAX not in slices so carried from report s10"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-29_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION breakout side, upside)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at 7427.61 (daily P + 0.10x(R1-P), cash); reference close prev_close_full 7435.6 (2026-07-28), signed gap -7.99; sits below the close so order side is valid",
+  "entry": 7427.61,
+  "stop": 7400.34,
+  "tp1": 7462.8,
+  "tp2": 7477.4,
+  "tp3": 7492.0,
+  "card_R_points": 27.27,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits at TP1 = daily R1 7462.8 (+35.19 pts); Unit 2 at TP2 = daily R1.5 7477.4 (+49.79 pts). On the TP2 fill Unit 3 stop moves to entry + 0.2R = 7433.06. Unit 3 runner targets TP3 = daily R2 7492.0 (+64.39 pts); exit toward P on failure. Thesis invalidation: daily close below daily P 7423.7 (stop is 23.36 pts lower, > 0.15xATR). Anchor 09:00 broker (07:00 UK). R=27.27 pts = 0.375xATR14(cash 72.66); no wide-stop flag.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION (report s9: overlap 0.48, persistence 0.54, mid-range close; Kaufman |KER| 0.236 with expanding volatility fails the RANGE dual gate; no trend). Trade 2 therefore follows M5 s5.2c breakout side only, upside, aligned with the 3C direction (recent retest of the 25d upper boundary 7582.8 on 2026-07-15 failed; LONG). All levels from levels file d_cash_*: P 7423.7, R1 7462.8, S1 7394.5, R2 7492.0 (daily pivots computed on the 2026-07-28 cash session H 7452.9 / L 7384.6 / C 7433.6). Entry = P + 0.10x(R1-P) = 7423.7 + 3.91 = 7427.61. Stop = P - 0.8x(P-S1) = 7423.7 - 23.36 = 7400.34; the alternative 'just below S1 minus 0.25xATR' (7394.5-18.17 = 7376.33) is wider so the tighter formula stands. R = 27.27; 0.3xATR14 = 21.80 <= R <= 217.98. TP1 = R1 7462.8; TP2 = R1.5 = (7462.8+7492.0)/2 = 7477.4; TP3 = R2 7492.0 (TP1 within 2.5xATR14 = 181.65 of entry). Pivot tier flag: all tiers computed from the broker execution series (slice, 2026-07-28 session) so CORROBORATED by construction under M5 s5.2a; Trade 2 not suppressed. Confluences: daily R1 7462.8 close to nothing else; weekly P 7437.53 sits 9.9 above entry; monthly P 7453.67. Unit-3 BE stop = 7433.06. Anchor 09:00 default (daily-open anchor). News slice shows FOMC Statement/Rate Decision at 21:00 and press conference 21:30 broker on 2026-07-29 itself (report said 30 Jul): a holding-period collision on D."
+ },
+ {
+  "report_date": "2026-07-29",
+  "report_file": "SP500_Report_29Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-29.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-28.csv",
+  "last_bar_broker": "2026-07-28 23:45",
+  "direction_score": -0.2424,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "note": "cash RSI2=100.0 (bullish-extreme) vs 5-session close trend down 7498.8->7433.6 (-65.2): conflicting, Neutral (report s8 label Indecision)"
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1,
+    "note": "TRANSITION: sign of last completed swing (7582.8 on 2026-07-15 -> 7375.3 on 2026-07-23, down) x 0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05,
+    "note": "expansion (cash ATR5 78.26 > ATR14 72.66; report slope +0.07) signed by most recent break, the 23 Jul down-thrust"
+   },
+   "kaufman_ker": {
+    "signal": -0.236,
+    "weight": 0.15,
+    "contribution": -0.0354,
+    "note": "KER(13) from cash closes = -109.2/462.4 = -0.236 (raw, no EMA3 smoothing; report prints -0.22)"
+   },
+   "sentiment": {
+    "signal": -0.08,
+    "weight": 0.15,
+    "contribution": -0.012,
+    "note": "carried from report s13b tilt -0.08; not verifiable here"
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045,
+    "note": "MIXED x 0.3 x medium-term direction (down); VIX 5d up 17.40->18.20 per slice, USDX/DAX not in slices so carried from report s10"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-29_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (conditional upside)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond the 25-day boundary: last cash close 7433.6 vs required >= 7582.8 + 0.25x72.66 = 7600.97",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - 3C gate (confirmed daily close >= 7600.97) not met; 167.4 pts short. Contingent arming level only (commentary, not a card): a daily close at or above 7600.97 (mirror: <= 7284.93).",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION selects the 3C fork. 25-day cash range from levels file: high 7582.80 (2026-07-15 16:30 broker bar), low 7303.10 (2026-06-26 16:30 broker bar), width 279.70. Confirmation needs a daily close beyond the boundary by >= 0.25xATR14(cash 72.66) = 18.17, i.e. >= 7600.97 (mirror <= 7284.93). D-1 cash close is 7433.60, inside the range and 167.37 below the trigger; gate fails, so the card is suppressed with no levels. Direction kept LONG per the failed retest of the upper boundary (report reading), but this does not affect the suppression. Indicative-flag note: boundaries come from the execution-series slice."
+ }
+]

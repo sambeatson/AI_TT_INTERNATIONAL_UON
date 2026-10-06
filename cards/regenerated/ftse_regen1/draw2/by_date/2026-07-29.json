@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-29",
+  "report_file": "ftse_report_29Jul2026.md",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-28.csv",
+  "last_bar_broker": "2026-07-28 22:45",
+  "anchor_broker": "09:00",
+  "regime": "TRANSITION",
+  "card_id": "2026-07-29_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (LONG, TRANSITION)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market at 09:00 broker (07:00 UK) filled at the D-1 reference close prev_close_full 10893.2 (28 Jul)",
+  "entry": 10893.2,
+  "stop": 10811.1,
+  "tp1": 10975.3,
+  "tp2": 11057.4,
+  "tp3": 11222.3,
+  "card_R_points": 82.1,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits at TP1 (+1R, 10975.3); Unit 2 exits at TP2 (+2R, 11057.4); on the TP2 fill Unit 3 stop moves to entry +0.2R = 10909.6. Unit 3 runs to the session-close time-stop or the 3xATR cap 11222.3 (entry + 329.1 pts), whichever comes first. Flags: R = 82.1 pts = 0.75xATR14 (109.7 cash), not wide. Fed 19:00 UK and FOMC 19:30 UK fall after the 16:30 UK cash close; EIA 15:30 UK inside session.",
+  "suppressed": false,
+  "direction_score": 0.551,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash = 100.0 (28 Jul and 27 Jul both 100.0; closes 10795.0 -> 10874.0, two consecutive up closes); 28 Jul bullish (C>O, RSI2>50); 5-session net close-to-close +302.3 (21 Jul 10571.7 -> 28 Jul 10874.0); close at the 5d high. Sequence is alternating-body (indecision) but resolving up. Bullish = +1."
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session block is Transitional (overlap mean 0.56 range-like, persistence 0.42 <0.50, RSI2 median 79 outside 30-70 so Ranging test fails, |dir mean| 0.12, close at 99th pct of range = Range Top Bias). Transition = sign of last completed swing x 0.5; last completed swing is UP (25d low 10380.4 on 2026-07-09 12:30 broker -> 25d high 10878.7 on 2026-07-28 17:15 broker) = +0.5."
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "Computed from the slice only: ATR14/close z-scored (historical, 25-session window, clipped +-1), linear slope over last 10 obs = -0.18 (ATR14 cash fell 117.5 -> 109.7 on 28 Jul as the 2 Jul 262-pt range rolled out). Negative slope = compression = 0. Counter VOLators (DAX, Euro Stoxx, Brent) not available so scaling is own-history only; report quoted +0.06 (unverifiable)."
+   },
+   "kaufman": {
+    "signal": 0.4477,
+    "weight": 0.15,
+    "contribution": 0.0672,
+    "basis": "KER(13) raw = 417.0/704.0 = 0.592 on cash closes; EMA3 smoothed series 0.066 (24 Jul) -> 0.303 (27 Jul) -> 0.448 (28 Jul), above 0.13 and rising = Trending Up - Strong. Signal = smoothed KER x sign(+) = +0.448 (report said Moderate and gave no number)."
+   },
+   "sentiment": {
+    "signal": 0.5946,
+    "weight": 0.15,
+    "contribution": 0.0892,
+    "basis": "CARRIED from report section 13 and NOT independently verifiable. Report computed 2.2/3.7 = +0.595 then applied an unexplained haircut to +0.46; QA item 8 says to use the computed tilt, so +0.595 is used. (If eToro were reclassified from Institutional to Media the tilt would be 1.7/3.2 = +0.531, contribution 0.080; direction unchanged.)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED = sign(+) x 0.3. Verifiable counters, 5 sessions to 28 Jul (21 Jul close -> 28 Jul close, full-day): US500 7503.7 -> 7435.6 = -0.91% FALLING (contradicts); USDX 101.200 -> 101.421 = +0.22% FLAT (neutral); VIX 17.43 -> 18.20 = +4.4% mildly rising, level 18 (marginal). CARRIED unverified from the report (stale, to 24 Jul): DAX 40 and Euro Stoxx 50 rising (confirm), Brent falling (mixed). DAX, Euro Stoxx, Brent not in the data slices. Net = MIXED."
+   }
+  },
+  "rationale": "Reference close (MARKET basis) = prev_close_full 10893.2 (28 Jul full-day, last bar 22:45 broker); cash close 10874.0 for reference. Direction LONG: score +0.551 (>= 0.25). Anchor 09:00 broker = 07:00 UK (default daily-open anchor); no argument in the report for 02:00 or 10:00. ATR14 = 109.6929 (cash, 14 sessions ending 28 Jul, 10:00-18:30 broker bars; level file atr14_cash; recomputed from slice = 109.69). Stop per M5 4c, tighter of: (a) swing_low_5d_cash 10557.2 (22 Jul 10:00 broker bar) - 0.25xATR 27.42 = 10529.8; (b) nearest support below entry = daily cash P d_cash_P 10838.5 - 27.42 = 10811.1. (b) is tighter, so stop = 10811.1. R = 10893.2 - 10811.1 = 82.1 pts = 0.75 x ATR (inside 0.3-3.0; not wide-stop; stop distance well under 3.5xATR cap 383.9). TP1 = entry + 1R = 10975.3 (+82.1, 0.75xATR, inside 2.5xATR = 274.2). TP2 = entry + 2R = 11057.4 (+164.2; 2R = 1.50xATR so no 'TP2 ambitious' flag). TP3 runner = time-stop at session close or price-cap entry + 3xATR = 10893.2 + 329.1 = 11222.3, which is beyond TP2. On TP2 fill Unit 3 stop moves to entry + 0.2R = 10909.6 (above entry, profitable direction for a LONG). Obstacles between entry and TP1 (cash): daily R1 10914.2, weekly R2 10941.1, daily R2 10954.4; TP1 sits just beyond them; daily R3 11030.1 lies between TP1 and TP2. These are resistance, not support. Thesis invalidation: daily close below 10762.8 (28 Jul cash session low), 48.3 pts below the stop (> 0.15xATR = 16.5; daily S1 10798.3 was rejected as too close to the stop). Calendar collisions (news slice, broker = UK+2h): EIA crude stocks 15:30 UK (17:30 broker, HIGH, inside the session; consensus 5.131 vs prior 2.010); Fed rate decision 19:00 UK (21:00 broker, HIGH, prior 3.75) and FOMC press conference 19:30 UK (21:30 broker, HIGH), both AFTER the 16:30 UK cash close, so relevant to any hold past the session-close time-stop; no BoE rate decision on D (only LOW-impact BoE credit/mortgage data 09:30 UK). Regime TRANSITION (see Trade 3C): stated once, same label for Trade 2 and 3. Sentiment carried from the report and not verified."
+ },
+ {
+  "report_date": "2026-07-29",
+  "report_file": "ftse_report_29Jul2026.md",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-28.csv",
+  "last_bar_broker": "2026-07-28 22:45",
+  "anchor_broker": "09:00",
+  "regime": "TRANSITION",
+  "card_id": "2026-07-29_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION breakout side (LONG)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at P + 0.10 x (R1 - P) = 10846.1, 47.1 pts below reference close 10893.2, working from 09:00 broker",
+  "entry": 10846.1,
+  "stop": 10806.3,
+  "tp1": 10914.2,
+  "tp2": 10934.3,
+  "tp3": 10954.4,
+  "card_R_points": 39.8,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. TP1 daily R1 10914.2 (+68.1 pts), TP2 daily R1.5 10934.3 (+88.2 pts), TP3 daily R2 10954.4 (+108.3 pts). On the TP2 fill Unit 3 stop moves to entry +0.2R = 10854.1. R = 39.8 pts = 0.36xATR14 (109.7 cash). Invalidation: daily close below 10762.8. EIA 15:30 UK, Fed 19:00 UK, FOMC 19:30 UK on D.",
+  "suppressed": false,
+  "direction_score": 0.551,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash = 100.0 (28 Jul and 27 Jul both 100.0; closes 10795.0 -> 10874.0, two consecutive up closes); 28 Jul bullish (C>O, RSI2>50); 5-session net close-to-close +302.3 (21 Jul 10571.7 -> 28 Jul 10874.0); close at the 5d high. Sequence is alternating-body (indecision) but resolving up. Bullish = +1."
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session block is Transitional (overlap mean 0.56 range-like, persistence 0.42 <0.50, RSI2 median 79 outside 30-70 so Ranging test fails, |dir mean| 0.12, close at 99th pct of range = Range Top Bias). Transition = sign of last completed swing x 0.5; last completed swing is UP (25d low 10380.4 on 2026-07-09 12:30 broker -> 25d high 10878.7 on 2026-07-28 17:15 broker) = +0.5."
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "Computed from the slice only: ATR14/close z-scored (historical, 25-session window, clipped +-1), linear slope over last 10 obs = -0.18 (ATR14 cash fell 117.5 -> 109.7 on 28 Jul as the 2 Jul 262-pt range rolled out). Negative slope = compression = 0. Counter VOLators (DAX, Euro Stoxx, Brent) not available so scaling is own-history only; report quoted +0.06 (unverifiable)."
+   },
+   "kaufman": {
+    "signal": 0.4477,
+    "weight": 0.15,
+    "contribution": 0.0672,
+    "basis": "KER(13) raw = 417.0/704.0 = 0.592 on cash closes; EMA3 smoothed series 0.066 (24 Jul) -> 0.303 (27 Jul) -> 0.448 (28 Jul), above 0.13 and rising = Trending Up - Strong. Signal = smoothed KER x sign(+) = +0.448 (report said Moderate and gave no number)."
+   },
+   "sentiment": {
+    "signal": 0.5946,
+    "weight": 0.15,
+    "contribution": 0.0892,
+    "basis": "CARRIED from report section 13 and NOT independently verifiable. Report computed 2.2/3.7 = +0.595 then applied an unexplained haircut to +0.46; QA item 8 says to use the computed tilt, so +0.595 is used. (If eToro were reclassified from Institutional to Media the tilt would be 1.7/3.2 = +0.531, contribution 0.080; direction unchanged.)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED = sign(+) x 0.3. Verifiable counters, 5 sessions to 28 Jul (21 Jul close -> 28 Jul close, full-day): US500 7503.7 -> 7435.6 = -0.91% FALLING (contradicts); USDX 101.200 -> 101.421 = +0.22% FLAT (neutral); VIX 17.43 -> 18.20 = +4.4% mildly rising, level 18 (marginal). CARRIED unverified from the report (stale, to 24 Jul): DAX 40 and Euro Stoxx 50 rising (confirm), Brent falling (mixed). DAX, Euro Stoxx, Brent not in the data slices. Net = MIXED."
+   }
+  },
+  "rationale": "Branch: TRANSITION -> breakout side only (M5 5.2c, mirrors 5.2b pivot-breakout geometry), LONG side (side of Trade 3C: price at the 25d range top, 28 Jul cash close 10874.0 vs 25d high 10878.7). Counter-side sell limit suppressed. Pivots are daily CASH tier from the 28 Jul bar (d_cash_*), computed from the execution (broker) series and therefore CORROBORATED by construction (M5 5.2a); the report's 'all pivots indicative' flag described a stale 24 Jul input and does not apply. Cash ladder: P 10838.5, R1 10914.2, R2 10954.4, S1 10798.3. R1.5 = (R1+R2)/2 = (10914.2+10954.4)/2 = 10934.3 (derived midpoint). Entry = P + 0.10 x (R1 - P) = 10838.5 + 0.10 x 75.7 = 10846.07, rounded 10846.1. Order is a BUY LIMIT: price (prev_close_full 10893.2) is already above the 5.2b entry, so a stop-entry would sit on the wrong side; a buy limit at 10846.1 is 47.1 pts BELOW the reference close (signed gap -47.1), which is the correct side for a buy limit. Stop = P - 0.8 x (P - S1) = 10838.5 - 0.8 x 40.2 = 10806.34, rounded 10806.3. The alternative 'just below S1 minus 0.25xATR' = 10798.3 - 27.4 = 10770.9 is wider, so the tighter formula stop applies. R = 10846.1 - 10806.3 = 39.8 pts = 0.36 x ATR14 (109.6929 cash); above the 0.3xATR floor (32.9) with no basis switching; not wide-stop. TP1 = daily R1 10914.2 (+68.1 pts = 1.71R, 0.62xATR); TP2 = R1.5 10934.3 (+88.2 = 2.22R); TP3 = daily R2 10954.4 (+108.3 = 2.72R). Ladder stop < entry < TP1 < TP2 < TP3 holds. On TP2 fill Unit 3 stop moves to entry + 0.2R = 10846.1 + 8.0 = 10854.1. Thesis invalidation: M5 5.2b names a daily close back through P (10838.5), but P is above the stop 10806.3 and the stop would fire first, and daily S1 10798.3 is only 8.0 pts below the stop (< 0.15xATR), so the invalidation is set at a daily close below the 28 Jul cash low 10762.8 (43.5 pts below the stop); a daily close back through P 10838.5 is the first warning level. Confluences: entry 10846.1 sits 7.6 pts above daily P 10838.5 by construction and 11.5 pts above weekly R1 cash 10834.6 (both within 0.15xATR = 16.5, strong confluence); TP1 10914.2 is the daily R1; TP3 10954.4 is the daily R2; weekly R2 10941.1 lies between TP2 and TP3. Calendar: EIA 15:30 UK, Fed 19:00 UK and FOMC 19:30 UK on D (after cash close). Anchor 09:00 broker."
+ },
+ {
+  "report_date": "2026-07-29",
+  "report_file": "ftse_report_29Jul2026.md",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-29.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-28.csv",
+  "last_bar_broker": "2026-07-28 22:45",
+  "anchor_broker": "09:00",
+  "regime": "TRANSITION",
+  "card_id": "2026-07-29_Trade_3C",
+  "strategy": "Trade 3 - Momentum-Breakout 3C (SUPPRESSED)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed break: 28 Jul cash close 10874.0 < trigger 10906.1 (25d high 10878.7 + 0.25xATR 27.4)",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - 3C needs a daily close beyond the 25-day boundary by >= 0.25xATR14; not met at the 28 Jul close.",
+  "suppressed": true,
+  "direction_score": 0.551,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash = 100.0 (28 Jul and 27 Jul both 100.0; closes 10795.0 -> 10874.0, two consecutive up closes); 28 Jul bullish (C>O, RSI2>50); 5-session net close-to-close +302.3 (21 Jul 10571.7 -> 28 Jul 10874.0); close at the 5d high. Sequence is alternating-body (indecision) but resolving up. Bullish = +1."
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session block is Transitional (overlap mean 0.56 range-like, persistence 0.42 <0.50, RSI2 median 79 outside 30-70 so Ranging test fails, |dir mean| 0.12, close at 99th pct of range = Range Top Bias). Transition = sign of last completed swing x 0.5; last completed swing is UP (25d low 10380.4 on 2026-07-09 12:30 broker -> 25d high 10878.7 on 2026-07-28 17:15 broker) = +0.5."
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "Computed from the slice only: ATR14/close z-scored (historical, 25-session window, clipped +-1), linear slope over last 10 obs = -0.18 (ATR14 cash fell 117.5 -> 109.7 on 28 Jul as the 2 Jul 262-pt range rolled out). Negative slope = compression = 0. Counter VOLators (DAX, Euro Stoxx, Brent) not available so scaling is own-history only; report quoted +0.06 (unverifiable)."
+   },
+   "kaufman": {
+    "signal": 0.4477,
+    "weight": 0.15,
+    "contribution": 0.0672,
+    "basis": "KER(13) raw = 417.0/704.0 = 0.592 on cash closes; EMA3 smoothed series 0.066 (24 Jul) -> 0.303 (27 Jul) -> 0.448 (28 Jul), above 0.13 and rising = Trending Up - Strong. Signal = smoothed KER x sign(+) = +0.448 (report said Moderate and gave no number)."
+   },
+   "sentiment": {
+    "signal": 0.5946,
+    "weight": 0.15,
+    "contribution": 0.0892,
+    "basis": "CARRIED from report section 13 and NOT independently verifiable. Report computed 2.2/3.7 = +0.595 then applied an unexplained haircut to +0.46; QA item 8 says to use the computed tilt, so +0.595 is used. (If eToro were reclassified from Institutional to Media the tilt would be 1.7/3.2 = +0.531, contribution 0.080; direction unchanged.)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED = sign(+) x 0.3. Verifiable counters, 5 sessions to 28 Jul (21 Jul close -> 28 Jul close, full-day): US500 7503.7 -> 7435.6 = -0.91% FALLING (contradicts); USDX 101.200 -> 101.421 = +0.22% FLAT (neutral); VIX 17.43 -> 18.20 = +4.4% mildly rising, level 18 (marginal). CARRIED unverified from the report (stale, to 24 Jul): DAX 40 and Euro Stoxx 50 rising (confirm), Brent falling (mixed). DAX, Euro Stoxx, Brent not in the data slices. Net = MIXED."
+   }
+  },
+  "rationale": "SUPPRESSED - gate fails. Regime TRANSITION selects 3C (M5 5.3c). Confirmed-break gate (4d): daily close beyond the 25d boundary by >= 0.25xATR. Cash 25d high (swing_high_25d_cash) = 10878.7 (28 Jul 17:15 broker), 25d low 10380.4 (9 Jul 12:30 broker), width 498.3. ATR14 cash 109.6929, so trigger = 10878.7 + 27.42 = 10906.1. D-1 cash close 10874.0 is 32.1 pts BELOW the trigger and 4.7 pts below the boundary itself; the full-day basis does not pass either (full close 10893.2 vs full high 10911.4 + 0.25x138.6 = 10946.1). Outcome: no confirmed break, Trade 3C suppressed per M5 section 10; no substitute variant built. Commentary only (not a card): if a later daily close prints >= 10906.1 the fixed 3C geometry would use stop = 10380.4 + 0.40x498.3 = 10579.7 and measured-move targets from 10878.7 + width. Direction kept LONG (price closed 4.7 pts under the upper 25d boundary, i.e. pressing that side)."
+ }
+]

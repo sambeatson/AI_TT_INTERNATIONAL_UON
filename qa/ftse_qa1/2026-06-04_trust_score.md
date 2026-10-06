@@ -115,7 +115,7 @@ Consequence: the report's "above the weekly pivot, below weekly R1" positioning 
 Reference close: D-1 cash close 10,341.7; ATR14 cash 110.43 (3.5×ATR = 386.5; 0.3×ATR = 33.1; 3.0×ATR = 331.3; 2.5×ATR = 276.1).
 - Trade 1: |score| 0.05 < 0.25 → must be a SUPPRESSED row. Built as SELL STOP 10,318 at 00:00 UK instead of MARKET at the D-1 close at 07:00 UK. R = 150 = 1.36×ATR → wide-stop flag required, omitted, R/ATR not printed. Invalidation 10,436 sits inside the stop 10,468 (must be beyond SL).
 - Trade 2: regime Transitional → breakout-side only; a counter-side R1 sell limit is a suppressed construct. TP1 10,390 = 0.49R (must be ±1R), TP2 10,318 = 1.46R (must be ±2R). Invalidation 10,498 is 2 pts from the stop 10,500.
-- Trade 3A: Transitional → 3C (not 3A). Swing 10,354→10,462→10,354 is not a swing (net 0, up-leg 108 = 0.98×ATR, <2×ATR = 220.9). Entry 10,400 labelled 38.2% (really ≈42.6% of the 10,354–10,462 leg); rule is 57.5%. Stop beyond 0% anchor must be +0.25×ATR = +27.6 (report +8).
+- Trade 3A: Transitional → 3C (not 3A). Swing 10,354→10,462→10,354 is not a swing (net 0, up-leg 108 = 0.98×ATR, <2×ATR = 220.9). Entry 10,400 labelled 38.2% (really ≈42% of the 10,354–10,462 leg); rule is 57.5%. Stop beyond 0% anchor must be +0.25×ATR = +27.6 (report +8).
 
 ## 4. Category roll-up
 

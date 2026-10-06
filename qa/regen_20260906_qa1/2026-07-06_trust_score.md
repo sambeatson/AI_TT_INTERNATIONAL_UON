@@ -71,4 +71,4 @@ n_cards=3
 n_duds=0
 n_warns=0
 
-Static cleanliness does not imply the construction rules were met; see feedback items 6–13.
+Static cleanliness does not imply the construction rules were met; see feedback items 12–15.

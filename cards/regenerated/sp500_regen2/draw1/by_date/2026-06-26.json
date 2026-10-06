@@ -1,0 +1,197 @@
+[
+ {
+  "report_date": "2026-06-26",
+  "report_file": "SP500_Report_26Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-26.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-25.csv",
+  "last_bar_broker": "2026-06-25 23:45",
+  "direction_score": -0.573,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman_ker": {
+    "signal": -0.112,
+    "weight": 0.15,
+    "contribution": -0.017
+   },
+   "sentiment": {
+    "signal": -0.04,
+    "weight": 0.15,
+    "contribution": -0.006,
+    "note": "carried from report s13b; unverifiable"
+   },
+   "cross_asset": {
+    "signal": -1.0,
+    "weight": 0.15,
+    "contribution": -0.15,
+    "note": "USDX and VIX only; DAX not in slices"
+   },
+   "sum": -0.573
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-26_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "SHORT",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market SELL at the 07:00 UK / 09:00 broker daily-open anchor; fill level = D-1 reference close 7377.20 (25 Jun full-day close), signed gap 0.00",
+  "entry": 7377.2,
+  "stop": 7448.7,
+  "tp1": 7305.7,
+  "tp2": 7234.2,
+  "tp3": 7049.26,
+  "card_R_points": 71.5,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. TP1 7305.7 (-71.5) Unit 1; TP2 7234.2 (-143.0) Unit 2, on its fill Unit 3 stop moves to 7362.9 (entry - 0.2R, i.e. below entry, -14.3). Unit 3 runner exits at session close or the 3xATR price cap 7049.26 (-327.94), whichever first. Stop 7448.7 (+71.5). R = 71.5 pts = 0.65 x ATR14 (no wide-stop flag). Thesis invalidation: daily close above 7432.6 (D-1 cash high).",
+  "suppressed": false,
+  "rationale": "Direction score -0.573 (SHORT). Reference close = prev_close_full 7377.2 (25 Jun 2026 23:45 broker). cash ATR14 = 109.3143 (14 sessions to 25 Jun, 16:30-23:00 broker). Regime TRANSITION (recomputed from M15 slice cash sessions: 25-session overlap 0.54, persistence 0.54, |directional mean| 0.03, range position 32nd pct; smoothed KER(13,EMA3) -0.112 = ranging-downward-bias, |KER|<0.13; 5-day net -136 pts; volator expansion; RANGE dual gate and TREND conditions both unmet, so fall-through TRANSITION, same label as report s9). Score components: short-term technical -1 (RSI2 cash 0.0 on 22-25 Jun closes 7479.3>7374.4>7372.3>7365.9 and 4 of 5 sessions bearish) x0.25=-0.25; medium-term regime TRANSITION, last completed swing down (22 Jun 7538.8 -> 25 Jun 7332.9) -0.5 x0.20=-0.10; volator expansion aligned with downside -0.5 x0.10=-0.05 (ATR/close rising over last 10 sessions; clipped z-score series saturated at +1); KER smoothed -0.112 x0.15=-0.017; sentiment tilt -0.04 carried from report s13b (not verifiable) x0.15=-0.006; cross-asset: USDX rising (100.878 on 18 Jun -> 101.478 on 25 Jun) and VIX rising (17.85 -> 18.51) both confirm bearish synthesis, CONFIRM -1 x0.15=-0.15 (DAX not in slices, report's DAX read unverified). Sum -0.573 >= 0.25 threshold so Trade 1 live. Entry: MARKET at prev_close_full 7377.2. Stop: SHORT candidates = swing_high_5d_cash 7538.8 or nearest resistance above entry = d_cash_R1 7421.3667 (d_cash_P 7377.1333 sits 0.07 below entry so is not resistance); tighter is R1; stop = 7421.3667 + 0.25x109.3143 (27.3286) = 7448.7. R = 7448.7 - 7377.2 = 71.5 = 0.65 x ATR (0.3-3.0 ok, <=3.5 cap ok, <1 so no wide-stop flag; 2R=143.0 < 3xATR so no ambitious flag). TP1 = entry-1R = 7305.7; TP2 = entry-2R = 7234.2; TP3 = 3xATR price cap = 7377.2-327.94 = 7049.26. Unit 3 stop after TP2 = entry-0.2R = 7362.9. Anchor 09:00 broker = 07:00 UK, default (no reason in report to change). Invalidation: daily close above 7432.6 (D-1 cash high), different from stop by -16.1 pts (>0.15xATR=16.4) - note this sits below the stop, so stop is beyond invalidation."
+ },
+ {
+  "report_date": "2026-06-26",
+  "report_file": "SP500_Report_26Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-26.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-25.csv",
+  "last_bar_broker": "2026-06-25 23:45",
+  "direction_score": -0.573,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman_ker": {
+    "signal": -0.112,
+    "weight": 0.15,
+    "contribution": -0.017
+   },
+   "sentiment": {
+    "signal": -0.04,
+    "weight": 0.15,
+    "contribution": -0.006,
+    "note": "carried from report s13b; unverifiable"
+   },
+   "cross_asset": {
+    "signal": -1.0,
+    "weight": 0.15,
+    "contribution": -0.15,
+    "note": "USDX and VIX only; DAX not in slices"
+   },
+   "sum": -0.573
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-26_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION, breakout side)",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SELL STOP at 7371.59 = daily cash P - 0.10x(P-S1); sits 5.61 below D-1 reference close 7377.2 (signed gap -5.61), correct side for a sell stop. Branch: TRANSITION breakout side only (downside, matching 3C direction).",
+  "entry": 7371.59,
+  "stop": 7412.52,
+  "tp1": 7321.67,
+  "tp2": 7299.55,
+  "tp3": 7277.43,
+  "card_R_points": 40.93,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. TP1 7321.67 (daily S1, -49.92), TP2 7299.55 (S1.5, -72.04), TP3 7277.43 (S2, -94.16). On TP2 fill Unit 3 stop moves to 7363.4 (entry - 0.2R, below entry). Stop 7412.52 (+40.93). R = 40.93 pts = 0.37 x ATR14 (no wide-stop flag). Thesis invalidation: daily close above daily P / 7432.6.",
+  "suppressed": false,
+  "rationale": "Direction score -0.573 (SHORT). Reference close = prev_close_full 7377.2 (25 Jun 2026 23:45 broker). cash ATR14 = 109.3143 (14 sessions to 25 Jun, 16:30-23:00 broker). Regime TRANSITION (recomputed from M15 slice cash sessions: 25-session overlap 0.54, persistence 0.54, |directional mean| 0.03, range position 32nd pct; smoothed KER(13,EMA3) -0.112 = ranging-downward-bias, |KER|<0.13; 5-day net -136 pts; volator expansion; RANGE dual gate and TREND conditions both unmet, so fall-through TRANSITION, same label as report s9). Trade 2 follows TRANSITION branch (M5 5.2c: breakout side only, mirror of 5.2b with S1/S1.5/S2). Direction = SHORT, aligned with 3C direction: the more recent boundary tests are at the 25-day low (9-11 Jun lows 7243.1/7271.5/7260.0 vs low boundary 7243.1) and price sits in the lower third (32nd pct); volator expansion and cross-asset CONFIRM and score all point down. No confirmed break exists (see Trade 3C) but 5.2c does not make Trade 2 contingent on it. Cash daily pivots (D-1 25 Jun cash H 7432.6 L 7332.9 C 7365.9): P 7377.1333, R1 7421.3667, S1 7321.6667, S2 7277.4333, S1.5=(S1+S2)/2=7299.55. Entry = P - 0.10x(P-S1) = 7377.1333 - 5.5467 = 7371.59. Stop = P + 0.8x(R1-P) = 7377.1333 + 35.3867 = 7412.52; confluence check: D-1 cash high 7432.6 sits 11.2 above R1 (within 0.15xATR), alternative R1+0.25xATR = 7448.70 is wider so the formula stop (tighter) is kept per 5.2b 'whichever is tighter'. R = 40.93 = 0.37 x ATR (>=0.3, <=3.0, no wide-stop flag). TP1/TP2/TP3 = S1/S1.5/S2 per 5.2b mirror; TP1 distance 49.9 = 0.46 x ATR (<2.5). Ladder: stop 7412.52 > entry 7371.59 > 7321.67 > 7299.55 > 7277.43. All levels cash daily tier (no weekly/monthly substitution). Anchor 09:00 broker default."
+ },
+ {
+  "report_date": "2026-06-26",
+  "report_file": "SP500_Report_26Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-26.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-25.csv",
+  "last_bar_broker": "2026-06-25 23:45",
+  "direction_score": -0.573,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman_ker": {
+    "signal": -0.112,
+    "weight": 0.15,
+    "contribution": -0.017
+   },
+   "sentiment": {
+    "signal": -0.04,
+    "weight": 0.15,
+    "contribution": -0.006,
+    "note": "carried from report s13b; unverifiable"
+   },
+   "cross_asset": {
+    "signal": -1.0,
+    "weight": 0.15,
+    "contribution": -0.15,
+    "note": "USDX and VIX only; DAX not in slices"
+   },
+   "sum": -0.573
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-26_Trade_3C",
+  "strategy": "Trade 3C - Momentum Breakout (TRANSITION)",
+  "family": "Trade 3C",
+  "direction": "SHORT",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond the 25-day boundary by >= 0.25xATR",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - gate failed: 3C needs a daily close below 7215.77 (25-day low 7243.10 - 0.25x109.31) or above 7651.93 (25-day high 7624.60 + 27.33). D-1 cash close 7365.90 (full-day 7377.20) is 150.1 pts above the lower trigger and 286 below the upper.",
+  "suppressed": true,
+  "rationale": "Direction score -0.573 (SHORT). Reference close = prev_close_full 7377.2 (25 Jun 2026 23:45 broker). cash ATR14 = 109.3143 (14 sessions to 25 Jun, 16:30-23:00 broker). Regime TRANSITION (recomputed from M15 slice cash sessions: 25-session overlap 0.54, persistence 0.54, |directional mean| 0.03, range position 32nd pct; smoothed KER(13,EMA3) -0.112 = ranging-downward-bias, |KER|<0.13; 5-day net -136 pts; volator expansion; RANGE dual gate and TREND conditions both unmet, so fall-through TRANSITION, same label as report s9). Fork: TRANSITION -> 3C. Range from cash 25-day swings: high 7624.6 (2 Jun 2026 cash session) / low 7243.1 (9 Jun 2026 cash session), width 381.5. Confirmed-break gate (M5 4d/5.3c): requires close < 7215.77 or > 7651.93; D-1 cash close 7365.9 satisfies neither, so card suppressed (no substitution of 3A/3B, no pivot stand-in). Direction recorded SHORT only as the leaning side (lower-third position, volator expansion, cross-asset CONFIRM bearish, score SHORT); arming condition as commentary only: daily close below 7215.77."
+ }
+]

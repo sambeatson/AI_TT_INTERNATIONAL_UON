@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-06-23",
+  "report_file": "SP500_Report_23Jun2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-22.csv",
+  "last_bar_broker": "2026-06-22 23:45",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": null,
+  "runner_rule": null,
+  "management_text": null,
+  "suppressed": true,
+  "direction_score": -0.1167,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "signal": -1,
+    "weight": 0.25,
+    "product": -0.25,
+    "basis": "22 Jun cash: close 7479.3 < open 7513.1 and RSI2(cash)=0.0 (<50) -> Bearish; 5-session closes 7563.4,7522.9,7427.5,7502.3,7494.2,7479.3 net down; five of last six sessions closed below their open"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "product": 0.1,
+    "basis": "Transition = sign of last completed qualifying swing x 0.5; qualifying (>=2xATR cash 223.5) swing = 9 Jun low 7243.1 (19:30 broker) to 15 Jun high 7583.4, +340.3 = 3.05 ATR, UP. The 15-17 Jun pullback (7583.4 -> 7408.5, 1.57 ATR) does not qualify"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "ATR14/close z-scored over 25 sessions: last 10 unclipped z 2.42..1.74, slope -0.096/session (contraction); clipped series saturated at +1 gives slope 0.00 -> Compression = 0"
+   },
+   "kaufman_ker": {
+    "signal": -0.108,
+    "weight": 0.15,
+    "product": -0.0162,
+    "basis": "KER(13) on cash daily closes, EMA3-smoothed = -0.108 (raw -0.094); prior sessions -0.121, -0.114; sign = 13-session net move (7479.3 vs 13 sessions earlier) negative; |KER|<0.13 so 'ranging, downward bias' band"
+   },
+   "sentiment_tilt": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "product": 0.0045,
+    "basis": "carried unverified from report section 13b (+0.03); news cannot be verified here"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "product": 0.045,
+    "basis": "MIXED x sign(medium-term +) x 0.3. Only VIX is derivable from slices (cash close 18.77 on 12 Jun -> 17.91 on 22 Jun, mildly falling, <20); USDX and DAX read carried from report section 10 (soft dollar, firm DAX) and unverified"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-23_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - |score| 0.12 below the 0.25 conviction threshold (direction NEUTRAL)",
+  "rationale": "Reference: D-1 (22 Jun) cash close 7479.30, full-day close 7481.80 (prev_close_full). ATR14 cash 111.757 / full 126.364. 25d cash range 7243.1 (9 Jun 19:30 broker) - 7624.6 (2 Jun 18:15 broker), width 381.5. Direction score = -0.25 +0.10 +0.00 -0.0162 +0.0045 +0.045 = -0.1167 (components in direction_components; sentiment and USDX/DAX parts carried from the report and unverified). |score| 0.117 < 0.25 -> NEUTRAL -> Trade 1 suppressed. Gate test logged: value 0.117, threshold 0.25, fired. Note sensitivity: if the last completed swing were read as the 15-17 Jun down leg (sub-2xATR, not qualifying) the medium-term and cross-asset terms flip sign and the score would be about -0.41; the qualifying-swing rule (>=2xATR) was applied. Anchor 09:00 broker (07:00 UK) default, no argument for 02:00 or 16:30."
+ },
+ {
+  "report_date": "2026-06-23",
+  "report_file": "SP500_Report_23Jun2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-22.csv",
+  "last_bar_broker": "2026-06-22 23:45",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": null,
+  "runner_rule": null,
+  "management_text": null,
+  "suppressed": true,
+  "direction_score": -0.1167,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "signal": -1,
+    "weight": 0.25,
+    "product": -0.25,
+    "basis": "22 Jun cash: close 7479.3 < open 7513.1 and RSI2(cash)=0.0 (<50) -> Bearish; 5-session closes 7563.4,7522.9,7427.5,7502.3,7494.2,7479.3 net down; five of last six sessions closed below their open"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "product": 0.1,
+    "basis": "Transition = sign of last completed qualifying swing x 0.5; qualifying (>=2xATR cash 223.5) swing = 9 Jun low 7243.1 (19:30 broker) to 15 Jun high 7583.4, +340.3 = 3.05 ATR, UP. The 15-17 Jun pullback (7583.4 -> 7408.5, 1.57 ATR) does not qualify"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "ATR14/close z-scored over 25 sessions: last 10 unclipped z 2.42..1.74, slope -0.096/session (contraction); clipped series saturated at +1 gives slope 0.00 -> Compression = 0"
+   },
+   "kaufman_ker": {
+    "signal": -0.108,
+    "weight": 0.15,
+    "product": -0.0162,
+    "basis": "KER(13) on cash daily closes, EMA3-smoothed = -0.108 (raw -0.094); prior sessions -0.121, -0.114; sign = 13-session net move (7479.3 vs 13 sessions earlier) negative; |KER|<0.13 so 'ranging, downward bias' band"
+   },
+   "sentiment_tilt": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "product": 0.0045,
+    "basis": "carried unverified from report section 13b (+0.03); news cannot be verified here"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "product": 0.045,
+    "basis": "MIXED x sign(medium-term +) x 0.3. Only VIX is derivable from slices (cash close 18.77 on 12 Jun -> 17.91 on 22 Jun, mildly falling, <20); USDX and DAX read carried from report section 10 (soft dollar, firm DAX) and unverified"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-23_Trade_2",
+  "strategy": "Trade 2 - Pivot (regime-aware), TRANSITION breakout side only",
+  "family": "Trade 2",
+  "direction": "n/a",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SUPPRESSED - TRANSITION regime allows breakout-side entry only; no confirmed break of the 25-day range (D-1 cash close 7479.30 inside 7243.1-7624.6), so no breakout side exists",
+  "rationale": "Regime TRANSITION. Cash daily bars last 25 sessions: mean overlap 0.52 (neither >0.55 range nor <0.45 trend), direction persistence 0.50, |net/path| 0.05, close at 62% of 25d range; synthesis 'Transitional'. Smoothed KER -0.108 (|KER|<0.13) and VOLator slope <=0 would pass the RANGE KER/VOLator gates, but the RANGE synthesis (overlap>0.55 and persistence<0.50) is not met, so RANGE is not permitted; no trend criteria met either -> TRANSITION by fall-through. Agrees with the report's own Transitional/Indecision reading. Reference: D-1 (22 Jun) cash close 7479.30, full-day close 7481.80 (prev_close_full). ATR14 cash 111.757 / full 126.364. 25d cash range 7243.1 (9 Jun 19:30 broker) - 7624.6 (2 Jun 18:15 broker), width 381.5. Trade 2 branch = TRANSITION (breakout-side only). Counter-side pivot fades (e.g. sell limit at daily R1 7522.97 or buy limit at S1 7451.47) are suppressed, not re-labelled. Breakout side requires the 3C direction, which requires a confirmed close beyond the boundary by >=0.25xATR (>=7652.5 or <=7215.2 cash basis); close 7479.30 meets neither. Pivot tiers are from the execution series (CORROBORATED) so the indicative-tier gate is not the trigger. Gate fired: suppressed. Micron 24 Jun and May PCE 25 Jun are inside the horizon (report section 13d) - noted for any later re-arming."
+ },
+ {
+  "report_date": "2026-06-23",
+  "report_file": "SP500_Report_23Jun2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-22.csv",
+  "last_bar_broker": "2026-06-22 23:45",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": null,
+  "runner_rule": null,
+  "management_text": null,
+  "suppressed": true,
+  "direction_score": -0.1167,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "signal": -1,
+    "weight": 0.25,
+    "product": -0.25,
+    "basis": "22 Jun cash: close 7479.3 < open 7513.1 and RSI2(cash)=0.0 (<50) -> Bearish; 5-session closes 7563.4,7522.9,7427.5,7502.3,7494.2,7479.3 net down; five of last six sessions closed below their open"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "product": 0.1,
+    "basis": "Transition = sign of last completed qualifying swing x 0.5; qualifying (>=2xATR cash 223.5) swing = 9 Jun low 7243.1 (19:30 broker) to 15 Jun high 7583.4, +340.3 = 3.05 ATR, UP. The 15-17 Jun pullback (7583.4 -> 7408.5, 1.57 ATR) does not qualify"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "ATR14/close z-scored over 25 sessions: last 10 unclipped z 2.42..1.74, slope -0.096/session (contraction); clipped series saturated at +1 gives slope 0.00 -> Compression = 0"
+   },
+   "kaufman_ker": {
+    "signal": -0.108,
+    "weight": 0.15,
+    "product": -0.0162,
+    "basis": "KER(13) on cash daily closes, EMA3-smoothed = -0.108 (raw -0.094); prior sessions -0.121, -0.114; sign = 13-session net move (7479.3 vs 13 sessions earlier) negative; |KER|<0.13 so 'ranging, downward bias' band"
+   },
+   "sentiment_tilt": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "product": 0.0045,
+    "basis": "carried unverified from report section 13b (+0.03); news cannot be verified here"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "product": 0.045,
+    "basis": "MIXED x sign(medium-term +) x 0.3. Only VIX is derivable from slices (cash close 18.77 on 12 Jun -> 17.91 on 22 Jun, mildly falling, <20); USDX and DAX read carried from report section 10 (soft dollar, firm DAX) and unverified"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-23_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION fork)",
+  "family": "Trade 3C",
+  "direction": "n/a",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond the 25-day boundary by >=0.25xATR14 (needs >=7652.5 or <=7215.2 cash basis; D-1 close 7479.30)",
+  "rationale": "Regime TRANSITION. Cash daily bars last 25 sessions: mean overlap 0.52 (neither >0.55 range nor <0.45 trend), direction persistence 0.50, |net/path| 0.05, close at 62% of 25d range; synthesis 'Transitional'. Smoothed KER -0.108 (|KER|<0.13) and VOLator slope <=0 would pass the RANGE KER/VOLator gates, but the RANGE synthesis (overlap>0.55 and persistence<0.50) is not met, so RANGE is not permitted; no trend criteria met either -> TRANSITION by fall-through. Agrees with the report's own Transitional/Indecision reading. Reference: D-1 (22 Jun) cash close 7479.30, full-day close 7481.80 (prev_close_full). ATR14 cash 111.757 / full 126.364. 25d cash range 7243.1 (9 Jun 19:30 broker) - 7624.6 (2 Jun 18:15 broker), width 381.5. Fork = 3C because regime = TRANSITION. Confirmed-break test: upper threshold 7624.6 + 0.25x111.757 = 7652.5; lower 7243.1 - 27.9 = 7215.2 (full-day basis 7656.2 / 7211.5); D-1 cash close 7479.30 lies between them -> not eligible -> SUPPRESSED row; no substitution of 3A/3B and no pivot levels standing in for range levels. Gate fired: suppressed. Report's own Trade 3B (buy limit 7445) is the wrong fork under this label."
+ }
+]

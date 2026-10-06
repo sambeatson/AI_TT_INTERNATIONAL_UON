@@ -1,0 +1,194 @@
+[
+ {
+  "report_date": "2026-07-15",
+  "report_file": "FTSE_100_Report_15_July_2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-15.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-14.csv",
+  "last_bar_broker": "2026-07-14 22:45",
+  "direction_score": 0.019,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "signal": 0.01,
+    "weight": 0.15,
+    "contribution": 0.0015
+   },
+   "sentiment": {
+    "signal": 0.147,
+    "weight": 0.15,
+    "contribution": 0.0221,
+    "note": "carried from report s13 (arithmetic corrected 0.5/3.4=0.147, per QA item 15); not verifiable here"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "note": "MIXED x sign(+1)"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-15_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (suppressed: |score| below conviction threshold)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - no entry; direction score below 0.25 conviction threshold",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score +0.02, |score| < 0.25, direction NEUTRAL. No entry, stop or ladder.",
+  "suppressed": true,
+  "rationale": "Direction score (M5 s2, default weights 0.25/0.20/0.10/0.15/0.15/0.15): (1) short-term technical bias 0 x 0.25 = 0.000: RSI2 cash = 100.0 (closes 10487.2, 10487.4, 10507.0; mean gain 9.9, mean loss 0) and 14 Jul row is Bullish (C 10507.0 > O 10460.4, RSI2>50), but the 5-day block is Ranging/Mixed (rows 8 Jul Bearish, 9 Jul Bearish, 10 Jul Neutral, 13 Jul Neutral, 14 Jul Bullish; 5-day high 10636.3 at 2026-07-08 10:00, low 10380.4 at 2026-07-09 12:30) -> Neutral. (2) medium-term regime TRANSITION: sign of last completed swing x 0.5 = -0.5 x 0.20 = -0.100 (last confirmed fractals: high 10739.6 at 2026-07-07 16:30, low 10380.4 at 2026-07-09 12:30; down-leg 359.2 pts = 2.93 ATR; the 14 Jul high 10545.8 is not yet a confirmed fractal). (3) VOLator: slope +0.18 expansion, aligned with the most recent breakout (up, to the 25d high on 7 Jul) = +0.5 x 0.10 = +0.050. (4) KER(13, EMA3) = +0.01 x 0.15 = +0.0015 (Ranging-Neutral). (5) Sentiment tilt carried from report s13b, arithmetic corrected to +0.147 (0.5/3.4; report printed +0.13) x 0.15 = +0.022; news is not verifiable from the slices, carried as stated. (6) Cross-asset (slices, 8-14 Jul 5-day): US500 7468.5 -> 7547.6 (+0.60%, rising, confirms), USDX 101.052 -> 100.910 (-0.15%, flat), VIX 17.92 -> 17.37 at 14 Jul close vs 17.26 on 7 Jul (flat); one confirm, none contradict -> MIXED = +0.3 x sign(+1, 25-session net close change positive) x 0.15 = +0.045. DAX 40 / Euro Stoxx 50 / Brent not in slices; report reading carried, not used in the score. Sum = +0.019 (+0.02), |score| < 0.25 -> NEUTRAL -> Trade 1 suppressed. Sensitivity: the result would change only if component (1) were scored Bullish (+1), which the mixed 5-day block does not support. D-1 reference: prev_close_full 10478.3 (2026-07-14 22:45 broker, last executable price); cash close 10507.0. ATR14 cash = 122.5357 (14 sessions to 2026-07-14, LSE cash hours 10:00-18:30 broker). Anchor 09:00 broker (07:00 UK) default, no argument for 02:00 or 10:00."
+ },
+ {
+  "report_date": "2026-07-15",
+  "report_file": "FTSE_100_Report_15_July_2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-15.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-14.csv",
+  "last_bar_broker": "2026-07-14 22:45",
+  "direction_score": 0.019,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "signal": 0.01,
+    "weight": 0.15,
+    "contribution": 0.0015
+   },
+   "sentiment": {
+    "signal": 0.147,
+    "weight": 0.15,
+    "contribution": 0.0221,
+    "note": "carried from report s13 (arithmetic corrected 0.5/3.4=0.147, per QA item 15); not verifiable here"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "note": "MIXED x sign(+1)"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-15_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch (breakout side, long): daily-pivot breakout stop",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "BUY STOP at 10495.76 (daily P + 0.10 x (R1 - P)); 17.5 pts above prev_close_full 10478.3 (correct side)",
+  "entry": 10495.76,
+  "stop": 10441.94,
+  "tp1": 10564.7,
+  "tp2": 10593.55,
+  "tp3": 10622.4,
+  "card_R_points": 53.82,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits at TP1 10564.7 (daily R1); Unit 2 exits at TP2 10593.55 (daily R1.5); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 10506.52; Unit 3 runner targets TP3 10622.4 (daily R2). Thesis invalidation: daily close back below daily pivot P 10488.1 (46.2 pts above the stop, > 0.15 x ATR). Order working from 09:00 broker (07:00 UK anchor). Caveats (broker time, 15 Jul): EUR CPI/HICP 10:00; BoE MPC Pill speech 13:30; US PPI m/m HIGH 15:30 (cons 1.6, prev 1.1); BoC rate decision HIGH 16:45 (prev 2.25); EIA crude stocks HIGH 17:30 (cons 1.001); Fed Cook 20:00; Beige Book 21:00. No UK CPI row exists in the calendar slice for D. Daily pivot tier computed from the execution (broker) series, CORROBORATED by construction.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION (M3 s3d/s11b, recomputed from cash daily bars, 25 sessions 2026-06-09..07-14): mean range overlap 0.53 (between the 0.45 and 0.55 bands), directional persistence 0.50, RSI2 median 79 (outside the 30-70 ranging band), |directional mean| 0.12, so neither the Trending nor the Ranging criteria are clearly met -> Transitional. Smoothed KER(13,EMA3) = +0.01 (Ranging-Neutral, below 0.09); VOLator slope over last 10 obs of z-scaled ATR14/close = +0.18 (>0) so the RANGE dual gate (slope <= 0) fails -> TRANSITION by fall-through. Same label used for Trade 2 branch and Trade 3 fork. Trade 2 branch = TRANSITION, breakout side only (M5 s5.2c, mirrors s5.2b TREND breakout); side = LONG from the 3C direction trigger (most recent failed retest at the upper 25d boundary, high 10739.6 on 2026-07-07 16:30, with VOLator slope positive and cross-asset not contradicting). Levels from level file d_cash columns (prior-session 2026-07-14 cash H 10545.8 / L 10411.5 / C 10507.0): P 10488.1, R1 10564.7, S1 10430.4, R2 10622.4, R1.5 = (10564.7+10622.4)/2 = 10593.55. Entry = P + 0.10 x (R1-P) = 10488.1 + 0.10 x 76.6 = 10495.76. Stop = P - 0.8 x (P-S1) = 10488.1 - 0.8 x 57.7 = 10441.94; the alternative S1 - 0.25 x ATR = 10399.77 (prior-day low 10411.5 sits just below S1) is wider, so the tighter formula stop applies. R = 53.82 pts = 0.44 x ATR14 (within 0.3-3.0, no wide-stop flag; 3.5 x ATR cap 428.9 not binding). TP1 = R1 10564.7 (+68.94 = 1.28R, 0.56 x ATR from entry, within 2.5 x ATR); TP2 = R1.5 10593.55 (1.82R); TP3 = R2 10622.4 (2.35R). Ladder stop < entry < TP1 < TP2 < TP3. Unit 3 stop after TP2 fill = entry + 0.2R = 10506.52. Order side: BUY STOP 10495.76 >= prev_close_full 10478.3 (gap +17.46); it sits 11.24 below the cash close 10507.0, noted for transparency (task fixes prev_close_full as the reference). No weekly/monthly tier substituted. Confluences: entry within 7.7 pts of daily P (0.06 ATR); stop 10441.94 sits 11.5 above daily S1 10430.4 and 30.4 above the prior-day low 10411.5; weekly P 10535.7 lies between entry and TP1 (no strong confluence flagged). D-1 reference: prev_close_full 10478.3 (2026-07-14 22:45 broker, last executable price); cash close 10507.0. ATR14 cash = 122.5357 (14 sessions to 2026-07-14, LSE cash hours 10:00-18:30 broker). Anchor 09:00 broker kept (single anchor per M5 s5.0)."
+ },
+ {
+  "report_date": "2026-07-15",
+  "report_file": "FTSE_100_Report_15_July_2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-15.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-14.csv",
+  "last_bar_broker": "2026-07-14 22:45",
+  "direction_score": 0.019,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "signal": 0.01,
+    "weight": 0.15,
+    "contribution": 0.0015
+   },
+   "sentiment": {
+    "signal": 0.147,
+    "weight": 0.15,
+    "contribution": 0.0221,
+    "note": "carried from report s13 (arithmetic corrected 0.5/3.4=0.147, per QA item 15); not verifiable here"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "note": "MIXED x sign(+1)"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "card_id": "2026-07-15_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION fork): suppressed, no confirmed break",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - needs a daily close >= 10770.2 (25d high 10739.6 + 0.25 x ATR 30.6); last close 10507.0",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - gate failed: no confirmed close beyond the 25-day boundary by >= 0.25 x ATR14 (needs close >= 10770.2 long or <= 10095.6 short; D-1 cash close 10507.0 is 263.2 below the long trigger). Commentary only: arming level for a later session.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION (M3 s3d/s11b, recomputed from cash daily bars, 25 sessions 2026-06-09..07-14): mean range overlap 0.53 (between the 0.45 and 0.55 bands), directional persistence 0.50, RSI2 median 79 (outside the 30-70 ranging band), |directional mean| 0.12, so neither the Trending nor the Ranging criteria are clearly met -> Transitional. Smoothed KER(13,EMA3) = +0.01 (Ranging-Neutral, below 0.09); VOLator slope over last 10 obs of z-scaled ATR14/close = +0.18 (>0) so the RANGE dual gate (slope <= 0) fails -> TRANSITION by fall-through. Same label used for Trade 2 branch and Trade 3 fork. Fork TRANSITION -> 3C (M5 s5.3). 25-day range (cash, 2026-06-09..07-14): high 10739.6 (2026-07-07 16:30), low 10126.2 (2026-06-10 14:00), width 613.4. Direction trigger LONG (failed retest at the upper boundary; VOLator slope +0.18; cross-asset not contradicting). Gate s4d: confirmed close beyond boundary by >= 0.25 x 122.5357 = 30.63 -> long trigger 10770.2, short trigger 10095.6; D-1 close 10507.0 satisfies neither (gate FAIL) -> SUPPRESSED, no substitution of 3A/3B or pivot levels. Had the gate passed: stop = 10126.2 + 0.40 x 613.4 = 10371.6, TP1 = 10739.6 + 613.4 = 11353.0 (far beyond the 2.5 x ATR static limit) - not emitted. D-1 reference: prev_close_full 10478.3 (2026-07-14 22:45 broker, last executable price); cash close 10507.0. ATR14 cash = 122.5357 (14 sessions to 2026-07-14, LSE cash hours 10:00-18:30 broker). Anchor 09:00 broker."
+ }
+]

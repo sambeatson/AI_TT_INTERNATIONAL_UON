@@ -32,3 +32,8 @@ the first run, which allowed `ENTRY_POLICIES.md`.
 All quarantined paths were restored from git history (commits before `6327689` and `38411eb`) once the last
 `sp500_regen2` session finished. Both fixtures re-verified: US500 `band0845` −9.49 R, gold `band0845` −0.59 R.
 **Gold Stage 2 has not run yet: re-apply this quarantine before launching any gold regeneration session.**
+
+## Re-applied for the FTSE run (`ftse_qa1` / `ftse_regen1`)
+Same paths as above, plus the new full table `data/levels/UK100_levels.csv` (never committed; held at
+`/tmp/claude-0/QUARANTINE/UK100_levels.csv`). Sessions get `data/levels/UK100_by_date/<D>.csv` and
+`data/slices/UK100/UK100_upto_<D-1>.csv` only. Restore after the last FTSE regeneration session.

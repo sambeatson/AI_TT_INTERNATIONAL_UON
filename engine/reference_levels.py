@@ -51,6 +51,7 @@ def main():
     ap.add_argument('--data', required=True); ap.add_argument('--asset', required=True)
     ap.add_argument('--cash-open', default='16:30'); ap.add_argument('--cash-close', default='23:00')
     ap.add_argument('--out', required=True)
+    ap.add_argument('--min-history', type=int, default=26, help='sessions required before the first output date (25 suffices for the 25d swing)')
     a = ap.parse_args()
 
     d = pd.read_csv(a.data)
@@ -84,7 +85,7 @@ def main():
     dates = list(full.index)
     rows = []
     for i, D in enumerate(dates):
-        if i < 26:                      # need 25 sessions of history plus one to close
+        if i < a.min_history:           # default 26: 25 sessions of history plus one to close
             continue
         prior = dates[:i]               # every session strictly before D - the leak boundary
         p1 = prior[-1]

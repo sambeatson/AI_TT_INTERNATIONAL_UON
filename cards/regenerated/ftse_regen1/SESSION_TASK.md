@@ -23,6 +23,8 @@ call, narrative, sentiment, event calendar — not its numbers.
 | `modules/` | the fixed rules, especially `M5_Strategies_Module_v2_1.md`. This run uses the module set at commit `f69b2cd`. |
 | `cards/schema/card_schema.json` | the output contract |
 
+**Missing input = stop.** If any file in the table above (with `<D>` / `<D-1>` substituted) does not exist, write nothing, and reply only `MISSING <path>`. Do not substitute QA notes, the report, or anything else for a missing slice.
+
 ## Never open
 `cards/baseline/` (any date — you are producing an independent set) · `cards/regenerated/` other than
 writing your own one file (no other draw, no other run) · `results/` · `data/raw/` · `docs/ENTRY_POLICIES.md`

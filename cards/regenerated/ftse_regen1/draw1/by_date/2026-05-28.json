@@ -1,0 +1,188 @@
+[
+ {
+  "card_id": "2026-05-28_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET buy at the 09:00 broker (07:00 UK) anchor, filled at the D-1 reference close 10,488.20 (27 May 22:45 broker last full-day bar; signed gap 0.00). Cash close of 27 May was 10,507.90.",
+  "entry": 10488.2,
+  "stop": 10441.04,
+  "tp1": 10535.36,
+  "tp2": 10582.52,
+  "tp3": 10849.74,
+  "card_R_points": 47.16,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits at TP1 (+1R = 10535.36). Unit 2 exits at TP2 (+2R = 10582.52); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 10497.63. Unit 3 runs to session close or 3 x ATR14 from entry (10849.74), whichever comes first. Thesis invalidation: daily close below 10,408.27 (daily S3), beyond the stop (stop is ahead of invalidation: no).",
+  "suppressed": false,
+  "rationale": "Direction LONG, score +%.4f (>= 0.25). Components: short-term bias +1.00 x 0.25 = +0.250 (RSI2 cash = 100.0: closes 10,500.7 -> 10,507.9 and 10,470.4 -> 10,500.7 both up, mean loss 0; four consecutive higher closes 20-21-22-26-27 May; 27 May candle bullish); medium-term regime Transitional -> sign of last completed swing (20 May low 10,272.8 -> 26 May high 10,560.0, up) x 0.5 = +0.50 x 0.20 = +0.100; VOLator contraction 0 x 0.10 = 0; KER smoothed +0.2008 x 0.15 = +0.030; sentiment: report section 13 article classifications carried unverified, tilt recomputed from its own table = -1.00/4.20 = -0.2381 (the report's +0.30 input does not follow from its table) x 0.15 = -0.036; cross-asset CONFIRM +1.00 x 0.15 = +0.150 (verified: S&P 500 CFD 7,420.6 -> 7,543.0 over 5 sessions rising; VIX 18.45 -> 17.13 falling; USDX 99.150 -> 99.226 flat/neutral; 2 of 3 verifiable counters confirm, none contradict; DAX 40 and Euro Stoxx 50 not in data, report's rising/confirming read carried and not counted). Sum = %.4f. ATR14 (cash, 14 sessions to 27 May, 10:00-18:30 broker bars) = 120.51. Stop: tighter of (a) 5d cash swing low 10,272.80 (20 May 10:00 broker bar) - 0.25 x ATR = 10,242.67 (R 245.53 = 2.04 ATR) and (b) nearest support daily cash S1 10,471.17 - 0.25 x ATR 30.13 = 10,441.04 (R 47.16); (b) governs; cap 3.5 x ATR = 421.8 not binding. R = 47.16 = 0.39 x ATR (inside 0.3-3.0; no wide-stop flag); 2R = 94.3 < 3 x ATR so no TP2-ambitious flag. TP1 = 10,535.36, TP2 = 10,582.52 (entry +1R / +2R); TP3 = entry + 3 x ATR = 10,849.74 (runner cap, session-close time stop applies first). Entry is prev_close_full 10,488.20. Anchor 09:00 broker = 07:00 UK, the report's stated pre-open anchor. Invalidation: close below daily S3 10,408.27 (32.8 pts beyond stop, > 0.15 x ATR; daily S2 10,434.43 is only 6.6 beyond the stop and so not used). Versus the report: its stop (10,424.25, ATR 75, 'swing low 10,443') and TP3 do not reproduce. D-day events (UK time, from the NEWS slice): ECB Lagarde speech 08:10, EU consumer price expectations and economic sentiment 10:00, ECB policy-meeting accounts 12:30, US Core PCE / PCE price index / GDP q/q / durable goods / initial and continuing claims 13:30, US new home sales 15:00, EIA crude stocks 17:00, ECB Schnabel speech 16:45.",
+  "report_date": "2026-05-28",
+  "report_file": "FTSE_EuroStoxx_Daily_28May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-28.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-27.csv",
+  "last_bar_broker": "2026-05-27 22:45:00",
+  "direction_score": 0.4944,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "value": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_ker": {
+    "value": 0.2008,
+    "weight": 0.15,
+    "contribution": 0.0301
+   },
+   "sentiment_tilt": {
+    "value": -0.2381,
+    "weight": 0.15,
+    "contribution": -0.0357
+   },
+   "cross_asset": {
+    "value": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-05-28_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION branch - breakout side LONG)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at weekly P + 0.10 x (R1 - P) = 10391.45; sits -96.75 below the D-1 reference close 10,488.20. Order monitoring opens 09:00 broker (07:00 UK).",
+  "entry": 10391.45,
+  "stop": 10268.06,
+  "tp1": 10596.2,
+  "tp2": 10659.1,
+  "tp3": 10722.0,
+  "card_R_points": 123.39,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits at weekly R1 10596.2. Unit 2 exits at weekly R1.5 10659.1; on the TP2 fill Unit 3 stop moves to entry + 0.2R = 10416.13. Unit 3 runs to weekly R2 10722.0. Thesis invalidation: daily close below weekly P 10,368.70 (inside the stop; stop is not ahead of invalidation). Wide-stop flag: R = 1.02 x ATR14.",
+  "suppressed": false,
+  "rationale": "Regime = TRANSITION from the data: 25-session cash block 21 Apr-27 May: net close change +3.5 pts (+0.03%), 13 up / 11 down sessions, mean overlap 0.47 (own-range basis), direction persistence 0.61, range position 74th percentile (Range Top Bias), mean close 10,357.5 vs close 10,507.9, 25d high 10,638.9 (21 Apr 12:15 broker) still 131 pts above. Smoothed KER (13-session, EMA3) = 0.2008 > 0.13 = Trending Up, but VOLator slope (ATR14/close z-scored over 25 sessions, last 10 obs) = -0.059/session (contraction): KER and VOLator disagree and the 5-week block is Transitional, so the TREND_UP gate (needs volator_slope >= 0) fails and the label falls through to TRANSITION. The report's TREND_UP call is not retained. Trade 2 in TRANSITION is breakout-side only; the side is LONG: the latest boundary test was the 18 May cash low 10,141.2 (10:00 broker bar) which failed (close 10,290.8, +149.6 off the low), direction score is +0.49 and cross-asset is CONFIRM; the ineligibility of Trade 3C (no confirmed close) is a separate test. Geometry is the section 5.2c mirror of the breakout rule on the weekly cash tier (the tier the report's own card used; fixed before computing R, not chosen to clear a floor): weekly cash P 10,368.70, R1 10,596.20, S1 10,242.90, R2 10,722.00 (2026-W21, built from the broker series, CORROBORATED by construction). Entry = P + 0.10 x (R1 - P) = 10,368.70 + 22.75 = 10391.45; stop = P - 0.8 x (P - S1) = 10,368.70 - 100.64 = 10268.06 (no confluence just below S1: swing_low_5d_cash 10,272.80 is above S1; S1 - 0.25 ATR = 10,212.77 would be wider); R = 123.39 = 1.02 x ATR14 120.51 -> wide-stop flag. TP1 = R1 10,596.20 (204.75 from entry = 1.70 x ATR, <= 2.5 x ATR), TP2 = R1.5 = (R1+R2)/2 = 10659.1, TP3 = R2 10,722.00. Reference close 10,488.20 (27 May, last full-day bar), signed gap entry - close = -96.75; buy limit below close is on the correct side. Unit 3 stop after TP2 = 10416.13. Invalidation = daily close below weekly P 10,368.70, 100.6 pts from the stop. Entry is a pullback fill and may not trigger. D-day events (UK time, from the NEWS slice): ECB Lagarde speech 08:10, EU consumer price expectations and economic sentiment 10:00, ECB policy-meeting accounts 12:30, US Core PCE / PCE price index / GDP q/q / durable goods / initial and continuing claims 13:30, US new home sales 15:00, EIA crude stocks 17:00, ECB Schnabel speech 16:45.",
+  "report_date": "2026-05-28",
+  "report_file": "FTSE_EuroStoxx_Daily_28May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-28.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-27.csv",
+  "last_bar_broker": "2026-05-27 22:45:00",
+  "direction_score": 0.4944,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "value": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_ker": {
+    "value": 0.2008,
+    "weight": 0.15,
+    "contribution": 0.0301
+   },
+   "sentiment_tilt": {
+    "value": -0.2381,
+    "weight": 0.15,
+    "contribution": -0.0357
+   },
+   "cross_asset": {
+    "value": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-05-28_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION fork)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond the 25-day boundary.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - gate: confirmed daily close beyond 25d boundary by >= 0.25 x ATR14 (30.13). Last close 10,507.90 vs upper boundary 10,638.90 (needs >= 10,669.03) and lower boundary 10,141.20 (needs <= 10,111.07): not met.",
+  "suppressed": true,
+  "rationale": "Regime = TRANSITION from the data: 25-session cash block 21 Apr-27 May: net close change +3.5 pts (+0.03%), 13 up / 11 down sessions, mean overlap 0.47 (own-range basis), direction persistence 0.61, range position 74th percentile (Range Top Bias), mean close 10,357.5 vs close 10,507.9, 25d high 10,638.9 (21 Apr 12:15 broker) still 131 pts above. Smoothed KER (13-session, EMA3) = 0.2008 > 0.13 = Trending Up, but VOLator slope (ATR14/close z-scored over 25 sessions, last 10 obs) = -0.059/session (contraction): KER and VOLator disagree and the 5-week block is Transitional, so the TREND_UP gate (needs volator_slope >= 0) fails and the label falls through to TRANSITION. The report's TREND_UP call is not retained. Fork: TRANSITION -> 3C. Eligibility test (confirmed break): 25d cash high 10,638.90 (21 Apr 12:15 broker) / low 10,141.20 (18 May 10:00 broker); a confirming close needs >= 10,669.03 or <= 10,111.07; the 27 May cash close is 10,507.90, 131.0 below the high, so the gate fails and the card is suppressed. No substitution of a 3A pullback card (that variant belongs to the TREND label, which the data do not support). Direction LONG records the intended breakout side only. Pending-level commentary, not a card: a daily close >= 10,669.03 would arm an upside 3C.",
+  "report_date": "2026-05-28",
+  "report_file": "FTSE_EuroStoxx_Daily_28May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-28.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-27.csv",
+  "last_bar_broker": "2026-05-27 22:45:00",
+  "direction_score": 0.4944,
+  "direction_components": {
+   "short_term_technical_bias": {
+    "value": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_ker": {
+    "value": 0.2008,
+    "weight": 0.15,
+    "contribution": 0.0301
+   },
+   "sentiment_tilt": {
+    "value": -0.2381,
+    "weight": 0.15,
+    "contribution": -0.0357
+   },
+   "cross_asset": {
+    "value": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TRANSITION"
+ }
+]

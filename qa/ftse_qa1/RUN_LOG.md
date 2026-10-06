@@ -24,3 +24,4 @@ SESSION_TASK rule, not because it leaks prices. Scores were set before any listi
 | 2026-07-20 | `ls -la qa/ftse_qa1/` (filenames only) | none on scoring |
 | 2026-07-24 | `ls cards/regenerated` early (two names, nothing opened) | none on scoring |
 | 2026-07-29 | first `ls` printed `cards/regenerated` subfolder names (nothing opened) | none on scoring |
+| 2026-07-03 | headline total=48; qa_rollup parsed '-59' from the band text '(40-59)' — corrected to 48 by hand in trust_scores.csv (recomputed total = 48) | roll-up fix |

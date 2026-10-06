@@ -1,0 +1,188 @@
+[
+  {
+    "card_id": "2026-07-29_Trade_1",
+    "strategy": "Trade 1 - Daily Directional",
+    "family": "Trade 1",
+    "direction": "LONG",
+    "entry_mode": "MARKET",
+    "entry_mode_text": "Market at 09:00 broker (07:00 UK) at the D-1 reference close 10,893.2 (full-day close of Tue 28 Jul 2026; cash close 10,874.0)",
+    "entry": 10893.2,
+    "stop": 10811.08,
+    "tp1": 10975.32,
+    "tp2": 11057.44,
+    "tp3": 11222.28,
+    "card_R_points": 82.12,
+    "be_rule": "BE_0.2R_ON_TP2",
+    "runner_rule": "SESSION_CLOSE_TIMESTOP",
+    "management_text": "3 equal units. Unit 1 exits at TP1 10975.32 (+1R = +82.12). Unit 2 exits at TP2 11057.44 (+2R = +164.24); on the TP2 fill Unit 3 stop moves to entry +0.2R = 10909.62. Unit 3 runner is time-stopped at the LSE cash close (16:30 UK / 18:30 broker) or price-stopped at the 3 x ATR14 cap 11222.28 (+329.1 pts), whichever first. Event collisions: EIA crude stocks 15:30 UK (HIGH) falls inside the session; Fed rate decision 19:00 UK and FOMC press conference 19:30 UK are after the 16:30 cash close, so do not hold the runner past the cash close into them. Thesis invalidation: daily close below 10,762.8 (28 Jul cash low), 48.3 pts beyond the stop. R = 82.12 pts = 0.75 x ATR14 (cash, 14 sessions to 28 Jul = 109.6929); not a wide stop (R <= 1 x ATR); 2R = 1.50 x ATR (no ambitious flag).",
+    "suppressed": false,
+    "rationale": "DIRECTION: score +0.4300 = short-term technical +1.00x0.25 (RSI2 cash = 100.0 from closes 10,714.6->10,618.1->10,728.0->10,795.0->10,874.0, last two closes both up; 28 Jul close>open; 5-day net up) = +0.2500; medium-term regime TRANSITION, sign of last completed swing up (low 10,380.4 on 9 Jul to high 10,878.7 on 28 Jul) x0.5 = +0.5 x0.20 = +0.1000; VOLator slope -0.18 compression = 0 x0.10 = 0; Kaufman smoothed KER +0.4384 x0.15 = +0.0658; sentiment tilt +0.595 (report s13b computed raw 2.2/3.7; the report's unexplained tempering to +0.46 NOT used; carried from the report, not verifiable here) x0.15 = +0.0893; cross-asset CONTRADICT -0.5 x0.15 = -0.0750 (22->28 Jul final bars: US500 7,506.5->7,435.6 -0.94% falling; USDX 101.102->101.421 +0.32% rising; VIX 17.40->18.20 +4.6% rising; all three contradict a bullish read; DAX/Euro Stoxx/Brent not available, report's reading not used). Sum +0.4300 >= 0.25 -> LONG, Trade 1 live. ENTRY: MARKET = prev_close_full 10,893.2 (28 Jul). STOP: tighter of (a) 5d swing low cash 10,557.2 - 0.25xATR 27.42 = 10529.78 (R 363.4 = 3.31xATR, above the 3.0xATR ceiling) or (b) nearest support below entry = daily cash pivot P 10,838.5 - 27.42 = 10811.08; (b) is tighter and is used (cap 3.5xATR = 383.9 not binding). R = 82.12. TP1 = entry+R, TP2 = entry+2R, TP3 = entry + 3xATR14 cash (109.6929) = 11222.28. Entry is 19.2 pts above the cash close because the basis is full-day by rule. Obstacles between entry and TP1/TP2 (cash): daily R1 10,914.2, weekly R2 10,941.1, daily R2 10,954.4, then TP1 10,975.3, daily R3 11,030.1, TP2 11,057.4. Entry sits just below daily R1: resistance cluster is an obstacle, not support. Anchor 09:00 broker (07:00 UK) default; no argument for 02:00 or 10:00. Level file last_bar_date 2026-07-28 < D.  Regime = TRANSITION (default fall-through, M3 11b). Cash 25-session block 24 Jun-28 Jul: overlap ratio 0.56 (>0.55 range-like), directional persistence 0.40 (<0.50), mean candle direction +0.12, but 25-session median RSI2 79 (outside the 30-70 Ranging band) and last close at the 99th percentile of the 25-day range (Range Top Bias): neither Trending nor Ranging criteria are met, so the 5-week read is Transitional. Smoothed KER(13, EMA3) = +0.438 (raw +0.592; Trending Up - Strong, above the 0.13 threshold) while VOLator slope = -0.18 (ATR14/close z-score, last 10 sessions; contraction), so KER and VOLator disagree, which also forces TRANSITION. Same label forks Trade 2 (breakout side only) and Trade 3 (3C). Calendar for D (UK clock): EIA crude stocks 15:30 HIGH; Fed rate decision 19:00 HIGH; FOMC press conference 19:30 HIGH; no BoE rate decision. Regime/sentiment/narrative read carried from the report; DAX/Euro Stoxx/Brent not verifiable.",
+    "report_date": "2026-07-29",
+    "report_file": "ftse_report_29Jul2026.md",
+    "source": "regen_ftse_regen1_draw1",
+    "draw": 1,
+    "module_sha": "f69b2cd",
+    "levels_file": "data/levels/UK100_by_date/2026-07-29.csv",
+    "slice_file": "data/slices/UK100/UK100_upto_2026-07-28.csv",
+    "last_bar_broker": "2026-07-28 22:45",
+    "direction_score": 0.43,
+    "direction_components": {
+      "short_term_technical": {
+        "signal": 1.0,
+        "weight": 0.25,
+        "contribution": 0.25
+      },
+      "medium_term_regime": {
+        "signal": 0.5,
+        "weight": 0.2,
+        "contribution": 0.1
+      },
+      "volator": {
+        "signal": 0.0,
+        "weight": 0.1,
+        "contribution": 0.0
+      },
+      "kaufman": {
+        "signal": 0.4384,
+        "weight": 0.15,
+        "contribution": 0.0658
+      },
+      "sentiment": {
+        "signal": 0.595,
+        "weight": 0.15,
+        "contribution": 0.0892
+      },
+      "cross_asset": {
+        "signal": -0.5,
+        "weight": 0.15,
+        "contribution": -0.075
+      }
+    },
+    "regime": "TRANSITION",
+    "anchor_broker": "09:00"
+  },
+  {
+    "card_id": "2026-07-29_Trade_2",
+    "strategy": "Trade 2 - Pivot, TRANSITION breakout-side (upside)",
+    "family": "Trade 2",
+    "direction": "LONG",
+    "entry_mode": "LIMIT",
+    "entry_mode_text": "Buy limit at 10846.07 (daily P + 0.10 x (R1 - P)); D-1 reference close 10,893.2, signed gap -47.13 pts (limit below close, correct side)",
+    "entry": 10846.07,
+    "stop": 10806.34,
+    "tp1": 10914.2,
+    "tp2": 10934.3,
+    "tp3": 10954.4,
+    "card_R_points": 39.73,
+    "be_rule": "BE_0.2R_ON_TP2",
+    "runner_rule": "TRACE",
+    "management_text": "Branch TRANSITION (breakout side only, mirrors TREND breakout 5.2b with R1/R1.5/R2). 3 equal units. Unit 1 exits at TP1 = daily R1 10914.2 (+68.13); Unit 2 at TP2 = daily R1.5 10934.3 (+88.23); Unit 3 runner to TP3 = daily R2 10954.4 (+108.33). On the TP2 fill Unit 3 stop moves to entry +0.2R = 10854.02. R = 39.73 pts = 0.36 x ATR14 (cash 109.6929); thesis invalidation: daily close back through daily P 10,838.5 (stop is 32.2 pts below it, inside the invalidation). Pivots are daily cash floor pivots computed from the 28 Jul cash bar of the execution (broker) series: CORROBORATED by construction, so no indicative flag and no suppression. Event collisions: EIA stocks 15:30 UK (HIGH); Fed decision 19:00 UK and press conference 19:30 UK after the 16:30 cash close.",
+    "suppressed": false,
+    "rationale": "REGIME TRANSITION -> Trade 2 breakout-side branch only (5.2c); counter-side sell limit suppressed. Direction LONG = breakout side aligned with 3C upside (price at 25d top, KER up). ENTRY = d_cash_P 10,838.5 + 0.10 x (d_cash_R1 10,914.2 - 10,838.5) = 10,846.07. A BUY STOP at that price would sit below prev_close_full 10,893.2 (wrong side), so it is a BUY LIMIT (allowed 'stop or limit' in 5.2b), gap -47.13 vs close. STOP = P - 0.8 x (P - d_cash_S1 10,798.3) = 10,838.5 - 32.16 = 10,806.34; alternative S1 - 0.25xATR = 10,770.9 is wider so the tighter formula stop applies. R 39.73 = 0.362 x ATR14 (floor 0.3 x ATR = 32.9, passes, thin headroom). TP1/TP2/TP3 = d_cash_R1 10,914.2 / R1.5 = (10,914.2+10,954.4)/2 = 10,934.3 / d_cash_R2 10,954.4; TP1 within 2.5 x ATR of entry. Cash tier chosen per session basis rule; no weekly/monthly tier substitution. Weekly cash tiers for reference: W P 10,652.3, R1 10,834.6, R2 10,941.1 (confluence with R1.5 within 6 pts). Pivot suppression gate (5.2a) tested: tiers computed from the execution series bar of 28 Jul, CORROBORATED, gate does not fire. Regime = TRANSITION (default fall-through, M3 11b). Cash 25-session block 24 Jun-28 Jul: overlap ratio 0.56 (>0.55 range-like), directional persistence 0.40 (<0.50), mean candle direction +0.12, but 25-session median RSI2 79 (outside the 30-70 Ranging band) and last close at the 99th percentile of the 25-day range (Range Top Bias): neither Trending nor Ranging criteria are met, so the 5-week read is Transitional. Smoothed KER(13, EMA3) = +0.438 (raw +0.592; Trending Up - Strong, above the 0.13 threshold) while VOLator slope = -0.18 (ATR14/close z-score, last 10 sessions; contraction), so KER and VOLator disagree, which also forces TRANSITION. Same label forks Trade 2 (breakout side only) and Trade 3 (3C). Calendar for D (UK clock): EIA crude stocks 15:30 HIGH; Fed rate decision 19:00 HIGH; FOMC press conference 19:30 HIGH; no BoE rate decision. Regime/sentiment/narrative read carried from the report; DAX/Euro Stoxx/Brent not verifiable.",
+    "report_date": "2026-07-29",
+    "report_file": "ftse_report_29Jul2026.md",
+    "source": "regen_ftse_regen1_draw1",
+    "draw": 1,
+    "module_sha": "f69b2cd",
+    "levels_file": "data/levels/UK100_by_date/2026-07-29.csv",
+    "slice_file": "data/slices/UK100/UK100_upto_2026-07-28.csv",
+    "last_bar_broker": "2026-07-28 22:45",
+    "direction_score": 0.43,
+    "direction_components": {
+      "short_term_technical": {
+        "signal": 1.0,
+        "weight": 0.25,
+        "contribution": 0.25
+      },
+      "medium_term_regime": {
+        "signal": 0.5,
+        "weight": 0.2,
+        "contribution": 0.1
+      },
+      "volator": {
+        "signal": 0.0,
+        "weight": 0.1,
+        "contribution": 0.0
+      },
+      "kaufman": {
+        "signal": 0.4384,
+        "weight": 0.15,
+        "contribution": 0.0658
+      },
+      "sentiment": {
+        "signal": 0.595,
+        "weight": 0.15,
+        "contribution": 0.0892
+      },
+      "cross_asset": {
+        "signal": -0.5,
+        "weight": 0.15,
+        "contribution": -0.075
+      }
+    },
+    "regime": "TRANSITION",
+    "anchor_broker": "09:00"
+  },
+  {
+    "card_id": "2026-07-29_Trade_3C",
+    "strategy": "Trade 3C - Momentum-Breakout (TRANSITION)",
+    "family": "Trade 3C",
+    "direction": "LONG",
+    "entry_mode": "CONDITIONAL",
+    "entry_mode_text": "SUPPRESSED - no confirmed break",
+    "entry": null,
+    "stop": null,
+    "tp1": null,
+    "tp2": null,
+    "tp3": null,
+    "card_R_points": null,
+    "be_rule": "NONE",
+    "runner_rule": "TRACE",
+    "management_text": "SUPPRESSED - confirmed-break gate failed: D-1 cash close 10,874.0 is below the 25-day high 10,878.7 and 32.1 pts short of the required trigger 10,906.1 (high + 0.25 x ATR14 109.69).",
+    "suppressed": true,
+    "rationale": "REGIME TRANSITION -> fork 3C. Gate (4d): daily close must be beyond the 25-day boundary by >= 0.25 x ATR14. 25-day cash range high 10,878.7 (28 Jul, M15 bar within 10:00-18:30 broker) / low 10,380.4 (9 Jul), width 498.3. Required close >= 10,878.7 + 27.42 = 10,906.1. D-1 cash close 10,874.0 (4.7 below the boundary, shortfall 32.1 to trigger); full-day basis also fails (close 10,893.2 vs 25d high 10,911.4 + 0.25 x 138.58 = 10,946.0). Gate fails -> suppressed, no levels. Contingent arming commentary only: a daily close >= 10,906.1 would make the upside break eligible (stop would be low + 0.40 x width = 10,579.7, R 326+ near the 3.0 x ATR limit). 3A/3B not substituted. Direction kept LONG as the upside breakout side identified by the retest/KER read. Regime = TRANSITION (default fall-through, M3 11b). Cash 25-session block 24 Jun-28 Jul: overlap ratio 0.56 (>0.55 range-like), directional persistence 0.40 (<0.50), mean candle direction +0.12, but 25-session median RSI2 79 (outside the 30-70 Ranging band) and last close at the 99th percentile of the 25-day range (Range Top Bias): neither Trending nor Ranging criteria are met, so the 5-week read is Transitional. Smoothed KER(13, EMA3) = +0.438 (raw +0.592; Trending Up - Strong, above the 0.13 threshold) while VOLator slope = -0.18 (ATR14/close z-score, last 10 sessions; contraction), so KER and VOLator disagree, which also forces TRANSITION. Same label forks Trade 2 (breakout side only) and Trade 3 (3C). Calendar for D (UK clock): EIA crude stocks 15:30 HIGH; Fed rate decision 19:00 HIGH; FOMC press conference 19:30 HIGH; no BoE rate decision. Regime/sentiment/narrative read carried from the report; DAX/Euro Stoxx/Brent not verifiable.",
+    "report_date": "2026-07-29",
+    "report_file": "ftse_report_29Jul2026.md",
+    "source": "regen_ftse_regen1_draw1",
+    "draw": 1,
+    "module_sha": "f69b2cd",
+    "levels_file": "data/levels/UK100_by_date/2026-07-29.csv",
+    "slice_file": "data/slices/UK100/UK100_upto_2026-07-28.csv",
+    "last_bar_broker": "2026-07-28 22:45",
+    "direction_score": 0.43,
+    "direction_components": {
+      "short_term_technical": {
+        "signal": 1.0,
+        "weight": 0.25,
+        "contribution": 0.25
+      },
+      "medium_term_regime": {
+        "signal": 0.5,
+        "weight": 0.2,
+        "contribution": 0.1
+      },
+      "volator": {
+        "signal": 0.0,
+        "weight": 0.1,
+        "contribution": 0.0
+      },
+      "kaufman": {
+        "signal": 0.4384,
+        "weight": 0.15,
+        "contribution": 0.0658
+      },
+      "sentiment": {
+        "signal": 0.595,
+        "weight": 0.15,
+        "contribution": 0.0892
+      },
+      "cross_asset": {
+        "signal": -0.5,
+        "weight": 0.15,
+        "contribution": -0.075
+      }
+    },
+    "regime": "TRANSITION",
+    "anchor_broker": "09:00"
+  }
+]

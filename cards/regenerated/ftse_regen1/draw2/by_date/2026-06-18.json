@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-06-18",
+  "report_file": "FTSE_EuroStoxx_Report_18Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-18.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-17.csv",
+  "last_bar_broker": "2026-06-17 22:45:00",
+  "direction_score": 0.5207,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 100.0 (level file, Cutler simple-mean); 5-day cash closes 10299.9 (11 Jun) to 10513.3 (17 Jun) higher, bullish"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed swing (up: 10 Jun cash low 10126.2 to 15 Jun cash high 10574.6) x 0.5"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "own recompute: ATR14/close scaled by 25-session z-score clipped +-1, last-10 slope +0.026 (positive, marginal; level -0.86); expansion-up aligned with the 15 Jun upside break = +0.5"
+   },
+   "kaufman": {
+    "signal": 0.0746,
+    "weight": 0.15,
+    "contribution": 0.0112,
+    "basis": "cash daily closes, period 13, EMA3 smoothed KER +0.0746 (raw +0.160), x sign of medium move (+); Ranging-Neutral band (<0.09), below 0.13 trend threshold"
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645,
+    "basis": "carried from report (+0.43 per report section 17/20); NOT verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x 0.3. USDX 99.717 (11 Jun) to 100.425 (17 Jun) +0.71% = Contradicts; US500 proxy 11->17 Jun 7394.6->7446.2 and 5d vs 10 Jun close 7261.5 rising = Confirms (but -1.5% over last two sessions); VIX proxy 19.51 to 18.43 = Confirms (rose on 17 Jun from 17.73); DAX 40 Neutral and Euro Stoxx 50 Confirms CARRIED from report (not available in slices)"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-18_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (LONG)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET BUY at the 09:00 broker (07:00 UK) anchor, filled at the D-1 reference close 10445.40 (prev_close_full, 17 Jun 2026 22:45 broker); signed gap 0.00",
+  "entry": 10445.4,
+  "stop": 10408.12,
+  "tp1": 10482.68,
+  "tp2": 10519.96,
+  "tp3": 10766.76,
+  "card_R_points": 37.28,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits at TP1 10482.68 (+1R); U2 exits at TP2 10519.96 (+2R); on the TP2 fill U3 stop moves to 10452.86 (entry + 0.2R, in the profit direction). U3 runner exits at session close or at the 3 x ATR14 cap 10766.76, whichever first. Invalidation: daily close below weekly pivot 10353.07 (96.4 pts / 0.90 ATR beyond the stop, > 0.15 ATR). R 37.28 = 0.35 x ATR14 (cash 14d 107.12); not wide (<=1.00). TP1 distance 37.28 (<2.5 ATR). Caveats: UK labour data 07:00 UK (= 09:00 broker anchor), BoE decision 12:00 UK (14:00 broker), US jobless claims / Philly Fed 15:30 broker.",
+  "suppressed": false,
+  "rationale": "Score +0.52 >= 0.25 -> LONG, Trade 1 live. Components: short-term tech +1x0.25=+0.25; medium regime (TRANSITION, last swing up) +0.5x0.20=+0.10; VOLator +0.5x0.10=+0.05; KER +0.0746x0.15=+0.011; sentiment +0.43x0.15=+0.0645 (carried from report, unverifiable); cross-asset MIXED +0.3x0.15=+0.045. Sum = 0.5207. Regime TRANSITION (one label for the run): the gates for TREND_UP and RANGE both fail. Cash daily closes: smoothed KER(13,EMA3) +0.075 < 0.13 trend threshold (Ranging-Neutral class), 25-session overlap ratio 0.48 (between the 0.45 and 0.55 bands), directional persistence ~0.29, close at 86th percentile of the 25-day range (Range-Top bias) -> Step 4 is Transitional/mixed, so the fall-through TRANSITION applies. Agrees with the report's own consolidated TRANSITION label; the report's 'Trending' wording is dropped. ENTRY: MARKET at prev_close_full 10445.40 (level file; last executable price before D; cash close was 10513.30, the 67.9 pt gap is the after-hours slide on 17 Jun, entry fixed to the full-day close per session rules). Anchor 09:00 broker = 07:00 UK, the default daily-open anchor; kept because labour data lands at that instant but no report logic argues for another anchor. STOP (M5 4c, tighter of two branches + 0.25 x ATR14 buffer, buffer = 0.25 x 107.1214 = 26.78): (a) swing branch: swing_low_5d_cash 10235.80 (11 Jun cash low, 10:00-18:30 broker bar series) - 26.78 = 10209.02, R 236.38 = 2.21 ATR; (b) support branch: nearest support below entry in the 5-day cash structure = 16 Jun cash low 10434.90 (also equals the 17 Jun full-day low prev_low_full 10434.90) - 26.78 = 10408.12, R 37.28 = 0.35 ATR. Tighter = (b), chosen. Daily pivot S3 10442.63 is 2.8 below entry but is not 5-day OHLC structure; using it would give R 29.55 < 0.3 ATR so it was not used. Cap 3.5 ATR 374.92 not binding; floor 0.3 ATR 32.14 cleared on its merits (37.28). TP1 = entry + R = 10482.68; TP2 = entry + 2R = 10519.96; TP3 = entry + 3 x ATR14 = 10445.40 + 321.36 = 10766.76 (runner cap, session-close time stop). BE: U3 stop to 10445.40 + 0.2 x 37.28 = 10452.86 on TP2 fill. 2R = 74.56 < 3 ATR so no TP2-ambitious flag. Confluence: stop at 10408.12 sits below 10434.90 (prior-session lows, 'Swing' strong confluence); TP1 10482.68 within 2.4 of daily S1 cash 10485.03; TP2 10519.96 is 7.5 below daily R1 10527.43. Invalidation = daily close below weekly P w_cash_P 10353.07."
+ },
+ {
+  "report_date": "2026-06-18",
+  "report_file": "FTSE_EuroStoxx_Report_18Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-18.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-17.csv",
+  "last_bar_broker": "2026-06-17 22:45:00",
+  "direction_score": 0.5207,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 100.0 (level file, Cutler simple-mean); 5-day cash closes 10299.9 (11 Jun) to 10513.3 (17 Jun) higher, bullish"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed swing (up: 10 Jun cash low 10126.2 to 15 Jun cash high 10574.6) x 0.5"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "own recompute: ATR14/close scaled by 25-session z-score clipped +-1, last-10 slope +0.026 (positive, marginal; level -0.86); expansion-up aligned with the 15 Jun upside break = +0.5"
+   },
+   "kaufman": {
+    "signal": 0.0746,
+    "weight": 0.15,
+    "contribution": 0.0112,
+    "basis": "cash daily closes, period 13, EMA3 smoothed KER +0.0746 (raw +0.160), x sign of medium move (+); Ranging-Neutral band (<0.09), below 0.13 trend threshold"
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645,
+    "basis": "carried from report (+0.43 per report section 17/20); NOT verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x 0.3. USDX 99.717 (11 Jun) to 100.425 (17 Jun) +0.71% = Contradicts; US500 proxy 11->17 Jun 7394.6->7446.2 and 5d vs 10 Jun close 7261.5 rising = Confirms (but -1.5% over last two sessions); VIX proxy 19.51 to 18.43 = Confirms (rose on 17 Jun from 17.73); DAX 40 Neutral and Euro Stoxx 50 Confirms CARRIED from report (not available in slices)"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-18_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION branch, breakout-side LONG, weekly-anchored)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at weekly P + 0.10 x (R1 - P) = 10375.75, armed from the 09:00 broker (07:00 UK) anchor; D-1 reference close 10445.40 (17 Jun, prev_close_full), signed gap -69.65 (limit below close, correct side)",
+  "entry": 10375.75,
+  "stop": 10256.72,
+  "tp1": 10579.93,
+  "tp2": 10640.15,
+  "tp3": 10700.37,
+  "card_R_points": 119.03,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Branch: TRANSITION, breakout side (long), mirror of the trend-breakout build. 3 equal units. U1 exits TP1 weekly R1 10579.93; U2 exits TP2 R1.5 10640.15; U3 runner to TP3 weekly R2 10700.37; on the TP2 fill U3 stop moves to 10399.56 (entry + 0.2R). R 119.03 = 1.11 x ATR14 (cash 14d 107.12): WIDE STOP flag. TP1 distance 204.18 = 1.91 ATR (< 2.5). Invalidation: daily close below weekly pivot 10353.07 (96.35 pts beyond the stop, > 0.15 ATR). Pivots are weekly cash tier from the 8-12 Jun 2026 week, CORROBORATED by construction (computed from the broker execution series). Caveats: UK labour data 07:00 UK, BoE decision 12:00 UK (order rests through both), US jobless claims / Philly Fed 15:30 broker; limit is 1.30 ATR below the close so it may not fill.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION (one label for the run): the gates for TREND_UP and RANGE both fail. Cash daily closes: smoothed KER(13,EMA3) +0.075 < 0.13 trend threshold (Ranging-Neutral class), 25-session overlap ratio 0.48 (between the 0.45 and 0.55 bands), directional persistence ~0.29, close at 86th percentile of the 25-day range (Range-Top bias) -> Step 4 is Transitional/mixed, so the fall-through TRANSITION applies. Agrees with the report's own consolidated TRANSITION label; the report's 'Trending' wording is dropped. BRANCH: TRANSITION -> only the breakout-side build is permitted, direction LONG (3C side: upper 25-day boundary 10574.60 tested and rejected on 15 Jun and 16 Jun, VOLator slope positive, cross-asset MIXED/+). Weekly tier used because the report's Trade 2 is weekly-anchored and the weekly tier is the one the report's reading rests on; the daily tier (P 10499.17, R1 10527.43, S1 10485.03) was not used because its P-to-S1 spacing (14.14) gives R 14.1 < 0.3 ATR, i.e. it fails the floor on the honest construction and no tier was swapped to clear a floor. Levels (w_cash_* columns, week 2026-W24, 8-12 Jun, H 10473.5 L 10126.2 C 10459.5): P 10353.0667, R1 10579.9333, S1 10232.6333, R2 10700.3667; R1.5 = (R1+R2)/2 = 10640.15. ENTRY = P + 0.10 x (R1-P) = 10353.0667 + 22.6867 = 10375.7533 -> 10375.75 (BUY LIMIT, below prev_close_full 10445.40, gap -69.65). STOP = P - 0.8 x (P - S1) = 10353.0667 - 0.8 x 120.4333 = 10256.72; the alternative S1 - 0.25 ATR = 10205.85 applies only if a confluence sits just below S1; the 5d swing low 10235.80 is above S1 so it does not, and 10256.72 is the tighter anyway. R = 119.03 = 1.11 ATR (floor 32.14 / cap 321.36 ok, wide-stop flag set). TP1 = R1, TP2 = R1.5, TP3 = R2 (branch targets, not 1R/2R). Confluence: weekly P 10353.07 is 17.33 below monthly P 10370.40 (m_cash_P), no strong confluence; TP1 10579.93 within 5.3 of the 25-day swing high 10574.60 (strong confluence). Static: stop<entry<TP1<TP2<TP3 ok."
+ },
+ {
+  "report_date": "2026-06-18",
+  "report_file": "FTSE_EuroStoxx_Report_18Jun2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-18.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-17.csv",
+  "last_bar_broker": "2026-06-17 22:45:00",
+  "direction_score": 0.5207,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 100.0 (level file, Cutler simple-mean); 5-day cash closes 10299.9 (11 Jun) to 10513.3 (17 Jun) higher, bullish"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION = sign of last completed swing (up: 10 Jun cash low 10126.2 to 15 Jun cash high 10574.6) x 0.5"
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05,
+    "basis": "own recompute: ATR14/close scaled by 25-session z-score clipped +-1, last-10 slope +0.026 (positive, marginal; level -0.86); expansion-up aligned with the 15 Jun upside break = +0.5"
+   },
+   "kaufman": {
+    "signal": 0.0746,
+    "weight": 0.15,
+    "contribution": 0.0112,
+    "basis": "cash daily closes, period 13, EMA3 smoothed KER +0.0746 (raw +0.160), x sign of medium move (+); Ranging-Neutral band (<0.09), below 0.13 trend threshold"
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645,
+    "basis": "carried from report (+0.43 per report section 17/20); NOT verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x 0.3. USDX 99.717 (11 Jun) to 100.425 (17 Jun) +0.71% = Contradicts; US500 proxy 11->17 Jun 7394.6->7446.2 and 5d vs 10 Jun close 7261.5 rising = Confirms (but -1.5% over last two sessions); VIX proxy 19.51 to 18.43 = Confirms (rose on 17 Jun from 17.73); DAX 40 Neutral and Euro Stoxx 50 Confirms CARRIED from report (not available in slices)"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-18_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION fork, LONG) - SUPPRESSED",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond the 25-day boundary",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": null,
+  "management_text": "SUPPRESSED: no confirmed daily close >= 10601.38 (boundary 10574.60 + 0.25 x ATR14 26.78). D-1 cash close 10513.30 is 88.08 below the confirm level. Commentary only (not a card): a daily close at or above 10601.38 would arm the long breakout.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION (one label for the run): the gates for TREND_UP and RANGE both fail. Cash daily closes: smoothed KER(13,EMA3) +0.075 < 0.13 trend threshold (Ranging-Neutral class), 25-session overlap ratio 0.48 (between the 0.45 and 0.55 bands), directional persistence ~0.29, close at 86th percentile of the 25-day range (Range-Top bias) -> Step 4 is Transitional/mixed, so the fall-through TRANSITION applies. Agrees with the report's own consolidated TRANSITION label; the report's 'Trending' wording is dropped. FORK: TRANSITION -> 3C (fixed mapping). Eligibility gate (M5 4d): confirmed break = daily close beyond swing_high_25d_cash 10574.60 (15 Jun 2026 cash high) by >= 0.25 x ATR14 (cash 107.1214 -> 26.78) = 10601.38. Highest close in the lookback is 10513.30 (17 Jun cash close, level file prev_close_cash); no close beyond 10574.60 at all. Gate FAILS -> SUPPRESSED row, no prices. Direction kept LONG because the failed retests (15 and 16 Jun) were at the upper boundary. No other variant or pivot level substituted. For reference only, 25d range 10126.20-10574.60 width 448.40."
+ }
+]

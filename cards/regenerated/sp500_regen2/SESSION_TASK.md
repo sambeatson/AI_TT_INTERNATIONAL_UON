@@ -58,8 +58,9 @@ than D · the web. **You do not know what the market did on or after D. Do not s
 
 Before saving, lint your cards: write them to a temporary CSV with the registry columns and run
 `python engine/linter.py --cards <tmp.csv> --out <tmp_out.csv>` (no `--data`). **Zero DUD flags.** Fix and re-lint.
-**Name both temp files uniquely** — e.g. `/tmp/claude-0/lint_<D>_d<K>_in.csv` and `..._out.csv`. Many sessions
-run at once; a shared name means you may lint someone else's cards. (Every card is re-linted centrally
+**Do all scratch work — temp CSVs, helper scripts, anything — inside your own folder**
+`/tmp/claude-0/s_<D>_d<K>/` (create it). Many sessions run at once; a shared filename means you may
+read, run or overwrite someone else's work. (Every card is re-linted centrally
 afterwards regardless, so this check is for your own correctness, not the final gate.)
 
 ## Output — exactly one file

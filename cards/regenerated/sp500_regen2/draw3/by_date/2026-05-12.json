@@ -1,0 +1,188 @@
+[
+ {
+  "card_id": "2026-05-12_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market buy at daily-open anchor 09:00 broker (07:00 UK) at D-1 reference close (prev_close_full 7416.2, 2026-05-11); gap to reference 0.0",
+  "anchor_broker": "09:00",
+  "entry": 7416.2,
+  "stop": 7378.9,
+  "tp1": 7453.5,
+  "tp2": 7490.8,
+  "tp3": 7617.9,
+  "card_R_points": 37.3,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits at TP1 (+1R), Unit 2 at TP2 (+2R). On TP2 fill Unit 3 stop moves to entry +0.2R = 7423.7. Unit 3 runner exits at D session close or at 3xATR14 from entry (7617.9), whichever first. Thesis invalidation: daily close below weekly cash P 7328.5. Caveats: 09:00 broker fill is pre-cash-open (proxy open, not the cash close); 12-May US April CPI 08:30 ET = 15:30 broker falls inside the holding period.",
+  "suppressed": false,
+  "direction_score": 0.708,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_ker": {
+    "signal": 0.5615,
+    "weight": 0.15,
+    "contribution": 0.0842
+   },
+   "sentiment": {
+    "signal": 0.16,
+    "weight": 0.15,
+    "contribution": 0.024
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "rationale": "Direction score +0.708 = 0.25(tech +1: RSI2_cash=100, 5d cash closes 7265.8->7419.7 higher highs/lows) + 0.20(regime TREND_UP +1) + 0.00(VOLator: ATR14 cash 67.2 flat vs 68.6 on 28-Apr, last-5 mean TR below ATR14 -> compression 0) + 0.0842(KER13 cash closes = 0.5615 x +1 x 0.15) + 0.024(sentiment +0.16 carried from report 13b, unverifiable) + 0.15(cross-asset CONFIRM carried from report 10; USDX/DAX not in slices; VIX cash-close 19.52 vs 25-session mean 20.78 and 19.18-19.52 range is consistent with CONFIRM). LONG, |score| >= 0.25. Entry = prev_close_full 7416.2 (MARKET). Stop per M5 4c, tighter of (a) swing_low_5d_cash 7242.9 (bar 2026-05-05 16:30 broker) - 0.25*ATR14cash(67.2357)=0.25ATR=16.81 -> 7226.1 (R 190.1) and (b) nearest support = d_cash_S1 7395.667 (P 7415.33 is within 0.9 pts of entry, so first support below is S1) - 16.81 -> 7378.9 (R 37.3); chose (b) 7378.9. R=37.3 = 0.55 x ATR14cash (<1, no wide-stop flag; 0.3-3.0 band 20.2-201.7 ok; 2R=74.6 < 3ATR, no ambitious flag). TP1 = entry+R = 7453.5, TP2 = entry+2R = 7490.8 (TP1 37.3 from entry < 2.5ATR 168.1). TP3 = entry+3*ATR14 = 7617.9 price cap (runner also time-stopped at session close). Invalidation: daily close below w_cash_P 7328.5 (beyond stop by 50.4 pts = 0.75 ATR, >0.15ATR). Anchor 09:00 broker = 07:00 UK daily-open default. Regime TREND_UP: report 9 calls Trending-Bullish; real data agrees: KER13(cash closes)=0.56, 25d cash range 6533.3-7435.0 with D-1 cash close 7419.7 in the top 2% of it, 4 of last 5 cash closes up.",
+  "report_date": "2026-05-12",
+  "report_file": "SP500_Report_12May2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-12.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-11.csv",
+  "last_bar_broker": "2026-05-11 23:45:00",
+  "regime": "TREND_UP"
+ },
+ {
+  "card_id": "2026-05-12_Trade_2",
+  "strategy": "Trade 2 - Pivot (TREND_UP breakout branch)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SUPPRESSED - R floor failed: honest TREND_UP construction gives R 18.1 < 0.3xATR14 (20.2)",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: R floor (0.3xATR14 = 20.17) not met by M5 5.2b geometry on the fixed cash basis.",
+  "suppressed": true,
+  "direction_score": 0.708,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_ker": {
+    "signal": 0.5615,
+    "weight": 0.15,
+    "contribution": 0.0842
+   },
+   "sentiment": {
+    "signal": 0.16,
+    "weight": 0.15,
+    "contribution": 0.024
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "rationale": "TREND_UP branch (M5 5.2b), cash daily pivots from D-1 2026-05-11: P 7415.333, R1 7439.367, S1 7395.667. Entry = P+0.10(R1-P) = 7417.7 (above prev_close_full 7416.2, so a BUY STOP; a limit there would be on the wrong side). Stop = P-0.8(P-S1) = 7399.6. The alternative 'just below S1 - 0.25ATR' (7378.9; prior-day low 7391.3 sits just below S1) is wider, so the tighter 7399.6 applies. R = 18.1 = 0.27 x ATR14cash 67.24 < 0.3x (20.17) -> floor fails. Not rebuilt on full-day pivots (P 7407.8/R1 7443.4/S1 7380.6) because that would be switching basis just to clear the floor; suppressed. Contingent commentary only: TP ladder would have been R1/R1.5/R2 = 7439.4/7449.2/7459.0. Regime TREND_UP: report 9 calls Trending-Bullish; real data agrees: KER13(cash closes)=0.56, 25d cash range 6533.3-7435.0 with D-1 cash close 7419.7 in the top 2% of it, 4 of last 5 cash closes up.",
+  "report_date": "2026-05-12",
+  "report_file": "SP500_Report_12May2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-12.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-11.csv",
+  "last_bar_broker": "2026-05-11 23:45:00",
+  "regime": "TREND_UP"
+ },
+ {
+  "card_id": "2026-05-12_Trade_3A",
+  "strategy": "Trade 3A - Momentum-Pullback (57.5% fib)",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at 57.5% retrace of cash swing 7242.9->7435.0; sits 91.7 below D-1 reference close 7416.2",
+  "anchor_broker": "09:00",
+  "entry": 7324.5,
+  "stop": 7226.1,
+  "tp1": 7361.6,
+  "tp2": 7435.0,
+  "tp3": 7627.1,
+  "card_R_points": 98.4,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits at TP1 (38.2% retrace 7361.6), Unit 2 at TP2 (0% = swing high 7435.0). On TP2 fill Unit 3 stop moves to entry +0.2R = 7344.2. Unit 3 runner targets 100% extension 7627.1; if price prints above it, Unit 3 stop moves to midpoint of entry and 0% anchor = 7379.8. Thesis invalidation: daily close below swing low 7242.9. Wide-stop flag (R = 1.46 x ATR14). Caveat: 12-May US April CPI 08:30 ET = 15:30 broker falls inside the holding period.",
+  "suppressed": false,
+  "direction_score": 0.708,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman_ker": {
+    "signal": 0.5615,
+    "weight": 0.15,
+    "contribution": 0.0842
+   },
+   "sentiment": {
+    "signal": 0.16,
+    "weight": 0.15,
+    "contribution": 0.024
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "rationale": "Fork: TREND_UP -> 3A. Swing (cash basis, swing_low_5d_cash/swing_high_5d_cash): low 7242.9 at 2026-05-05 16:30 broker -> high 7435.0 at 2026-05-11 20:45 broker; up-swing since the high is the more recent extreme; lookback used = 4 sessions (default, no extension); magnitude 192.1 pts = 2.86 x ATR14cash 67.2357 >= 2 -> qualifies (gate passes). Entry = 7435.0-0.575*192.1 = 7324.5 (below prev_close_full 7416.2: valid BUY LIMIT). Stop = 7242.9-0.25*ATR(16.81) = 7226.1; stop distance 98.4 = 1.46 x ATR < 3.5 cap. R = 98.4 = 1.46 x ATR (>1: wide-stop flag; inside 0.3-3.0). TP1 = 38.2% retrace = 7435.0-0.382*192.1 = 7361.6 (37.1 from entry, <2.5ATR); TP2 = 0% = 7435.0; TP3 = 100% extension = 7435.0+192.1 = 7627.1. Invalidation: daily close below 7242.9, 16.8 above the stop (0.25 ATR, >0.15 ATR; invalidation sits inside the stop). Anchor 09:00 broker default (monitoring opens at the 07:00 UK daily open). Regime TREND_UP: report 9 calls Trending-Bullish; real data agrees: KER13(cash closes)=0.56, 25d cash range 6533.3-7435.0 with D-1 cash close 7419.7 in the top 2% of it, 4 of last 5 cash closes up.",
+  "report_date": "2026-05-12",
+  "report_file": "SP500_Report_12May2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-12.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-11.csv",
+  "last_bar_broker": "2026-05-11 23:45:00",
+  "regime": "TREND_UP"
+ }
+]

@@ -12,3 +12,10 @@
 | 05-28 | 1, 3 | Trade 2 built on the **weekly** cash pivot tier (session cites the report's own Trade 2 and QA item 24) — same pattern as 06-18; flagged for the central basis-shopping audit | audit flag |
 | 06-15 | 3 | Trade 2 buy stop placed at daily R1 (not P+0.10×(R1−P)) with targets advanced one tier (R1.5/R2/R3; TP1 ≈ 0.2R) — off-formula, flagged for the central audit | audit flag |
 | 07-17 | 3 | Trade 2 buy stop at cash R1 (targets R1.5/R2/R3, TP1 ≈ 0.19R), following QA feedback item 18 rather than the M5 P+0.10×(R1−P) formula — same QA-driven pattern as 07-17 d2 and 06-15 d3; flagged for audit | audit flag |
+| 07-29 | 3 | Trade 2 buy stop at daily R1 (formula level sat below the close) with targets taken from daily/weekly/monthly R3 so TP1 clears 1R — off-formula and mixes pivot tiers; flagged for audit | audit flag |
+
+## Assembly (all 171 sessions complete)
+- `cards_regen_draw{1,2,3}.csv`: 171 cards each, 57/57 dates. Live cards: draw 1 = 75, draw 2 = 71, draw 3 = 73 (Trade 2 dominates; most 3rd cards are suppressed 3C because the regime reads TRANSITION and no 25-day break is confirmed).
+- Central static lint (`lint/lint_static_draw*.csv`): 0 DUD in every draw; one WARN_DUPLICATE (2026-05-26 Trade 1, draw 3 — identical to another draw's card, expected when the construction is deterministic).
+- Provenance check: every record carries the right draw, `source`, `module_sha=f69b2cd`, report_date and report_file — 0 problems.
+- Audit flags above (06-18 d1–3 and 05-28 d1/d3 weekly-tier Trade 2; 06-15 d3, 07-17 d2/d3, 07-29 d3 off-formula Trade 2 entries) are kept as issued and reported as a sensitivity in the write-up.

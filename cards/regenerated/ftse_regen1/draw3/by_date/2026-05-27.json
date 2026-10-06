@@ -1,0 +1,206 @@
+[
+ {
+  "card_id": "2026-05-27_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET at 07:00 UK (09:00 broker) at the D-1 reference close 10507.00 (full-day settled close of 2026-05-26); signed gap to reference close 0.00",
+  "entry": 10507.0,
+  "stop": 10445.27,
+  "tp1": 10568.73,
+  "tp2": 10630.46,
+  "tp3": 10913.33,
+  "card_R_points": 61.73,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Unit 1 exits at TP1 10568.73 (+1R, +61.73 pts). Unit 2 exits at TP2 10630.46 (+2R); on the TP2 fill Unit 3 stop moves to 10519.35 (entry + 0.2R). Unit 3 runner: time-stopped at the LSE cash close (16:30 UK / 18:30 broker) or price-stopped at TP3 10913.33 (entry + 3 x ATR14 135.44), whichever first. R = 61.73 pts = 0.46 x ATR14 (14-session cash-basis ATR 135.44), below 1.00 so no wide-stop flag; 2R = 123.5 pts < 3 x ATR so no 'TP2 ambitious' flag. Thesis invalidation: daily close below weekly pivot 10368.70 (cash, 2026-W21), a different level from the stop, 76.6 pts beyond it. Stop is ahead of invalidation. Calendar: 27 May scheduled EUR Consumer Confidence (07:45 UK), ECB Financial Stability Review (09:00 UK); Fed Governor Cook 20:55 UK is after the cash close; the BoE MPC decision on 28 May is outside this session. Sentiment component is carried from the report and unverified.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION (own recomputation from cash daily bars built from the M15 slice; the report's 'Trending - Bullish' / 'Trending Up - Strong KER' is not reproduced). 25-session cash block 21 Apr-26 May: overlap ratio 0.466 (trend needs <0.45, range needs >0.55), directional persistence 0.609, directional mean 0.0, close position in 25d range 72% (Range-Top), VOLator slope negative (-0.038) so the Trending test fails -> Transitional; 5-day block (19-26 May) is Trending Bullish (five rising cash closes, RSI2 100), so Step 4 = Transitional (any). Smoothed KER(13,EMA3) = +0.1017, inside the Ranging-Upward-Bias band (0.09-0.13), below the 0.13 trend threshold, so TREND_UP is unavailable; RANGE needs a Ranging synthesis, so it is unavailable too. Deterministic fall-through = TRANSITION. || Direction LONG: score +0.488 (>= 0.25). Entry = prev_close_full 10507.0 (2026-05-26), anchor 09:00 broker (07:00 UK default; nothing in the report argues for 02:00 or 10:00). Stop per M5 4c: tighter of (5d swing low cash 10272.8 (swing_low_5d_cash, 20 May) - 0.25 x ATR) = 10238.94 and (nearest support = daily S1 cash d_cash_S1 10479.1333 - 0.25 x ATR14_cash 135.4429 = 33.86) = 10445.27; the S1-based stop is tighter and used; distance 61.73 pts = 0.46 x ATR, inside the 3.5 x ATR cap (474.0) so no cap applied. R = 10507.00 - 10445.27 = 61.73; TP1 = entry + R; TP2 = entry + 2R; TP3 = entry + 3 x ATR14_cash = 10507.0 + 406.33 = 10913.33; Unit-3 stop after TP2 = entry + 0.2R = 10519.35 (above entry, profitable side for a long). Static checks: stop < entry < TP1 < TP2 < TP3; 0.3 x ATR = 40.63 <= R 61.73 <= 406.33; TP1 distance 61.73 <= 2.5 x ATR. Confluences: TP1 10568.73 sits between daily R1 10541.13 and R2 10581.57 (cash); TP2 10630.46 is 8.4 pts below the 25d cash high 10638.9 (21 Apr); entry 10507.0 is 12.6 pts below daily P 10519.57; stop 10445.27 is 12.3 pts below daily S2 10457.57 (inside 0.15 x ATR of 20.3 = strong confluence). Levels come from the level file, not the report.",
+  "report_date": "2026-05-27",
+  "report_file": "FTSE_EuroStoxx_Report_27May2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-26.csv",
+  "last_bar_broker": "2026-05-26 22:45",
+  "direction_score": 0.4885,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash = 100.0 (two up closes: 10462.3->10470.4->10500.7); 5 cash closes 19-26 May rise each session; Bullish = +1"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session cash block classifies Transitional (overlap 0.466, persistence 0.609, directional mean 0.0, VOLator slope negative); Transition = sign of last completed swing (up, 10272.8 on 20 May -> 10560.0 on 26 May) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close z-score slope over last 10 sessions = -0.038 (contraction) -> Compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.1017,
+    "weight": 0.15,
+    "contribution": 0.0152,
+    "basis": "KER(13) smoothed EMA3 on cash closes = +0.1017 (raw 0.0646); band 0.09-0.13 = Ranging - Upward Bias; sign of 13-session move positive"
+   },
+   "sentiment": {
+    "signal": 0.5217,
+    "weight": 0.15,
+    "contribution": 0.0783,
+    "basis": "CARRIED from report section 13 (unverifiable): report states +0.43 but its own article classes/weights give bullish 2.4 / total 4.6 = +0.52 (QA item 12); +0.52 used. With the report's +0.43 the contribution would be 0.0645 and score 0.475"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+). Verified from slices: US500 up (7405.2 on 18 May -> 7521.5 on 26 May, +1.6%), VIX falling (18.67 -> 17.72, risk-on) = confirm; USDX flat (98.985 -> 99.144, +0.16%) = neutral. DAX 40 and Euro Stoxx 50 unavailable: report's reading (Mixed, FTSE up while Continental fell on 26 May) carried. Aggregate MIXED"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00"
+ },
+ {
+  "card_id": "2026-05-27_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION branch, breakout side only)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SUPPRESSED - no order. Intended upside breakout buy-stop at daily P + 0.10 x (R1 - P) = 10521.72 (above reference close 10507.00)",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - R below the 0.3 x ATR14 floor on the honest construction (R 34.50 pts = 0.25 x ATR14 135.44 vs floor 40.63); the Trade 3C breakout it must align with is also not eligible (no confirmed close beyond the 25-day boundary). Pivot tiers are CORROBORATED (computed from the execution series 2026-05-26 H/L/C), so the single-source gate does not fire.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION (own recomputation from cash daily bars built from the M15 slice; the report's 'Trending - Bullish' / 'Trending Up - Strong KER' is not reproduced). 25-session cash block 21 Apr-26 May: overlap ratio 0.466 (trend needs <0.45, range needs >0.55), directional persistence 0.609, directional mean 0.0, close position in 25d range 72% (Range-Top), VOLator slope negative (-0.038) so the Trending test fails -> Transitional; 5-day block (19-26 May) is Trending Bullish (five rising cash closes, RSI2 100), so Step 4 = Transitional (any). Smoothed KER(13,EMA3) = +0.1017, inside the Ranging-Upward-Bias band (0.09-0.13), below the 0.13 trend threshold, so TREND_UP is unavailable; RANGE needs a Ranging synthesis, so it is unavailable too. Deterministic fall-through = TRANSITION. || Branch TRANSITION -> breakout side only (M5 5.2c), long side (recent lower-boundary tests at 10141.2 on 18 May, 10154.9 on 15 May and 10162.8 on 5 May all held; score +0.488; Trade 3C would be long). Geometry mirrors the TREND breakout row: entry = P + 0.10 x (R1 - P) = 10519.5667 + 0.10 x 21.5666 = 10521.72 (buy stop, 14.72 above reference close 10507.0); stop = P - 0.8 x (P - S1) = 10519.5667 - 0.8 x 40.4334 = 10487.22 (the 'S1 minus 0.25 ATR' alternative = 10445.27 is wider, not tighter, so the rule does not allow it; using it would be basis-shopping to clear the floor). R = 34.50 = 0.255 x ATR14 (135.44) < 0.3 x ATR = 40.63 -> floor fails -> suppressed. (Full-basis check: entry 10519.61, stop 10481.04, R 38.57 = 0.244 x ATR full 158.01 < 47.4: also fails.) Gate log: single-source pivot gate not fired (pivots from broker series, CORROBORATED); R-floor gate fired; 3C eligibility gate (see Trade 3C) also not met.",
+  "report_date": "2026-05-27",
+  "report_file": "FTSE_EuroStoxx_Report_27May2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-26.csv",
+  "last_bar_broker": "2026-05-26 22:45",
+  "direction_score": 0.4885,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash = 100.0 (two up closes: 10462.3->10470.4->10500.7); 5 cash closes 19-26 May rise each session; Bullish = +1"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session cash block classifies Transitional (overlap 0.466, persistence 0.609, directional mean 0.0, VOLator slope negative); Transition = sign of last completed swing (up, 10272.8 on 20 May -> 10560.0 on 26 May) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close z-score slope over last 10 sessions = -0.038 (contraction) -> Compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.1017,
+    "weight": 0.15,
+    "contribution": 0.0152,
+    "basis": "KER(13) smoothed EMA3 on cash closes = +0.1017 (raw 0.0646); band 0.09-0.13 = Ranging - Upward Bias; sign of 13-session move positive"
+   },
+   "sentiment": {
+    "signal": 0.5217,
+    "weight": 0.15,
+    "contribution": 0.0783,
+    "basis": "CARRIED from report section 13 (unverifiable): report states +0.43 but its own article classes/weights give bullish 2.4 / total 4.6 = +0.52 (QA item 12); +0.52 used. With the report's +0.43 the contribution would be 0.0645 and score 0.475"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+). Verified from slices: US500 up (7405.2 on 18 May -> 7521.5 on 26 May, +1.6%), VIX falling (18.67 -> 17.72, risk-on) = confirm; USDX flat (98.985 -> 99.144, +0.16%) = neutral. DAX 40 and Euro Stoxx 50 unavailable: report's reading (Mixed, FTSE up while Continental fell on 26 May) carried. Aggregate MIXED"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00"
+ },
+ {
+  "card_id": "2026-05-27_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no order. Eligible only on a daily close >= 10672.76 (25d cash high 10638.9 + 0.25 x ATR14 33.86); last close 10500.7 is 172.1 pts short",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - no confirmed break: last cash close 10500.7 vs required 10672.76 (upside) / 10107.4 or lower (downside; 25d low 10141.2 - 33.86 = 10107.34). Trade 3A is not substituted: the regime label is TRANSITION, so only 3C applies, even though the 5d swing 10272.8 -> 10560.0 (287.2 pts = 2.12 x ATR) would qualify under 4b.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION (own recomputation from cash daily bars built from the M15 slice; the report's 'Trending - Bullish' / 'Trending Up - Strong KER' is not reproduced). 25-session cash block 21 Apr-26 May: overlap ratio 0.466 (trend needs <0.45, range needs >0.55), directional persistence 0.609, directional mean 0.0, close position in 25d range 72% (Range-Top), VOLator slope negative (-0.038) so the Trending test fails -> Transitional; 5-day block (19-26 May) is Trending Bullish (five rising cash closes, RSI2 100), so Step 4 = Transitional (any). Smoothed KER(13,EMA3) = +0.1017, inside the Ranging-Upward-Bias band (0.09-0.13), below the 0.13 trend threshold, so TREND_UP is unavailable; RANGE needs a Ranging synthesis, so it is unavailable too. Deterministic fall-through = TRANSITION. || Fork: regime TRANSITION -> 3C (fixed mapping). Range from level file: swing_high_25d_cash 10638.9 (21 Apr), swing_low_25d_cash 10141.2 (18 May), width 497.7. Confirmed-break test (M5 4d): daily close beyond a boundary by >= 0.25 x ATR14_cash (135.4429 -> 33.86). Upside needs close >= 10672.76; downside needs <= 10107.34. Last completed cash close 10500.7 (26 May, 72 pct of range) -> FAIL -> suppressed. Intended direction long (downside tests of the lower boundary were rejected; RSI2 100; US500 up, VIX down) but no card is issued without the confirming close.",
+  "report_date": "2026-05-27",
+  "report_file": "FTSE_EuroStoxx_Report_27May2026.md",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-26.csv",
+  "last_bar_broker": "2026-05-26 22:45",
+  "direction_score": 0.4885,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash = 100.0 (two up closes: 10462.3->10470.4->10500.7); 5 cash closes 19-26 May rise each session; Bullish = +1"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "25-session cash block classifies Transitional (overlap 0.466, persistence 0.609, directional mean 0.0, VOLator slope negative); Transition = sign of last completed swing (up, 10272.8 on 20 May -> 10560.0 on 26 May) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14/close z-score slope over last 10 sessions = -0.038 (contraction) -> Compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.1017,
+    "weight": 0.15,
+    "contribution": 0.0152,
+    "basis": "KER(13) smoothed EMA3 on cash closes = +0.1017 (raw 0.0646); band 0.09-0.13 = Ranging - Upward Bias; sign of 13-session move positive"
+   },
+   "sentiment": {
+    "signal": 0.5217,
+    "weight": 0.15,
+    "contribution": 0.0783,
+    "basis": "CARRIED from report section 13 (unverifiable): report states +0.43 but its own article classes/weights give bullish 2.4 / total 4.6 = +0.52 (QA item 12); +0.52 used. With the report's +0.43 the contribution would be 0.0645 and score 0.475"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+). Verified from slices: US500 up (7405.2 on 18 May -> 7521.5 on 26 May, +1.6%), VIX falling (18.67 -> 17.72, risk-on) = confirm; USDX flat (98.985 -> 99.144, +0.16%) = neutral. DAX 40 and Euro Stoxx 50 unavailable: report's reading (Mixed, FTSE up while Continental fell on 26 May) carried. Aggregate MIXED"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00"
+ }
+]

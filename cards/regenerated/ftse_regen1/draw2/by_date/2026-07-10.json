@@ -16,7 +16,7 @@
   "runner_rule": "SESSION_CLOSE_TIMESTOP",
   "management_text": "3 equal units. Unit 1 exits at TP1 (10392.17, +1R). Unit 2 exits at TP2 (10327.34, +2R); on the Unit 2 fill Unit 3 stop moves to entry - 0.2R = 10444.03 (below entry, locking +0.2R). Unit 3 runner is time-stopped at the LSE cash close (16:30 UK / 18:30 broker) or price-stopped at 3 x ATR14 from entry = 10080.63, whichever comes first. Thesis invalidation: daily close above daily R3 10,578.97 (cash), beyond the stop by 57.1 points = 0.46 ATR14; stop ahead of invalidation. Sanity: ATR14 cash (14 sessions to 9 Jul) = 125.46; R = 64.83 = 0.52 x ATR14 (no wide-stop flag); 2R = 129.66 < 3 ATR so TP2 not ambitious. Overnight geopolitical gap risk (report s13d) is carried; scheduled 10 Jul: euro-area CPI/HICP 07:45 UK, IEA oil report and EUR industrial production 09:00 UK, Canada employment 13:30 UK.",
   "suppressed": false,
-  "rationale": "Direction SHORT from score -0.3813 (|score| >= 0.25, gate passes; components in direction_components). Sensitivity: if short-term technical were scored Neutral the score would be -0.131 and Trade 1 would be suppressed. Entry = prev_close_full 10,457.0 (9 Jul), MARKET rule M5 5.0. Stop: tighter of (a) swing_high_5d_cash 10,739.6 (bar 2026-07-07 16:30 broker) + 0.25 x ATR14 31.36 = 10,770.96, or (b) nearest cash resistance above entry = d_cash_R1 10,490.4667 + 31.36 = 10,521.83 (d_cash_P 10,435.43 is below entry so is not resistance). (b) chosen as tighter; cap 3.5 x 125.4571 = 439.10 not binding. R = 10,521.83 - 10,457.0 = 64.83 = 0.517 x ATR14 (cash 125.4571), inside 0.3-3.0. TP1 = entry - R = 10392.17; TP2 = entry - 2R = 10327.34; both within 2.5 ATR (313.6). TP3 = entry - 3 x ATR14 = 10080.63 (runner price cap, below TP2). Unit 3 stop on TP2 fill = entry - 0.2R = 10444.03. Confluences: TP1 10,392.17 near daily S1 10,401.97 (9.8 pts, within 0.15 ATR=18.8 -> strong confluence with swing_low_5d 10,380.4 within 11.8); TP2 10,327.34 within 19.6 of daily S2 10,346.93. Invalidation: close above d_cash_R3 10,578.97 (different from stop by > 0.15 ATR). Anchor 09:00 broker = 07:00 UK standing daily-open anchor; no case made for 02:00/10:00. All levels cash-basis, nothing from the report prices.",
+  "rationale": "Direction SHORT from score -0.3813 (|score| >= 0.25, gate passes; components in direction_components). Sensitivity: if short-term technical were scored Neutral the score would be -0.131 and Trade 1 would be suppressed. Entry = prev_close_full 10,457.0 (9 Jul), MARKET rule M5 5.0. Stop: tighter of (a) swing_high_5d_cash 10,739.6 (bar 2026-07-07 16:30 broker) + 0.25 x ATR14 31.36 = 10,770.96, or (b) nearest cash resistance above entry = d_cash_R1 10,490.4667 + 31.36 = 10,521.83 (d_cash_P 10,435.43 is below entry so is not resistance). (b) chosen as tighter; cap 3.5 x 125.4571 = 439.10 not binding. R = 10,521.83 - 10,457.0 = 64.83 = 0.517 x ATR14 (cash 125.4571), inside 0.3-3.0. TP1 = entry - R = 10392.17; TP2 = entry - 2R = 10327.34; both within 2.5 ATR (313.6). TP3 = entry - 3 x ATR14 = 10080.63 (runner price cap, below TP2). Unit 3 stop on TP2 fill = entry - 0.2R = 10444.03. Confluences: TP1 10,392.17 near daily S1 10,401.97 (9.8 pts, within 0.15 ATR=18.8 -> strong confluence with swing_low_5d 10,380.4 within 11.8); TP2 10,327.34 is 19.6 below daily S2 10,346.93 (outside 0.15 ATR, no confluence claimed). Invalidation: close above d_cash_R3 10,578.97 (different from stop by > 0.15 ATR). Anchor 09:00 broker = 07:00 UK standing daily-open anchor; no case made for 02:00/10:00. All levels cash-basis, nothing from the report prices.",
   "report_date": "2026-07-10",
   "report_file": "FTSE_EuroStoxx_Report_10Jul2026.md",
   "anchor_broker": "09:00",
@@ -50,7 +50,7 @@
     "signal": -0.0252,
     "weight": 0.15,
     "contribution": -0.0038,
-    "basis": "KER(13) cash from slice = 0.0252 (|net| 3.9 / path); sign of medium-term move = down. The report 0.76 is a 5-session figure, not KER(13), and is not used"
+    "basis": "KER(13) cash from slice = 0.0252; sign of medium-term move = down. The report 0.76 is a 5-session figure, not KER(13), and is not used"
    },
    "sentiment": {
     "signal": -0.35,
@@ -118,7 +118,7 @@
     "signal": -0.0252,
     "weight": 0.15,
     "contribution": -0.0038,
-    "basis": "KER(13) cash from slice = 0.0252 (|net| 3.9 / path); sign of medium-term move = down. The report 0.76 is a 5-session figure, not KER(13), and is not used"
+    "basis": "KER(13) cash from slice = 0.0252; sign of medium-term move = down. The report 0.76 is a 5-session figure, not KER(13), and is not used"
    },
    "sentiment": {
     "signal": -0.35,
@@ -186,7 +186,7 @@
     "signal": -0.0252,
     "weight": 0.15,
     "contribution": -0.0038,
-    "basis": "KER(13) cash from slice = 0.0252 (|net| 3.9 / path); sign of medium-term move = down. The report 0.76 is a 5-session figure, not KER(13), and is not used"
+    "basis": "KER(13) cash from slice = 0.0252; sign of medium-term move = down. The report 0.76 is a 5-session figure, not KER(13), and is not used"
    },
    "sentiment": {
     "signal": -0.35,

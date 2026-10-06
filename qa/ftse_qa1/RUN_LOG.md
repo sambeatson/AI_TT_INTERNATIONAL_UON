@@ -21,3 +21,4 @@ SESSION_TASK rule, not because it leaks prices. Scores were set before any listi
 | 2026-07-09 | first `ls` named README.md, docs/ENTRY_POLICIES.md and cards/regenerated/ (none opened) | none on scoring |
 | 2026-07-10 | `ls qa/ftse_qa1` (filenames only) | none on scoring |
 | 2026-07-27 | `ls data/slices/NEWS/` and `ls qa/ftse_qa1/` (filenames only, no other date opened) | none on scoring |
+| 2026-07-20 | `ls -la qa/ftse_qa1/` (filenames only) | none on scoring |

@@ -17,7 +17,7 @@
   "runner_rule": "SESSION_CLOSE_TIMESTOP",
   "management_text": "Three equal units. Unit 1 exits at TP1 (+1R), Unit 2 at TP2 (+2R). On the TP2 fill Unit 3 stop moves to entry + 0.2R = 10732.8. Unit 3 runner exits at the LSE cash session close time-stop or the 3 x ATR14 price cap 11050.8, whichever first. WIDE STOP: R/ATR14 = 1.21 (>1.00). Thesis invalidation: daily close below weekly P 10533.7 (below the stop; stop ahead of invalidation not applicable - invalidation sits 32.4 pts beyond the stop). ECB decision 13:15 UK (15:15 broker) and press conference 13:45 UK (15:45 broker) fall inside the holding period.",
   "suppressed": false,
-  "rationale": "Direction LONG, score +0.44 (>=0.25). Reference/entry = prev_close_full 10705.0 (D-1 = 2026-07-22). ATR14_cash = 115.25 (14 cash sessions 10:00-18:30 broker ending 22 Jul). Stop anchor per M5 4c = tighter of (5d swing low cash 10429.4 - 0.25xATR = 10400.6) and (nearest support - 0.25xATR); nearest support below entry on the level file is daily S1_cash 10594.9 (nearer than the 22 Jul low 10557.2), 10594.9 - 28.8125 = 10566.1 (tighter). R = 10705.0 - 10566.1 = 138.9 = 1.21 x ATR14 -> wide-stop flag; below 3.5xATR cap (403.4). TP1 = entry + R = 10843.9; TP2 = entry + 2R = 10982.8 (2R = 277.8 <= 3xATR 345.75 so no ambitious flag); TP3 = entry + 3xATR14 = 10705.0 + 345.75 = 11050.8. Anchor 09:00 broker (07:00 UK) default; the report overrode to 08:00 UK on analyst instruction, which M5 rule 8 forbids, and nothing in its logic argues for 02:00 or 10:00. Confluences: entry within 0.15xATR (17.3) of the 10700 round number (5.0 away) and daily R1... none else; stop 10566.1 lies near 22 Jul cash low 10557.2 (8.9 away). Static checks: stop<entry<TP1<TP2<TP3; R/ATR 1.21 in [0.3,3.0]; TP1 distance 138.9 = 1.21xATR <= 2.5.",
+  "rationale": "Direction LONG, score +0.44 (>=0.25). Reference/entry = prev_close_full 10705.0 (D-1 = 2026-07-22). ATR14_cash = 115.25 (14 cash sessions 10:00-18:30 broker ending 22 Jul). Stop anchor per M5 4c = tighter of (5d swing low cash 10429.4 - 0.25xATR = 10400.6) and (nearest support - 0.25xATR); nearest support below entry on the level file is daily S1_cash 10594.9 (nearer than the 22 Jul low 10557.2), 10594.9 - 28.8125 = 10566.1 (tighter). R = 10705.0 - 10566.1 = 138.9 = 1.21 x ATR14 -> wide-stop flag; below 3.5xATR cap (403.4). TP1 = entry + R = 10843.9; TP2 = entry + 2R = 10982.8 (2R = 277.8 <= 3xATR 345.75 so no ambitious flag); TP3 = entry + 3xATR14 = 10705.0 + 345.75 = 11050.8. Anchor 09:00 broker (07:00 UK) default; the report overrode to 08:00 UK on analyst instruction, which M5 rule 8 forbids, and nothing in its logic argues for 02:00 or 10:00. Confluences: entry within 0.15xATR (17.3) of the 10700 round number (5.0 away); no pivot within tolerance of entry; stop 10566.1 lies near 22 Jul cash low 10557.2 (8.9 away). Static checks: stop<entry<TP1<TP2<TP3; R/ATR 1.21 in [0.3,3.0]; TP1 distance 138.9 = 1.21xATR <= 2.5.",
   "report_date": "2026-07-23",
   "report_file": "FTSE100_Report_23Jul2026.md",
   "source": "regen_ftse_regen1_draw3",
@@ -32,7 +32,7 @@
     "signal": 1.0,
     "weight": 0.25,
     "contribution": 0.25,
-    "basis": "22 Jul cash bar close 10714.6 > open 10587.0 and RSI2_cash 100.0 > 50 (two consecutive up closes); 5-day net +174.2 pts (16 Jul close 10540.4 -> 10714.6 vs 15 Jul 10498.7 -> +215.9)"
+    "basis": "22 Jul cash bar close 10714.6 > open 10587.0 and RSI2_cash 100.0 > 50 (two consecutive up closes); 5-day net +215.9 pts (15 Jul cash close 10498.7 -> 22 Jul 10714.6)"
    },
    "medium_term_regime": {
     "signal": 0.5,
@@ -100,7 +100,7 @@
     "signal": 1.0,
     "weight": 0.25,
     "contribution": 0.25,
-    "basis": "22 Jul cash bar close 10714.6 > open 10587.0 and RSI2_cash 100.0 > 50 (two consecutive up closes); 5-day net +174.2 pts (16 Jul close 10540.4 -> 10714.6 vs 15 Jul 10498.7 -> +215.9)"
+    "basis": "22 Jul cash bar close 10714.6 > open 10587.0 and RSI2_cash 100.0 > 50 (two consecutive up closes); 5-day net +215.9 pts (15 Jul cash close 10498.7 -> 22 Jul 10714.6)"
    },
    "medium_term_regime": {
     "signal": 0.5,
@@ -168,7 +168,7 @@
     "signal": 1.0,
     "weight": 0.25,
     "contribution": 0.25,
-    "basis": "22 Jul cash bar close 10714.6 > open 10587.0 and RSI2_cash 100.0 > 50 (two consecutive up closes); 5-day net +174.2 pts (16 Jul close 10540.4 -> 10714.6 vs 15 Jul 10498.7 -> +215.9)"
+    "basis": "22 Jul cash bar close 10714.6 > open 10587.0 and RSI2_cash 100.0 > 50 (two consecutive up closes); 5-day net +215.9 pts (15 Jul cash close 10498.7 -> 22 Jul 10714.6)"
    },
    "medium_term_regime": {
     "signal": 0.5,

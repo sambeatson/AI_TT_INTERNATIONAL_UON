@@ -1,0 +1,172 @@
+card_id,report_date,strategy,family,direction,policy,fill_status,entry_rule,fill_ts,fill_px,R_points,risk_vs_card,units,blended_R,blended_R_card
+2026-05-11_Trade_1,2026-05-11,Daily Directional,Trade 1,SHORT,band0845,FILLED,WAITED for return to entry,2026-05-12 18:15:00,10248.7,56.3,1.0,3,-0.834,-0.834
+2026-05-11_Trade_2,2026-05-11,"Pivot (TRANSITION, breakout-side short)",Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-05-12 10:45:00,10218.1,43.4,1.0,3,-1.0,-1.0
+2026-05-11_Trade_3C,2026-05-11,Momentum-Breakout (TRANSITION fork),Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-12_Trade_1,2026-05-12,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,band0845,FILLED,RECOVERY to entry-0.5R (10275.63),2026-05-13 13:00:00,10275.63,42.13,0.5,3,-1.0,-1.0
+2026-05-12_Trade_2,2026-05-12,"Trade 2 - Regime-Aware Pivot (TRANSITION, breakout side SHORT) - SUPPRESSED",Trade 2,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-12_Trade_3C,2026-05-12,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-13_Trade_1,2026-05-13,Trade Card 1 - Daily Directional (FTSE 100),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-13_Trade_2,2026-05-13,Trade Card 2 - Regime-Aware Pivot (FTSE 100) - TRANSITION breakout side,Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-13_Trade_3C,2026-05-13,Trade Card 3 - Complex (Regime Variant 3C: Momentum-Breakout),Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-14_Trade_1,2026-05-14,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-14_Trade_2,2026-05-14,"Trade 2 - Pivot (regime-aware, TRANSITION breakout side)",Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-05-15 09:15:00,10288.95,54.45,1.0,3,1.577,1.577
+2026-05-14_Trade_3C,2026-05-14,Trade 3C - Momentum-Breakout (TRANSITION),Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-15_Trade_1,2026-05-15,Trend-following / daily directional (Trade 1) - SUPPRESSED,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-15_Trade_2,2026-05-15,Pivot trade - TRANSITION breakout-side (Trade 2) - SUPPRESSED,Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-15_Trade_3C,2026-05-15,"Complex - momentum breakout (Trade 3C, TRANSITION fork) - SUPPRESSED",Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-18_Trade_1,2026-05-18,Daily Directional,Trade 1,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-18_Trade_2,2026-05-18,"Pivot (TRANSITION, breakout side short)",Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-18_Trade_3C,2026-05-18,Momentum-Breakout (TRANSITION),Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-19_Trade_1,2026-05-19,Daily Directional,Trade 1,SHORT,band0845,FILLED,WAITED for return to entry,2026-05-20 14:30:00,10347.6,60.35,1.0,3,-1.0,-1.0
+2026-05-19_Trade_2,2026-05-19,"Pivot Breakout (TRANSITION, downside breakout side)",Trade 2,SHORT,band0845,FILLED,IN BAND (+0.17R) market at 08:45,2026-05-20 08:45:00,10265.2,82.82,0.829,3,-1.0,-1.0
+2026-05-19_Trade_3C,2026-05-19,Momentum-Breakout (TRANSITION),Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-20_Trade_1,2026-05-20,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-20_Trade_2,2026-05-20,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-05-21 13:30:00,10352.6,51.5,1.0,3,0.21,0.21
+2026-05-20_Trade_3C,2026-05-20,Trade 3 - Momentum-Breakout (3C) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-21_Trade_1,2026-05-21,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-21_Trade_2,2026-05-21,"Trade 2 - Pivot (TRANSITION, breakout side, daily tier)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-21_Trade_3C,2026-05-21,Trade 3C - Momentum-Breakout,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-22_Trade_1,2026-05-22,Daily Directional,Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-05-26 08:45:00,10490.5,182.6,1.0,3,-0.637,-0.637
+2026-05-22_Trade_2,2026-05-22,Pivot - TRANSITION breakout side,Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-22_Trade_3C,2026-05-22,Momentum-Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-25_Trade_1,2026-05-25,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-25_Trade_2,2026-05-25,"Trade 2 - Pivot (regime-aware). Regime TRANSITION -> breakout-side (upside) entry only, built from the 5.2c / 5.2b breakout row.",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-25_Trade_3C,2026-05-25,Trade 3 - Momentum-Breakout (3C). SUPPRESSED - no confirmed 25-day-range break.,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-26_Trade_1,2026-05-26,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-26_Trade_2,2026-05-26,"Trade 2 - Pivot, TRANSITION breakout side (upside) - SUPPRESSED",Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-26_Trade_3C,2026-05-26,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-27_Trade_1,2026-05-27,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-27_Trade_2,2026-05-27,"Trade 2 - Pivot (TRANSITION branch, breakout side only)",Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-27_Trade_3C,2026-05-27,Trade 3C - Momentum-Breakout,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-28_Trade_2,2026-05-28,"Trade 2 - Pivot (TRANSITION branch, breakout side LONG, weekly cash pivots)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-05-29 18:30:00,10391.45,123.39,1.0,3,-1.0,-1.0
+2026-05-28_Trade_3C,2026-05-28,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-29_Trade_1,2026-05-29,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-29_Trade_2,2026-05-29,"Trade 2 - Pivot, regime-aware (TRANSITION branch, upside breakout side)",Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-29_Trade_3C,2026-05-29,Trade 3C - Momentum-Breakout (TRANSITION fork),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-01_Trade_1,2026-06-01,Trade 1 - Daily Directional (SUPPRESSED - conviction below threshold),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-01_Trade_2,2026-06-01,"Trade 2 - Pivot, TRANSITION branch (breakout side, LONG) (SUPPRESSED - R below 0.3xATR floor)",Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-01_Trade_3C,2026-06-01,"Trade 3C - Momentum-Breakout, upside (SUPPRESSED - no confirmed break)",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-02_Trade_1,2026-06-02,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-02_Trade_2,2026-06-02,"Trade 2 - Pivot (RANGE branch, mean-reversion fade)",Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-02_Trade_3B,2026-06-02,Trade 3B - Mean-Reversion (RANGE),Trade 3B,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-03_Trade_1,2026-06-03,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-04 19:30:00,10382.5,44.3,1.0,3,0.263,0.263
+2026-06-03_Trade_2,2026-06-03,"Trade 2 - Pivot (TRANSITION branch, breakout side only) - SUPPRESSED",Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-03_Trade_3C,2026-06-03,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-04_Trade_1,2026-06-04,Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-04_Trade_2,2026-06-04,Pivot (TRANSITION branch),Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-04_Trade_3C,2026-06-04,Momentum-Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-05_Trade_1,2026-06-05,Trade 1 - Daily Directional (suppressed),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-05_Trade_2,2026-06-05,"Trade 2 - Pivot breakout side (TRANSITION, long)",Trade 2,LONG,band0845,FILLED,IN BAND (+0.46R) market at 08:45,2026-06-08 08:45:00,10300.0,24.2,0.535,3,1.242,0.2
+2026-06-05_Trade_3C,2026-06-05,"Trade 3C - Momentum-Breakout (suppressed, no confirmed break)",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-08_Trade_2,2026-06-08,"Trade 2 - Pivot, regime-aware (TRANSITION branch: breakout side only, long)",Trade 2,LONG,band0845,FILLED,IN BAND (+0.20R) market at 08:45,2026-06-09 08:45:00,10371.1,30.8,0.804,3,-1.0,-1.0
+2026-06-08_Trade_3C,2026-06-08,Trade 3 - Momentum-Breakout (3C); regime_label = TRANSITION,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-09_Trade_2,2026-06-09,"Trade 2 - Pivot, RANGE regime: mean-reversion fade at daily R1 (cash pivots)",Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-09_Trade_3B,2026-06-09,"Trade 3B - Mean-Reversion, RANGE regime: fade the upper 25-session range zone",Trade 3B,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-10_Trade_1,2026-06-10,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-11 10:15:00,10296.6,54.5,1.0,3,-1.0,-1.0
+2026-06-10_Trade_2,2026-06-10,"Trade 2 - Pivot (TRANSITION, breakout side only) - SHORT",Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-11 10:00:00,10274.8,42.7,1.0,3,-1.0,-1.0
+2026-06-10_Trade_3C,2026-06-10,Trade 3C - Momentum-Breakout (TRANSITION) - SHORT,Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-11_Trade_2,2026-06-11,"Trade 2 - Pivot (TRANSITION branch, breakout side SHORT)",Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-11_Trade_3C,2026-06-11,Trade 3 - Complex (TRANSITION -> 3C Momentum-Breakout) - SUPPRESSED,Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-15_Trade_1,2026-06-15,Trade 1 - Daily Directional (LONG),Trade 1,LONG,band0845,FILLED,IN BAND (+0.34R) market at 08:45,2026-06-16 08:45:00,10429.0,61.62,0.659,3,-0.432,-0.626
+2026-06-15_Trade_2,2026-06-15,"Trade 2 - Pivot (TRANSITION branch, breakout side, LONG)",Trade 2,LONG,band0845,FILLED,IN BAND (+0.72R) market at 08:45,2026-06-16 08:45:00,10429.0,27.02,0.278,3,1.112,-0.413
+2026-06-15_Trade_3C,2026-06-15,"Trade 3 - Momentum-Breakout (3C, TRANSITION) - SUPPRESSED",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-16_Trade_1,2026-06-16,"Trade 1 - Daily Directional (LONG; transition regime, score +0.32)",Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-16_Trade_2,2026-06-16,"Trade 2 - Pivot, TRANSITION branch (upside breakout side, TREND-style geometry per M5 5.2c)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-17 10:45:00,10485.21,81.73,1.0,3,-1.0,-1.0
+2026-06-16_Trade_3C,2026-06-16,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-17_Trade_1,2026-06-17,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.07R) market at 08:45,2026-06-18 08:45:00,10468.0,61.4,0.935,3,-1.0,-1.0
+2026-06-17_Trade_2,2026-06-17,Trade 2 - Regime-Aware Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-17_Trade_3C,2026-06-17,Trade 3C - TRANSITION Breakout,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional (LONG),Trade 1,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-18_Trade_2,2026-06-18,"Trade 2 - Pivot (TRANSITION branch, breakout side LONG, weekly cash pivots)",Trade 2,LONG,band0845,FILLED,IN BAND (+0.07R) market at 08:45,2026-06-19 08:45:00,10367.4,110.68,0.93,3,2.464,2.221
+2026-06-18_Trade_3C,2026-06-18,"Trade 3 - Momentum-Breakout (3C, TRANSITION fork, LONG)",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional (SUPPRESSED),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-19_Trade_2,2026-06-19,"Trade 2 - Pivot, TRANSITION branch (breakout side, LONG)",Trade 2,LONG,band0845,FILLED,RECOVERY to entry-0.5R (10394.25),2026-06-22 09:45:00,10394.25,26.09,0.5,3,-1.0,-1.0
+2026-06-19_Trade_3C,2026-06-19,Trade 3C - Momentum-Breakout (SUPPRESSED),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-23_Trade_1,2026-06-23,"Trade 1 - Daily Directional (LONG, score +0.51)",Trade 1,LONG,band0845,FILLED,IN BAND (+0.05R) market at 08:45,2026-06-24 08:45:00,10418.8,74.0,0.95,3,0.511,0.436
+2026-06-23_Trade_2,2026-06-23,"Trade 2 - Regime-Aware Pivot (TRANSITION, breakout side LONG) - SUPPRESSED",Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-23_Trade_3C,2026-06-23,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-24_Trade_1,2026-06-24,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-24_Trade_2,2026-06-24,"Trade 2 - Pivot (TRANSITION, breakout side only)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-25 08:45:00,10422.8,46.4,1.0,3,2.18,2.18
+2026-06-24_Trade_3C,2026-06-24,"Trade 3 - Momentum-Breakout (3C, TRANSITION)",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional (suppressed: NEUTRAL score),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot, TRANSITION branch (breakout side only, LONG)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-26 12:00:00,10445.52,59.32,1.0,3,0.848,0.848
+2026-06-25_Trade_3C,2026-06-25,Trade 3C - Momentum-Breakout (TRANSITION; suppressed: no confirmed break),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-26_Trade_1,2026-06-26,Trade 1 - Daily Directional (LONG),Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-06-29 09:30:00,10518.2,133.88,1.0,3,0.318,0.318
+2026-06-26_Trade_2,2026-06-26,"Trade 2 - Pivot, TRANSITION branch (breakout side, LONG)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-29 09:30:00,10519.44,63.9,1.0,3,0.451,0.451
+2026-06-26_Trade_3C,2026-06-26,Trade 3C - Momentum-Breakout (SUPPRESSED),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-29_Trade_1,2026-06-29,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-29_Trade_2,2026-06-29,"Trade 2 - Pivot, TRANSITION branch (upside breakout side)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-30 20:15:00,10485.73,38.33,1.0,3,-1.0,-1.0
+2026-06-29_Trade_3C,2026-06-29,"Trade 3 - Momentum-Breakout (3C), regime TRANSITION",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.54R) market at 08:45,2026-07-01 08:45:00,10473.1,33.0,0.46,3,-1.0,-1.0
+2026-06-30_Trade_2,2026-06-30,"Trade 2 - Pivot (TRANSITION, breakout side)",Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-30_Trade_3C,2026-06-30,Trade 3C - Momentum-Breakout (Transition regime),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-01_Trade_1,2026-07-01,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-01_Trade_2,2026-07-01,"Trade 2 - Pivot (TRANSITION branch, breakout side, LONG)",Trade 2,LONG,band0845,FILLED,RECOVERY to entry-0.5R (10505.72),2026-07-02 11:00:00,10505.72,32.22,0.5,3,3.368,1.184
+2026-07-01_Trade_3C,2026-07-01,Trade 3C - Momentum Breakout (TRANSITION),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-02_Trade_1,2026-07-02,Trade 1 - Daily Directional (SUPPRESSED - direction score NEUTRAL),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-02_Trade_2,2026-07-02,"Trade 2 - Pivot, regime-aware (TRANSITION branch -> breakout-side LONG)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-02_Trade_3C,2026-07-02,"Trade 3C - Momentum-Breakout (TRANSITION fork, SUPPRESSED - no confirmed break)",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-03_Trade_1,2026-07-03,Trade 1 - Daily Directional (LONG),Trade 1,LONG,band0845,FILLED,IN BAND (+0.01R) market at 08:45,2026-07-06 08:45:00,10662.0,200.7,0.986,3,-0.668,-0.673
+2026-07-03_Trade_2,2026-07-03,"Trade 2 - Pivot, TREND branch (LONG)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-03_Trade_3A,2026-07-03,Trade 3A - Momentum-Pullback (LONG),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-06_Trade_1,2026-07-06,Trade 1 - Daily Directional (LONG - TRANSITION regime),Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-06_Trade_2,2026-07-06,"Trade 2 - Pivot (TRANSITION branch, breakout side long)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-07 08:45:00,10653.59,41.43,1.0,3,1.009,1.009
+2026-07-06_Trade_3C,2026-07-06,"Trade 3 - Momentum-Breakout (3C, TRANSITION)",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-07_Trade_1,2026-07-07,"Trade 1 - Daily Directional (LONG, TRANSITION regime, score +0.329)",Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-07-08 08:45:00,10660.9,81.5,1.0,3,-1.0,-1.0
+2026-07-07_Trade_2,2026-07-07,"Trade 2 - Pivot (TRANSITION branch, upside breakout side only)",Trade 2,LONG,band0845,FILLED,IN BAND (+0.03R) market at 08:45,2026-07-08 08:45:00,10661.9,57.8,0.971,3,-1.0,-1.0
+2026-07-07_Trade_3C,2026-07-07,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-09_Trade_1,2026-07-09,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-09_Trade_2,2026-07-09,"Trade 2 - Pivot breakout (TRANSITION branch, breakout side only, long)",Trade 2,LONG,band0845,FILLED,IN BAND (+0.59R) market at 08:45,2026-07-10 08:45:00,10461.4,41.6,0.407,3,-1.0,-1.0
+2026-07-09_Trade_3C,2026-07-09,"Trade 3C - Momentum-Breakout (TRANSITION fork, long side)",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_1,2026-07-10,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_2,2026-07-10,"Trade 2 - Pivot, TRANSITION branch",Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_3C,2026-07-10,Trade 3C - Momentum-Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional (SUPPRESSED: conviction below gate),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_2,2026-07-13,"Trade 2 - Pivot (TRANSITION branch, breakout side only: SUPPRESSED, R below 0.3xATR floor)",Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_3C,2026-07-13,Trade 3C - Momentum-Breakout (SUPPRESSED: no confirmed 25-day break),Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_1,2026-07-14,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_2,2026-07-14,"Trade 2 - Pivot, regime-aware (TRANSITION breakout side)",Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_3C,2026-07-14,Trade 3C - Momentum-Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-15_Trade_1,2026-07-15,Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-15_Trade_2,2026-07-15,Pivot (TRANSITION breakout-side),Trade 2,LONG,band0845,FILLED,IN BAND (+0.59R) market at 08:45,2026-07-16 08:45:00,10463.8,21.86,0.406,3,-1.0,-1.0
+2026-07-15_Trade_3C,2026-07-15,Momentum-Breakout (TRANSITION),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-16_Trade_1,2026-07-16,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-16_Trade_2,2026-07-16,Trade 2 - Pivot (TRANSITION: breakout side only),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-17 08:45:00,10494.4,43.82,1.0,3,1.726,1.726
+2026-07-16_Trade_3C,2026-07-16,Trade 3 - Momentum-Breakout (variant 3C),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-17_Trade_2,2026-07-17,"Trade 2 - Pivot (regime-aware, TRANSITION breakout side)",Trade 2,LONG,band0845,FILLED,IN BAND (+0.30R) market at 08:45,2026-07-20 08:45:00,10550.6,78.82,0.702,3,-1.0,-1.0
+2026-07-17_Trade_3C,2026-07-17,Trade 3 - Momentum-Breakout (variant 3C),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-20_Trade_1,2026-07-20,Trade 1 - Daily Directional (SUPPRESSED - NEUTRAL score),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-20_Trade_2,2026-07-20,"Trade 2 - Pivot (TRANSITION branch, breakout side = upside)",Trade 2,LONG,band0845,FILLED,RECOVERY to entry-0.5R (10551.61),2026-07-21 13:15:00,10551.61,21.88,0.5,3,-1.0,-1.0
+2026-07-20_Trade_3C,2026-07-20,Trade 3C - Momentum-Breakout (SUPPRESSED - no confirmed break),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_1,2026-07-21,Trade 1 - Daily Directional (SUPPRESSED: score below conviction threshold),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_2,2026-07-21,"Trade 2 - Pivot, TRANSITION breakout side (SUPPRESSED: order-side gate)",Trade 2,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_3C,2026-07-21,Trade 3C - Momentum-Breakout (SUPPRESSED: no confirmed break),Trade 3C,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_1,2026-07-22,Trade 1 - Daily Directional (SUPPRESSED),Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_2,2026-07-22,"Trade 2 - Pivot, TRANSITION branch (SUPPRESSED)",Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_3C,2026-07-22,Trade 3C - Momentum-Breakout (SUPPRESSED),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-23_Trade_1,2026-07-23,Trade 1 — Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.72R) market at 08:45,2026-07-24 08:45:00,10604.5,38.4,0.276,3,4.999,0.659
+2026-07-23_Trade_2,2026-07-23,"Trade 2 — Pivot, regime-aware (TRANSITION branch, breakout side long)",Trade 2,LONG,band0845,FILLED,RECOVERY to entry-0.5R (10650.10),2026-07-24 10:15:00,10650.1,38.8,0.5,3,4.832,1.916
+2026-07-23_Trade_3C,2026-07-23,Trade 3C — Momentum-Breakout (transition regime fork),Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-24_Trade_1,2026-07-24,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-24_Trade_2,2026-07-24,"Trade 2 - Pivot (RANGE branch, long at daily S1)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-24_Trade_3B,2026-07-24,"Trade 3B - Mean-Reversion (RANGE, short at 78.6%)",Trade 3B,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-27_Trade_1,2026-07-27,"Trade 1 - Daily Directional (SUPPRESSED, score NEUTRAL)",Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-27_Trade_2,2026-07-27,"Trade 2 - Pivot, RANGE branch (mean-reversion buy limit at daily S1)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-27_Trade_3B,2026-07-27,"Trade 3 - Mean-Reversion 3B (RANGE, SUPPRESSED)",Trade 3B,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional (LONG),Trade 1,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-28_Trade_2,2026-07-28,Trade 2 - Pivot (TREND_UP branch),Trade 2,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-28_Trade_3A,2026-07-28,"Trade 3A - Momentum-Pullback (LONG, TREND_UP fork)",Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-29_Trade_1,2026-07-29,"Trade 1 - Daily Directional (LONG, TRANSITION with upward lean)",Trade 1,LONG,band0845,FILLED,IN BAND (+0.55R) market at 08:45,2026-07-30 08:45:00,10806.0,70.6,0.447,3,-0.089,-0.592
+2026-07-29_Trade_2,2026-07-29,"Trade 2 - Pivot, breakout-side (upside), regime = TRANSITION",Trade 2,LONG,band0845,FILLED,RECOVERY to entry-0.5R (10860.25),2026-07-30 09:45:00,10860.25,53.95,0.5,3,-1.0,-1.0
+2026-07-29_Trade_3C,2026-07-29,"Trade 3 - Momentum-Breakout (variant 3C), regime = TRANSITION - SUPPRESSED",Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-30_Trade_1,2026-07-30,"Trade 1 - Daily Directional (LONG, TRANSITION regime)",Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-07-31 17:15:00,10817.9,39.56,1.0,3,1.431,1.431
+2026-07-30_Trade_2,2026-07-30,"Trade 2 - Pivot breakout (LONG, TRANSITION branch, breakout side only)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-31 09:30:00,10900.3,43.62,1.0,3,0.282,0.282
+2026-07-30_Trade_3C,2026-07-30,Trade 3 - Momentum-Breakout 3C (TRANSITION) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-31_Trade_1,2026-07-31,"Trade 1 - Daily Directional (LONG, TRANSITION regime)",Trade 1,LONG,band0845,FILLED,IN BAND (+0.45R) market at 08:45,2026-08-03 08:45:00,10899.9,34.81,0.55,3,-1.0,-1.0
+2026-07-31_Trade_2,2026-07-31,"Trade 2 - Pivot (TRANSITION branch, breakout side long)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-08-03 08:45:00,10899.74,66.04,1.0,3,-1.0,-1.0
+2026-07-31_Trade_3C,2026-07-31,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,LONG,band0845,SUPPRESSED,,,,,,1,0.0,0.0

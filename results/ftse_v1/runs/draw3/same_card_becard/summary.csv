@@ -1,0 +1,172 @@
+card_id,report_date,strategy,family,direction,policy,fill_status,entry_rule,fill_ts,fill_px,R_points,risk_vs_card,units,blended_R,blended_R_card
+2026-05-11_Trade_1,2026-05-11,Daily Directional,Trade 1,SHORT,card,FILLED,MARKET at 09:00 open,2026-05-11 09:00:00,10256.1,48.9,0.869,3,0.255,0.09
+2026-05-11_Trade_2,2026-05-11,"Pivot (TRANSITION, breakout-side short)",Trade 2,SHORT,card,FILLED,STOP touched,2026-05-11 20:00:00,10218.1,43.4,1.0,3,0.741,0.741
+2026-05-11_Trade_3C,2026-05-11,Momentum-Breakout (TRANSITION fork),Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-12_Trade_1,2026-05-12,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,card,FILLED,MARKET at 09:00 open,2026-05-12 09:00:00,10212.8,104.96,1.246,3,-0.335,-0.172
+2026-05-12_Trade_2,2026-05-12,"Trade 2 - Regime-Aware Pivot (TRANSITION, breakout side SHORT) - SUPPRESSED",Trade 2,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-12_Trade_3C,2026-05-12,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-13_Trade_1,2026-05-13,Trade Card 1 - Daily Directional (FTSE 100),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-13_Trade_2,2026-05-13,Trade Card 2 - Regime-Aware Pivot (FTSE 100) - TRANSITION breakout side,Trade 2,SHORT,card,NO FILL,,,,,,1,0.0,0.0
+2026-05-13_Trade_3C,2026-05-13,Trade Card 3 - Complex (Regime Variant 3C: Momentum-Breakout),Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-14_Trade_1,2026-05-14,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-14_Trade_2,2026-05-14,"Trade 2 - Pivot (regime-aware, TRANSITION breakout side)",Trade 2,SHORT,card,NO FILL,,,,,,1,0.0,0.0
+2026-05-14_Trade_3C,2026-05-14,Trade 3C - Momentum-Breakout (TRANSITION),Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-15_Trade_1,2026-05-15,Trend-following / daily directional (Trade 1) - SUPPRESSED,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-15_Trade_2,2026-05-15,Pivot trade - TRANSITION breakout-side (Trade 2) - SUPPRESSED,Trade 2,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-15_Trade_3C,2026-05-15,"Complex - momentum breakout (Trade 3C, TRANSITION fork) - SUPPRESSED",Trade 3C,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-18_Trade_1,2026-05-18,Daily Directional,Trade 1,SHORT,card,FILLED,MARKET at 09:00 open,2026-05-18 09:00:00,10142.9,102.6,1.754,3,-0.62,-0.333
+2026-05-18_Trade_2,2026-05-18,"Pivot (TRANSITION, breakout side short)",Trade 2,SHORT,card,FILLED,LIMIT touched,2026-05-18 10:15:00,10200.5,54.4,1.0,3,-1.0,-1.0
+2026-05-18_Trade_3C,2026-05-18,Momentum-Breakout (TRANSITION),Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-19_Trade_1,2026-05-19,Daily Directional,Trade 1,SHORT,card,FILLED,MARKET at 09:00 open,2026-05-19 09:00:00,10316.1,91.85,1.522,3,-1.0,-1.0
+2026-05-19_Trade_2,2026-05-19,"Pivot Breakout (TRANSITION, downside breakout side)",Trade 2,SHORT,card,NO FILL,,,,,,1,0.0,0.0
+2026-05-19_Trade_3C,2026-05-19,Momentum-Breakout (TRANSITION),Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-20_Trade_1,2026-05-20,Trade 1 - Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-05-20 09:00:00,10266.0,50.1,0.699,3,2.898,1.724
+2026-05-20_Trade_2,2026-05-20,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,card,FILLED,STOP touched,2026-05-20 15:15:00,10352.6,51.5,1.0,3,1.211,1.211
+2026-05-20_Trade_3C,2026-05-20,Trade 3 - Momentum-Breakout (3C) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-21_Trade_1,2026-05-21,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-21_Trade_2,2026-05-21,"Trade 2 - Pivot (TRANSITION, breakout side, daily tier)",Trade 2,LONG,card,FILLED,LIMIT already marketable at 09:00 - filled at open,2026-05-21 09:00:00,10387.9,62.24,0.884,3,1.432,1.151
+2026-05-21_Trade_3C,2026-05-21,Trade 3C - Momentum-Breakout,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-22_Trade_1,2026-05-22,Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-05-22 09:00:00,10489.5,181.6,0.995,3,-0.764,-0.765
+2026-05-22_Trade_2,2026-05-22,Pivot - TRANSITION breakout side,Trade 2,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-05-22_Trade_3C,2026-05-22,Momentum-Breakout,Trade 3C,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-25_Trade_1,2026-05-25,Trade 1 - Daily Directional,Trade 1,LONG,card,NO BARS,,,,,,1,0.0,0.0
+2026-05-25_Trade_2,2026-05-25,"Trade 2 - Pivot (regime-aware). Regime TRANSITION -> breakout-side (upside) entry only, built from the 5.2c / 5.2b breakout row.",Trade 2,LONG,card,NO BARS,,,,,,1,0.0,0.0
+2026-05-25_Trade_3C,2026-05-25,Trade 3 - Momentum-Breakout (3C). SUPPRESSED - no confirmed 25-day-range break.,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-26_Trade_1,2026-05-26,Trade 1 - Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-05-26 09:00:00,10492.5,183.8,1.437,3,-0.64,-0.483
+2026-05-26_Trade_2,2026-05-26,"Trade 2 - Pivot, TRANSITION breakout side (upside) - SUPPRESSED",Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-26_Trade_3C,2026-05-26,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-27_Trade_1,2026-05-27,Trade 1 - Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-05-27 09:00:00,10489.9,44.63,0.723,3,-0.679,-0.768
+2026-05-27_Trade_2,2026-05-27,"Trade 2 - Pivot (TRANSITION branch, breakout side only)",Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-27_Trade_3C,2026-05-27,Trade 3C - Momentum-Breakout,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,Trade 1,LONG,card,SKIPPED_MALFORMED,MARKET at 09:00 open,2026-05-28 09:00:00,10437.7,3.34,0.071,1,0.0,0.0
+2026-05-28_Trade_2,2026-05-28,"Trade 2 - Pivot (TRANSITION branch, breakout side LONG, weekly cash pivots)",Trade 2,LONG,card,FILLED,LIMIT touched,2026-05-28 10:30:00,10391.45,123.39,1.0,3,-1.0,-1.0
+2026-05-28_Trade_3C,2026-05-28,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-29_Trade_1,2026-05-29,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-29_Trade_2,2026-05-29,"Trade 2 - Pivot, regime-aware (TRANSITION branch, upside breakout side)",Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-29_Trade_3C,2026-05-29,Trade 3C - Momentum-Breakout (TRANSITION fork),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-01_Trade_1,2026-06-01,Trade 1 - Daily Directional (SUPPRESSED - conviction below threshold),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-01_Trade_2,2026-06-01,"Trade 2 - Pivot, TRANSITION branch (breakout side, LONG) (SUPPRESSED - R below 0.3xATR floor)",Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-01_Trade_3C,2026-06-01,"Trade 3C - Momentum-Breakout, upside (SUPPRESSED - no confirmed break)",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-02_Trade_1,2026-06-02,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-02_Trade_2,2026-06-02,"Trade 2 - Pivot (RANGE branch, mean-reversion fade)",Trade 2,SHORT,card,FILLED,LIMIT touched,2026-06-02 11:00:00,10394.53,64.48,1.0,3,1.067,1.067
+2026-06-02_Trade_3B,2026-06-02,Trade 3B - Mean-Reversion (RANGE),Trade 3B,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-06-03_Trade_1,2026-06-03,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,card,FILLED,MARKET at 09:00 open,2026-06-03 09:00:00,10370.6,56.2,1.269,3,1.032,1.577
+2026-06-03_Trade_2,2026-06-03,"Trade 2 - Pivot (TRANSITION branch, breakout side only) - SUPPRESSED",Trade 2,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-03_Trade_3C,2026-06-03,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-04_Trade_1,2026-06-04,Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-04_Trade_2,2026-06-04,Pivot (TRANSITION branch),Trade 2,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-04_Trade_3C,2026-06-04,Momentum-Breakout,Trade 3C,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-05_Trade_1,2026-06-05,Trade 1 - Daily Directional (suppressed),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-05_Trade_2,2026-06-05,"Trade 2 - Pivot breakout side (TRANSITION, long)",Trade 2,LONG,card,FILLED,LIMIT touched,2026-06-05 22:15:00,10321.0,45.2,1.0,3,-0.156,-0.156
+2026-06-05_Trade_3C,2026-06-05,"Trade 3C - Momentum-Breakout (suppressed, no confirmed break)",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-08_Trade_2,2026-06-08,"Trade 2 - Pivot, regime-aware (TRANSITION branch: breakout side only, long)",Trade 2,LONG,card,FILLED,STOP touched,2026-06-08 13:00:00,10378.6,38.3,1.0,3,-1.0,-1.0
+2026-06-08_Trade_3C,2026-06-08,Trade 3 - Momentum-Breakout (3C); regime_label = TRANSITION,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-09_Trade_2,2026-06-09,"Trade 2 - Pivot, RANGE regime: mean-reversion fade at daily R1 (cash pivots)",Trade 2,SHORT,card,NO FILL,,,,,,1,0.0,0.0
+2026-06-09_Trade_3B,2026-06-09,"Trade 3B - Mean-Reversion, RANGE regime: fade the upper 25-session range zone",Trade 3B,SHORT,card,NO FILL,,,,,,1,0.0,0.0
+2026-06-10_Trade_1,2026-06-10,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,card,FILLED,MARKET at 09:00 open,2026-06-10 09:00:00,10239.8,111.3,2.042,3,0.216,1.484
+2026-06-10_Trade_2,2026-06-10,"Trade 2 - Pivot (TRANSITION, breakout side only) - SHORT",Trade 2,SHORT,card,FILLED,STOP already marketable at 10:00 - filled at open,2026-06-10 10:00:00,10251.2,66.3,1.553,3,1.127,2.302
+2026-06-10_Trade_3C,2026-06-10,Trade 3C - Momentum-Breakout (TRANSITION) - SHORT,Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional (SHORT),Trade 1,SHORT,card,FILLED,MARKET at 09:00 open,2026-06-11 09:00:00,10220.4,20.45,0.442,3,-1.0,-1.0
+2026-06-11_Trade_2,2026-06-11,"Trade 2 - Pivot (TRANSITION branch, breakout side SHORT)",Trade 2,SHORT,card,FILLED,LIMIT already marketable at 09:00 - filled at open,2026-06-11 09:00:00,10220.4,68.64,0.886,3,-1.0,-1.0
+2026-06-11_Trade_3C,2026-06-11,Trade 3 - Complex (TRANSITION -> 3C Momentum-Breakout) - SUPPRESSED,Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-15_Trade_1,2026-06-15,Trade 1 - Daily Directional (LONG),Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-06-15 09:00:00,10541.5,174.12,1.862,3,-0.55,-0.161
+2026-06-15_Trade_2,2026-06-15,"Trade 2 - Pivot (TRANSITION branch, breakout side, LONG)",Trade 2,LONG,card,FILLED,STOP already marketable at 09:00 - filled at open,2026-06-15 09:00:00,10541.5,139.52,1.435,3,0.007,0.445
+2026-06-15_Trade_3C,2026-06-15,"Trade 3 - Momentum-Breakout (3C, TRANSITION) - SUPPRESSED",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-16_Trade_1,2026-06-16,"Trade 1 - Daily Directional (LONG; transition regime, score +0.32)",Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-06-16 09:00:00,10430.0,73.29,1.245,3,0.061,0.321
+2026-06-16_Trade_2,2026-06-16,"Trade 2 - Pivot, TRANSITION branch (upside breakout side, TREND-style geometry per M5 5.2c)",Trade 2,LONG,card,FILLED,STOP touched,2026-06-16 11:15:00,10485.21,81.73,1.0,3,-1.0,-1.0
+2026-06-16_Trade_3C,2026-06-16,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-17_Trade_1,2026-06-17,Trade 1 - Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-06-17 09:00:00,10486.2,79.6,1.212,3,-0.838,-0.803
+2026-06-17_Trade_2,2026-06-17,Trade 2 - Regime-Aware Pivot (TRANSITION breakout side),Trade 2,LONG,card,FILLED,STOP touched,2026-06-17 09:00:00,10497.2,36.1,1.0,3,-1.0,-1.0
+2026-06-17_Trade_3C,2026-06-17,Trade 3C - TRANSITION Breakout,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional (LONG),Trade 1,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-18_Trade_2,2026-06-18,"Trade 2 - Pivot (TRANSITION branch, breakout side LONG, weekly cash pivots)",Trade 2,LONG,card,FILLED,LIMIT touched,2026-06-18 16:45:00,10375.75,119.03,1.0,3,2.221,2.221
+2026-06-18_Trade_3C,2026-06-18,"Trade 3 - Momentum-Breakout (3C, TRANSITION fork, LONG)",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional (SUPPRESSED),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-19_Trade_2,2026-06-19,"Trade 2 - Pivot, TRANSITION branch (breakout side, LONG)",Trade 2,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-06-19_Trade_3C,2026-06-19,Trade 3C - Momentum-Breakout (SUPPRESSED),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-23_Trade_1,2026-06-23,"Trade 1 - Daily Directional (LONG, score +0.51)",Trade 1,LONG,card,SKIPPED_MALFORMED,MARKET at 09:00 open,2026-06-23 09:00:00,10329.1,15.7,0.202,1,0.0,0.0
+2026-06-23_Trade_2,2026-06-23,"Trade 2 - Regime-Aware Pivot (TRANSITION, breakout side LONG) - SUPPRESSED",Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-23_Trade_3C,2026-06-23,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-24_Trade_1,2026-06-24,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-24_Trade_2,2026-06-24,"Trade 2 - Pivot (TRANSITION, breakout side only)",Trade 2,LONG,card,FILLED,LIMIT already marketable at 09:00 - filled at open,2026-06-24 09:00:00,10413.3,36.9,0.795,3,2.999,2.18
+2026-06-24_Trade_3C,2026-06-24,"Trade 3 - Momentum-Breakout (3C, TRANSITION)",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional (suppressed: NEUTRAL score),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot, TRANSITION branch (breakout side only, LONG)",Trade 2,LONG,card,FILLED,LIMIT already marketable at 09:00 - filled at open,2026-06-25 09:00:00,10425.0,38.8,0.654,3,1.826,0.848
+2026-06-25_Trade_3C,2026-06-25,Trade 3C - Momentum-Breakout (TRANSITION; suppressed: no confirmed break),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-26_Trade_1,2026-06-26,Trade 1 - Daily Directional (LONG),Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-06-26 09:00:00,10472.5,88.18,0.659,3,0.359,-0.105
+2026-06-26_Trade_2,2026-06-26,"Trade 2 - Pivot, TRANSITION branch (breakout side, LONG)",Trade 2,LONG,card,FILLED,STOP touched,2026-06-26 18:30:00,10519.44,63.9,1.0,3,-0.216,-0.216
+2026-06-26_Trade_3C,2026-06-26,Trade 3C - Momentum-Breakout (SUPPRESSED),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-29_Trade_1,2026-06-29,Trade 1 - Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-06-29 09:00:00,10525.9,116.2,1.753,3,0.244,1.18
+2026-06-29_Trade_2,2026-06-29,"Trade 2 - Pivot, TRANSITION branch (upside breakout side)",Trade 2,LONG,card,FILLED,STOP already marketable at 09:00 - filled at open,2026-06-29 09:00:00,10525.9,78.5,2.048,3,0.611,2.3
+2026-06-29_Trade_3C,2026-06-29,"Trade 3 - Momentum-Breakout (3C), regime TRANSITION",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-06-30 09:00:00,10508.7,68.6,0.955,3,0.019,-0.026
+2026-06-30_Trade_2,2026-06-30,"Trade 2 - Pivot (TRANSITION, breakout side)",Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-30_Trade_3C,2026-06-30,Trade 3C - Momentum-Breakout (Transition regime),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-01_Trade_1,2026-07-01,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-01_Trade_2,2026-07-01,"Trade 2 - Pivot (TRANSITION branch, breakout side, LONG)",Trade 2,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-07-01_Trade_3C,2026-07-01,Trade 3C - Momentum Breakout (TRANSITION),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-02_Trade_1,2026-07-02,Trade 1 - Daily Directional (SUPPRESSED - direction score NEUTRAL),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-02_Trade_2,2026-07-02,"Trade 2 - Pivot, regime-aware (TRANSITION branch -> breakout-side LONG)",Trade 2,LONG,card,FILLED,STOP touched,2026-07-02 10:00:00,10467.59,34.61,1.0,3,-1.0,-1.0
+2026-07-02_Trade_3C,2026-07-02,"Trade 3C - Momentum-Breakout (TRANSITION fork, SUPPRESSED - no confirmed break)",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-03_Trade_1,2026-07-03,Trade 1 - Daily Directional (LONG),Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-07-03 09:00:00,10677.9,216.6,1.064,3,-0.741,-0.724
+2026-07-03_Trade_2,2026-07-03,"Trade 2 - Pivot, TREND branch (LONG)",Trade 2,LONG,card,FILLED,LIMIT touched,2026-07-03 12:00:00,10604.9,95.0,1.0,3,-1.0,-1.0
+2026-07-03_Trade_3A,2026-07-03,Trade 3A - Momentum-Pullback (LONG),Trade 3A,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-07-06_Trade_1,2026-07-06,Trade 1 - Daily Directional (LONG - TRANSITION regime),Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-07-06 09:00:00,10653.8,78.61,1.445,3,0.517,1.192
+2026-07-06_Trade_2,2026-07-06,"Trade 2 - Pivot (TRANSITION branch, breakout side long)",Trade 2,LONG,card,FILLED,STOP already marketable at 09:00 - filled at open,2026-07-06 09:00:00,10653.8,41.64,1.005,3,-0.256,-0.252
+2026-07-06_Trade_3C,2026-07-06,"Trade 3 - Momentum-Breakout (3C, TRANSITION)",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-07_Trade_1,2026-07-07,"Trade 1 - Daily Directional (LONG, TRANSITION regime, score +0.329)",Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-07-07 09:00:00,10659.4,80.0,0.982,3,-0.704,-0.709
+2026-07-07_Trade_2,2026-07-07,"Trade 2 - Pivot (TRANSITION branch, upside breakout side only)",Trade 2,LONG,card,FILLED,STOP touched,2026-07-07 10:00:00,10663.6,59.5,1.0,3,-0.411,-0.411
+2026-07-07_Trade_3C,2026-07-07,Trade 3C - Momentum-Breakout (TRANSITION fork) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-09_Trade_1,2026-07-09,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-09_Trade_2,2026-07-09,"Trade 2 - Pivot breakout (TRANSITION branch, breakout side only, long)",Trade 2,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-07-09_Trade_3C,2026-07-09,"Trade 3C - Momentum-Breakout (TRANSITION fork, long side)",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_1,2026-07-10,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_2,2026-07-10,"Trade 2 - Pivot, TRANSITION branch",Trade 2,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_3C,2026-07-10,Trade 3C - Momentum-Breakout,Trade 3C,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional (SUPPRESSED: conviction below gate),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_2,2026-07-13,"Trade 2 - Pivot (TRANSITION branch, breakout side only: SUPPRESSED, R below 0.3xATR floor)",Trade 2,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_3C,2026-07-13,Trade 3C - Momentum-Breakout (SUPPRESSED: no confirmed 25-day break),Trade 3C,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_1,2026-07-14,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_2,2026-07-14,"Trade 2 - Pivot, regime-aware (TRANSITION breakout side)",Trade 2,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_3C,2026-07-14,Trade 3C - Momentum-Breakout,Trade 3C,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-15_Trade_1,2026-07-15,Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-15_Trade_2,2026-07-15,Pivot (TRANSITION breakout-side),Trade 2,LONG,card,FILLED,STOP touched,2026-07-15 11:30:00,10495.76,53.82,1.0,3,-1.0,-1.0
+2026-07-15_Trade_3C,2026-07-15,Momentum-Breakout (TRANSITION),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-16_Trade_1,2026-07-16,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-16_Trade_2,2026-07-16,Trade 2 - Pivot (TRANSITION: breakout side only),Trade 2,LONG,card,FILLED,STOP touched,2026-07-16 17:00:00,10494.4,43.82,1.0,3,1.037,1.037
+2026-07-16_Trade_3C,2026-07-16,Trade 3 - Momentum-Breakout (variant 3C),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-17_Trade_2,2026-07-17,"Trade 2 - Pivot (regime-aware, TRANSITION breakout side)",Trade 2,LONG,card,FILLED,STOP touched,2026-07-17 10:15:00,10584.13,112.35,1.0,3,-0.602,-0.602
+2026-07-17_Trade_3C,2026-07-17,Trade 3 - Momentum-Breakout (variant 3C),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-20_Trade_1,2026-07-20,Trade 1 - Daily Directional (SUPPRESSED - NEUTRAL score),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-20_Trade_2,2026-07-20,"Trade 2 - Pivot (TRANSITION branch, breakout side = upside)",Trade 2,LONG,card,FILLED,STOP touched,2026-07-20 14:30:00,10573.49,43.75,1.0,3,-1.0,-1.0
+2026-07-20_Trade_3C,2026-07-20,Trade 3C - Momentum-Breakout (SUPPRESSED - no confirmed break),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_1,2026-07-21,Trade 1 - Daily Directional (SUPPRESSED: score below conviction threshold),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_2,2026-07-21,"Trade 2 - Pivot, TRANSITION breakout side (SUPPRESSED: order-side gate)",Trade 2,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_3C,2026-07-21,Trade 3C - Momentum-Breakout (SUPPRESSED: no confirmed break),Trade 3C,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_1,2026-07-22,Trade 1 - Daily Directional (SUPPRESSED),Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_2,2026-07-22,"Trade 2 - Pivot, TRANSITION branch (SUPPRESSED)",Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_3C,2026-07-22,Trade 3C - Momentum-Breakout (SUPPRESSED),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-23_Trade_1,2026-07-23,Trade 1 — Daily Directional,Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-07-23 09:00:00,10695.3,129.2,0.93,3,0.475,0.372
+2026-07-23_Trade_2,2026-07-23,"Trade 2 — Pivot, regime-aware (TRANSITION branch, breakout side long)",Trade 2,LONG,card,FILLED,LIMIT touched,2026-07-23 09:30:00,10688.9,77.6,1.0,3,-1.0,-1.0
+2026-07-23_Trade_3C,2026-07-23,Trade 3C — Momentum-Breakout (transition regime fork),Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-24_Trade_1,2026-07-24,Trade 1 - Daily Directional,Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-24_Trade_2,2026-07-24,"Trade 2 - Pivot (RANGE branch, long at daily S1)",Trade 2,LONG,card,FILLED,LIMIT touched,2026-07-24 09:30:00,10573.67,73.52,1.0,3,1.638,1.638
+2026-07-24_Trade_3B,2026-07-24,"Trade 3B - Mean-Reversion (RANGE, short at 78.6%)",Trade 3B,SHORT,card,FILLED,LIMIT touched,2026-07-24 11:00:00,10666.71,49.11,1.0,3,-1.0,-1.0
+2026-07-27_Trade_1,2026-07-27,"Trade 1 - Daily Directional (SUPPRESSED, score NEUTRAL)",Trade 1,n/a,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-27_Trade_2,2026-07-27,"Trade 2 - Pivot, RANGE branch (mean-reversion buy limit at daily S1)",Trade 2,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-07-27_Trade_3B,2026-07-27,"Trade 3 - Mean-Reversion 3B (RANGE, SUPPRESSED)",Trade 3B,SHORT,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional (LONG),Trade 1,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-28_Trade_2,2026-07-28,Trade 2 - Pivot (TREND_UP branch),Trade 2,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-28_Trade_3A,2026-07-28,"Trade 3A - Momentum-Pullback (LONG, TREND_UP fork)",Trade 3A,LONG,card,NO FILL,,,,,,1,0.0,0.0
+2026-07-29_Trade_1,2026-07-29,"Trade 1 - Daily Directional (LONG, TRANSITION with upward lean)",Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-07-29 09:00:00,10869.2,133.8,0.848,3,-0.794,-0.826
+2026-07-29_Trade_2,2026-07-29,"Trade 2 - Pivot, breakout-side (upside), regime = TRANSITION",Trade 2,LONG,card,FILLED,STOP touched,2026-07-29 10:00:00,10914.2,107.9,1.0,3,-1.0,-1.0
+2026-07-29_Trade_3C,2026-07-29,"Trade 3 - Momentum-Breakout (variant 3C), regime = TRANSITION - SUPPRESSED",Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-30_Trade_1,2026-07-30,"Trade 1 - Daily Directional (LONG, TRANSITION regime)",Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-07-30 09:00:00,10805.8,27.46,0.694,3,3.223,1.931
+2026-07-30_Trade_2,2026-07-30,"Trade 2 - Pivot breakout (LONG, TRANSITION branch, breakout side only)",Trade 2,LONG,card,FILLED,STOP touched,2026-07-30 10:00:00,10900.3,43.62,1.0,3,-1.0,-1.0
+2026-07-30_Trade_3C,2026-07-30,Trade 3 - Momentum-Breakout 3C (TRANSITION) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-31_Trade_1,2026-07-31,"Trade 1 - Daily Directional (LONG, TRANSITION regime)",Trade 1,LONG,card,FILLED,MARKET at 09:00 open,2026-07-31 09:00:00,10936.3,71.21,1.125,3,-1.0,-1.0
+2026-07-31_Trade_2,2026-07-31,"Trade 2 - Pivot (TRANSITION branch, breakout side long)",Trade 2,LONG,card,FILLED,LIMIT touched,2026-07-31 09:30:00,10899.74,66.04,1.0,3,-0.404,-0.404
+2026-07-31_Trade_3C,2026-07-31,Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED,Trade 3C,LONG,card,SUPPRESSED,,,,,,1,0.0,0.0

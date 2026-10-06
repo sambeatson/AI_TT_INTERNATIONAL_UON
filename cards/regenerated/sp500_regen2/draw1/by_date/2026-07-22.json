@@ -1,0 +1,194 @@
+[
+ {
+  "card_id": "2026-07-22_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score below conviction threshold; no entry",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED: |score| 0.020 < 0.25 conviction threshold (M5 s2b).",
+  "suppressed": true,
+  "regime": "RANGE",
+  "rationale": "Gate: direction score recomputed = 0.0204 (short-term tech 0 x0.25: cash RSI2 85.99 bullish but 5-day cash closes 7573.9->7508.0 net lower, sequence Exhaustion/reversal -> conflicting -> Neutral, matching the report; regime Range 0 x0.20; VOLator compression 0 x0.10; KER recomputed on 26 cash closes 6/26..7/21 = -0.0143 x0.15 = -0.0021; sentiment +0.65 x0.15 = +0.0975 carried from report s13b and not verifiable here; cross-asset CONTRADICT -0.5 x0.15 = -0.075 carried from report s10, only VIX derivable from slice (17.43 on 21 Jul vs 17.37 on 14 Jul, flat). |score| < 0.25 so Trade 1 is suppressed. Sensitivity: only a +1 short-term technical signal (+0.25) would breach the threshold; it is not justified because the 5-day sequence is net bearish.",
+  "direction_score": 0.0204,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0
+   },
+   "medium_term_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contrib": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0
+   },
+   "kaufman": {
+    "signal": -0.0143,
+    "weight": 0.15,
+    "contrib": -0.0021
+   },
+   "sentiment": {
+    "signal": 0.65,
+    "weight": 0.15,
+    "contrib": 0.0975,
+    "note": "carried from report s13b, unverified"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "note": "CONTRADICT carried from report s10; only VIX derivable from slices"
+   }
+  },
+  "report_date": "2026-07-22",
+  "report_file": "SP500_Report_22Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 23:45"
+ },
+ {
+  "card_id": "2026-07-22_Trade_2",
+  "strategy": "Trade 2 - Pivot (regime-aware, RANGE branch)",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT at daily cash R1 7526.97 (tier 1); reference close prev_close_full 7503.70 (D-1 = 2026-07-21), gap +23.27",
+  "anchor_broker": "09:00",
+  "entry": 7526.97,
+  "stop": 7600.16,
+  "tp1": 7453.78,
+  "tp2": 7380.59,
+  "tp3": null,
+  "card_R_points": 73.19,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 TP1 = entry-1R; U2 TP2 = entry-2R; on TP2 fill U3 stop moves to entry-0.2R (7512.33). U3 runner has no fixed TP (P 7496.73 lies above TP1, so a runner toward P is not beyond TP2). Wide-stop flag: R = 1.05 x ATR14 (>1). Thesis invalidation: daily close above 7576.17 (daily R3) / 7582.80 swing high. Caveat: Alphabet and Tesla earnings after the 22 Jul close (report s13d Tier-1).",
+  "suppressed": false,
+  "regime": "RANGE",
+  "rationale": "Regime RANGE (report s1/s9; KER recomputed -0.014 so |KER| small; VOLator contracting; close at 73rd pct of 25d cash range 7303.10-7582.80) -> M5 s5.2a RANGE branch. Direction SHORT = top-sell bias (range-top 73rd pct), faces the level. Pivots from d_cash_* of the level file, computed from the broker series so CORROBORATED by construction (M5 s5.2a). Tier: distance from prev_close_full 7503.70 to d_cash_R1 7526.97 = 23.27 = 0.34 x ATR14(cash 69.44) < 1 -> tier 1 = R1. Fib confluence: R1 within 1.93 pts of 61.8% retrace 7525.04 of the active down swing 7582.80 (15 Jul 16:30) -> 7431.60 (17 Jul 16:30), strong confluence, already first-pick. Stop = structural 5d cash swing high swing_high_5d_cash 7582.80 (15 Jul 16:30 broker) + 0.25 x ATR14 (17.36) = 7600.16; this is closer than the 3.5 x ATR cap (243.04) so structural applies. R = 73.19 (1.05 x ATR14, inside 0.3-3.0). TP1 = entry-R = 7453.78, TP2 = entry-2R = 7380.59; TP1 distance 73.19 < 2.5 x ATR. TP3 null: M5 runner target P (7496.73) is above TP1, not beyond TP2. Entry above prev_close_full 7503.70: correct side for sell limit. Anchor 09:00 broker (07:00 UK) default, limit rests from then.",
+  "direction_score": 0.0204,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0
+   },
+   "medium_term_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contrib": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0
+   },
+   "kaufman": {
+    "signal": -0.0143,
+    "weight": 0.15,
+    "contrib": -0.0021
+   },
+   "sentiment": {
+    "signal": 0.65,
+    "weight": 0.15,
+    "contrib": 0.0975,
+    "note": "carried from report s13b, unverified"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "note": "CONTRADICT carried from report s10; only VIX derivable from slices"
+   }
+  },
+  "report_date": "2026-07-22",
+  "report_file": "SP500_Report_22Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 23:45"
+ },
+ {
+  "card_id": "2026-07-22_Trade_3B",
+  "strategy": "Trade 3B - Mean-Reversion (range fade, short leg)",
+  "family": "Trade 3B",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT at 78.6% of 25d cash range = 7522.94; reference close prev_close_full 7503.70 (D-1 = 2026-07-21), gap +19.24",
+  "anchor_broker": "09:00",
+  "entry": 7522.94,
+  "stop": 7554.83,
+  "tp1": 7442.95,
+  "tp2": 7331.07,
+  "tp3": null,
+  "card_R_points": 31.89,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 TP1 = range midpoint 7442.95; U2 TP2 = low+10% width 7331.07; on TP2 fill U3 stop moves to entry-0.2R = 7516.56 (below entry, profitable side). U3 runner has no fixed TP (breakout runner, trailed). Single fixed R = 31.89 points (0.46 x ATR14, not a range). Thesis invalidation: daily close above 7582.80 (25d high; stop 7554.83 sits ahead of invalidation). Confluences: daily R2 7545.93 and R3 7576.17 above entry; 78.6% fib of 7582.80->7431.60 swing = 7550.44. Caveat: holding period spans Alphabet/Tesla earnings after the 22 Jul close.",
+  "suppressed": false,
+  "regime": "RANGE",
+  "rationale": "Regime RANGE -> 3B (M5 s5.3b). Range = swing_high_25d_cash 7582.80 (15 Jul 16:30 broker) and swing_low_25d_cash 7303.10 (26 Jun 16:30 broker), width 279.70. Gate s4b: active swing 15 Jul high 7582.80 -> 17 Jul 16:30 low 7431.60 = 151.20 = 2.18 x ATR14, >= 2 x ATR (138.87) at 5-session lookback -> qualifies, 3B not suppressed. Short side per top-sell bias. Entry = 78.6% of range = low+0.786*width = 7522.94 (the lower edge of the 78.6-88.6% band, chosen so that R stays >= 0.3 x ATR14 = 20.83 with a single fixed number). Stop = high - 0.10*width = 7554.83. R = 31.89 = 0.46 x ATR14. TP1 = low+0.50*width = 7442.95 (79.99 pts from entry, < 2.5 x ATR). TP2 = low+0.10*width = 7331.07. TP3 null (runner, no price in M5 s5.3b; any price would be invented). Unit-3 stop after TP2 = entry-0.2R = 7516.56 per the fixed task rule (for a SHORT below entry); M5 s5.3b text mid+0.05w is superseded. Entry 7522.94 above prev_close_full 7503.70: correct side for sell limit. No 02:00/16:30 anchor argued, default 09:00 broker.",
+  "direction_score": 0.0204,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0
+   },
+   "medium_term_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contrib": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0
+   },
+   "kaufman": {
+    "signal": -0.0143,
+    "weight": 0.15,
+    "contrib": -0.0021
+   },
+   "sentiment": {
+    "signal": 0.65,
+    "weight": 0.15,
+    "contrib": 0.0975,
+    "note": "carried from report s13b, unverified"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "note": "CONTRADICT carried from report s10; only VIX derivable from slices"
+   }
+  },
+  "report_date": "2026-07-22",
+  "report_file": "SP500_Report_22Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 23:45"
+ }
+]

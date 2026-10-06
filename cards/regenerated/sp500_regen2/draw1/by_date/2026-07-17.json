@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-17",
+  "report_file": "SP500_Report_17Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-17.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-16.csv",
+  "last_bar_broker": "2026-07-16 23:45:00",
+  "direction_score": 0.0336,
+  "direction_components": {
+   "short_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "rsi2_cash 42.18 (level file) is in the 40-60 neutral band; 5-day net change on cash closes is -6.6 pts (flat); the report's 20-40 band reading (RSI2 35.4) does not reproduce"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "M5 2a TRANSITION = sign of last completed swing x 0.5; last completed swing is up (25d cash low 7303.10 on 26 Jun to 25d high 7583.40 / 5d high 7582.80 on 15 Jul)"
+   },
+   "volatility_regime": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14 cash slope over 5 sessions recomputed from slice = -15.1% (82.99 on 10 Jul to 70.30): compression = 0 per M5 2a"
+   },
+   "kaufman": {
+    "signal": 0.207,
+    "weight": 0.15,
+    "contribution": 0.0311,
+    "basis": "plain 13-session KER on slice cash closes = 93.2/450 = 0.207 (report quotes 0.37 EMA-3 smoothed; not reproducible, used the lower recomputed value) x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "signal": -0.15,
+    "weight": 0.15,
+    "contribution": -0.0225,
+    "basis": "carried from report 13b (-0.15, Mildly Negative); news not independently verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "report 10 CONTRADICT (VIX, DAX contradict; USDX confirms). VIX slice: cash-close 16.66 (10 Jul) to 17.40 (16 Jul) while cash flat/up on the medium trend; DAX and USDX not in slices so carried. CONTRADICT x medium direction (+1) x -0.5"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "card_id": "2026-07-17_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (SUPPRESSED: conviction below threshold)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - no order. Would have been a MARKET entry at prev_close_full 7526.20 at the 09:00 broker anchor.",
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED: |direction score| 0.0336 < CONVICTION_THRESHOLD 0.25 (M5 2b: NEUTRAL, Trade 1 suppressed). No levels issued.",
+  "rationale": "Direction score recomputed per M5 2a/2b: 0.25*0.00 + 0.20*0.50 + 0.10*0.00 + 0.15*0.207 + 0.15*(-0.15) + 0.15*(-0.50) = 0 + 0.1000 + 0 + 0.0311 - 0.0225 - 0.0750 = +0.0336 (rounded). |0.0336| < 0.25 so direction is NEUTRAL and Trade 1 is suppressed under M5 2b/8 (SUPPRESSED row, not an omission). The report's -0.0525 used RSI2 35.4 (does not reproduce; level file rsi2_cash = 42.18), +0.40 medium, +0.30 volatility (M5 maps compression to 0), +0.30 Kaufman and -0.40 cross-asset; the threshold breach is the same and was overridden in the report by an operator instruction, which M5 absolute rule 8 forbids. Sensitivity: no plausible re-weighting of the six components reaches 0.25. Anchor would have been 09:00 broker (07:00 UK, M1 DAILY_OPEN_ANCHOR). Sentiment carried from report 13b and not verifiable."
+ },
+ {
+  "report_date": "2026-07-17",
+  "report_file": "SP500_Report_17Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-17.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-16.csv",
+  "last_bar_broker": "2026-07-16 23:45:00",
+  "direction_score": 0.0336,
+  "direction_components": {
+   "short_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "rsi2_cash 42.18 (level file) is in the 40-60 neutral band; 5-day net change on cash closes is -6.6 pts (flat); the report's 20-40 band reading (RSI2 35.4) does not reproduce"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "M5 2a TRANSITION = sign of last completed swing x 0.5; last completed swing is up (25d cash low 7303.10 on 26 Jun to 25d high 7583.40 / 5d high 7582.80 on 15 Jul)"
+   },
+   "volatility_regime": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14 cash slope over 5 sessions recomputed from slice = -15.1% (82.99 on 10 Jul to 70.30): compression = 0 per M5 2a"
+   },
+   "kaufman": {
+    "signal": 0.207,
+    "weight": 0.15,
+    "contribution": 0.0311,
+    "basis": "plain 13-session KER on slice cash closes = 93.2/450 = 0.207 (report quotes 0.37 EMA-3 smoothed; not reproducible, used the lower recomputed value) x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "signal": -0.15,
+    "weight": 0.15,
+    "contribution": -0.0225,
+    "basis": "carried from report 13b (-0.15, Mildly Negative); news not independently verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "report 10 CONTRADICT (VIX, DAX contradict; USDX confirms). VIX slice: cash-close 16.66 (10 Jul) to 17.40 (16 Jul) while cash flat/up on the medium trend; DAX and USDX not in slices so carried. CONTRADICT x medium direction (+1) x -0.5"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "card_id": "2026-07-17_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch (SUPPRESSED: no breakout side)",
+  "family": "Trade 2",
+  "direction": "n/a",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SUPPRESSED - TRANSITION permits a breakout-side entry only (M5 5.2c) and no breakout side exists. A counter-side limit (e.g. buy limit at daily S1) is not permitted.",
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: no confirmed 25-day boundary break, so Trade 3C has identified no breakout side; Trade 2 in TRANSITION mirrors 5.2b only on that side. No levels issued.",
+  "rationale": "Regime TRANSITION carried from the report (9, 16, 21): KER/medium-term structure up, but the 7,568-7,583 shelf rejected twice in five sessions (10 and 15 Jul cash highs 7579.5 / 7582.8 from the slice), 5-day net -6.6 pts. The 25-day cash boundary is 7583.40 / 7303.10 (width 280.30); D-1 cash close 7536.20 (prev_close_cash) sits inside it, 64.78 below the upside trigger and 250.67 above the downside trigger. Branch: TRANSITION (M5 5.2c; same label as Trade 3 fork). Trade 2 is allowed only on the breakout side identified by Trade 3C; 3C is not eligible (needs a daily close >= 7583.40 + 0.25*70.30 = 7600.98 or <= 7303.10 - 17.58 = 7285.53; last cash close 7536.20), so there is no breakout side and the card is suppressed rather than re-labelled as a pivot fade. For reference only, had an upside break been confirmed the mirror of 5.2b on _cash pivots would have been entry P+0.10*(R1-P)=7541.35, stop P-0.8*(P-S1)=7510.89, TP1/2/3 = R1 7570.27 / R1.5 7587.30 / R2 7604.33; not issued. Direction n/a because direction is defined by the broken side."
+ },
+ {
+  "report_date": "2026-07-17",
+  "report_file": "SP500_Report_17Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-17.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-16.csv",
+  "last_bar_broker": "2026-07-16 23:45:00",
+  "direction_score": 0.0336,
+  "direction_components": {
+   "short_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "rsi2_cash 42.18 (level file) is in the 40-60 neutral band; 5-day net change on cash closes is -6.6 pts (flat); the report's 20-40 band reading (RSI2 35.4) does not reproduce"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "M5 2a TRANSITION = sign of last completed swing x 0.5; last completed swing is up (25d cash low 7303.10 on 26 Jun to 25d high 7583.40 / 5d high 7582.80 on 15 Jul)"
+   },
+   "volatility_regime": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "ATR14 cash slope over 5 sessions recomputed from slice = -15.1% (82.99 on 10 Jul to 70.30): compression = 0 per M5 2a"
+   },
+   "kaufman": {
+    "signal": 0.207,
+    "weight": 0.15,
+    "contribution": 0.0311,
+    "basis": "plain 13-session KER on slice cash closes = 93.2/450 = 0.207 (report quotes 0.37 EMA-3 smoothed; not reproducible, used the lower recomputed value) x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "signal": -0.15,
+    "weight": 0.15,
+    "contribution": -0.0225,
+    "basis": "carried from report 13b (-0.15, Mildly Negative); news not independently verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contribution": -0.075,
+    "basis": "report 10 CONTRADICT (VIX, DAX contradict; USDX confirms). VIX slice: cash-close 16.66 (10 Jul) to 17.40 (16 Jul) while cash flat/up on the medium trend; DAX and USDX not in slices so carried. CONTRADICT x medium direction (+1) x -0.5"
+   }
+  },
+  "regime": "TRANSITION",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "card_id": "2026-07-17_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (SUPPRESSED: not eligible)",
+  "family": "Trade 3C",
+  "direction": "n/a",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - NOT ELIGIBLE. Requires a daily close beyond the 25-day cash boundary by >= 0.25xATR14.",
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED: 3C eligibility gate (M5 4d / 5.3c) failed - no confirmed break. No levels issued; no substitution of 3A or 3B (M5 5.3).",
+  "rationale": "Regime TRANSITION carried from the report (9, 16, 21): KER/medium-term structure up, but the 7,568-7,583 shelf rejected twice in five sessions (10 and 15 Jul cash highs 7579.5 / 7582.8 from the slice), 5-day net -6.6 pts. The 25-day cash boundary is 7583.40 / 7303.10 (width 280.30); D-1 cash close 7536.20 (prev_close_cash) sits inside it, 64.78 below the upside trigger and 250.67 above the downside trigger. Fork: TRANSITION selects 3C (M5 3 / 5.3), no substitution. Gate 4d: swing_high_25d_cash 7583.4 + 0.25*atr14_cash 70.3 (=17.575) = 7600.975 for an upside break; swing_low_25d_cash 7303.1 - 17.575 = 7285.525 for a downside break. prev_close_cash 7536.2 satisfies neither (64.78 pts short of upside, 250.68 pts short of downside) and no prior daily close in the slice (highest cash close in the last 8 sessions 7574.2 on 10 Jul) is beyond 7583.40, so the card is suppressed with reason 'no confirmed close beyond 25-day boundary'. The report's 3B (range fade on pivots) is not an available substitute. For reference only, an upside break would give stop 7303.10+0.40*280.30=7415.22, TP1 7583.40+280.30=7863.70, TP2 7583.40+1.5*280.30=8003.85 (M5 5.3c levels as written); not issued."
+ }
+]

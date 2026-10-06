@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-15_Trade_1,2026-07-15,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-15_Trade_2,2026-07-15,Trade 2 - Pivot (regime-aware). Transitional regime -> buy support at corroborated weekly pivot confluence,CLEAN,False
+2026-07-15_Trade_3A,2026-07-15,Trade 3A - Momentum-Pullback. 14-Jul range-top close + CONFIRM cross-asset -> buy a shallow pullback in the resolution attempt,CLEAN,False

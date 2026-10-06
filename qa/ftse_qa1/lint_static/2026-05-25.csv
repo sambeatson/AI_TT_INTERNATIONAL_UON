@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-25_Trade_1,2026-05-25,Trade 1 — Daily Directional,CLEAN,False
+2026-05-25_Trade_2,2026-05-25,Trade 2 — Pivot (regime-aware). Regime TRANSITION → breakout-side limit only.,CLEAN,False
+2026-05-25_Trade_3A,2026-05-25,Trade 3 — Momentum-Pullback (3A). Built against the most recent qualifying up-swing; see Caveats for the regime note.,CLEAN,False

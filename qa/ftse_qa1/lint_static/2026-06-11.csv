@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional (SHORT - TRANSITION/bearish tilt),CLEAN,False
+2026-06-11_Trade_2,2026-06-11,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-06-11_Trade_3C,2026-06-11,"Trade 3 - Complex (regime-driven, TRANSITION -> 3C breakout-side)",UNPRICED,True

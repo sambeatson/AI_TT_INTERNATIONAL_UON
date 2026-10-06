@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-15_Trade_1,2026-05-15,Trend-following long (Trade 1),CLEAN,False
+2026-05-15_Trade_2,2026-05-15,Pivot trade - TREND_UP face-support buy (Trade 2),CLEAN,False
+2026-05-15_Trade_3A,2026-05-15,"Complex - Continuation breakout long (Trade 3A, TREND_UP fork)",CLEAN,False

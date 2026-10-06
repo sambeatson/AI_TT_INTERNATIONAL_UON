@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-21_Trade_1,2026-07-21,Trade 1 — Daily Directional (SHORT — TRANSITION/bearish score),CLEAN,False
+2026-07-21_Trade_2,2026-07-21,"Trade 2 — Pivot (TRANSITION: breakout-side limit only, aligned with 3C short)",WARN_TP3_ORDER,False
+2026-07-21_Trade_3C,2026-07-21,Trade 3C — Momentum-Breakout (post-consolidation),UNPRICED,True

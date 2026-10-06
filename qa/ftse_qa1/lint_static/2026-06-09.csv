@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-09_Trade_2,2026-06-09,"Trade 2 - Pivot, regime-aware (TRANSITION -> fade toward the corroborated floor)",CLEAN,False
+2026-06-09_Trade_3C,2026-06-09,"Trade 3C - Momentum-Breakout; TRANSITION regime, anchor = 25-session range boundary",CLEAN,False

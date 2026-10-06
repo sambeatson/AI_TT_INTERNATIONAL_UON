@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-05-19_Trade_1,2026-05-19,Trade 1 — Daily Directional (SHORT),CLEAN,False
+2026-05-19_Trade_2,2026-05-19,Trade 2 — Pivot (TRANSITION regime — breakout-side only),CLEAN,False
+2026-05-19_Trade_3C,2026-05-19,"Trade 3 — Regime-driven Complex (3C — Momentum-Breakout, TRANSITION regime)",UNPRICED,True

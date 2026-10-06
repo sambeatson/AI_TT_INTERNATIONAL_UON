@@ -1,0 +1,172 @@
+card_id,report_date,strategy,flags,dud
+2026-05-11_Trade_1,2026-05-11,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-11_Trade_2,2026-05-11,"Trade 2 - Pivot, TRANSITION regime, breakout-side only (per §5.2c)",CLEAN,False
+2026-05-11_Trade_3C,2026-05-11,Trade 3C - Momentum-Breakout (TRANSITION fork),UNPRICED,True
+2026-05-12_Trade_1,2026-05-12,"Trade 1 - Daily Directional (SHORT, mild conviction)",CLEAN,False
+2026-05-12_Trade_2,2026-05-12,"Trade 2 - Regime-Aware Pivot (TRANSITIONAL breakout-side, two-sided)",CLEAN,False
+2026-05-12_Trade_3B,2026-05-12,Trade 3 - Regime-driven Complex: 3B Mean-Reversion (RANGE-aware long),CLEAN,False
+2026-05-13_Trade_1,2026-05-13,Trade Card 1 - Daily Directional (FTSE 100),CLEAN,False
+2026-05-13_Trade_2,2026-05-13,Trade Card 2 - Regime-Aware Pivot (FTSE 100),CLEAN,False
+2026-05-13_Trade_3B,2026-05-13,Trade Card 3 - Complex (Regime Variant 3B: Range Mean-Reversion),CLEAN,False
+2026-05-14_Trade_1,2026-05-14,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-14_Trade_2,2026-05-14,"Trade 2 - Pivot (regime-aware, RANGE)",CLEAN,False
+2026-05-14_Trade_3B,2026-05-14,Trade 3B - Mean-Reversion (RANGE branch),CLEAN,False
+2026-05-15_Trade_1,2026-05-15,Trend-following long (Trade 1),CLEAN,False
+2026-05-15_Trade_2,2026-05-15,Pivot trade - TREND_UP face-support buy (Trade 2),CLEAN,False
+2026-05-15_Trade_3A,2026-05-15,"Complex - Continuation breakout long (Trade 3A, TREND_UP fork)",CLEAN,False
+2026-05-18_Trade_1,2026-05-18,Trade 1 - Daily Directional,CLEAN,False
+2026-05-18_Trade_2,2026-05-18,Trade 2 - Pivot (regime-aware) - TREND-DOWN configuration,CLEAN,False
+2026-05-18_Trade_3A,2026-05-18,Trade 3A - Momentum-Pullback,CLEAN,False
+2026-05-19_Trade_1,2026-05-19,Trade 1 — Daily Directional (SHORT),CLEAN,False
+2026-05-19_Trade_2,2026-05-19,Trade 2 — Pivot (TRANSITION regime — breakout-side only),CLEAN,False
+2026-05-19_Trade_3C,2026-05-19,"Trade 3 — Regime-driven Complex (3C — Momentum-Breakout, TRANSITION regime)",UNPRICED,True
+2026-05-20_Trade_1,2026-05-20,"Trade 1 — Daily Directional, LONG",CLEAN,False
+2026-05-20_Trade_2,2026-05-20,"Trade 2 — Pivot (regime-aware), TRANSITION regime → breakout-side branch",CLEAN,False
+2026-05-20_Trade_3A,2026-05-20,"Trade 3 — Momentum-Pullback (3A), TRANSITION regime",CLEAN,False
+2026-05-21_Trade_1,2026-05-21,Trade 1 — Daily Directional (LONG),CLEAN,False
+2026-05-21_Trade_2,2026-05-21,Trade 2 — Pivot,CLEAN,False
+2026-05-21_Trade_3C,2026-05-21,Trade 3C — Momentum-Breakout,CLEAN,False
+2026-05-22_Trade_1,2026-05-22,Trade 1 — Daily Directional,CLEAN,False
+2026-05-22_Trade_2,2026-05-22,"Trade 2 — Pivot (TRANSITION, breakout side)",CLEAN,False
+2026-05-22_Trade_3C,2026-05-22,Trade 3C — Momentum-Breakout,CLEAN,False
+2026-05-25_Trade_1,2026-05-25,Trade 1 — Daily Directional,CLEAN,False
+2026-05-25_Trade_2,2026-05-25,Trade 2 — Pivot (regime-aware). Regime TRANSITION → breakout-side limit only.,CLEAN,False
+2026-05-25_Trade_3A,2026-05-25,Trade 3 — Momentum-Pullback (3A). Built against the most recent qualifying up-swing; see Caveats for the regime note.,CLEAN,False
+2026-05-26_Trade_1,2026-05-26,Trade 1 — Daily Directional,WARN_TP3_ORDER,False
+2026-05-26_Trade_2,2026-05-26,"Trade 2 — Pivot, regime-aware. Regime TRANSITION — breakout-side configuration, upside only.",CLEAN,False
+2026-05-26_Trade_3C,2026-05-26,Trade 3C — Momentum-Breakout,SUPPRESSED,False
+2026-05-27_Trade_1,2026-05-27,Trade 1 - Daily Directional,CLEAN,False
+2026-05-27_Trade_2,2026-05-27,"Trade 2 - Pivot (regime-aware, TREND_UP -> LONG)",CLEAN,False
+2026-05-27_Trade_3A,2026-05-27,Trade 3A - Momentum-Pullback,CLEAN,False
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,CLEAN,False
+2026-05-28_Trade_2,2026-05-28,"Trade 2 - Pivot (regime-aware, TREND_UP branch - pivot breakout LONG)",CLEAN,False
+2026-05-28_Trade_3A,2026-05-28,Trade 3A - Momentum-Pullback (TREND_UP regime fork; LONG),CLEAN,False
+2026-05-29_Trade_1,2026-05-29,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-05-29_Trade_2,2026-05-29,"Trade 2 - Pivot, regime-aware (RANGE-fade)",CLEAN,False
+2026-05-29_Trade_3B,2026-05-29,Trade 3B - Mean-Reversion,CLEAN,False
+2026-06-01_Trade_1,2026-06-01,Trade 1 - Daily Directional (LONG - Transitional-bullish lean),CLEAN,False
+2026-06-01_Trade_2,2026-06-01,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-06-01_Trade_3C,2026-06-01,Trade 3 - Momentum-Breakout (3C - Transitional regime),CLEAN,False
+2026-06-02_Trade_1,2026-06-02,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-02_Trade_2,2026-06-02,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-06-02_Trade_3C,2026-06-02,Trade 3C - Momentum-Breakout (regime = TRANSITION),CLEAN,False
+2026-06-03_Trade_1,2026-06-03,Trade 1 - Daily Directional (SHORT - bearish regime),CLEAN,False
+2026-06-03_Trade_2,2026-06-03,"Trade 2 - Pivot (regime-aware, SHORT-at-resistance)",CLEAN,False
+2026-06-03_Trade_3A,2026-06-03,Trade 3A - Momentum-Pullback (SHORT),CLEAN,False
+2026-06-04_Trade_1,2026-06-04,Trade 1 - Daily Directional,CLEAN,False
+2026-06-04_Trade_2,2026-06-04,Trade 2 - Pivot (regime-aware),CLEAN,False
+2026-06-04_Trade_3A,2026-06-04,Trade 3A - Momentum-Pullback (regime fork: Transitional → 3A),CLEAN,False
+2026-06-05_Trade_1,2026-06-05,Trade 1 - Daily Directional (SHORT),WARN_TP3_ORDER,False
+2026-06-05_Trade_2,2026-06-05,"Trade 2 - Pivot, regime-aware (TRANSITION → breakout side only)",CLEAN,False
+2026-06-05_Trade_3C,2026-06-05,Trade 3C - Momentum-Breakout (TRANSITION),CLEAN,False
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-08_Trade_2,2026-06-08,"Trade 2 - Pivot, regime-aware (TRANSITION → breakout side only, aligned with Trade 3C upside trigger)",CLEAN,False
+2026-06-08_Trade_3C,2026-06-08,Trade 3 - Momentum-Breakout (3C); regime_label = TRANSITION,CLEAN,False
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-09_Trade_2,2026-06-09,"Trade 2 - Pivot, regime-aware (TRANSITION -> fade toward the corroborated floor)",CLEAN,False
+2026-06-09_Trade_3C,2026-06-09,"Trade 3C - Momentum-Breakout; TRANSITION regime, anchor = 25-session range boundary",CLEAN,False
+2026-06-10_Trade_1,2026-06-10,Trade 1 - Daily Directional (SHORT),WARN_TP3_ORDER,False
+2026-06-10_Trade_2,2026-06-10,"Trade 2 - Pivot (TRANSITION, breakout side only) - SHORT",CLEAN,False
+2026-06-10_Trade_3C,2026-06-10,Trade 3C - Momentum-Breakout (TRANSITION) - SHORT,CLEAN,False
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional (SHORT - TRANSITION/bearish tilt),CLEAN,False
+2026-06-11_Trade_2,2026-06-11,Trade 2 - Pivot (regime-aware),SUPPRESSED,False
+2026-06-11_Trade_3C,2026-06-11,"Trade 3 - Complex (regime-driven, TRANSITION -> 3C breakout-side)",UNPRICED,True
+2026-06-15_Trade_1,2026-06-15,Trade 1 — Daily Directional (LONG),WARN_TP3_ORDER,False
+2026-06-15_Trade_2,2026-06-15,"Trade 2 — Pivot (regime-aware, LONG-from-support)",CLEAN,False
+2026-06-15_Trade_3A,2026-06-15,"Trade 3 — Momentum-Pullback (3A, LONG)",DUD_TP1_SIDE,True
+2026-06-16_Trade_1,2026-06-16,Trade 1 — Daily Directional (LONG · TREND_UP regime),CLEAN,False
+2026-06-16_Trade_2,2026-06-16,"Trade 2 — Pivot (regime-aware, TREND_UP → buy-the-dip to support)",CLEAN,False
+2026-06-16_Trade_3A,2026-06-16,"Trade 3A — Momentum-Pullback (complex, TREND_UP fork)",CLEAN,False
+2026-06-17_Trade_1,2026-06-17,Trade 1 — Daily Directional,SUPPRESSED,False
+2026-06-17_Trade_2,2026-06-17,Trade 2 — Regime-Aware Pivot (TRANSITION),SUPPRESSED,False
+2026-06-17_Trade_3C,2026-06-17,Trade 3C — TRANSITION Breakout,CLEAN,False
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-06-18_Trade_2,2026-06-18,"Trade 2 - Pivot (regime-aware, weekly-anchored LONG)",CLEAN,False
+2026-06-18_Trade_3C,2026-06-18,"Trade 3 - Momentum-Breakout (3C, TRANSITION fork, LONG)",CLEAN,False
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional (SHORT),CLEAN,False
+2026-06-19_Trade_2,2026-06-19,"Trade 2 - Pivot, RANGE regime (sell-high / buy-low at extremes)",CLEAN,False
+2026-06-19_Trade_3B,2026-06-19,"Trade 3B - Mean-Reversion (RANGE regime, KER Ranging-Neutral, VOLator slope positive but downside-driven)",CLEAN,False
+2026-06-23_Trade_1,2026-06-23,"Trade 1 - Daily Directional (LONG - score +0.61, above threshold)",CLEAN,False
+2026-06-23_Trade_2,2026-06-23,Trade 2 - Regime-Aware Pivot (LONG bias - buy the dip to support),CLEAN,False
+2026-06-23_Trade_3A,2026-06-23,Trade 3A - Regime-Driven Complex: Momentum-Pullback (TRANSITION→bullish fork),CLEAN,False
+2026-06-24_Trade_1,2026-06-24,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-24_Trade_2,2026-06-24,"Trade 2 - Pivot (TRANSITION, breakout side only)",WARN_TP3_ORDER,False
+2026-06-24_Trade_3C,2026-06-24,"Trade 3 - Momentum-Breakout (3C, TRANSITION)",UNPRICED,True
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional (LONG),WARN_TP3_ORDER,False
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot, regime-aware (TRANSITION -> breakout side only, LONG)",CLEAN,False
+2026-06-25_Trade_3C,2026-06-25,Trade 3C - Momentum-Breakout (TRANSITION regime),CLEAN,False
+2026-06-26_Trade_1,2026-06-26,Trade 1 - Daily Directional: SUPPRESSED,SUPPRESSED,False
+2026-06-26_Trade_2,2026-06-26,"Trade 2 - Pivot (range-fade), primary card",CLEAN,False
+2026-06-26_Trade_3B,2026-06-26,Trade 3B - Mean-Reversion (25-session range),CLEAN,False
+2026-06-29_Trade_1,2026-06-29,Trade 1 - Daily Directional,CLEAN,False
+2026-06-29_Trade_2,2026-06-29,"Trade 2 - Pivot, TREND_UP (pivot breakout, long)",CLEAN,False
+2026-06-29_Trade_3A,2026-06-29,"Trade 3 - Momentum-Pullback (3A), regime TREND_UP",CLEAN,False
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional,CLEAN,False
+2026-06-30_Trade_2,2026-06-30,Trade 2 - Pivot (range-aware),CLEAN,False
+2026-06-30_Trade_3B,2026-06-30,Trade 3B - Mean-Reversion (Transitional/Range regime),CLEAN,False
+2026-07-01_Trade_1,2026-07-01,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-07-01_Trade_2,2026-07-01,"Trade 2 - Pivot (regime-aware, LONG-from-support)",CLEAN,False
+2026-07-01_Trade_3C,2026-07-01,Trade 3 - Complex (regime: TRANSITION → 3C breakout),CLEAN,False
+2026-07-02_Trade_1,2026-07-02,Trade 1 - Daily Directional (LONG · Transitional–Bullish),CLEAN,False
+2026-07-02_Trade_2,2026-07-02,"Trade 2 - Pivot, regime-aware (TREND_UP → pivot breakout LONG)",CLEAN,False
+2026-07-02_Trade_3A,2026-07-02,Trade 3A - Momentum-Pullback (TREND_UP → LONG),CLEAN,False
+2026-07-03_Trade_1,2026-07-03,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-07-03_Trade_2,2026-07-03,"Trade 2 - Pivot, regime-aware (LONG pullback-buy)",CLEAN,False
+2026-07-03_Trade_3A,2026-07-03,Trade 3 - Momentum-Pullback (3A) (LONG),CLEAN,False
+2026-07-06_Trade_1,2026-07-06,Trade 1 - Daily Directional (LONG — TREND_UP regime),CLEAN,False
+2026-07-06_Trade_2,2026-07-06,"Trade 2 - Pivot (regime-aware, TREND breakout side)",WARN_TP3_ORDER,False
+2026-07-06_Trade_3A,2026-07-06,Trade 3 - Momentum-Pullback (3A),CLEAN,False
+2026-07-07_Trade_1,2026-07-07,Trade 1 — Daily Directional (LONG — TREND_UP regime),CLEAN,False
+2026-07-07_Trade_2,2026-07-07,"Trade 2 — Pivot (regime-aware, TREND_UP → buy-the-dip to support pivots)",CLEAN,False
+2026-07-07_Trade_3A,2026-07-07,Trade 3A — Momentum-Pullback (TREND_UP variant),CLEAN,False
+2026-07-09_Trade_1,2026-07-09,Trade 1 — Daily Directional,SUPPRESSED,False
+2026-07-09_Trade_2,2026-07-09,Trade 2 — Pivot (regime-aware),SUPPRESSED,False
+2026-07-09_Trade_3A,2026-07-09,"Trade 3A — Momentum-Pullback (long), TRANSITION regime with oversold short-term hook",CLEAN,False
+2026-07-10_Trade_1,2026-07-10,Trade 1 — Daily Directional,CLEAN,False
+2026-07-10_Trade_2,2026-07-10,"Trade 2 — Pivot, TRANSITION branch",CLEAN,False
+2026-07-10_Trade_3A,2026-07-10,Trade 3A — Momentum-Pullback,CLEAN,False
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional (conditional; conviction below gate),CLEAN,False
+2026-07-13_Trade_2,2026-07-13,Trade 2 - Pivot (regime-aware: TRANSITION -> breakout-side fade),CLEAN,False
+2026-07-13_Trade_3A,2026-07-13,Trade 3 - Momentum-Pullback (3A): long the reclaim (regime fork = TRANSITION -> breakout-side long),CLEAN,False
+2026-07-14_Trade_1,2026-07-14,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-14_Trade_2,2026-07-14,"Trade 2 - Pivot, regime-aware (TRANSITION breakout side)",CLEAN,False
+2026-07-14_Trade_3C,2026-07-14,Trade 3C - Momentum-Breakout,CLEAN,False
+2026-07-15_Trade_1,2026-07-15,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-15_Trade_2,2026-07-15,Trade 2 - Pivot (regime-aware). Transitional regime -> buy support at corroborated weekly pivot confluence,CLEAN,False
+2026-07-15_Trade_3A,2026-07-15,Trade 3A - Momentum-Pullback. 14-Jul range-top close + CONFIRM cross-asset -> buy a shallow pullback in the resolution attempt,CLEAN,False
+2026-07-16_Trade_1,2026-07-16,Trade 1 - Daily Directional,CLEAN,False
+2026-07-16_Trade_2,2026-07-16,Trade 2 - Pivot (regime-aware),CLEAN,False
+2026-07-16_Trade_3C,2026-07-16,Trade 3 - Momentum-Breakout (variant 3C),CLEAN,False
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional,CLEAN,False
+2026-07-17_Trade_2,2026-07-17,Trade 2 - Pivot (regime-aware),WARN_TP3_ORDER,False
+2026-07-17_Trade_3A,2026-07-17,Trade 3 - Momentum-Pullback (variant 3A),CLEAN,False
+2026-07-20_Trade_1,2026-07-20,Trade 1 - Daily Directional (LONG - TREND_UP regime),CLEAN,False
+2026-07-20_Trade_2,2026-07-20,"Trade 2 - Pivot (trend-pullback, TREND_UP)",WARN_TP3_ORDER,False
+2026-07-20_Trade_3A,2026-07-20,"Trade 3A - Momentum-Pullback (complex, TREND_UP fork)",CLEAN,False
+2026-07-21_Trade_1,2026-07-21,Trade 1 — Daily Directional (SHORT — TRANSITION/bearish score),CLEAN,False
+2026-07-21_Trade_2,2026-07-21,"Trade 2 — Pivot (TRANSITION: breakout-side limit only, aligned with 3C short)",WARN_TP3_ORDER,False
+2026-07-21_Trade_3C,2026-07-21,Trade 3C — Momentum-Breakout (post-consolidation),UNPRICED,True
+2026-07-22_Trade_1,2026-07-22,"Trade 1 — Daily Directional (LONG, low-conviction override)",WARN_TP3_ORDER,False
+2026-07-22_Trade_2,2026-07-22,"Trade 2 — Pivot, TRANSITION (breakout side only — upside)",CLEAN,False
+2026-07-22_Trade_3C,2026-07-22,"Trade 3C — Momentum-Breakout (TRANSITION variant, upside)",CLEAN,False
+2026-07-23_Trade_1,2026-07-23,Trade 1 — Daily Directional,CLEAN,False
+2026-07-23_Trade_2,2026-07-23,"Trade 2 — Pivot, regime-aware",CLEAN,False
+2026-07-23_Trade_3A,2026-07-23,Trade 3A — Momentum-Pullback (trending-up regime fork),CLEAN,False
+2026-07-24_Trade_1,2026-07-24,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-07-24_Trade_2,2026-07-24,"Trade 2 - Pivot, TRANSITION-regime branch (rotation from support toward the pivot)",WARN_TP3_ORDER,False
+2026-07-24_Trade_3A,2026-07-24,Trade 3A - Momentum-Pullback,CLEAN,False
+2026-07-27_Trade_1,2026-07-27,Trade 1 - Daily Directional (LONG),WARN_TP3_ORDER,False
+2026-07-27_Trade_2,2026-07-27,"Trade 2 - Pivot, regime-aware (TREND_UP -> pivot breakout, LONG)",CLEAN,False
+2026-07-27_Trade_3A,2026-07-27,"Trade 3 - Momentum-Pullback 3A (TREND_UP, LONG)",CLEAN,False
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-07-28_Trade_2,2026-07-28,"Trade 2 - Pivot (regime-aware, TREND_UP breakout)",CLEAN,False
+2026-07-28_Trade_3A,2026-07-28,"Trade 3A - Momentum-Pullback (LONG, TREND_UP fork)",CLEAN,False
+2026-07-29_Trade_1,2026-07-29,Trade 1 — Daily Directional (LONG · TRANSITION-with-upward-lean),WARN_TP3_ORDER,False
+2026-07-29_Trade_2,2026-07-29,"Trade 2 — Pivot, breakout-side (upside), regime = TRANSITION",CLEAN,False
+2026-07-29_Trade_3C,2026-07-29,"Trade 3 — Momentum-Breakout (variant 3C), post-indecision at the 25-session range top",CLEAN,False
+2026-07-30_Trade_1,2026-07-30,Trade 1 — Daily Directional (LONG · TREND_UP regime),CLEAN,False
+2026-07-30_Trade_2,2026-07-30,"Trade 2 — Pivot, regime-aware (LONG · TREND_UP pivot breakout)",CLEAN,False
+2026-07-30_Trade_3A,2026-07-30,Trade 3 — Momentum-Pullback 3A (LONG · TREND_UP),CLEAN,False
+2026-07-31_Trade_1,2026-07-31,Trade 1 — Daily Directional (LONG · TREND_UP regime),CLEAN,False
+2026-07-31_Trade_2,2026-07-31,Trade 2 — Pivot (regime-aware · TREND_UP → pullback buy),WARN_TP3_ORDER,False
+2026-07-31_Trade_3A,2026-07-31,Trade 3A — Momentum-Pullback (TREND_UP variant),CLEAN,False

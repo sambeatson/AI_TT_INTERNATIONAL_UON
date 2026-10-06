@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-06-18_Trade_2,2026-06-18,"Trade 2 - Pivot (regime-aware, weekly-anchored LONG)",CLEAN,False
+2026-06-18_Trade_3C,2026-06-18,"Trade 3 - Momentum-Breakout (3C, TRANSITION fork, LONG)",CLEAN,False

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,SUPPRESSED,False
+2026-06-08_Trade_2,2026-06-08,"Trade 2 - Pivot, regime-aware (TRANSITION → breakout side only, aligned with Trade 3C upside trigger)",CLEAN,False
+2026-06-08_Trade_3C,2026-06-08,Trade 3 - Momentum-Breakout (3C); regime_label = TRANSITION,CLEAN,False

@@ -1,0 +1,4 @@
+card_id,report_date,strategy,flags,dud
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional (LONG),CLEAN,False
+2026-07-28_Trade_2,2026-07-28,"Trade 2 - Pivot (regime-aware, TREND_UP breakout)",CLEAN,False
+2026-07-28_Trade_3A,2026-07-28,"Trade 3A - Momentum-Pullback (LONG, TREND_UP fork)",CLEAN,False

@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-06-05",
+  "report_file": "SP500_Report_05Jun2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-05.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-04.csv",
+  "last_bar_broker": "2026-06-04 23:45",
+  "anchor_broker": "09:00",
+  "card_id": "2026-06-05_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (suppressed: NEUTRAL score)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score +0.22 is below the 0.25 conviction threshold (NEUTRAL)",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - |score| 0.22 < 0.25; no card issued.",
+  "suppressed": true,
+  "direction_score": 0.22,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "product": 0.0,
+    "basis": "Report 8 judgement Indecision/Neutral; 5-day net +0.1% (cash close 7584.8 -> 7592.7); RSI2 cash 35.21 (<50) with D-1 close>open => Neutral under report's own rule"
+   },
+   "medium_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "product": 0.1,
+    "basis": "TRANSITION = sign of last completed swing (up: 21 May low 7394.1 -> 02 Jun high 7624.6) x 0.5"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "Report 9: S&P VOLator -0.30 and contracting => Compression = 0 (carried from report; USDX/DAX slices not in scope)"
+   },
+   "kaufman_ker": {
+    "value": 0.371,
+    "weight": 0.15,
+    "product": 0.0557,
+    "basis": "KER(13) on 46 cash daily closes, EMA3-smoothed = 0.371 (raw 0.422), x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "value": 0.13,
+    "weight": 0.15,
+    "product": 0.0195,
+    "basis": "Carried from report 13b tilt +0.13; not verifiable from slices"
+   },
+   "cross_asset": {
+    "value": 0.3,
+    "weight": 0.15,
+    "product": 0.045,
+    "basis": "Report 10 MIXED (USDX contradict, DAX confirm, VIX neutral) => sign(+) x 0.3. USDX/DAX not derivable from permitted slices; VIX slice shows 16.53->16.36 net lower, MIXED retained because USDX contradicts"
+   }
+  },
+  "regime": "TRANSITION (upward bias)",
+  "rationale": "Direction score = sum(signal x weight): 0 x0.25 + 0.5 x0.20 + 0 x0.10 + 0.371 x0.15 + 0.13 x0.15 + 0.3 x0.15 = 0 + 0.100 + 0 + 0.0557 + 0.0195 + 0.045 = +0.2202 -> +0.22. |0.22| < 0.25 => NEUTRAL => Trade 1 suppressed (M5 s2b, s10). Sentiment +0.13 is carried from report 13b and is unverified. Cross-asset MIXED is carried from the report (USDX/DAX not derivable from the permitted slices). Sensitivity: if cross-asset were scored CONFIRM (+0.15) the score would be about 0.33, but the USDX contradiction is retained so MIXED stands. ATR14 cash 60.39 (levels file atr14_cash); RSI2 cash 35.21."
+ },
+ {
+  "report_date": "2026-06-05",
+  "report_file": "SP500_Report_05Jun2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-05.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-04.csv",
+  "last_bar_broker": "2026-06-04 23:45",
+  "anchor_broker": "09:00",
+  "card_id": "2026-06-05_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION branch (breakout side, long): P+0.10(R1-P) buy limit",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT 7581.57 (branch TRANSITION, breakout side long) - reference close prev_close_full 7582.1 (04 Jun), signed gap -0.53",
+  "entry": 7581.57,
+  "stop": 7555.76,
+  "tp1": 7619.67,
+  "tp2": 7633.15,
+  "tp3": 7646.63,
+  "card_R_points": 25.81,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits TP1 7619.67 (R1), Unit 2 exits TP2 7633.15 (R1.5); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 7586.73; Unit 3 exits TP3 7646.63 (R2). Thesis invalidation: daily close back below daily P 7577.33 (invalidation 7577.33 is 21.6 pts above the stop 7555.76; stop is wider than invalidation). ATR14 cash 60.39; R/ATR 0.43 (no wide-stop flag). Pivots from 04 Jun cash session of the execution series: CORROBORATED. Anchor 09:00 broker (07:00 UK).",
+  "suppressed": false,
+  "direction_score": 0.22,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "product": 0.0,
+    "basis": "Report 8 judgement Indecision/Neutral; 5-day net +0.1% (cash close 7584.8 -> 7592.7); RSI2 cash 35.21 (<50) with D-1 close>open => Neutral under report's own rule"
+   },
+   "medium_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "product": 0.1,
+    "basis": "TRANSITION = sign of last completed swing (up: 21 May low 7394.1 -> 02 Jun high 7624.6) x 0.5"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "Report 9: S&P VOLator -0.30 and contracting => Compression = 0 (carried from report; USDX/DAX slices not in scope)"
+   },
+   "kaufman_ker": {
+    "value": 0.371,
+    "weight": 0.15,
+    "product": 0.0557,
+    "basis": "KER(13) on 46 cash daily closes, EMA3-smoothed = 0.371 (raw 0.422), x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "value": 0.13,
+    "weight": 0.15,
+    "product": 0.0195,
+    "basis": "Carried from report 13b tilt +0.13; not verifiable from slices"
+   },
+   "cross_asset": {
+    "value": 0.3,
+    "weight": 0.15,
+    "product": 0.045,
+    "basis": "Report 10 MIXED (USDX contradict, DAX confirm, VIX neutral) => sign(+) x 0.3. USDX/DAX not derivable from permitted slices; VIX slice shows 16.53->16.36 net lower, MIXED retained because USDX contradicts"
+   }
+  },
+  "regime": "TRANSITION (upward bias)",
+  "rationale": "Regime TRANSITION: report 9 headlines Trending(Bullish) but its consolidated call after KER/VOLator disagreement is 'TRANSITION with an upward bias' (also the label on both original cards and in 21a); that single label is used for Trade 2 and Trade 3. Data cross-check: 25d range 7177.5 (04 May) - 7624.6 (02 Jun), D-1 cash close 7592.7 inside the range 32 pts under the boundary; KER(13,EMA3)=0.37 not a clean trend; ATR14 cash 60.39. Trade 2 TRANSITION => breakout side only (M5 5.2c, mirrors 5.2b TREND long). Upward breakout side chosen: report bias up, 3C side = long (upper 25d boundary 7624.6 tested 02 Jun, rejected 03 Jun, 04 Jun rallied back to 7604.3). Columns d_cash_P 7577.3333, d_cash_R1 7619.6667, d_cash_S1 7550.3667, d_cash_R2 7646.6333 (04 Jun cash session, last_bar_date 2026-06-04). R1.5=(R1+R2)/2=7633.15. Entry = P+0.10*(R1-P)=7577.3333+4.2333=7581.57; sits 0.53 below prev_close_full 7582.1 so a BUY LIMIT is on the correct side. Stop = P-0.8*(P-S1)=7577.3333-21.5733=7555.76; S1-0.25*ATR alternative = 7550.37-15.10=7535.27 is wider, so the tighter P-0.8(P-S1) is used; 5d swing low 7535.0 (04 Jun) is covered by that alternative and not needed. R=25.81 = 0.43 x ATR14 cash 60.39 (within 0.3-3.0; 3.5xATR cap 211 not binding). TP1=R1 7619.67 (+38.10, 0.63 ATR, <2.5 ATR), TP2=R1.5 7633.15, TP3=R2 7646.63. Unit-3 stop after TP2 = entry+0.2R = 7586.73 (profitable direction). Entry anchor 09:00 broker default; no report logic argues for 02:00/16:30. Pivot levels are not taken from the report. NFP on 05 Jun is Tier-1 and falls inside the holding window."
+ },
+ {
+  "report_date": "2026-06-05",
+  "report_file": "SP500_Report_05Jun2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-05.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-04.csv",
+  "last_bar_broker": "2026-06-04 23:45",
+  "anchor_broker": "09:00",
+  "card_id": "2026-06-05_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (suppressed: no confirmed break)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no daily close beyond the 25-day high 7624.6 by >= 0.25xATR (15.10); required close >= 7639.70; D-1 close 7592.7 cash / 7582.1 full",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - confirmed-break gate failed (M5 4d, s10).",
+  "suppressed": true,
+  "direction_score": 0.22,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "product": 0.0,
+    "basis": "Report 8 judgement Indecision/Neutral; 5-day net +0.1% (cash close 7584.8 -> 7592.7); RSI2 cash 35.21 (<50) with D-1 close>open => Neutral under report's own rule"
+   },
+   "medium_regime": {
+    "value": 0.5,
+    "weight": 0.2,
+    "product": 0.1,
+    "basis": "TRANSITION = sign of last completed swing (up: 21 May low 7394.1 -> 02 Jun high 7624.6) x 0.5"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "product": 0.0,
+    "basis": "Report 9: S&P VOLator -0.30 and contracting => Compression = 0 (carried from report; USDX/DAX slices not in scope)"
+   },
+   "kaufman_ker": {
+    "value": 0.371,
+    "weight": 0.15,
+    "product": 0.0557,
+    "basis": "KER(13) on 46 cash daily closes, EMA3-smoothed = 0.371 (raw 0.422), x sign of medium-term move (+)"
+   },
+   "sentiment": {
+    "value": 0.13,
+    "weight": 0.15,
+    "product": 0.0195,
+    "basis": "Carried from report 13b tilt +0.13; not verifiable from slices"
+   },
+   "cross_asset": {
+    "value": 0.3,
+    "weight": 0.15,
+    "product": 0.045,
+    "basis": "Report 10 MIXED (USDX contradict, DAX confirm, VIX neutral) => sign(+) x 0.3. USDX/DAX not derivable from permitted slices; VIX slice shows 16.53->16.36 net lower, MIXED retained because USDX contradicts"
+   }
+  },
+  "regime": "TRANSITION (upward bias)",
+  "rationale": "Regime TRANSITION: report 9 headlines Trending(Bullish) but its consolidated call after KER/VOLator disagreement is 'TRANSITION with an upward bias' (also the label on both original cards and in 21a); that single label is used for Trade 2 and Trade 3. Data cross-check: 25d range 7177.5 (04 May) - 7624.6 (02 Jun), D-1 cash close 7592.7 inside the range 32 pts under the boundary; KER(13,EMA3)=0.37 not a clean trend; ATR14 cash 60.39. Fork: TRANSITION => Trade 3C. Gate (M5 4d): confirmed daily close beyond swing_high_25d 7624.6 (02 Jun) by >= 0.25 x ATR14 cash 60.39 = 15.10, i.e. close >= 7639.70. Last close 7592.7 (cash) / 7582.1 (full) is 32.0 / 42.5 pts short; highest cash daily close in the window is 7615.8 (02 Jun), also below. Gate FAILED => card suppressed; no substitution of 3A/3B and no pivot levels standing in. Direction kept LONG (side of the failed retests of the upper boundary, report bias up). Would-be geometry for reference only (not issued): stop = 7177.5+0.40*447.1 = 7356.3 (R about 283 pts = 4.7 ATR, above the 3.0 ATR floor and the 3.5 ATR cap anyway)."
+ }
+]

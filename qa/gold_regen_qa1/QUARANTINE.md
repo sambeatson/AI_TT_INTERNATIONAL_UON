@@ -18,3 +18,12 @@ US500 `band0845` = **−9.49 R**, gold `band0845` = **−0.59 R**.
 Working copies are held outside the repo at
 `/tmp/claude-0/QUARANTINE/` for this session; the durable copies are in git history at the commit
 before this one.
+
+## Added for the S&P re-run (`sp500_regen2`)
+Four more files carry day-D price information and are now out of the tree for the duration of the S&P
+regeneration: `qa/regen_20260906_qa1/lint_baseline.csv`, `lint_draw1.csv`, `lint_comparison.md` and
+`qa/baseline/lint_baseline.csv` — all linted against full data, so their STALE_ANCHOR / MISPLACED_* flags
+encode where the market opened on D. Held at `/tmp/claude-0/QUARANTINE/sp500_qa_leaky/`; durable copies in
+history. `docs/ENTRY_POLICIES.md` and `README.md` stay in the tree (they define the engine) but quote past
+aggregate outcomes, so regeneration sessions are now instructed not to open them — a tightening over
+the first run, which allowed `ENTRY_POLICIES.md`.

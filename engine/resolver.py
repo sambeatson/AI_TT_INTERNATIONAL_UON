@@ -74,7 +74,7 @@ def find_entry(feed, c, policy, open_hhmm, cutoff_hhmm, same_session):
         es = feed.next_session(hit.index[0]); trig = f'confirmed close {hit.iloc[0]:.1f} on {hit.index[0]}; '
     if es is None: return dict(status='NO SESSION', reason='no following session in data', session=None)
     anchor = {'card': str(c.anchor_broker) if pd.notna(c.anchor_broker) else open_hhmm,
-              'midnight': '02:00', 'usopen': '16:30', 'band0845': '08:45'}[policy]
+              'midnight': '02:00', 'uk0700': '09:00', 'usopen': '16:30', 'band0845': '08:45'}[policy]   # uk0700 = 07:00 UK
     if policy == 'card' and anchor < open_hhmm: anchor = open_hhmm   # never earlier than the asset's session open
     w = feed.bars(es, anchor, cutoff_hhmm)
     if len(w) == 0: return dict(status='NO BARS', reason=f'no bars from {anchor} on {es}', session=es)
@@ -180,7 +180,7 @@ def run(cards, feed, policy, open_hhmm, cutoff_hhmm, be_mode, same_session, min_
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--cards', required=True); ap.add_argument('--data', required=True); ap.add_argument('--out', required=True)
-    ap.add_argument('--policy', default='band0845', choices=['card', 'midnight', 'usopen', 'band0845'])
+    ap.add_argument('--policy', default='band0845', choices=['card', 'midnight', 'uk0700', 'usopen', 'band0845'])
     ap.add_argument('--open', default='09:00', help='asset session open, broker HH:MM (card policy floor)')
     ap.add_argument('--cutoff', default='23:00', help='last time an unfilled order may fill, broker HH:MM')
     ap.add_argument('--be', default='card', choices=['card', 'tp1', 'none'])

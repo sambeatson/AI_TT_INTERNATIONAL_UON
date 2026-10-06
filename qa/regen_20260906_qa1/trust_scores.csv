@@ -28,6 +28,7 @@ report_date,file,c1,c2,c3,c4,c5,total,band,override,card_integrity,n_cards,n_dud
 2026-06-17,SP500_Report_17Jun2026.md,3,2,2,3,4,57,Low,none,100.0,3,0,0
 2026-06-18,SP500_Report_18Jun2026.md,3,4,2,3,3,63,Moderate,restriction_breach,100.0,3,0,0
 2026-06-19,SP500_Report_19Jun2026.md,3,4,0,3,3,53,Low,hallucinated_source,90.0,3,0,3
+2026-06-23,SP500_Report_23Jun2026.md,3,4,2,2,3,58,Low,restriction_breach,90.0,3,0,2
 2026-06-24,SP500_Report_24Jun2026.md,2,4,2,3,3,58,Low,restriction_breach,100.0,3,0,0
 2026-06-25,SP500_Report_25Jun2026.md,3,4,2,3,4,66,Moderate,none,90.0,3,0,2
 2026-06-26,SP500_Report_26Jun2026.md,2,4,0,3,3,48,Low,hallucinated_source,100.0,3,0,0
@@ -36,6 +37,8 @@ report_date,file,c1,c2,c3,c4,c5,total,band,override,card_integrity,n_cards,n_dud
 2026-07-01,SP500_Report_01Jul2026.md,1,4,0,3,3,44,Low,hallucinated_source,96.7,3,0,1
 2026-07-02,SP500_Report_02Jul2026.md,2,5,2,3,3,61,Moderate,restriction_breach,100.0,3,0,0
 2026-07-03,SP500_Report_03Jul2026.md,4,4,0,4,4,59,Low,hallucinated_source,95.0,3,0,1
+2026-07-06,SP500_Report_06Jul2026.md,3,4,2,3,3,63,Moderate,none,100.0,3,0,0
+2026-07-07,SP500_Report_07Jul2026.md,2,3,0,2,3,39,Very Low,hallucinated_source,96.7,3,0,1
 2026-07-09,SP500_Daily_Report_09Jul2026.md,2,4,0,4,3,52,Low,hallucinated_source,100.0,3,0,0
 2026-07-10,SP500_M1_v2_1_Report_10-Jul-2026.md,3,1,2,3,4,53,Low,restriction_breach,90.0,3,0,1
 2026-07-13,SP500_Report_13Jul2026.md,3,4,2,3,3,63,Moderate,none,80.0,3,1,0

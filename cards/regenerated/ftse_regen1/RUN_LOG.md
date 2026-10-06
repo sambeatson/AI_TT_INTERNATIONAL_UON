@@ -10,3 +10,4 @@
 | 06-24 | 2 | `ls cards/regenerated/ftse_regen1/` showed the assembled `cards_regen_draw1.csv` (not opened). To remove the temptation, the assembled draw-1 registry and its lint were taken out of the tree until all draws finish (they are in git history and are rebuilt at assembly) | none |
 | 07-17 | 2 | Trade 2 buy stop placed one pivot tier up (above R1) rather than at P+0.10×(R1−P), apparently to keep the order on the right side of the reference close — off-formula, flagged for the central audit, card kept as issued | audit flag |
 | 05-28 | 1, 3 | Trade 2 built on the **weekly** cash pivot tier (session cites the report's own Trade 2 and QA item 24) — same pattern as 06-18; flagged for the central basis-shopping audit | audit flag |
+| 06-15 | 3 | Trade 2 buy stop placed at daily R1 (not P+0.10×(R1−P)) with targets advanced one tier (R1.5/R2/R3; TP1 ≈ 0.2R) — off-formula, flagged for the central audit | audit flag |

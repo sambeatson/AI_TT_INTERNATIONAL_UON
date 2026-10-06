@@ -1,0 +1,209 @@
+[
+ {
+  "card_id": "2026-07-30_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (LONG - TRANSITION regime, score +0.397)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET at 09:00 broker (07:00 UK) anchor, fill = D-1 reference close 10817.9 (full-day 2026-07-29 22:45 broker); gap to reference close 0.0",
+  "anchor_broker": "09:00",
+  "entry": 10817.9,
+  "stop": 10778.34,
+  "tp1": 10857.46,
+  "tp2": 10897.02,
+  "tp3": 11147.39,
+  "card_R_points": 39.56,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits at TP1 (+1R), U2 at TP2 (+2R); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 10825.81. Unit 3 runner is time-stopped at the LSE cash close (18:30 broker) or price-stopped at entry + 3 x ATR14 (11147.39), whichever first. Thesis invalidation: daily close below 10747.1 (27 Jul cash low), stop ahead of invalidation.",
+  "suppressed": false,
+  "rationale": "Direction LONG: score +0.397 >= 0.25 (components in direction_components). Basis: cash columns (LSE 10:00-18:30 broker) for ATR14=109.8286, pivots, swings; MARKET entry = prev_close_full 10817.9 (bar 2026-07-29 22:45 broker). Reference close (D-1, full-day) 10817.9; D-1 cash close 10887.8. R/ATR14 and flags given per card. Stop per M5 4c: tighter of (a) swing_low_5d cash 10580.9 (24 Jul 10:00 broker) - 0.25xATR = 10553.4 and (b) nearest cash support strictly below entry = daily cash S2 10805.8 (cash S1 10846.8 and P 10896.2 lie ABOVE the 10817.9 entry after the post-cash-close drop, so cannot be support) - 0.25x109.8286 (27.46) = 10778.34; (b) is tighter. R = 39.56 = 0.36xATR14 (within 0.3-3.0, below 1.0 so no wide-stop flag; cap 3.5xATR = 384.4 not binding). TP1 = entry+1R = 10857.46, TP2 = entry+2R = 10897.02 (2R = 79.1 < 3xATR so no ambitious-TP2 flag), TP3 = entry + 3xATR14 = 11147.39. TP1 distance 39.6 = 0.36xATR (< 2.5). Alternative anchor 28 Jul cash low 10762.8 (10:00 broker) would give R 82.6 but is looser, so not used; no weekly/monthly tier used. Anchor 09:00 broker (07:00 UK daily-open default); no report logic argues otherwise. Calendar on D (broker): BoE decision 14:00 (12:00 UK), US core PCE/GDP/jobless claims 15:30, BoE Bailey 16:15, Euro area CPI/HICP/GDP 10:00-12:00: collisions in holding period; Fed decision 21:00 broker 29 Jul already passed (rate held 3.75 per calendar) and US500 fell 7368.3 -> 7306.6 and USDX 101.448 -> 100.823 after the cash close. Sentiment +0.30 carried from report 13b (unverified); DAX, Euro Stoxx 50, Brent carried from report and not verified.",
+  "report_date": "2026-07-30",
+  "report_file": "FTSE_EuroStoxx_Report_30Jul2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-30.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-29.csv",
+  "last_bar_broker": "2026-07-29 22:45",
+  "direction_score": 0.397,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contrib": 0.25,
+    "basis": "RSI2 cash 100.0 (last three cash closes up), cash closes 10618.1/10728.0/10795.0/10874.0/10887.8 = 5-day continuation, Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contrib": 0.1,
+    "basis": "25-session block Transitional (overlap 0.54, persistence 0.38-0.39, RSI2 median 79); Transition = sign of last completed swing (up: 9 Jul low 10380.4 -> 29 Jul high 10945.6) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "basis": "slope of last 10 historically z-scored ATR14/close observations = -0.16 to -0.19 (contraction) -> 0"
+   },
+   "kaufman_ker": {
+    "signal": 0.5105,
+    "weight": 0.15,
+    "contrib": 0.0766,
+    "basis": "KER(13) on cash closes, EMA3-smoothed = 0.51 (raw 0.58), rising; x sign of 25d move (+1)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contrib": 0.045,
+    "basis": "carried from report section 13b tilt +0.30; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "basis": "CONTRADICT: 16:30 UK marks (18:15 broker bar close) 22 Jul -> 29 Jul: USDX 101.077->101.448 (+0.37%, rising), US500 7519.5->7368.3 (-2.01%, falling), VIX 17.55->19.09 (+8.8%, rising); 3 of 3 against a bullish read -> -0.5 x sign(+1). DAX/Euro Stoxx/Brent not available, not scored"
+   },
+   "sum": 0.3966
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-07-30_Trade_2",
+  "strategy": "Trade 2 - Pivot breakout (LONG - TRANSITION branch, breakout side)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "BUY STOP at 10900.3 (P + 0.10 x (R1 - P)), monitoring from 09:00 broker; reference close 10817.9, signed gap +82.4 (buy stop above reference: compliant)",
+  "anchor_broker": "09:00",
+  "entry": 10900.3,
+  "stop": 10856.68,
+  "tp1": 10937.2,
+  "tp2": 10961.9,
+  "tp3": 10986.6,
+  "card_R_points": 43.62,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 at TP1 (daily R1), U2 at TP2 (R1.5), U3 runner to TP3 (R2). On the TP2 fill Unit 3 stop moves to entry + 0.2R = 10909.02. Thesis invalidation: daily close back below 10846.8 (cash S1), stop ahead of invalidation.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION (deterministic fall-through, not the report TREND_UP): 5-day block Trending Bullish and smoothed KER 0.51 (Trending Up - Strong) but VOLator slope on ATR14/close is negative (-0.16 to -0.19) so the TREND_UP clause (needs slope >= 0) fails, and the 25-session block does not meet Trending (persistence 0.38 <0.55, overlap 0.54 >0.45) or Ranging (RSI2 median 79 outside 30-70). Fork: Trade 3C, Trade 2 breakout side only. Branch TRANSITION breakout side (mirror of TREND breakout geometry per M5 5.2c). Side: upside - price at 89.8% of the 25-day cash range 10380.4-10945.6, boundary 10945.6 tested 29 Jul (10:00 broker) and closed back 57.8 below; lower boundary 4.6xATR away. Volator (negative slope) and cross-asset (CONTRADICT) do not confirm the side and are carried as a caveat (they already reduce the direction score). Pivot tier: daily cash pivots computed from the broker execution series, session 2026-07-29 cash H 10945.6 / L 10855.2 / C 10887.8 -> flag CORROBORATED (execution series is the settlement source), so the all-indicative suppression gate does not fire. Levels: P 10896.2, R1 10937.2, S1 10846.8, R2 10986.6; entry = P+0.10x(R1-P) = 10900.3; stop = P-0.8x(P-S1) = 10856.68 (S1-0.25xATR = 10819.3 is wider, so not used); R = 43.62 = 0.40xATR14 (0.3-3.0 ok, no wide-stop flag); TP1 R1 10937.2 (distance 36.9 = 0.34xATR), TP2 R1.5 = (R1+R2)/2 = 10961.9, TP3 R2 10986.6. ATR14 cash 109.8286. Order side: BUY STOP 10900.3 >= prev_close_full 10817.9. Basis: cash columns (LSE 10:00-18:30 broker) for ATR14=109.8286, pivots, swings; MARKET entry = prev_close_full 10817.9 (bar 2026-07-29 22:45 broker). Reference close (D-1, full-day) 10817.9; D-1 cash close 10887.8. R/ATR14 and flags given per card.",
+  "report_date": "2026-07-30",
+  "report_file": "FTSE_EuroStoxx_Report_30Jul2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-30.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-29.csv",
+  "last_bar_broker": "2026-07-29 22:45",
+  "direction_score": 0.397,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contrib": 0.25,
+    "basis": "RSI2 cash 100.0 (last three cash closes up), cash closes 10618.1/10728.0/10795.0/10874.0/10887.8 = 5-day continuation, Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contrib": 0.1,
+    "basis": "25-session block Transitional (overlap 0.54, persistence 0.38-0.39, RSI2 median 79); Transition = sign of last completed swing (up: 9 Jul low 10380.4 -> 29 Jul high 10945.6) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "basis": "slope of last 10 historically z-scored ATR14/close observations = -0.16 to -0.19 (contraction) -> 0"
+   },
+   "kaufman_ker": {
+    "signal": 0.5105,
+    "weight": 0.15,
+    "contrib": 0.0766,
+    "basis": "KER(13) on cash closes, EMA3-smoothed = 0.51 (raw 0.58), rising; x sign of 25d move (+1)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contrib": 0.045,
+    "basis": "carried from report section 13b tilt +0.30; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "basis": "CONTRADICT: 16:30 UK marks (18:15 broker bar close) 22 Jul -> 29 Jul: USDX 101.077->101.448 (+0.37%, rising), US500 7519.5->7368.3 (-2.01%, falling), VIX 17.55->19.09 (+8.8%, rising); 3 of 3 against a bullish read -> -0.5 x sign(+1). DAX/Euro Stoxx/Brent not available, not scored"
+   },
+   "sum": 0.3966
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-07-30_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (SUPPRESSED)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond the 25-day boundary",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - 3C eligibility gate failed: D-1 cash close 10887.8 is 57.8 below the 25-day high 10945.6 (needs a daily close >= 10945.6 + 0.25 x 109.8286 = 10973.1 for the upside break; lower boundary 10380.4 is far away).",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION (deterministic fall-through, not the report TREND_UP): 5-day block Trending Bullish and smoothed KER 0.51 (Trending Up - Strong) but VOLator slope on ATR14/close is negative (-0.16 to -0.19) so the TREND_UP clause (needs slope >= 0) fails, and the 25-session block does not meet Trending (persistence 0.38 <0.55, overlap 0.54 >0.45) or Ranging (RSI2 median 79 outside 30-70). Fork: Trade 3C, Trade 2 breakout side only. Fork forced by the label: TRANSITION -> 3C; 3A is not substituted even though the 5-day swing (10580.9 on 24 Jul 10:00 broker -> 10945.6 on 29 Jul 10:00 broker, 364.7 = 3.32xATR) would qualify. Gate tested: confirmed close beyond 25d boundary by >= 0.25xATR (27.46). Value: last cash close 10887.8 vs upper boundary 10945.6 = -57.8; vs lower boundary 10380.4 = +507.4. Outcome: FAIL -> suppressed, no ladder. Prospective side LONG (upper boundary side), consistent with Trade 2.",
+  "report_date": "2026-07-30",
+  "report_file": "FTSE_EuroStoxx_Report_30Jul2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-30.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-29.csv",
+  "last_bar_broker": "2026-07-29 22:45",
+  "direction_score": 0.397,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contrib": 0.25,
+    "basis": "RSI2 cash 100.0 (last three cash closes up), cash closes 10618.1/10728.0/10795.0/10874.0/10887.8 = 5-day continuation, Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contrib": 0.1,
+    "basis": "25-session block Transitional (overlap 0.54, persistence 0.38-0.39, RSI2 median 79); Transition = sign of last completed swing (up: 9 Jul low 10380.4 -> 29 Jul high 10945.6) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "basis": "slope of last 10 historically z-scored ATR14/close observations = -0.16 to -0.19 (contraction) -> 0"
+   },
+   "kaufman_ker": {
+    "signal": 0.5105,
+    "weight": 0.15,
+    "contrib": 0.0766,
+    "basis": "KER(13) on cash closes, EMA3-smoothed = 0.51 (raw 0.58), rising; x sign of 25d move (+1)"
+   },
+   "sentiment": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contrib": 0.045,
+    "basis": "carried from report section 13b tilt +0.30; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "basis": "CONTRADICT: 16:30 UK marks (18:15 broker bar close) 22 Jul -> 29 Jul: USDX 101.077->101.448 (+0.37%, rising), US500 7519.5->7368.3 (-2.01%, falling), VIX 17.55->19.09 (+8.8%, rising); 3 of 3 against a bullish read -> -0.5 x sign(+1). DAX/Euro Stoxx/Brent not available, not scored"
+   },
+   "sum": 0.3966
+  },
+  "regime": "TRANSITION"
+ }
+]

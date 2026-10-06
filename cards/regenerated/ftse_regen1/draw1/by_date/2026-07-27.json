@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-27",
+  "report_file": "FTSE_EuroStoxx_Report_27Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 22:45",
+  "direction_score": 0.057,
+  "regime": "RANGE",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "term": 0.0,
+    "basis": "5-day sequence Ranging/Indecision (alternating closes, 5d overlap 0.68, persistence 0.25); cash RSI2 53.25 (mid-band); Mon-Fri sessions classed Bearish/Neutral/Bullish/Neutral/Bullish -> Neutral"
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "term": 0.0,
+    "basis": "25-session block Ranging: overlap 0.60, persistence 0.375, close at 93rd percentile (Range Top Bias) -> Range = 0"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "term": 0.0,
+    "basis": "ATR-method, historical z-scale vs 25 sessions, slope of last 10 = -0.15 -> compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "term": 0.0045,
+    "basis": "KER(13) smoothed EMA3 on cash closes = +0.03 (raw +0.06), |KER|<0.13 -> Ranging-Neutral; x sign(+) of 25d move"
+   },
+   "sentiment": {
+    "signal": 0.05,
+    "weight": 0.15,
+    "term": 0.0075,
+    "basis": "CARRIED from report section 13a/13b, unverifiable by me; per-article scores re-weighted with the report's stated class weights = +0.2/3.9 = +0.05 (report states +0.30; with +0.30 the term is 0.045 and the score 0.094, still < 0.25)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "term": 0.045,
+    "basis": "MIXED x sign(+, 25d drift up) x 0.3. US500 Falling (Mon 7444.3 -> Fri 7408.8; 7503.7 Tue -> 7408.8 Fri), VIX Rising (17.04 Wed15 .. 18.31, +1.6% Mon-Fri), USDX Rising (100.97 -> 101.47) all contradict a bullish read; DAX 40 / Euro Stoxx 50 not available - report reading (Rising, STOXX +1.14% Fri) carried and unverified; Brent not available"
+   }
+  },
+  "card_id": "2026-07-27_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (SUPPRESSED, score NEUTRAL)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score +0.057 is below the 0.25 conviction threshold (NEUTRAL); no entry",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": null,
+  "management_text": "SUPPRESSED - |score| 0.057 < 0.25 (NEUTRAL). No entry, stop or targets issued.",
+  "suppressed": true,
+  "rationale": "Gate tested: |direction score| < 0.25 -> Trade 1 suppressed. Score = 0.25*0 + 0.20*0 + 0.10*0 + 0.15*0.03 + 0.15*0.05 + 0.15*0.3 = 0.057 (components in direction_components). Price-derived components are from the cash level file / slices (RSI2 53.25, KER 0.03, VOLator slope -0.15, regime Range, US500/VIX/USDX counters). Sentiment carried from the report's section 13 (not verifiable by me). DAX 40, Euro Stoxx 50 and Brent are not available: the report's reading (rising) is carried and unverified. Even at the report's stated sentiment tilt of +0.30 the score would be 0.094, still NEUTRAL. The report's +0.85 LONG is not reproducible: its KER +0.26 is +0.03 on the slice, its Trending-Bullish regime is Range on the slice, and S&P 500 is falling, not rising."
+ },
+ {
+  "report_date": "2026-07-27",
+  "report_file": "FTSE_EuroStoxx_Report_27Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 22:45",
+  "direction_score": 0.057,
+  "regime": "RANGE",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "term": 0.0,
+    "basis": "5-day sequence Ranging/Indecision (alternating closes, 5d overlap 0.68, persistence 0.25); cash RSI2 53.25 (mid-band); Mon-Fri sessions classed Bearish/Neutral/Bullish/Neutral/Bullish -> Neutral"
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "term": 0.0,
+    "basis": "25-session block Ranging: overlap 0.60, persistence 0.375, close at 93rd percentile (Range Top Bias) -> Range = 0"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "term": 0.0,
+    "basis": "ATR-method, historical z-scale vs 25 sessions, slope of last 10 = -0.15 -> compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "term": 0.0045,
+    "basis": "KER(13) smoothed EMA3 on cash closes = +0.03 (raw +0.06), |KER|<0.13 -> Ranging-Neutral; x sign(+) of 25d move"
+   },
+   "sentiment": {
+    "signal": 0.05,
+    "weight": 0.15,
+    "term": 0.0075,
+    "basis": "CARRIED from report section 13a/13b, unverifiable by me; per-article scores re-weighted with the report's stated class weights = +0.2/3.9 = +0.05 (report states +0.30; with +0.30 the term is 0.045 and the score 0.094, still < 0.25)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "term": 0.045,
+    "basis": "MIXED x sign(+, 25d drift up) x 0.3. US500 Falling (Mon 7444.3 -> Fri 7408.8; 7503.7 Tue -> 7408.8 Fri), VIX Rising (17.04 Wed15 .. 18.31, +1.6% Mon-Fri), USDX Rising (100.97 -> 101.47) all contradict a bullish read; DAX 40 / Euro Stoxx 50 not available - report reading (Rising, STOXX +1.14% Fri) carried and unverified; Brent not available"
+   }
+  },
+  "card_id": "2026-07-27_Trade_2",
+  "strategy": "Trade 2 - Pivot, regime-aware (RANGE branch, mean-reversion fade at daily R1, SHORT)",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT 10777.17 (daily R1, cash basis); D-1 reference close (full-day, 2026-07-24) 10714.3, gap +62.9 (limit above close: correct side for a sell limit)",
+  "entry": 10777.17,
+  "stop": 10831.35,
+  "tp1": 10722.99,
+  "tp2": 10668.81,
+  "tp3": null,
+  "card_R_points": 54.18,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Sell limit 10777.17; stop 10831.35; Unit 1 exits at TP1 10722.99 (-1R); Unit 2 at TP2 10668.81 (-2R); on the TP2 fill Unit 3 stop moves to entry-0.2R = 10766.33 (below entry, in profit). Runner target toward daily P 10679.03 is already passed by TP2, so TP3 is null and Unit 3 is trailed/held to the session close. ATR14 cash = 118.39 (14 sessions to 2026-07-24, LSE cash 10:00-18:30 broker bars). R = 54.18 pts = 0.46 x ATR14 (not a wide stop; 2R = 0.92 x ATR). Thesis invalidation: daily close above 10,788.5 (25-day high 10,758.9 + 0.25 x ATR, the confirmed-break line); invalidation sits 42.8 pts inside the stop. Event risk inside the holding window: US Durable Goods Orders m/m (HIGH, 15:30 broker = 13:30 UK; consensus +1.7, prior -4.5). Single-source flags: none - all tiers computed from the UK100 execution series (cash basis).",
+  "suppressed": false,
+  "rationale": "Regime RANGE (see regime reasoning) -> Trade 2 RANGE branch, mean-reversion at pivots (M5 5.2a). Direction not from the score: price sits at the top of the range, so the nearest pivot is daily R1 -> sell limit. Tier selection: distance from D-1 full close 10714.3 to daily cash R1 10777.17 = 62.9 pts = 0.53 x ATR14 (<1) -> tier 1 (R1); to S1 10629.87 = 84.4 = 0.71 x ATR (also tier 1) so R1 is the nearer pivot. Entry = d_cash_R1 = 10777.1667 -> 10777.17. Fib-confluence check on the 5d cash swing 10470.1 (2026-07-21) -> 10758.9 (2026-07-22), 288.8 pts = 2.44 x ATR: 38.2%=10648.6, 50%=10614.5, 61.8%=10580.4, 78.6%=10531.9; no R-side tier is within 0.15 x ATR (17.8) of a retracement (S1.5 10580.8 coincides with 61.8% but is on the opposite side and is not used; logged). Stop: nearest structural level beyond entry = next daily tier R1.5 = (R1+R2)/2 = (10777.1667+10826.3333)/2 = 10801.7500; stop = R1.5 + 0.25 x 118.3857 (29.60) = 10831.35 (structural level closer than the 3.5 x ATR cap of 414.4, so the structural stop applies). R = 10831.35 - 10777.17 = 54.18. TP1 = entry - 1R = 10722.99; TP2 = entry - 2R = 10668.81; TP3 would be 'toward P' = 10679.03 which lies above TP2 (inverted) so TP3 = null. Static checks: stop above entry, TP1 < entry, TP2 < TP1; R = 0.46 x ATR in [0.3,3.0]; TP1 distance 54.2 = 0.46 x ATR < 2.5 x ATR; sell limit above prev_close_full. Pivot provenance: daily pivots from the 2026-07-24 cash H/L/C (10728.2 / 10580.9 / 10728.0) of the UK100 execution series -> CORROBORATED by construction; no weekly/monthly tier used for entry or stop. Reference confluences (not used for construction): weekly R1 cash 10834.57 (3.2 pts from the stop; stop sits just under weekly R1), 25d/5d swing high 10758.9 lies 18.3 below entry."
+ },
+ {
+  "report_date": "2026-07-27",
+  "report_file": "FTSE_EuroStoxx_Report_27Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 22:45",
+  "direction_score": 0.057,
+  "regime": "RANGE",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "term": 0.0,
+    "basis": "5-day sequence Ranging/Indecision (alternating closes, 5d overlap 0.68, persistence 0.25); cash RSI2 53.25 (mid-band); Mon-Fri sessions classed Bearish/Neutral/Bullish/Neutral/Bullish -> Neutral"
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "term": 0.0,
+    "basis": "25-session block Ranging: overlap 0.60, persistence 0.375, close at 93rd percentile (Range Top Bias) -> Range = 0"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "term": 0.0,
+    "basis": "ATR-method, historical z-scale vs 25 sessions, slope of last 10 = -0.15 -> compression = 0"
+   },
+   "kaufman": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "term": 0.0045,
+    "basis": "KER(13) smoothed EMA3 on cash closes = +0.03 (raw +0.06), |KER|<0.13 -> Ranging-Neutral; x sign(+) of 25d move"
+   },
+   "sentiment": {
+    "signal": 0.05,
+    "weight": 0.15,
+    "term": 0.0075,
+    "basis": "CARRIED from report section 13a/13b, unverifiable by me; per-article scores re-weighted with the report's stated class weights = +0.2/3.9 = +0.05 (report states +0.30; with +0.30 the term is 0.045 and the score 0.094, still < 0.25)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "term": 0.045,
+    "basis": "MIXED x sign(+, 25d drift up) x 0.3. US500 Falling (Mon 7444.3 -> Fri 7408.8; 7503.7 Tue -> 7408.8 Fri), VIX Rising (17.04 Wed15 .. 18.31, +1.6% Mon-Fri), USDX Rising (100.97 -> 101.47) all contradict a bullish read; DAX 40 / Euro Stoxx 50 not available - report reading (Rising, STOXX +1.14% Fri) carried and unverified; Brent not available"
+   }
+  },
+  "card_id": "2026-07-27_Trade_3B",
+  "strategy": "Trade 3 - Mean-Reversion 3B (RANGE, SUPPRESSED)",
+  "family": "Trade 3B",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SUPPRESSED - entire 78.6%-88.6% sell-limit zone (10666.7-10709.8) lies below the D-1 reference close 10714.3; sell limit on wrong side",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": null,
+  "management_text": "SUPPRESSED - order-side rule: a SELL LIMIT must sit at or above the D-1 reference close 10714.3, but the 3B short zone tops out at 10709.8 (88.6% of the 25-day range); price (10714.3 = 89.6%) is already beyond the zone. No entry issued.",
+  "suppressed": true,
+  "rationale": "Regime RANGE -> Trade 3B (fork). Range from the cash 25-day swings: high 10758.9, low 10328.1, width 430.8. Price is at the top of the range (full-day close 10714.3 = 89.6%; cash close 10728.0 = 92.8%), so the fade is SHORT. Short sell-limit zone = low + 0.786*width = 10666.7 to low + 0.886*width = 10709.8. Reference close prev_close_full = 10714.3 (session 2026-07-24). Gate: SELL LIMIT must be >= reference close; the highest permitted level 10709.8 is 4.5 pts below it -> fired, card suppressed (rebuilding at 10714.3 would be outside the zone). A second floor also fails at the top of the zone: stop = high - 0.10*width = 10715.8 gives R = 6.0 pts = 0.05 x ATR14 (<0.3 x ATR). Eligibility: 5d cash swing 288.8 pts = 2.44 x ATR qualifies (so this is not a no-swing suppression). Long side (11.4%-21.4% = 10377.2-10420.3) is the opposite end of the range from price and is not substituted. No basis-shopping: no weekly/monthly tier substituted."
+ }
+]

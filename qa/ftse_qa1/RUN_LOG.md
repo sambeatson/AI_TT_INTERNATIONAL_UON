@@ -12,3 +12,5 @@ SESSION_TASK rule, not because it leaks prices. Scores were set before any listi
 | 2026-06-11 | `git status` showed other dates' QA filenames (nothing opened) | none on scoring |
 | 2026-06-24 | `git status` showed another session's in-flight filename (nothing opened) | none on scoring |
 | 2026-06-19 | report built through D (as-of breach); reviewer did not check D values against data | none on scoring |
+| 2026-06-30 | `ls cards/regenerated` (nothing printed) and `ls -la qa/ftse_qa1` (filenames only); both restriction_breach and hallucinated_source applied, CSV records the stricter | none on scoring |
+| 2026-06-26 | `ls cards/regenerated` (run-folder names only, nothing opened) | none on scoring |

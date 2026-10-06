@@ -1,0 +1,188 @@
+[
+ {
+  "report_date": "2026-07-27",
+  "report_file": "SP500_Report_27Jul2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 23:45:00",
+  "card_id": "2026-07-27_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "SHORT",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET sell at the 09:00 broker anchor (07:00 UK) filled at the D-1 reference close 7408.8 (Fri 24 Jul 2026 full-day settle); gap to reference close 0.0",
+  "anchor_broker": "09:00",
+  "entry": 7408.8,
+  "stop": 7478.0,
+  "tp1": 7339.6,
+  "tp2": 7270.4,
+  "tp3": 7195.18,
+  "card_R_points": 69.2,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits at TP1 (-1R, 7339.6), U2 at TP2 (-2R, 7270.4); when TP2 fills, U3 stop moves to entry - 0.2R = 7394.96 (below entry, profitable side). U3 runner exits at 7195.18 (entry - 3 x ATR14) or at session close, whichever first. R=69.2 pts = 0.97 x ATR14 (71.21, 14 cash-session daily bars to 24 Jul) -> not above 1.00, no wide-stop flag; 2R=138.4 < 3 x ATR14 = 213.6, no TP2-ambitious flag. Thesis invalidation: daily close above 7525.50 (5-day swing high, 22 Jul 19:15 broker), beyond the stop. Holding period collides with FOMC Wed 29 Jul and MSFT/META earnings (Tier-1 events).",
+  "suppressed": false,
+  "regime": "TRANSITION",
+  "direction_score": -0.298,
+  "direction_components": {
+   "short_tech": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contrib": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contrib": -0.05
+   },
+   "kaufman": {
+    "signal": -0.1744,
+    "weight": 0.15,
+    "contrib": -0.0262
+   },
+   "sentiment": {
+    "signal": -0.513,
+    "weight": 0.15,
+    "contrib": -0.077
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contrib": -0.045
+   }
+  },
+  "rationale": "Direction score -0.298 <= -0.25 -> SHORT (components: short_tech 0.00 [RSI2 cash 6.33 oversold vs 5-day path down = Indecision/Neutral, 0]; medium_regime -0.5x0.20 = -0.10 [TRANSITION, last completed swing down 7525.5 (22 Jul 19:15) -> 7375.3 (23 Jul 18:30), sign -1 x 0.5]; volator -0.5x0.10 = -0.05 [volatility expanding (ATR 5-bar 73.64 vs ATR14 71.21, 23 Jul TR 123.5), sign aligned with the downside flush = expansion-down; the original report scored +0.05, a sign inconsistent with its own \u00a79 text]; kaufman KER(13, simple, cash closes 7 Jul-24 Jul) = -0.1744 x 0.15 = -0.0262 [report quoted -0.385; recomputed from slice]; sentiment -0.513 x 0.15 = -0.077 [CARRIED from the report's \u00a713a rows at its own stated 1.0/0.7/0.5 weights = -2.0/3.9; the report's stated tilt -0.30 does not reproduce; news itself not verifiable; with -0.30 the score would be -0.266, still SHORT]; cross_asset MIXED -0.3x0.15 = -0.045 [USDX/DAX not derivable from slices; VIX 17.43 (21 Jul) -> 18.31 (24 Jul) rising, carried MIXED verdict from report \u00a710]). Entry = prev_close_full 7408.8. Stop: tighter of (5-day swing high cash 7525.5 + 0.25xATR14 = 7543.30) and (nearest resistance = D-1 session high cash 7460.2 [prev_high_cash] + 0.25x71.2071 = 7478.00); chosen 7478.00 (tighter). R = 69.20 = 0.97 x ATR14, inside 0.3-3.0 band and below the 3.5xATR cap (249.2). TP1 = entry - 1R = 7339.60 (0.97 ATR from entry, < 2.5 ATR); TP2 = entry - 2R = 7270.40; TP3 = entry - 3xATR14 = 7195.18 (price-stopped runner per M5 5.1, beyond TP2). Anchor 09:00 broker (07:00 UK) = M5 daily-open default; no report logic argues for 02:00 or 16:30. Gates: score gate PASS (|-0.298| >= 0.25); order-side n/a (MARKET at reference close); all levels cash basis from level file, none from report."
+ },
+ {
+  "report_date": "2026-07-27",
+  "report_file": "SP500_Report_27Jul2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 23:45:00",
+  "card_id": "2026-07-27_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION breakout side, short)",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SELL STOP at 7285.3 (25-day cash low 7303.10 - 0.25 x ATR14), armed from the 09:00 broker anchor; reference close 7408.8, entry is -123.5 pts below it (sell stop at/below close: compliant)",
+  "anchor_broker": "09:00",
+  "entry": 7285.3,
+  "stop": 7320.9,
+  "tp1": 7249.7,
+  "tp2": 7214.1,
+  "tp3": 7199.37,
+  "card_R_points": 35.6,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "TRANSITION branch, breakout side only (downside); no counter-side limit. 3 equal units: U1 at TP1 (-1R, 7249.7), U2 at TP2 (-2R, 7214.1); when TP2 fills, U3 stop moves to entry - 0.2R = 7278.18 (below entry). U3 runner toward weekly S3 7199.37. R=35.6 pts = 0.50 x ATR14 (71.21). Thesis invalidation = daily close above the range midpoint 7442.95 (25-day high/low midpoint), well beyond the stop. The stop sits on the broken boundary + 0.25 x ATR14 (a close back inside the range negates the break; coincides with daily S3 7320.27). Confluence at entry: weekly S2 7287.33 and monthly S1 7282.73 (strong confluence, support risk). Collides with FOMC 29 Jul. Daily pivots computed from execution-series cash bars, so CORROBORATED by construction.",
+  "suppressed": false,
+  "regime": "TRANSITION",
+  "direction_score": -0.298,
+  "direction_components": {
+   "short_tech": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contrib": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contrib": -0.05
+   },
+   "kaufman": {
+    "signal": -0.1744,
+    "weight": 0.15,
+    "contrib": -0.0262
+   },
+   "sentiment": {
+    "signal": -0.513,
+    "weight": 0.15,
+    "contrib": -0.077
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contrib": -0.045
+   }
+  },
+  "rationale": "Regime TRANSITION (KER(13) -0.174 is below the trend threshold but ATR is expanding, volator slope > 0 -> RANGE dual gate fails; price 7411.8 sits mid-envelope (39% of 7303.10-7582.80), matching the report's TRANSITION call). M5 5.2/5.2c: TRANSITION -> only a breakout-side entry beyond the 25-day boundary; counter-side limits suppressed. Side: the 3C direction trigger's literal 'failed retest at the upper boundary -> long' (7582.8 on 15 Jul 16:30 broker, rejected to 7411.8) is NOT confirmed by volator sign (expansion-down) or cross-asset (MIXED); score -0.298 SHORT, KER<0, lower boundary 108.7 pts (1.53 ATR) away vs upper 171.0 pts (2.40 ATR) -> breakout side chosen = DOWN. The pivot-ladder mirror (entry P - 0.10(P-S1) = 7418.76) would be a sell stop ABOVE the reference close 7408.8 (order-side violation) and its S1/S1.5/S2 targets (7384.87/7371.40/7357.93) lie above a boundary-break entry, so it cannot be built. Entry = swing_low_25d_cash 7303.10 (bar 26 Jun 16:30 broker) - 0.25 x 71.2071 = 7285.30. Stop = 7303.10 + 0.25xATR14 = 7320.90 (structure = broken boundary; buffer 0.25 ATR beyond). R = 35.60 = 0.50 x ATR14 (within 0.3-3.0; no wide-stop flag). TP1 = entry - 1R = 7249.70; TP2 = entry - 2R = 7214.10; TP3 = weekly cash S3 7199.37 (w_cash_S3) as runner structure, beyond TP2 (it is a runner target, not used to clear any risk floor). TP1 distance 35.6 < 2.5 ATR. Anchor 09:00 broker (default). Levels in points: stop +35.60, TP1 -35.60, TP2 -71.20, TP3 -85.93 vs entry."
+ },
+ {
+  "report_date": "2026-07-27",
+  "report_file": "SP500_Report_27Jul2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 23:45:00",
+  "card_id": "2026-07-27_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (suppressed: no confirmed break)",
+  "family": "Trade 3C",
+  "direction": "SHORT",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond the 25-day boundary by >= 0.25 x ATR14 (needs close <= 7285.30 or >= 7600.60; D-1 close 7411.80)",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - M5 4d/10 gate: no confirmed break in TRANSITION regime. Commentary only (not an order): arming condition is a daily close <= 7285.30 (below 25-day low 7303.10 by 17.80 = 0.25 x ATR14 71.21) or >= 7600.60.",
+  "suppressed": true,
+  "regime": "TRANSITION",
+  "direction_score": -0.298,
+  "direction_components": {
+   "short_tech": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contrib": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contrib": -0.05
+   },
+   "kaufman": {
+    "signal": -0.1744,
+    "weight": 0.15,
+    "contrib": -0.0262
+   },
+   "sentiment": {
+    "signal": -0.513,
+    "weight": 0.15,
+    "contrib": -0.077
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contrib": -0.045
+   }
+  },
+  "rationale": "Regime TRANSITION -> fork 3C (no discretion). Gate 4d: confirmed daily close beyond swing_high_25d_cash 7582.80 (15 Jul 16:30 broker) by >= 17.80 (i.e. >= 7600.60) or below swing_low_25d_cash 7303.10 (26 Jun 16:30 broker) by >= 17.80 (i.e. <= 7285.30). Last completed daily cash close 7411.80 (24 Jul): 188.8 pts below the upper trigger and 126.5 pts above the lower trigger -> gate FAILS -> card suppressed, all price fields null. Direction kept as SHORT only to align with the Trade 2 breakout side (volator expansion-down, score SHORT); the failed-retest-at-upper-boundary rule literally reads long and is unconfirmed."
+ }
+]

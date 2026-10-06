@@ -1,0 +1,206 @@
+[
+ {
+  "card_id": "2026-07-22_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - direction score below conviction threshold",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - |score| < 0.25; no entry, stop or ladder.",
+  "suppressed": true,
+  "regime": "RANGE",
+  "direction_score": 0.035,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0,
+    "note": "RSI2_cash 85.99 (bullish) vs 5-session close trend 7573.90->7508.00 with three lower closes (bearish): conflicting, Neutral = 0; report s8 label 'Exhaustion - reversal risk'"
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contrib": 0.0,
+    "note": "RANGE = 0"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "note": "compression/negative slope (report s9) = 0"
+   },
+   "kaufman": {
+    "signal": 0.085,
+    "weight": 0.15,
+    "contrib": 0.0127,
+    "note": "KER over last 25 cash closes (17 Jun-21 Jul) = 0.085, net move +80.5 so sign +; ranging (<<0.30)"
+   },
+   "sentiment": {
+    "signal": 0.65,
+    "weight": 0.15,
+    "contrib": 0.0975,
+    "note": "carried from report s13b, not verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "note": "report s10 CONTRADICT (VIX/DAX risk-on vs top-sell range bias); VIX slice confirms fall 18.27 (17 Jul) -> 17.43 (21 Jul); USDX/DAX not in slices, carried"
+   }
+  },
+  "rationale": "Direction score = 0.0000 + 0.0000 + 0.0000 + 0.0127 + 0.0975 - 0.0750 = +0.035; |score| < 0.25 so NEUTRAL and Trade 1 is suppressed (M5 s2b/s10). Anchor would have been 09:00 broker (07:00 UK), instance default. Sensitivity noted: had short-term technical been scored +1 the score would be about +0.285, but RSI2 (85.99, bullish) and the 5-session close trend (down) conflict, which the module maps to Neutral. Sentiment (+0.65) and cross-asset (-0.50) are carried from the report s13b/s10 and not independently verifiable; the other four components are recomputed from the slice. Reference close D-1 (Tue 2026-07-21): prev_close_full 7503.70 (executable); cash close 7508.00. ATR14_cash = 69.4357 (14 cash sessions to 2026-07-21, 16:30-23:00 broker).",
+  "report_date": "2026-07-22",
+  "report_file": "SP500_Report_22Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 23:45",
+  "anchor_broker": "09:00"
+ },
+ {
+  "card_id": "2026-07-22_Trade_2",
+  "strategy": "Trade 2 - Pivot (RANGE branch, short fade at daily R1)",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT 7526.97 (daily cash R1), valid for the 22 Jul session; reference close 7503.70, gap +23.27; no daily-open anchor logic, monitoring from 09:00 broker",
+  "entry": 7526.97,
+  "stop": 7600.16,
+  "tp1": 7453.78,
+  "tp2": 7380.59,
+  "tp3": null,
+  "card_R_points": 73.19,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 off at TP1 (1R), Unit 2 at TP2 (2R); on TP2 fill Unit 3 stop moves to 7512.33 (entry - 0.2R, profitable side). Unit 3 runner has no fixed target (trail). WIDE STOP flag: R/ATR14 = 1.05 > 1.00. Holding window collides with Alphabet/Tesla results after the 22 Jul close; reduce size or stand aside into the print.",
+  "suppressed": false,
+  "regime": "RANGE",
+  "direction_score": 0.035,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0,
+    "note": "RSI2_cash 85.99 (bullish) vs 5-session close trend 7573.90->7508.00 with three lower closes (bearish): conflicting, Neutral = 0; report s8 label 'Exhaustion - reversal risk'"
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contrib": 0.0,
+    "note": "RANGE = 0"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "note": "compression/negative slope (report s9) = 0"
+   },
+   "kaufman": {
+    "signal": 0.085,
+    "weight": 0.15,
+    "contrib": 0.0127,
+    "note": "KER over last 25 cash closes (17 Jun-21 Jul) = 0.085, net move +80.5 so sign +; ranging (<<0.30)"
+   },
+   "sentiment": {
+    "signal": 0.65,
+    "weight": 0.15,
+    "contrib": 0.0975,
+    "note": "carried from report s13b, not verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "note": "report s10 CONTRADICT (VIX/DAX risk-on vs top-sell range bias); VIX slice confirms fall 18.27 (17 Jul) -> 17.43 (21 Jul); USDX/DAX not in slices, carried"
+   }
+  },
+  "rationale": "Regime RANGE (KER 0.085 << trend threshold, negative volator slope, 25-session close at 73rd percentile of 7303.10-7582.80), so Trade 2 = RANGE branch (M5 5.2a), short side per the report's top-sell bias. Pivot basis: daily floor pivots from the D-1 cash session (H 7515.7 / L 7466.5 / C 7508.0): P 7496.73, R1 7526.97 (d_cash_R1), R2 7545.93; R1.5 = 7536.45. Tier selection: distance from D-1 close 7503.70 to R1 = 23.27 = 0.34 x ATR14 < 1 x ATR, so tier 1 = R1. Pivots come from the broker execution series (cash session), so CORROBORATED by construction. Stop: structural 5-day cash swing high 7582.80 (bar 2026-07-15 16:30 broker) + 0.25 x ATR14 (17.36) = 7600.16; the 3.5 x ATR alternative (243.0) would exceed the 3.0 x ATR ceiling and is not used. R = 73.19 = 1.05 x ATR14 (wide-stop flag), inside 0.3-3.0 x ATR. TP1 = entry - 1R = 7453.78 (73.19 pts = 1.05 x ATR, < 2.5 x ATR); TP2 = entry - 2R = 7380.59. TP3 null: the rule's runner target (pivot P 7496.73) lies between entry and TP1, so it would invert the ladder; no level is invented. Invalidation: daily close above 7582.80 (swing high), -17.36 from the stop magnitude check is not applicable since stop is beyond; stop is ahead of invalidation. Confluence: 25-day 78.6% retrace 7522.94 is within 0.06 x ATR of entry (strong confluence, shared with Trade 3B, so Trades 2 and 3B are one correlated short exposure). Event: Alphabet and Tesla after the 22 Jul close (report s13d). Reference close D-1 (Tue 2026-07-21): prev_close_full 7503.70 (executable); cash close 7508.00. ATR14_cash = 69.4357 (14 cash sessions to 2026-07-21, 16:30-23:00 broker).",
+  "report_date": "2026-07-22",
+  "report_file": "SP500_Report_22Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 23:45",
+  "anchor_broker": "09:00"
+ },
+ {
+  "card_id": "2026-07-22_Trade_3B",
+  "strategy": "Trade 3B - Mean-Reversion (RANGE fade, short leg)",
+  "family": "Trade 3B",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT 7522.94 (78.6% of 25-day cash range), valid for the 22 Jul session; reference close 7503.70, gap +19.24; no daily-open anchor, monitoring from 09:00 broker",
+  "entry": 7522.94,
+  "stop": 7554.83,
+  "tp1": 7442.95,
+  "tp2": 7331.07,
+  "tp3": 7303.1,
+  "card_R_points": 31.89,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units: Unit 1 to range midpoint 7442.95, Unit 2 to 7331.07, Unit 3 runner to 25-day low 7303.10. On TP2 fill Unit 3 stop moves to 7516.56 (entry - 0.2R, profitable side). R/ATR14 = 0.46 (no wide-stop flag). Thesis invalidation: daily close above 7582.80. Holding window collides with Alphabet/Tesla results after the 22 Jul close; reduce size or stand aside into the print.",
+  "suppressed": false,
+  "regime": "RANGE",
+  "direction_score": 0.035,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contrib": 0.0,
+    "note": "RSI2_cash 85.99 (bullish) vs 5-session close trend 7573.90->7508.00 with three lower closes (bearish): conflicting, Neutral = 0; report s8 label 'Exhaustion - reversal risk'"
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contrib": 0.0,
+    "note": "RANGE = 0"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contrib": 0.0,
+    "note": "compression/negative slope (report s9) = 0"
+   },
+   "kaufman": {
+    "signal": 0.085,
+    "weight": 0.15,
+    "contrib": 0.0127,
+    "note": "KER over last 25 cash closes (17 Jun-21 Jul) = 0.085, net move +80.5 so sign +; ranging (<<0.30)"
+   },
+   "sentiment": {
+    "signal": 0.65,
+    "weight": 0.15,
+    "contrib": 0.0975,
+    "note": "carried from report s13b, not verifiable"
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "contrib": -0.075,
+    "note": "report s10 CONTRADICT (VIX/DAX risk-on vs top-sell range bias); VIX slice confirms fall 18.27 (17 Jul) -> 17.43 (21 Jul); USDX/DAX not in slices, carried"
+   }
+  },
+  "rationale": "Regime RANGE => 3B (M5 5.3b). Range from the cash 25-day swings: high 7582.80 (bar 2026-07-15 16:30 broker), low 7303.10 (bar 2026-06-26 16:30 broker), width 279.7. Swing gate (s4b, 2 x ATR14 = 138.87): 5-session cash swing high 7582.80 (2026-07-15 16:30) to low 7431.60 (2026-07-17 16:30) = 151.20 pts = 2.18 x ATR, PASS (the 4-session version 7572.20 at 2026-07-16 17:45 to 7431.60 = 140.60 = 2.03 x ATR also passes), so the card is not suppressed. Short bias per report top-sell read (close at 73rd percentile). Entry: low + 0.786 x width = 7522.94, the 78.6% bottom edge of the short band; chosen single level because deeper fills in the band (to 88.6% = 7550.91) against the 7554.83 stop give R below 0.3 x ATR14 (20.83), and the band is therefore truncated to 7522.94-7534.00. Stop: high - 0.10 x width = 7554.83; R = 31.89 = 0.46 x ATR14, inside 0.3-3.0. TP1 = midpoint low + 0.5 x width = 7442.95 (79.99 pts = 1.15 x ATR, < 2.5 x ATR); TP2 = low + 0.1 x width = 7331.07; TP3 = 25-day low 7303.10, beyond TP2. Unit-3 stop after TP2 follows the session rule entry - 0.2R. Confluences: daily cash R1 7526.97 (4.03 pts from entry, strong confluence with Trade 2), daily R2 7545.93 and R3 7576.17 inside/above the band, 25-day high 7582.80 above the stop; TP1 near daily S1.. none claimed. TP2 7331.07 near weekly cash S2 7339.13 (8 pts). Invalidation: daily close above 7582.80, 27.97 pts beyond the stop (> 0.15 x ATR). Reference close D-1 (Tue 2026-07-21): prev_close_full 7503.70 (executable); cash close 7508.00. ATR14_cash = 69.4357 (14 cash sessions to 2026-07-21, 16:30-23:00 broker).",
+  "report_date": "2026-07-22",
+  "report_file": "SP500_Report_22Jul2026.md",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-22.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-21.csv",
+  "last_bar_broker": "2026-07-21 23:45",
+  "anchor_broker": "09:00"
+ }
+]

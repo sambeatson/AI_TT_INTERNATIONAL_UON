@@ -37,3 +37,10 @@ All quarantined paths were restored from git history (commits before `6327689` a
 Same paths as above, plus the new full table `data/levels/UK100_levels.csv` (never committed; held at
 `/tmp/claude-0/QUARANTINE/UK100_levels.csv`). Sessions get `data/levels/UK100_by_date/<D>.csv` and
 `data/slices/UK100/UK100_upto_<D-1>.csv` only. Restore after the last FTSE regeneration session.
+
+## Restored after the FTSE run (2026-10-07)
+All 273 paths removed in `f917898` were restored from `f917898~1` once the last `ftse_regen1` session
+finished. Fixtures re-verified: US500 `band0845` −9.49 R, gold `band0845` −0.59 R.
+**Gold Stage 2 has still not run: re-apply this quarantine (same paths) before any gold, WTI or BTC
+regeneration session.** Note for future runs: `data/slices/*/*.csv` is git-ignored, so a container
+recycle wipes the slices — rebuild them with `engine/slices.py` before launching sessions.

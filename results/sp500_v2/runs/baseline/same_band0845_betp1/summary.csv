@@ -1,0 +1,169 @@
+card_id,report_date,strategy,family,direction,policy,fill_status,entry_rule,fill_ts,fill_px,R_points,risk_vs_card,units,blended_R,blended_R_card
+2026-05-11_Trade_1,2026-05-11,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.09R) market at 08:45,2026-05-11 08:45:00,7392.2,71.0,0.913,3,0.509,0.378
+2026-05-11_Trade_2,2026-05-11,Trade 2 - Pivot pullback (buy daily-S1),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-11_Trade_3A,2026-05-11,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-12_Trade_1,2026-05-12,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.16R) market at 08:45,2026-05-12 08:45:00,7401.8,57.8,0.84,3,0.461,0.228
+2026-05-12_Trade_2,2026-05-12,"Trade 2 - Pivot (TREND_UP pullback, buy daily P)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-05-12 16:45:00,7378.0,34.0,1.0,3,1.813,1.813
+2026-05-12_Trade_3A,2026-05-12,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,band0845,FILLED,WAITED for return to entry,2026-05-12 18:00:00,7362.0,52.0,1.0,3,0.557,0.557
+2026-05-13_Trade_1,2026-05-13,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-13_Trade_2,2026-05-13,"Trade 2 - Pivot (TREND breakout, buy stop)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-05-13 16:45:00,7385.06,21.97,1.0,3,2.237,2.237
+2026-05-13_Trade_3C,2026-05-13,Trade 3C - Momentum-Breakout (buy stop),Trade 3C,LONG,band0845,FILLED,IN BAND (+0.11R) market at 08:45,2026-05-13 08:45:00,7421.4,86.4,0.891,3,0.558,0.388
+2026-05-14_Trade_1,2026-05-14,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-14_Trade_2,2026-05-14,Trade 2 - Pivot (buy limit weekly P),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-14_Trade_3A,2026-05-14,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-15_Trade_1,2026-05-15,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-15_Trade_2,2026-05-15,"Trade 2 - Pivot (TREND breakout, buy stop)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-15_Trade_3C,2026-05-15,Trade 3C - Momentum-Breakout (buy stop),Trade 3C,LONG,band0845,FILLED,IN BAND (+0.59R) market at 08:45,2026-05-15 08:45:00,7460.0,35.0,0.412,3,-1.0,-1.0
+2026-05-18_Trade_1,2026-05-18,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-18_Trade_2,2026-05-18,Trade 2 - Pivot fade (sell limit daily R1),Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-18_Trade_3C,2026-05-18,"Trade 3C - Transition Breakout (sell stop, conditional)",Trade 3C,SHORT,band0845,FILLED,WAITED for return to entry,2026-05-18 10:15:00,7386.25,73.1,1.0,3,-1.0,-1.0
+2026-05-19_Trade_1,2026-05-19,Trade 1 - Daily Directional (mean-reversion),Trade 1,LONG,band0845,FILLED,IN BAND (+0.27R) market at 08:45,2026-05-19 08:45:00,7384.5,49.5,0.727,3,2.313,1.41
+2026-05-19_Trade_2,2026-05-19,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-05-19 12:30:00,7371.85,23.85,1.0,3,-1.0,-1.0
+2026-05-19_Trade_3A,2026-05-19,Trade 3A - Momentum-Pullback (layered fib limits),Trade 3A,LONG,band0845,FILLED,IN BAND (+0.68R) market at 08:45,2026-05-19 08:45:00,7384.5,24.5,0.325,3,-1.0,-1.0
+2026-05-20_Trade_1,2026-05-20,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-20_Trade_2,2026-05-20,Trade 2 - Pivot (weekly TREND breakout),Trade 2,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7407.55),2026-05-20 17:15:00,7407.55,34.62,0.5,3,2.072,0.536
+2026-05-20_Trade_3A,2026-05-20,Trade 3A - Momentum-Pullback (demand-zone retest),Trade 3A,LONG,band0845,FILLED,IN BAND (+0.03R) market at 08:45,2026-05-20 08:45:00,7358.9,33.9,0.969,3,2.013,1.918
+2026-05-21_Trade_1,2026-05-21,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-05-21 08:45:00,7432.97,106.73,1.0,3,0.394,0.394
+2026-05-21_Trade_2,2026-05-21,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,FILLED,IN BAND (+0.14R) market at 08:45,2026-05-21 08:45:00,7433.1,58.09,0.862,3,1.594,1.235
+2026-05-21_Trade_3C,2026-05-21,Trade 3C - Range Breakout (conditional),Trade 3C,LONG,band0845,FILLED,WAITED for return to entry,2026-05-26 10:30:00,7515.81,290.7,1.0,3,0.775,0.775
+2026-05-22_Trade_1,2026-05-22,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-05-22_Trade_2,2026-05-22,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-22_Trade_3C,2026-05-22,Trade 3C - Momentum-Breakout (conditional),Trade 3C,LONG,band0845,FILLED,IN BAND (+0.03R) market at 08:45,2026-05-26 08:45:00,7527.0,334.0,0.965,3,0.641,0.584
+2026-05-25_Trade_1,2026-05-25,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-25_Trade_2,2026-05-25,"Trade 2 - Pivot (TREND breakout, buy stop)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-25_Trade_3A,2026-05-25,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-26_Trade_1,2026-05-26,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-26_Trade_2,2026-05-26,"Trade 2 - Pivot (TRANSITION breakout, buy stop)",Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-26_Trade_3C,2026-05-26,Trade 3C - Range Breakout (conditional),Trade 3C,LONG,band0845,FILLED,WAITED for return to entry,2026-05-29 10:15:00,7574.6,414.31,1.0,3,0.402,0.402
+2026-05-27_Trade_1,2026-05-27,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-05-27 16:30:00,7519.12,188.77,1.0,3,-0.624,-0.624
+2026-05-27_Trade_2,2026-05-27,Trade 2 - Pivot (TREND_UP),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-27_Trade_3A,2026-05-27,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-28_Trade_1,2026-05-28,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.09R) market at 08:45,2026-05-28 08:45:00,7514.7,43.5,0.91,3,1.505,1.28
+2026-05-28_Trade_2,2026-05-28,Trade 2 - Pivot (daily P / weekly R1 retest),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-05-28 13:45:00,7510.0,31.0,1.0,3,2.145,2.145
+2026-05-28_Trade_3A,2026-05-28,Trade 3A - Momentum-Pullback,Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-29_Trade_1,2026-05-29,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-29_Trade_2,2026-05-29,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-05-29_Trade_3A,2026-05-29,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,band0845,FILLED,WAITED for return to entry,2026-05-29 10:30:00,7572.0,44.0,1.0,3,0.333,0.333
+2026-06-01_Trade_1,2026-06-01,Trade 1 - Daily Directional (breakout stop),Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-06-01 11:15:00,7599.5,36.9,1.0,3,-0.66,-0.66
+2026-06-01_Trade_2,2026-06-01,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-01 16:00:00,7581.0,35.8,1.0,3,0.514,0.514
+2026-06-01_Trade_3A,2026-06-01,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-02_Trade_1,2026-06-02,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.25R) market at 08:45,2026-06-02 08:45:00,7587.8,36.29,0.749,3,-0.359,-0.52
+2026-06-02_Trade_2,2026-06-02,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-02 16:00:00,7580.81,30.05,1.0,3,0.531,0.531
+2026-06-02_Trade_3A,2026-06-02,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-03_Trade_1,2026-06-03,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-06-03 16:30:00,7585.5,86.36,1.0,3,-0.847,-0.847
+2026-06-03_Trade_2,2026-06-03,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-03 15:30:00,7601.28,43.47,1.0,3,-1.0,-1.0
+2026-06-03_Trade_3A,2026-06-03,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,band0845,FILLED,WAITED for return to entry,2026-06-03 16:45:00,7573.68,89.68,1.0,3,-1.0,-1.0
+2026-06-04_Trade_1,2026-06-04,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7591.74),2026-06-04 20:15:00,7591.74,18.03,0.5,3,-0.845,-0.922
+2026-06-04_Trade_2,2026-06-04,Trade 2 - Pivot (TREND_UP breakout),Trade 2,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7599.10),2026-06-04 21:00:00,7599.1,7.62,0.5,3,-1.0,-1.0
+2026-06-04_Trade_3A,2026-06-04,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,band0845,FILLED,IN BAND (+0.26R) market at 08:45,2026-06-04 08:45:00,7537.5,47.0,0.737,3,0.278,-0.058
+2026-06-05_Trade_1,2026-06-05,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-05_Trade_2,2026-06-05,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,FILLED,IN BAND (+0.28R) market at 08:45,2026-06-05 08:45:00,7553.8,41.8,0.721,3,-1.0,-1.0
+2026-06-05_Trade_3A,2026-06-05,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7570.50),2026-06-05 12:00:00,7570.5,22.5,0.5,3,-1.0,-1.0
+2026-06-08_Trade_1,2026-06-08,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.00R) market at 08:45,2026-06-08 08:45:00,7384.3,90.7,0.997,3,-0.749,-0.75
+2026-06-08_Trade_3A,2026-06-08,Trade 3A - Momentum-Pullback (sell limit weekly S2),Trade 3A,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-08 15:30:00,7460.0,105.0,1.0,3,0.613,0.613
+2026-06-09_Trade_1,2026-06-09,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.48R) market at 08:45,2026-06-09 08:45:00,7432.1,51.9,0.519,3,-1.0,-1.0
+2026-06-09_Trade_3A,2026-06-09,Trade 3A - Momentum-Pullback (sell limit daily P),Trade 3A,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-09 13:45:00,7449.58,71.42,1.0,3,1.977,1.977
+2026-06-10_Trade_1,2026-06-10,Trade 1 - Daily Directional (sell stop),Trade 1,SHORT,band0845,FILLED,IN BAND (+0.21R) market at 08:45,2026-06-10 08:45:00,7360.0,116.0,0.795,3,0.579,0.255
+2026-06-10_Trade_2,2026-06-10,Trade 2 - Pivot (sell limit weekly P),Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-10_Trade_3C,2026-06-10,Trade 3C - Momentum-Breakout (sell stop),Trade 3C,SHORT,band0845,FILLED,IN BAND (+0.51R) market at 08:45,2026-06-10 08:45:00,7360.0,36.0,0.486,3,-1.0,-1.0
+2026-06-11_Trade_1,2026-06-11,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.13R) market at 08:45,2026-06-11 08:45:00,7304.6,247.85,0.87,3,-0.788,-0.815
+2026-06-11_Trade_3A,2026-06-11,Trade 3A - Momentum-Pullback (57.5% rally-sell),Trade 3A,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-15_Trade_1,2026-06-15,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-15_Trade_2,2026-06-15,Trade 2 - Pivot (buy stop daily R1),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-15_Trade_3C,2026-06-15,Trade 3C - Breakout (buy stop 5-day swing high),Trade 3C,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-16_Trade_1,2026-06-16,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-16_Trade_2,2026-06-16,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-16_Trade_3A,2026-06-16,Trade 3A - Momentum-Pullback (pivot confluence),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-17_Trade_1,2026-06-17,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.20R) market at 08:45,2026-06-17 08:45:00,7541.4,66.4,0.8,3,-1.0,-1.0
+2026-06-17_Trade_2,2026-06-17,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-06-17 12:45:00,7527.0,57.0,1.0,3,-1.0,-1.0
+2026-06-17_Trade_3A,2026-06-17,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-18_Trade_1,2026-06-18,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-18_Trade_2,2026-06-18,Trade 2 - Pivot (sell limit monthly S1 / daily P),Trade 2,SHORT,band0845,FILLED,IN BAND (+0.61R) market at 08:45,2026-06-18 08:45:00,7484.4,21.6,0.386,3,-1.0,-1.0
+2026-06-18_Trade_3C,2026-06-18,Trade 3C - Momentum-Breakout (sell stop),Trade 3C,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-19_Trade_1,2026-06-19,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7482.79),2026-06-19 10:00:00,7482.79,17.79,0.5,3,-0.453,-0.726
+2026-06-19_Trade_2,2026-06-19,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,band0845,FILLED,IN BAND (+0.63R) market at 08:45,2026-06-19 08:45:00,7459.9,9.33,0.373,3,1.454,-0.085
+2026-06-19_Trade_3A,2026-06-19,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7495.00),2026-06-19 11:15:00,7495.0,17.0,0.5,3,-1.0,-1.0
+2026-06-23_Trade_1,2026-06-23,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-23_Trade_2,2026-06-23,"Trade 2 - Pivot (regime-aware), RANGE protocol",Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-23_Trade_3B,2026-06-23,Trade 3B - Mean-Reversion (Transitional/Range regime fork),Trade 3B,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7427.00),2026-06-23 17:15:00,7427.0,18.0,0.5,3,-1.0,-1.0
+2026-06-24_Trade_1,2026-06-24,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.29R) market at 08:45,2026-06-24 08:45:00,7395.7,74.47,0.709,3,-0.766,-0.834
+2026-06-24_Trade_2,2026-06-24,Trade 2 - Pivot (sell limit daily P shelf),Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-24 14:45:00,7404.0,85.0,1.0,3,0.329,0.329
+2026-06-24_Trade_3A,2026-06-24,Trade 3A - Momentum-Pullback (38.2% rally-sell),Trade 3A,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-25_Trade_1,2026-06-25,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-06-25_Trade_2,2026-06-25,"Trade 2 - Pivot (range fade, sell limit daily R1)",Trade 2,SHORT,band0845,FILLED,IN BAND (+0.50R) market at 08:45,2026-06-25 08:45:00,7416.6,13.4,0.5,3,-1.0,-1.0
+2026-06-25_Trade_3A,2026-06-25,"Trade 3A - Momentum-Pullback (sell stop, break of 23 Jun low)",Trade 3A,SHORT,band0845,FILLED,RECOVERY to entry-0.5R (7365.50),2026-06-25 16:45:00,7365.5,19.5,0.5,3,-1.0,-1.0
+2026-06-26_Trade_1,2026-06-26,Trade 1 - Daily Directional (sell stop),Trade 1,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-26 09:30:00,7336.8,75.2,1.0,3,-0.706,-0.706
+2026-06-26_Trade_2,2026-06-26,Trade 2 - Pivot (sell limit daily P),Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-06-26 17:15:00,7374.37,91.24,1.0,3,0.196,0.196
+2026-06-26_Trade_3A,2026-06-26,Trade 3A - Momentum-Pullback (sell limit daily R1 / 38.2%),Trade 3A,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-29_Trade_1,2026-06-29,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.22R) market at 08:45,2026-06-29 08:45:00,7398.6,159.4,0.781,3,-0.754,-0.808
+2026-06-29_Trade_2,2026-06-29,Trade 2 - Pivot (sell stop below daily S1),Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-29_Trade_3C,2026-06-29,"Trade 3C - Momentum-Breakout (sell stop, conditional)",Trade 3C,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-30_Trade_1,2026-06-30,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.67R) market at 08:45,2026-06-30 08:45:00,7452.4,47.6,0.326,3,-1.0,-1.0
+2026-06-30_Trade_2,2026-06-30,Trade 2 - Pivot (sell stop below P),Trade 2,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-06-30_Trade_3A,2026-06-30,Trade 3A - Momentum-Pullback (57.5% rally-sell),Trade 3A,SHORT,band0845,FILLED,IN BAND (+0.40R) market at 08:45,2026-06-30 08:45:00,7452.4,47.6,0.595,3,-1.0,-1.0
+2026-07-01_Trade_1,2026-07-01,Trade 1 - Daily Directional (buy limit daily P),Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-01_Trade_2,2026-07-01,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-01_Trade_3A,2026-07-01,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-02_Trade_1,2026-07-02,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.11R) market at 08:45,2026-07-02 08:45:00,7489.9,77.34,0.891,3,0.333,0.187
+2026-07-02_Trade_2,2026-07-02,Trade 2 - Pivot (regime-aware),Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-02_Trade_3A,2026-07-02,Trade 3A - Momentum-Pullback (57.5% fib),Trade 3A,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-03_Trade_1,2026-07-03,Trade 1 - Daily Directional,Trade 1,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-03_Trade_2,2026-07-03,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-03_Trade_3C,2026-07-03,Trade 3C - Momentum-Breakout (conditional),Trade 3C,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-06_Trade_1,2026-07-06,Trade 1 — Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-06_Trade_2,2026-07-06,"Trade 2 — Pivot fade, RANGE regime",Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-07-06 19:00:00,7540.0,36.0,1.0,3,2.046,2.046
+2026-07-06_Trade_3B,2026-07-06,Trade 3B — Mean-Reversion to range mid,Trade 3B,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-07_Trade_1,2026-07-07,Trade 1 — Daily Directional (LONG),Trade 1,LONG,band0845,FILLED,IN BAND (+0.16R) market at 08:45,2026-07-07 08:45:00,7521.7,78.7,0.837,3,-0.748,-0.789
+2026-07-07_Trade_2,2026-07-07,"Trade 2 — Pivot, regime-aware (LONG pullback)",Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-07 17:00:00,7500.0,38.0,1.0,3,-1.0,-1.0
+2026-07-07_Trade_3C,2026-07-07,Trade 3C — Momentum-Breakout (LONG),Trade 3C,LONG,band0845,FILLED,IN BAND (+0.49R) market at 08:45,2026-07-07 08:45:00,7521.7,24.7,0.515,3,-1.0,-1.0
+2026-07-09_Trade_1,2026-07-09,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-09_Trade_2,2026-07-09,Trade 2 - Pivot (sell limit daily P),Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-07-09 10:30:00,7508.9,36.1,1.0,3,-1.0,-1.0
+2026-07-09_Trade_3A,2026-07-09,Trade 3A - Momentum-Pullback (sell stop),Trade 3A,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-10_Trade_1,2026-07-10,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.18R) market at 08:45,2026-07-10 08:45:00,7531.2,58.46,0.825,3,-0.389,-0.496
+2026-07-10_Trade_2,2026-07-10,Trade 2 - Pivot (regime-aware),Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-10_Trade_3C,2026-07-10,Trade 3C - Momentum-Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-13_Trade_1,2026-07-13,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.47R) market at 08:45,2026-07-13 08:45:00,7530.7,50.45,0.53,3,-0.802,-0.895
+2026-07-13_Trade_2,2026-07-13,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,FILLED,IN BAND (+0.65R) market at 08:45,2026-07-13 08:45:00,7530.7,24.86,0.345,3,-1.0,-1.0
+2026-07-13_Trade_3C,2026-07-13,Trade 3C - Momentum-Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-14_Trade_1,2026-07-14,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7552.23),2026-07-14 15:30:00,7552.23,23.16,0.5,3,-1.0,-1.0
+2026-07-14_Trade_2,2026-07-14,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,FILLED,IN BAND (+0.41R) market at 08:45,2026-07-14 08:45:00,7525.0,42.28,0.589,3,-1.0,-1.0
+2026-07-14_Trade_3A,2026-07-14,Trade 3A - Momentum-Pullback (breakout stop),Trade 3A,LONG,band0845,FILLED,RECOVERY to entry-0.5R (7544.58),2026-07-14 15:30:00,7544.58,36.42,0.5,3,-1.0,-1.0
+2026-07-15_Trade_1,2026-07-15,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-07-15 19:00:00,7543.6,60.2,1.0,3,-0.505,-0.505
+2026-07-15_Trade_2,2026-07-15,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-15 19:15:00,7530.6,32.8,1.0,3,0.652,0.652
+2026-07-15_Trade_3C,2026-07-15,Trade 3C - Momentum-Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-16_Trade_1,2026-07-16,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-07-16 14:45:00,7543.59,141.33,1.0,3,-0.708,-0.708
+2026-07-16_Trade_2,2026-07-16,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-16 16:30:00,7538.09,19.36,1.0,3,0.428,0.428
+2026-07-16_Trade_3C,2026-07-16,Trade 3C - Transition Breakout,Trade 3C,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-17_Trade_1,2026-07-17,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-17_Trade_2,2026-07-17,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,band0845,FILLED,IN BAND (+0.73R) market at 08:45,2026-07-17 08:45:00,7466.6,13.03,0.271,3,-1.0,-1.0
+2026-07-17_Trade_3,2026-07-17,Trade 3 - Pivot fade (sell limit daily R1),Trade 3,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-20_Trade_1,2026-07-20,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.01R) market at 08:45,2026-07-20 08:45:00,7458.3,58.22,0.99,3,-0.587,-0.591
+2026-07-20_Trade_2,2026-07-20,Trade 2 - Pivot (TRANSITION down-break side),Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-07-20 08:45:00,7458.87,28.57,1.0,3,-1.0,-1.0
+2026-07-20_Trade_3C,2026-07-20,Trade 3C - Momentum-Breakout (conditional),Trade 3C,SHORT,band0845,NO TRIGGER,,,,,,1,0.0,0.0
+2026-07-21_Trade_1,2026-07-21,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.68R) market at 08:45,2026-07-21 08:45:00,7483.0,19.0,0.322,3,-1.0,-1.0
+2026-07-21_Trade_2,2026-07-21,Trade 2 - Pivot (regime-aware),Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-21_Trade_3C,2026-07-21,Trade 3C - Momentum-Breakout (conditional short),Trade 3C,SHORT,band0845,FILLED,WAITED for return to entry,2026-07-24 18:00:00,7443.0,87.0,1.0,3,-1.0,-1.0
+2026-07-22_Trade_1,2026-07-22,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_2,2026-07-22,Trade 2 - Pivot (regime-aware),Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-22_Trade_3B,2026-07-22,"Trade 3B - Mean-Reversion (range fade, short leg)",Trade 3B,SHORT,band0845,FILLED,WAITED for return to entry,2026-07-22 19:00:00,7524.1,32.4,1.0,3,5.136,5.136
+2026-07-23_Trade_1,2026-07-23,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-23_Trade_2,2026-07-23,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-23 09:45:00,7483.19,68.55,1.0,3,-1.0,-1.0
+2026-07-23_Trade_3,2026-07-23,Trade 3 - Pivot fade (sell limit daily R2),Trade 3,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-24_Trade_1,2026-07-24,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.08R) market at 08:45,2026-07-24 08:45:00,7411.4,35.12,0.919,3,-1.0,-1.0
+2026-07-24_Trade_2,2026-07-24,Trade 2 - Pivot (sell limit daily P),Trade 2,SHORT,band0845,FILLED,WAITED for return to entry,2026-07-24 12:00:00,7428.37,50.91,1.0,3,-1.0,-1.0
+2026-07-24_Trade_3A,2026-07-24,Trade 3A - Momentum-Pullback (38.2% rally-sell),Trade 3A,SHORT,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-27_Trade_1,2026-07-27,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-27_Trade_2,2026-07-27,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-27 17:15:00,7425.82,32.91,1.0,3,-1.0,-1.0
+2026-07-27_Trade_3C,2026-07-27,Trade 3C - Momentum-Breakout (conditional upside),Trade 3C,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-28_Trade_1,2026-07-28,Trade 1 - Daily Directional,Trade 1,LONG,band0845,FILLED,IN BAND (+0.08R) market at 08:45,2026-07-28 08:45:00,7389.1,32.1,0.917,3,0.394,0.278
+2026-07-28_Trade_2,2026-07-28,Trade 2 - Pivot (buy limit daily S1),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-28 08:45:00,7387.0,25.0,1.0,3,0.32,0.32
+2026-07-28_Trade_3,2026-07-28,Trade 3 - Mean-Reversion (buy stop on P reclaim),Trade 3,LONG,band0845,FILLED,IN BAND (+0.74R) market at 08:45,2026-07-28 08:45:00,7389.1,11.1,0.264,3,3.417,0.167
+2026-07-29_Trade_1,2026-07-29,Trade 1 - Daily Directional,Trade 1,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-29_Trade_2,2026-07-29,Trade 2 - Pivot (TRANSITION breakout side),Trade 2,LONG,band0845,FILLED,IN BAND (+0.25R) market at 08:45,2026-07-29 08:45:00,7429.1,29.71,0.754,3,-1.0,-1.0
+2026-07-29_Trade_3C,2026-07-29,Trade 3C - Momentum-Breakout (conditional upside),Trade 3C,LONG,band0845,NO FILL,,,,,,1,0.0,0.0
+2026-07-30_Trade_1,2026-07-30,Trade 1 - Daily Directional,Trade 1,SHORT,band0845,FILLED,IN BAND (+0.30R) market at 08:45,2026-07-30 08:45:00,7341.3,59.7,0.702,3,-1.0,-1.0
+2026-07-30_Trade_2,2026-07-30,Trade 2 - Pivot (regime-aware),Trade 2,n/a,band0845,SUPPRESSED,,,,,,1,0.0,0.0
+2026-07-30_Trade_3C,2026-07-30,Trade 3C - Momentum-Breakout (conditional short),Trade 3C,SHORT,band0845,NO TRIGGER,,,,,,1,0.0,0.0
+2026-07-31_Trade_1,2026-07-31,Trade 1 - Daily Directional (breakout stop),Trade 1,LONG,band0845,FILLED,WAITED for return to entry,2026-07-31 15:30:00,7455.0,89.0,1.0,3,0.777,0.777
+2026-07-31_Trade_2,2026-07-31,Trade 2 - Pivot (buy limit daily P),Trade 2,LONG,band0845,FILLED,WAITED for return to entry,2026-07-31 17:00:00,7405.0,65.0,1.0,3,1.723,1.723
+2026-07-31_Trade_3A,2026-07-31,Trade 3A - Momentum-Pullback (38.2% fib),Trade 3A,LONG,band0845,FILLED,WAITED for return to entry,2026-07-31 17:00:00,7412.0,52.0,1.0,3,2.013,2.013

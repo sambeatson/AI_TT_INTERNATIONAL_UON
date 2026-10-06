@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-27",
+  "report_file": "FTSE_EuroStoxx_Report_27Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 22:45",
+  "direction_score": 0.057,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "cash RSI2 53.25 (changes -96.5,+109.9; mean gain 54.95, mean loss 48.25) is in the neutral band; 5-day block is Indecision (mean overlap 0.68, closes alternate dn/up/up/dn/up); M3 per-session trend Mon Bearish, Tue Neutral, Wed Bullish, Thu Neutral, Fri Bullish -> Neutral"
+   },
+   "medium_term_regime": {
+    "value": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0,
+    "basis": "25-session cash block Ranging: overlap 0.59, persistence 0.35 -> Range = 0"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "slope of last 10 historical-z-scaled ATR14/close observations = -0.12 -> compression = 0"
+   },
+   "kaufman": {
+    "value": 0.028,
+    "weight": 0.15,
+    "contribution": 0.0042,
+    "basis": "13-session KER on cash closes, EMA(3) smoothed = +0.028 (raw +0.061); Ranging-Neutral; linear value x sign(+) of 25-session move"
+   },
+   "sentiment": {
+    "value": 0.05,
+    "weight": 0.15,
+    "contribution": 0.0075,
+    "basis": "carried from report s13a article scores with its stated class weights (media 0.5, trade press 0.7, institutional 1.0): (0.5+0.5+0.7+0-0.5-1.0)/3.9 = +0.05; the stated +0.30 does not reproduce (QA item 10); news not independently verifiable. Using +0.30 instead gives contribution 0.045 and total 0.094, same suppress decision"
+   },
+   "cross_asset": {
+    "value": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+1, 25-session move up) = +0.3. US500 5-session 7455.3->7408.8 (-0.62%, Falling, contradicts FTSE +1.46%); USDX 100.751->101.467 (+0.71%, firm; FTSE translation channel confirms); VIX 18.17->18.31 flat (neutral). DAX 40, Euro Stoxx 50, Brent not available: report reading carried, not verified"
+   }
+  },
+  "regime": "RANGE",
+  "card_id": "2026-07-27_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (SUPPRESSED, score NEUTRAL)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET at the 07:00 UK anchor (09:00 broker) at the D-1 reference close; suppressed so no order is placed.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score +0.057 is below the 0.25 conviction threshold (NEUTRAL). No entry, stop, R or targets are issued.",
+  "suppressed": true,
+  "rationale": "Gate tested: |score| < 0.25 -> Trade 1 suppressed. Score = sum(signal x weight) = 0.25x0 + 0.20x0 + 0.10x0 + 0.15x0.028 + 0.15x0.05 + 0.15x0.30 = +0.057 (components in direction_components). Price-derived terms from the level file/slices (cash basis: ATR14 118.39, RSI2 53.25) and own KER/VOLator/cross-asset computations; sentiment carried from report s13 (recomputed +0.05 from its article scores; the stated +0.30 does not reproduce and would still give only +0.094). Sensitivity: only a +1 short-term technical bias would lift the score to +0.31 (marginal LONG); RSI2 53.25 with an Indecision 5-day sequence does not support that. Regime RANGE (M3 mapping): 5-day block Indecision/Ranging (mean overlap 0.68 > 0.55; direction persistence 0.25 < 0.50) and 25-session block Ranging (overlap 0.59 > 0.55, persistence 0.35 < 0.50, 25-session net/path 0.24 < 0.25; cash close sits at 93% of the 25-day range, range-top bias). Dual gate: |smoothed KER 13/EMA3| = 0.028 < 0.13 and VOLator slope -0.12 <= 0 both pass. Caveat: cash RSI2 median over the block is 70.25, a hair above the 30-70 band. If read as TRANSITION instead, Trade 3C would still be suppressed (D-1 cash close 10728.0 is below the 25-day high 10758.9, no close beyond it by 0.25xATR = 29.6) and Trade 1 is unchanged. Report's own +0.85 LONG is not reproducible (QA item 11) and rested on a wrong S&P 'Rising' read (US500 fell 0.62% over 5 sessions). Reference close: prev_close_full 10714.3 (24 Jul 22:45 broker; LSE cash close 10728.0). Anchor 09:00 broker (07:00 UK) default kept."
+ },
+ {
+  "report_date": "2026-07-27",
+  "report_file": "FTSE_EuroStoxx_Report_27Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 22:45",
+  "direction_score": 0.057,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "cash RSI2 53.25 (changes -96.5,+109.9; mean gain 54.95, mean loss 48.25) is in the neutral band; 5-day block is Indecision (mean overlap 0.68, closes alternate dn/up/up/dn/up); M3 per-session trend Mon Bearish, Tue Neutral, Wed Bullish, Thu Neutral, Fri Bullish -> Neutral"
+   },
+   "medium_term_regime": {
+    "value": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0,
+    "basis": "25-session cash block Ranging: overlap 0.59, persistence 0.35 -> Range = 0"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "slope of last 10 historical-z-scaled ATR14/close observations = -0.12 -> compression = 0"
+   },
+   "kaufman": {
+    "value": 0.028,
+    "weight": 0.15,
+    "contribution": 0.0042,
+    "basis": "13-session KER on cash closes, EMA(3) smoothed = +0.028 (raw +0.061); Ranging-Neutral; linear value x sign(+) of 25-session move"
+   },
+   "sentiment": {
+    "value": 0.05,
+    "weight": 0.15,
+    "contribution": 0.0075,
+    "basis": "carried from report s13a article scores with its stated class weights (media 0.5, trade press 0.7, institutional 1.0): (0.5+0.5+0.7+0-0.5-1.0)/3.9 = +0.05; the stated +0.30 does not reproduce (QA item 10); news not independently verifiable. Using +0.30 instead gives contribution 0.045 and total 0.094, same suppress decision"
+   },
+   "cross_asset": {
+    "value": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+1, 25-session move up) = +0.3. US500 5-session 7455.3->7408.8 (-0.62%, Falling, contradicts FTSE +1.46%); USDX 100.751->101.467 (+0.71%, firm; FTSE translation channel confirms); VIX 18.17->18.31 flat (neutral). DAX 40, Euro Stoxx 50, Brent not available: report reading carried, not verified"
+   }
+  },
+  "regime": "RANGE",
+  "card_id": "2026-07-27_Trade_2",
+  "strategy": "Trade 2 - Pivot, RANGE branch (mean-reversion buy limit at daily S1)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at daily cash S1 10629.87, resting from 09:00 broker (07:00 UK); reference close 10714.30 (24 Jul), signed gap -84.43 (limit below close, correct side for a buy limit).",
+  "entry": 10629.87,
+  "stop": 10551.2,
+  "tp1": 10708.54,
+  "tp2": 10787.21,
+  "tp3": null,
+  "card_R_points": 78.67,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Unit 1 exits at TP1 10708.54 (+1R), Unit 2 at TP2 10787.21 (+2R); when TP2 fills Unit 3's stop moves to entry + 0.2R = 10645.6. No fixed TP3 (the RANGE runner target, daily P 10679.03, lies between entry and TP1, so it is not beyond TP2); Unit 3 is closed at the session close time-stop. ATR(14) = 118.39 (14 LSE-cash sessions to 24 Jul, 10:00-18:30 broker); R = 78.67 pts = 0.66 x ATR, no wide-stop flag; 2R = 1.33 x ATR so no 'TP2 ambitious' flag. Thesis invalidation: daily close below the 5-day swing low 10470.10 (21 Jul 10:15 broker), 81.1 pts beyond the stop; stop ahead of invalidation. Calendar: US Durable Goods (HIGH) 15:30 broker / 13:30 UK on D can hit a filled position. Prices are index points (UK100 tick 0.1 = 10 ticks per point).",
+  "suppressed": false,
+  "rationale": "Regime RANGE (M3 mapping): 5-day block Indecision/Ranging (mean overlap 0.68 > 0.55; direction persistence 0.25 < 0.50) and 25-session block Ranging (overlap 0.59 > 0.55, persistence 0.35 < 0.50, 25-session net/path 0.24 < 0.25; cash close sits at 93% of the 25-day range, range-top bias). Dual gate: |smoothed KER 13/EMA3| = 0.028 < 0.13 and VOLator slope -0.12 <= 0 both pass. Caveat: cash RSI2 median over the block is 70.25, a hair above the 30-70 band. If read as TRANSITION instead, Trade 3C would still be suppressed (D-1 cash close 10728.0 is below the 25-day high 10758.9, no close beyond it by 0.25xATR = 29.6) and Trade 1 is unchanged. TRADE 2 RANGE branch (M5 5.2a), all levels daily CASH pivots from the level file (prior session 24 Jul cash H 10728.2 / L 10580.9 / C 10728.0), CORROBORATED by construction (execution series). Tier: distance from prev_close_full 10714.3 to S1 10629.87 = 84.43 = 0.71 x ATR (<1) -> tier 1 (S1); R1 10777.17 is 62.87 away but carries no fib confluence. Fib confluence (active up-swing 10470.1 low 21 Jul 10:15 -> 10758.9 high 22 Jul 16:30, magnitude 288.8 = 2.44 x ATR, qualifies at the 4-session lookback): 50% = 10614.5, 15.4 pts (0.13 x ATR, within 0.15 x ATR = 17.8) from S1 -> S1 promoted to first-pick; S1.5 10580.80 ~ 61.8% 10580.4 and S2 10531.73 ~ 78.6% 10531.9 also coincide. Entry = S1 = 10629.8667 -> 10629.87. Stop: next pivot tier beyond S1 is S1.5 = (S1+S2)/2 = 10580.80, closer than the 3.5 x ATR cap (414.3), so stop = S1.5 - 0.25 x ATR (29.60) = 10551.20; R = 78.67. TP1 = entry + R = 10708.54; TP2 = entry + 2R = 10787.21 (above the 25-day high 10758.9 and daily R1 10777.17, as the 1R/2R rule dictates); TP3 null; BE stop for Unit 3 = entry + 0.2R = 10645.60. Static checks: stop < entry < TP1 < TP2; R/ATR 0.66 in [0.3, 3.0]; TP1 = 0.66 x ATR from entry (<2.5). Confluences logged: Pivot S1 + Fib 50% (15.4), S1.5 + Fib 61.8% at the stop, Pivot S2 + Fib 78.6%. Report's contribution: regime reading only; its TREND_UP call and Trade-2 breakout geometry (entry 10700.62 etc.) are not used. DAX 40, Euro Stoxx 50, Brent not in slices; report's reading (Brent just under $100, Euro Stoxx +1.14% Fri) carried, unverified."
+ },
+ {
+  "report_date": "2026-07-27",
+  "report_file": "FTSE_EuroStoxx_Report_27Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-27.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-26.csv",
+  "last_bar_broker": "2026-07-24 22:45",
+  "direction_score": 0.057,
+  "direction_components": {
+   "short_term_technical": {
+    "value": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "cash RSI2 53.25 (changes -96.5,+109.9; mean gain 54.95, mean loss 48.25) is in the neutral band; 5-day block is Indecision (mean overlap 0.68, closes alternate dn/up/up/dn/up); M3 per-session trend Mon Bearish, Tue Neutral, Wed Bullish, Thu Neutral, Fri Bullish -> Neutral"
+   },
+   "medium_term_regime": {
+    "value": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0,
+    "basis": "25-session cash block Ranging: overlap 0.59, persistence 0.35 -> Range = 0"
+   },
+   "volator": {
+    "value": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "slope of last 10 historical-z-scaled ATR14/close observations = -0.12 -> compression = 0"
+   },
+   "kaufman": {
+    "value": 0.028,
+    "weight": 0.15,
+    "contribution": 0.0042,
+    "basis": "13-session KER on cash closes, EMA(3) smoothed = +0.028 (raw +0.061); Ranging-Neutral; linear value x sign(+) of 25-session move"
+   },
+   "sentiment": {
+    "value": 0.05,
+    "weight": 0.15,
+    "contribution": 0.0075,
+    "basis": "carried from report s13a article scores with its stated class weights (media 0.5, trade press 0.7, institutional 1.0): (0.5+0.5+0.7+0-0.5-1.0)/3.9 = +0.05; the stated +0.30 does not reproduce (QA item 10); news not independently verifiable. Using +0.30 instead gives contribution 0.045 and total 0.094, same suppress decision"
+   },
+   "cross_asset": {
+    "value": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+1, 25-session move up) = +0.3. US500 5-session 7455.3->7408.8 (-0.62%, Falling, contradicts FTSE +1.46%); USDX 100.751->101.467 (+0.71%, firm; FTSE translation channel confirms); VIX 18.17->18.31 flat (neutral). DAX 40, Euro Stoxx 50, Brent not available: report reading carried, not verified"
+   }
+  },
+  "regime": "RANGE",
+  "card_id": "2026-07-27_Trade_3B",
+  "strategy": "Trade 3 - Mean-Reversion 3B (RANGE, SUPPRESSED)",
+  "family": "Trade 3B",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT at 78.6%-88.6% of the 25-day range would be required; suppressed because the whole zone is below the D-1 reference close.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - order-side gate: a SELL LIMIT must sit at or above the D-1 reference close 10714.30, but the 78.6%-88.6% zone is 10666.71-10709.79 (entirely below it); at 88.6% the stop (high - 10% of width = 10715.82) would also give R = 6.03 pts = 0.05 x ATR, below the 0.3 x ATR floor. No entry, stop, R or targets are issued.",
+  "suppressed": true,
+  "rationale": "Regime RANGE (M3 mapping): 5-day block Indecision/Ranging (mean overlap 0.68 > 0.55; direction persistence 0.25 < 0.50) and 25-session block Ranging (overlap 0.59 > 0.55, persistence 0.35 < 0.50, 25-session net/path 0.24 < 0.25; cash close sits at 93% of the 25-day range, range-top bias). Dual gate: |smoothed KER 13/EMA3| = 0.028 < 0.13 and VOLator slope -0.12 <= 0 both pass. Caveat: cash RSI2 median over the block is 70.25, a hair above the 30-70 band. If read as TRANSITION instead, Trade 3C would still be suppressed (D-1 cash close 10728.0 is below the 25-day high 10758.9, no close beyond it by 0.25xATR = 29.6) and Trade 1 is unchanged. TRADE 3B (RANGE fork). Range from cash 25-day swings: high 10758.9 (22 Jul 16:30 broker), low 10328.1 (23 Jun 10:00 broker), width 430.8. Price (ref close 10714.3) sits at 89.7% of the range, so the fade side is SHORT (sell limit at 78.6%-88.6% = 10328.1 + 0.786 x 430.8 = 10666.71 to 10328.1 + 0.886 x 430.8 = 10709.79). Gate 1 (order side, M5 5.0 / checklist row 3): sell limit must be >= prev_close_full 10714.3; every level in the zone is below it (best case 4.5 pts below) -> fail. Gate 2 (R floor): stop = 10758.9 - 0.10 x 430.8 = 10715.82; entry 10709.79 gives R 6.03 = 0.05 x ATR (< 0.3 x ATR = 35.5); entry 10666.71 gives R 49.1 but is 47.6 pts below the close (wrong side). Not rebuilt at a level outside the 78.6%-88.6% band or on another tier (no basis-shopping) and the long-side zone (10377.2-10420.3, 2.5-2.9 x ATR below the close, against a market at the range top) is not substituted. Suppressed, direction kept as SHORT."
+ }
+]

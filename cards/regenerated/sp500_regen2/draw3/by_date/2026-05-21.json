@@ -1,0 +1,206 @@
+[
+ {
+  "card_id": "2026-05-21_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET at 09:00 broker (07:00 UK) at prev_close_full 7420.6 (D-1 20 May close)",
+  "entry": 7420.6,
+  "stop": 7343.5,
+  "tp1": 7497.7,
+  "tp2": 7574.8,
+  "tp3": 7646.1,
+  "card_R_points": 77.1,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits at TP1 7497.7 (+1R); Unit 2 exits at TP2 7574.8 (+2R); when TP2 fills Unit 3 stop moves to entry + 0.2R = 7436.0. Unit 3 runner exits at session-close time-stop or price cap 7646.1 (3 x ATR14 = 225.5 from entry), whichever first. ATR14 75.18 (14 cash-session bars). R 77.1 = 1.03 x ATR: wide-stop flag. Thesis invalidation: daily close below daily S1 7385.07.",
+  "suppressed": false,
+  "report_date": "2026-05-21",
+  "report_file": "SP500_Report_21May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-21.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-20.csv",
+  "last_bar_broker": "2026-05-20 23:45",
+  "direction_score": 0.317,
+  "regime": "TRANSITION",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "cash RSI2 60.47 (neutral band) and 5-day sequence alternating (+45.2,-26.3,-12.0,-8.7,+56.9 O-to-C) = Mixed"
+   },
+   "medium_term_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session structure Trending-Bullish: net +5.6% (7042.1 on 16 Apr to 7436.8), close at 83rd pct of 25d range (Range Top Bias), 25d overlap 0.40, KER25 0.39; persistence 0.50 is the dissent"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "S&P ATR14 rising (66.2 to 75.2 over 10 sessions) while VIX falling (19.34 to 18.45); scaled VOLator series with counters not derivable from slices; sign ambiguous -> 0"
+   },
+   "kaufman": {
+    "signal": 0.361,
+    "weight": 0.15,
+    "contribution": 0.0541,
+    "basis": "13-session KER on cash closes, 3-EMA smoothed = +0.361 (>0.13 threshold; falling from 0.619 on 14 May => Trending Up - Moderate); sign of 25d move +"
+   },
+   "sentiment": {
+    "signal": 0.12,
+    "weight": 0.15,
+    "contribution": 0.018,
+    "basis": "CARRIED from report section 13b tilt +0.12; news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x 0.3. VIX falling confirms (verified from slice: 19.34 on 13 May to 18.45 on 20 May); USDX and DAX not in slices, report reads them as confirming; MIXED label carried from report (long-end yield headwind)"
+   }
+  },
+  "rationale": "Direction LONG, score +0.317 (>= 0.25; components in direction_components, sentiment carried from report s13b). Regime TRANSITION (see Trade 3C). ENTRY: MARKET at prev_close_full = 7420.6 (D-1 20 May, last M15 bar 23:45 broker); anchor 09:00 broker (07:00 UK) default; the report's 00:00 UK proxy-open override has no market logic behind it and is dropped. Cash close 7436.8 is NOT used (full-day basis fixed for MARKET). ATR(14) = 75.1786 (atr14_cash, 14 cash-session bars to 20 May; full-day 82.0714 for reference). Buffer 0.25 x ATR = 18.79. STOP = tighter of (a) 5-day swing low (swing_low_5d_cash 7339.1, bar 2026-05-19 17:45 broker) - 18.79 = 7320.31 (R 100.29) and (b) nearest support in the 5-day OHLC structure - 18.79. Nearest support = D-1 cash session low 7362.3 (20 May, intact: no later bar trades below it; earlier session lows 7402.8 (15 May) and 7358.0 (18 May) were traded through on 18/19 May so are broken) -> 7362.3 - 18.79 = 7343.51 -> 7343.5 (R 77.10, tighter). Daily S1 7385.07 not used: it is a computed pivot, not a level observed in the 5-day OHLC structure. R = 77.1 = 1.03 x ATR14 cash (0.94 x full-day ATR) -> within [0.3,3.0] x ATR; WIDE STOP flag (R/ATR cash > 1.00). Stop distance well inside 3.5 x ATR cap (263.1). TP1 = entry + 1R = 7497.7 (distance 77.1 < 2.5 x ATR); TP2 = entry + 2R = 7574.8; on TP2 fill Unit 3 stop to entry + 0.2R = 7436.0 (profitable direction, above entry for LONG). TP3/runner = price cap entry + 3 x ATR = 7646.1 (> TP2 since R < 1.5 x ATR), or session-close time-stop, whichever first. 2R (154.2) < 3 x ATR so no 'TP2 ambitious' flag. THESIS INVALIDATION: daily close below D-1 daily S1 (cash) 7385.07 - a named level, 41.6 pts above the stop (> 0.15 x ATR); stop is behind invalidation. Confluences: entry 7420.6 within 6.5 pts of daily P 7414.03 (cash) - Pivot; stop zone 7343.5 sits 4.4 below 19 May swing low 7339.1 and 10 below weekly S1 7333.23 - strong confluence below. Event risk: Nvidia Q1 earnings (report s13d) falls inside the holding window."
+ },
+ {
+  "card_id": "2026-05-21_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION breakout side)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "BUY STOP at weekly P + 0.10 x (R1 - P) = 7436.34, armed from 09:00 broker; reference close prev_close_full 7420.6, gap +15.74",
+  "entry": 7436.34,
+  "stop": 7352.2,
+  "tp1": 7510.83,
+  "tp2": 7558.25,
+  "tp3": 7605.67,
+  "card_R_points": 84.14,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. Unit 1 exits at weekly R1 7510.83; Unit 2 at weekly R1.5 7558.25; when TP2 fills Unit 3 stop moves to entry + 0.2R = 7453.17; Unit 3 targets weekly R2 7605.67. ATR14 75.18 (cash); R 84.14 = 1.12 x ATR: wide-stop flag. Thesis invalidation: daily close back below weekly P 7428.07.",
+  "suppressed": false,
+  "report_date": "2026-05-21",
+  "report_file": "SP500_Report_21May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-21.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-20.csv",
+  "last_bar_broker": "2026-05-20 23:45",
+  "direction_score": 0.317,
+  "regime": "TRANSITION",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "cash RSI2 60.47 (neutral band) and 5-day sequence alternating (+45.2,-26.3,-12.0,-8.7,+56.9 O-to-C) = Mixed"
+   },
+   "medium_term_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session structure Trending-Bullish: net +5.6% (7042.1 on 16 Apr to 7436.8), close at 83rd pct of 25d range (Range Top Bias), 25d overlap 0.40, KER25 0.39; persistence 0.50 is the dissent"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "S&P ATR14 rising (66.2 to 75.2 over 10 sessions) while VIX falling (19.34 to 18.45); scaled VOLator series with counters not derivable from slices; sign ambiguous -> 0"
+   },
+   "kaufman": {
+    "signal": 0.361,
+    "weight": 0.15,
+    "contribution": 0.0541,
+    "basis": "13-session KER on cash closes, 3-EMA smoothed = +0.361 (>0.13 threshold; falling from 0.619 on 14 May => Trending Up - Moderate); sign of 25d move +"
+   },
+   "sentiment": {
+    "signal": 0.12,
+    "weight": 0.15,
+    "contribution": 0.018,
+    "basis": "CARRIED from report section 13b tilt +0.12; news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x 0.3. VIX falling confirms (verified from slice: 19.34 on 13 May to 18.45 on 20 May); USDX and DAX not in slices, report reads them as confirming; MIXED label carried from report (long-end yield headwind)"
+   }
+  },
+  "rationale": "Branch TRANSITION -> breakout side only (long, same side as Trade 3C and the direction score), built from M5 section 5.2c = TREND breakout row on pivots. No counter-side limit. TIER: weekly cash pivots (w_cash_*, 2026-W20 = 11-15 May, full-week H/L/C 7522.9/7345.3/7416.0; CORROBORATED by construction - computed from the execution series): P 7428.0667, R1 7510.8333, S1 7333.2333, R2 7605.6667, R1.5 = (R1+R2)/2 = 7558.25. Why weekly, not daily: the daily-tier trigger P + 0.10 x (R1 - P) from d_cash = 7414.0333 + 0.10 x 51.7334 = 7419.21 sits BELOW prev_close_full 7420.6, i.e. a buy-stop on the wrong side of the last price - price is already past that daily trigger, so no daily breakout order exists. The weekly trigger is the first breakout boundary above the close. Tier chosen on order-side logic, not to clear an R floor; both tiers pass the R floor. ENTRY: BUY STOP at P + 0.10 x (R1 - P) = 7428.0667 + 8.2767 = 7436.34; reference close prev_close_full 7420.6 (20 May), signed gap +15.74 (buy-stop above close, correct side). Note: 0.46 below the cash close 7436.8; the basis fixed for this run is the full-day close. STOP = P - 0.8 x (P - S1) = 7428.0667 - 0.8 x 94.8334 = 7352.20. No confluence sits just below weekly S1 (5-day swing low 7339.1 is above S1 7333.23), so the S1 - 0.25 x ATR alternative (7314.44) does not apply and would be wider. R = 84.14 = 1.12 x ATR14 cash 75.1786 (1.03 x full 82.0714) -> wide-stop flag; within [0.3,3.0]. TP1 = weekly R1 7510.83 (+74.49 from entry, < 2.5 x ATR); TP2 = weekly R1.5 7558.25; TP3 = weekly R2 7605.67 (structural ladder per branch, not +-1R/2R). On TP2 fill Unit 3 stop to entry + 0.2R = 7453.17. THESIS INVALIDATION: daily close back below weekly P 7428.07 (named, 76 pts above the stop). Confluence: entry 7436.34 is 15 pts below the 14 May 25-day high zone and TP1 7510.83 below 7522.9 high. Event risk: Nvidia earnings in window."
+ },
+ {
+  "card_id": "2026-05-21_Trade_3C",
+  "strategy": "Trade 3C - Range Breakout (suppressed: no confirmed break)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - needs a daily close >= 7541.69 (25d high 7522.9 + 0.25 x ATR); D-1 close 7436.8",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": null,
+  "management_text": "SUPPRESSED - no confirmed daily close beyond the 25-session boundary by >= 0.25 x ATR14 (trigger 7541.69 vs D-1 cash close 7436.8).",
+  "suppressed": true,
+  "report_date": "2026-05-21",
+  "report_file": "SP500_Report_21May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-21.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-20.csv",
+  "last_bar_broker": "2026-05-20 23:45",
+  "direction_score": 0.317,
+  "regime": "TRANSITION",
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.0,
+    "weight": 0.25,
+    "contribution": 0.0,
+    "basis": "cash RSI2 60.47 (neutral band) and 5-day sequence alternating (+45.2,-26.3,-12.0,-8.7,+56.9 O-to-C) = Mixed"
+   },
+   "medium_term_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2,
+    "basis": "25-session structure Trending-Bullish: net +5.6% (7042.1 on 16 Apr to 7436.8), close at 83rd pct of 25d range (Range Top Bias), 25d overlap 0.40, KER25 0.39; persistence 0.50 is the dissent"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "S&P ATR14 rising (66.2 to 75.2 over 10 sessions) while VIX falling (19.34 to 18.45); scaled VOLator series with counters not derivable from slices; sign ambiguous -> 0"
+   },
+   "kaufman": {
+    "signal": 0.361,
+    "weight": 0.15,
+    "contribution": 0.0541,
+    "basis": "13-session KER on cash closes, 3-EMA smoothed = +0.361 (>0.13 threshold; falling from 0.619 on 14 May => Trending Up - Moderate); sign of 25d move +"
+   },
+   "sentiment": {
+    "signal": 0.12,
+    "weight": 0.15,
+    "contribution": 0.018,
+    "basis": "CARRIED from report section 13b tilt +0.12; news not verifiable by this session"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x 0.3. VIX falling confirms (verified from slice: 19.34 on 13 May to 18.45 on 20 May); USDX and DAX not in slices, report reads them as confirming; MIXED label carried from report (long-end yield headwind)"
+   }
+  },
+  "rationale": "Regime fork: TRANSITION -> variant 3C. Regime evidence (real data, cash bars to 20 May): 5-day sequence alternating (+,-,-,-,+), cash RSI2 swung 100 -> 38 -> 0 -> 0 -> 60.5 over 14-20 May = short-term Transitional; 25-day structure up (net +5.6%, range-top 83rd pct, overlap 0.40) but persistence 0.50 and smoothed KER falling 0.62 -> 0.36 so not a clean trend; Step 4 'Transitional (any)' -> label falls through to TRANSITION (report's call confirmed). GATE (M5 4d/10): 25-day boundary = swing_high_25d_cash 7522.9 (bar 2026-05-14 19:00 broker; low 7012.1 on 2026-04-16 16:45, width 510.8). Confirmed break needs a daily close >= 7522.9 + 0.25 x 75.1786 = 7541.69. D-1 cash close = 7436.8 (full 7420.6): 104.9 below the trigger, no confirmed close -> Trade 3C is not eligible -> SUPPRESSED. The report's conditional card (trigger 7515.81, built on the 14 May close 7500.85 as boundary) is not reissued: the boundary is the 25d high, and a card that is 'not yet eligible' is a suppression, not a live order. Direction kept LONG (failed retest of the upper boundary on 14 May; aligned with Trade 2). No price fields."
+ }
+]

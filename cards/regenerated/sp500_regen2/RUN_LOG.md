@@ -45,3 +45,4 @@ The session ran `ls data/slices/`, which returns only the asset folder names (NE
 XAUUSD), with no dated files and no prices. No post-D content was exposed, so the output is kept.
 2026-06-01 draw 2 ran `ls` on its own output folder `draw2/by_date/`: filenames of other draw-2 dates only,
 no file opened, no prices. Kept.
+2026-05-29 draw 3: same `ls data/slices` (folder names only). Kept.

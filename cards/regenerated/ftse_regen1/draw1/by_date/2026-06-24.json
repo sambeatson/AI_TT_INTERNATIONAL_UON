@@ -1,0 +1,206 @@
+[
+ {
+  "card_id": "2026-06-24_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - no entry",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score +0.215 is below the 0.25 conviction threshold (NEUTRAL). No entry, stop or ladder.",
+  "suppressed": true,
+  "rationale": "Gate tested: |score| < 0.25. Value +0.215 (components in direction_components: 0.125+0.100-0.050+0.0224-0.027+0.045). Fired -> Trade 1 suppressed. Sentiment component carried from report s13b (-0.18), unverifiable. Sensitivity: short-term technical is the swing factor (RSI2 cash 100.0 but 5d closes net lower); had it been scored +1.0 the total would be 0.34 and a LONG card would be required; scored at 0.5 it is 0.215. Report's original +0.20 was reproduced in outcome; its RSI2 55.1 and 23 Jun close 10377.5 were wrong (data: cash close 10453.0, rsi2_cash 100.0).",
+  "report_date": "2026-06-24",
+  "report_file": "FTSE_EuroStoxx_Report_24Jun2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-24.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-23.csv",
+  "last_bar_broker": "2026-06-23 22:45",
+  "direction_score": 0.215,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.5,
+    "weight": 0.25,
+    "contribution": 0.125,
+    "basis": "rsi2_cash=100.0 (>70 bullish) offset by 5d close change -57.1 (16 Jun 10510.1 -> 23 Jun 10453.0): lean bullish +0.5"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION: sign of last completed >=2xATR swing (10 Jun low 10126.2 -> 15 Jun high 10574.6, 3.86 ATR) = up, x0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05,
+    "basis": "ATR14 cash 111.26 -> 116.26 over 5 sessions = expansion; aligned with 5d net close change (down)"
+   },
+   "kaufman": {
+    "signal": 0.149,
+    "weight": 0.15,
+    "contribution": 0.0224,
+    "basis": "KER(13) on cash daily closes = +0.149 (report said +0.03); sign of medium-term move up"
+   },
+   "sentiment": {
+    "signal": -0.18,
+    "weight": 0.15,
+    "contribution": -0.027,
+    "basis": "carried from report s13b tilt -0.18 (news not verifiable)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x0.3. Verified: USDX 99.68(15 Jun)->101.39(23 Jun) rising, US500 7559.4->7386.4 falling, VIX 17.68->18.88 up (all risk-off). DAX40/STOXX50 not in slices: report reading (net rising, contradicts) carried"
+   }
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-06-24_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION, breakout side only)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at 10422.8 (daily cash P + 0.10 x (R1-P)); reference close D-1 full-day 10429.8 (cash 10453.0, 23 Jun); gap -7.0 pts, at/below close as required",
+  "anchor_broker": "09:00",
+  "entry": 10422.8,
+  "stop": 10376.4,
+  "tp1": 10500.3,
+  "tp2": 10524.0,
+  "tp3": 10547.6,
+  "card_R_points": 46.4,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "TRANSITION branch, breakout side LONG. 3 equal units: Unit 1 exits at TP1 10500.3 (daily R1), Unit 2 at TP2 10524.0 (daily R1.5), Unit 3 runner to TP3 10547.6 (daily R2). On TP2 fill, Unit 3 stop moves to entry + 0.2R = 10432.1 (above entry, profit side). ATR14 cash 116.26 (14 daily LSE-cash bars): R 46.4 = 0.40 x ATR, no wide-stop flag. Thesis invalidation: daily close below daily P 10414.2 (inside the stop; stop ahead of nothing - invalidation is 37.8 pts from stop). Pivots computed from the broker execution series (23 Jun cash H/L/C 10461.5/10328.1/10453.0) = CORROBORATED by construction. D-day event collisions (broker time): Ifo Business Climate/Expectations/Current Situation 11:00, EUR 10y auction 12:40, US New Home Sales 17:00, EIA crude stocks 17:30, BoE Dhingra speech 18:00. Anchor 09:00 broker = 07:00 UK (default; no override).",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION -> M5 5.2c (mirror of 5.2b). Pivots: d_cash_P 10414.2, d_cash_R1 10500.3, d_cash_S1 10366.9, d_cash_R2 10547.6 (prior session 23 Jun cash). Entry = P + 0.10*(R1-P) = 10414.2+8.61 = 10422.8. Stop = P - 0.8*(P-S1) = 10414.2-37.84 = 10376.4; the alternative 'S1 - 0.25 ATR' (10337.8) is wider so the tighter P-based stop applies; no confluence sits just below S1 (5d swing low 10328.1 is 38.8 below S1). R=46.4 (0.40 x ATR cash 116.26; 0.33 x full-day 141.23, still >=0.3). TP1=R1 10500.3 (77.5 pts = 0.67 ATR from entry, <2.5 ATR), TP2=R1.5=(10500.3+10547.6)/2=10524.0, TP3=R2 10547.6. Entry type: M5 5.2b allows stop or limit; a buy stop at 10422.8 would sit below the 10429.8 reference close (wrong side), so the LIMIT form is used (price is above P, entry is a pullback to P+10%); levels unchanged, no tier switch. Breakout side LONG by rule: 3C direction trigger - upper 25d boundary (10574.6 on 15 Jun 10:00 broker) retested and failed on 16 Jun (10529.6) and 17 Jun (10513.3, 18:15), medium swing up, score sign positive (+0.215), cross-asset MIXED. Against: volator/sentiment negative - conviction low, hence NEUTRAL Trade 1. Report's SHORT sell-stop at S1 was contradicted by its own +0.20 score (QA item 22). Static checks: stop<entry<TP1<TP2<TP3 ok; TP1 beyond entry; 0.3<=R/ATR<=3.0.",
+  "report_date": "2026-06-24",
+  "report_file": "FTSE_EuroStoxx_Report_24Jun2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-24.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-23.csv",
+  "last_bar_broker": "2026-06-23 22:45",
+  "direction_score": 0.215,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.5,
+    "weight": 0.25,
+    "contribution": 0.125,
+    "basis": "rsi2_cash=100.0 (>70 bullish) offset by 5d close change -57.1 (16 Jun 10510.1 -> 23 Jun 10453.0): lean bullish +0.5"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION: sign of last completed >=2xATR swing (10 Jun low 10126.2 -> 15 Jun high 10574.6, 3.86 ATR) = up, x0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05,
+    "basis": "ATR14 cash 111.26 -> 116.26 over 5 sessions = expansion; aligned with 5d net close change (down)"
+   },
+   "kaufman": {
+    "signal": 0.149,
+    "weight": 0.15,
+    "contribution": 0.0224,
+    "basis": "KER(13) on cash daily closes = +0.149 (report said +0.03); sign of medium-term move up"
+   },
+   "sentiment": {
+    "signal": -0.18,
+    "weight": 0.15,
+    "contribution": -0.027,
+    "basis": "carried from report s13b tilt -0.18 (news not verifiable)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x0.3. Verified: USDX 99.68(15 Jun)->101.39(23 Jun) rising, US500 7559.4->7386.4 falling, VIX 17.68->18.88 up (all risk-off). DAX40/STOXX50 not in slices: report reading (net rising, contradicts) carried"
+   }
+  },
+  "regime": "TRANSITION"
+ },
+ {
+  "card_id": "2026-06-24_Trade_3C",
+  "strategy": "Trade 3 - Momentum-Breakout (3C, TRANSITION)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed daily close beyond the 25d boundary",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - 3C gate: confirmed break needs a daily close > 10574.6 + 0.25x116.26 = 10603.7 (upside) or < 10126.2 - 29.1 = 10097.1 (downside). D-1 cash close 10453.0 is inside the range. Commentary only: armed above 10603.7 / below 10097.1.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION -> 3C fork. Gate tested: confirmed close beyond 25d boundary by >=0.25xATR14 cash (116.26 -> 29.07). 25d cash range high 10574.6 (15 Jun 10:00 broker) / low 10126.2 (10 Jun 14:00 broker), width 448.4. Value tested: 23 Jun cash close 10453.0 (73% of range) -> not beyond either trigger (10603.7 / 10097.1). Gate fails -> suppressed, no levels. Side noted LONG for consistency with Trade 2 (failed upper-boundary retests 15-17 Jun). Report's SHORT card (stop 10393.1 mirror-formula, no entry) was unpriced; rebuild is moot as no break exists. For reference if triggered long: stop = low+0.40*width = 10305.6, TP1 = broken high + width, TP2 = 1.5 x MM.",
+  "report_date": "2026-06-24",
+  "report_file": "FTSE_EuroStoxx_Report_24Jun2026.md",
+  "source": "regen_ftse_regen1_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-06-24.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-06-23.csv",
+  "last_bar_broker": "2026-06-23 22:45",
+  "direction_score": 0.215,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 0.5,
+    "weight": 0.25,
+    "contribution": 0.125,
+    "basis": "rsi2_cash=100.0 (>70 bullish) offset by 5d close change -57.1 (16 Jun 10510.1 -> 23 Jun 10453.0): lean bullish +0.5"
+   },
+   "medium_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "TRANSITION: sign of last completed >=2xATR swing (10 Jun low 10126.2 -> 15 Jun high 10574.6, 3.86 ATR) = up, x0.5"
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05,
+    "basis": "ATR14 cash 111.26 -> 116.26 over 5 sessions = expansion; aligned with 5d net close change (down)"
+   },
+   "kaufman": {
+    "signal": 0.149,
+    "weight": 0.15,
+    "contribution": 0.0224,
+    "basis": "KER(13) on cash daily closes = +0.149 (report said +0.03); sign of medium-term move up"
+   },
+   "sentiment": {
+    "signal": -0.18,
+    "weight": 0.15,
+    "contribution": -0.027,
+    "basis": "carried from report s13b tilt -0.18 (news not verifiable)"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "basis": "MIXED x sign(+) x0.3. Verified: USDX 99.68(15 Jun)->101.39(23 Jun) rising, US500 7559.4->7386.4 falling, VIX 17.68->18.88 up (all risk-off). DAX40/STOXX50 not in slices: report reading (net rising, contradicts) carried"
+   }
+  },
+  "regime": "TRANSITION"
+ }
+]

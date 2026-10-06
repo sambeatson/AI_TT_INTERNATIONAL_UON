@@ -1,0 +1,188 @@
+[
+ {
+  "report_date": "2026-05-25",
+  "report_file": "FTSE100_Report_25May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-25.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-24.csv",
+  "last_bar_broker": "2026-05-22 22:45",
+  "direction_score": 0.632,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman": {
+    "signal": 0.139,
+    "weight": 0.15,
+    "contribution": 0.0208
+   },
+   "sentiment": {
+    "signal": 0.405,
+    "weight": 0.15,
+    "contribution": 0.0607
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-05-25_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market long at the 09:00 broker anchor (07:00 UK) at the D-1 reference close 10436.6 (UK100 full-day settled close, Fri 22 May 2026); gap 0.0",
+  "entry": 10436.6,
+  "stop": 10308.7,
+  "tp1": 10564.5,
+  "tp2": 10692.4,
+  "tp3": 10868.6,
+  "card_R_points": 127.9,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Unit 1 exits at TP1 (10564.5, +1R), Unit 2 at TP2 (10692.4, +2R); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 10462.2. Unit 3 runner is time-stopped at the session close or price-stopped at 3 x ATR14 from entry (10868.6), whichever comes first. ATR14 (14 sessions, LSE-cash 10:00-18:30 broker) = 143.99; R = 127.9 pts = 0.89 x ATR14 (no wide-stop flag, R <= 1.00 x ATR14); 2R = 255.8 < 3 x ATR14 so no 'TP2 ambitious' flag. Thesis invalidation: daily close below 10,272.8 (20 May cash low, 10:00 broker bar), 35.9 pts beyond the stop. Confluences: stop 10308.7 sits 4.3 pts below the 19 May cash low 10,313.0 (swing); entry 10436.6 sits 14.8 pts above daily cash S2 10,421.8 and 33.8 pts below the 22 May cash close 10,470.4. 25 May 2026 is a UK Spring Bank Holiday (also US Memorial Day, Whit Monday for EUR/CHF/NOK): there is no LSE cash session and the calendar carries no UK/US/EU market-moving release on D, only low/moderate Asia and LatAm items. The 09:00 broker anchor has no executable session behind it on D; the order is carried to the first live session and any time-stop is measured to that session's close.",
+  "suppressed": false,
+  "rationale": "Direction LONG: score 0.632 (components in direction_components; sentiment carried from report s13 with QA-corrected arithmetic 1.7/4.2 = +0.405, unverifiable here). Anchor 09:00 broker = 07:00 UK (instance anchor; no case made for 02:00 or 10:00). Entry = prev_close_full 10436.6 (Fri 22 May full-day close, per fixed basis). ATR14 cash 143.9857; buffer 0.25 x ATR = 36.00. Stop rule M5 4c: tighter of swing_low_5d_cash 10141.2 (18 May 10:00 broker bar) - buffer = 10105.2, or nearest support - buffer. Nearest support = cash lows of the 5-day block strictly below entry: 22 May cash low 10446.0 (17:00 broker bar) is ABOVE the 10436.6 entry so is not support for this fill; the nearest below is the 21 May cash low 10344.7 (13:30 broker bar). Stop = 10344.7 - 36.00 = 10308.7. R = 10436.6 - 10308.7 = 127.9 (0.89 x ATR; bounds 43.2-431.96 pass; stop distance < 3.5 x ATR cap 503.9). TP1 = entry + 1R = 10564.5; TP2 = entry + 2R = 10692.4; TP3 = entry + 3 x ATR14 = 10436.6 + 431.96 = 10868.6 (runner price cap); Unit 3 stop after TP2 = entry + 0.2R = 10462.2 (above entry, profitable side for a long). TP1 distance 127.9 < 2.5 x ATR 360.0. Gate check: |score| >= 0.25 so Trade 1 live. Report's own 10,413 stop/10,466 entry and 10,362 invalidation are not used (QA items 16-20). Bank holiday: no UK100 session on D, so the card has no session to fill in."
+ },
+ {
+  "report_date": "2026-05-25",
+  "report_file": "FTSE100_Report_25May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-25.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-24.csv",
+  "last_bar_broker": "2026-05-22 22:45",
+  "direction_score": 0.632,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman": {
+    "signal": 0.139,
+    "weight": 0.15,
+    "contribution": 0.0208
+   },
+   "sentiment": {
+    "signal": 0.405,
+    "weight": 0.15,
+    "contribution": 0.0607
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-05-25_Trade_2",
+  "strategy": "Trade 2 - Pivot, TREND branch (breakout)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "STOP",
+  "entry_mode_text": "Buy stop at 10472.7 = daily cash P + 0.10 x (R1 - P); reference close (full-day) 10436.6, signed gap +36.1 (cash close 10470.4, gap +2.3); armed from the 09:00 broker anchor",
+  "entry": 10472.7,
+  "stop": 10410.1,
+  "tp1": 10494.6,
+  "tp2": 10506.7,
+  "tp3": 10518.8,
+  "card_R_points": 62.6,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "TREND branch (regime TREND_UP). Three equal units: TP1 daily cash R1 10494.6, TP2 R1.5 10506.7 (midpoint of R1 and R2), TP3 R2 10518.8. TP1/TP2 are pivot targets, not 1R/2R: +21.9 / +34.0 / +46.1 pts = 0.35R / 0.54R / 0.74R. On the TP2 fill Unit 3 stop moves to entry + 0.2R = 10485.2. ATR14 (14 sessions, LSE-cash 10:00-18:30 broker) = 143.99; R = 62.6 pts = 0.43 x ATR14 (no wide-stop flag). Thesis invalidation: daily close back below daily cash P 10,470.3 (2.4 pts under entry; a different price from the stop, 60.2 pts away). Confluences: TP1 10494.6 = 5-day swing high 10,494.5 (0.1 pt) and daily R1; TP2 10506.7 within 6.7 pts of round 10,500; stop 10410.1 within 11.7 pts of daily cash S2 10,421.8 and 12.5 pts of S3 10,397.6. Pivot tier CORROBORATED: computed from the UK100 execution series (cash session Fri 22 May 2026). 25 May 2026 is a UK Spring Bank Holiday (also US Memorial Day, Whit Monday for EUR/CHF/NOK): there is no LSE cash session and the calendar carries no UK/US/EU market-moving release on D, only low/moderate Asia and LatAm items. The 09:00 broker anchor has no executable session behind it on D; the order is carried to the first live session and any time-stop is measured to that session's close.",
+  "suppressed": false,
+  "rationale": "Regime TREND_UP => Trade 2 TREND branch (M5 5.2b); pivots from d_cash_* (22 May cash session): P 10470.3, R1 10494.6, S1 10446.1, R2 10518.8. Entry = P + 0.10 x (R1 - P) = 10470.3 + 0.10 x 24.3 = 10472.73 -> 10472.7; BUY STOP at/above prev_close_full 10436.6 (gap +36.1) and above cash close 10470.4. Stop: the base formula P - 0.8 x (P - S1) = 10450.94 (R 21.8) sits above S1 10446.1 and above the 22 May cash low 10446.0 (0.1 pt below S1), i.e. inside the very confluence the M5 5.2b clause names, and would be 0.15 x ATR from entry - below the 0.3 x ATR floor (43.2). The confluence clause therefore applies: stop = S1 - 0.25 x ATR = 10446.1 - 36.00 = 10410.1 (beyond the confluence, not a tier switch). R = 62.6 = 0.43 x ATR (bounds 43.2-432.0 pass). TP1 R1 10494.6, TP2 R1.5 = (10494.6+10518.8)/2 = 10506.7, TP3 R2 10518.8; TP1 within 2.5 x ATR of entry. Corroboration gate: tiers recomputed from execution series => CORROBORATED, no suppression. Report's 10,424 buy stop (46 pts below the D-1 close) and TRANSITION label are not used."
+ },
+ {
+  "report_date": "2026-05-25",
+  "report_file": "FTSE100_Report_25May2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-05-25.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-05-24.csv",
+  "last_bar_broker": "2026-05-22 22:45",
+  "direction_score": 0.632,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman": {
+    "signal": 0.139,
+    "weight": 0.15,
+    "contribution": 0.0208
+   },
+   "sentiment": {
+    "signal": 0.405,
+    "weight": 0.15,
+    "contribution": 0.0607
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-05-25_Trade_3A",
+  "strategy": "Trade 3A - Momentum-Pullback (TREND_UP fork)",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at 10291.4 = 57.5% retracement of the 5-session up-swing; reference close (full-day) 10436.6, signed gap -145.2 (cash close 10470.4, gap -179.0); armed from the 09:00 broker anchor",
+  "entry": 10291.4,
+  "stop": 10105.2,
+  "tp1": 10359.5,
+  "tp2": 10494.5,
+  "tp3": 10847.8,
+  "card_R_points": 186.2,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Regime TREND_UP selects 3A. Swing (cash, lookback used = 5 sessions; the default 4-session window 19-22 May gives only 221.7 pts = 1.54 x ATR, below 2 x ATR, so extended by one session): low 10141.2 (18 May 2026 10:00 broker bar) to high 10494.5 (22 May 2026 13:15 broker bar), magnitude 353.3 pts = 2.45 x ATR14 (qualifies). Three equal units: TP1 10359.5 (38.2%), TP2 10494.5 (0%, swing high); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 10328.6. TP3 10847.8 = 100% extension; once price prints above 10847.8, Unit 3 stop moves to the halfway point between entry and TP2 = 10393.0. ATR14 (14 sessions, LSE-cash 10:00-18:30 broker) = 143.99; R = 186.2 pts = 1.29 x ATR14 -> WIDE STOP flag (R > 1.00 x ATR14); stop distance within 3.5 x ATR cap (503.9). Thesis invalidation: daily close below the swing low 10141.2 (36.0 pts above the stop). Confluences: swing low 10141.2 within 1.1 pts of monthly cash S1 10,140.1 (strong, at the anchor/stop); TP2 10494.5 = daily cash R1 10,494.6 (0.1 pt) and within 5.5 pts of round 10,500 (strong); entry 10291.4 has no pivot within 0.15 x ATR (nearest weekly cash S1 10,242.9). Fills only on a retracement; will not fill if the index keeps rising. 25 May 2026 is a UK Spring Bank Holiday (also US Memorial Day, Whit Monday for EUR/CHF/NOK): there is no LSE cash session and the calendar carries no UK/US/EU market-moving release on D, only low/moderate Asia and LatAm items. The 09:00 broker anchor has no executable session behind it on D; the order is carried to the first live session and any time-stop is measured to that session's close.",
+  "suppressed": false,
+  "rationale": "Regime TREND_UP => 3A (M5 5.3). Swing from cash 5d extremes: low 10141.2 (18 May 10:00 broker) -> high 10494.5 (22 May 13:15 broker); latest high more recent than latest low so the swing is up. Magnitude 353.30 = 2.45 x ATR 143.99 >= 2 (4-session lookback fails at 1.54 x; used 5). Entry 57.5% = 10494.5 - 0.575 x 353.3 = 10291.35 -> 10291.4; BUY LIMIT at/below prev_close_full 10436.6 (gap -145.2). Stop = 10141.2 - 0.25 x ATR (36.00) = 10105.2; R 186.2 = 1.29 x ATR (wide-stop flag set by arithmetic). TP1 38.2% = 10494.5 - 0.382 x 353.3 = 10359.5; TP2 0% = 10494.5; TP3 100% extension = 10494.5 + 353.3 = 10847.8; Unit 3 stop after TP2 = 10291.4 + 0.2 x 186.2 = 10328.6; runner pull = (10291.4+10494.5)/2 = 10393.0. TP1 distance 68.1 < 2.5 x ATR. Report's 3A used a swing low ~10,088 absent from the data and a TRANSITION label; both replaced (QA items 26-29)."
+ }
+]

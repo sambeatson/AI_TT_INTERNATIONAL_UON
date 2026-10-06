@@ -1,0 +1,188 @@
+[
+ {
+  "report_date": "2026-07-31",
+  "report_file": "SP500_Report_31Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-31.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-30.csv",
+  "last_bar_broker": "2026-07-30 23:45",
+  "card_id": "2026-07-31_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (suppressed: score below conviction gate)",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - |score| 0.09 < 0.25 conviction threshold; no entry",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - direction score +0.09 (NEUTRAL), below the fixed 0.25 gate. No override applies.",
+  "suppressed": true,
+  "direction_score": 0.09,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman_ker": {
+    "signal": -0.128,
+    "weight": 0.15,
+    "contribution": -0.0192
+   },
+   "sentiment": {
+    "signal": 0.385,
+    "weight": 0.15,
+    "contribution": 0.0578
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "regime": "TRANSITION",
+  "rationale": "Direction score +0.09 = +0.25 (tech: D-1 cash close 7439.7 > open 7383.2 and RSI2_cash 51.28 > 50 -> Bullish +1) -0.10 (regime TRANSITION; last completed swing is the down-leg 7480.3 [2026-07-27 16:30] -> 7314.5 [2026-07-29 22:45] -> -0.5 x 0.20) -0.05 (VOLator expanding: ATR14_cash 63.97 on 22 Jul -> 81.46; last close-confirmed breakout was the 29 Jul close below the 5d low, sign negative -> -0.5 x 0.10) -0.019 (KER13 on cash closes = -0.128 x 0.15) +0.058 (sentiment tilt +0.385 x 0.15; carried from report s13a/b counts, arithmetic corrected from the report's own weights, news not verifiable) -0.045 (cross-asset MIXED x sign -1 x 0.15: VIX cash close 19.49 -> 18.02 on 30 Jul confirms the rebound, but VIX 18.02 sits above its mid-July 16.7-17.4 base so the medium-term drift is not confirmed; USDX/DAX not in permitted slices, report's CONFIRM not verifiable). Gate test: |0.09| < 0.25 -> Trade 1 suppressed (M5 s2b/s10). The report's own +0.08 and its discretionary override are not adopted. Reference close D-1 (2026-07-30) cash 7439.7 / full 7445.4; ATR14_cash 81.4643."
+ },
+ {
+  "report_date": "2026-07-31",
+  "report_file": "SP500_Report_31Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-31.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-30.csv",
+  "last_bar_broker": "2026-07-30 23:45",
+  "card_id": "2026-07-31_Trade_2",
+  "strategy": "Trade 2 - Pivot (TRANSITION breakout side, long, buy limit at P + 0.10 x (R1 - P))",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT 7423.46 = daily cash P + 0.10 x (R1 - P); 21.94 pts below prev_close_full 7445.4 (correct side); monitoring opens 09:00 broker",
+  "entry": 7423.46,
+  "stop": 7395.26,
+  "tp1": 7468.67,
+  "tp2": 7483.15,
+  "tp3": 7497.63,
+  "card_R_points": 28.2,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 exits at TP1 7468.67 (daily R1, +45.21 pts = +1.60R); U2 exits at TP2 7483.15 (daily R1.5, +59.69 pts); on the U2 fill U3 stop moves to entry + 0.2R = 7429.10; U3 targets TP3 7497.63 (daily R2, +74.17 pts). R = 28.20 pts = 0.35 x ATR14_cash (81.46), no wide-stop flag. Thesis invalidation: daily close below daily P 7418.43 (stop 7395.26 is an intraday price 23.2 pts below it).",
+  "suppressed": false,
+  "direction_score": 0.09,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman_ker": {
+    "signal": -0.128,
+    "weight": 0.15,
+    "contribution": -0.0192
+   },
+   "sentiment": {
+    "signal": 0.385,
+    "weight": 0.15,
+    "contribution": 0.0578
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "regime": "TRANSITION",
+  "rationale": "Regime TRANSITION (report s9 call; data agrees: KER13 cash = -0.128, just inside the 0.13 trend threshold so not a trend, VOLator/ATR expanding so RANGE dual-gate fails, price 7439.7 inside 25d range 7303.1-7582.8). TRANSITION -> Trade 2 breakout side only, config mirrors M5 s5.2b; no counter-side limit. Side: long. Provisional 3C direction = lower 25d boundary 7303.1 (2026-06-26 16:30) was retested 2026-07-29 22:45 (low 7314.5, 11.4 pts above) and rejected (+125 pts next session), VOLator expanding, score sign +0.09, VIX falling; counter-side (short) suppressed. Levels from level file d_cash_*: P 7418.4333, R1 7468.6667, S1 7389.4667, R2 7497.6333. Entry = 7418.4333 + 0.10 x (7468.6667 - 7418.4333) = 7423.4567 -> 7423.46. Stop = P - 0.8 x (P - S1) = 7418.4333 - 0.8 x 28.9666 = 7395.26; alternative S1 - 0.25 x ATR = 7389.4667 - 20.37 = 7369.10 is wider and no confluence sits just below S1 (prior-day cash low 7368.2 is 21 pts below, weekly S1 7349.57, 5d low 7314.5), so 7395.26 is used. R = 28.20 = 0.346 x ATR14_cash 81.4643 (floor 24.44 passes). TP1 = R1 7468.67, TP2 = R1.5 = (7468.6667 + 7497.6333)/2 = 7483.15, TP3 = R2 7497.63; TP1 distance 45.21 < 2.5 x ATR (203.7). Pivot flag: tier computed from the execution broker series (cash session of 2026-07-30), CORROBORATED by construction, so the all-indicative suppression gate does not fire. Entry sits 5.0 pts above daily P and 45.2 pts below R1; weekly cash P 7437.53 and prev_close_cash 7439.7 both sit above entry. Note: against full-day ATR14 (95.08) R/ATR would be 0.297, marginally under 0.3; the fixed basis is cash ATR14 (0.346), so no basis-shopping. Event note: report s13d lists PCE/GDP/claims on D; news slice for D shows scheduled USD Michigan sentiment 17:00 and Chicago PMI 16:45 broker. Direction score +0.09 = +0.25 (tech: D-1 cash close 7439.7 > open 7383.2 and RSI2_cash 51.28 > 50 -> Bullish +1) -0.10 (regime TRANSITION; last completed swing is the down-leg 7480.3 [2026-07-27 16:30] -> 7314.5 [2026-07-29 22:45] -> -0.5 x 0.20) -0.05 (VOLator expanding: ATR14_cash 63.97 on 22 Jul -> 81.46; last close-confirmed breakout was the 29 Jul close below the 5d low, sign negative -> -0.5 x 0.10) -0.019 (KER13 on cash closes = -0.128 x 0.15) +0.058 (sentiment tilt +0.385 x 0.15; carried from report s13a/b counts, arithmetic corrected from the report's own weights, news not verifiable) -0.045 (cross-asset MIXED x sign -1 x 0.15: VIX cash close 19.49 -> 18.02 on 30 Jul confirms the rebound, but VIX 18.02 sits above its mid-July 16.7-17.4 base so the medium-term drift is not confirmed; USDX/DAX not in permitted slices, report's CONFIRM not verifiable). "
+ },
+ {
+  "report_date": "2026-07-31",
+  "report_file": "SP500_Report_31Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-31.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-30.csv",
+  "last_bar_broker": "2026-07-30 23:45",
+  "card_id": "2026-07-31_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (suppressed: no confirmed 25d-boundary close)",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no daily close beyond the 25-day boundary by >= 0.25 x ATR14",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - confirmed-break gate failed (s4d). Commentary only: eligible on a daily cash close above 7603.17 (7582.8 + 0.25 x 81.46) or below 7282.73.",
+  "suppressed": true,
+  "direction_score": 0.09,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman_ker": {
+    "signal": -0.128,
+    "weight": 0.15,
+    "contribution": -0.0192
+   },
+   "sentiment": {
+    "signal": 0.385,
+    "weight": 0.15,
+    "contribution": 0.0578
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "regime": "TRANSITION",
+  "rationale": "Regime TRANSITION -> 3C fork. 25d cash boundaries from level file: high 7582.8 (2026-07-15 16:30), low 7303.1 (2026-06-26 16:30), width 279.7. Gate: confirmed close beyond boundary by >= 0.25 x ATR14_cash (81.4643 -> 20.37), i.e. close > 7603.17 or < 7282.73. D-1 cash close 7439.7 (2026-07-30) and the 2026-07-29 close 7317.5 are both inside -> gate fails -> suppressed; no substitution of 3A/3B. Direction shown LONG is provisional (failed lower-boundary test 2026-07-29 22:45, low 7314.5), used only to fix Trade 2's breakout side."
+ }
+]

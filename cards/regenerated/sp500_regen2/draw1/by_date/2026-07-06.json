@@ -1,0 +1,194 @@
+[
+ {
+  "report_date": "2026-07-06",
+  "report_file": "SP500_Report_06Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-06.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-05.csv",
+  "last_bar_broker": "2026-07-03 20:00:00",
+  "anchor_broker": "09:00",
+  "regime": "RANGE",
+  "card_id": "2026-07-06_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET long at D-1 reference close 7504.6 (prev_close_full, last bar 2026-07-03 20:00 broker) at 09:00 broker (07:00 UK)",
+  "entry": 7504.6,
+  "stop": 7445.73,
+  "tp1": 7563.47,
+  "tp2": 7622.34,
+  "tp3": null,
+  "card_R_points": 58.87,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits TP1 (+1R), U2 exits TP2 (+2R); on TP2 fill U3 stop moves to entry +0.2R (7516.37); U3 time-stopped at session close. R=58.87 pts = 0.70x ATR14 cash (84.66). Invalidation: daily close below 7,392.8 (weekly cash S1).",
+  "suppressed": false,
+  "rationale": "Direction score 0.2806 >= 0.25 so LONG. Components: short-tech +1 (rsi2_cash 66.11 >50, last cash bar C 7504.6 > O 7502.6, 5-session close trend up 7335.8 on 26 Jun -> 7504.6) x0.25 = +0.25; medium regime RANGE = 0; VOLator compression = 0 (report slope -0.40; VIX 18.78 on 26 Jun -> 17.14 on 03 Jul consistent); Kaufman: smoothed |KER13| recomputed from cash closes ~0.086 (report 0.107, both inside RANGE gate) x sign of 25-session net close change (7584.8 -> 7504.6, negative) = -0.086 x 0.15 = -0.0129; sentiment tilt +0.29 carried from report 13b (unverifiable) x0.15 = +0.0435; cross-asset 0 (only VIX derivable; medium-term regime direction 0). Sum 0.2806. Margin over threshold is thin (0.03): a cross-asset or Kaufman sign change would flip it to suppressed. Entry = prev_close_full 7504.6. Stop (M5 4c) = tighter of (a) swing_low_5d_cash 7355.1 (29 Jun 17:15 broker) - 0.25xATR14cash(84.6643)=7333.93 (R 170.67, 2.02 ATR) and (b) nearest support + 0.25xATR: w_cash_P 7466.9 (2026-W27, 29 Jun-03 Jul) - 21.17 = 7445.73. Daily cash S1 7498.13/S2/S3 are not used as support: the d_cash tiers come from the 03 Jul holiday stub (cash range only 12.2 pts) and sit within 0.15 ATR of the reference close, so they are not distinct structure. (b) is tighter. R=58.87 (0.70 ATR; inside 0.3-3.0). TP1/TP2 = entry +1R/+2R. TP1 distance 0.70 ATR (<2.5). TP3 null (runner = session-close time stop). Anchor 09:00 broker = 07:00 UK daily-open default; no report logic argues otherwise. Not wide-stop (R/ATR<1).",
+  "direction_score": 0.2806,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman": {
+    "signal": -0.086,
+    "weight": 0.15,
+    "contribution": -0.0129
+   },
+   "sentiment": {
+    "signal": 0.29,
+    "weight": 0.15,
+    "contribution": 0.0435,
+    "note": "carried from report 13b, not verifiable"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "note": "only VIX derivable; USDX/DAX not in slices; medium-term regime direction 0 under RANGE"
+   }
+  }
+ },
+ {
+  "report_date": "2026-07-06",
+  "report_file": "SP500_Report_06Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-06.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-05.csv",
+  "last_bar_broker": "2026-07-03 20:00:00",
+  "anchor_broker": "09:00",
+  "regime": "RANGE",
+  "card_id": "2026-07-06_Trade_2",
+  "strategy": "Trade 2 - Pivot fade, RANGE regime",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT at daily cash R1 7510.33, +5.73 pts above D-1 reference close 7504.6; live from 09:00 broker (07:00 UK)",
+  "entry": 7510.33,
+  "stop": 7562.17,
+  "tp1": 7458.49,
+  "tp2": 7406.65,
+  "tp3": null,
+  "card_R_points": 51.84,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits TP1 (-1R), U2 exits TP2 (-2R); on TP2 fill U3 stop moves to entry -0.2R (7499.96, below entry); U3 time-stopped at session close. R=51.84 pts = 0.61x ATR14 cash. Invalidation: daily close above 7,578.7 (weekly cash R1). Counter series not verified (indicative).",
+  "suppressed": false,
+  "rationale": "RANGE branch (regime RANGE: report 9 dual gate KER 0.107<0.13 and VOLator slope -0.40<=0; recomputed smoothed |KER| ~0.086; 25d cash range 7243.1-7624.6, close at 68.6% of range). Tier: distance from reference close 7504.6 to d_cash_R1 7510.33 = 5.73 pts < 1 ATR -> tier 1 = R1. Entry d_cash_R1 7510.33 (from D-1 cash session 2026-07-03, flag CORROBORATED: derived from the broker execution series). Side: short fades the upper half of the range; Trade 1 is long so the pair is not duplicate exposure. No fib confluence override applied. Stop: structural level beyond entry + 0.25xATR14cash. d_cash_R2 7516.07 is only 5.7 pts beyond R1 (same stub-derived cluster, not distinct structure); first distinct structure is swing_high_5d_cash 7541.0 (02 Jul 16:45 broker) -> 7541.0+21.17=7562.17; distance 51.84 pts = 0.61 ATR, below 3.5 ATR cap. No tier switched to clear a floor. TP1 7458.49 = entry -1R, TP2 7406.65 = entry -2R; M5 runner target P (7503.87) lies above TP2/entry so TP3 null with session-close time stop. Invalidation weekly cash R1 7578.7 is 16.5 pts beyond stop (>0.15 ATR=12.7). Gap vs reference close +5.73, correct side for a sell limit. Anchor 09:00 broker.",
+  "direction_score": 0.2806,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman": {
+    "signal": -0.086,
+    "weight": 0.15,
+    "contribution": -0.0129
+   },
+   "sentiment": {
+    "signal": 0.29,
+    "weight": 0.15,
+    "contribution": 0.0435,
+    "note": "carried from report 13b, not verifiable"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "note": "only VIX derivable; USDX/DAX not in slices; medium-term regime direction 0 under RANGE"
+   }
+  }
+ },
+ {
+  "report_date": "2026-07-06",
+  "report_file": "SP500_Report_06Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-06.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-05.csv",
+  "last_bar_broker": "2026-07-03 20:00:00",
+  "anchor_broker": "09:00",
+  "regime": "RANGE",
+  "card_id": "2026-07-06_Trade_3B",
+  "strategy": "Trade 3B - Mean-Reversion, RANGE regime",
+  "family": "Trade 3B",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at 21.4% of the 25-day cash range (7324.7), -179.9 pts vs D-1 reference close 7504.6; live from 09:00 broker (07:00 UK)",
+  "entry": 7324.7,
+  "stop": 7281.25,
+  "tp1": 7433.85,
+  "tp2": 7586.45,
+  "tp3": null,
+  "card_R_points": 43.45,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits TP1 range midpoint 7433.85; U2 exits TP2 7586.45; on TP2 fill U3 stop moves to entry +0.2R (7333.39); U3 time-stopped at session close. R=43.45 pts = 0.51x ATR14 cash. Invalidation: daily close below the 25-day low 7243.1 (a different price from stop 7281.25).",
+  "suppressed": false,
+  "rationale": "RANGE fork -> 3B. Eligibility (M5 4b): qualifying swing 7355.1 (low, 29 Jun 17:15 broker) -> 7541.0 (high, 02 Jul 16:45 broker) = 185.9 pts = 2.20x ATR14cash (84.6643), >= 2x; found at a 5-session lookback (4-session default has the 29 Jun low outside by one session; extended by one). Swing is up (high more recent than low). Range from level file: swing_high_25d_cash 7624.6 (02 Jun 18:15 broker), swing_low_25d_cash 7243.1 (09 Jun 19:30 broker), width 381.5. Long buy limit band 11.4%-21.4% = 7286.6-7324.7; entry at 21.4% edge = 7324.7 (nearest to market) which keeps R at 43.45 (0.51 ATR; >= 0.3x under either ATR basis 84.66 or 90.87). Stop = low+0.10*width = 7281.25. TP1 = midpoint 7433.85 (distance 109.15 = 1.29 ATR <2.5). TP2 = high-0.10*width = 7586.45. TP3 null (breakout runner discretionary; session-close time stop). Reference close 7504.6, signed gap -179.9 (buy limit below close: correct). Direction long chosen over short (78.6-88.6% band) because the short would duplicate Trade 2 short exposure; no basis switch. Anchor 09:00 broker.",
+  "direction_score": 0.2806,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 0.0,
+    "weight": 0.2,
+    "contribution": 0.0
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0
+   },
+   "kaufman": {
+    "signal": -0.086,
+    "weight": 0.15,
+    "contribution": -0.0129
+   },
+   "sentiment": {
+    "signal": 0.29,
+    "weight": 0.15,
+    "contribution": 0.0435,
+    "note": "carried from report 13b, not verifiable"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "note": "only VIX derivable; USDX/DAX not in slices; medium-term regime direction 0 under RANGE"
+   }
+  }
+ }
+]

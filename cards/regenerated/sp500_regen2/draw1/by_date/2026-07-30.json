@@ -1,0 +1,188 @@
+[
+ {
+  "report_date": "2026-07-30",
+  "report_file": "SP500_Report_30Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-30.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-29.csv",
+  "last_bar_broker": "2026-07-29 23:45",
+  "direction_score": -0.539,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman": {
+    "signal": -0.327,
+    "weight": 0.15,
+    "contribution": -0.049
+   },
+   "sentiment": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-30_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "SHORT",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET sell at the 09:00 broker (07:00 UK) daily-open anchor, filled at the D-1 full-day settled close 7306.60 (session 2026-07-29); reference-close gap 0.00",
+  "anchor_broker": "09:00",
+  "entry": 7306.6,
+  "stop": 7368.93,
+  "tp1": 7244.27,
+  "tp2": 7181.94,
+  "tp3": 7074.21,
+  "card_R_points": 62.33,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. U1 exits at TP1 (entry-1R), U2 at TP2 (entry-2R); on the TP2 fill Unit 3 stop moves to entry-0.2R = 7294.13 (below entry, profitable side). Unit 3 runner exits at session close or at the 3xATR14 price cap 7074.21, whichever is first. ATR14 = 77.46 pts (14 sessions, cash session 16:30-23:00 broker). R = 62.33 pts = 0.80xATR14 (no wide-stop flag, R<1xATR). Thesis invalidation: daily close above daily R1 7407.17 (stop ahead of invalidation). Caveats: event collision - 30-31 Jul mega-cap earnings (MSFT/META/AAPL/AMZN) and, on 30 Jul at 15:30 broker (one hour before the US cash open), Core PCE, Q2 GDP advance and initial jobless claims; BoE decision 14:00 broker. Sentiment component carried from report, not independently verified. Pivots computed from the broker execution series (CORROBORATED).",
+  "suppressed": false,
+  "rationale": "Direction score: short-term technical Bearish (cash 29 Jul C 7317.5 < O 7424.5, RSI2_cash 13.49 <50; 5-day close trend down) = -1 x 0.25 = -0.25; medium regime TRANSITION, last completed swing down = -0.5 x 0.20 = -0.10; VOLator slope +0.074 (S&P scaled ATR z-score, 10 obs, expansion; aligned with the down break) = -0.5 x 0.10 = -0.05; Kaufman 13-session KER smoothed EMA3 = -0.327 (Trending Down) x 0.15 = -0.049; sentiment tilt -0.30 x 0.15 = -0.045 (carried from report section 13b; news not verified here; the Trading Economics CFD row flagged by QA is left in the carried tilt); cross-asset MIXED (VIX confirms: cash close 19.49 vs 17.55 on 22 Jul; USDX confirm and DAX contradict carried from the report because no USDX/DAX slice) = -0.3 x 0.15 = -0.045. Sum = -0.539 -> SHORT, |score|>=0.25 so not suppressed. Regime TRANSITION: cash overlap ratio 0.60 and persistence 0.33 (ranging-type) but smoothed KER -0.327 < -0.13 (trending-type) and VOLator expanding, so RANGE dual gate fails and Step 4 does not give Trending/Trending; default fall-through = TRANSITION, matching the report. Entry = prev_close_full 7306.6 (MARKET, 09:00 broker anchor per the S&P instance default; US data at 15:30 broker does not change the daily-open logic). Stop: tighter of (5d swing high cash 7480.30, bar 2026-07-27 16:30 broker, +0.25xATR = 7499.67, R 193.07) and (nearest resistance + 0.25xATR). Nearest resistance = lowest cash-basis floor pivot strictly above entry = weekly_cash S1 7349.5667 (next: daily P 7360.83); + 0.25x77.4643 = 19.3661 -> stop 7368.93, R 62.33 (0.80xATR); the nearer anchor is the tighter, so it binds. Cap 3.5xATR = 271.12 not binding; 0.3xATR=23.24 <= R <= 3xATR=232.39 passes. TP1 = 7306.6-62.33 = 7244.27 (62.33 pts, 0.80xATR <= 2.5xATR); TP2 = 7306.6-124.66 = 7181.94; Unit-3 stop after TP2 = 7306.6-12.47 = 7294.13; TP3 = 3xATR cap price 7306.6-232.39 = 7074.21, beyond TP2 so valid. Invalidation = daily R1_cash 7407.17 close-through (named level, 38.24 pts beyond stop). Gate log: conviction gate passed (0.539 vs 0.25); R window passed; TP1 distance passed."
+ },
+ {
+  "report_date": "2026-07-30",
+  "report_file": "SP500_Report_30Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-30.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-29.csv",
+  "last_bar_broker": "2026-07-29 23:45",
+  "direction_score": -0.539,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman": {
+    "signal": -0.327,
+    "weight": 0.15,
+    "contribution": -0.049
+   },
+   "sentiment": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-30_Trade_2",
+  "strategy": "Trade 2 - Pivot (regime-aware)",
+  "family": "Trade 2",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "TRANSITION branch, breakout side (down): SELL LIMIT at daily_cash P - 0.10x(P-S1) = 7351.87; sits above the D-1 full-day close 7306.60 by +45.27 (correct side for a sell limit)",
+  "anchor_broker": "09:00",
+  "entry": 7351.87,
+  "stop": 7397.9,
+  "tp1": 7271.17,
+  "tp2": 7248.0,
+  "tp3": 7224.83,
+  "card_R_points": 46.03,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Three equal units. U1 exits at daily S1 7271.17, U2 at daily S1.5 7248.0, U3 runner toward daily S2 7224.83; on the TP2 fill Unit 3 stop moves to entry-0.2R = 7342.66. ATR14 = 77.46 pts (14 sessions, cash session). R = 46.03 pts = 0.59xATR14, no wide-stop flag. Order is cancelled if not filled by the 23:00 broker cash close. Thesis invalidation: daily close back above daily P 7360.83. Caveats: event collision - 30-31 Jul mega-cap earnings and 30 Jul 15:30 broker Core PCE / Q2 GDP / jobless claims, BoE 14:00 broker; pivots computed from the broker execution series (CORROBORATED); sentiment carried from report.",
+  "suppressed": false,
+  "rationale": "Regime TRANSITION -> breakout-side-only Trade 2 (5.2c, mirror of 5.2b TREND breakout). Side = down: upper boundary 25d high 7582.80 (bar 2026-07-15 16:30 broker) failed in mid-July, D-1 cash close 7317.5 sits at 5% of the 25d range, VOLator expanding, VIX confirming; this is the 3C direction trigger. Levels from level file _cash columns: P 7360.8333, S1 7271.1667, S2 7224.8333, R1 7407.1667. Entry = P - 0.10x(P-S1) = 7360.8333 - 8.9667 = 7351.87. Wrong-side check: a sell STOP here would sit above the 7306.60 close, so it is a sell LIMIT (at/above close, allowed). Stop = P + 0.8x(R1-P) = 7360.8333 + 37.0667 = 7397.90; no confluence (5d swing high 7480.30, prior-day high 7450.50) sits just above R1 so the substitute stop does not apply. R = 46.03 (0.59xATR; 0.3-3.0 window passes). TP1 = S1 7271.17, TP2 = S1.5 = (7271.1667+7224.8333)/2 = 7248.00, TP3 = S2 7224.83 (ladder: stop > entry > TP1 > TP2 > TP3). TP1 distance 80.7 pts = 1.04xATR <= 2.5xATR. Suppression test: pivots derive from execution-series cash bars, so flagged CORROBORATED; not suppressed. The 3C confirmed-close gate does not apply to Trade 2 (only the breakout side is inherited). Invalidation = daily P 7360.83, 37.07 pts inside the stop."
+ },
+ {
+  "report_date": "2026-07-30",
+  "report_file": "SP500_Report_30Jul2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-30.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-29.csv",
+  "last_bar_broker": "2026-07-29 23:45",
+  "direction_score": -0.539,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1.0,
+    "weight": 0.25,
+    "contribution": -0.25
+   },
+   "medium_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "contribution": -0.1
+   },
+   "volator": {
+    "signal": -0.5,
+    "weight": 0.1,
+    "contribution": -0.05
+   },
+   "kaufman": {
+    "signal": -0.327,
+    "weight": 0.15,
+    "contribution": -0.049
+   },
+   "sentiment": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   },
+   "cross_asset": {
+    "signal": -0.3,
+    "weight": 0.15,
+    "contribution": -0.045
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-30_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout",
+  "family": "Trade 3C",
+  "direction": "SHORT",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed close beyond the 25-day low by 0.25xATR14",
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "management_text": "SUPPRESSED - the D-1 cash close 7317.50 is above the confirmation trigger 7283.73 (= 25d low 7303.10 - 0.25 x 77.46 = 7303.10 - 19.37); the close is still 14.40 pts inside the range, so the confirmed-break gate has failed. Commentary only: card becomes eligible after a daily cash close below 7283.73.",
+  "suppressed": true,
+  "rationale": "Regime TRANSITION -> 3C fork. Range from level file: swing_high_25d_cash 7582.80 (2026-07-15 16:30 broker), swing_low_25d_cash 7303.10 (2026-06-26 16:30 broker), width 279.70. Confirmed-break test: need close <= 7303.10 - 0.25x77.4643 = 7283.73; D-1 cash close = 7317.50 -> FAIL (short by 33.77 pts). Per M5 4d/10 the card is suppressed; the report's 'armed, pending confirmation' live card was a gate-failure defect. All price fields null."
+ }
+]

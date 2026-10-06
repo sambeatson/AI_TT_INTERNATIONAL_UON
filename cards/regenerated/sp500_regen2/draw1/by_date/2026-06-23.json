@@ -1,0 +1,194 @@
+[
+ {
+  "report_date": "2026-06-23",
+  "report_file": "SP500_Report_23Jun2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-22.csv",
+  "last_bar_broker": "2026-06-22 23:45:00",
+  "direction_score": -0.3617,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1,
+    "weight": 0.25,
+    "product": -0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "product": -0.1
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "product": 0.0
+   },
+   "kaufman_ker": {
+    "signal": -0.108,
+    "weight": 0.15,
+    "product": -0.0162
+   },
+   "sentiment_tilt": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "product": 0.0045,
+    "note": "carried from report s13b; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "product": 0.0,
+    "note": "only VIX is in the slice set; fewer than two counters derivable -> NEUTRAL"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-23_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "SHORT",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market sell at the anchor, filled at the D-1 reference close 7481.8 (prev_close_full, 22 Jun 23:45 broker bar). Signed gap to reference close 0.0.",
+  "anchor_broker": "09:00",
+  "entry": 7481.8,
+  "stop": 7550.9,
+  "tp1": 7412.7,
+  "tp2": 7343.6,
+  "tp3": 7146.5,
+  "card_R_points": 69.1,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits at TP1 7412.7 (+1R); Unit 2 at TP2 7343.6 (+2R); on the TP2 fill Unit 3 stop moves to entry - 0.2R = 7468.0 (below entry, in the profit direction). Unit 3 runner exits at session close or at the 3x ATR price stop/target 7146.5, whichever comes first. R = 69.1 pts = 0.62x ATR14 cash (111.76) / 0.55x full-day (126.36); not a wide stop. Thesis invalidation: daily close above weekly R1 7582.2 (beyond the stop). Event risk: D has only Richmond Fed and a 2-year note auction; Micron (24 Jun) and May PCE (25 Jun) fall inside a multi-day hold.",
+  "suppressed": false,
+  "rationale": "Direction score: short-term technical -1 x0.25 = -0.25 (22 Jun cash bar close<open with RSI2 0.0 -> Bearish; 17, 18, 22 Jun Bearish, 16 and 19 Jun Neutral, none Bullish; 5-day net -84 pts), medium regime TRANSITION sign of last completed swing (15 Jun high 7583.4 -> 17 Jun low 7408.5, DOWN) -0.5 x0.20 = -0.10, VOLator 0 x0.10 = 0, Kaufman -0.108 x0.15 = -0.0162, sentiment +0.03 x0.15 = +0.0045 (carried from report s13b, unverifiable), cross-asset NEUTRAL 0 x0.15 = 0 (only VIX derivable from slices; VIX 17.91 close, flat/contained). Sum = -0.3617 -> |score| >= 0.25 -> SHORT, Trade 1 live. Margin over gate 0.11, but it rests on the short-term Bearish call; had that been Neutral the score would be -0.11 and Trade 1 suppressed. Entry = prev_close_full 7481.8 (MARKET, last executable price before D). Stop per M5 4c: tighter of (5d swing high cash 7571.4 [16 Jun 16:30 broker] + 0.25xATR = 7599.3) and (nearest resistance above entry = d_cash_R1 7522.97 + 0.25 x ATR14_cash 111.757 = 27.94 -> 7550.9); tighter = 7550.9. Cap 3.5xATR = 391.1 not binding. R = 69.1. TP1 = entry - R = 7412.7; TP2 = entry - 2R = 7343.6; TP3 = entry - 3xATR14_cash = 7146.5 (runner price stop at 3xATR). 2R = 138.2 < 3xATR so no 'TP2 ambitious' flag. R/ATR cash 0.62, full 0.55 (inside 0.3-3.0, below 1.0 so no wide-stop flag). TP1 distance 69.1 < 2.5xATR. Invalidation: daily close above 22 Jun session high 7538.8 (prev_high_cash) - note this is inside the stop by 12.1 pts; for a stop-ahead structure use close above weekly R1 7582.2 (w_cash_R1), which is 31.3 pts beyond the stop (> 0.15xATR = 16.8) - weekly R1 is the named invalidation. Anchor 09:00 broker = 07:00 UK (default daily-open anchor; no report logic argues for 02:00 or 16:30). Reference close 7479.3 cash / 7481.8 full-day, session 22 Jun."
+ },
+ {
+  "report_date": "2026-06-23",
+  "report_file": "SP500_Report_23Jun2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-22.csv",
+  "last_bar_broker": "2026-06-22 23:45:00",
+  "direction_score": -0.3617,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1,
+    "weight": 0.25,
+    "product": -0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "product": -0.1
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "product": 0.0
+   },
+   "kaufman_ker": {
+    "signal": -0.108,
+    "weight": 0.15,
+    "product": -0.0162
+   },
+   "sentiment_tilt": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "product": 0.0045,
+    "note": "carried from report s13b; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "product": 0.0,
+    "note": "only VIX is in the slice set; fewer than two counters derivable -> NEUTRAL"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-23_Trade_2",
+  "strategy": "Trade 2 - Pivot (regime-aware), TRANSITION branch",
+  "family": "Trade 2",
+  "direction": "n/a",
+  "entry_mode": null,
+  "entry_mode_text": null,
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": null,
+  "runner_rule": null,
+  "suppressed": true,
+  "management_text": "SUPPRESSED - TRANSITION branch permits a breakout-side entry only; no confirmed close beyond the 25-day boundary (D-1 cash close 7479.3 inside 7243.1-7624.6; needs >= 7652.5 or <= 7215.2), and the breakout side is not identified (VOLator slope not positive, cross-asset NEUTRAL). A counter-side pivot fade is suppressed, not re-labelled.",
+  "rationale": "Gate test: regime TRANSITION (see regime reasoning) -> Trade 2 may only be a breakout-side entry (M5 5.2c, mirror of 5.2b with R1/R1.5/R2 or S1/S1.5/S2). Value tested: D-1 cash close 7479.3 vs boundaries 7624.6 (25d high, 2 Jun 18:15 broker) and 7243.1 (25d low, 9 Jun 19:30 broker); 0.25xATR14_cash = 27.9 -> trigger levels 7652.5 / 7215.2; neither met, so no breakout side exists. Pivot-tier corroboration gate: all tiers recomputed from the execution series (level file, cash basis) are CORROBORATED, so that gate does not fire; suppression is on the branch rule alone. Regime TRANSITION. Recomputed from cash-session daily bars built from the M15 slice (16:30-22:45 broker). 5-day block (16-22 Jun, incl. 19 Jun short session): close-to-close persistence 0.50 (not <0.50 and not >0.55), mean overlap 0.59, mean direction -0.6, RSI2 median 43.9 -> neither Trending nor Ranging, so Transitional. 25-day block: overlap 0.51 (neither >0.55 nor <0.45), persistence 0.50, RSI2 median 60.5 -> Transitional. Step-4 synthesis Transitional/Transitional -> TRANSITION (a RANGE label needs a Ranging/Ranging synthesis; it fails even though |smoothed KER| 0.108 < 0.13 and VOLator slope <= 0). Smoothed KER (13, EMA3) = -0.108 (raw -0.094), class Ranging-Downward Bias, series falling from -0.064 (15 Jun); VOLator slope on clipped scaled series 0.0 (flat at +1), unclipped -0.096 -> compression. Agrees with the report's Transitional reading."
+ },
+ {
+  "report_date": "2026-06-23",
+  "report_file": "SP500_Report_23Jun2026.md",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-06-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-06-22.csv",
+  "last_bar_broker": "2026-06-22 23:45:00",
+  "direction_score": -0.3617,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": -1,
+    "weight": 0.25,
+    "product": -0.25
+   },
+   "medium_term_regime": {
+    "signal": -0.5,
+    "weight": 0.2,
+    "product": -0.1
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "product": 0.0
+   },
+   "kaufman_ker": {
+    "signal": -0.108,
+    "weight": 0.15,
+    "product": -0.0162
+   },
+   "sentiment_tilt": {
+    "signal": 0.03,
+    "weight": 0.15,
+    "product": 0.0045,
+    "note": "carried from report s13b; not verifiable from slices"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "product": 0.0,
+    "note": "only VIX is in the slice set; fewer than two counters derivable -> NEUTRAL"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-06-23_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout",
+  "family": "Trade 3C",
+  "direction": "n/a",
+  "entry_mode": null,
+  "entry_mode_text": null,
+  "anchor_broker": "09:00",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": null,
+  "runner_rule": null,
+  "suppressed": true,
+  "management_text": "SUPPRESSED - no confirmed break: D-1 cash close 7479.3 is not >= 7652.5 (25d high 7624.6 + 0.25xATR 27.9) nor <= 7215.2 (25d low 7243.1 - 27.9).",
+  "rationale": "Fork: regime TRANSITION -> Trade 3C (not 3A/3B). Eligibility gate (M5 4d): daily close beyond the 25-day boundary by >= 0.25xATR14_cash (111.757 -> 27.94). 25d high 7624.6 set 2 Jun 18:15 broker, 25d low 7243.1 set 9 Jun 19:30 broker (cash basis, level file swing_*_25d_cash). Close 7479.3 is 145.3 below the upper trigger and 264.2 above the lower trigger -> gate fails -> suppressed, no 3A/3B substitution, no pivot levels standing in for range levels. Regime TRANSITION. Recomputed from cash-session daily bars built from the M15 slice (16:30-22:45 broker). 5-day block (16-22 Jun, incl. 19 Jun short session): close-to-close persistence 0.50 (not <0.50 and not >0.55), mean overlap 0.59, mean direction -0.6, RSI2 median 43.9 -> neither Trending nor Ranging, so Transitional. 25-day block: overlap 0.51 (neither >0.55 nor <0.45), persistence 0.50, RSI2 median 60.5 -> Transitional. Step-4 synthesis Transitional/Transitional -> TRANSITION (a RANGE label needs a Ranging/Ranging synthesis; it fails even though |smoothed KER| 0.108 < 0.13 and VOLator slope <= 0). Smoothed KER (13, EMA3) = -0.108 (raw -0.094), class Ranging-Downward Bias, series falling from -0.064 (15 Jun); VOLator slope on clipped scaled series 0.0 (flat at +1), unclipped -0.096 -> compression. Agrees with the report's Transitional reading."
+ }
+]

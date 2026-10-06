@@ -1,0 +1,188 @@
+[
+ {
+  "card_id": "2026-05-29_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (market at 07:00 UK anchor)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "Market buy at the 09:00 broker (07:00 UK) daily-open anchor; fill level = D-1 reference close 7578.2 (28 May 2026, full-day basis)",
+  "anchor_broker": "09:00",
+  "entry": 7578.2,
+  "stop": 7515.92,
+  "tp1": 7640.48,
+  "tp2": 7702.76,
+  "tp3": 7786.34,
+  "card_R_points": 62.28,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. U1 exits at TP1 (+1R, +62.28 pts); U2 exits at TP2 (+2R, +124.56 pts); on the TP2 fill U3 stop moves to entry +0.2R = 7590.66. U3 runner exits at session-close time-stop or the 3xATR14 price cap 7786.34 (ATR14 cash 69.38), whichever first. Thesis invalidation: daily close below daily S2 7494.03.",
+  "rationale": "Score 0.704: short-tech +1 (RSI2_cash 100.0, five rising cash closes) x0.25; regime TREND_UP (report's Trending-bullish call, consistent with 25d high set on D-1 and 25d range 7112.40-7576.20) +1 x0.20; VOLator compression (ranges contracting vs ATR; report slope negative) 0 x0.10; Kaufman KER(13) computed on cash closes of the slice, 25 May holiday bar excluded = 0.354 (report's 0.663 not used, unverifiable) x0.15; sentiment +0.34 carried from report s13b (cannot be verified) x0.15; cross-asset CONFIRM from VIX slice (28 May close 16.78 vs 17.13, falling; 5d down from 18.16) +1 x0.15 (DAX/USDX not derivable, not used). |score|>=0.25 so Trade 1 is live. Entry = prev_close_full 7578.2 (MARKET). Stop: tighter of (5d swing low cash 7464.50 - 0.25xATR = 7447.15, R=131.05) and (nearest support = daily cash S1 7533.27 - 0.25xATR14cash 17.34 = 7515.92, R=62.28); S1 chosen. R=62.28 = 0.90xATR14 cash (69.38; 78.09 full-day) -> not >1xATR, no wide-stop flag; 2R=124.6 < 3xATR so no TP2-ambitious flag. Cap 3.5xATR=242.8 not binding. TP1/TP2 = entry +1R/+2R. TP3 = entry+3xATR14cash = 7786.34. Anchor 09:00 broker (07:00 UK) default daily-open; report offers no argument for another. Reference close 7578.20 full-day basis, order side n/a (market, gap 0). Sentiment component unverified news-derived.",
+  "report_date": "2026-05-29",
+  "report_file": "SP500_Report_29May2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-29.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-28.csv",
+  "last_bar_broker": "2026-05-28 23:45",
+  "direction_score": 0.704,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1,
+    "weight": 0.25,
+    "contrib": 0.25
+   },
+   "medium_regime": {
+    "signal": 1,
+    "weight": 0.2,
+    "contrib": 0.2
+   },
+   "volator": {
+    "signal": 0,
+    "weight": 0.1,
+    "contrib": 0.0
+   },
+   "kaufman": {
+    "signal": 0.354,
+    "weight": 0.15,
+    "contrib": 0.0531
+   },
+   "sentiment": {
+    "signal": 0.34,
+    "weight": 0.15,
+    "contrib": 0.051
+   },
+   "cross_asset": {
+    "signal": 1,
+    "weight": 0.15,
+    "contrib": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "suppressed": false
+ },
+ {
+  "card_id": "2026-05-29_Trade_2",
+  "strategy": "Trade 2 - Pivot, TREND branch (buy limit P+0.10(R1-P))",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at 7558.66 (daily cash P + 0.10x(R1-P)); 19.54 pts below D-1 reference close 7578.2",
+  "anchor_broker": "09:00",
+  "entry": 7558.66,
+  "stop": 7537.56,
+  "tp1": 7593.97,
+  "tp2": 7604.7,
+  "tp3": 7615.43,
+  "card_R_points": 21.1,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 exits at daily R1 7593.97; U2 at R1.5 7604.7; U3 at R2 7615.43. On the TP2 fill U3 stop moves to entry +0.2R = 7562.88. Thesis invalidation: daily close back below daily P 7554.73.",
+  "rationale": "Regime TREND_UP (same label as Trade 1/3A) -> TREND branch s5.2b long. Daily cash pivots from D-1 cash H 7576.2 / L 7515.5 / C 7572.5: P 7554.7333, R1 7593.9667, S1 7533.2667, R2 7615.4333; R1.5=(R1+R2)/2=7604.7. Entry = P+0.10x(R1-P) = 7558.66. Stop = P-0.8x(P-S1) = 7537.56; no confluence 'just below S1' (prior-day cash low 7515.5 is 17.8 below S1, weekly R1 7543.57 sits above S1), so the base formula stands. R=21.1 = 0.304xATR14 cash (69.38) -> just above 0.3xATR floor 20.81 (on full-day ATR 78.09 the ratio is 0.270, i.e. below 0.3: flagged by the static linter as a warning at most, honest construction on the fixed cash basis passes). TP1/TP2/TP3 = R1/R1.5/R2 (+35.31/+46.04/+56.78 pts; TP1 within 2.5xATR). Limit 7558.66 < prev_close_full 7578.2: correct side. Pivots computed from the execution (broker) series cash session = CORROBORATED. Invalidation: daily close below daily P 7554.73 (named level; 17.17 pts above stop, >0.15xATR). Anchor 09:00.",
+  "report_date": "2026-05-29",
+  "report_file": "SP500_Report_29May2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-29.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-28.csv",
+  "last_bar_broker": "2026-05-28 23:45",
+  "direction_score": 0.704,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1,
+    "weight": 0.25,
+    "contrib": 0.25
+   },
+   "medium_regime": {
+    "signal": 1,
+    "weight": 0.2,
+    "contrib": 0.2
+   },
+   "volator": {
+    "signal": 0,
+    "weight": 0.1,
+    "contrib": 0.0
+   },
+   "kaufman": {
+    "signal": 0.354,
+    "weight": 0.15,
+    "contrib": 0.0531
+   },
+   "sentiment": {
+    "signal": 0.34,
+    "weight": 0.15,
+    "contrib": 0.051
+   },
+   "cross_asset": {
+    "signal": 1,
+    "weight": 0.15,
+    "contrib": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "suppressed": false
+ },
+ {
+  "card_id": "2026-05-29_Trade_3A",
+  "strategy": "Trade 3A - Momentum-Pullback (57.5% retrace, TREND_UP)",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "Buy limit at 7439.87 (57.5% retracement of 19 May low 7339.10 -> 28 May high 7576.20); 138.33 pts below D-1 reference close 7578.2",
+  "anchor_broker": "09:00",
+  "entry": 7439.87,
+  "stop": 7321.76,
+  "tp1": 7485.63,
+  "tp2": 7576.2,
+  "tp3": 7813.3,
+  "card_R_points": 118.11,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "3 equal units. U1 exits at TP1 = 38.2% level 7485.63; U2 at TP2 = 0% anchor 7576.2; on the TP2 fill U3 stop moves to entry +0.2R = 7463.49. U3 runner targets the 100% extension 7813.3; if price prints above it, U3 stop moves to the halfway point between entry and TP2 = 7508.03. Wide-stop flag: R = 1.70xATR14. Thesis invalidation: daily close below swing-low anchor 7339.10.",
+  "rationale": "Regime TREND_UP -> 3A. Fib swing s4b: default 4-session lookback fails (5d cash swing 7464.50 (22 May 17:15 broker) -> 7576.20 (28 May 22:30) = 111.70 < 2xATR 138.76); extended to 7 sessions: swing low 7339.10 (19 May 2026, 17:45 broker, cash session low) -> swing high 7576.20 (28 May 2026, 22:30 broker); magnitude 237.10 = 3.42xATR14 cash (69.38) >= 2xATR, lookback used 7 sessions (within the 10 maximum). High more recent than low -> active swing up. Entry 57.5% = 7576.20-0.575x237.10 = 7439.87; stop = 7339.10-0.25x69.38 = 7321.76; R=118.11 = 1.70xATR14 -> wide-stop flag (R>1xATR), inside 0.3-3.0 band and under 3.5xATR cap (242.8). TP1 38.2% = 7485.63 (+45.76 pts, within 2.5xATR); TP2 0% = 7576.20 (+136.33); TP3 100% extension = 7813.3. Buy limit below prev_close_full 7578.20: correct side (gap -138.33). Pivot-free, built only on the swing; levels from cash basis. Fill requires a pullback of about 1.8% from the D-1 close; anchor 09:00 broker.",
+  "report_date": "2026-05-29",
+  "report_file": "SP500_Report_29May2026.md",
+  "source": "regen_sp500_regen2_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-05-29.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-05-28.csv",
+  "last_bar_broker": "2026-05-28 23:45",
+  "direction_score": 0.704,
+  "direction_components": {
+   "short_tech": {
+    "signal": 1,
+    "weight": 0.25,
+    "contrib": 0.25
+   },
+   "medium_regime": {
+    "signal": 1,
+    "weight": 0.2,
+    "contrib": 0.2
+   },
+   "volator": {
+    "signal": 0,
+    "weight": 0.1,
+    "contrib": 0.0
+   },
+   "kaufman": {
+    "signal": 0.354,
+    "weight": 0.15,
+    "contrib": 0.0531
+   },
+   "sentiment": {
+    "signal": 0.34,
+    "weight": 0.15,
+    "contrib": 0.051
+   },
+   "cross_asset": {
+    "signal": 1,
+    "weight": 0.15,
+    "contrib": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "suppressed": false
+ }
+]

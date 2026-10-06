@@ -1,0 +1,191 @@
+[
+ {
+  "report_date": "2026-07-03",
+  "report_file": "FTSE100_EuroStoxx_Report_03Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-03.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-02.csv",
+  "last_bar_broker": "2026-07-02 22:45",
+  "direction_score": 0.757,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "value": 0.244,
+    "signal": 0.244,
+    "weight": 0.15,
+    "contribution": 0.0366
+   },
+   "sentiment": {
+    "signal": 0.47,
+    "weight": 0.15,
+    "contribution": 0.0705
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-07-03_Trade_1",
+  "strategy": "Trade 1 - Daily Directional (LONG)",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET at the 09:00 broker (07:00 UK) anchor, filled at the D-1 reference close 10664.9 (02 Jul 2026 full-day last executable price; cash close 10654.0), signed gap 0.0 pts",
+  "entry": 10664.9,
+  "stop": 10461.33,
+  "tp1": 10868.47,
+  "tp2": 11072.04,
+  "tp3": null,
+  "card_R_points": 203.57,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "suppressed": false,
+  "management_text": "Three equal units. Buy at market 10664.9 at 09:00 broker (07:00 UK). ATR14 (14 daily bars, LSE cash session) = 115.75 pts; R = 203.57 pts = 1.76 x ATR14: WIDE STOP. Unit 1 exits at TP1 10868.47 (+1R, +203.57 pts); Unit 2 exits at TP2 11072.04 (+2R, +407.14 pts): TP2 ambitious for a daily horizon (2R = 407.1 pts > 3 x ATR14 = 347.25). On the TP2 fill Unit 3 stop moves to 10705.61 (entry + 0.2R, +40.71 pts). Unit 3 runs to the LSE cash close (16:30 UK) time-stop; the 3 x ATR14 price cap (11012.15) sits inside TP2 so there is no TP3 price. Thesis invalidation: daily close below 10401.4 (5-day swing low, 26 Jun 16:15 broker), 59.9 pts beyond the stop (stop ahead of invalidation). Event collisions on 03 Jul: ECB Lagarde speech 11:00 broker (09:00 UK, HIGH); UK/EZ services PMIs 11:30/11:00 broker; BoE Bailey speech 18:00 broker (16:00 UK, HIGH, at the LSE cash close); US holiday (Independence Day) thins US-hours liquidity.",
+  "rationale": "Basis: _cash columns (ATR14 115.75) except entry = prev_close_full 10664.9. Score 0.757 (components in direction_components) >= 0.25 so Trade 1 live, LONG. Entry MARKET = prev_close_full 10664.9. Stop per M5 s4c: anchors = swing_low_5d_cash 10401.4 (26 Jun 16:15 broker) vs nearest daily support d_cash_S1 10490.27; tighter (higher) = S1; stop = 10490.27 - 0.25*115.75 (28.94) = 10461.33. R = 10664.9-10461.33 = 203.57 = 1.76 x ATR (in 0.3-3.0 band; cap 3.5 x ATR = 405.1 not binding) -> WIDE STOP. TP1 = entry+R = 10868.47 (R from entry 203.57 < 2.5 x ATR 289.4); TP2 = entry+2R = 11072.04. TP3 null: 3 x ATR14 cap = 10664.9+347.25 = 11012.15 lies below TP2 so would invert the ladder; runner is session-close time-stop only. Daily P 10588.53 and weekly R1 10620.03 also lie below entry but were not used as the stop anchor (daily support tier S1 used, no weekly/monthly switching). Invalidation 10401.4 vs stop 10461.33: 59.9 pts > 0.15 x ATR 17.4. Anchor 09:00 broker (07:00 UK) default, per report header; no case for 02:00 or 10:00."
+ },
+ {
+  "report_date": "2026-07-03",
+  "report_file": "FTSE100_EuroStoxx_Report_03Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-03.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-02.csv",
+  "last_bar_broker": "2026-07-02 22:45",
+  "direction_score": 0.757,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "value": 0.244,
+    "signal": 0.244,
+    "weight": 0.15,
+    "contribution": 0.0366
+   },
+   "sentiment": {
+    "signal": 0.47,
+    "weight": 0.15,
+    "contribution": 0.0705
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-07-03_Trade_2",
+  "strategy": "Trade 2 - Pivot, TREND branch (LONG pullback limit)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT 10604.91 (daily P + 10% of P-to-R1), armed from the 09:00 broker (07:00 UK) anchor; D-1 reference close 10664.9, signed gap -59.99 pts",
+  "entry": 10604.91,
+  "stop": 10509.92,
+  "tp1": 10752.27,
+  "tp2": 10801.4,
+  "tp3": 10850.53,
+  "card_R_points": 94.99,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "suppressed": false,
+  "management_text": "TREND branch. Three equal units. Buy limit 10604.91 from 09:00 broker (07:00 UK). ATR14 (14 daily bars, LSE cash) = 115.75; R = 94.99 pts = 0.82 x ATR14 (no wide-stop flag). Unit 1 exits at TP1 10752.27 (daily R1, +147.36 pts); Unit 2 at TP2 10801.4 (daily R1.5, +196.49 pts); on the TP2 fill Unit 3 stop moves to 10623.9 (entry + 0.2R, +19.0 pts). Unit 3 targets TP3 10850.53 (daily R2, +245.63 pts). Thesis invalidation: daily close back below daily P 10588.53 (78.6 pts above the stop). Pivots recomputed from broker UK100 M15, LSE cash session 2026-07-02 (execution series): CORROBORATED. Events: ECB Lagarde 11:00 broker (HIGH), UK/EZ PMIs 11:00-11:30 broker, BoE Bailey 18:00 broker (HIGH); US holiday.",
+  "rationale": "Regime TREND_UP -> TREND branch (M5 s5.2b), long. Entry = d_cash_P 10588.5333 + 0.10*(d_cash_R1 10752.2667 - 10588.5333) = 10604.91; below prev_close_full 10664.9 so a valid buy limit (gap -60.0). Stop = P - 0.8*(P - d_cash_S1 10490.2667) = 10509.92; no confluence just below S1 (5d swing low 10401.4, prior-day low 10424.8, weekly S1 10370.43 all >= 65 pts below S1) so the S1-0.25 ATR alternative is not triggered. R = 94.99 = 0.82 x ATR. TP1 = d_cash_R1 10752.27 (147.4 pts from entry < 2.5 x ATR); TP2 = R1.5 = (10752.2667+10850.5333)/2 = 10801.40; TP3 = d_cash_R2 10850.53. Pivot tier provenance: computed from execution series (broker UK100 M15 cash bars, 02 Jul 2026 H 10686.8 / L 10424.8 / C 10654.0) -> CORROBORATED, so the all-indicative suppression gate does not fire. Confluence: entry within 15.1 pts of weekly R1 10620.03 (< 0.15 x ATR 17.4). Anchor 09:00 broker default."
+ },
+ {
+  "report_date": "2026-07-03",
+  "report_file": "FTSE100_EuroStoxx_Report_03Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw2",
+  "draw": 2,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-03.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-02.csv",
+  "last_bar_broker": "2026-07-02 22:45",
+  "direction_score": 0.757,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25
+   },
+   "medium_regime": {
+    "signal": 1.0,
+    "weight": 0.2,
+    "contribution": 0.2
+   },
+   "volator": {
+    "signal": 0.5,
+    "weight": 0.1,
+    "contribution": 0.05
+   },
+   "kaufman_ker": {
+    "value": 0.244,
+    "signal": 0.244,
+    "weight": 0.15,
+    "contribution": 0.0366
+   },
+   "sentiment": {
+    "signal": 0.47,
+    "weight": 0.15,
+    "contribution": 0.0705
+   },
+   "cross_asset": {
+    "signal": 1.0,
+    "weight": 0.15,
+    "contribution": 0.15
+   }
+  },
+  "regime": "TREND_UP",
+  "card_id": "2026-07-03_Trade_3A",
+  "strategy": "Trade 3A - Momentum-Pullback (LONG)",
+  "family": "Trade 3A",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT 10531.09 (57.5% retracement of 10416.0 -> 10686.8), armed from the 09:00 broker (07:00 UK) anchor; D-1 reference close 10664.9, signed gap -133.81 pts",
+  "entry": 10531.09,
+  "stop": 10387.06,
+  "tp1": 10583.35,
+  "tp2": 10686.8,
+  "tp3": 10957.6,
+  "card_R_points": 144.03,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "suppressed": false,
+  "management_text": "Fork 3A (TREND_UP). Swing: low 10416.0 (01 Jul 15:15 broker) to high 10686.8 (02 Jul 18:00 broker), lookback used 4 sessions (default), magnitude 270.8 pts = 2.34 x ATR14 (qualifies >= 2 x). Three equal units. Buy limit 10531.09 from 09:00 broker (07:00 UK). ATR14 (14 daily bars, LSE cash) = 115.75; R = 144.03 pts = 1.24 x ATR14: WIDE STOP. Unit 1 exits at TP1 10583.35 (38.2% retracement, +52.26 pts); Unit 2 at TP2 10686.8 (0%, swing high, +155.71 pts); on the TP2 fill Unit 3 stop moves to 10559.9 (entry + 0.2R, +28.81 pts). Unit 3 targets TP3 10957.6 (100% extension, +426.51 pts); if price prints above 10957.6, Unit 3 stop moves to 10608.94 (halfway between entry and TP2). Thesis invalidation: daily close below 10416.0 (swing-low anchor), 28.9 pts inside the stop 10387.06. Events: ECB Lagarde 11:00 broker (HIGH), UK/EZ PMIs, BoE Bailey 18:00 broker (HIGH); US holiday.",
+  "rationale": "Regime TREND_UP -> 3A (M5 s5.3a). s4b swing: default 4-session lookback (29 Jun-02 Jul cash bars) contains low 10416.0 (01 Jul 15:15 broker) and high 10686.8 (02 Jul 18:00 broker, = swing_high_5d_cash/25d); width 270.8 = 2.34 x ATR14 115.75 >= 2 x (231.5), so qualifies with no extension (the 5d low 10401.4 of 26 Jun 16:15 is outside the 4-session lookback and not used). Up swing: high is more recent than low. Entry = 10686.8 - 0.575*270.8 = 10531.09 (valid buy limit below 10664.9). Stop = 10416.0 - 0.25*115.75 = 10387.06; R = 144.03 = 1.24 x ATR (WIDE STOP; < 3.5 x ATR cap). TP1 = 38.2% retracement = 10686.8-0.382*270.8 = 10583.35; TP2 = 0% = 10686.8; TP3 = 100% extension = 10686.8+270.8 = 10957.60. TP1 is 52.3 pts from entry (< 2.5 x ATR). Confluence: TP1 10583.35 vs daily P 10588.53 = 5.2 pts (< 17.4): strong confluence (Fib 38.2% + Pivot P); TP2 = swing high / 25d high; entry vs daily S1 10490.27 is 40.8 pts and vs P 57.4 pts (no confluence). Invalidation 10416.0 vs stop 10387.06 = 28.9 pts > 0.15 x ATR 17.4. Anchor 09:00 broker default."
+ }
+]

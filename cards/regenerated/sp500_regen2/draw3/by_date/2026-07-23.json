@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-23",
+  "report_file": "SP500_Report_23Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-22.csv",
+  "last_bar_broker": "2026-07-22 23:45",
+  "direction_score": 0.3957,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "note": "D-1 cash RSI2 86.97 (>50) and D-1 cash close 7498.8 > open 7490.3 -> Bullish per the Trend rule; 5-day net drift is negative/alternating but RSI2 and D-1 candle are bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "note": "TRANSITION: sign of last completed swing (26 Jun low 7303.1 -> 15 Jul high 7582.8, up) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "note": "compression (cash ranges 66.2/65.7/73.5/49.2/37.5 over 16-22 Jul, slope<=0) -> 0"
+   },
+   "kaufman": {
+    "signal": 0.105,
+    "weight": 0.15,
+    "contribution": 0.0157,
+    "note": "KER(13, EMA3) recomputed from cash closes = +0.0136; linear ker/0.13 x sign(+)"
+   },
+   "sentiment": {
+    "signal": -0.1,
+    "weight": 0.15,
+    "contribution": -0.015,
+    "note": "carried unverified from report 13b tilt -0.10"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "note": "MIXED (report s10; VIX slice 18.17 on 17 Jul -> 17.40 on 22 Jul falling/risk-on while index 5d lower; USDX/DAX carried from report) -> +0.3 x sign(+)"
+   }
+  },
+  "regime": "TRANSITION",
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "suppressed": true,
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "card_id": "2026-07-23_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET long at the 09:00 broker (07:00 UK) anchor, would fill at prev_close_full 7506.5 - SUPPRESSED, R floor failed",
+  "management_text": "SUPPRESSED - static floor: honest stop gives R = 0.287 x ATR14 (< 0.30). No ladder emitted.",
+  "rationale": "Direction score = +0.25 +0.10 +0.00 +0.0157 -0.015 +0.045 = 0.3957 (>= 0.25 so direction LONG, gate not fired; sentiment -0.10 carried unverified from report s13b). Entry would be MARKET at prev_close_full 7506.5 (D-1 = 2026-07-22). ATR14_cash = 63.9714 (so 0.25xATR buffer = 15.99; 0.30xATR floor = 19.19). Stop rule s4c: tighter of (swing_low_5d_cash 7431.6, 17 Jul 16:30 broker) or nearest support, each minus 0.25xATR. Nearest support below 7506.5 is the cash daily pivot d_cash_P 7504.10 (2.40 below entry); it is the tighter anchor: stop = 7504.10 - 15.99 = 7488.11, R = 7506.5 - 7488.11 = 18.39 = 0.287 x ATR14 < 0.30 floor. The only way to clear the floor is to skip P and anchor on S1 7482.70 or the 5d swing low 7431.6 (R 39.8 / 90.9), which is basis-shopping and is forbidden; so the honest construction fails the floor and the card is SUPPRESSED (s9a row 6: R outside 0.3-3.0 x ATR is rebuilt, not warned). Anchor would have been 09:00 broker (07:00 UK standing daily-open anchor). Original-report defects (stop anchored on a low, R at floor, suppression flag not propagated) are not repeated."
+ },
+ {
+  "report_date": "2026-07-23",
+  "report_file": "SP500_Report_23Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-22.csv",
+  "last_bar_broker": "2026-07-22 23:45",
+  "direction_score": 0.3957,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "note": "D-1 cash RSI2 86.97 (>50) and D-1 cash close 7498.8 > open 7490.3 -> Bullish per the Trend rule; 5-day net drift is negative/alternating but RSI2 and D-1 candle are bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "note": "TRANSITION: sign of last completed swing (26 Jun low 7303.1 -> 15 Jul high 7582.8, up) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "note": "compression (cash ranges 66.2/65.7/73.5/49.2/37.5 over 16-22 Jul, slope<=0) -> 0"
+   },
+   "kaufman": {
+    "signal": 0.105,
+    "weight": 0.15,
+    "contribution": 0.0157,
+    "note": "KER(13, EMA3) recomputed from cash closes = +0.0136; linear ker/0.13 x sign(+)"
+   },
+   "sentiment": {
+    "signal": -0.1,
+    "weight": 0.15,
+    "contribution": -0.015,
+    "note": "carried unverified from report 13b tilt -0.10"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "note": "MIXED (report s10; VIX slice 18.17 on 17 Jul -> 17.40 on 22 Jul falling/risk-on while index 5d lower; USDX/DAX carried from report) -> +0.3 x sign(+)"
+   }
+  },
+  "regime": "TRANSITION",
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "suppressed": true,
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "card_id": "2026-07-23_Trade_2",
+  "strategy": "Trade 2 - Pivot, TRANSITION breakout side (upside) - SUPPRESSED",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "TRANSITION branch, breakout side only (upside, aligned with 3C direction): s5.2c/5.2b entry P + 0.10x(R1-P) = 7505.71 as buy limit - SUPPRESSED, R floor failed",
+  "management_text": "SUPPRESSED - static floor: R = 0.293 x ATR14 (< 0.30). No ladder emitted.",
+  "rationale": "Regime TRANSITION carried from report s9 (overlap 0.427 and persistence 0.583 both inconclusive; Step-4 synthesis transitional) and consistent with the real data: KER(13,EMA3) recomputed from cash closes = +0.0136 (neutral band, below 0.13), 25d cash range 7303.1 (26 Jun 16:30) to 7582.8 (15 Jul 16:30), width 279.7, D-1 cash close 7498.8 at 70.0% of range. RANGE is not available because the Step-4 synthesis is not Ranging-Ranging; TRANSITION is the fall-through, so Trade 2 = breakout side only and Trade 3 = 3C. Report s9 said TRANSITION but built a RANGE S1 fade (defect); here the branch is TRANSITION breakout-only. Side: upside, because the upper 25d boundary (15 Jul 7582.8, retest 16 Jul 7572.2) has twice failed to break and the direction score is positive (+0.3957); a counter-side limit is not permitted. Construction (cash tiers, d_cash_P 7504.10, d_cash_R1 7520.20, d_cash_S1 7482.70, ATR14_cash 63.9714): entry = P + 0.10x(R1-P) = 7504.10 + 1.61 = 7505.71 (buy limit, 0.79 below prev_close_full 7506.5, side OK); stop = P - 0.8x(P-S1) = 7504.10 - 17.12 = 7486.98 (no confluence just below S1: prior-day cash low 7488.0 is above S1, 5d swing low 7431.6 and weekly S1 7397.87 are far below); R = 18.73 = 0.293 x ATR14 < 0.30 x ATR (19.19). Floor fails, so SUPPRESSED; swapping to S1 - 0.25xATR (7466.71) to widen the stop would be basis-shopping and is not the tighter option the rule specifies. The mirrored downside breakout (entry 7501.96, stop 7516.98, R 15.02 = 0.23 x ATR) also fails. Pivot tiers are built from the execution (broker) series so corroborated; the report's s19 all-indicative claim is superseded by the level file."
+ },
+ {
+  "report_date": "2026-07-23",
+  "report_file": "SP500_Report_23Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-23.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-22.csv",
+  "last_bar_broker": "2026-07-22 23:45",
+  "direction_score": 0.3957,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "note": "D-1 cash RSI2 86.97 (>50) and D-1 cash close 7498.8 > open 7490.3 -> Bullish per the Trend rule; 5-day net drift is negative/alternating but RSI2 and D-1 candle are bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "note": "TRANSITION: sign of last completed swing (26 Jun low 7303.1 -> 15 Jul high 7582.8, up) x 0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "note": "compression (cash ranges 66.2/65.7/73.5/49.2/37.5 over 16-22 Jul, slope<=0) -> 0"
+   },
+   "kaufman": {
+    "signal": 0.105,
+    "weight": 0.15,
+    "contribution": 0.0157,
+    "note": "KER(13, EMA3) recomputed from cash closes = +0.0136; linear ker/0.13 x sign(+)"
+   },
+   "sentiment": {
+    "signal": -0.1,
+    "weight": 0.15,
+    "contribution": -0.015,
+    "note": "carried unverified from report 13b tilt -0.10"
+   },
+   "cross_asset": {
+    "signal": 0.3,
+    "weight": 0.15,
+    "contribution": 0.045,
+    "note": "MIXED (report s10; VIX slice 18.17 on 17 Jul -> 17.40 on 22 Jul falling/risk-on while index 5d lower; USDX/DAX carried from report) -> +0.3 x sign(+)"
+   }
+  },
+  "regime": "TRANSITION",
+  "be_rule": "NONE",
+  "runner_rule": "TRACE",
+  "suppressed": true,
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "card_id": "2026-07-23_Trade_3C",
+  "strategy": "Trade 3C - Momentum-Breakout (TRANSITION) - SUPPRESSED",
+  "family": "Trade 3C",
+  "direction": "LONG",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "CONDITIONAL on a confirmed daily close beyond the 25d boundary by >= 0.25xATR - not met, SUPPRESSED",
+  "management_text": "SUPPRESSED - no confirmed break. No ladder emitted.",
+  "rationale": "Regime TRANSITION carried from report s9 (overlap 0.427 and persistence 0.583 both inconclusive; Step-4 synthesis transitional) and consistent with the real data: KER(13,EMA3) recomputed from cash closes = +0.0136 (neutral band, below 0.13), 25d cash range 7303.1 (26 Jun 16:30) to 7582.8 (15 Jul 16:30), width 279.7, D-1 cash close 7498.8 at 70.0% of range. RANGE is not available because the Step-4 synthesis is not Ranging-Ranging; TRANSITION is the fall-through, so Trade 2 = breakout side only and Trade 3 = 3C. Fork: TRANSITION -> 3C (original report wrongly used 3B). Gate s4d: confirmed daily close beyond swing_high_25d_cash 7582.8 by >= 0.25xATR14 (15.99) needs close >= 7598.79, or below swing_low_25d_cash 7303.1 needs close <= 7287.11. D-1 cash close = 7498.8 (22 Jul): 99.99 below the upside trigger, 211.7 above the downside trigger. Gate fails -> SUPPRESSED; no pivot levels substituted. Commentary only (not a card): had the upside break been confirmed, width 279.7 gives stop = 7303.1 + 0.40x279.7 = 7414.98, TP1 = 7582.8 + 279.7, TP2 = 1.5x MM. Direction recorded LONG as the side of the failed upper-boundary retests (15 and 16 Jul), consistent with Trade 2."
+ }
+]

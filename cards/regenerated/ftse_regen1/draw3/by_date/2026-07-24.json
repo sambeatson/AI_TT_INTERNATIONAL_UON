@@ -1,0 +1,188 @@
+[
+ {
+  "report_date": "2026-07-24",
+  "report_file": "FTSE100_Report_24Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-24.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-23.csv",
+  "last_bar_broker": "2026-07-23 22:45",
+  "direction_score": -0.0638,
+  "direction_components": {
+   "short_term_bias": {
+    "signal": 0,
+    "weight": 0.25,
+    "product": 0.0
+   },
+   "medium_term_regime": {
+    "signal": 0,
+    "weight": 0.2,
+    "product": 0.0
+   },
+   "volator": {
+    "signal": 0,
+    "weight": 0.1,
+    "product": 0.0
+   },
+   "kaufman_ker": {
+    "signal": 0.07,
+    "weight": 0.15,
+    "product": 0.0105
+   },
+   "sentiment": {
+    "signal": 0.005,
+    "weight": 0.15,
+    "product": 0.00075
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "product": -0.075
+   }
+  },
+  "regime": "RANGE",
+  "card_id": "2026-07-24_Trade_1",
+  "strategy": "Trade 1 - Daily Directional",
+  "family": "Trade 1",
+  "direction": "n/a",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "SUPPRESSED - no entry",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "be_rule": "NONE",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "SUPPRESSED - direction score -0.0638 (|score| 0.0638 < 0.25 conviction threshold). No entry, stop or targets.",
+  "suppressed": true,
+  "rationale": "Direction score (M5 s2, cash basis, ATR14 116.35): short-term bias 0 x0.25 (RSI2 cash 59.69; D-1 close 10618.10 < open 10704.00 with RSI2>50 -> neutral; 5d move up) ; medium regime 0 x0.20 (RANGE); VOLator 0 x0.10 (ATR14 116.35 below its prior-9 mean 119.08, slope about -1.0/session = compression); KER +0.07 x0.15 (QA-reproduced cash KER 0.070, medium-term move +2.57% so sign +; own recomputation 0.004-0.084 depending on window, all <0.13) = +0.0105; sentiment +0.005 x0.15 = +0.00075 (carried from report s13a nine contributions with high=2/med=1.5/low=1 weights; the printed -0.20 does not reproduce per QA item 12; news cannot be verified here; using -0.20 gives score -0.095, still suppressed); cross-asset CONTRADICT -0.5 x0.15 = -0.075 (US500 5d 7526->7418 down, VIX 17.2->18.9 up, both contradict the up medium-term move; USDX 100.68->101.48 up confirms; DAX/ESTX contradict per report, not verifiable). Sum = -0.0638; |score| < 0.25 -> NEUTRAL. Trigger tested: |score| < CONVICTION_THRESHOLD 0.25 -> fired; Trade 1 suppressed. Anchor would have been 09:00 broker (07:00 UK); D-1 cash close reference 10618.10 (23 Jul), full-day 10594.90. Regime RANGE: KER cash 0.07 < 0.13 trend threshold (inside 0.09 ranging band) AND volator slope <= 0 (ATR14 compressing on cash series) satisfy the M5 s3a dual gate; 25-session slope +5.81 pts/session, net +2.57% (10352.3 -> 10618.1) is not trend-grade. The report's TRANSITION/TRENDING reading rested on KER 0.51, slope +22.8 and ATR expansion computed from misaligned OHLC; none reproduces on the level file."
+ },
+ {
+  "report_date": "2026-07-24",
+  "report_file": "FTSE100_Report_24Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-24.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-23.csv",
+  "last_bar_broker": "2026-07-23 22:45",
+  "direction_score": -0.0638,
+  "direction_components": {
+   "short_term_bias": {
+    "signal": 0,
+    "weight": 0.25,
+    "product": 0.0
+   },
+   "medium_term_regime": {
+    "signal": 0,
+    "weight": 0.2,
+    "product": 0.0
+   },
+   "volator": {
+    "signal": 0,
+    "weight": 0.1,
+    "product": 0.0
+   },
+   "kaufman_ker": {
+    "signal": 0.07,
+    "weight": 0.15,
+    "product": 0.0105
+   },
+   "sentiment": {
+    "signal": 0.005,
+    "weight": 0.15,
+    "product": 0.00075
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "product": -0.075
+   }
+  },
+  "regime": "RANGE",
+  "card_id": "2026-07-24_Trade_2",
+  "strategy": "Trade 2 - Pivot (RANGE branch, long at daily S1)",
+  "family": "Trade 2",
+  "direction": "LONG",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "BUY LIMIT at daily S1 (cash) 10573.67, working from 09:00 broker; ref D-1 cash close 10618.10, gap -44.43; prev_close_full 10594.90",
+  "entry": 10573.67,
+  "stop": 10500.15,
+  "tp1": 10647.19,
+  "tp2": 10720.71,
+  "tp3": null,
+  "card_R_points": 73.52,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "Three equal units. Unit 1 exits at TP1 10647.19 (+1R), Unit 2 at TP2 10720.71 (+2R). On Unit 2 fill Unit 3 stop moves to entry + 0.2R = 10588.37. Unit 3 has no price target; exit at session close. Invalidation: daily close below 10,529.23 (daily S2).",
+  "suppressed": false,
+  "rationale": "Branch RANGE (mean-reversion), Trade 2 M5 s5.2a. Regime RANGE: KER cash 0.07 < 0.13 trend threshold (inside 0.09 ranging band) AND volator slope <= 0 (ATR14 compressing on cash series) satisfy the M5 s3a dual gate; 25-session slope +5.81 pts/session, net +2.57% (10352.3 -> 10618.1) is not trend-grade. The report's TRANSITION/TRENDING reading rested on KER 0.51, slope +22.8 and ATR expansion computed from misaligned OHLC; none reproduces on the level file. Side: nearest tier to price - daily S1 (cash) 10573.67 is 44.43 below D-1 cash close 10618.10 (0.38 ATR -> tier 1) vs R1 10686.17 at 68.07; S1 sits 6.7 from the 61.8% fib (10580.40) of the 10470.10 (21 Jul 10:15 broker) -> 10758.90 (22 Jul 16:30 broker) swing, inside 0.15xATR=17.45, so S1 is the promoted first pick (strong confluence; weekly P 10533.7 and 78.6% fib 10531.9 also sit by S2). Entry = d_cash_S1 10573.6667 -> 10573.67 BUY LIMIT; reference close for order side is prev_close_full 10594.90 (gap -21.23; entry below it, valid) and D-1 cash close 10618.10 (gap -44.43). Stop = next structure d_cash_S2 10529.2333 - 0.25xATR14 (29.09) = 10500.15 (structural level closer than the 3.5xATR cap). R = 73.52 = 0.63 x ATR14 cash 116.35 (14 cash-session daily bars). TP1 = entry+1R = 10647.19; TP2 = entry+2R = 10720.71; Unit 3 stop on TP2 fill = entry+0.2R = 10588.37. TP3: the runner target 'toward P' (d_cash_P 10641.73) lies below TP1, so no ladder-valid runner target exists: TP3 null, runner exits at session close. Pivot tiers computed from the execution (broker cash-session) series, session 23 Jul -> CORROBORATED by construction. Invalidation: daily close below daily S2 10529.23 (= weekly P 10533.7 zone), 29.09 beyond... stop 10500.14 is 29.09 below invalidation (> 0.15xATR 17.45): stop beyond invalidation. Opposes Trade 3B (short) - permitted by M5 simultaneous long/short policy. Caveat: UK retail sales 07:00 UK (09:00 broker, consensus -1.0% m/m) collides with the 09:00 anchor; UK/EZ flash PMIs 08:30-09:30 UK; US new home sales 15:00 UK."
+ },
+ {
+  "report_date": "2026-07-24",
+  "report_file": "FTSE100_Report_24Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_ftse_regen1_draw3",
+  "draw": 3,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/UK100_by_date/2026-07-24.csv",
+  "slice_file": "data/slices/UK100/UK100_upto_2026-07-23.csv",
+  "last_bar_broker": "2026-07-23 22:45",
+  "direction_score": -0.0638,
+  "direction_components": {
+   "short_term_bias": {
+    "signal": 0,
+    "weight": 0.25,
+    "product": 0.0
+   },
+   "medium_term_regime": {
+    "signal": 0,
+    "weight": 0.2,
+    "product": 0.0
+   },
+   "volator": {
+    "signal": 0,
+    "weight": 0.1,
+    "product": 0.0
+   },
+   "kaufman_ker": {
+    "signal": 0.07,
+    "weight": 0.15,
+    "product": 0.0105
+   },
+   "sentiment": {
+    "signal": 0.005,
+    "weight": 0.15,
+    "product": 0.00075
+   },
+   "cross_asset": {
+    "signal": -0.5,
+    "weight": 0.15,
+    "product": -0.075
+   }
+  },
+  "regime": "RANGE",
+  "card_id": "2026-07-24_Trade_3B",
+  "strategy": "Trade 3B - Mean-Reversion (RANGE, short at 78.6%)",
+  "family": "Trade 3B",
+  "direction": "SHORT",
+  "entry_mode": "LIMIT",
+  "entry_mode_text": "SELL LIMIT at 78.6% of 25d cash range 10666.71, working from 09:00 broker; ref D-1 cash close 10618.10, gap +48.61",
+  "entry": 10666.71,
+  "stop": 10715.82,
+  "tp1": 10543.5,
+  "tp2": 10371.18,
+  "tp3": null,
+  "card_R_points": 49.11,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "TRACE",
+  "management_text": "Three equal units. Unit 1 exits at TP1 10543.5 (range midpoint), Unit 2 at TP2 10371.18. On Unit 2 fill Unit 3 stop moves to entry - 0.2R = 10656.89, then to 10565.04 (midpoint + 0.05 x width). Invalidation: daily close above 10,758.90.",
+  "suppressed": false,
+  "rationale": "Fork RANGE -> Trade 3B (M5 s5.3b). Regime RANGE: KER cash 0.07 < 0.13 trend threshold (inside 0.09 ranging band) AND volator slope <= 0 (ATR14 compressing on cash series) satisfy the M5 s3a dual gate; 25-session slope +5.81 pts/session, net +2.57% (10352.3 -> 10618.1) is not trend-grade. The report's TRANSITION/TRENDING reading rested on KER 0.51, slope +22.8 and ATR expansion computed from misaligned OHLC; none reproduces on the level file. Eligibility s4b: swing 10470.10 (21 Jul 10:15 broker, cash low) -> 10758.90 (22 Jul 16:30 broker, cash high), magnitude 288.80 = 2.48 x ATR14 (116.35) >= 2x, lookback 3 sessions (inside default 4); swing is up. Range = 25d cash swings: low 10328.1 (23 Jun 10:00 broker) / high 10758.9 (22 Jul 16:30 broker), width 430.8. D-1 cash close 10618.10 sits at 67% of the range; nearest fade edge is the upper one, so SHORT: SELL LIMIT at 78.6% of range = 10328.1+0.786x430.8 = 10666.71 (gap to D-1 cash close +48.61, to prev_close_full +71.81: above, valid for a sell limit). The 88.6% end (10709.8) would give R below 0.3xATR so 78.6% is used. Stop = high - 0.10 x width = 10715.82. R = 49.11 = 0.42 x ATR14. TP1 = range midpoint 10543.5 (123.21 pts = 1.06 ATR, <2.5); TP2 = low + 0.10 x width = 10371.18; TP3 breakout runner: null (no target beyond TP2). Unit 3 stop on TP2 fill = entry - 0.2R = 10656.89; 3B runner rule then tightens to mid + 0.05 x width = 10565.04. Invalidation: daily close above the 25d high 10758.90 (43.08 beyond stop 10715.82 > 0.15xATR). Opposes Trade 2 long; permitted. No entry confluence with weekly/monthly tiers (nearest: daily R1 10686.17, 19.5 away). Caveats: UK retail sales 07:00 UK (09:00 broker) and flash PMIs 09:30 UK collide with the day; 22 Jul high is the range top the card fades."
+ }
+]

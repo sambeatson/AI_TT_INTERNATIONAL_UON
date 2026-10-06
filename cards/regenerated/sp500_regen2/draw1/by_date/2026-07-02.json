@@ -1,0 +1,206 @@
+[
+ {
+  "report_date": "2026-07-02",
+  "report_file": "SP500_Report_02Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-02.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-01.csv",
+  "last_bar_broker": "2026-07-01 23:45",
+  "direction_score": 0.43,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 92.29; 01 Jul cash close 7489.1 > open 7478.6; 5-day closes 7365.9 -> 7489.1 rising => Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "Transitional (overlap 0.56, persistence 0.67, mean directional body -0.03 over last 25 cash sessions: neither trending nor ranging criteria met); last completed swing is up (26 Jun low 7303.1 -> 01 Jul high 7525.4) so +0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "slope of last 10 scaled ATR/close z-scores (25-session window, clipped +-1) = -0.095 => compression/not expanding => 0 (report called it expansion-up; the data does not support that)"
+   },
+   "kaufman_ker": {
+    "signal": 0.097,
+    "weight": 0.15,
+    "contribution": 0.0146,
+    "basis": "KER period 13, EMA3-smoothed, cash closes = +0.097 (Ranging-Neutral, |KER|<0.13), 13-session move positive"
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645,
+    "basis": "CARRIED from report s13b (unverified): sum(w*s)=+1.5 / sum(w)=3.5 = +0.43; report printed +0.34 after a double-counting moderation, which QA item 17 rejects; using +0.34 would give 0.051 and total 0.416"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "only VIX derivable from slices (17.81 on 01 Jul vs 18.51 on 25 Jun, falling, confirms); USDX and DAX not in slices => fewer than two verifiable counters => NEUTRAL per M3 11c => 0"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-02_Trade_1",
+  "strategy": "Daily Directional",
+  "family": "Trade 1",
+  "direction": "LONG",
+  "entry_mode": "MARKET",
+  "entry_mode_text": "MARKET @ 07:00 UK daily-open anchor (09:00 broker); reference close = prev_close_full 7478.8 (01 Jul 2026), signed gap 0.0",
+  "entry": 7478.8,
+  "stop": 7429.8,
+  "tp1": 7527.8,
+  "tp2": 7576.8,
+  "tp3": 7753.26,
+  "card_R_points": 49.0,
+  "be_rule": "BE_0.2R_ON_TP2",
+  "runner_rule": "SESSION_CLOSE_TIMESTOP",
+  "management_text": "3 equal units. Unit 1 exits at TP1 (+1R = 7527.80, +49.0 pts); Unit 2 at TP2 (+2R = 7576.80, +98.0 pts); on the TP2 fill Unit 3 stop moves to entry + 0.2R = 7488.60 (+9.8 pts). Unit 3 runner is time-stopped at the cash session close (23:00 broker) or price-stopped at 3 x ATR14 from entry = 7753.26 (+274.46 pts), whichever comes first. Thesis invalidation: daily close below 7379.87 (daily S3, cash); stop sits ahead of invalidation. ATR14 = 91.49 (cash 16:30-23:00 broker, 14 sessions to 01 Jul); R/ATR = 0.54 (no wide-stop flag); 2R = 98.0 < 3 x ATR (no TP2-ambitious flag). Collision: June NFP / unemployment rate release 02 Jul 15:30 broker, after the 09:00 entry and before the US open.",
+  "suppressed": false,
+  "rationale": "Direction: score +0.43 >= 0.25 => LONG (components in direction_components). Regime TRANSITION. Entry: MARKET at prev_close_full 7478.8 (01 Jul 2026 last executable price, level file) per session basis rule; the cash close is 7489.1. Anchor 09:00 broker (07:00 UK default); NFP at 15:30 broker is after the anchor, no reason to move to 02:00 or 16:30. Stop (M5 4c): tighter of (a) swing_low_5d_cash 7303.1 (26 Jun 2026 cash low, bar 7303.1 on the 26 Jun session) - 0.25*ATR14cash (0.25*91.4857 = 22.8714) = 7280.23 [R 198.57], or (b) nearest support below entry = d_cash_S1 7452.6667 (01 Jul cash L 7452.6, P 7489.03 is above entry) - 22.8714 = 7429.80 [R 49.00]. (b) is tighter => stop 7429.80. Cap 3.5*ATR = 320.2 not binding. R = 49.00 = 0.54 x ATR (>= 0.3 x ATR = 27.45; not > 1 x ATR so no wide-stop flag). TP1 = entry + 1R = 7527.80 (within 2.5 ATR of entry); TP2 = entry + 2R = 7576.80; TP3 = runner price cap entry + 3*ATR = 7478.8 + 274.46 = 7753.26 (also time-stopped at session close). Unit 3 stop at TP2 fill = entry + 0.2R = 7488.60 (above entry, profitable side for a long). Confluence: stop 7429.80 sits exactly 0.25 ATR beyond daily S1 (cash); TP1 7527.80 is within 3 pts of d_cash_R1 7525.47 and the 7525.4 5-day/01 Jul high (strong confluence, resistance). Invalidation: daily close below d_cash_S3 7379.87; daily S2 7416.23 is only 13.56 pts (< 0.15 ATR = 13.72) from the stop so it cannot serve as invalidation, hence S3 (50.0 pts beyond stop). Carried from QA: report numbers (7499.36 entry, 7412.56 stop) discarded."
+ },
+ {
+  "report_date": "2026-07-02",
+  "report_file": "SP500_Report_02Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-02.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-01.csv",
+  "last_bar_broker": "2026-07-01 23:45",
+  "direction_score": 0.43,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 92.29; 01 Jul cash close 7489.1 > open 7478.6; 5-day closes 7365.9 -> 7489.1 rising => Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "Transitional (overlap 0.56, persistence 0.67, mean directional body -0.03 over last 25 cash sessions: neither trending nor ranging criteria met); last completed swing is up (26 Jun low 7303.1 -> 01 Jul high 7525.4) so +0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "slope of last 10 scaled ATR/close z-scores (25-session window, clipped +-1) = -0.095 => compression/not expanding => 0 (report called it expansion-up; the data does not support that)"
+   },
+   "kaufman_ker": {
+    "signal": 0.097,
+    "weight": 0.15,
+    "contribution": 0.0146,
+    "basis": "KER period 13, EMA3-smoothed, cash closes = +0.097 (Ranging-Neutral, |KER|<0.13), 13-session move positive"
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645,
+    "basis": "CARRIED from report s13b (unverified): sum(w*s)=+1.5 / sum(w)=3.5 = +0.43; report printed +0.34 after a double-counting moderation, which QA item 17 rejects; using +0.34 would give 0.051 and total 0.416"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "only VIX derivable from slices (17.81 on 01 Jul vs 18.51 on 25 Jun, falling, confirms); USDX and DAX not in slices => fewer than two verifiable counters => NEUTRAL per M3 11c => 0"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-02_Trade_2",
+  "strategy": "Pivot - TRANSITION branch (breakout side only)",
+  "family": "Trade 2",
+  "direction": "n/a",
+  "entry_mode": "STOP",
+  "entry_mode_text": "SUPPRESSED - no confirmed 3C break, breakout side undefined (M5 5.2c)",
+  "management_text": "SUPPRESSED. Regime TRANSITION => Trade 2 is breakout-side only and aligned with Trade 3C. Trade 3C has no confirmed break (D-1 cash close 7489.1 inside 25-day boundaries 7243.1 / 7624.6), so no breakout side exists; a counter-side or mean-reversion limit is barred. Pivot tiers are not the reason: daily/weekly/monthly tiers are computed from the execution (broker) series and are CORROBORATED.",
+  "rationale": "Regime TRANSITION (see Trade 1 and direction_components: overlap 0.56, persistence 0.67, KER +0.097 inside +-0.13, volator slope -0.095; Step-4 fall-through). M5 3/5.2c: Trade 2 = breakout side only, as identified by Trade 3C. 3C gate fails (see Trade 3C), therefore breakout side undefined and Trade 2 suppressed. Had a long breakout side existed the construction would have been entry = P + 0.10*(R1-P) = 7489.03+3.64 = 7492.67 (above prev_close_full 7478.8 as a BUY STOP) - not issued.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE"
+ },
+ {
+  "report_date": "2026-07-02",
+  "report_file": "SP500_Report_02Jul2026.md",
+  "anchor_broker": "09:00",
+  "source": "regen_sp500_regen2_draw1",
+  "draw": 1,
+  "module_sha": "f69b2cd",
+  "levels_file": "data/levels/US500_by_date/2026-07-02.csv",
+  "slice_file": "data/slices/US500/US500_upto_2026-07-01.csv",
+  "last_bar_broker": "2026-07-01 23:45",
+  "direction_score": 0.43,
+  "direction_components": {
+   "short_term_technical": {
+    "signal": 1.0,
+    "weight": 0.25,
+    "contribution": 0.25,
+    "basis": "RSI2 cash 92.29; 01 Jul cash close 7489.1 > open 7478.6; 5-day closes 7365.9 -> 7489.1 rising => Bullish"
+   },
+   "medium_term_regime": {
+    "signal": 0.5,
+    "weight": 0.2,
+    "contribution": 0.1,
+    "basis": "Transitional (overlap 0.56, persistence 0.67, mean directional body -0.03 over last 25 cash sessions: neither trending nor ranging criteria met); last completed swing is up (26 Jun low 7303.1 -> 01 Jul high 7525.4) so +0.5"
+   },
+   "volator": {
+    "signal": 0.0,
+    "weight": 0.1,
+    "contribution": 0.0,
+    "basis": "slope of last 10 scaled ATR/close z-scores (25-session window, clipped +-1) = -0.095 => compression/not expanding => 0 (report called it expansion-up; the data does not support that)"
+   },
+   "kaufman_ker": {
+    "signal": 0.097,
+    "weight": 0.15,
+    "contribution": 0.0146,
+    "basis": "KER period 13, EMA3-smoothed, cash closes = +0.097 (Ranging-Neutral, |KER|<0.13), 13-session move positive"
+   },
+   "sentiment": {
+    "signal": 0.43,
+    "weight": 0.15,
+    "contribution": 0.0645,
+    "basis": "CARRIED from report s13b (unverified): sum(w*s)=+1.5 / sum(w)=3.5 = +0.43; report printed +0.34 after a double-counting moderation, which QA item 17 rejects; using +0.34 would give 0.051 and total 0.416"
+   },
+   "cross_asset": {
+    "signal": 0.0,
+    "weight": 0.15,
+    "contribution": 0.0,
+    "basis": "only VIX derivable from slices (17.81 on 01 Jul vs 18.51 on 25 Jun, falling, confirms); USDX and DAX not in slices => fewer than two verifiable counters => NEUTRAL per M3 11c => 0"
+   }
+  },
+  "regime": "TRANSITION",
+  "card_id": "2026-07-02_Trade_3C",
+  "strategy": "Momentum-Breakout (TRANSITION fork)",
+  "family": "Trade 3C",
+  "direction": "n/a",
+  "entry_mode": "CONDITIONAL",
+  "entry_mode_text": "SUPPRESSED - no confirmed break per M5 4d",
+  "management_text": "SUPPRESSED. 3C requires a daily close beyond the 25-day boundary by >= 0.25 x ATR14 (22.87): close > 7624.6 + 22.87 = 7647.47 or close < 7243.1 - 22.87 = 7220.23. D-1 cash close is 7489.1, inside both. Fork stays 3C (TRANSITION); no substitution of 3A/3B.",
+  "rationale": "Regime TRANSITION => 3C by fixed mapping (M5 5.3). swing_high_25d_cash 7624.6 (02 Jun 2026), swing_low_25d_cash 7243.1 (09 Jun 2026), width 381.5, ATR14 cash 91.4857, 0.25*ATR = 22.87. Confirmed-break test on 01 Jul cash close 7489.1: FAIL on both sides => suppressed. The 5-day swing 7303.1 -> 7525.4 (222.3 pts = 2.43 x ATR) would qualify for a 3A but 3A is not the selected fork and is not issued.",
+  "entry": null,
+  "stop": null,
+  "tp1": null,
+  "tp2": null,
+  "tp3": null,
+  "card_R_points": null,
+  "suppressed": true,
+  "be_rule": "NONE",
+  "runner_rule": "TRACE"
+ }
+]

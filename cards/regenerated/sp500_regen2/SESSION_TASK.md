@@ -28,6 +28,10 @@ writing your own one file (no other draw, no other run) · `results/` · `data/r
 and `README.md` (they quote past outcomes) · any report, slice, level file or QA file for any date other
 than D · the web. **You do not know what the market did on or after D. Do not speculate.**
 
+**Never list a directory under `data/`, `qa/`, `reports/` or `cards/`** (no `ls`, `os.listdir`, `glob`):
+open only the exact paths in the table above with `<D>` / `<D-1>` substituted. Those folders hold files
+for later dates, and listing one and opening the first entry is how a session sees the future.
+
 ## Basis — fixed for every session so the draws are comparable
 - Pivot tiers, ATR14, RSI2 and swing extremes: the **`_cash`** columns (the S&P cash session,
   16:30–23:00 broker, as M3 defines it for an index).

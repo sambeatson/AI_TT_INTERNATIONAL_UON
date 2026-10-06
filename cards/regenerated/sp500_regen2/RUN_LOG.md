@@ -24,5 +24,18 @@ Twenty other early sessions ran on the shared directory without reporting a coll
 kept: a collision manifested as a visible error or as foreign data, and these sessions reported neither.
 This is a residual risk, stated rather than hidden.
 
+## Later-dated slice opened (2026-06-17, draw 1)
+The 06-17 session listed `data/slices/USDX/`, opened the first file the listing returned, and saw USDX
+closes for late June and July 2026 (after D). It reported using none of it and built its cross-asset read
+from `USDX_upto_2026-06-16.csv`. Same rule as above: an unverifiable exposure to post-D data, so the
+output is **superseded** (`superseded/2026-06-17_draw1.json`) and the date re-run. `SESSION_TASK.md` now
+forbids listing any directory under `data/`, `qa/`, `reports/` or `cards/` (hygiene only; construction
+rules unchanged).
+
+## In-flight commits
+`2026-06-16`, `2026-06-19` and `2026-06-26` draw-1 files were committed while their sessions were still
+writing; each session then rewrote its own file. The committed final version is the session's own last
+write, not a second draw.
+
 ## Late-date QA
 2026-06-23, 07-06, 07-07 were QA-scored late under the same brief as the other 54.

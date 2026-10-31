@@ -8,6 +8,10 @@ Edits are shown as **Before / After**, numbered by poster panel.
 
 ---
 
+> **Update (draft 2 review):** the WTI, Bitcoin and Shanghai counts have now been checked against
+> `sambeatson/AI_Report_Analysis`. See **Addendum B** for the corrected corpus line. It supersedes the
+> [n] placeholders, the date-range comment and the [CHECK] items in sections 1 and 9.
+
 ## 0. Priority list
 
 | # | Panel | Issue | Severity |
@@ -273,23 +277,52 @@ Nothing else in sections 1–9 above has been applied yet:
 - the findings have no numbers;
 - there is no evaluation panel.
 
-## B. Report counts for WTI, Bitcoin and Shanghai: not available to me
+## B. Report counts for all six markets (from `sambeatson/AI_Report_Analysis`, `main`)
 
-I searched for these counts in three places and found none:
+**Correction.** My first pass searched only this repo and your Drive. The full report set is in
+`AI_Report_Analysis` (main branch, uploaded 14 Aug 2026), and I have now counted it. **This replaces
+every [n] / [CHECK] count in sections 1 and 9.**
 
-| Place searched | What it holds |
-|---|---|
-| This repo, every branch and the full git history | Report texts for **S&P 500, FTSE 100 and gold only**. For Bitcoin and WTI there are price files only (`data/raw/BTCUSD_p_M15.csv`, `data/raw/SpotCrude_p_M15.csv`). Nothing for Shanghai. |
-| Earlier notes in this session | No WTI, Bitcoin or Shanghai report count is ever stated. "39 Bitcoin" appears only on the poster. |
-| Your Google Drive (via the connector) | No WTI, Bitcoin, crude or Shanghai report files. |
+| Market | Files | Distinct report dates | Range | Notes |
+|---|---:|---:|---|---|
+| S&P 500 | 57 | 57 | 11 May–31 Jul | |
+| FTSE 100 | 58 | 57 | 11 May–31 Jul | Two reports on 15 May. **40 of 58 are combined FTSE 100 / Euro Stoxx reports.** |
+| Gold | 57 | 57 | 11 May–31 Jul | |
+| Bitcoin | 39 | 39 | **10 May–2 Aug** | 12 fall on weekends. The series is irregular, not daily. |
+| WTI crude | 58 | 57 | 11 May–31 Jul | Two independent reports for 10 Jul (`WTI_Report_10Jul2026`, `WTI_Report_10_Jul_2026`). |
+| Shanghai Composite | 55 | 54 | 11 May–31 Jul | `Shanghai_Composite_Report_18Jun2026` was requested for 19 Jun, but anchored to 18 Jun because the exchange was closed for the Dragon Boat Festival. That gives 55 requested sessions and 54 distinct anchor dates. |
+| **Total** | **324** | **321** | **10 May–2 Aug 2026** | |
 
-Your `sambeatson/AI_Report_Analysis` repo may hold them. Attaching it to this session was blocked by the
-permission check, so I have not looked. If you approve access, or drop the WTI, Bitcoin and Shanghai
-report folders into `reports/md/`, I can count dates and files, check for duplicate dates as I did for
-FTSE, and give you the final corpus line.
+Two files carry an `M1_` prefix (`M1_Bitcoin_Report_21Jul2026`, `M1_Shanghai_Daily_22Jul2026`). They are
+full reports, not variable sheets, and they are counted above.
 
-Until then the corpus line should either keep **[n]** placeholders or leave WTI and Shanghai out
-explicitly (see 1, option A).
+### What this means for the poster
+
+- **The date range "10 May–2 Aug" is correct.** Bitcoin sets both end-points (10 May and 2 Aug fall on
+  Sundays). Withdraw my earlier suggestion to change it to 11 May–31 Jul.
+- **"211" is the four-market total.** The arithmetic is right (57 + 57 + 39 + 58), but WTI (58) and
+  Shanghai (55) are missing.
+- **Bitcoin 39 is correct.**
+
+### Corpus line: before
+
+> **211 report documents, 10 May-2 August 2026:**
+> S&P500 (57), gold (57), Bitcoin (39), FTSE100 (58).
+
+### Corpus line: after (documents, as the poster counts now)
+
+> **324 report documents across six markets, 10 May–2 August 2026:**
+> S&P 500 (57), FTSE 100 / Euro Stoxx (58), gold (57), WTI crude (58), Shanghai Composite (55), Bitcoin (39).
+
+### Alternative (report dates, matching the analysis)
+
+> **321 daily reports across six markets, 10 May–2 August 2026:**
+> S&P 500 (57), FTSE 100 (57), gold (57), WTI (57), Shanghai (54), Bitcoin (39).
+
+Either works. If you keep documents, it is worth a footnote: *"three dates carry two reports."*
+
+**Order.** Grouping markets by class reads better than the current order: equity indices (S&P, FTSE,
+Shanghai), then commodities (gold, WTI), then crypto (Bitcoin).
 
 ## C. Further comments
 
@@ -302,7 +335,7 @@ point with a subtitle instead:
 
 > Before: *Guiding real-time LLM market analytics for the UK financial industry*
 > After:  *Guiding real-time LLM market analytics for the UK financial industry*
->         *Evidence from daily pre-session reports across [k] markets, May–July 2026* (≈40 pt, regular weight)
+>         *Evidence from daily pre-session reports across six markets, May–July 2026* (≈40 pt, regular weight)
 
 ### C2. Type sizes at A0
 
@@ -339,15 +372,16 @@ The right ~40 % of the dark bar is empty. You could use it for a three-number ca
 Counts: 3 assets × 57 reports QA-scored, and 513 rebuilt cards per index (3 draws × 57 dates × 3 card slots) for S&P and FTSE. Recount
 before printing if gold Stage 2 is added.
 
-### C5. Bitcoin: 39 vs 57 needs a word of explanation
+### C5. Bitcoin: 39 reports over 85 days needs a word of explanation
 
-A reader will ask why Bitcoin has fewer reports when it trades seven days a week. Add a footnote with the
-reason, e.g. "Bitcoin series started [date]" or "weekdays from [date] only" **[CHECK]**. If the
-10 May / 2 Aug end-points come from Bitcoin weekend reports, the footnote should say that too.
+Bitcoin trades every day, yet has 39 reports across 85 calendar days, 12 of them at weekends. A reader
+will ask why. Add a footnote such as *"Bitcoin reports were produced on selected days, including weekends,
+rather than every session"* **[CHECK the actual reason]**. This also explains why the corpus range runs
+Sunday to Sunday.
 
 ### C6. "211 report documents" vs what was evaluated
 
-Only S&P, FTSE and gold reports have been QA-scored (171). The poster implies all 211 were examined
+Only S&P, FTSE and gold reports have been QA-scored (171). The poster implies all 211 (now 324) were examined
 ("We examine factual reliability…"). Either scope the sentence or add the evaluated count:
 
 > Before: *We examine factual reliability, numerical consistency, selective news coverage and inferential

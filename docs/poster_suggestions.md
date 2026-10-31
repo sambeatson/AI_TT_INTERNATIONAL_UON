@@ -393,3 +393,65 @@ Only S&P, FTSE and gold reports have been QA-scored (171). The poster implies al
 
 UKFin+ and EPSRC posters usually carry the grant reference (EP/…) and a one-line acknowledgement. If UKFin+
 supplied a logo pack, the text-only "UKFin+ Pilot" block may need to be replaced with their logo.
+
+---
+
+# Addendum 2: poster drafts 3–4, the C2 vs C3 chart
+
+## D1. What the chart shows
+
+Each bar is the mean of 57 reviewer ratings on the Trust Score v3.7 0–5 rubric.
+
+- **C2 (structure)** asks whether every required section of the M4 template is present, in order and
+  correctly formatted.
+- **C3 (accuracy and evidence)** asks four things:
+  - whether the prior-session OHLC is triangulated across the named sources and reconciles with the market;
+  - whether every quantitative claim is sourced;
+  - whether calculations (pivots, RSI2, ATR, the direction score) are shown and reproduce;
+  - whether the numbers agree across sections and every source is real.
+
+A C3 of 2 means "partly sourced, with material reconciliation failures", not "40 % correct".
+
+## D2. Why C3 is so low: two separate causes
+
+**1. The override mechanically zeros C3.** Under Trust Score v3.7, a fabricated or unverifiable source
+sets C3 to 0. Every zero in the data is an override case:
+
+| | C3 mean (poster) | Reports zeroed by override | C3 mean, other reports |
+|---|---:|---:|---:|
+| S&P 500 | 1.65 | 13 | 2.14 |
+| FTSE 100 | 1.11 | 21 | 1.75 |
+| Gold | 2.16 | 2 (+1 other zero) | 2.24 |
+
+So more than half of the S&P–gold gap, and most of the FTSE shortfall, comes from the source-fabrication
+override rather than from graded inaccuracy.
+
+**2. On the reports that are not zeroed, the numbers still don't reconcile.** C3 sits around 2. The
+reviewers' recurring reasons were:
+- **Wrong input session.** Pivots are computed from D−2 or from the wrong week or month. The arithmetic
+  reproduces exactly; the inputs are wrong.
+- **Prior-session OHLC off the actual feed.** For the FTSE the gap is 15–130 points. Some opens are
+  copied from the prior close and labelled "corroborated".
+- **ATR understated or never stated.** For the FTSE the reports give 60–90 against a real 100–150.
+- **RSI2 that doesn't reproduce** from the report's own closes.
+- **The direction score doesn't add up** to its listed components.
+- **Unsourced figures** in the narrative sections.
+
+This is the pattern the chart title describes: the model follows the template very well (C2 ≈ 4) but
+does not reliably retrieve and reconcile market numbers (C3 ≈ 1–2).
+
+**Caveat on basis.** The reviewer checks OHLC against the broker CFD feed (UK100, US500, XAUUSD). Part of
+the small OHLC gaps may be a basis difference (cash vs CFD) rather than an error. The large gaps
+(wrong session, copied opens) are errors on any basis.
+
+## D3. Suggested poster wording (panel 05, under the chart)
+
+**Before:**
+
+> C3 rates figures, calculations and source support; it is not a percentage of correct data.
+
+**After:**
+
+> C3 rates figures, calculations and source support; it is not a percentage of correct data. A fabricated
+> source sets C3 to 0 (13 S&P, 21 FTSE, 2 gold reports). Excluding these: 2.1 / 1.8 / 2.2. Common faults:
+> levels built on the wrong prior session, understated ATR.

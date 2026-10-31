@@ -334,9 +334,9 @@ either as a print-resolution PNG or SVG matching the poster's navy and teal.
 
 The right ~40 % of the dark bar is empty. You could use it for a three-number call-out:
 
-> **171 reports QA-scored · 513 rebuilt trade cards · 0 detectable gain from rebuilding**
+> **171 reports QA-scored · 1,026 rebuilt trade cards · no detectable gain from rebuilding**
 
-Counts: 3 × 57 reports QA-scored, and 3 draws × 57 dates × 3 card slots for each of S&P and FTSE. Recount
+Counts: 3 assets × 57 reports QA-scored, and 513 rebuilt cards per index (3 draws × 57 dates × 3 card slots) for S&P and FTSE. Recount
 before printing if gold Stage 2 is added.
 
 ### C5. Bitcoin: 39 vs 57 needs a word of explanation

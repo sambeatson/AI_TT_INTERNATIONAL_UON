@@ -470,25 +470,25 @@ sources. So the QA scored what the module asked for, but that is not what matter
 
 ## E2. Splitting C3 into its sub-items
 
-Each QA sheet rates C3 on four sub-items. I parsed all 171 sheets (51–57 usable per item). These are the
-reviewers' raw ratings, before the fabricated-source override is applied:
+Each QA sheet rates C3 on four sub-items. I parsed all 171 sheets (57 per item per asset; corrected in Addendum 4). These are the reviewers'
+raw ratings, before the fabricated-source override is applied:
 
 | C3 sub-item (0–5) | What it tests | Relevant if the partner supplies the data? | S&P | FTSE | Gold |
 |---|---|---|---:|---:|---:|
-| 3.4 Numbers reconcile with market | Fetched OHLC, pivot inputs and ATR match the real feed | **Mostly no.** This is data retrieval. | 1.63 | 1.53 | **0.57** |
-| 3.3 Calculations transparent | Pivots, RSI2, ATR and the direction score are shown and reproduce | **Yes** | 1.91 | 2.11 | 2.44 |
-| 3.2 Citations exist and contain data | News and research sources are real and say what is claimed | **Yes.** This feeds sentiment (panel 03) and macro (panel 04). | 2.16 | 1.52 | 3.89 |
-| 3.1 Quantitative claims sourced | Every figure in the narrative has a source | **Partly.** Price figures would come from the partner; narrative figures still need sources. | 2.25 | 2.23 | 3.30 |
+| 3.4 Numbers reconcile with market | Fetched OHLC, pivot inputs and ATR match the real feed | **Mostly no.** This is data retrieval. | 1.63 | 1.53 | **0.56** |
+| 3.3 Calculations transparent | Pivots, RSI2, ATR and the direction score are shown and reproduce | **Yes** | 1.91 | 2.11 | 2.49 |
+| 3.2 Citations exist and contain data | News and research sources are real and say what is claimed | **Yes.** This feeds sentiment (panel 03) and macro (panel 04). | 2.16 | 1.44 | 3.95 |
+| 3.1 Quantitative claims sourced | Every figure in the narrative has a source | **Partly.** Price figures would come from the partner; narrative figures still need sources. | 2.25 | 2.23 | 3.28 |
 
 ### Reading
 
-- **Data retrieval is the weakest item everywhere.** Gold shows it most starkly: good sources (3.89) but
-  numbers that don't match the market (0.57). For the partner's use, this item largely drops out.
+- **Data retrieval is the weakest item everywhere.** Gold shows it most starkly: good sources (3.95) but
+  numbers that don't match the market (0.56). For the partner's use, this item largely drops out.
 - **Calculation reproducibility (≈2) stays a real weakness** with supplied data. RSI2 that doesn't
   reproduce, direction scores that don't sum and an unstated ATR are not retrieval problems.
 - **Source integrity on the news side matters more for the partner, not less.** The sentiment and macro
-  synthesis is the part they would actually use. FTSE (1.52, with 21 fabricated-source overrides) is the
-  concern; gold (3.89) shows the protocol can work.
+  synthesis is the part they would actually use. FTSE (1.44, with 21 fabricated-source overrides) is the
+  concern; gold (3.95) shows the protocol can work.
 - **Wrong-session pivots** are partly retrieval errors, picking up the wrong day's bar. With supplied data
   and the session pinned in M1, most of them should disappear.
 
@@ -530,7 +530,7 @@ Footnote, before:
 Footnote, after:
 
 > C3 includes the model's own online price retrieval, which deployment would replace with partner
-> data. Excluding that item, calculation reproducibility (≈2/5) and news-source integrity (1.5–3.9/5)
+> data. Excluding that item, calculation reproducibility (≈2/5) and news-source integrity (1.4–4.0/5)
 > remain the weak points.
 
 **Findings text, add one line:**
@@ -546,3 +546,59 @@ Footnote, after:
   supplied numbers only for transcription and consistency.
 - **Bring in WTI, Bitcoin and Shanghai** under the revised rubric. That evaluates the partner's actual
   use rather than the online-retrieval set-up used in the current reports.
+
+---
+
+# Addendum 4: poster draft 5
+
+## F1. Chart numbers verified
+
+Every bar matches the QA sheets (n = 57 per asset):
+
+| | Structure C2 | Calculations 3.3 | Citations 3.2 |
+|---|---:|---:|---:|
+| S&P 500 | 3.93 | 1.91 | 2.16 |
+| FTSE 100 | 3.68 | 2.11 | 1.44 |
+| Gold | 4.09 | 2.49 | 3.95 |
+
+My Addendum 3 table had small parsing errors (FTSE 3.2 1.52, gold 2.44 / 3.89 / 3.30 / 0.57). It has been
+corrected above, so the poster's values were the right ones.
+
+**One footnote nuance.** The footnote says the bars are "subitem scores before category-level overrides".
+That holds for S&P and gold. For FTSE, 3 of the 57 citation (3.2) ratings were entered as **0 because the
+cited source was fabricated**. These are genuine ratings, not a mechanical override, so the bar stands,
+but strictly the footnote should read "mostly before".
+
+## F2. Suggested edits (panel 05 footnote)
+
+**Before:**
+
+> Rubric ratings, **not % correct**. Calculation and citation bars are subitem scores before category-level
+> overrides.
+> Supplied prices still need session, calculation and source checks.
+> Combined QA-guided strategy rebuilds gave mixed results; main-entry 95% gain intervals included zero
+> (57 dates/index).
+
+**After:**
+
+> Rubric ratings, **not % correct**. Calculation and citation bars are subitem scores before
+> category-level overrides; the price-retrieval subitem (3.4) is omitted because the partner supplies
+> prices.
+> Supplied prices still need session, calculation and source checks.
+> Rebuilding strategies on actual prior-session data gave mixed results; main-entry 95% gain intervals
+> included zero (57 dates/index). QA scores did not predict returns (ρ ≈ 0).
+
+Why:
+- Say why 3.4 is missing. Otherwise a reader will wonder where the "accuracy" score went.
+- "Actual prior-session data" makes the partner-relevant point you raised: correct data in, outcomes
+  still unchanged.
+- The ρ ≈ 0 line was dropped in draft 5. It is a clean, citable result, worth one short line.
+
+## F3. Smaller points
+
+- **Evaluation strip, box 4:** "Prior-data rebuild" → "Actual-data rebuild". This echoes the finding.
+- **Chart text size:** the axis ticks (0–5) and the legend look like 18–20 pt at A0. Bar value labels at
+  ≥ 24 pt would read from 2 m.
+- **Optional:** add the US-open result: *"Only at the US cash open did all three rebuilds beat the
+  original for both indices (CIs include zero)."* It is the one consistent pattern and a good talking
+  point at the poster.

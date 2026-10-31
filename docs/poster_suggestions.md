@@ -258,3 +258,104 @@ report quality checks and trading-rule validation must be assessed separately."
 - [ ] Shanghai: in or out of the poster, and its count if in.
 - [ ] Whether any non-FTSE asset also has duplicate-date files. If so, count dates, not files.
 - [ ] Whether gold strategy figures will be ready in time. If not, phrase findings as "S&P 500 and FTSE 100".
+
+---
+
+# Addendum: poster draft 2 (`..._Portrait_2.pdf`)
+
+## A. What changed between drafts 1 and 2
+
+I compared the text of the two PDFs. The only change is the author block. The names moved beside the
+title and "(PI)" was added to Dr Sam Beatson.
+
+Nothing else in sections 1–9 above has been applied yet:
+- the corpus line is unchanged;
+- the findings have no numbers;
+- there is no evaluation panel.
+
+## B. Report counts for WTI, Bitcoin and Shanghai: not available to me
+
+I searched for these counts in three places and found none:
+
+| Place searched | What it holds |
+|---|---|
+| This repo, every branch and the full git history | Report texts for **S&P 500, FTSE 100 and gold only**. For Bitcoin and WTI there are price files only (`data/raw/BTCUSD_p_M15.csv`, `data/raw/SpotCrude_p_M15.csv`). Nothing for Shanghai. |
+| Earlier notes in this session | No WTI, Bitcoin or Shanghai report count is ever stated. "39 Bitcoin" appears only on the poster. |
+| Your Google Drive (via the connector) | No WTI, Bitcoin, crude or Shanghai report files. |
+
+Your `sambeatson/AI_Report_Analysis` repo may hold them. Attaching it to this session was blocked by the
+permission check, so I have not looked. If you approve access, or drop the WTI, Bitcoin and Shanghai
+report folders into `reports/md/`, I can count dates and files, check for duplicate dates as I did for
+FTSE, and give you the final corpus line.
+
+Until then the corpus line should either keep **[n]** placeholders or leave WTI and Shanghai out
+explicitly (see 1, option A).
+
+## C. Further comments
+
+### C1. Title vs QR link: a constraint on suggestion 4
+
+The QR code and its embedded link decode to
+`https://ukfin.network/guiding-real-time-llm-market-analytics-for-the-uk-financial-industry/`.
+So "real-time" is the title registered with UKFin+. **Keep the registered title.** Handle the "daily"
+point with a subtitle instead:
+
+> Before: *Guiding real-time LLM market analytics for the UK financial industry*
+> After:  *Guiding real-time LLM market analytics for the UK financial industry*
+>         *Evidence from daily pre-session reports across [k] markets, May–July 2026* (≈40 pt, regular weight)
+
+### C2. Type sizes at A0
+
+These were measured from the PDF; the page is 2384 × 3370 pt, which is A0.
+
+| Element | Size now | Comment |
+|---|---:|---|
+| Title | 67 pt | Small for A0. It reads well at 1 m but not at 3–4 m. Aim for 90–110 pt. There is room, since the author block moved right. |
+| Panel headings | ≈43 pt | OK. 48–54 pt would separate them more clearly from body text. |
+| Body text | 30–31 pt | Fine (≥ 24 pt is the usual A0 minimum). |
+| Module card text / labels | 22–28 pt | Smallest readable text. Don't go lower. |
+
+### C3. The poster has no figure
+
+An A0 poster with text only loses passers-by. You have the data for one strong figure that carries the
+main finding: **"structure is strong, accuracy is weak"**.
+
+- **Option 1 (recommended):** grouped bars of mean category level (C1–C5, 0–5 scale), with one group per
+  asset (S&P, FTSE, gold). C3 accuracy sits at 1.1–2.2 while C2 structure and C4 reasoning sit near 4.
+  The data is in `qa/*/trust_scores.csv`.
+- **Option 2:** total R by entry time, with the original cards against the three rebuilds, for S&P and
+  FTSE side by side. The data is in `results/*/MASTER.csv`. This shows that timing matters more than
+  rebuilding.
+
+It would fit in panel 05, or in the empty right-hand half of the research-question bar. I can generate
+either as a print-resolution PNG or SVG matching the poster's navy and teal.
+
+### C4. The research-question bar has spare space
+
+The right ~40 % of the dark bar is empty. You could use it for a three-number call-out:
+
+> **171 reports QA-scored · 513 rebuilt trade cards · 0 detectable gain from rebuilding**
+
+Counts: 3 × 57 reports QA-scored, and 3 draws × 57 dates × 3 card slots for each of S&P and FTSE. Recount
+before printing if gold Stage 2 is added.
+
+### C5. Bitcoin: 39 vs 57 needs a word of explanation
+
+A reader will ask why Bitcoin has fewer reports when it trades seven days a week. Add a footnote with the
+reason, e.g. "Bitcoin series started [date]" or "weekdays from [date] only" **[CHECK]**. If the
+10 May / 2 Aug end-points come from Bitcoin weekend reports, the footnote should say that too.
+
+### C6. "211 report documents" vs what was evaluated
+
+Only S&P, FTSE and gold reports have been QA-scored (171). The poster implies all 211 were examined
+("We examine factual reliability…"). Either scope the sentence or add the evaluated count:
+
+> Before: *We examine factual reliability, numerical consistency, selective news coverage and inferential
+> overconfidence.*
+> After:  *In the 171 S&P 500, FTSE 100 and gold reports evaluated so far, we examine factual reliability,
+> numerical consistency, selective news coverage and inferential overconfidence.*
+
+### C7. Funding and acknowledgements line [CHECK]
+
+UKFin+ and EPSRC posters usually carry the grant reference (EP/…) and a one-line acknowledgement. If UKFin+
+supplied a logo pack, the text-only "UKFin+ Pilot" block may need to be replaced with their logo.

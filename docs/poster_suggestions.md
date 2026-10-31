@@ -455,3 +455,94 @@ the small OHLC gaps may be a basis difference (cash vs CFD) rather than an error
 > C3 rates figures, calculations and source support; it is not a percentage of correct data. A fabricated
 > source sets C3 to 0 (13 S&P, 21 FTSE, 2 gold reports). Excluding these: 2.1 / 1.8 / 2.2. Common faults:
 > levels built on the wrong prior session, understated ATR.
+
+---
+
+# Addendum 3: C3 measures data retrieval the partner does not need
+
+## E1. The issue
+
+TT International would feed the workflow its own market data. A large part of C3 instead scores whether
+the model **fetched** prices online and reconciled them, which is not the partner's use case.
+
+The rubric did this because M2 v2.1 instructs the model to fetch and triangulate OHLC across named
+sources. So the QA scored what the module asked for, but that is not what matters in deployment.
+
+## E2. Splitting C3 into its sub-items
+
+Each QA sheet rates C3 on four sub-items. I parsed all 171 sheets (51–57 usable per item). These are the
+reviewers' raw ratings, before the fabricated-source override is applied:
+
+| C3 sub-item (0–5) | What it tests | Relevant if the partner supplies the data? | S&P | FTSE | Gold |
+|---|---|---|---:|---:|---:|
+| 3.4 Numbers reconcile with market | Fetched OHLC, pivot inputs and ATR match the real feed | **Mostly no.** This is data retrieval. | 1.63 | 1.53 | **0.57** |
+| 3.3 Calculations transparent | Pivots, RSI2, ATR and the direction score are shown and reproduce | **Yes** | 1.91 | 2.11 | 2.44 |
+| 3.2 Citations exist and contain data | News and research sources are real and say what is claimed | **Yes.** This feeds sentiment (panel 03) and macro (panel 04). | 2.16 | 1.52 | 3.89 |
+| 3.1 Quantitative claims sourced | Every figure in the narrative has a source | **Partly.** Price figures would come from the partner; narrative figures still need sources. | 2.25 | 2.23 | 3.30 |
+
+### Reading
+
+- **Data retrieval is the weakest item everywhere.** Gold shows it most starkly: good sources (3.89) but
+  numbers that don't match the market (0.57). For the partner's use, this item largely drops out.
+- **Calculation reproducibility (≈2) stays a real weakness** with supplied data. RSI2 that doesn't
+  reproduce, direction scores that don't sum and an unstated ATR are not retrieval problems.
+- **Source integrity on the news side matters more for the partner, not less.** The sentiment and macro
+  synthesis is the part they would actually use. FTSE (1.52, with 21 fabricated-source overrides) is the
+  concern; gold (3.89) shows the protocol can work.
+- **Wrong-session pivots** are partly retrieval errors, picking up the wrong day's bar. With supplied data
+  and the session pinned in M1, most of them should disappear.
+
+## E3. The rebuild already simulates "partner supplies the data"
+
+In the strategy experiment (steps 4–5), the rebuilt cards had every price, pivot and ATR replaced with real
+data up to 23:59 the night before. That is effectively the partner's deployment: correct data in, model
+judgement on top. **Trading outcomes still did not improve detectably.**
+
+This is a stronger and more relevant result for the poster than the C3 bar. It says that fixing the
+data does not by itself make the trade rules work.
+
+## E4. Poster changes
+
+**Option A (recommended): change what the chart shows.** Use three bars per asset:
+- Structure (C2);
+- Calculations reproduce (3.3);
+- Sources genuine (3.2).
+
+Put a one-line note under it:
+
+> *Price-retrieval accuracy (C3.4: 1.6 / 1.5 / 0.6) is excluded; in deployment the partner supplies
+> market data.*
+
+**Option B: keep the chart and change its title and footnote.**
+
+Title, before:
+
+> Structure scores exceeded factual reliability scores
+
+Title, after:
+
+> Reports follow the template; model-retrieved figures do not reconcile
+
+Footnote, before:
+
+> C3 rates figures, calculations and source support; it is not a percentage of correct data.
+
+Footnote, after:
+
+> C3 includes the model's own online price retrieval, which deployment would replace with partner
+> data. Excluding that item, calculation reproducibility (≈2/5) and news-source integrity (1.5–3.9/5)
+> remain the weak points.
+
+**Findings text, add one line:**
+
+> When cards were rebuilt on correct prior-day data, which is what partner-supplied data would provide,
+> trading outcomes did not change detectably.
+
+## E5. Method change for the next version (not for the poster)
+
+- **Change M2.** Replace "fetch and triangulate OHLC" (M2 v2.1) with "ingest the supplied data file;
+  do not fetch prices". That makes this a v2.2 module change.
+- **Re-weight C3 to match.** Score calculation reproducibility and news-source integrity, and check
+  supplied numbers only for transcription and consistency.
+- **Bring in WTI, Bitcoin and Shanghai** under the revised rubric. That evaluates the partner's actual
+  use rather than the online-retrieval set-up used in the current reports.

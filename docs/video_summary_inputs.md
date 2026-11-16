@@ -67,8 +67,8 @@ result. Use the corrected, leak-free results below.
 > *R = one unit of risk per trade. No difference is statistically distinguishable from luck over
 > 57 days.*
 
-**On-screen version (simpler):** two small equity-curve panels, original against rebuilt, for the S&P and
-FTSE. They already exist in `results/sp500_v2/equity/` and `results/ftse_v1/equity/`.
+**On screen:** no R figures and no equity curves (canonical poster). Say: *"Strategy results were mixed;
+the main-entry comparisons found no clear improvement over 57 dates per index."*
 
 ---
 
@@ -105,7 +105,7 @@ This is the methodological contribution. Say it in one breath:
 
 ### 3c. What the quality grading found (171 reports: S&P, FTSE, gold)
 
-| | Follows the layout | Calculations can be re-checked | Sources are genuine | Cited a source that does not exist |
+| | Layout | Calculations | Citations | Cited a source that does not exist |
 |---|---:|---:|---:|---:|
 | S&P 500 | 3.9 / 5 | 1.9 / 5 | 2.2 / 5 | 13 of 57 |
 | FTSE 100 | 3.7 / 5 | 2.1 / 5 | 1.4 / 5 | 21 of 57 |
@@ -206,9 +206,9 @@ Replace section 6's "Outputs" bullet list with this list, grouped for the funder
 | 0:20–0:45 | TT's AI Lead already had a governed template: change the brief, fix everything else. We grew it into a five-part framework, with a code engine doing the maths so the AI never makes up a number. | Three boxes growing to five |
 | 0:45–1:05 | Over twelve weeks it produced 324 daily reports across six markets: US, UK and Chinese equities, gold, oil and Bitcoin. Each covers news sentiment, the economic calendar, price levels and trade ideas. | Report pages scrolling; six market labels |
 | 1:05–1:25 | Real use taught us a lot. Data sources were blocked, so we wrote strict rules: two sources for every price, nothing invented, and every failure logged and fixed by version. | Patch log; "flag, don't halt" |
-| 1:25–1:55 | Then we tested it properly. We graded 171 reports. We rebuilt every trade idea using only what was known the night before, and tested both against real prices, three times over. The AI wrote well-structured reports, but calculations and sources needed checking, and on some markets it cited sources that didn't exist. | Scorecard chart |
-| 1:55–2:15 | The key result: even with correct data, the trade ideas didn't improve, and a good quality grade didn't predict a good trade. So AI is ready to gather and structure research, but trade ideas still need human judgement. | Two equity curves overlapping |
-| 2:15–2:30 | What we leave behind is a governance template, an audit toolkit and a public evidence base. Next, we are building a version that runs on a firm's own data. | Outputs list; closing card |
+| 1:25–1:55 | Then we tested it properly. We graded 171 reports for layout, calculations and sources. For the S&P 500 and FTSE 100, we rebuilt the trade ideas using only data available before each trading day, and tested them three times over. Layout was consistently strong; calculations and source checks were weaker. | Poster chart: Layout / Calculations / Citations |
+| 1:55–2:15 | Strategy results were mixed. Rebuilding the trade ideas with QA feedback and prior-day prices gave no clear improvement, and higher quality grades were not associated with stronger trades. Report quality and trading performance must be assessed separately. | Poster panel 05 text; "no clear improvement" as a caption |
+| 2:15–2:30 | Use with professional review: analysts still verify sources and calculations. What we leave behind is an instruction library, a testing toolkit, a report archive and a working paper. Next: running on a firm's own data, and reusable SKILL.md packages. | Poster panel 06; CANON spelled out; closing card |
 
 ---
 
@@ -227,5 +227,4 @@ Replace section 6's "Outputs" bullet list with this list, grouped for the funder
   better, which is worth one line.
 - **§6 "Blended win rate about 30%".** This is from the first pass. Drop it, or recompute it from
   `results/*/MASTER.csv`.
-- **Units.** Say "R = one unit of risk" once on screen. Better still, show equity curves without R values
-  in the video.
+- **Units.** Not needed on screen: the canonical poster shows no R figures, and the video follows it.

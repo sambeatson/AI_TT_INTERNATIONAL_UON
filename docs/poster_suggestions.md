@@ -1,5 +1,8 @@
 # Poster review: suggested edits (UKFin+ A0 poster, draft 1)
 
+> **Superseded (16 Nov 2026).** The Edinburgh A0 poster in `docs/poster/` is now canonical. This file is
+> kept as the review history; where it disagrees with the poster, the poster wins.
+
 The poster's claims were checked against the repository on branch `claude/asset-scoring-process-pr4eon`.
 Edits are shown as **Before / After**, numbered by poster panel.
 

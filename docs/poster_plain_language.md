@@ -1,5 +1,8 @@
 # Poster: plain-language redraft
 
+> **Superseded (16 Nov 2026).** The Edinburgh A0 poster in `docs/poster/` is now canonical. This file is
+> kept as the review history; where it disagrees with the poster, the poster wins.
+
 ## The problem with drafts 1–5
 
 The poster is written in the project's internal vocabulary: M1–M5, C2, 3.3, Trust Score v3.7, ρ, bootstrap,

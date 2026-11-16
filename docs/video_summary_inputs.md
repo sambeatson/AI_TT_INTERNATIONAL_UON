@@ -8,6 +8,17 @@ All figures here come from two places:
 - this repository (`results/sp500_v2`, `results/ftse_v1`, `qa/*`);
 - the per-asset notes on the `claude/gold-trading-equity-curve-l985jp` branch of `AI_Report_Analysis`.
 
+> **Update 16 Nov 2026: the Edinburgh A0 poster is now canonical** (`docs/poster/`). The video should use
+> its wording and level of detail.
+> - **Keep R figures off screen.** The poster gives none and says "strategy results were mixed … no
+>   clear improvement". Say the same in the video. The table in §1 is background, there to stop the old
+>   first-pass numbers being used. It is not for display.
+> - **Use the poster's six-section order as the video's backbone:** why we built this → what each
+>   report contains → CANON → how we tested → what we found → what it means for practice.
+> - **Reuse the poster's chart** (Layout / Calculations / Citations) as the one on-screen chart.
+>   Everything you show then matches what the funder has seen on the poster.
+> - **Spell out CANON once on screen,** as the poster does.
+
 ---
 
 ## 1. Fix before recording: the S&P numbers in section 6 are from the first pass

@@ -1,0 +1,115 @@
+asset,date,report_md,tilt_orig,tilt_d1,tilt_d2,tilt_d3,tilt_rev,orig_snippet
+UK100,2026-05-11,FTSE_EuroStoxx_Daily_Report_2026-05-11.md,-0.18,-0.778,-0.778,-0.7778,-0.778, Aggregate sentiment for FTSE is Mixed (tilt = −0.18) and dire
+UK100,2026-05-12,FTSE_EuroStoxx_Daily_12May2026.md,-0.22,-0.22,-0.22,-0.22,-0.22, with bullish reversal candidate + §13b numeric tilt −0.22 combined 
+UK100,2026-05-13,FTSE100_EuroStoxx_Daily_Report_13May2026.md,-0.32,-0.32,-0.32,-0.32,-0.32,erence only) = Predominantly Bearish. **Numeric tilt: −0.32 (source-c
+UK100,2026-05-14,FTSE_EuroStoxx_Daily_14_May_2026.md,-0.05,-0.05,-0.05,-0.05,-0.05,read from report by hand
+UK100,2026-05-15,FTSE_EuroStoxx_Report_15May2026.md,0.21,0.21,0.21,0.21,0.21, spanning 13–14 May 2026; weighted mean tilt +0.21 (BULLISH s
+UK100,2026-05-18,FTSE100_Daily_Report_18-May-2026.md,-0.55,-0.8,-0.8,-0.8,-0.8,ary **FTSE 100 — Predominantly Bearish (tilt = −0.55).** Calcu
+UK100,2026-05-19,FTSE_EuroStoxx_Daily_19May2026.md,-0.81,-0.81,-0.81,-0.81,-0.81, Σw: 1.0 + 0.7 + 0.5 + 0.5 + 1.0 = 3.7. Numeric tilt = -0.81 → clipped
+UK100,2026-05-20,FTSE100_Report_Daily_20-May-2026.md,0.1,0.1,0.1,0.1,0.1,= +0.10** — **Mixed → Mildly Bullish** (tilt = +0.10). Categor
+UK100,2026-05-21,FTSE_100_Report_21_May_2026.md,-0.17,-0.17,-0.17,-0.17,-0.17,read from report by hand
+UK100,2026-05-22,FTSE_EuroStoxx_Report_22May2026.md,0.05,0.05,0.05,0.05,0.05, trade press) = **Mixed / Balanced**. **Numeric tilt = +0.05.** Source
+UK100,2026-05-25,FTSE100_Report_25May2026.md,0.36,0.4,0.405,0.4,0.4,ve. Reported as: Predominantly Bullish (tilt = +0.36). **Diver
+UK100,2026-05-26,FTSE_EuroStoxx_Report_26May2026.md,0.41,0.43,0.43,,0.43,"Bearish, 1 Mixed. Source-class-weighted numeric tilt = +0.41 (raw) / +"
+UK100,2026-05-27,FTSE_EuroStoxx_Report_27May2026.md,0.43,0.52,,0.5217,0.5209,"13a). Aggregate: Predominantly Bullish, numeric tilt +0.43, computed"
+UK100,2026-05-28,FTSE_EuroStoxx_Daily_28May2026.md,0.24,,-0.238,-0.238,-0.238," 1.0, Trade 0.7, Media 0.5). Aggregated numeric tilt = +0.24 (six arti"
+UK100,2026-05-29,FTSE_100_Daily_Report_29May2026.md,0.0,0.0,0.0,0.0,0.0,"0 = 0.0; Σw = 1.0+0.5+1.5+0.5 = 3.5 → **tilt = 0.00**, report"
+UK100,2026-06-01,FTSE_EuroStoxx_Report_01Jun2026.md,0.3,0.3,0.3,0.3,0.3,ixed (media) = **Predominantly Bullish (tilt = +0.30)**. The s
+UK100,2026-06-02,FTSE_EuroStoxx_Report_02Jun2026.md,-0.1,-0.1,-0.1,-0.1,-0.1,"13b): 6 articles, source-class weighted tilt = −0.10 (indicati"
+UK100,2026-06-03,FTSE_EuroStoxx_Report_03Jun2026.md,0.02,0.02,0.02,0.02,0.02," (2 media, 1 trade press) → Balanced. **Numeric tilt = +0.02** (source"
+UK100,2026-06-04,FTSE_EuroStoxx_Report_04Jun2026.md,-0.26,-0.26,-0.26,-0.26,-0.26,·−1)+(0.5·0)+(0.5·+1) = −1.0; Σw = 3.9; tilt = −0.26. **Report
+UK100,2026-06-05,FTSE100_Report_05Jun2026.md,-0.3,-0.3,-0.3,-0.3,-0.3,*Predominantly Bearish (near-term)**. **Numeric tilt = −0.30** (source
+UK100,2026-06-08,FTSE_EuroStoxx_Report_08Jun2026.md,-0.21,-0.21,-0.21,-0.21,-0.21,(trade press) = **Mixed / lean-Bearish. Numeric tilt = −0.21** (source
+UK100,2026-06-09,FTSE100_Report_09Jun2026.md,-0.1,-0.1,-0.1,-0.1,-0.1,1 Mixed (media) → **Mixed / Balanced.** Numeric tilt = **−0.10** (source
+UK100,2026-06-10,FTSE_EuroStoxx_Report_10Jun2026.md,-0.31,-0.31,-0.31,-0.31,-0.31,institutional) → Balanced-to-Bearish. **Numeric tilt: −0.31 (source-c
+UK100,2026-06-11,FTSE_EuroStoxx_Report_11Jun2026.md,-0.34,-0.34,-0.34,-0.34,-0.34,"2 media), 2 Mixed, 1 Bullish (media). **Numeric tilt = −0.34** (weight"
+UK100,2026-06-15,FTSE_EuroStoxx_Report_15Jun2026.md,0.4,0.4,0.4,0.4,0.4,institutional) = Predominantly Bullish (tilt = +0.40). **Diver
+UK100,2026-06-16,FTSE_EuroStoxx_Report_16Jun2026.md,0.61,0.61,0.61,0.61,0.61,ment **FTSE 100: Predominantly Bullish (tilt = +0.61).** Count
+UK100,2026-06-17,FTSE100_Report_17Jun2026.md,0.2,0.2,0.2,0.2,0.2,e sentiment:** **Predominantly Bullish (tilt = +0.20).** Count
+UK100,2026-06-18,FTSE_EuroStoxx_Report_18Jun2026.md,0.43,0.43,0.43,0.43,0.43,read from report by hand
+UK100,2026-06-19,FTSE100_Report_19-Jun-2026.md,-0.38,-0.38,-0.38,-0.38,-0.38,ullish (media) = Predominantly Bearish (tilt = −0.38).** Diver
+UK100,2026-06-23,FTSE_EuroStoxx_Daily_23Jun2026.md,0.25,0.333,0.333,0.333,0.333,tral (w1.0×0) → Σw·s = +1.0; Σw = 4.0 → tilt = +0.25. Reported
+UK100,2026-06-24,FTSE_EuroStoxx_Report_24Jun2026.md,-0.18,-0.18,-0.18,-0.18,-0.18,"ia) = Mixed, leaning bearish near-term. Numeric tilt = −0.18 (source-c"
+UK100,2026-06-25,FTSE_EuroStoxx_Report_25Jun2026.md,0.3,0.32,0.32,0.3243,0.32,th ≤15-word derivation quotes; weighted tilt +0.30 (computati
+UK100,2026-06-26,FTSE_EuroStoxx_Report_26-Jun-2026.md,0.1,0.31,0.31,0.31,0.31,nviction tilt (close to zero); flagged. Numeric tilt +0.10 is the va
+UK100,2026-06-29,FTSE100_EuroStoxx_Report_29Jun2026.md,0.1,0.1,0.1,0.1,0.1,ff and European banks/autos weakness. **Numeric tilt = +0.10** (source
+UK100,2026-06-30,FTSE_EuroStoxx_Report_30Jun2026.md,0.3,0.375,0.375,0.375,0.375,mary **FTSE 100: Predominantly Bullish (tilt = +0.30).** Count
+UK100,2026-07-01,FTSE_100_Daily_1_July_2026.md,0.08,0.08,0.08,0.08,0.08, sentiment FTSE 100: Mixed-to-Balanced (tilt = +0.08). Counts:
+UK100,2026-07-02,FTSE_100_Report_02Jul2026.md,0.49,0.49,0.49,0.49,0.49,* Reported as: **Predominantly Bullish (tilt = +0.49)**. Diver
+UK100,2026-07-03,FTSE100_EuroStoxx_Report_03Jul2026.md,0.47,0.0938,0.47,0.625,0.47,ixed (media) = Predominantly Bullish. **Numeric tilt = +0.47.** (Weigh
+UK100,2026-07-06,FTSE_EuroStoxx_Report_06Jul2026.md,0.83,0.83,0.83,0.8333,0.83,al (media) = **Predominantly Bullish**. Numeric tilt: **+0.83** (source
+UK100,2026-07-07,FTSE100_Report_2026-07-07.md,0.3,0.3,0.3,0.3,0.3, (trade press) = Predominantly Bullish (tilt = +0.30). **Numer
+UK100,2026-07-09,FTSE_EuroStoxx_Report_09Jul2026.md,0.38,0.38,0.38,0.38,0.38,)+(0.5·−1)+(0.5·0) = +1.5; Σw ≈ 4.0 → **tilt = +0.38**. Report
+UK100,2026-07-10,FTSE_EuroStoxx_Report_10Jul2026.md,-0.35,-0.35,-0.35,-0.35,-0.35,regate sentiment Categorical: NEGATIVE. Numeric tilt: −0.35 on a −1 t
+UK100,2026-07-13,FTSE_EuroStoxx_Report_13Jul2026.md,0.17,0.17,0.17,0.17,0.17,nally positive**. Source-class-weighted numeric tilt = **+0.17** (Predom
+UK100,2026-07-14,FTSE_EuroStoxx_Report_14Jul2026.md,-0.1,-0.4359,-0.436,-0.4359,-0.4359, tilt = −1.70/3.9 = **−0.10 → Balanced (tilt = −0.10).** **Div
+UK100,2026-07-15,FTSE_100_Report_15_July_2026.md,0.13,0.147,0.147,0.147,0.147,"n: six articles, source-class weighted; numeric tilt +0.13 (low-conf"
+UK100,2026-07-16,FTSE100_Report_16_July_2026.md,-0.15,-0.15,-0.15,,-0.15,Categorical: MILDLY NEGATIVE / DIVIDED. Numeric tilt: −0.15 on the [−
+UK100,2026-07-17,FTSE_EuroStoxx_Report_17Jul2026.md,0.22,0.22,0.22,0.22,0.22,read from report by hand
+UK100,2026-07-20,FTSE_EuroStoxx_Report_20Jul2026.md,0.3,0.3,0.3,0.3,0.3,timent FTSE 100: Predominantly Bullish (tilt = +0.30). Counts:
+UK100,2026-07-21,FTSE_EuroStoxx_Report_21Jul2026.md,-0.3,-0.595,-0.3704,-0.37,-0.3704,read from report by hand
+UK100,2026-07-22,FTSE_EuroStoxx_Report_22Jul2026.md,0.44,0.44,0.44,0.44,0.44,.44. Reported as Predominantly Bullish (tilt = +0.44). Diverge
+UK100,2026-07-23,FTSE100_Report_23Jul2026.md,0.28,0.28,0.28,,0.28,"e-quarters, trade press half. Aggregate tilt +0.28, categori"
+UK100,2026-07-24,FTSE100_Report_24Jul2026.md,-0.03,-0.2,-0.2,0.005,-0.2,"53, volatility regime -0.040, sentiment tilt -0.030. | | Supp"
+UK100,2026-07-27,FTSE_EuroStoxx_Report_27Jul2026.md,0.3,0.05,0.05,0.05,0.05,redominantly Bullish for the near term. Numeric tilt = +0.30 (Predomin
+UK100,2026-07-28,FTSE_EuroStoxx_Report_28Jul2026.md,0.55,0.595,0.595,0.595,0.595,e sentiment:** **Predominantly Bullish (tilt = +0.55).** Count
+UK100,2026-07-29,ftse_report_29Jul2026.md,0.46,0.595,0.5946,0.5946,0.5946, Mixed (media) = Predominantly Bullish. Numeric tilt = +0.46 → reporte
+UK100,2026-07-30,FTSE_EuroStoxx_Report_30Jul2026.md,0.3,0.3,0.3,0.3,0.3,"s, source-class-weighted; primary-asset tilt +0.30 (Predomina"
+UK100,2026-07-31,FTSE_EuroStoxx_Report_31Jul2026.md,0.3,0.3,0.641,0.64,0.64,"ed / 0 Bearish → Predominantly Bullish, numeric tilt +0.30 (source-c"
+US500,2026-05-11,SP500_Report_11May2026__2_.md,0.56,,0.56,,0.56,"weight 0.7, media weight 0.5. Aggregate numeric tilt = +0.56, categori"
+US500,2026-05-12,SP500_Report_12May2026.md,0.16,0.16,0.16,0.16,0.16,"dingKey; categorical aggregate Bullish, numeric tilt +0.16 (six-obse"
+US500,2026-05-13,SP500_Daily_Report_13May2026.md,-0.41,-0.41,-0.41,,-0.41,ework formula: Σ(w·s) = −2.4; Σw = 5.9; tilt = −0.41 (clipped 
+US500,2026-05-14,SP500_Report_14May2026.md,0.1,0.1,0.1,0.1,0.1,read from report by hand
+US500,2026-05-15,SP500_Daily_Report_15_May_2026.md,0.32,,0.32,0.32,0.32, note --- TREND_UP composite; (ii) §13b numeric tilt +0.32 --- moder
+US500,2026-05-18,SP500_Daily_18May2026.md,0.0,0.0,0.0,0.0,0.0,read from report by hand
+US500,2026-05-19,SP500_Daily_Report_19May2026.md,0.19,0.19,0.19,0.19,0.19,nstitutional weight tilts the balance). Numeric tilt: +0.19 (computed
+US500,2026-05-20,SP500_Daily_Report_20May2026.md,-0.35,-0.35,,-0.35,-0.35,"earish, 1 neutral, 1 historic-bullish). Numeric tilt: −0.35 on the −1"
+US500,2026-05-21,SP500_Report_21May2026.md,0.12,0.12,0.12,0.12,0.12,.12**. Reported as: **Mixed / Balanced (tilt = +0.12)**. **Di
+US500,2026-05-22,SP500_Report_22May2026.md,-0.19,-0.19,-0.0285,-0.19,-0.19, / 0 Neutral. Source-class-weighted tilt = −0.19 (above th
+US500,2026-05-25,SP500_Daily_Report_25May2026.md,0.3,0.15,0.15,0.15,0.15,"earish, 1 Mixed); source-class-weighted numeric tilt +0.30; categori"
+US500,2026-05-26,SP500_Report_26May2026.md,0.3,0.111,0.111,0.111,0.111,ntly Bullish; source-class-weighted numeric tilt +0.30 (consumed
+US500,2026-05-27,SP500_Report_27-May-2026.md,0.46,0.64,0.64,0.64,0.64,ical label: Predominantly Bullish.** **Numeric tilt: +0.46**. Comput
+US500,2026-05-28,SP500_Daily_Report_28May2026.md,0.32,0.32,0.32,,0.32, tilt Categorical: Bullish (extended). Numeric tilt: +0.32 on a \[−1
+US500,2026-05-29,SP500_Report_29May2026.md,0.34,0.34,0.34,0.34,0.34,"tion: 6 articles, source-class-weighted tilt = +0.34; categori"
+US500,2026-06-01,SP500_Report_2026-06-01.md,0.375,0.38,0.38,0.38,0.38,·0) = +1.5; Σw = 1.0+1.5+1.0+0.5 = 4.0; tilt = +0.375 → reporte
+US500,2026-06-02,SP500_Report_02Jun2026.md,0.39,0.39,0.39,0.39,0.39,tral (media) → **Predominantly Bullish (tilt = +0.39)**. **Di
+US500,2026-06-03,SP500_Daily_Report_2026-06-03.md,0.17,,0.17,0.17,0.17, (institutional) = Mixed-to-Bullish. **Numeric tilt:** +0.17 (source-c
+US500,2026-06-04,SP500_Report_04Jun2026.md,0.4,0.4,0.4,0.4,0.4,earish (media) = Predominantly Bullish. Numeric tilt = **+0.40** (source
+US500,2026-06-05,SP500_Report_05Jun2026.md,0.13,0.13,0.13,0.13,0.13, (media) = Mixed / mildly Bullish.** **Numeric tilt = +0.13.** Source
+US500,2026-06-08,SP500_Report_08-Jun-2026.md,-0.4,-0.4,-0.4,-0.4,-0.4,nantly Bearish for the current session. Numeric tilt = −0.40 (source-c
+US500,2026-06-09,SP500_Report_09Jun2026.md,-0.16,-0.16,-0.16,-0.16,-0.16,"(trade press) = Mixed, bearish-leaning. Numeric tilt = −0.16 (source-c"
+US500,2026-06-10,SP500_Report_10Jun2026.md,-0.34,-0.34,,-0.34,-0.34,ade press) = **Predominantly Bearish.** Numeric tilt: **−0.34** (source
+US500,2026-06-11,SP500_Report_11Jun2026.md,-0.55,-0.833,-0.83,-0.125,-0.83,. Categorical: **Predominantly Bearish (tilt = −0.55)**. The n
+US500,2026-06-15,SP500_Report_15Jun2026.md,0.55,0.55,0.55,0.55,0.55,ate sentiment** Predominantly Bullish (tilt = +0.55). Counts:
+US500,2026-06-16,SP500_Report_16-Jun-2026.md,0.0,0.0,0.0,0.0,0.0,"ia), 1 Mixed (trade) = **Balanced.** **Numeric tilt = 0.00** (source"
+US500,2026-06-17,SP500_Report_17Jun2026.md,0.2,0.2,0.2,0.2,0.2,"hted; categorical Mixed-to-Bullish, numeric tilt +0.20 (not "
+US500,2026-06-18,SP500_Report_18Jun2026.md,-1.0,-1.0,-1.0,-1.0,-1.0,e Sentiment** **Predominantly Bearish (tilt = −1.00).** Ten c
+US500,2026-06-19,SP500_Report_19Jun2026.md,-0.03,-0.03,-0.03,,-0.03,"class weighted; categorical = Balanced, numeric tilt = −0.03. Strategy"
+US500,2026-06-23,SP500_Report_23Jun2026.md,0.03,,,0.0045,0.0045,"n:** 6 articles, source-class weighted, tilt = +0.03 (Mixed). "
+US500,2026-06-24,SP500_Report_24Jun2026.md,-0.35,-0.35,-0.35,-0.35,-0.35,ullish (media) = Predominantly Bearish. Numeric tilt = −0.35 (source-c
+US500,2026-06-25,SP500_Report_25Jun2026.md,-0.21,-0.21,,-0.21,-0.21,1 Mixed (media) = **Mixed / Balanced**. Numeric tilt = **−0.21** (source
+US500,2026-06-26,SP500_Report_26Jun2026.md,-0.04,-0.04,-0.04,,-0.04,"ia) = Mixed, institutionally bullish. **Numeric tilt = −0.04** on the "
+US500,2026-06-29,SP500_Daily_Report_29Jun2026.md,-0.22,-0.22,-0.22,-0.22,-0.22,tral (media) → **Predominantly Bearish (tilt = −0.22).** The t
+US500,2026-06-30,SP500_Report_30Jun2026.md,-0.3,0.25,0.25,,0.25,read from report by hand
+US500,2026-07-01,SP500_Report_01Jul2026.md,0.3,0.3,0.3,0.3,0.3,trade press) = Predominantly Bullish. **Numeric tilt = +0.30** (source
+US500,2026-07-02,SP500_Report_02Jul2026.md,0.43,0.43,0.4286,0.43,0.43,5·+1)+(0.5·−1)+(0.5·−1)=+1.5; Σw = 3.5; tilt = +0.43 on the in
+US500,2026-07-03,SP500_Report_03Jul2026.md,-0.15,-0.15,-0.15,-0.15,-0.15,ish lean on the most recent sessions. **Numeric tilt = −0.15** (source
+US500,2026-07-06,SP500_Report_06Jul2026.md,0.29,0.29,0.29,0.29,0.29,stitutional) = **Predominantly Bullish (tilt = +0.29)**. The s
+US500,2026-07-07,SP500_Report_07Jul2026.md,0.64,0.64,0.64,0.64,0.64,itutional) = **Predominantly Bullish**. Numeric tilt = **+0.64** (source
+US500,2026-07-09,SP500_Daily_Report_09Jul2026.md,-0.38,-0.38,-0.38,-0.38,-0.38,ixed (media) = **Predominantly Bearish (tilt = −0.38).** Sourc
+US500,2026-07-10,SP500_M1_v2_1_Report_10-Jul-2026.md,0.1,0.1,0.1,0.1,0.1,read from report by hand
+US500,2026-07-13,SP500_Report_13Jul2026.md,0.15,0.15,0.15,0.15,0.15,stitutional) = **Predominantly Bullish. Numeric tilt: +0.15** (source
+US500,2026-07-14,SP500_Report_14Jul2026.md,0.21,0.21,0.21,0.21,0.21,ixed (media) = **Predominantly Bullish (tilt = +0.21).** The 
+US500,2026-07-15,SP500_Daily_Report_15Jul2026.md,0.2,0.147,0.147,0.147,0.147,", 1 Neutral (media) = Mixed-to-Bullish. Numeric tilt = +0.20 (source-c"
+US500,2026-07-16,SP500_M1_Report_16Jul2026.md,0.2,0.2,0.2,0.2,0.2,read from report by hand
+US500,2026-07-17,SP500_Report_17Jul2026.md,-0.15,-0.15,-0.15,-0.15,-0.15,--- Categorical Mildly Negative Numeric tilt −0.15 Deriva
+US500,2026-07-20,SP500_Report_20Jul2026.md,-0.36,-0.36,-0.054,-0.36,-0.36,"xed, tilting Bearish for the near term. Numeric tilt = −0.36 (source-c"
+US500,2026-07-21,SP500_Report_21-Jul-2026.md,-0.34,-0.34,-0.34,-0.34,-0.34,ent Summary** **Predominantly Bearish (tilt = −0.34).** Count
+US500,2026-07-22,SP500_Report_22Jul2026.md,0.65,0.65,0.65,0.65,0.65,ce-class weighted per methodology → numeric tilt +0.65 (Predomin
+US500,2026-07-23,SP500_Report_23Jul2026.md,-0.1,-0.1,-0.1,-0.1,-0.1,ted by classification tier and recency; numeric tilt −0.10 passed un
+US500,2026-07-24,SP500_Report_24Jul2026.md,-0.55,-0.55,-0.55,-0.55,-0.55,en invalidated) Numeric tilt **−0.55** Conf
+US500,2026-07-27,SP500_Report_27Jul2026.md,-0.3,-0.513,-0.513,-0.077,-0.513,tral (media) = **Predominantly Bearish (tilt = −0.30)**. Weigh
+US500,2026-07-28,SP500_Daily_Report_28-Jul-2026.md,-0.15,-0.15,-0.15,-0.15,-0.15,ss-weighted): −0.15. Reported as Mixed (tilt = −0.15). Diverge
+US500,2026-07-29,SP500_Report_29Jul2026.md,-0.08,-0.08,-0.08,-0.08,-0.08,ildly cautious**. Source-class-weighted numeric tilt = **−0.08** (low ma
+US500,2026-07-30,SP500_Report_30Jul2026.md,-0.3,-0.3,-0.045,-0.3,-0.3,Numeric tilt (source-class weighted): **tilt = −0.30**. Comput
+US500,2026-07-31,SP500_Report_31Jul2026.md,0.31,0.385,0.385,,0.385,"§13a); aggregate Predominantly Bullish, numeric tilt +0.31 (source-c"

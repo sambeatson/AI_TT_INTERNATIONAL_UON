@@ -1,218 +1,229 @@
-# Sentiment as a trading signal: a post-event study on S&P 500 and FTSE 100
+# Sentiment as a trading signal: post-event study across five markets
 
-**Question.** If the report's news sentiment alone decided the trade, would it have worked? We use
-the sentiment from the **original** report and from the **revised** (rebuilt-card) version, trade
-it against the prior day's pivot, and measure how far price moved for and against the position.
+**Question.** If the report's news sentiment alone set the direction, could it be traded? Two rules
+are tested on every report from 11 May to 2 August 2026, across five markets:
 
-**Short answer.** No. Over the 1–5 days after a report, **sentiment pointed the wrong way more often
-than the right way, on both indices**: more bullish reports were followed by weaker markets.
+- **Main rule:** fade into the day's levels. On a negative day, sell limits at R1 and at R2. On a
+  positive day, buy limits at S1 and at S2.
+- **Comparison:** the first study's pivot rule.
 
-- **S&P 500.** This is explained by the market's own recent move. Sentiment largely echoes the
-  previous five days (ρ ≈ 0.55), and those moves partly reversed.
-- **FTSE 100.** Sentiment stays contrarian even after allowing for that echo.
+**Short answer.** No market shows a tradable edge from report sentiment.
 
-Revising the sentiment made almost no difference. Stronger sentiment did not do better. If anything it
-did worse.
+1. **Entering at R1/S1 neutralises the loss but does not create a gain.** Pooled across the five
+   markets, R1/S1 entries average about **0 ATR** at every horizon (95% intervals span zero, hit rate
+   about 50%). The pivot rule loses about **−0.15 ATR** over five days.
+2. **R2/S2 entries are worse than R1/S1:** −0.1 to −0.2 ATR. When price reaches the second level, it
+   is usually running against the sentiment.
+3. **Stronger sentiment did worse, not better,** on both rules.
+4. **In every market, sentiment restates the previous five days of price.** The correlation with the
+   prior 5-day return is 0.56–0.68. Beyond that echo, sentiment adds no information on the S&P 500, gold
+   or WTI. It is **contrarian on the FTSE 100 and Bitcoin**.
 
-Everything is reproducible:
+Revising the sentiment (S&P and FTSE rebuilds) changes results by a few hundredths of a percent.
+Shanghai is not included: there is no Shanghai price feed.
 
 ```
-python studies/sentiment_pivot/build_sentiment.py   # sentiment_by_date.csv
-python studies/sentiment_pivot/run_study.py         # trades.csv, summary.csv, by_degree.csv, tilt_vs_market.csv
-python studies/sentiment_pivot/echo_test.py         # echo_test.csv
+python studies/sentiment_pivot/build_sentiment.py   # sentiment_by_date.csv (267 report dates)
+python studies/sentiment_pivot/run_study.py         # out_levels/, out_pivot/
+python studies/sentiment_pivot/pooled.py            # pooled.csv (ATR units, five markets)
+python studies/sentiment_pivot/echo_test.py         # echo_test.csv, market_moves.csv
 ```
 
 ---
 
 ## 1. Design
 
-The rules were written into `run_study.py` before any result was looked at.
+The rules are written into `run_study.py`.
 
 | Element | Rule |
 |---|---|
-| Sample | 57 report dates per index, 11 May – 31 Jul 2026 |
-| Signal | Report tilt *s* in [−1, +1]: *s* > 0 long, *s* < 0 short, *s* = 0 no trade |
-| Original vs revised | **Original** is the tilt printed in the report. **Revised** is the median of the three rebuilt-card draws. The rebuilds carried the report tilt but corrected its arithmetic where QA found errors. |
-| Pivot | Daily cash-session pivot *P* for date D, computed only from bars before D (no look-ahead) |
-| Entry times | **09:00 UK** and **US cash open (14:30 UK)** on the report's own session |
-| Long | Price above *P* → **buy at market**. Price at or below *P* → **buy stop at *P*** (fills on the first touch; expires 23:00 broker, 21:00 UK) |
-| Short | Mirror image: price below *P* → **sell at market**. Price above *P* → **sell stop at *P*** |
-| Extension filter (extra rule, tested separately) | A market short is taken only if price is still **above the "−2.5" support**, read as the midpoint of S2 and S3. A market long is taken only if price is below the R2–R3 midpoint. Stop entries are unaffected. |
-| Windows | Measured from the fill: **D0** = rest of the same day; **D1** = to the end of the next day; **D5** = up to five sessions |
-| Sentiment reversal | A D1 or D5 window **ends early** if a later report's tilt has the opposite sign. The exit is just before that report's own entry time. |
-| Measures | Max favourable excursion (MFE) and max adverse excursion (MAE) in points, % of the asset and ATR multiples; return at window end (%); MFE/MAE ratio; achievable R |
-| Achievable R | A stop is placed at 0.5 × ATR or 1 × ATR. We take the largest favourable move reached before the stop is touched, in R. Within a bar the adverse extreme is assumed to come first (conservative). |
-| Degree of sentiment | Three bands: weak (\|s\| < 0.2), moderate (0.2–0.4) and strong (≥ 0.4). Also the Spearman correlation of *s* with the market's move from the entry time. |
-
-**Interpretation to confirm.** You wrote "above the −2.5 support". The level files have S1–S3 only, so
-I read "−2.5" as halfway between S2 and S3. If you meant something else, such as 2.5 × ATR below the
-pivot, it is a one-line change in `run_study.py`.
+| Markets and reports | S&P 500 (57), FTSE 100 (57), gold (57), WTI crude (57 dates, 58 reports), Bitcoin (39, including 12 weekend dates) |
+| Signal | Report tilt *s* in [−1, +1]. Positive day if *s* > 0, negative day if *s* < 0, no trade if *s* = 0. **Original** tilt for all five markets. **Revised** tilt (median of three rebuilt-card draws) for the S&P and FTSE only, since the others have no rebuilds yet. |
+| Levels | Daily floor pivots for date D from bars **before D only** (`engine/reference_levels.py`, which asserts this row by row). Cash-session basis for the two indices; full-day basis for gold, WTI and Bitcoin, which trade around the clock. WTI and Bitcoin level tables were built for this study (`data/levels/SpotCrude_levels.csv`, `BTCUSD_levels.csv`). |
+| Entry times | **09:00 UK** and **US cash open (14:30 UK)** on the report's own session. Orders expire 21:00 UK. |
+| **Main rule (levels)** | Negative day: **sell limit at R1** and, as a separate leg, **at R2**. Positive day: **buy limit at S1** and **at S2**. If price is already through a level at the entry time, the limit fills at once at that price. |
+| Comparison rule (pivot) | Positive day: buy at market above the pivot, or with a buy stop at the pivot from below. Negative day: the mirror image. |
+| Windows | From the fill: **D0** = same day; **D1** = to the end of the next day; **D5** = up to five sessions. A window ends early if a later report reverses the sentiment sign. |
+| Measures | Max favourable and adverse excursion (MFE, MAE) and the return at window end. These are in % of the asset per market, and in **ATR multiples** when pooling, so a 2% Bitcoin move and a 0.5% index move are comparable. Also achievable R with a 1-ATR stop (adverse extreme assumed first within a bar). |
+| Degree | Weak \|s\| < 0.2; moderate 0.2–0.4; strong ≥ 0.4 |
 
 ---
 
-## 2. The data
+## 2. The sentiment data
 
-`sentiment_by_date.csv` holds one row per report date for each index (114 in total).
+| | S&P 500 | FTSE 100 | Gold | WTI | Bitcoin |
+|---|---:|---:|---:|---:|---:|
+| Report dates | 57 | 57 | 57 | 57 | 39 |
+| Positive / negative / zero days | 30 / 25 / 2 | 35 / 21 / 1 | 10 / 43 / 1 | 24 / 32 / 0 | 9 / 27 / 1 |
+| Median tilt | +0.10 | +0.13 | −0.32 | −0.18 | −0.20 |
+| Revised by rebuild (changed / sign flips) | 9 / 1 | 17 / 1 | – | – | – |
 
-| | FTSE 100 | S&P 500 |
+Gold and Bitcoin reports were **mostly bearish** over the period.
+
+Tilts were read from each report's §13b aggregate. Sixteen that the parser could not read cleanly were
+read by hand; they are listed in `build_sentiment.py`. A tilt printed as a division ("−0.71 / 4.2 =
+−0.17") is taken as the result after the equals sign.
+
+WTI has two reports for 10 July; their tilts are averaged.
+
+---
+
+## 3. Main rule: buy S1/S2 on positive days, sell R1/R2 on negative days
+
+### 3a. How often the orders filled (09:00 UK, original sentiment)
+
+| | S&P 500 | FTSE 100 | Gold | WTI | Bitcoin |
+|---|---:|---:|---:|---:|---:|
+| Sell R1 (negative days) | 16 of 25 | 16 of 21 | 15 of 46 | 9 of 33 | 8 of 28 |
+| Sell R2 | 6 of 25 | 3 of 21 | 5 of 46 | 4 of 33 | 2 of 28 |
+| Buy S1 (positive days) | 16 of 30 | 16 of 34 | 6 of 10 | 9 of 24 | 4 of 10 |
+| Buy S2 | 10 of 30 | 5 of 34 | 2 of 10 | 3 of 24 | 2 of 10 |
+
+**About half the R1/S1 orders fill on the indices, and a quarter to a third on the commodities and
+Bitcoin.** R2/S2 fills are rare: 2–10 per market. Per-market results for R2/S2 are anecdotes, so the
+conclusions rest on the pooled tables.
+
+### 3b. Pooled across the five markets (ATR units, 09:00 UK)
+
+| | Window | Trades | Return, ATR (95% CI) | Hit rate | Median MFE / MAE, ATR | 1R reached with a 1-ATR stop |
+|---|---|---:|---|---:|---|---:|
+| **R1/S1** | D0 | 115 | −0.01 (−0.11 to +0.09) | 50% | 0.33 / 0.29 | 5% |
+| **R1/S1** | D1 | 115 | −0.02 (−0.16 to +0.12) | 48% | 0.50 / 0.43 | 17% |
+| **R1/S1** | D5 | 115 | +0.02 (−0.16 to +0.21) | 47% | 0.54 / 0.54 | 29% |
+| **R2/S2** | D0 | 42 | −0.09 (−0.28 to +0.07) | 48% | 0.28 / 0.21 | 5% |
+| **R2/S2** | D1 | 42 | −0.20 (−0.44 to +0.01) | 45% | 0.40 / 0.51 | 10% |
+| **R2/S2** | D5 | 42 | −0.18 (−0.43 to +0.06) | 52% | 0.41 / 0.53 | 19% |
+| *Pivot rule* | D0 | 210 | −0.02 (−0.09 to +0.05) | 49% | 0.31 / 0.34 | 10% |
+| *Pivot rule* | D1 | 210 | −0.07 (−0.17 to +0.03) | 44% | 0.47 / 0.56 | 19% |
+| *Pivot rule* | D5 | 210 | −0.14 (−0.31 to +0.02) | 40% | 0.60 / 0.83 | 33% |
+
+The US-open entry gives the same picture: R1/S1 between −0.05 and −0.01 ATR, R2/S2 between −0.13 and
+−0.09, and the pivot rule −0.16 at D5 (`pooled.csv`).
+
+- **Risk–reward.** At R1/S1 the favourable and adverse excursions are about equal (MFE/MAE ≈ 1). With a
+  1-ATR stop, 1R was reached on 5% of trades the same day and 29% within five days. That is roughly
+  what a random entry gives, not an edge.
+- **Waiting for R1/S1 improves on the pivot rule.** Taking the trade at a better price removes the
+  pivot rule's five-day loss (−0.14 → +0.02 ATR). It does not turn sentiment into a profit.
+- **R2/S2 is worse.** By the time price stretches to the second level, the day is usually trending
+  against the report.
+
+### 3c. Positive days vs negative days (pooled, 09:00 UK)
+
+| | D1 return, ATR | D5 return, ATR |
 |---|---:|---:|
-| Report dates | 57 | 57 |
-| Bullish / bearish / neutral (original) | 35 / 21 / 1 | 30 / 25 / 2 |
-| Median \|tilt\| | 0.30 | 0.30 |
-| Dates where the revision changed the tilt by more than 0.02 | **17** | **9** |
-| Revisions that flipped the sign | 1 (28 May: +0.24 → −0.24) | 1 (30 Jun: −0.30 → +0.25) |
+| Buy S1 on positive days (51) | −0.01 | +0.01 |
+| Sell R1 on negative days (64) | −0.02 | +0.02 |
+| Buy S2 (22) | −0.18 | −0.18 |
+| Sell R2 (20) | −0.22 | −0.18 |
+| *Pivot: buy on positive days (91)* | −0.14 | **−0.29** (−0.52 to −0.05) |
+| *Pivot: sell on negative days (119)* | −0.02 | −0.03 |
 
-Ten report tilts could not be read automatically and were read by hand; they are listed in
-`build_sentiment.py`. The revised value is the median of the three rebuilds, because one rebuild
-occasionally stored the weighted contribution (tilt × 0.15) instead of the tilt itself.
+The pivot rule's losses come mostly from buying on positive days. The level rule's buy-at-S1 avoids that.
 
----
+### 3d. Per market, R1/S1 legs (09:00 UK)
 
-## 3. Results
+| Return at D5 | ATR (95% CI) | % of asset | Trades |
+|---|---|---:|---:|
+| S&P 500 | **−0.36** (−0.70 to −0.04) | −0.34% | 32 |
+| FTSE 100 | +0.14 (−0.12 to +0.40) | +0.18% | 32 |
+| Gold | +0.16 (−0.25 to +0.69) | +0.28% | 21 |
+| WTI | +0.25 (−0.38 to +0.91) | +1.41% | 18 |
+| Bitcoin | +0.08 (−0.24 to +0.37) | +0.15% | 12 |
 
-**How to read the tables.** Results are per trade, using the original sentiment. "Return" is the
-asset's % move from fill to window end, in the trade's direction. Revised-sentiment results are within
-a few hundredths of these (`summary.csv`).
+Only the S&P result is distinguishable from zero, and it is a loss. Per-leg and per-window tables in
+% of the asset are in `out_levels/summary.csv`.
 
-### 3a. FTSE 100
+### 3e. Degree of sentiment (pooled, 09:00 UK)
 
-| Entry | Window | Trades | MFE % | MAE % | Median MFE/MAE | Return % (95% CI) | Hit rate | Reach 1R with a 1-ATR stop |
-|---|---|---:|---:|---:|---:|---|---:|---:|
-| 09:00 UK | D0 | 43 | 0.42 | 0.60 | 0.29 | **−0.23** (−0.42 to −0.04) | 28% | 16% |
-| 09:00 UK | D1 | 43 | 0.58 | 0.88 | 0.42 | **−0.36** (−0.57 to −0.16) | 33% | 21% |
-| 09:00 UK | D5 | 43 | 0.74 | 1.27 | 0.35 | **−0.52** (−0.82 to −0.21) | 26% | 28% |
-| US open | D0 | 37 | 0.29 | 0.44 | 0.38 | **−0.17** (−0.32 to −0.03) | 38% | 3% |
-| US open | D1 | 37 | 0.53 | 0.83 | 0.47 | **−0.34** (−0.59 to −0.10) | 38% | 11% |
-| US open | D5 | 37 | 0.78 | 1.31 | 0.48 | **−0.47** (−0.78 to −0.16) | 32% | 22% |
-
-### 3b. S&P 500
-
-| Entry | Window | Trades | MFE % | MAE % | Median MFE/MAE | Return % (95% CI) | Hit rate | Reach 1R with a 1-ATR stop |
-|---|---|---:|---:|---:|---:|---|---:|---:|
-| 09:00 UK | D0 | 44 | 0.50 | 0.56 | 1.04 | −0.01 (−0.19 to +0.17) | 61% | 9% |
-| 09:00 UK | D1 | 44 | 0.68 | 0.85 | 0.83 | −0.16 (−0.42 to +0.11) | 41% | 18% |
-| 09:00 UK | D5 | 44 | 0.91 | 1.30 | 0.71 | **−0.58** (−0.94 to −0.21) | 30% | 25% |
-| US open | D0 | 41 | 0.49 | 0.49 | 1.05 | +0.04 (−0.13 to +0.20) | 59% | 7% |
-| US open | D1 | 41 | 0.70 | 0.84 | 0.92 | −0.15 (−0.44 to +0.13) | 39% | 20% |
-| US open | D5 | 41 | 0.94 | 1.33 | 0.66 | **−0.56** (−0.95 to −0.20) | 29% | 27% |
-
-**Fills.** Stop orders at the pivot went unfilled on 10–18 days per set; those days have no trade.
-Market entries made up about 70% of FTSE trades and about 50% of S&P trades.
-
-### 3c. Risk–reward: what was achievable
-
-- **The adverse excursion was larger than the favourable one in every FTSE cell.** The median MFE/MAE
-  ratio is 0.3–0.5: price typically went about twice as far against the position as for it. For the
-  S&P, MFE/MAE is about 1.0 on the same day (a coin toss) and falls to about 0.7 over five days.
-- **With a 1-ATR stop,** a 1R gain was reached before the stop on only 3–28% of trades. A 2R gain was
-  reached on at most 9%.
-- **With a tighter 0.5-ATR stop,** 1R (that is, half an ATR) was reached on 16–45% of trades, but the
-  stop was hit first on most of the rest.
-
-There is no stop/target combination here that turns this signal into a positive risk–reward.
-
-### 3d. Percentage gained or lost on the asset
-
-The average trade lost:
-- **FTSE:** 0.2–0.5% of the index.
-- **S&P:** roughly break-even on the same day, and about 0.6% over five days.
-
-Over the same windows, simply **buying at the entry time every day** made money: on average **+0.46%
-(FTSE)** and **+0.20% (S&P)** over D5 (`tilt_vs_market.csv`). Both indices rose over the period.
-
-Do not add the returns up into an account total: D1 and D5 windows overlap, so the same move is counted
-more than once.
-
-### 3e. Does the degree of sentiment matter?
-
-**No, not in the direction you would hope.** Strong-sentiment trades were not better. On the multi-day
-windows they were among the worst:
-
-| Mean return % (original, 09:00 UK) | Weak (<0.2) | Moderate (0.2–0.4) | Strong (≥0.4) |
+| Return, ATR | Weak (<0.2) | Moderate (0.2–0.4) | Strong (≥0.4) |
 |---|---:|---:|---:|
-| FTSE, D1 | −0.26 | −0.56 | −0.20 |
-| FTSE, D5 | −0.40 | −0.45 | **−0.81** |
-| S&P, D1 | +0.14 | −0.18 | **−0.51** |
-| S&P, D5 | −0.40 | −0.73 | −0.54 |
+| R1/S1, D1 | +0.13 (31) | +0.04 (46) | **−0.19** (38) |
+| R1/S1, D5 | 0.00 | +0.13 | −0.10 |
+| R2/S2, D1 | −0.17 (7) | −0.04 (22) | **−0.49** (13) |
+| Pivot, D1 | +0.07 (55) | −0.14 (71) | −0.10 (84) |
 
-Each band holds only 11–19 trades. Across all dates, the rank correlation between tilt and the market's
-subsequent move is **negative**:
-
-| Spearman ρ (p) | D0 | D1 | D5 |
-|---|---:|---:|---:|
-| FTSE, 09:00 UK | −0.18 (0.19) | **−0.33 (0.01)** | **−0.37 (0.01)** |
-| FTSE, US open | −0.23 (0.09) | **−0.31 (0.02)** | **−0.42 (<0.01)** |
-| S&P, 09:00 UK | −0.04 (0.77) | −0.24 (0.08) | **−0.29 (0.03)** |
-| S&P, US open | 0.00 (0.98) | −0.21 (0.12) | **−0.28 (0.04)** |
-
-### 3f. Why: sentiment echoes the recent market move
-
-The reports' sentiment is strongly correlated with what the market had **already** done:
-
-| ρ (tilt vs return before the report) | Prior day | Prior 5 days |
-|---|---:|---:|
-| FTSE | 0.23 | **0.64** |
-| S&P | **0.49** | **0.56** |
-
-We regressed the market's forward move on tilt and the prior 5-day return together (ranks; Newey–West
-standard errors to allow for overlapping windows; `echo_test.csv`):
-
-- **S&P:** once the prior 5-day return is included, **tilt adds nothing** (coefficient ≈ 0, p > 0.15
-  everywhere). The prior move itself predicts the reversal at D5 (p ≈ 0.02–0.04). The S&P sentiment is a
-  restatement of recent price, and recent price partly mean-reverted.
-- **FTSE:** **tilt stays negative beyond the prior return** at the US open, D1 and D5 (coefficient −0.32
-  and −0.50, HAC p = 0.03 and < 0.01). It is weaker at 09:00 UK (D1 p = 0.10, D5 p < 0.01). On the FTSE,
-  the news tone itself looked contrarian over this period.
-
-### 3g. Original vs revised sentiment; the extension filter
-
-- **Revision barely mattered.** The same-sign revisions changed tilt sizes but rarely the trade
-  direction. The two sign flips are 2 trades out of more than 40. Every cell moves by a few hundredths of
-  a percent, e.g. FTSE 09:00 D5: −0.52% original vs −0.47% revised.
-- **The extension filter rarely applied.** Only 1–5 market entries per set had already run past the
-  2.5 level. On the FTSE, skipping them helped a little (US open D5 summed return −17.3% → −13.1%). On the
-  S&P it made no difference.
+**Strong sentiment is the worst band** on the level rule, as it was on the pivot rule in the first
+study. This is what you would expect if strong sentiment mostly reflects a move that has already
+happened.
 
 ---
 
-## 4. Caveats
+## 4. Does sentiment carry information at all? (no trading rule)
 
-1. **Small sample, one period.** There are 57 dates per index over 12 weeks, both in rising markets
-   (FTSE about 10,100 → 10,900). A contrarian result in a rising market partly reflects bearish reports
-   being wrong in an uptrend. Results by direction are in `trades.csv` (`side`).
-2. **Many tests.** The grid covers 2 indices × 2 versions × 2 entries × 3 windows, plus the degree bands.
-   Treat single p-values near 0.05 as leads. The FTSE contrarian result is consistent across entries and
-   windows, which is more convincing than any one cell.
-3. **Overlap.** D1 and D5 windows overlap across consecutive dates. The plain p-values in §3e overstate
-   significance. The HAC p-values in §3f allow for this.
-4. **MFE and MAE are not executable.** They are upper bounds on what was available. The achievable-R
-   measure is the realistic one.
-5. **Stop fills.** Excursion is measured over the whole fill bar, so a stop-entry trade's MAE can include
-   price before the trigger. This overstates MAE slightly.
-6. **Sentiment was never verified.** Both versions carry the report's own reading of the news. The
-   revision corrected arithmetic, not sources.
-7. **Price data and pivots.** Broker CFD data is used; pivots are on the cash-session basis.
+These are Spearman correlations of tilt with the market's move from 09:00 UK, regardless of any order.
+They are then repeated controlling for the prior 5-day return: ranks, with Newey–West standard errors
+for the overlapping windows (`echo_test.csv`).
+
+| | Tilt vs prior 5-day return | Tilt vs next 1 day | Tilt vs next 5 days | Tilt beyond the prior move? |
+|---|---:|---:|---:|---|
+| S&P 500 | **0.56** | −0.24 | **−0.29** | **No** (p > 0.15) |
+| FTSE 100 | **0.64** | **−0.33** | **−0.37** | **Yes, contrarian** (D5: p < 0.01; US open D1: p = 0.03) |
+| Gold | **0.68** | **−0.28** | **−0.33** | **No** (p > 0.1) |
+| WTI | **0.58** | +0.04 | +0.01 | **No** relationship at all |
+| Bitcoin | **0.67** | −0.29 | −0.17 | **Yes, contrarian at D1** (p = 0.01); n = 39 |
+
+- **The echo is universal.** In all five markets the reports' sentiment largely restates the last five
+  days of price.
+- **Following sentiment only made money where the market fell and the reports were bearish.** On WTI,
+  following the sentiment at market made +0.85% over D5 while buy-and-hold lost 1.4%. Sentiment had no
+  ranking power there (ρ ≈ 0); the gain came from a bearish majority in a falling market.
 
 ---
 
-## 5. What this suggests next
+## 5. Original vs revised sentiment (S&P and FTSE)
 
-- **Test the contrarian reading out of sample.** "Fade the report's sentiment" is a post-hoc idea from
-  this study, so it must not be judged on these same 57 dates. The natural test is the gold, WTI and
-  Bitcoin reports (same framework, untouched by this analysis), or a later period for the FTSE.
-- **Control for the echo before using sentiment at all.** For any market, check whether sentiment
-  carries information beyond the prior 5-day return. On the S&P it did not.
-- **For the strategy module,** the sentiment weight (0.15 in the six-signal direction score) is pushing
-  the score the wrong way on the FTSE. It is at best neutral on the S&P.
+| R1/S1, 09:00 UK, % of asset | D1 original | D1 revised | D5 original | D5 revised |
+|---|---:|---:|---:|---:|
+| FTSE: sell R1 | 0.00 | 0.00 | +0.09 | +0.09 |
+| FTSE: buy S1 | +0.19 | +0.23 | +0.27 | +0.31 |
+| S&P: sell R1 | +0.02 | +0.06 | −0.39 | −0.34 |
+| S&P: buy S1 | −0.19 | −0.19 | −0.29 | −0.29 |
+
+The rebuild corrected the arithmetic of the tilt, not its sources. As a result the trades barely change.
+
+---
+
+## 6. Caveats
+
+1. **Small samples.** R2/S2 has 2–10 fills per market. The per-market R1/S1 cells have 12–32 trades.
+   Rely on the pooled tables.
+2. **One 12-week period**, with different trends by market: indices rising, gold and WTI falling,
+   Bitcoin mixed. Direction and trend are entangled. Gold and Bitcoin reports were mostly bearish, so
+   their results are mostly short trades.
+3. **Many comparisons:** 5 markets × 2 rules × 2 entry times × 3 windows × legs × degree bands. Treat
+   any single p ≈ 0.05 as a lead. The universal echo (every p < 0.001) and the strong-sentiment pattern
+   are the robust findings.
+4. **Limits through a level at the entry time** fill at that price, which is better than the level.
+   This is common: **30% of R1/S1 fills at 09:00 UK and 40% at the US open** (25–44% by market). On those
+   days the order is in effect a market order taken after an extended move. The `mode` column in
+   `out_levels/trades.csv` separates them (`AT_T` vs `LIMIT`).
+5. **MFE and MAE are upper bounds,** not executable exits. Use the 1-ATR-stop column for what could
+   realistically be captured.
+6. **Bitcoin** includes weekend sessions; its "next day" can be a Saturday.
+7. **Sentiment was never verified against its sources.** Both versions carry the report's own reading
+   of the news.
+
+---
+
+## 7. Implications
+
+- **For the strategy module.** Sentiment should not set trade direction on its own. Where it is used,
+  as one of six inputs in the direction score, first remove what the prior 5-day return already
+  explains. Otherwise the score counts recent momentum twice: once as the technical signal and once as
+  sentiment.
+- **If sentiment is used at all, enter at R1/S1, not at the pivot or market.** The better entry is what
+  removes the loss. Do not add at R2/S2.
+- **Contrarian FTSE and Bitcoin results** came out of this data. They need testing out of sample
+  (later reports) before anyone acts on them.
 
 ## Files
 
 | File | Contents |
 |---|---|
-| `sentiment_by_date.csv` | Original and revised tilt per date (with each draw), plus the report text it was read from |
-| `trades.csv` | One row per trade × window: fill mode and price, MFE/MAE, return, achievable R, reversal date |
-| `summary.csv` | Aggregates per asset × version × entry × window, with and without the extension filter |
-| `by_degree.csv` | The same, split by weak / moderate / strong sentiment |
-| `tilt_vs_market.csv` | Spearman correlation of tilt with the market's move, plus the always-long and follow-sentiment benchmarks |
-| `market_moves.csv` | The market's move from each entry time, regardless of fill |
-| `echo_test.csv` | Tilt vs prior returns, and tilt's effect controlling for the prior 5-day return (HAC) |
+| `sentiment_by_date.csv` | Tilt per report date for five markets (original; revised and per-draw for S&P and FTSE) |
+| `out_levels/trades.csv`, `out_pivot/trades.csv` | One row per leg × window: fill, MFE/MAE, return, achievable R, reversal date; unfilled orders included |
+| `out_*/summary.csv` | Per market × version × entry × leg × window (pivot rule also with the extension filter) |
+| `out_*/fill_rates.csv`, `out_*/by_degree.csv` | Fill counts; results by sentiment strength |
+| `pooled.csv` | Five markets pooled in ATR units, by level, by direction, by degree and by market |
+| `echo_test.csv`, `market_moves.csv` | Tilt vs prior and forward market moves; regression controlling for the prior 5-day return |

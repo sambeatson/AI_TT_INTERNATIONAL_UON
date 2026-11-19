@@ -1,0 +1,15 @@
+asset,version,entry,leg,signals,filled
+BTCUSD,orig,0900UK,P,38,31
+BTCUSD,orig,USopen,P,38,28
+SpotCrude,orig,0900UK,P,57,47
+SpotCrude,orig,USopen,P,57,43
+UK100,orig,0900UK,P,55,43
+UK100,orig,USopen,P,55,37
+UK100,rev,0900UK,P,55,44
+UK100,rev,USopen,P,55,38
+US500,orig,0900UK,P,55,44
+US500,orig,USopen,P,55,41
+US500,rev,0900UK,P,55,45
+US500,rev,USopen,P,55,42
+XAUUSD,orig,0900UK,P,56,45
+XAUUSD,orig,USopen,P,56,41

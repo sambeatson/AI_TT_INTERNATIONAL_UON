@@ -35,14 +35,14 @@ UK100,2026-06-26,FTSE_EuroStoxx_Report_26-Jun-2026.md,0.1,0.31,0.31,0.31,0.31,nv
 UK100,2026-06-29,FTSE100_EuroStoxx_Report_29Jun2026.md,0.1,0.1,0.1,0.1,0.1,ff and European banks/autos weakness. **Numeric tilt = +0.10** (source
 UK100,2026-06-30,FTSE_EuroStoxx_Report_30Jun2026.md,0.3,0.375,0.375,0.375,0.375,mary **FTSE 100: Predominantly Bullish (tilt = +0.30).** Count
 UK100,2026-07-01,FTSE_100_Daily_1_July_2026.md,0.08,0.08,0.08,0.08,0.08, sentiment FTSE 100: Mixed-to-Balanced (tilt = +0.08). Counts:
-UK100,2026-07-02,FTSE_100_Report_02Jul2026.md,0.49,0.49,0.49,0.49,0.49,* Reported as: **Predominantly Bullish (tilt = +0.49)**. Diver
+UK100,2026-07-02,FTSE_100_Report_02Jul2026.md,0.49,0.49,0.49,0.49,0.49,)+(0.5·+1)+(1.0·−1) = +1.9 ; Σw = 3.9 ; tilt = +1.9/3.9 = **+
 UK100,2026-07-03,FTSE100_EuroStoxx_Report_03Jul2026.md,0.47,0.0938,0.47,0.625,0.47,ixed (media) = Predominantly Bullish. **Numeric tilt = +0.47.** (Weigh
 UK100,2026-07-06,FTSE_EuroStoxx_Report_06Jul2026.md,0.83,0.83,0.83,0.8333,0.83,al (media) = **Predominantly Bullish**. Numeric tilt: **+0.83** (source
 UK100,2026-07-07,FTSE100_Report_2026-07-07.md,0.3,0.3,0.3,0.3,0.3, (trade press) = Predominantly Bullish (tilt = +0.30). **Numer
 UK100,2026-07-09,FTSE_EuroStoxx_Report_09Jul2026.md,0.38,0.38,0.38,0.38,0.38,)+(0.5·−1)+(0.5·0) = +1.5; Σw ≈ 4.0 → **tilt = +0.38**. Report
 UK100,2026-07-10,FTSE_EuroStoxx_Report_10Jul2026.md,-0.35,-0.35,-0.35,-0.35,-0.35,regate sentiment Categorical: NEGATIVE. Numeric tilt: −0.35 on a −1 t
 UK100,2026-07-13,FTSE_EuroStoxx_Report_13Jul2026.md,0.17,0.17,0.17,0.17,0.17,nally positive**. Source-class-weighted numeric tilt = **+0.17** (Predom
-UK100,2026-07-14,FTSE_EuroStoxx_Report_14Jul2026.md,-0.1,-0.4359,-0.436,-0.4359,-0.4359, tilt = −1.70/3.9 = **−0.10 → Balanced (tilt = −0.10).** **Div
+UK100,2026-07-14,FTSE_EuroStoxx_Report_14Jul2026.md,-0.1,-0.4359,-0.436,-0.4359,-0.4359,70; Σw = 1.0+0.7+0.7+0.5+0.5+0.5 = 3.9; tilt = −1.70/3.9 = **−
 UK100,2026-07-15,FTSE_100_Report_15_July_2026.md,0.13,0.147,0.147,0.147,0.147,"n: six articles, source-class weighted; numeric tilt +0.13 (low-conf"
 UK100,2026-07-16,FTSE100_Report_16_July_2026.md,-0.15,-0.15,-0.15,,-0.15,Categorical: MILDLY NEGATIVE / DIVIDED. Numeric tilt: −0.15 on the [−
 UK100,2026-07-17,FTSE_EuroStoxx_Report_17Jul2026.md,0.22,0.22,0.22,0.22,0.22,read from report by hand
@@ -113,3 +113,156 @@ US500,2026-07-28,SP500_Daily_Report_28-Jul-2026.md,-0.15,-0.15,-0.15,-0.15,-0.15
 US500,2026-07-29,SP500_Report_29Jul2026.md,-0.08,-0.08,-0.08,-0.08,-0.08,ildly cautious**. Source-class-weighted numeric tilt = **−0.08** (low ma
 US500,2026-07-30,SP500_Report_30Jul2026.md,-0.3,-0.3,-0.045,-0.3,-0.3,Numeric tilt (source-class weighted): **tilt = −0.30**. Comput
 US500,2026-07-31,SP500_Report_31Jul2026.md,0.31,0.385,0.385,,0.385,"§13a); aggregate Predominantly Bullish, numeric tilt +0.31 (source-c"
+XAUUSD,2026-05-11,Gold_Report_11_May_2026.md,0.74,,,,,*Reported value: Predominantly Bullish (tilt = +0.74).** Diver
+XAUUSD,2026-05-12,Gold_Report_Daily_12May2026.md,0.19,,,,,egorical label: Predominantly Bullish · Numeric tilt: +0.19 (low-conv
+XAUUSD,2026-05-13,Gold_Daily_Report_13May2026.md,-0.1,,,,,read from report by hand
+XAUUSD,2026-05-14,Gold_Report_14_May_2026.md,-0.07,,,,,egate sentiment summary:** Gold: Mixed (tilt = −0.07). Three B
+XAUUSD,2026-05-15,Gold_Daily_Report_15May2026.md,-0.2,,,,,minantly Bearish over the 5-day window. Numeric tilt = −0.20 (source-c
+XAUUSD,2026-05-18,Gold_Daily_Report_18-May-2026.md,-0.45,,,,,read from report by hand
+XAUUSD,2026-05-19,Gold_Report_19_May_2026.md,-0.96,,,,,7 + 0.7 + 0.7 + 0.7 + 0.5 + 0.5 = 5.80. Tilt = −5.55 / 5.80 = 
+XAUUSD,2026-05-20,Gold_Report_20-May-2026.md,-0.41,,,,,utional). Label: Predominantly Bearish. Numeric tilt: -0.41 (source-c
+XAUUSD,2026-05-21,Gold_Daily_Report_21-May-2026.md,-0.61,,,,,−3.1; Σw = 1.0 + 2.1 + 1.0 + 1.0 = 5.1; tilt = −3.1 / 5.1 = *
+XAUUSD,2026-05-22,Gold_Spot_Daily_Report_22-May-2026.md,-0.42,,,,,§13a). Aggregate Predominantly Bearish; numeric tilt −0.42 via §9c s
+XAUUSD,2026-05-25,Gold_Report_25-May-2026.md,-0.34,,,,,t sum = 1.0+0.7+0.7+0.7+0.5+0.5 = 4.10; tilt = −1.40 / 4.10 = 
+XAUUSD,2026-05-26,Gold_Report_26May2026.md,0.42,,,,,en before the de-escalation catalyst. **Numeric tilt = +0.42.** Comput
+XAUUSD,2026-05-27,Gold_Daily_Report_27May2026.md,-0.34,,,,,umeric tilt:** **Predominantly Bearish (tilt = −0.34).** Compu
+XAUUSD,2026-05-28,Gold_Daily_Report_28May2026.md,-0.32,,,,,"utional citation, 1 Mixed-lean-Bullish. Numeric tilt: −0.32 (computed"
+XAUUSD,2026-05-29,Gold_Daily_Report_29May2026.md,-0.39,,,,,timent summary** Predominantly Bearish (tilt = −0.39). Counts:
+XAUUSD,2026-06-01,Gold_Report_01Jun2026.md,-0.1,,,,,te categorical MIXED/slightly-negative; numeric tilt −0.10 (§13b). -
+XAUUSD,2026-06-02,Gold_Report_02-Jun-2026.md,-0.62,,,,,institutional) = Predominantly Bearish. Numeric tilt = −0.62 (source-c
+XAUUSD,2026-06-03,Gold_Report_03Jun2026.md,-0.27,,,,,"tural tilt ≈ +0.13, near-term operative tilt −0.27, low-conf"
+XAUUSD,2026-06-04,Gold_Report_04-Jun-2026.md,-0.3,,,,,"ral (media) = Mixed, bearish-leaning. **Numeric tilt = −0.30** (source"
+XAUUSD,2026-06-05,Gold_Report_05Jun2026.md,-0.29,,,,, **Predominantly Bearish (near-term)**. Numeric tilt = **-0.29** (source
+XAUUSD,2026-06-08,Gold_Report_08-Jun-2026.md,-0.71,,,,,ixed (media) = Predominantly Bearish. **Numeric tilt = −0.71** (source
+XAUUSD,2026-06-09,Gold_Report_09Jun2026.md,-0.57,,,,,sitive (trade) = Predominantly Bearish. Numeric tilt = −0.57 (source-c
+XAUUSD,2026-06-10,Gold_Report_10-Jun-2026.md,-0.46,,,,,tral (media) = **Predominantly Bearish (tilt = −0.46).** The s
+XAUUSD,2026-06-11,Gold_Report_11-Jun-2026.md,-0.85,,,,,ment Summary** **Predominantly Bearish (tilt = −0.85).** Count
+XAUUSD,2026-06-15,Gold_Report_15Jun2026.md,-0.13,,,,,anced-to-Bearish. Source-class-weighted numeric tilt = −0.13 (the two 
+XAUUSD,2026-06-16,Gold_Report_16Jun2026.md,0.46,,,,,gate sentiment **Predominantly Bullish (tilt = +0.46).** Count
+XAUUSD,2026-06-17,Gold_Report_17-Jun-2026.md,0.0,,,,,7+0.5−0.7−0.5+0+0) = 0.00; Σw = 3.4 → **tilt = +0.00.** **Dive
+XAUUSD,2026-06-18,Gold_Report_18Jun2026.md,0.45,,,,, (trade press) = Predominantly Bullish. Numeric tilt = +0.45 (source-c
+XAUUSD,2026-06-19,Gold_Report_19-Jun-2026.md,-0.76,,,,,"ss, 3 media) = Predominantly Bearish. **Numeric tilt = −0.76** (source"
+XAUUSD,2026-06-23,Gold_Report_23-Jun-2026.md,-0.45,,,,,trade press) = **Predominantly Bearish (tilt = −0.45).** **Div
+XAUUSD,2026-06-24,Gold_Report_24Jun2026.md,-0.4,,,,,gate sentiment **Predominantly Bearish (tilt = −0.40). Counts:
+XAUUSD,2026-06-25,Gold_Report_25Jun2026.md,-0.62,,,,,gate Sentiment **Predominantly Bearish (tilt = −0.62).** Count
+XAUUSD,2026-06-26,Gold_Report_26-Jun-2026.md,-0.55,,,,,Numeric tilt (source-class weighted): **tilt = −0.55**. Comput
+XAUUSD,2026-06-29,Gold_Report_29Jun2026.md,-0.35,,,,,*. Reported as **Predominantly Bearish (tilt = −0.35)**. **Div
+XAUUSD,2026-06-30,Gold_Report_30Jun2026.md,-0.42,,,,,ixed (media) = Predominantly Bearish. **Numeric tilt = −0.42** (source
+XAUUSD,2026-07-01,Gold_Report_01-Jul-2026.md,-0.25,,,,,"llish (2 media), 1 Mixed (trade press). Numeric tilt −0.25 computed "
+XAUUSD,2026-07-02,Gold_Report_02Jul2026.md,-0.38,,,,,"l, 1 official) = Predominantly Bearish (tilt = -0.38). This ag"
+XAUUSD,2026-07-03,Gold_Report_03-Jul-2026.md,0.19,,,,,ish on an institutional-weighted basis. Numeric tilt = +0.19 (source-c
+XAUUSD,2026-07-06,Gold_Report_06Jul2026.md,0.45,,,,,-word derivation quote; source-weighted tilt = +0.45; institut
+XAUUSD,2026-07-07,Gold_Report_07Jul2026.md,0.16,,,,,Neutral (media) = Mixed-to-Bullish.** **Numeric tilt = +0.16** (source
+XAUUSD,2026-07-09,Gold_Report_09Jul2026.md,-0.55,,,,,nantly Bearish**. Source-class-weighted numeric tilt = **−0.55** (instit
+XAUUSD,2026-07-10,Gold_Report_10_July_2026.md,-0.2,,,,,read from report by hand
+XAUUSD,2026-07-13,Gold_Report_13Jul2026.md,-0.33,,,,,; Σw = 1.0+0.5+0.5+1.0+1.0+0.5 = 4.5; **tilt = −0.33.** **Dive
+XAUUSD,2026-07-14,Gold_Report_14Jul2026.md,-0.62,,,,,gate Sentiment **Predominantly Bearish (tilt = −0.62).** Count
+XAUUSD,2026-07-15,Gold_Report_15Jul2026.md,-0.1,,,,,CPI-bounce-driven and lower-conviction. Numeric tilt −0.10 (source-c
+XAUUSD,2026-07-16,Gold_Report_16Jul2026.md,0.35,,,,, MILDLY POSITIVE | Aggregate sentiment tilt: +0.35. The comp
+XAUUSD,2026-07-17,Gold_Report_17Jul2026.md,-0.2,,,,," bullish-structural, one neutral-dated. Numeric tilt −0.20, held del"
+XAUUSD,2026-07-20,Gold_Report_20Jul2026.md,-0.34,,,,,ass-weighted per the standard mapping → numeric tilt −0.34 (Predomin
+XAUUSD,2026-07-21,Gold_Report_21Jul2026.md,-0.3,,,,,ed on ≥3 articles — not low-confidence. Numeric tilt −0.30 is the va
+XAUUSD,2026-07-22,Gold_Report_22Jul2026.md,0.3,,,,,ighted Bearish.** Source-class-weighted numeric tilt = **+0.30** is NOT 
+XAUUSD,2026-07-23,Gold_Report_23_Jul_2026.md,-0.005,,,,,": MIXED, with a modest positive tilt.** Numeric tilt: −0.005, effectiv"
+XAUUSD,2026-07-24,Gold_Report_24_July_2026.md,-0.3,,,,,weighted articles; categorical bearish; numeric tilt −0.30 computed 
+XAUUSD,2026-07-27,Gold_Report_27Jul2026.md,-0.65,,,,,trade press) = **Predominantly Bearish (tilt = −0.65).** **Div
+XAUUSD,2026-07-28,Gold_Report_28Jul2026.md,-0.12,,,,,edia) = **Balanced / mildly cautious.** Numeric tilt = **−0.12** (source
+XAUUSD,2026-07-29,Gold_Report_29Jul2026.md,-0.45,,,,,trade press) = **Predominantly Bearish (tilt = −0.45).** Compu
+XAUUSD,2026-07-30,Gold_Report_30-Jul-2026.md,-0.42,,,,,stitutional) = **Predominantly Bearish (tilt = -0.42)**. Sourc
+XAUUSD,2026-07-31,Gold_Report_31Jul2026.md,-0.18,,,,,-class-weighted). Reported as: **Mixed (tilt = −0.18).** - **D
+SpotCrude,2026-05-11,WTI_Daily_Report_11May2026.md,-0.08,,,,,"a + Trade Press). Source-class-weighted numeric tilt: −0.08 — i.e., M"
+SpotCrude,2026-05-12,WTI_Report_12May2026.md,0.67,,,,,failure on Derivation Quotes. Aggregate numeric tilt +0.67 — full co
+SpotCrude,2026-05-13,WTI_Report_13_May_2026.md,0.58,,,,,dow (within 5 days of 13 May 2026). The numeric tilt +0.58 is the va
+SpotCrude,2026-05-14,WTI_Daily_Report_14May2026.md,-0.81,,,,,0 + 0.5 + 0.5 + 0.7 + 1.0 + 0.5 = 5.2* *tilt = −4.2 / 5.2 = −
+SpotCrude,2026-05-15,WTI_Report_15May2026.md,0.42,,,,, + 1.0 + 0.7 + 0.5 + 0.5 + 0.7 = 5.90 **tilt = +2.50 / 5.90 = 
+SpotCrude,2026-05-18,WTI_Report_Daily_18-May-2026.md,0.9,,,,,", +1]. - Result: Predominantly Bullish, numeric tilt = +0.90. **Foreca"
+SpotCrude,2026-05-19,WTI_Daily_19_May_2026.md,0.8,,,,,Reported result: Predominantly Bullish (tilt = +0.80). This is
+SpotCrude,2026-05-20,WTI_Crude_Oil_Report_20May2026.md,0.43,,,,,"is Predominantly Bullish (categorical), numeric tilt +0.43 — though "
+SpotCrude,2026-05-21,WTI_Crude_Oil_Report_21-May-2026.md,-0.18,,,,,el: Mixed — modestly bearish-leaning. **Numeric tilt: −0.18.** Comput
+SpotCrude,2026-05-22,WTI_Crude_Oil_Report_22-May-2026.md,-0.34,,,,,"ategorical label Predominantly Bearish, numeric tilt −0.34, above th"
+SpotCrude,2026-05-25,WTI_Report_25-May-2026.md,-0.34,,,,,a Derivation Quote ≤15 words. Aggregate numeric tilt −0.34 (moderate
+SpotCrude,2026-05-26,WTI_Crude_Oil_Daily_Report_26-May-2026.md,0.09,,,,,. **Numeric tilt:** **Mixed / Balanced (tilt = +0.09)**. The s
+SpotCrude,2026-05-27,WTI_Report_27May2026.md,-0.07,,,,,0.30. Σw = 1.5 + 0.7 + 1.4 + 0.5 = 4.1. tilt = −0.30 / 4.1 = −
+SpotCrude,2026-05-28,WTI_Daily_Report_28_May_2026.md,-0.43,,,,,"5 bearish, 1 mixed, 1 bullish (lagged). Numeric tilt −0.43, categori"
+SpotCrude,2026-05-29,WTI_Report_29May2026.md,0.33,,,,,0) = +1.5+0.5 ≈ +0.43 over Σw ≈ 4.5 → **tilt = +0.33**. Report
+SpotCrude,2026-06-01,WTI_Report_01Jun2026.md,-0.48,,,,,.48.** Reported: Predominantly Bearish (tilt = −0.48). Diverge
+SpotCrude,2026-06-02,WTI_Report_02Jun2026.md,0.49,,,,,gate sentiment **Predominantly Bullish (tilt = +0.49).** Count
+SpotCrude,2026-06-03,WTI_Report_03-Jun-2026.md,0.43,,,,,gate Sentiment **Predominantly Bullish (tilt = +0.43).** Count
+SpotCrude,2026-06-04,WTI_Report_04Jun2026.md,0.3,,,,,sh (media) = **Predominantly Bullish.** Numeric tilt = **+0.30** (source
+SpotCrude,2026-06-05,WTI_Crude_Oil_Report_05-Jun-2026.md,0.46,,,,,institutional) = Predominantly Bullish. Numeric tilt = +0.46 (source-c
+SpotCrude,2026-06-08,WTI_Report_08Jun2026.md,-0.2,,,,,| ## 13b. Aggregate sentiment **Mixed (tilt = −0.20).** Count
+SpotCrude,2026-06-09,WTI_Report_09Jun2026.md,-0.33,,,,,trade press) = **Predominantly Bearish (tilt = -0.33).** Compu
+SpotCrude,2026-06-10,WTI_Report_10-Jun-2026.md,-0.3,,,,,timent Summary **Predominantly Bearish (tilt = −0.30).** Count
+SpotCrude,2026-06-11,WTI_Report_11Jun2026.md,-0.1,,,,, Balanced with a slight bearish lean. **Numeric tilt = −0.10.** Diverg
+SpotCrude,2026-06-15,WTI_Report_15-Jun-2026.md,-0.84,,,,,".7, media=0.5. **Predominantly Bearish (tilt = -0.84).** Compu"
+SpotCrude,2026-06-16,WTI_Report_16Jun2026.md,-0.62,,,,, (trade press) = Predominantly Bearish. Numeric tilt = −0.62 (source-c
+SpotCrude,2026-06-17,WTI_Report_17-Jun-2026.md,-0.79,,,,,"ion: 6 articles, source-class-weighted; tilt = −0.79 (Predomin"
+SpotCrude,2026-06-18,WTI_Report_18Jun2026.md,-0.4,,,,,gate Sentiment **Predominantly Bearish (tilt = -0.40)**. Count
+SpotCrude,2026-06-19,WTI_Report_19Jun2026.md,-0.61,,,,,nstitutional → **Predominantly Bearish (tilt = -0.61)**. **Div
+SpotCrude,2026-06-23,WTI_Report_23Jun2026.md,-0.45,,,,,timent Summary **Predominantly Bearish (tilt = −0.45).** Count
+SpotCrude,2026-06-24,WTI_Report_24Jun2026.md,-0.55,,,,,trade press) = **Predominantly Bearish (tilt = −0.55).** *Nume
+SpotCrude,2026-06-25,WTI_Report_25Jun2026.md,-0.62,,,,,read from report by hand
+SpotCrude,2026-06-26,WTI_Report_26Jun2026.md,-0.46,,,,,ed (media) = **Predominantly Bearish**. Numeric tilt = **−0.46** (source
+SpotCrude,2026-06-29,WTI_Report_29Jun2026.md,-0.49,,,,,1.5) = −1.9; Σw = 1.0+1.4+1.5 = 3.9 → **tilt = −0.49**. Rounde
+SpotCrude,2026-06-30,WTI_Report_30Jun2026.md,-0.3,,,,,ixed (media) = Predominantly Bearish. **Numeric tilt = −0.30.** Comput
+SpotCrude,2026-07-01,WTI_Report_2026-07-01.md,-0.42,,,,,trade press) = **Predominantly Bearish (tilt = −0.42)**. Sourc
+SpotCrude,2026-07-02,WTI_Report_02Jul2026.md,-0.3,,,,,"ish, 0 Neutral = Predominantly Bearish (tilt = −0.30).** Tilt "
+SpotCrude,2026-07-03,WTI_Report_03Jul2026.md,-0.56,,,,, (trade press) = Predominantly Bearish. Numeric tilt = −0.56 (weighted
+SpotCrude,2026-07-06,WTI_Report_06Jul2026.md,-0.55,,,,,te sentiment** **Predominantly Bearish (tilt = −0.55). Counts:
+SpotCrude,2026-07-07,WTI_Report_07-Jul-2026.md,-0.42,,,,,h (official) = **Predominantly Bearish (tilt = −0.42).** **Num
+SpotCrude,2026-07-09,WTI_Report_09-Jul-2026.md,0.59,,,,, Mixed (trade) = Predominantly Bullish (tilt = 0.59). Diverge
+SpotCrude,2026-07-10,WTI_Report_10Jul2026.md + WTI_Report_10_Jul_2026.md,0.325,,,,,"iciency-ratio confirmed), the sentiment tilt (+0.30), and the  | THE SESSION, NET BULLISH ON THE WEEK.** Numeric tilt: +0.35 on a −1 t"
+SpotCrude,2026-07-13,WTI_Report_13Jul2026.md,-0.53,,,,, −1.70 / 3.2 = **Predominantly Bearish (tilt = −0.53).** ## 13
+SpotCrude,2026-07-14,WTI_Report_14-Jul-2026.md,0.23,,,,,ighted the tilt is modestly positive. **Numeric tilt = +0.23 → Predomi
+SpotCrude,2026-07-15,WTI_Report_15Jul2026.md,-0.05,,,,,"press), 1 Bearish (official) = Mixed. **Numeric tilt = −0.05** (source"
+SpotCrude,2026-07-16,WTI_Report_16Jul2026.md,0.12,,,,,"n), 1 Neutral (media) = Mixed. **Mixed (tilt = +0.12).** Diver"
+SpotCrude,2026-07-17,WTI_Report_17_July_2026.md,0.45,,,,,"orical: MODERATELY BULLISH — near-term. Numeric tilt: +0.45 on a [−1,"
+SpotCrude,2026-07-20,WTI_Report_20Jul2026.md,0.55,,,,,gate sentiment **Predominantly Bullish (tilt = +0.55).** Count
+SpotCrude,2026-07-21,WTI_Report_21Jul2026.md,0.62,,,,,ate sentiment:** Predominantly Bullish (tilt = +0.62). Counts:
+SpotCrude,2026-07-22,WTI_Report_22Jul2026.md,0.45,,,,,gate sentiment **Predominantly Bullish (tilt = +0.45).** Count
+SpotCrude,2026-07-23,WTI_Report_23Jul2026.md,0.55,,,,,"ch. Aggregate categorical read BULLISH; numeric tilt +0.55, weighted"
+SpotCrude,2026-07-24,WTI_Report_24July2026.md,0.72,,,,,"est weight. Categorical result Bullish, numeric tilt +0.72. Tilt was"
+SpotCrude,2026-07-27,WTI_Report_27-Jul-2026.md,-0.34,,,,, 2 official) = Predominantly Bearish. **Numeric tilt = −0.34** (source
+SpotCrude,2026-07-28,WTI_Report_28Jul2026.md,-0.3,,,,,trade press) = **Predominantly Bearish (tilt = −0.30).** Diver
+SpotCrude,2026-07-29,WTI_Report_29-Jul-2026.md,-0.75,,,,,")+(0.7·+1)+(1.0·−1) = −4.20; Σw = 5.60; tilt = −0.75, clipped/"
+SpotCrude,2026-07-30,WTI_Report_30Jul2026.md,0.29,,,,,"ss, 1 media) = **Predominantly Bullish (tilt = +0.29)**. The n"
+SpotCrude,2026-07-31,WTI_Report_31Jul2026.md,0.11,,,,,·−1)+(0.7·−1)+(0.5·0) = +0.4; Σw = 3.8; tilt = +0.11. **Diverg
+BTCUSD,2026-05-10,Bitcoin_Strategy_Report_10May2026.md,0.22,,,,,ht 7.5 = +0.22 **Predominantly Bullish (tilt = +0.22).** ETH: 
+BTCUSD,2026-05-13,Bitcoin_Daily_Report_13_May_2026.md,0.11,,,,,7 + 0.7 + 0.5 + 0.7 + 0.5 + 0.5 = 3.6* *Numeric tilt = +0.40 / 3.6 = +
+BTCUSD,2026-05-14,Bitcoin_Daily_Report_14_May_2026.md,0.0,,,,,l** with the low-confidence flag set. **Numeric tilt: 0.00** (would 
+BTCUSD,2026-05-15,Bitcoin_Daily_Report_15_May_2026.md,-0.1,,,,,nviction Bullish (2 items). Two-decimal numeric tilt: −0.10. Categori
+BTCUSD,2026-05-16,Bitcoin_Daily_Report_16_May_2026.md,-0.18,,,,,ws bearish via macro-overlay framing. **Numeric tilt:** −0.18 (sentimen
+BTCUSD,2026-05-19,Bitcoin_Daily_Report_19_May_2026.md,-0.82,,,,,.0 + 0.7 + 0.7 + 0.5 + 0.7 + 0.5 = 5.1* Tilt = −4.19 / 5.1 = −
+BTCUSD,2026-05-20,Bitcoin_Daily_Report_20May2026.md,-0.46,,,,,tral (1 media) = Predominantly Bearish. Numeric tilt = -0.46 (signed s
+BTCUSD,2026-05-21,BTC_Report_21May2026.md,-0.34,,,,,tegorical label: Predominantly Bearish (tilt = −0.34).** Numer
+BTCUSD,2026-05-23,BTC_Report_23May2026.md,-0.64,,,,,**. Reported as: Predominantly Bearish (tilt = −0.64). This is
+BTCUSD,2026-05-24,BTC_Daily_Report_24May2026.md,-0.37,,,,,minantly Bearish. Source-class-weighted numeric tilt = −0.37 (computed
+BTCUSD,2026-05-29,BTC_Report_29May2026.md,-0.29,,,,,ixed / 1 Bullish; source-class-weighted tilt = −0.29 (Predomin
+BTCUSD,2026-05-30,BTC_Report_30May2026.md,-0.34,,,,,. **Categorical: Predominantly Bearish (tilt = −0.34).** The t
+BTCUSD,2026-06-03,BTC_Report_03Jun2026.md,-0.46,,,,, (media) = **Predominantly Bearish**. **Numeric tilt = −0.46** (weight
+BTCUSD,2026-06-04,BTC_Daily_Report_04Jun2026.md,-0.43,,,,,lish (media) = Predominantly Bearish. **Numeric tilt = −0.43.** Diverg
+BTCUSD,2026-06-06,BTC_Report_06Jun2026.md,-0.45,,,,,al (media) = **Predominantly Bearish**. Numeric tilt = **−0.45** (source
+BTCUSD,2026-06-08,BTC_Report_08Jun2026.md,-0.46,,,,,ullish (media) = Predominantly Bearish. Numeric tilt = -0.46 (source-c
+BTCUSD,2026-06-10,BTC_Report_10Jun2026.md,-0.64,,,,,gate Sentiment **Predominantly Bearish (tilt = −0.64).** Count
+BTCUSD,2026-06-16,BTC_Report_16Jun2026.md,0.5,,,,,trade press) = **Predominantly Bullish (tilt = +0.50)**. Numer
+BTCUSD,2026-06-19,BTC_Report_19Jun2026.md,-0.59,,,,,ate Sentiment:** Predominantly Bearish (tilt = −0.59). Counts:
+BTCUSD,2026-06-25,BTC_Report_25Jun2026.md,-0.3,,,,,"ss-weighted mean, Mixed mapped to 0): **tilt = −0.30**. Diverg"
+BTCUSD,2026-07-01,BTC_Report_01Jul2026.md,-0.62,,,,,"ted; categorical Predominantly Bearish, numeric tilt −0.62 (passed t"
+BTCUSD,2026-07-03,BTC_Report_03-Jul-2026.md,-0.42,,,,,s the less-reliable counter-trend move. Numeric tilt −0.42 is the va
+BTCUSD,2026-07-04,BTC_Report_04Jul2026.md,0.13,,,,," **Mixed, leaning marginally Bullish**. Numeric tilt: **+0.13** (source"
+BTCUSD,2026-07-06,BTC_USD_Report_06Jul2026.md,0.28,,,,,dominantly Bullish / lean-constructive. Numeric tilt = +0.28 (source-c
+BTCUSD,2026-07-07,BTC_Report_07Jul2026.md,0.22,,,,,egate sentiment: Predominantly Bullish (tilt = +0.22).** Count
+BTCUSD,2026-07-09,BTC_Report_09Jul2026.md,-0.54,,,,,Σw = 1.5 + 1.0 + 0.7 + 0.7 + 0.7 = 4.6; tilt = −2.5 / 4.6 = −
+BTCUSD,2026-07-12,BTC_Report_12Jul2026.md,-0.2,,,,,ress) → **Balanced-to-mildly-bearish.** Numeric tilt = **−0.20** (the in
+BTCUSD,2026-07-14,BTC_Report_14Jul2026.md,0.01,,,,,"utional, 3 media) = Balanced / Mixed. **Numeric tilt = +0.01 (source-c"
+BTCUSD,2026-07-15,BTC_Report_15Jul2026.md,-0.34,,,,,"), 0 Bullish → **Predominantly Bearish (tilt = −0.34).** The s"
+BTCUSD,2026-07-19,BTC_Report_19Jul2026.md,-0.11,,,,,dly negative on institutional weight. **Numeric tilt = −0.11** (source
+BTCUSD,2026-07-20,BTC_Report_20Jul2026.md,-0.19,,,,, Mixed (media) = Predominantly Bearish. Numeric tilt = −0.19 (source-c
+BTCUSD,2026-07-21,M1_Bitcoin_Report_21Jul2026.md,-0.03,,,,,3.9 → tilt ≈ −0.03. Reported: Balanced (tilt = −0.03). **Diver
+BTCUSD,2026-07-22,BTC_Report_22Jul2026.md,0.12,,,,,e press) = Mixed-to-Modestly-Bullish. **Numeric tilt = +0.12** (source
+BTCUSD,2026-07-24,Bitcoin_BTCUSD_Daily_Report_24Jul2026.md,0.45,,,,,read from report by hand
+BTCUSD,2026-07-26,Bitcoin_Daily_Report_26_July_2026.md,-0.18,,,,,read from report by hand
+BTCUSD,2026-07-28,BTC_Report_28Jul2026.md,0.2,,,,,ting bullish on the most recent prints. Numeric tilt = +0.20 (source-c
+BTCUSD,2026-07-31,BTC_Report_31Jul2026.md,-0.14,,,,,/ mildly bearish. Source-class-weighted numeric tilt = -0.14. Divergen
+BTCUSD,2026-08-01,BTC_Report_01Aug2026.md,-0.46,,,,," **-0.46**. Reported as ""Mixed-Bearish (tilt = -0.46)"". **Dive"
+BTCUSD,2026-08-02,BTC_Report_02Aug2026.md,-0.08,,,,,"al (media) = Mixed, marginally bearish. Numeric tilt = −0.08 (source-c"

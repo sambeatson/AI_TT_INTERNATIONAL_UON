@@ -24,7 +24,7 @@ Shanghai is not included: there is no Shanghai price feed.
 
 ```
 python studies/sentiment_pivot/build_sentiment.py   # sentiment_by_date.csv (267 report dates)
-python studies/sentiment_pivot/run_study.py         # out_levels/, out_pivot/
+python studies/sentiment_pivot/run_study.py         # out_levels/, out_pivot/, out_mid_break/, out_mid_pull/
 python studies/sentiment_pivot/pooled.py            # pooled.csv (ATR units, five markets)
 python studies/sentiment_pivot/echo_test.py         # echo_test.csv, market_moves.csv
 ```
@@ -227,3 +227,49 @@ The rebuild corrected the arithmetic of the tilt, not its sources. As a result t
 | `out_*/fill_rates.csv`, `out_*/by_degree.csv` | Fill counts; results by sentiment strength |
 | `pooled.csv` | Five markets pooled in ATR units, by level, by direction, by degree and by market |
 | `echo_test.csv`, `market_moves.csv` | Tilt vs prior and forward market moves; regression controlling for the prior 5-day return |
+
+---
+
+## 8. Addendum (20 Nov): half-levels, buy +0.5 / sell −0.5 with the sentiment
+
+**Rule (`mid_break`).** +0.5 is the midpoint of the pivot and R1; −0.5 is the midpoint of the pivot and
+S1 (the same notation as "−2.5"). On a **positive day, buy stop at +0.5**; on a **negative day, sell stop
+at −0.5**. If price is already beyond the level at the entry time, enter at market.
+
+As a check on the other reading (`mid_pull`): on a positive day, buy a dip to −0.5; on a negative day,
+sell a rally to +0.5.
+
+Everything else (windows, reversal cut, measures) is unchanged. Results are in `out_mid_break/` and
+`out_mid_pull/`, and pooled in `pooled.csv`.
+
+### Pooled across the five markets (ATR units)
+
+| | Entry | Trades | D0 | D1 | D5 (95% CI) | Hit rate, D5 |
+|---|---|---:|---:|---:|---|---:|
+| **Buy +0.5 / sell −0.5** | 09:00 UK | 165 | 0.00 | −0.07 | **−0.18** (−0.38 to +0.01) | 39% |
+| **Buy +0.5 / sell −0.5** | US open | 149 | −0.02 | −0.11 | **−0.22** (−0.41 to −0.03) | 36% |
+| Buy −0.5 / sell +0.5 (check) | 09:00 UK | 161 | −0.01 | +0.02 | −0.04 (−0.20 to +0.15) | 43% |
+| Buy −0.5 / sell +0.5 (check) | US open | 146 | −0.01 | +0.02 | −0.03 (−0.21 to +0.15) | 47% |
+| *Pivot rule* | 09:00 UK | 210 | −0.02 | −0.07 | −0.14 (−0.31 to +0.02) | 40% |
+| *Sell R1 / buy S1* | 09:00 UK | 115 | −0.01 | −0.02 | +0.02 (−0.16 to +0.21) | 47% |
+
+- **Buying +0.5 and selling −0.5 with the sentiment behaves like the pivot rule, slightly worse.** It is
+  flat on the day and loses about 0.2 ATR over five days. At the US open the five-day interval excludes
+  zero. Median MFE/MAE at D5 is 0.61 / 0.84 ATR.
+- **The loss again comes from positive days:** buys at +0.5 average −0.31 ATR over D5 at 09:00 UK
+  (−0.60 to 0.00) and −0.32 at the US open (−0.59 to −0.03). Sells at −0.5 average −0.10 and −0.14
+  (intervals span zero).
+- **Most entries are effectively market orders.** On 52% of fills, price was already beyond the half-level
+  at the entry time.
+- **Per market (09:00 UK, D5):**
+  - S&P −0.59 ATR (−1.06 to −0.11) and FTSE −0.57 (−0.92 to −0.23): both losses, both excluding zero.
+  - Gold −0.09, Bitcoin −0.05, WTI +0.27: all intervals span zero.
+- **Degree:** weak sentiment is again the best band (D1 +0.10 ATR against −0.12 to −0.14 for moderate and
+  strong).
+- **The opposite reading** (buy the dip to −0.5, sell the rally to +0.5) comes out flat, like
+  sell-R1 / buy-S1. That fits the rest of the study: entering against the day's move toward a level
+  removes the loss, and entering with momentum in the sentiment's direction adds to it. Neither produces
+  a gain.
+
+**Conclusion unchanged:** whichever level and order type is used, report sentiment does not give a
+tradable direction in this sample. Waiting for a pullback is the only variant that does not lose.

@@ -15,11 +15,11 @@ def deg(t):
     a = abs(t); return 'weak <0.2' if a < 0.2 else ('moderate 0.2-0.4' if a < 0.4 else 'strong >=0.4')
 
 rows = []
-for rule in ('levels', 'pivot'):
+for rule in ('levels', 'pivot', 'mid_break', 'mid_pull'):
     t = pd.read_csv(OUT / f'out_{rule}/trades.csv')
     f = t[(t.filled) & (t.version == 'orig')].copy()
     f['ret_atr'] = f.ret_pts / f.atr
-    f['level'] = np.where(f.leg.isin(['R1', 'S1']), 'level 1 (R1/S1)', np.where(f.leg.isin(['R2', 'S2']), 'level 2 (R2/S2)', 'pivot'))
+    f['level'] = np.where(f.leg.isin(['R1', 'S1']), 'level 1 (R1/S1)', np.where(f.leg.isin(['R2', 'S2']), 'level 2 (R2/S2)', rule))
     f['day'] = np.where(f.side > 0, 'positive day (buy)', 'negative day (sell)')
     f['degree'] = f.tilt.map(deg)
     for by in (['level'], ['level', 'day'], ['asset', 'level'], ['level', 'degree']):

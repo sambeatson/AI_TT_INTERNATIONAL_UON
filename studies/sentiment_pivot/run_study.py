@@ -13,6 +13,11 @@ Entry      from T on D: 09:00 UK (11:00 broker) or US cash open 14:30 UK (16:30 
                          positive day -> BUY LIMIT at S1 and, separately, at S2.
                          Each level is its own leg. If price is already through the level at T the
                          limit fills at once at px (a limit order fills at the better price).
+  rule "mid_break" (added 20 Nov): with the sentiment, beyond the half-levels. +0.5 = midpoint of P and
+                         R1, -0.5 = midpoint of P and S1. Positive -> BUY STOP at +0.5; negative -> SELL
+                         STOP at -0.5. Already beyond the level at T -> enter at px.
+  rule "mid_pull" (check on the other reading): positive -> BUY LIMIT at -0.5; negative -> SELL LIMIT
+                         at +0.5. Already through the level at T -> fill at px.
   rule "pivot" (comparison, first study): positive -> buy at market above P, buy stop at P below it;
                          negative -> mirror. Extension filter: skip a market entry already beyond the
                          midpoint of S2/S3 (short) or R2/R3 (long).
@@ -25,7 +30,7 @@ Measures   MFE / MAE (points, % of entry, ATR14 multiples), return at window end
            touched; within a bar the adverse extreme is assumed first.
 Degree     |s| < 0.2 weak, 0.2 to < 0.4 moderate, >= 0.4 strong.
 
-Run:  python studies/sentiment_pivot/run_study.py      (writes out_levels/ and out_pivot/)
+Run:  python studies/sentiment_pivot/run_study.py      (writes out_<rule>/ for each rule)
 """
 from pathlib import Path
 import numpy as np
@@ -71,7 +76,7 @@ def level_table(asset, basis):
     out = {}
     for d, kv in rows.items():
         g = lambda k: float(kv[f'd_{basis}_{k}'])
-        out[d] = dict(P=g('P'), R1=g('R1'), R2=g('R2'), R3=g('R3'), S1=g('S1'), S2=g('S2'), S3=g('S3'),
+        out[d] = dict(Mp=(g('P') + g('R1')) / 2, Mm=(g('P') + g('S1')) / 2, P=g('P'), R1=g('R1'), R2=g('R2'), R3=g('R3'), S1=g('S1'), S2=g('S2'), S3=g('S3'),
                       atr=float(kv[f'atr14_{basis}']))
     return out
 
@@ -106,6 +111,29 @@ def entries_levels(after, live, side, L, px):
         fill = min(lvl, o) if side > 0 else max(lvl, o)
         legs.append((leg, 'LIMIT', hit.index[0], fill))
     return legs
+
+
+def entries_mid(after, live, side, L, px, breakout):
+    """Half-levels: breakout = stop in the sentiment direction beyond +/-0.5; else limit on a pullback."""
+    if breakout:
+        leg = 'Mp' if side > 0 else 'Mm'
+        lvl = L[leg]
+        if side * (px - lvl) >= 0:
+            return [(leg, 'AT_T', after.index[0], px)]
+        hit = live[live['High'] >= lvl] if side > 0 else live[live['Low'] <= lvl]
+        if hit.empty:
+            return [(leg, None, None, None)]
+        o = float(hit['Open'].iloc[0])
+        return [(leg, 'STOP', hit.index[0], max(lvl, o) if side > 0 else min(lvl, o))]
+    leg = 'Mm' if side > 0 else 'Mp'
+    lvl = L[leg]
+    if side * (lvl - px) >= 0:
+        return [(leg, 'AT_T', after.index[0], px)]
+    hit = live[live['Low'] <= lvl] if side > 0 else live[live['High'] >= lvl]
+    if hit.empty:
+        return [(leg, None, None, None)]
+    o = float(hit['Open'].iloc[0])
+    return [(leg, 'LIMIT', hit.index[0], min(lvl, o) if side > 0 else max(lvl, o))]
 
 
 def entries_pivot(after, live, side, L, px):
@@ -144,7 +172,12 @@ def run(rule):
                         continue
                     px = float(after['Open'].iloc[0])
                     live = after[after.hm < CUTOFF]
-                    legs = (entries_levels if rule == 'levels' else entries_pivot)(after, live, side, L, px)
+                    if rule == 'levels':
+                        legs = entries_levels(after, live, side, L, px)
+                    elif rule.startswith('mid_'):
+                        legs = entries_mid(after, live, side, L, px, breakout=(rule == 'mid_break'))
+                    else:
+                        legs = entries_pivot(after, live, side, L, px)
                     for leg, mode, fill_idx, fill in legs:
                         base = dict(asset=asset, version=version, entry=ename, date=date, tilt=s, side=side,
                                     leg=leg, mode=mode, filled=mode is not None, px_T=px, atr=L['atr'],
@@ -227,7 +260,7 @@ def summarise(trades, outdir, extra_rule=None):
 
 
 if __name__ == '__main__':
-    for rule in ('levels', 'pivot'):
+    for rule in ('levels', 'pivot', 'mid_break', 'mid_pull'):
         od = OUT / f'out_{rule}'
         od.mkdir(exist_ok=True)
         t = run(rule)

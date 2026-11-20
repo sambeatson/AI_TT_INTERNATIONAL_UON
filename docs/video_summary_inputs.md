@@ -198,19 +198,34 @@ Replace section 6's "Outputs" bullet list with this list, grouped for the funder
 
 ---
 
-## 6. Revised script (about 2 min 30 s, about 390 words)
+## 6. Revised script v2: CANON explained (about 2 min 40 s, about 420 words)
+
+**What changed from v1.** v1 only spelled CANON out on the closing card. v2 gives it its own beat
+(0:15–0:55), using the poster's definitions. Each letter is tied to something a viewer can see, and the
+"only the brief changes" rule is stated in plain words. To make room, the data-collection beat is
+shorter and the closing beat no longer repeats CANON.
 
 | Time | Say | Show |
 |---|---|---|
-| 0:00–0:20 | Can a general-purpose AI produce market research that a regulated firm could trust, audit and repeat? That was our question, with TT International, funded by UKFin+. | Title card, logos |
-| 0:20–0:45 | TT's AI Lead already had a governed template: change the brief, fix everything else. We grew it into a five-part framework, with a code engine doing the maths so the AI never makes up a number. | Three boxes growing to five |
-| 0:45–1:05 | Over twelve weeks it produced 324 daily reports across six markets: US, UK and Chinese equities, gold, oil and Bitcoin. Each covers news sentiment, the economic calendar, price levels and trade ideas. | Report pages scrolling; six market labels |
-| 1:05–1:25 | Real use taught us a lot. Data sources were blocked, so we wrote strict rules: two sources for every price, nothing invented, and every failure logged and fixed by version. | Patch log; "flag, don't halt" |
-| 1:25–1:55 | Then we tested it properly. We graded 171 reports for layout, calculations and sources. For the S&P 500 and FTSE 100, we rebuilt the trade ideas using only data available before each trading day, and tested them three times over. Layout was consistently strong; calculations and source checks were weaker. | Poster chart: Layout / Calculations / Citations |
-| 1:55–2:15 | Strategy results were mixed. Rebuilding the trade ideas with QA feedback and prior-day prices gave no clear improvement, and higher quality grades were not associated with stronger trades. Report quality and trading performance must be assessed separately. | Poster panel 05 text; "no clear improvement" as a caption |
-| 2:15–2:30 | Use with professional review: analysts still verify sources and calculations. What we leave behind is an instruction library, a testing toolkit, a report archive and a working paper. Next: running on a firm's own data, and reusable SKILL.md packages. | Poster panel 06; CANON spelled out; closing card |
+| 0:00–0:15 | Can a general-purpose AI produce market research that a regulated firm could trust, audit and repeat? That was our question, with TT International, funded by UKFin+. | Title card, logos |
+| 0:15–0:30 | Our answer is a method we call **CANON**. It started as TT's own governed template: change the brief, fix everything else. We grew it into five parts: the brief, evidence rules, calculations, report layout and trade ideas. | Three boxes growing to five, each labelled in plain words |
+| 0:30–0:55 | CANON stands for five commitments. **Constant**: the method is locked during a run. **Architecture**: it is modular, so each part can be checked on its own. **Normalised**: every report uses the same basis, so markets compare like for like. **Output**: every number traces back to a source or a calculation. **Nomenclature**: fixed labels, so a reviewer always knows what a term means. Only the brief changes from report to report; anything else changes only through a logged, versioned update. | The word CANON building letter by letter, each with its one-line meaning (as in the poster footer); then the five boxes with "only this one changes" on the brief |
+| 0:55–1:10 | Over twelve weeks it produced 324 daily reports across six markets: US, UK and Chinese equities, gold, oil and Bitcoin. Each brings news sentiment, the economic calendar, price levels and trade ideas into one briefing. | Report pages scrolling; six market labels |
+| 1:10–1:25 | Real use tested the rules. Data sources were blocked, so we required two sources for every price and nothing invented, and logged every failure as a numbered fix. | Patch log; "flag, don't halt" |
+| 1:25–1:55 | Then we tested the output. We graded 171 reports for layout, calculations and sources. For the S&P 500 and FTSE 100, we rebuilt the trade ideas using only data available before each trading day, and tested them three times over. Layout was consistently strong; calculations and source checks were weaker. | Poster chart: Layout / Calculations / Citations |
+| 1:55–2:15 | Strategy results were mixed. Rebuilding the trade ideas gave no clear improvement, and higher quality grades were not associated with stronger trades. Report quality and trading performance must be assessed separately. | Poster panel 05 text; "no clear improvement" as a caption |
+| 2:15–2:40 | So CANON is for use with professional review: analysts still verify sources and calculations. What we leave behind is an instruction library, a testing toolkit, a report archive and a working paper. Next: running CANON on a firm's own data, and packaging it as reusable skills. | Poster panel 06; closing card |
 
----
+**If the video must stay at 2:30.** Drop the second sentence of 0:55–1:10 ("Each brings…"). Then shorten
+1:10–1:25 to: "Every failure was logged and fixed by version, never ad hoc."
+
+**Why the CANON beat is worded this way.**
+- **Each letter gets one verb-free phrase** taken from the poster footer, so the video and poster match
+  word for word.
+- **"Only the brief changes" is the one idea a funder should remember,** so it closes the beat.
+- **"Normalised" and "Nomenclature" are the two letters viewers won't guess.** The script glosses them as
+  "same basis, compare like for like" and "fixed labels".
+- **No module codes (M1–M5) on screen,** as the IP note says.
 
 ## 7. Smaller points on the summary text
 

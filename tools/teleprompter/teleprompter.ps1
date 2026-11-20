@@ -132,7 +132,7 @@ try {
     # ---- behaviour ---------------------------------------------------------------------------------
     function Fit-Text {
         $w = [Math]::Max(200, $body.ClientSize.Width)
-        $avail = $body.ClientSize.Height
+        $avail = [int]($body.ClientSize.Height * 0.9) - 6     # safety margin so the last line is never cut off
         $size = $State.size
         while ($true) {
             $f = New-Object System.Drawing.Font('Segoe UI', [single]$size)

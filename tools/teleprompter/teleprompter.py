@@ -147,7 +147,7 @@ class Teleprompter:
         self._fit_job = None
         r = self.root
         r.update_idletasks()
-        avail = r.winfo_height() - self.top.winfo_reqheight() - self.bottom.winfo_reqheight() - 36
+        avail = int(0.9 * (r.winfo_height() - self.top.winfo_reqheight() - self.bottom.winfo_reqheight() - 36))
         size = self.cfg['size']
         while True:
             self.body.configure(font=('Segoe UI', size))

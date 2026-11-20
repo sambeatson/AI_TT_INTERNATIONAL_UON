@@ -1,0 +1,80 @@
+# UKFin+ video script v2 (CANON explained). Edit freely: sections are separated by a line with ---
+# [time] on the first line is a cue; "Show:" lines are what should be on screen.
+
+[Ready]
+Click to start.
+
+Drag the window close to your camera lens. Right-click goes back.
+---
+[0:00-0:15]
+Can a general-purpose AI produce market research that a regulated firm could trust, audit and repeat?
+
+That was our question, with TT International, funded by UKFin+.
+Show: Title card, logos
+---
+[0:15-0:30]
+Our answer is a method we call CANON.
+
+It started as TT's own governed template: change the brief, fix everything else.
+
+We grew it into five parts: the brief, evidence rules, calculations, report layout and trade ideas.
+Show: Three boxes growing to five
+---
+[0:30-0:55]
+CANON stands for five commitments.
+
+Constant: the method is locked during a run.
+
+Architecture: it is modular, so each part can be checked on its own.
+
+Normalised: every report uses the same basis, so markets compare like for like.
+
+Output: every number traces back to a source or a calculation.
+
+Nomenclature: fixed labels, so a reviewer always knows what a term means.
+Show: CANON letter by letter
+---
+[0:30-0:55, continued]
+Only the brief changes from report to report. Anything else changes only through a logged, versioned update.
+Show: five boxes, "only this one changes" on the brief
+---
+[0:55-1:10]
+Over twelve weeks it produced 324 daily reports across six markets: US, UK and Chinese equities, gold, oil and Bitcoin.
+
+Each brings news sentiment, the economic calendar, price levels and trade ideas into one briefing.
+Show: Report pages scrolling; six market labels
+---
+[1:10-1:25]
+Real use tested the rules.
+
+Data sources were blocked, so we required two sources for every price and nothing invented, and logged every failure as a numbered fix.
+Show: Patch log; "flag, don't halt"
+---
+[1:25-1:55]
+Then we tested the output.
+
+We graded 171 reports for layout, calculations and sources.
+
+For the S&P 500 and FTSE 100, we rebuilt the trade ideas using only data available before each trading day, and tested them three times over.
+
+Layout was consistently strong; calculations and source checks were weaker.
+Show: Poster chart: Layout / Calculations / Citations (switch to the findings background)
+---
+[1:55-2:15]
+Strategy results were mixed.
+
+Rebuilding the trade ideas gave no clear improvement, and higher quality grades were not associated with stronger trades.
+
+Report quality and trading performance must be assessed separately.
+Show: Poster panel 05; caption "no clear improvement"
+---
+[2:15-2:40]
+So CANON is for use with professional review: analysts still verify sources and calculations.
+
+What we leave behind is an instruction library, a testing toolkit, a report archive and a working paper.
+
+Next: running CANON on a firm's own data, and packaging it as reusable skills.
+Show: Poster panel 06; closing card
+---
+[End]
+Thank you.

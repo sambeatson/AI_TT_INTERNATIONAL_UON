@@ -20,7 +20,7 @@ It started as TT's own governed template: change the brief, fix everything else.
 We grew it into five parts: the brief, evidence rules, calculations, report layout and trade ideas.
 Show: Three boxes growing to five
 ---
-[0:30-0:40]  C - A - N
+[0:30-0:40   C - A - N]
 CANON stands for five commitments.
 
 Constant: the method is locked during a run.
@@ -30,7 +30,7 @@ Architecture: it is modular, so each part can be checked on its own.
 Normalised: every report uses the same basis, so markets compare like for like.
 Show: C, A, N appear letter by letter
 ---
-[0:40-0:50]  O - N
+[0:40-0:50   O - N]
 Output: every number traces back to a source or a calculation.
 
 Nomenclature: fixed labels, so a reviewer always knows what a term means.

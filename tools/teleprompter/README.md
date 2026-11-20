@@ -2,9 +2,16 @@
 
 A small window that stays on top of everything (including OBS). Put it close to your camera lens.
 
-**Start:** double-click `Teleprompter.bat`. It needs Python 3 (python.org; tick "Add python.exe to
-PATH" when installing). Nothing else needs installing. To read a different script, drag its `.txt`
+**Start:** double-click `Teleprompter.bat`. Nothing needs installing: it runs on the Windows
+PowerShell that comes with Windows (`teleprompter.ps1`). To read a different script, drag its `.txt`
 file onto `Teleprompter.bat`.
+
+If Windows shows a blue "Windows protected your PC" box the first time, click **More info → Run
+anyway**. If nothing appears at all, right-click the downloaded zip → **Properties → Unblock**, unzip
+again, and retry.
+
+`Teleprompter_Python.bat` runs the same program in Python (`teleprompter.py`), for computers that
+have Python 3. Both versions read the same script file.
 
 | Action | Mouse | Keys |
 |---|---|---|
@@ -21,7 +28,7 @@ file onto `Teleprompter.bat`.
 
 Long sections shrink automatically to fit the window. Make the window bigger, or press +, to read
 larger. Position, size, text size and transparency are remembered between runs
-(`teleprompter_settings.json`).
+(`teleprompter_settings_ps.json` / `teleprompter_settings.json`).
 
 **Editing the script** (`teleprompter_script.txt`, any text editor):
 
